@@ -1,0 +1,12 @@
+#0
+Limbo - Internal~
+99 10 2
+*
+* Mobiles
+M 0 1 1 1               Puff
+M 0 99 1 99             Death
+E 1 99 1 16                     Scythe
+*
+S
+#99999
+$~
