@@ -233,25 +233,25 @@ unsigned long random(void);
    int fclose();
 #endif
 
-#ifndef fcntl
-   int fcntl();
-#endif
+// #ifndef fcntl
+//    int fcntl();
+// #endif
 
 #ifndef fflush
    int fflush();
 #endif
 
-#ifndef fprintf
-  int fprintf();
-#endif
+// #ifndef fprintf
+//   int fprintf();
+// #endif
 
 #ifndef fread
    size_t fread();
 #endif
 
-#ifndef fscanf
-   int fscanf();
-#endif
+// #ifndef fscanf
+//    int fscanf();
+// #endif
 
 #ifndef fseek
    int fseek();
@@ -281,9 +281,9 @@ unsigned long random(void);
    void rewind();
 #endif
 
-#ifndef sscanf
-   int sscanf();
-#endif
+// #ifndef sscanf
+//    int sscanf();
+// #endif
 
 #ifndef system
    int system();

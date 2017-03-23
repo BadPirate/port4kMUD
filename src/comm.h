@@ -66,9 +66,9 @@ typedef RETSIGTYPE sigfunc(int);
    int close();
 #endif
 
-#ifndef fcntl
-   int fcntl();
-#endif
+// #ifndef fcntl
+//    int fcntl();
+// #endif
 
 #ifndef getpeername
    int getpeername();
@@ -98,9 +98,9 @@ typedef RETSIGTYPE sigfunc(int);
    u_long ntohl();
 #endif
 
-#ifndef read
-   int read();
-#endif
+// #ifndef read
+//    int read();
+// #endif
 
 #ifndef select
    int select();
@@ -122,8 +122,8 @@ typedef RETSIGTYPE sigfunc(int);
    int socket();
 #endif
 
-#ifndef write
-   int write();
-#endif
+// #ifndef write
+//    int write();
+// #endif
 
 #endif /* __COMM_C__ */
