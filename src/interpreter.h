@@ -15,6 +15,15 @@
 #define CMD_IS(cmd_name) (!strcmp(cmd_name, cmd_info[cmd].command))
 #define IS_MOVE(cmdnum) (cmdnum >= 1 && cmdnum <= 6)
 
+struct command_info {
+   char *command;
+   byte minimum_position;
+   void	(*command_pointer)
+   (struct char_data *ch, char * argument, int cmd, int subcmd);
+   sh_int minimum_level;
+   int	subcmd;
+};
+
 /* necessary for CMD_IS macro */
 #ifndef __INTERPRETER_C__
 extern struct command_info cmd_info[];
@@ -39,16 +48,6 @@ char	*delete_doubledollar(char *string);
 
 /* for compatibility with 2.20: */
 #define argument_interpreter(a, b, c) two_arguments(a, b, c)
-
-
-struct command_info {
-   char *command;
-   byte minimum_position;
-   void	(*command_pointer)
-   (struct char_data *ch, char * argument, int cmd, int subcmd);
-   sh_int minimum_level;
-   int	subcmd;
-};
 
 struct alias {
   char *alias;
