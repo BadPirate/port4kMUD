@@ -36,7 +36,7 @@ extern struct char_data *character_list;
 extern struct descriptor_data *descriptor_list;
 extern struct player_index_element *player_table;
 extern int top_of_p_table;
-extern int restrict;
+extern int game_restrict;
 extern struct index_data *mob_index;
 extern struct index_data *obj_index;
 extern struct room_data *world;
@@ -1698,7 +1698,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	STATE(d) = CON_CLOSE;
 	return;
       }
-      if (restrict) {
+      if (game_restrict) {
 	SEND_TO_Q("Sorry, new players can't be created at the moment.\r\n", d);
 	sprintf(buf, "Request for new char %s denied from %s (wizlock)",
 		GET_NAME(d->character), d->host);
@@ -1766,7 +1766,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	mudlog(buf, NRM, LVL_GOD, TRUE);
 	return;
       }
-      if (GET_LEVEL(d->character) < restrict) {
+      if (GET_LEVEL(d->character) < game_restrict) {
 	SEND_TO_Q("The game is temporarily restricted.. try again later.\r\n", d);
 	STATE(d) = CON_CLOSE;
 	sprintf(buf, "Request for login denied for %s [%s] (wizlock)",

@@ -64,7 +64,7 @@ int no_mail = 0;		/* mail disabled?		 */
 int mini_mud = 0;		/* mini-mud mode?		 */
 int no_rent_check = 0;		/* skip rent check on boot?	 */
 time_t boot_time = 0;		/* time of mud boot		 */
-int restrict = 0;		/* level of game restriction	 */
+int game_restrict = 0;		/* level of game restriction	 */
 sh_int r_mortal_start_room;	/* rnum of mortal start room	 */
 sh_int r_immort_start_room;	/* rnum of immort start room	 */
 sh_int r_frozen_start_room;	/* rnum of frozen start room	 */
