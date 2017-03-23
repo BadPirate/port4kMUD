@@ -29,10 +29,13 @@
 # again until pause is removed.  This is useful if you want to turn the MUD
 # off for a couple of minutes and then bring it back up without killing the
 # script.  Type "shutdown pause" from within the MUD to activate this feature.
-#
-
+  #
+# ulimit -c unlimited # make coredump Galvanon, make sure you shut this off
+                      # when not in use, it makes 40 meg core dump files that
+                      # the admins don't like too much :-)
 # The port on which to run the MUD
 PORT=4000
+LOGSIZE=100
 
 # Default flags to pass to the MUD server (see running.doc for a description
 # of all flags).
@@ -48,18 +51,28 @@ while ( : ) do
 
   bin/circle $FLAGS $PORT >> syslog 2>&1
 
-  tail -30 syslog > syslog.CRASH
+  tail -$LOGSIZE syslog > syslog.CRASH
 
   fgrep "self-delete" syslog >> log/delete
+  tail -$LOGSIZE log/delete > log/delete
   fgrep "death trap" syslog >> log/dts
+  tail -$LOGSIZE log/dts > log/dts
   fgrep "killed" syslog >> log/rip
+  tail -$LOGSIZE log/rip > log/rip
   fgrep "Running" syslog >> log/restarts
+  tail -$LOGSIZE log/restarts > log/restarts
   fgrep "advanced" syslog >> log/levels
+  tail -$LOGSIZE log/levels > log/levels
   fgrep "equipment lost" syslog >> log/rentgone
+  tail -$LOGSIZE log/rentgone > log/rentgone
   fgrep "usage" syslog >> log/usage
+  tail -$LOGSIZE log/usage > log/usage
   fgrep "new player" syslog >> log/newplayers
+  tail -$LOGSIZE log/newplayers > log/newplayers
   fgrep "SYSERR" syslog >> log/errors
+  tail -$LOGSIZE log/errors > log/errors
   fgrep "(GC)" syslog >> log/godcmds
+  tail -$LOGSIZE log/godcmds > log/godcmds 
   fgrep "Bad PW" syslog >> log/badpws
 
   rm log/syslog.1
@@ -73,9 +86,6 @@ while ( : ) do
 
   if [ ! -r .fastboot ]; then
     sleep 60
-  else
-    rm .fastboot
-    sleep 5
   fi
 
   if [ -r .killscript ]; then
@@ -88,5 +98,6 @@ while ( : ) do
   while [ -r pause ]; do
     sleep 60
   done
-
+  
+  tail -$LOGSIZE syslog > syslog
 done

@@ -10,7 +10,7 @@
 
 /* handling the affected-structures */
 void	affect_total(struct char_data *ch);
-void	affect_modify(struct char_data *ch, byte loc, sbyte mod, long bitv, bool add);
+void	affect_modify(struct char_data *ch, byte loc, sbyte mod, long bitv, bool add, int);
 void	affect_to_char(struct char_data *ch, struct affected_type *af);
 void	affect_remove(struct char_data *ch, struct affected_type *af);
 void	affect_from_char(struct char_data *ch, int type);

@@ -14,6 +14,7 @@
 #include "sysdep.h"
 
 
+#include "clan.h"
 #include "structs.h"
 #include "utils.h"
 #include "db.h"
@@ -27,6 +28,14 @@
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
 ************************************************************************ */
+
+// Kevins Global Variables
+int used_id[5000];
+char player_cmd[MAX_STRING_LENGTH];
+char wizlist_cmd[MAX_STRING_LENGTH];
+
+struct clan_info *clan_index = NULL; /* (FIDO) Clan global */
+int clan_top = 0;			/* (FIDO) Top of clan struct */
 
 struct room_data *world = NULL;	/* array of rooms		 */
 int top_of_world = 0;		/* ref to top element of world	 */
@@ -50,7 +59,6 @@ struct player_index_element *player_table = NULL;	/* index to plr file	 */
 FILE *player_fl = NULL;		/* file desc of player file	 */
 int top_of_p_table = 0;		/* ref to top of table		 */
 int top_of_p_file = 0;		/* ref of size of p file	 */
-long top_idnum = 0;		/* highest idnum in use		 */
 
 int no_mail = 0;		/* mail disabled?		 */
 int mini_mud = 0;		/* mini-mud mode?		 */
@@ -109,6 +117,8 @@ void reset_time(void);
 void clear_char(struct char_data * ch);
 
 /* external functions */
+extern struct townstart_struct townstart[];
+extern void parse_clan(FILE *fl, int virtual_nr);
 extern struct descriptor_data *descriptor_list;
 void load_messages(void);
 void weather_and_time(int mode);
@@ -121,6 +131,7 @@ void load_banned(void);
 void Read_Invalid_List(void);
 void boot_the_shops(FILE * shop_f, char *filename, int rec_count);
 int hsort(const void *a, const void *b);
+int max_num(void);
 
 /* external vars */
 extern int no_specials;
@@ -199,6 +210,14 @@ ACMD(do_reboot)
   send_to_char(OK, ch);
 }
 
+int max_num(void)
+{
+  int maxnum=0;
+
+  for(maxnum=1;used_id[maxnum]==1;maxnum++);
+  used_id[maxnum]=1;
+  return(maxnum);
+}
 
 void boot_world(void)
 {
@@ -220,6 +239,9 @@ void boot_world(void)
   log("Loading objs and generating index.");
   index_boot(DB_BOOT_OBJ);
 
+  log("Loading clans and generating index.");
+  index_boot(DB_BOOT_CLAN);
+
   log("Renumbering zone table.");
   renum_zone_table();
 
@@ -235,6 +257,7 @@ void boot_world(void)
 void boot_db(void)
 {
   int i;
+  void auction_reset();
 
   log("Boot db -- BEGIN.");
 
@@ -286,6 +309,9 @@ void boot_db(void)
 
   log("Assigning spell and skill levels.");
   init_spell_levels();
+
+  log("Auction system reset.");
+  auction_reset();
 
   log("Sorting command list and spells.");
   sort_commands();
@@ -371,7 +397,7 @@ void reset_time(void)
 /* generate index table for the player file */
 void build_player_index(void)
 {
-  int nr = -1, i;
+  int nr = -1, i, player_o = 0;
   long size, recs;
   struct char_file_u dummy;
 
@@ -405,6 +431,8 @@ void build_player_index(void)
     return;
   }
 
+  strcpy(player_cmd, "Current Players on Daggerfall:\r\n");
+  strcpy(wizlist_cmd, "Current Immortals on Daggerfall:\r\n");
   for (; !feof(player_fl);) {
     fread(&dummy, sizeof(struct char_file_u), 1, player_fl);
     if (!feof(player_fl)) {	/* new record */
@@ -413,10 +441,30 @@ void build_player_index(void)
       for (i = 0;
 	   (*(player_table[nr].name + i) = LOWER(*(dummy.name + i))); i++);
       player_table[nr].id = dummy.char_specials_saved.idnum;
-      top_idnum = MAX(top_idnum, dummy.char_specials_saved.idnum);
+      if(!IS_SET(dummy.char_specials_saved.act, PLR_DELETED))
+      {
+       used_id[dummy.char_specials_saved.idnum] = 1;
+        sprintf(buf, "%20s - level %3d - %d days played\r\n", dummy.name, dummy.level,
+                (dummy.played/SECS_PER_REAL_DAY));
+        if(player_o == 0)
+        {
+          if((strlen(player_cmd)+strlen(buf)+13) < MAX_STRING_LENGTH)
+            strcat(player_cmd, buf);
+          else
+          {
+            strcat(player_cmd, "\r\nOVERFLOW\r\n");
+            player_o = 1;
+          }
+        }
+        if (dummy.level >= LVL_IMMORT)
+        {
+          sprintf(buf, "%20s - level %3d - %d days played\r\n", dummy.name, dummy.level,
+                  (dummy.played/SECS_PER_REAL_DAY));
+          strcat(wizlist_cmd, buf);
+        }
+      }
     }
   }
-
   top_of_p_file = top_of_p_table = nr;
 }
 
@@ -462,6 +510,9 @@ void index_boot(int mode)
   case DB_BOOT_HLP:
     prefix = HLP_PREFIX;
     break;
+  case DB_BOOT_CLAN:
+    prefix = CLAN_PREFIX;
+    break;
   default:
     log("SYSERR: Unknown subcommand to index_boot!");
     exit(1);
@@ -500,16 +551,15 @@ void index_boot(int mode)
     fscanf(index, "%s\n", buf1);
   }
 
-  /* Exit if 0 records, unless this is shops */
+  /* Exit if 0 records, unless this is shops or clans*/
   if (!rec_count) {
-    if (mode == DB_BOOT_SHP)
+    if (mode == DB_BOOT_SHP || mode == DB_BOOT_CLAN)
       return;
     log("SYSERR: boot error - 0 records counted");
     exit(1);
   }
 
   rec_count++;
-
   switch (mode) {
   case DB_BOOT_WLD:
     CREATE(world, struct room_data, rec_count);
@@ -528,6 +578,10 @@ void index_boot(int mode)
   case DB_BOOT_HLP:
     CREATE(help_table, struct help_index_element, rec_count * 2);
     break;
+  case DB_BOOT_CLAN:
+    CREATE(clan_index, struct clan_info, rec_count + 10);
+    clan_top = rec_count - 1;
+    break;
   }
 
   rewind(index);
@@ -538,10 +592,12 @@ void index_boot(int mode)
       perror(buf2);
       exit(1);
     }
+//    log(buf2);
     switch (mode) {
     case DB_BOOT_WLD:
     case DB_BOOT_OBJ:
     case DB_BOOT_MOB:
+    case DB_BOOT_CLAN:
       discrete_load(db_file, mode);
       break;
     case DB_BOOT_ZON:
@@ -564,7 +620,7 @@ void index_boot(int mode)
     qsort(help_table, top_of_helpt, sizeof(struct help_index_element), hsort);
     top_of_helpt--;
   }
-
+  fclose (index); /* The index file was not closed - deliberate? */
 }
 
 
@@ -573,7 +629,7 @@ void discrete_load(FILE * fl, int mode)
   int nr = -1, last = 0;
   char line[256];
 
-  char *modes[] = {"world", "mob", "obj"};
+  char *modes[] = {"world", "mob", "obj", "clan"};
 
   for (;;) {
     /*
@@ -605,7 +661,11 @@ void discrete_load(FILE * fl, int mode)
 	  parse_mobile(fl, nr);
 	  break;
 	case DB_BOOT_OBJ:
+//        sprintf(buf, "nr=%d", nr); log(buf); 
 	  strcpy(line, parse_object(fl, nr));
+	  break;
+	case DB_BOOT_CLAN:
+	  parse_clan(fl, nr);
 	  break;
 	}
     } else {
@@ -1027,6 +1087,7 @@ void parse_mobile(FILE * mob_f, int nr)
   mob_proto[i].player.long_descr = fread_string(mob_f, buf2);
   mob_proto[i].player.description = fread_string(mob_f, buf2);
   mob_proto[i].player.title = NULL;
+  mob_proto[i].player.prompt = NULL;
 
   /* *** Numeric data *** */
   get_line(mob_f, line);
@@ -1190,7 +1251,7 @@ char *parse_object(FILE * obj_f, int nr)
 void load_zones(FILE * fl, char *zonename)
 {
   static int zone = 0;
-  int cmd_no = 0, num_of_cmds = 0, line_num = 0, tmp, error;
+  int cmd_no = 0, num_of_cmds = 0, line_num = 0, tmp, error, arg_num;
   char *ptr, buf[256], zname[256];
 
   strcpy(zname, zonename);
@@ -1244,13 +1305,33 @@ void load_zones(FILE * fl, char *zonename)
       break;
     }
     error = 0;
-    if (strchr("MOEPD", ZCMD.command) == NULL) {	/* a 3-arg command */
-      if (sscanf(ptr, " %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2) != 3)
-	error = 1;
-    } else {
+    if (strchr("D", ZCMD.command) != NULL) { /* ### */
       if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2,
-		 &ZCMD.arg3) != 4)
-	error = 1;
+                 &ZCMD.arg3) != 4)
+        error = 1;
+    }
+    else if (strchr("R", ZCMD.command) != NULL) { /* ### */
+      if (sscanf(ptr, " %d %d %d ", &tmp, &ZCMD.arg1,
+           &ZCMD.arg2) != 3)
+        error = 1;
+    }
+    else if (strchr("G", ZCMD.command) != NULL) { /* ### */
+      if ((arg_num = sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1,
+           &ZCMD.arg2, &ZCMD.arg3)) != 4) {
+        if (arg_num != 3)
+          error = 1;
+        else
+          ZCMD.arg3 = 0;
+      }
+    }
+    else { /* ### */
+      if ((arg_num = sscanf(ptr, " %d %d %d %d %d ", &tmp, &ZCMD.arg1,
+           &ZCMD.arg2, &ZCMD.arg3, &ZCMD.arg4)) != 5) {
+        if (arg_num != 4)
+          error = 1;
+        else
+          ZCMD.arg4 = 0;
+      }
     }
 
     ZCMD.if_flag = tmp;
@@ -1296,6 +1377,12 @@ void load_help(FILE *fl)
       strcat(entry, strcat(line, "\r\n"));
       get_one_line(fl, line);
     }
+
+    el.min_level = 0;
+    if ((*line == '#') && (*(line + 1) != 0))
+      el.min_level = atoi((line + 1));
+
+    el.min_level = MAX(0, MIN(el.min_level, LVL_IMPL));
 
     /* now, add the entry to the index with each keyword on the keyword line */
     el.duplicate = 0;
@@ -1558,45 +1645,58 @@ void log_zone_error(int zone, int cmd_no, char *message)
 void reset_zone(int zone)
 {
   int cmd_no, last_cmd = 0;
+  int mob_load = FALSE; /* ### */
+  int obj_load = FALSE; /* ### */
   struct char_data *mob = NULL;
   struct obj_data *obj, *obj_to;
 
   for (cmd_no = 0; ZCMD.command != 'S'; cmd_no++) {
 
-    if (ZCMD.if_flag && !last_cmd)
+    if (ZCMD.if_flag && !last_cmd && !mob_load && !obj_load)
       continue;
+
+    if (!ZCMD.if_flag) { /* ### */
+      mob_load = FALSE;
+      obj_load = FALSE;
+    }
 
     switch (ZCMD.command) {
     case '*':			/* ignore command */
       last_cmd = 0;
       break;
 
-    case 'M':			/* read a mobile */
-      if (mob_index[ZCMD.arg1].number < ZCMD.arg2) {
+    case 'M':			/* read a mobile ### */
+      if ((mob_index[ZCMD.arg1].number < ZCMD.arg2) &&
+          (number(1, 100) >= ZCMD.arg4)) {
 	mob = read_mobile(ZCMD.arg1, REAL);
 	char_to_room(mob, ZCMD.arg3);
 	last_cmd = 1;
+        mob_load = TRUE;
       } else
 	last_cmd = 0;
       break;
 
-    case 'O':			/* read an object */
-      if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+    case 'O':			/* read an object ### */
+      if ((obj_index[ZCMD.arg1].number < ZCMD.arg2) &&
+          (number(1, 100) >= ZCMD.arg4)) {
 	if (ZCMD.arg3 >= 0) {
 	  obj = read_object(ZCMD.arg1, REAL);
 	  obj_to_room(obj, ZCMD.arg3);
 	  last_cmd = 1;
+          obj_load = TRUE;
 	} else {
 	  obj = read_object(ZCMD.arg1, REAL);
 	  obj->in_room = NOWHERE;
 	  last_cmd = 1;
+          obj_load = TRUE;
 	}
       } else
 	last_cmd = 0;
       break;
 
-    case 'P':			/* object to object */
-      if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+    case 'P':			/* object to object ### */
+      if ((obj_index[ZCMD.arg1].number < ZCMD.arg2) &&
+          obj_load && (number(1, 100) >= ZCMD.arg4)) {
 	obj = read_object(ZCMD.arg1, REAL);
 	if (!(obj_to = get_obj_num(ZCMD.arg3))) {
 	  ZONE_ERROR("target obj not found");
@@ -1608,12 +1708,13 @@ void reset_zone(int zone)
 	last_cmd = 0;
       break;
 
-    case 'G':			/* obj_to_char */
+    case 'G':			/* obj_to_char ### */
       if (!mob) {
 	ZONE_ERROR("attempt to give obj to non-existant mob");
 	break;
       }
-      if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+      if ((obj_index[ZCMD.arg1].number < ZCMD.arg2) &&
+          mob_load && (number(1, 100) >= ZCMD.arg3)) {
 	obj = read_object(ZCMD.arg1, REAL);
 	obj_to_char(obj, mob);
 	last_cmd = 1;
@@ -1621,12 +1722,13 @@ void reset_zone(int zone)
 	last_cmd = 0;
       break;
 
-    case 'E':			/* object to equipment list */
+    case 'E':			/* object to equipment list ### */
       if (!mob) {
 	ZONE_ERROR("trying to equip non-existant mob");
 	break;
       }
-      if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+      if ((obj_index[ZCMD.arg1].number < ZCMD.arg2) &&
+          mob_load && (number(1, 100) >= ZCMD.arg4)) {
 	if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
 	  ZONE_ERROR("invalid equipment pos number");
 	} else {
@@ -1773,7 +1875,7 @@ void save_char(struct char_data * ch, sh_int load_room)
     if (load_room == NOWHERE)
       st.player_specials_saved.load_room = NOWHERE;
     else
-      st.player_specials_saved.load_room = world[load_room].number;
+      st.player_specials_saved.load_room = townstart[0].loadroom;
   }
 
   strcpy(st.pwd, GET_PASSWD(ch));
@@ -1796,10 +1898,11 @@ void store_to_char(struct char_file_u * st, struct char_data * ch)
   GET_SEX(ch) = st->sex;
   GET_CLASS(ch) = st->class;
   GET_LEVEL(ch) = st->level;
-
+  GET_RACE(ch) = st->race;
   ch->player.short_descr = NULL;
   ch->player.long_descr = NULL;
   ch->player.title = str_dup(st->title);
+  ch->player.prompt = str_dup(st->prompt);
   ch->player.description = str_dup(st->description);
 
   ch->player.hometown = st->hometown;
@@ -1917,7 +2020,7 @@ void char_to_store(struct char_data * ch, struct char_file_u * st)
   st->points = ch->points;
   st->char_specials_saved = ch->char_specials.saved;
   st->player_specials_saved = ch->player_specials->saved;
-
+  st->race = GET_RACE(ch);
   st->points.armor = 100;
   st->points.hitroll = 0;
   st->points.damroll = 0;
@@ -1926,6 +2029,11 @@ void char_to_store(struct char_data * ch, struct char_file_u * st)
     strcpy(st->title, GET_TITLE(ch));
   else
     *st->title = '\0';
+    
+  if (GET_PROMPT(ch))
+    strcpy(st->prompt, GET_PROMPT(ch));
+  else
+    *st->prompt = '\0';
 
   if (ch->player.description)
     strcpy(st->description, ch->player.description);
@@ -2061,6 +2169,8 @@ void free_char(struct char_data * ch)
       free(GET_NAME(ch));
     if (ch->player.title)
       free(ch->player.title);
+    if (ch->player.prompt)
+      free(ch->player.prompt);
     if (ch->player.short_descr)
       free(ch->player.short_descr);
     if (ch->player.long_descr)
@@ -2073,6 +2183,8 @@ void free_char(struct char_data * ch)
       free(ch->player.name);
     if (ch->player.title && ch->player.title != mob_proto[i].player.title)
       free(ch->player.title);
+    if (ch->player.prompt && ch->player.prompt != mob_proto[i].player.prompt)
+      free(ch->player.prompt);
     if (ch->player.short_descr && ch->player.short_descr != mob_proto[i].player.short_descr)
       free(ch->player.short_descr);
     if (ch->player.long_descr && ch->player.long_descr != mob_proto[i].player.long_descr)
@@ -2273,8 +2385,9 @@ void init_char(struct char_data * ch)
     ch->points.max_mana = 100;
     ch->points.max_move = 82;
   }
-  set_title(ch, NULL);
+  set_title(ch, "\0");
 
+  ch->player.prompt = NULL;
   ch->player.short_descr = NULL;
   ch->player.long_descr = NULL;
   ch->player.description = NULL;
@@ -2303,8 +2416,10 @@ void init_char(struct char_data * ch)
   ch->points.max_move = 82;
   ch->points.move = GET_MAX_MOVE(ch);
   ch->points.armor = 100;
+  
 
-  player_table[top_of_p_table].id = GET_IDNUM(ch) = ++top_idnum;
+  
+  GET_IDNUM(ch) = max_num();
 
   for (i = 1; i <= MAX_SKILLS; i++) {
     if (GET_LEVEL(ch) < LVL_IMPL)
@@ -2318,13 +2433,13 @@ void init_char(struct char_data * ch)
   for (i = 0; i < 5; i++)
     GET_SAVE(ch, i) = 0;
 
-  ch->real_abils.intel = 25;
+ /* ch->real_abils.intel = 25;
   ch->real_abils.wis = 25;
   ch->real_abils.dex = 25;
   ch->real_abils.str = 25;
   ch->real_abils.str_add = 100;
   ch->real_abils.con = 25;
-  ch->real_abils.cha = 25;
+  ch->real_abils.cha = 25;*/
 
   for (i = 0; i < 3; i++)
     GET_COND(ch, i) = (GET_LEVEL(ch) == LVL_IMPL ? -1 : 24);

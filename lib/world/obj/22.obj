@@ -1,0 +1,603 @@
+#2200
+cake five tiered wedding~
+a five-tiered wedding cake~
+A glorious five-tiered wedding cake poses on its stand.~
+~
+15 4 0
+90 0 -1 0
+30 25000 0
+E
+cake five tiered wedding~
+   The cake is made of five round layers.  Each layer is supported by an odd
+number of columns in the shape of wild animals such as the stag for fertility
+and the pig for wisdom.  The cake itself is covered with frosting vines and
+colored sugar crystal wild flowers.  How very edible and colorful!    
+~
+#2201
+cake four tiered wedding~
+a four-tiered wedding cake~
+A beautiful four-tiered wedding cake waits to be eaten.~
+~
+15 4 0
+66 0 -1 0
+24 20000 0
+E
+cake four tiered wedding~
+   The pillars that support the different layers of the cake are shaped to look
+like the long candles a couple lights over a romantic dinner for two.  The cake
+itself is covered with gorgeous sugar crystal roses and waves of frosting
+sculpted to look like the ocean's surface.  Strings of silver bells connect the
+pillars to on another.    
+~
+#2202
+cake three tiered wedding~
+a three-tiered wedding cake~
+A giant three-tiered wedding cake sits on its little cart.~
+   The frosting is white, thick, and hard.  You would be too if you had to
+support other layers of cake on little pillars.  White roses with large green
+leaves sprout along the cake's edges and dribble down the sides, twisting
+around the five white pillars holding the layers up.    
+~
+15 4 0
+48 0 -1 0
+18 14000 0
+E
+cake wedding three tiered~
+   The frosting is white, thick, and hard.  You would be too if you had to
+support the weight of all those layers of cake.  White roses with large green
+leaves sprout along the cake's edges and dribble down the sides.  They twist in
+great vines around the five white pillars that hold the layers up.    
+~
+#2203
+cake slice chocolate wedding~
+a slice of chocolate cake~
+A piece of rich chocolate cake covered with white frosting lies here.~
+~
+19 4 1
+3 0 0 0
+3 500 0
+E
+slice cake wedding chocolate~
+   Chocolate cake!  Yum!  It is a rich brown color and looks very moist.  Thin
+layers of fudge have been baked right into it.  Eat it!  Eat it now!    
+~
+#2204
+wine goblet red Serrto~
+a goblet of Serrto~
+A goblet of red wine sits here.~
+~
+17 65536 16385
+4 3 2 0
+3 1000 0
+E
+Serrto wine red~
+   The goblet of chilled red wine has beads of moisture running down its clear
+sides.  This is not just an ordinary glass of wine, it is Serrto wine.  The
+grapes are grown on the hightest mountain in the world.  They are picked by
+virgin boys (who bathe regularly) at midnight during a full moon.  The grapes
+are then crushed by a herd of unicorns.  Serrto.  The finest wine in the world.
+~
+#2205
+ring gold wedding ring~
+a gold wedding ring~
+Someone has dropped their gold wedding ring here.  Shame, shame...~
+~
+11 256 3
+0 0 0 0
+5 20000 0
+E
+gold ring wedding~
+   The ring is made from red gold.  It looks as if someone has enchanted the
+glow of the sun to settle into this small circle of gold.  The symbol for
+eternity has been engraved on the inside of the right.  Perhaps as a reminder
+for the married person.   
+~
+A
+4 2
+A
+17 2
+#2206
+ring wedding diamond~
+a diamond wedding ring~
+Someone has left her wedding ring lying around.  Shame, shame...~
+~
+11 256 3
+0 0 0 0
+5 30000 0
+E
+ring diamond~
+   The ring's metal is warm to the touch.  The band is smooth and unscratched,
+pure.  A beautiful two karat diamond sparkles in the light.    
+~
+A
+18 3
+A
+19 3
+#2207
+ring pearl wedding~
+a &Wpearl&n wedding ring~
+A beautiful pearl wedding ring has been abandoned here.~
+~
+11 256 3
+0 0 0 0
+5 32000 0
+E
+ring pearl wedding~
+   The black pearl is surrounded by strips of gold kelp.  It almost looks as if
+the kelp is moving with some unseen (and impossible) current.  The ring
+reflects the timelessness and depth of married couple.    
+~
+A
+19 3
+A
+18 3
+#2208
+gold bar holy~
+a holy gold bar~
+A bar of pure gold lies here gathering dust.~
+~
+8 256 1
+0 0 0 0
+20 0 0
+E
+gold bar holy~
+   It is pure gold, yet has no scratches on its soft, golden surface.  That
+might be where the holy part comes in.    
+~
+#2209
+gown dress wedding flowered~
+a flowered wedding gown~
+An elegant silk gown covered with large blue flowers hangs in the air here.~
+~
+11 0 9
+0 0 0 0
+7 6000 0
+E
+gown dress flower blue wedding~
+   The dress is cut simply with a bit of fluttering cloth that looks like the
+petals of a flower for the sleeves.  It is long enough to reach the ground but
+not so long it would trip any but the clumsiest of brides.  The blue roses that
+have been painted on the silk are just barely a darker than the eggshell white
+cloth.  A line of pearl buttons marches down the back of the dress.    
+~
+A
+17 -3
+#2210
+dress wedding white linen~
+a simple wedding dress~
+A dress made of fine white linen floats in the air here.~
+~
+11 0 9
+0 0 0 0
+6 10000 0
+E
+dress wedding linen~
+   The dress is simple a simple princess cut.  Gold flowers have been
+embroidered around the neck and all the way down the flowing sleeves.  The
+dress is long enough to reach your ankles, yet not so long that you might step
+on the hem and break your neck.  It laces up in the back with a long satin
+ribbon.    
+~
+A
+17 -3
+#2211
+gown wedding dress white traditional~
+a wedding dress~
+A wedding dress of satin and lace is hanging in the air here.~
+~
+11 0 9
+0 0 0 0
+9 12000 0
+E
+satin lace dress wedding white gown~
+   The full skirts are made of white chiffon with several layers of fluffy
+white petticoats underneath.  The bodice is made with whale bone (cruel to both
+whale and maid).  It is sure to hide any of the necessary pounds a normal woman
+would carry.  The bodice is covered with flower embroidery and hundreds of
+satin ribbons.  The sleeves are poofy at the shoulder and then cling tightly to
+the rest of the arms length.  The dress is laced up in back with a long satin
+ribbon.    
+~
+A
+17 -3
+A
+6 1
+#2212
+bouquet lily calla lilies flower~
+a bouquet of &wcalla lilies&n~
+A bouquet of enormous white lilies is lying here.~
+~
+12 0 16385
+0 0 0 0
+10 700 0
+E
+bouquet lily calla lilies flower white~
+   There are three dozen calla lilies in this bouquet.  Most of the stems have
+been stripped of their leaves, but a few still bear the calla lilies' long
+spear of a leaf.  Ferns have been added to the bouquet as well, making it one
+heavy bundle.  The flowers are a rich white color and perfect in shape and
+form.    
+~
+#2213
+bouquet roses white~
+a bouquet of &wwhite roses&n~
+A bouquet of two dozen white roses collects dust here.~
+~
+12 0 16385
+0 0 0 0
+13 800 0
+E
+bouquet rose white~
+   Two dozen white roses have been ripped from their bush and stripped of their
+thorns for your viewing pleasure.  Your smelling pleasure too.  This particular
+bouquet of roses was raised outside of a greenhouse where smell means survival
+and these roses are survivors.  Instead of being perfectly white, the roses
+have a faint blush of pink at their tips.    
+~
+#2214
+daisy flower bouquet daisies~
+a bouquet of &wda&yis&wies&n~
+A bouquet of daisies brightens the ground here.~
+~
+12 0 16385
+0 0 0 0
+0 300 0
+E
+daisy flower bouquet daisies~
+   A modest bouquet of daisies makes a simple and innocent statement at any
+wedding.  The flowers are the size of a silver dollar with pure white petals
+framing the &ygolden yellow&n center.    
+~
+#2215
+shirt linen fine~
+a fine linen shirt~
+A pile of fine linen lies crumpled in the shadows.~
+~
+11 0 9
+0 0 0 0
+3 3000 0
+E
+shirt fine linen~
+   The fine white linen is flexible but, unlike most white shirts, not
+translucent.  Upon closer examination, you are pretty sure that the thread
+count per inch must be in the hundreds.  The shirt's long sleeves will adjust
+to fit any arm.  The collar is crisply ironed.  The whole thing looks like it's
+just been starched.    
+~
+A
+17 -1
+#2216
+shirt black silk~
+a black silk shirt~
+A puddle of black silk has collected here.~
+~
+11 0 9
+0 0 0 0
+4 5000 0
+E
+shirt black silk~
+   The shirt has a bit of decorative lace at the front.  A modest man could tie
+it up and a show off could leave it untied to show off his impressive chest a
+little more.  The cord is made of silk as well.  The long sleeves of the black
+shirt tie at the cuffs as well with more silken cord.    
+~
+A
+17 -2
+#2217
+pant silk black~
+a pair of silk pants~
+A puddle of black silk has collected here.~
+~
+11 0 33
+0 0 0 0
+5 5000 0
+E
+pant silk black~
+   The black silk pants are wrinkle free and easy to move around in.  They
+certainly won't impede any movement required by the wearer.  The cut is simple
+and straight with no flare at the bottom.  Pockets are available for the stuff
+person at heart.  The pants lace up at the front.    
+~
+A
+17 -2
+#2218
+tuxedo suit wedding~
+a tuxedo~
+A beatiful black tuxedo hangs in the air.~
+~
+11 0 9
+0 0 0 0
+7 10000 0
+E
+tuxedo suit wedding~
+   The tuxedo is made from a fine black cloth.  The coat tails are sharply
+pointed.  The jacket is cut to stop just after your waist and has only two
+buttons.  The pants are neatly creased up the front and back.    
+~
+A
+17 -3
+#2219
+crown daisy~
+a &wda&yi&wsy&n crown~
+A delicate daisy crown perfumes the air.~
+~
+11 134217728 17
+0 0 0 0
+2 200 0
+E
+daisy crown~
+   Two different kind of daisies were alternated to make this beautiful crown.
+One daisy has pure white petals and an bright yellow center.  The other daisy
+has a the same white petals and a center that deepens to a rich orange as it
+nears the middle of the flower.    
+~
+A
+17 -1
+#2220
+wine white kass~
+a goblet of kass~
+A goblet of kass has been left here.~
+~
+17 0 1
+4 3 2 0
+3 1104 0
+E
+wine white kass~
+   Kass is mellow and very dry white wine.  Most people have to develop a taste
+for it, but those that have are firm believers that is the best around.    
+~
+#2221
+pendant pearl black~
+a black pearl pendant~
+A fine gold chain with a black pearl attached lies here.~
+~
+8 1918143105 5
+0 0 0 0
+5 14120 0
+E
+pendant black pearl~
+   The fine golden chain looks like it would snap if someone even looked at it
+funny.  The black pearl hovers centimeters away from the chain.  It must be
+magically attached to it.    
+~
+A
+17 -14
+A
+12 25
+#2222
+diamond rough~
+a rough diamond~
+An uncut diamond lies on the ground.~
+~
+8 0 1
+0 0 0 0
+5 10000 0
+E
+diamond rough uncut~
+   The diamond's true potential will not be recognized until it is cut.  It
+will probably be chopped down into a two karat diamond.  It looks like it
+doesn't have any inclusions though...    
+~
+#2223
+ringmaker ocrean pearl~
+a ringmaker~
+An ocrean wearing a pearl-studded vest sits here.~
+~
+25 0 0
+2208 2221 2207 0
+0 0 0
+E
+ringmaker ocrean pearl~
+   His vest is studded with black pearls.  Pearls decorate the lobes of his ear
+and one nostril.  Pearls hang in strings from his boots and make the buttons on
+the sleeves of his shirt.  He will probably only make rings with pearls in
+them, and, like all good ringmakers, he'll only make wedding rings from gods'
+blessed gold.    
+~
+#2224
+dwarf ringmaker diamond~
+a ringmaker~
+A sturdy dwarf sits here muttering things about diamonds.~
+~
+25 0 0
+2208 2222 2206 0
+0 0 0
+E
+dwarf ringmaker diamond~
+   He wears a small diamond earing in his right ear (the other ear is missing).
+His beard is long, full, and grey.  The dwarf talks about diamonds under his
+breath as he waits for some work.  He reaches up often to finger the diamond in
+his ear.  Chances are, he only makes diamond wedding rings with gods' blessed
+gold.    
+~
+#2225
+locket heart~
+a gold locket~
+A lovely red gold locket lies here.~
+~
+8 1 5
+0 0 0 0
+3 5000 0
+E
+locket heart~
+   The small gold locket is shaped like a heart.  What sentimental foolishness.
+  
+~
+A
+6 2
+A
+17 -2
+#2226
+cake slice wedding carrot~
+a slice of carrot cake~
+A slice of spicy carrot cake sits on its plate.~
+~
+19 65536 1
+3 0 0 0
+3 500 0
+E
+slice carrot cake wedding~
+   The slice of carrot cake is presented on a tiny glass plate.  The cake is a
+soft brown color.  It is speckled with little flecks of spice, nuts, and
+carrot.  Delicious.    
+~
+#2227
+slice white cake wedding~
+a slice of white cake~
+A slice of fluffy white wedding cake sits on its plate.~
+~
+19 65536 1
+3 0 0 0
+3 500 0
+E
+slice cake wedding white~
+   The wedding cake is fluffy and white.  It has a thin line of white rice
+pudding running through it.    
+~
+#2228
+roll sausage spicy~
+a sausage roll~
+A spicy sausage roll lets off a little steam over here.~
+~
+19 0 1
+14 0 0 0
+3 140 0
+E
+sausage roll spicy~
+   The little roll is filled with spicy sausage and baked at Yolis.  ' It is
+fluffy and deliciously expensive.    
+~
+#2229
+egg deviled~
+a deviled egg~
+A fancy little deviled egg sits here smugly.~
+~
+19 0 1
+3 0 0 0
+2 200 0
+E
+egg deviled~
+   The egg has been boiled, cut in half, and emptied of the yolk.  Then,
+strange things are done to the yolk to make it taste funny.  Then, the yolk is
+put back in the egg white and garnished with little bits of parsley and olive.
+Rich people eat funny.    
+~
+#2230
+sandwich cucumber olive~
+a cucumber and olive finger sandwich~
+A little sandwich made of cucumber and olives sits here.~
+~
+19 0 1
+5 0 0 0
+2 103 0
+E
+cucumber sandwhich olive~
+   The cucumber and olive sandwich is made of crustless bread, cucumber, and
+olives.  It is not meant to be extremely tasty or memorable.  Its main job is
+to clean the palate after numerous spicy foods and prepare it for more tasty
+delights.    
+~
+#2231
+loom elf evelen glass weaver~
+Evelen the weaver~
+An elven woman sits at her glass loom.~
+~
+25 0 1
+0 0 0 0
+0 0 0
+E
+loom elf evelen glass weaver~
+   The glass loom was made for weaving rism cloth out of puff shrub.  It is
+worthless now for the spindel that could spin the plant into thread has been
+lost.  Evelen sits at her loom and waits with the patience of the
+near-immortal.  Her pale blond hair is hidden beneath a white veil of rism.  
+
+~
+#2232
+veil white rism~
+a white veil~
+A length of shimmering cloth drapes the ground.~
+~
+9 0 1
+8 0 0 0
+4 40000 0
+E
+veil white rism~
+   The veil is made from rism cloth.  It is so fine that it can be run through
+the wedding ring of a pixie.    
+~
+A
+18 3
+A
+9 4
+#2233
+rose white red-tipped~
+a &wwhite rose&n~
+A beautiful white rose with red-tipped petals lies here.~
+~
+12 0 16385
+0 0 0 0
+1 1 0
+E
+rose white red-tipped~
+   The rose's velvety white petals are tipped with fiery red.  Its smell is
+almost as sweet as the person it is for.    
+~
+#2250
+sign holy cake~
+a sign~
+A plain, white sign hangs on the wall.~
+~
+13 1 0
+0 0 0 0
+14 0 0
+E
+sign holy cake~
+The cakes are containers for slices of cake.  You get:
+  *  30 slices for five-tiered.
+  *  22 slices for four-tiered.
+  *  16 slices for three-tiered.
+  *  100 coins for each additional slice.
+
+Cake slices come in three flavors:
+  *  Chocolate
+  *  White
+  *  Carrot
+  *  New flavors cost 1 red token.
+
+&rWarning&n - Cake containers are !rent.
+
+Slices will be loaded by an immortal character.
+~
+#2251
+sign rings~
+a sign~
+A framed sign hangs on the wall.~
+~
+13 1 0
+0 0 0 0
+14 0 0
+E
+sign rings~
+   A couple who has the blessings of the gods to get married will be given two
+bars of holy gold.  They must then gather a pearl or diamond each for the
+jewelers to make their wedding ring.  A couple who cares not for the gods'
+blessings may purchase a simple gold wedding ring.    
+~
+#2298
+holy talisman firebyrd~
+the &wHoly Talisman&n of the &rFirebyrd&n~
+The &wHoly Talisman&y of the &rFirebyrd&y hums with power.~
+~
+9 41985353 5
+6 0 0 0
+1 10000 0
+A
+24 -2
+A
+4 2
+A
+19 2
+A
+18 2
+$~

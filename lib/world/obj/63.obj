@@ -3,7 +3,7 @@ key black~
 a black key~
 A somewhat plain black key has been left here.~
 ~
-18 c 16385
+18 4 16385
 6300 0 0 0
 1 0 0
 #6301
@@ -11,7 +11,7 @@ knife thief~
 a very sharp knife~
 A very sharp knife lies here.~
 ~
-5 glmnp 8193
+5 47168 8193
 0 8 1 11
 9 1000 2500
 E
@@ -27,7 +27,7 @@ hat wizard~
 a wizard's hat~
 A blue wizard's hat lies here.~
 ~
-9 fgnop 17
+9 57440 17
 6 0 0 0
 5 20000 10000
 E
@@ -43,7 +43,7 @@ headress pontiff ornament cone head~
 a pontiff's headress~
 A white cone-shaped head ornament with religious symbols lies here.~
 ~
-9 fgmop 17
+9 53344 17
 6 0 0 0
 5 20000 10000
 E
@@ -59,7 +59,7 @@ visor black knight~
 a black knight's visor~
 A black visor sits here.~
 ~
-9 fgmno 17
+9 28768 17
 8 0 0 0
 5 20000 10000
 E
@@ -75,7 +75,7 @@ potion thick white~
 a thick white potion~
 A thick white potion has been left here.~
 ~
-10 g 1
+10 64 1
 25 15 35 19
 9 21000 1000
 E
@@ -83,4 +83,4 @@ potion thick white~
 It is disgusting thick white gunk which looks like liquid web and smells like
 medicine.
 ~
-$
+$~

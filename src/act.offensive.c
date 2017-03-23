@@ -25,10 +25,13 @@ extern struct room_data *world;
 extern struct descriptor_data *descriptor_list;
 extern struct room_data *world;
 extern int pk_allowed;
+extern int summon_allowed;
+extern int charm_allowed;
+extern int sleep_allowed;
 
 /* extern functions */
 void raw_kill(struct char_data * ch);
-
+int levelchance(struct char_data *ch);
 
 ACMD(do_assist)
 {
@@ -56,7 +59,9 @@ ACMD(do_assist)
       act("But nobody is fighting $M!", FALSE, ch, 0, helpee, TO_CHAR);
     else if (!CAN_SEE(ch, opponent))
       act("You can't see who is fighting $M!", FALSE, ch, 0, helpee, TO_CHAR);
-    else if (!pk_allowed && !IS_NPC(opponent))	/* prevent accidental pkill */
+    else if (!pk_allowed && !IS_NPC(opponent) &&  
+             !ROOM_FLAGGED(ch->in_room, ROOM_ARENA) &&       
+             !(PRF_FLAGGED(ch, PRF_PKILL) && PRF_FLAGGED(opponent, PRF_PKILL)))
       act("Use 'murder' if you really want to attack $N.", FALSE,
 	  ch, 0, opponent, TO_CHAR);
     else {
@@ -69,9 +74,64 @@ ACMD(do_assist)
 }
 
 
+ACMD(do_bite)
+{
+  struct char_data *vict;
+  struct follow_type *k;
+
+  one_argument(argument, arg);
+
+  if (!*arg)
+    send_to_char("Bite who?\r\n", ch);
+  else if (!(vict = get_char_room_vis(ch, arg)))
+    send_to_char("They don't seem to be here.\r\n", ch);
+  else if (vict == ch) {
+    send_to_char("You bite yourself...OUCH!.\r\n", ch);
+    act("$n hits $mself, and says OUCH!", FALSE, ch, 0, vict, TO_ROOM);
+    return;
+  } else if (IS_AFFECTED(ch, AFF_CHARM) && (ch->master == vict))
+    act("$N is just such a good friend, you simply can't bite $M.", FALSE, ch, 0, vict, TO_CHAR);
+  else {
+    if (!pk_allowed) {
+      if (!IS_NPC(vict) && !IS_NPC(ch) &&
+          !ROOM_FLAGGED(ch->in_room, ROOM_ARENA) &&
+          !(PRF_FLAGGED(ch, PRF_PKILL) && PRF_FLAGGED(vict, PRF_PKILL))) 
+      {
+	send_to_char("You can't bite other players.\r\n", ch);
+	return;
+      }
+      if (IS_AFFECTED(ch, AFF_CHARM) && !IS_NPC(ch->master) && !IS_NPC(vict))
+	return;			/* you can't order a charmed pet to attack a
+				 * player */
+    }
+    if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch))) {
+      hit(ch, vict, TYPE_UNDEFINED);
+      if (GET_CLASS(ch) == CLASS_VAMPYRE)
+      {
+        GET_COND(ch, THIRST) = 24;
+        GET_COND(ch, FULL) = 24;
+        send_to_char("The &rblood&n fills you.\r\n",ch);
+      }
+      else
+        send_to_char("The blood tastes salty, and unfullfilling.\r\n",ch);
+      for (k = ch->followers; k; k=k->next) 
+      {
+        if (PRF_FLAGGED(k->follower, PRF_AUTOASSIST) &&
+          (k->follower->in_room == ch->in_room))
+          do_assist(k->follower, GET_NAME(ch), 0, 0);
+      }
+      WAIT_STATE(ch, PULSE_VIOLENCE + 2);
+    } else
+      send_to_char("You do the best you can!\r\n", ch);
+  }
+}
+
+  
 ACMD(do_hit)
 {
   struct char_data *vict;
+  struct follow_type *k;
+  ACMD(do_assist);
 
   one_argument(argument, arg);
 
@@ -86,7 +146,10 @@ ACMD(do_hit)
     act("$N is just such a good friend, you simply can't hit $M.", FALSE, ch, 0, vict, TO_CHAR);
   else {
     if (!pk_allowed) {
-      if (!IS_NPC(vict) && !IS_NPC(ch) && (subcmd != SCMD_MURDER)) {
+      if (!IS_NPC(vict) && !IS_NPC(ch) && (subcmd != SCMD_MURDER) &&
+          !ROOM_FLAGGED(ch->in_room, ROOM_ARENA) &&
+          !(PRF_FLAGGED(ch, PRF_PKILL) && PRF_FLAGGED(vict, PRF_PKILL))) 
+      {
 	send_to_char("Use 'murder' to hit another player.\r\n", ch);
 	return;
       }
@@ -96,6 +159,12 @@ ACMD(do_hit)
     }
     if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch))) {
       hit(ch, vict, TYPE_UNDEFINED);
+      for (k = ch->followers; k; k=k->next) 
+      {
+        if (PRF_FLAGGED(k->follower, PRF_AUTOASSIST) &&
+          (k->follower->in_room == ch->in_room))
+          do_assist(k->follower, GET_NAME(ch), 0, 0);
+      }
       WAIT_STATE(ch, PULSE_VIOLENCE + 2);
     } else
       send_to_char("You do the best you can!\r\n", ch);
@@ -168,13 +237,16 @@ ACMD(do_backstab)
     return;
   }
 
+
   percent = number(1, 101);	/* 101% is a complete failure */
   prob = GET_SKILL(ch, SKILL_BACKSTAB);
-
+  
   if (AWAKE(vict) && (percent > prob))
     damage(ch, vict, 0, SKILL_BACKSTAB);
   else
     hit(ch, vict, SKILL_BACKSTAB);
+
+  WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
 
@@ -234,25 +306,65 @@ ACMD(do_order)
   }
 }
 
+int better_flee_chance(struct char_data *ch)
+{
+  if (IS_HUMAN(ch)) return 1;
+    else return 0;
+}
 
+ACMD(do_peace)
+{
+  struct char_data *f=FIGHTING(ch);
+
+  if (!FIGHTING(ch)) {
+    send_to_char("But you're not fighting anyone!\n",ch);
+    return;
+  }
+  act("$n tries to pacify $N...", TRUE, ch, 0, f, TO_ROOM);
+  send_to_char("You try to calm your foe...\n",ch);
+  if ( IS_PIXIE(ch) ) {    
+    if(levelchance(ch)) {
+      act("$N calms down for a bit.", TRUE, ch, 0, f, TO_ROOM);
+      stop_fighting(ch);
+      stop_fighting(f);
+    }
+  } else {
+    act("$N is unaffected by $n and continues attacking!", 
+	TRUE, ch, 0, f, TO_ROOM);
+  }
+}
 
 ACMD(do_flee)
 {
-  int i, attempt, loss;
+  int i, attempt;
+  extern void amount_exp_loss(int, struct char_data *, struct char_data *);
+
+
+  if(!IS_NPC(ch))
+    if(FIGHTING(ch) == NULL)
+    {
+      send_to_char("But your not fighting anyone!\r\n",ch);
+      return;
+    }
 
   for (i = 0; i < 6; i++) {
     attempt = number(0, NUM_OF_DIRS - 1);	/* Select a random direction */
+    if (!CAN_GO(ch,attempt)) {
+        if (better_flee_chance(ch)) {
+            attempt=number(0,NUM_OF_DIRS-1);
+        }
+    }
     if (CAN_GO(ch, attempt) &&
 	!IS_SET(ROOM_FLAGS(EXIT(ch, attempt)->to_room), ROOM_DEATH)) {
       act("$n panics, and attempts to flee!", TRUE, ch, 0, 0, TO_ROOM);
       if (do_simple_move(ch, attempt, TRUE)) {
+        if (!IS_NPC(ch) && FIGHTING(ch) != NULL)
+        {
+          send_to_char("You lose exp.\r\n", ch);
+          amount_exp_loss((GET_MAX_HIT(FIGHTING(ch))-GET_HIT(FIGHTING(ch))), ch, FIGHTING(ch));
+        }
 	send_to_char("You flee head over heels.\r\n", ch);
 	if (FIGHTING(ch)) {
-	  if (!IS_NPC(ch)) {
-	    loss = GET_MAX_HIT(FIGHTING(ch)) - GET_HIT(FIGHTING(ch));
-	    loss *= GET_LEVEL(FIGHTING(ch));
-	    gain_exp(ch, -loss);
-	  }
 	  if (FIGHTING(FIGHTING(ch)) == ch)
 	    stop_fighting(FIGHTING(ch));
 	  stop_fighting(ch);
@@ -274,7 +386,10 @@ ACMD(do_bash)
 
   one_argument(argument, arg);
 
-  if (GET_CLASS(ch) != CLASS_WARRIOR) {
+  if (GET_CLASS(ch) == CLASS_MAGIC_USER || GET_CLASS(ch) == CLASS_CLERIC || 
+      GET_CLASS(ch) == CLASS_BARD || GET_CLASS(ch) == CLASS_VAMPYRE)
+
+  {
     send_to_char("You'd better leave all the martial arts to fighters.\r\n", ch);
     return;
   }
@@ -374,10 +489,6 @@ ACMD(do_kick)
   struct char_data *vict;
   int percent, prob;
 
-  if (GET_CLASS(ch) != CLASS_WARRIOR) {
-    send_to_char("You'd better leave all the martial arts to fighters.\r\n", ch);
-    return;
-  }
   one_argument(argument, arg);
 
   if (!(vict = get_char_room_vis(ch, arg))) {
@@ -401,4 +512,31 @@ ACMD(do_kick)
   } else
     damage(ch, vict, GET_LEVEL(ch) >> 1, SKILL_KICK);
   WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+}
+
+void do_taunt(struct char_data *ch, struct char_data *vict)
+{
+  if(!IS_BROWNIE(ch)) return;
+  if(!vict) return;
+
+  if (!pk_allowed && !IS_NPC(vict) && 
+      !ROOM_FLAGGED(ch->in_room, ROOM_ARENA) && 
+      !(PRF_FLAGGED(ch, PRF_PKILL) && PRF_FLAGGED(vict, PRF_PKILL)))
+    return;    
+  if (IS_SET(world[ch->in_room].room_flags,ROOM_PEACEFUL)) return;
+  if (GET_LEVEL(vict)>LVL_IMMORT) return;
+  if (IS_NPC(vict))
+    if (MOB_FLAGGED(vict, MOB_SENTINEL) || MOB_FLAGGED(vict, MOB_NOATTACK))
+      return;
+  
+  if(levelchance(ch)) {
+    act("You've enraged $N.", TRUE, ch, 0, vict, TO_CHAR);
+    act("You've been enraged by $n!", TRUE, ch, 0, vict, TO_VICT);
+    act("$n enrages $N, who attacks in a wild frenzy.",
+	TRUE, ch, 0, vict, TO_NOTVICT);
+    /* need to give the mob a nasty affect for a while */
+    mag_affects(GET_LEVEL(ch),ch,vict,SKILL_TAUNT,0);
+    hit(vict,ch,TYPE_UNDEFINED);
+  }
+  WAIT_STATE(ch, PULSE_VIOLENCE);
 }

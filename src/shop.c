@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: shop.c                                        Part of CircleMUD *
 *  Usage: shopkeepers: loading config files, spec procs.                  *
 *                                                                         *
@@ -11,6 +11,8 @@
 /***
  * The entire shop rewrite for Circle 3.0 was done by Jeff Fink.  Thanks Jeff!
  ***/
+
+#define __SHOP_C__
 
 #include "conf.h"
 #include "sysdep.h"
@@ -78,6 +80,15 @@ int is_ok_char(struct char_data * keeper, struct char_data * ch, int shop_nr)
     do_tell(keeper, buf, cmd_tell, 0);
     return (FALSE);
   }
+
+  if ((IS_HUMAN(ch) && NOTRADE_HUMAN(shop_nr)) ||
+      (IS_DWARF(ch) && NOTRADE_DWARF(shop_nr)) ||
+      (IS_ELF(ch) && NOTRADE_ELF(shop_nr)) ||
+      (IS_HOBBIT(ch) && NOTRADE_HOBBIT(shop_nr))) {
+    sprintf(buf, "%s %s", GET_NAME(ch), MSG_NO_SELL_RACE);
+    do_tell(keeper, buf, cmd_tell, 0);
+    return (FALSE);
+  }
   return (TRUE);
 }
 
@@ -89,11 +100,12 @@ int is_open(struct char_data * keeper, int shop_nr, int msg)
   *buf = 0;
   if (SHOP_OPEN1(shop_nr) > time_info.hours)
     strcpy(buf, MSG_NOT_OPEN_YET);
-  else if (SHOP_CLOSE1(shop_nr) < time_info.hours)
+  else if (SHOP_CLOSE1(shop_nr) < time_info.hours) {
     if (SHOP_OPEN2(shop_nr) > time_info.hours)
       strcpy(buf, MSG_NOT_REOPEN_YET);
     else if (SHOP_CLOSE2(shop_nr) < time_info.hours)
       strcpy(buf, MSG_CLOSED_FOR_DAY);
+  }
 
   if (!(*buf))
     return (TRUE);
@@ -231,14 +243,14 @@ int trade_with(struct obj_data * item, int shop_nr)
     return (OBJECT_NOTOK);
 
   for (counter = 0; SHOP_BUYTYPE(shop_nr, counter) != NOTHING; counter++)
-    if (SHOP_BUYTYPE(shop_nr, counter) == GET_OBJ_TYPE(item))
+    if (SHOP_BUYTYPE(shop_nr, counter) == GET_OBJ_TYPE(item)) {
       if ((GET_OBJ_VAL(item, 2) == 0) &&
 	  ((GET_OBJ_TYPE(item) == ITEM_WAND) ||
 	   (GET_OBJ_TYPE(item) == ITEM_STAFF)))
 	return (OBJECT_DEAD);
       else if (evaluate_expression(item, SHOP_BUYWORD(shop_nr, counter)))
 	return (OBJECT_OK);
-
+    }
   return (OBJECT_NOTOK);
 }
 
@@ -716,6 +728,19 @@ void shopping_value(char *arg, struct char_data * ch,
   return;
 }
 
+int can_take_more(struct obj_data * list)
+{
+  struct obj_data *i;
+  int numcarry=0;
+
+  for (i = list; i; i = i->next_content)
+    numcarry++;
+
+  if(numcarry>50)
+    return -1;
+  else
+    return 1;
+}  
 
 char *list_object(struct obj_data * obj, int cnt, int index, int shop_nr)
 {
@@ -746,7 +771,125 @@ char *list_object(struct obj_data * obj, int cnt, int index, int shop_nr)
   return (buf);
 }
 
+void shopping_shopid(char *arg, struct char_data * ch,
+                        struct char_data * keeper, int shop_nr)
+{
+  int i;
+  int found;
 
+  struct time_info_data age(struct char_data * ch);
+  extern char *spells[];
+  extern char *item_types[];
+  extern char *extra_bits[];
+  extern char *apply_types[];
+  extern char *affected_bits[];
+  char buf[MAX_STRING_LENGTH];
+  struct obj_data *obj;
+  int buynum = 0;
+
+  if (!(is_ok(keeper, ch, shop_nr)))
+    return;
+
+  if (SHOP_SORT(shop_nr) < IS_CARRYING_N(keeper))
+    sort_keeper_objs(keeper, shop_nr);
+
+  if ((buynum = transaction_amt(arg)) < 0) {
+    sprintf(buf, "%s A negative amount?  Try selling me something.",
+	    GET_NAME(ch));
+    do_tell(keeper, buf, cmd_tell, 0);
+    return;
+  }
+  if (!(*arg) || !(buynum)) {
+    sprintf(buf, "%s What do you want me to tell you about?", GET_NAME(ch));
+    do_tell(keeper, buf, cmd_tell, 0);
+    return;
+  }
+  if (!(obj = get_purchase_obj(ch, arg, keeper, shop_nr, TRUE)))
+    return;
+
+  if (obj) {
+    if (GET_GOLD(ch) < 100)
+    {
+      send_to_char("It costs 100 gold to identify that.\r\n",ch);
+      return;
+    } 
+    else 
+      send_to_char("You pay the shopkeeper 100 gold for his service.\r\n",ch);
+
+    GET_GOLD(ch) -= 100;
+    send_to_char("You feel informed:\r\n", ch);
+    sprintf(buf, "Object '%s', Item type: ", obj->short_description);
+    sprinttype(GET_OBJ_TYPE(obj), item_types, buf2);
+    strcat(buf, buf2);
+    strcat(buf, "\r\n");
+    send_to_char(buf, ch);
+
+    if (obj->obj_flags.bitvector) {
+      send_to_char("Item will give you following abilities:  ", ch);
+      sprintbit(obj->obj_flags.bitvector, affected_bits, buf);
+      strcat(buf, "\r\n");
+      send_to_char(buf, ch);
+    }
+    send_to_char("Item is: ", ch);
+    sprintbit(GET_OBJ_EXTRA(obj), extra_bits, buf);
+    strcat(buf, "\r\n");
+    send_to_char(buf, ch);
+
+    sprintf(buf, "Weight: %d, Value: %d, Rent: %d\r\n",
+            GET_OBJ_WEIGHT(obj), GET_OBJ_COST(obj), GET_OBJ_RENT(obj));
+    send_to_char(buf, ch);
+
+    switch (GET_OBJ_TYPE(obj)) {
+    case ITEM_SCROLL:
+    case ITEM_POTION:
+      sprintf(buf, "This %s casts: ", item_types[(int) GET_OBJ_TYPE(obj)]);
+
+      if (GET_OBJ_VAL(obj, 1) >= 1)
+        sprintf(buf, "%s %s", buf, spells[GET_OBJ_VAL(obj, 1)]);
+      if (GET_OBJ_VAL(obj, 2) >= 1)
+        sprintf(buf, "%s %s", buf, spells[GET_OBJ_VAL(obj, 2)]);
+      if (GET_OBJ_VAL(obj, 3) >= 1)
+        sprintf(buf, "%s %s", buf, spells[GET_OBJ_VAL(obj, 3)]);
+      sprintf(buf, "%s\r\n", buf);
+      send_to_char(buf, ch);
+      break;
+    case ITEM_WAND:
+    case ITEM_STAFF:
+      sprintf(buf, "This %s casts: ", item_types[(int) GET_OBJ_TYPE(obj)]);
+      sprintf(buf, "%s %s\r\n", buf, spells[GET_OBJ_VAL(obj, 3)]);
+      sprintf(buf, "%sIt has %d maximum charge%s and %d remaining.\r\n", buf,
+              GET_OBJ_VAL(obj, 1), GET_OBJ_VAL(obj, 1) == 1 ? "" : "s",
+              GET_OBJ_VAL(obj, 2));
+      send_to_char(buf, ch);
+      break;
+    case ITEM_WEAPON:
+      sprintf(buf, "Damage Dice is '%dD%d'", GET_OBJ_VAL(obj, 1),
+              GET_OBJ_VAL(obj, 2));
+      sprintf(buf, "%s for an average per-round damage of %.1f.\r\n", buf,
+              (((GET_OBJ_VAL(obj, 2) + 1) / 2.0) * GET_OBJ_VAL(obj, 1)));
+      send_to_char(buf, ch);
+      break;
+    case ITEM_ARMOR:
+      sprintf(buf, "AC-apply is %d\r\n", GET_OBJ_VAL(obj, 0));
+      send_to_char(buf, ch);
+      break;
+    }
+    found = FALSE;
+    for (i = 0; i < MAX_OBJ_AFFECT; i++) {
+      if ((obj->affected[i].location != APPLY_NONE) &&
+          (obj->affected[i].modifier != 0)) {
+        if (!found) {
+          send_to_char("Can affect you as :\r\n", ch);
+          found = TRUE;
+        }
+        sprinttype(obj->affected[i].location, apply_types, buf2);
+        sprintf(buf, "   Affects: %s By %d\r\n", buf2, obj->affected[i].modifier);
+        send_to_char(buf, ch);
+      }
+    }
+  }
+}
+ 
 void shopping_list(char *arg, struct char_data * ch,
 		        struct char_data * keeper, int shop_nr)
 {
@@ -802,9 +945,9 @@ int ok_shop_room(int shop_nr, int room)
   return (FALSE);
 }
 
-
 SPECIAL(shop_keeper)
 {
+  int can_take_more(struct obj_data *);
   char argm[MAX_INPUT_LENGTH];
   struct char_data *keeper = (struct char_data *) me;
   int shop_nr;
@@ -842,6 +985,11 @@ SPECIAL(shop_keeper)
     shopping_buy(argument, ch, keeper, shop_nr);
     return (TRUE);
   } else if (CMD_IS("sell")) {
+    if(can_take_more(keeper->carrying) == -1)
+    {
+      send_to_char("I'm loaded to my limit, sorry\r\n",ch);
+      return (TRUE);
+    }
     shopping_sell(argument, ch, keeper, shop_nr);
     return (TRUE);
   } else if (CMD_IS("value")) {
@@ -849,6 +997,9 @@ SPECIAL(shop_keeper)
     return (TRUE);
   } else if (CMD_IS("list")) {
     shopping_list(argument, ch, keeper, shop_nr);
+    return (TRUE);
+  } else if (CMD_IS("shopid")) {
+    shopping_shopid(argument, ch, keeper, shop_nr);
     return (TRUE);
   }
   return (FALSE);
@@ -874,7 +1025,7 @@ int ok_damage_shopkeeper(struct char_data * ch, struct char_data * victim)
 
 int add_to_list(struct shop_buy_data * list, int type, int *len, int *val)
 {
-  if (*val >= 0)
+  if (*val >= 0) {
     if (*len < MAX_SHOP_OBJ) {
       if (type == LIST_PRODUCE)
 	*val = real_object(*val);
@@ -886,6 +1037,7 @@ int add_to_list(struct shop_buy_data * list, int type, int *len, int *val)
       return (FALSE);
     } else
       return (TRUE);
+  }
   return (FALSE);
 }
 

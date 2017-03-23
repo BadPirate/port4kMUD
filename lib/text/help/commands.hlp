@@ -18,6 +18,51 @@ Examples:
 
 See also: ALIAS
 #
+RECALL
+
+Usage: recall
+
+This returns you to the starting room.
+#
+PROMPT DISPLAY
+
+Usage: prompt [prompt (%code text ...)]
+
+The following codes are availible for usage in the prompt:
+
+           %h = current hitp   %H = max. hitp      %m = current mana
+           %M = max. mana      %v = current move   %V = max. move
+           %p = percent of... {hmvx} (%px = percent of exp to level)
+           %o = opponent cond  %x = current exp    %X = exp to level
+           %g = gold on hand   %G = gold in bank   %t = tank condition
+           %_ = new line       %% = percent sign
+
+A few default prompts are accessable via do_display().  Inside the
+game type "display" without arguments for a list of prompts.
+#
+SCAN
+
+Usage: scan
+
+Tells you where mobs and people are.
+
+Example:
+
+> scan
+You see Rasman nearby south and,
+You see the fido and the Cityguard a ways off west
+
+See also: Look
+#
+AFK
+
+Usage: afk
+
+This turns on and off your AFK or Away From Keyboard, it lets people know
+when you are indisposed.
+
+See also: TOGGLE
+#
 ALIAS ALIASES
 
 Usage: alias [alias name] [command]
@@ -68,6 +113,50 @@ The special variable $* represents the entire input line after an alias:
 
 See also: ! ^
 #
+AUTOASSIST
+
+Usage: autoassist
+
+This toggles Autoassist on and off, making it so that when you are 
+grouped with someone and they attack something then you will also join in 
+the attack.
+
+See Also:  TOGGLE
+#
+REDIT OEDIT MEDIT ZEDIT SEDIT
+
+Usage: REDIT [Room Vnum (if left blank will assume the room your in]
+       OEDIT [Object Vnum]
+       MEDIT [Mob Vnum]
+       ZEDIT [Zone Vnum]
+       SEDIT [Shop Vnum]
+
+These are all a part of OasisOLC and I suggest you go to the Circlemud 
+homepage and download the handbook.
+
+See also: OLC
+#
+AUCTION BID AUCID
+
+Usage: auction [item to be action] [minimum bid for that item]
+       bid [amount to bid on item]
+       aucid
+
+Auction:  This is how you put items up for sale. The following line would 
+  auction one of your daggers for a minimum bid of 5 gold
+
+  > auction dagger 5
+
+Bid:      This Lets you bid on an item that has been put up for sale.  
+  The following line would bid 10 gold on an item
+
+  > bid 10
+
+Aucid:    Will give you the full stats on an item being auction (this 
+  will cost you however)
+
+See also: GOSSIP AUCSAY
+#
 ANSI COLOR
 
 Usage: color [off | sparse | normal | complete]
@@ -106,11 +195,11 @@ person you're assisting is fighting.
 
 See also: FLEE, KILL, RESCUE
 #
-AUCTION GOSSIP GRATS NOAUCTION NOGOSSIP NOGRATS
+GOSSIP GRATS NOAUCTION NOGOSSIP NOGRATS AUCSAY
 
-Usage: auction <message>
-       gossip <message>
+Usage: gossip <message>
        grats <message>
+       aucsay <message>
 
 These are channels reserved for specific purposes.  Messages on these
 channels reach everyone who is monitoring them.  You must be at least level
@@ -118,12 +207,12 @@ three to use these channels.
 
 Examples:
 
-  > auction short sword -- minimum bid 100k
   > gossip Hey, is that a short sword on your belt or are you happy to see me?
   > grats LEVEL!!!!!!!!
   > grats GRATS CATJE!!!!!!!!
+  > aucsay I want a Rolls royce!
 
-See also: EMOTE, GSAY, HOLLER, NOREPEAT, SAY, SHOUT
+See also: EMOTE, GSAY, HOLLER, NOREPEAT, SAY, SHOUT, AUCTION
 #
 AUTOEXIT
 
@@ -134,25 +223,6 @@ possible exits will be displayed, only those immediately available.
 If a door is closed it will not show up as a possible exit.
 
 See also: TOGGLE
-#
-BACKSTAB
-
-Thief only.
-
-Backstab is a way to sneak up on a person and attempt to place your dagger
-in his back, at exactly the point where it does most damage.  A successful
-backstab gives a damage multiplier, depending on level:
-
-    Levels  Multiplier
-    ------  ----------
-     1-7        2
-     8-13       3
-    14-20       4
-    21-30       5
-
-The chance of successfully backstabbing a person depends on how well you
-have practiced backstab at your guild.  You can always backstab sleeping
-people.
 #
 BANK WITHDRAW DEPOSIT BALANCE
 
@@ -167,22 +237,6 @@ Examples:
   > balance
 
 See also: GOLD, SCORE
-#
-BASH
-
-Fighters only.
-
-The success of a bash depends upon how well you are learned.  To bash someone
-is to attempt to 'knock' that person over.  If you succeed you will inflict
-minor damage, and cause the victim to fall on it's rear.  The victim will be
-unable to issue any commands for 2 rounds of violence.  If you miss you loose
-your balance and fall.
-
-A bash makes you unable to type commands for 2 rounds of violence.
-
-Note that hitting a person who is resting/sitting will inflict 1.5 * damage.
-
-See also: KICK, RESCUE
 #
 BRIEF
 
@@ -275,7 +329,7 @@ See also: HIT, KILL
 #
 DIAGNOSE
 
-Usage: diagnose [character]
+Usage: diagnose <target>
 
 The DIAGNOSE command tells you how wounded a character looks.  If you are
 fighting someone, you can use DIAGNOSE with no arguments to diagnose the
@@ -288,19 +342,6 @@ Examples:
 
 See also: CONSIDER
 #
-DISPLAY PROMPT
-
-Usage: display < H | M | V | all | auto | off >
-
-Modify your prompt to show your hit points, mana, and/or movement points.
-
-  > display hv          Display hit points and movement points
-  > display off         Return to normal display
-  > display all         Display hit, mana, and move points
-  > display auto        Display hit, mana, and move when they are below 30%
-
-See also: TOGGLE
-#
 DONATE
 
 Usage: donate <object>
@@ -308,9 +349,7 @@ Usage: donate <object>
 
 
 This command takes an object that you no longer want and deposits it in the
-donation room of Midgaard to assist newbies in getting started.  There is
-a 75% chance objects donated will wind up in a donation room in Midgaard,
-and a 25% chance the item will be junked.
+donation room of Midgaard to assist newbies in getting started.
 
   > donate shield
   > donate all.bread
@@ -371,7 +410,7 @@ See also: SOCIALS
 #
 ENTER
 
-Usage: enter [place]
+Usage: enter <place>
 
 If you type 'enter' while you are outdoors, you'll enter any nearby shelter.
 You can also follow 'enter' with an argument; for example, 'enter window'.
@@ -495,7 +534,7 @@ See also: EQUIPMENT, REMOVE, WEAR, WIELD
 #
 GROUP
 
-Usage: group [player]
+Usage: group <player>
        group all
 
 GROUP with no arguments shows the status of your group.  GROUP <player>
@@ -545,7 +584,7 @@ See also: GROUP, TELL, SAY
 #
 HELP
 
-Usage: help [command]
+Usage: help <command>
 
 Help searches for a partial match of the entered word, including any
 spaces that may follow the word.  Help alone will give a list of the
@@ -562,25 +601,6 @@ Examples:
 
 See also: COMMANDS, SOCIALS
 #
-HIDE
-
-Thieves Only.
-
-When you type hide there is a chance that you hide in the room.  If hidden
-you can only be "sensed" by the "sense life" spell.  Even if sensed your
-identity will remain hidden.  Hide is broken by pressing return, regardless
-of whether you typed a command or not.
-
-Example:
-
-  > hide
-  Ok.
-  >  (you wait for ex. 5 mins and remain hidden for 5 mins)
-
-  >  (You pressed enter and no longer hide)
-
-See also: SNEAK
-#
 HOUSE
 
 The HOUSE command is used to add or remove guests from your house's guest
@@ -588,7 +608,7 @@ list.  You must be standing in your house to use this command.  Only the
 primary owner of a house (not guests) may change the guest list using the
 HOUSE command.
 
-Usage: house [<player name>]
+Usage: house <player name>
 
 Typing 'house' with no arguments gives a list of the people currently on
 your house's guest list.  Typing 'house' with the name of a player will add
@@ -639,19 +659,6 @@ Examples:
 
 See also: DONATE, DROP
 #
-KICK
-
-Fighters only.
-
-Usage: kick <victim>
-
-The success of a kick depends upon how well you are learned.  The higher
-level you reach the harder you kick.  There is one small catch -- whenever
-you kick (or miss) you will be unable to type any command for three 
-rounds of 'Violence' -- so be sure that you do not need to flee!
-
-See also: BASH, RESCUE
-#
 KILL HIT
 
 Usage: kill <victim>
@@ -668,16 +675,9 @@ Usage: leave
 If you feel claustrophobic, typing 'leave' will make you use the nearest
 obvious exit to the outside.
 #
-LEVELS
-
-Usage: levels
-
-Lists the levels of your class and the experience required to attain each
-level.
-#
 LIST
 
-Usage: list [item type]
+Usage: list <item type>
 
 If you'd like to see what items a shop has for sale, take a look at the
 list.  The list contains all of the items currently for sale and in
@@ -812,23 +812,6 @@ list if you have notell on.
 
 See also: FLAGS, TELL, TOGGLE, WHO
 #
-OFFER RENT
-
-Usage: offer
-       rent
-
-For use in the receptions of inns.
-
-Offer makes the innkeeper tell you the cost of storing your belongings
-for one day.  Rent stores you belongings and exits you from the game.
-When you re-enter, you will start where you rented.
-
-There is a daily charge for rent.  You may store your things at the
-CRYOGENIC CENTER for a one-time charge of four days rent.  See INNS
-for details on the rent policy.
-
-See also: CRYOGENIC, INN, RECEPTION
-#
 OPEN CLOSE LOCK UNLOCK
 
 Usage: open | close | lock | unlock <door> [direction]
@@ -859,21 +842,6 @@ Examples:
 
 See also: CHARM
 #
-"PICK LOCKS"
-
-Thieves only.
-
-Usage: pick <lock name> [direction]
-
-For picking locks.  Not all locks can be picked.
-
-Examples:
-
-  > pick door south
-  > pick safe
-
-See Also : OPEN, CLOSE, LOCK, UNLOCK
-#
 POUR
 
 Usage: pour <from container> <to container>
@@ -889,9 +857,9 @@ Examples:
 
 See also: FILL
 #
-PRACTICE PRACTISE
+PRACTICE
 
-Usage: practice [skill or spell name]
+Usage: practice <skill or spell name>
 
 Practice is the way you improve your spells and skills.  You can only do
 so in your guild, where your guildmaster can help you train.  Type
@@ -947,16 +915,6 @@ the quest channel and receive information specific to the quest.
 
 See also: QSAY
 #
-QUI SHUTDOW
-
-Just to prevent accidental quittings and/or shutdowns.
-This command doesn't DO anything, it simply is.
-
-Note to immortals: If you type QUI, you will quit and all your items will
-                   drop to the ground. 
-
-See also: QUIT
-#
 QUIT
 
 When you get tired of playing, you can leave the game by typing 'quit'.
@@ -965,7 +923,6 @@ simply be left on the ground (Dependant upon how the game is currently
 configured).  If you wish to have your equipment stored, you may have to
 find an inn and pay rent.
 
-See also: INN, OFFER, RENT
 #
 READ
 
@@ -985,7 +942,7 @@ See also: BOARDS
 #
 RECITE SCROLL SCROLLS
 
-Usage: recite <scroll> [Target]
+Usage: recite <scroll> <target>
 
 Is used to "read" a magical scroll.  Target can be an object, character or
 nothing (which may be yourself).
@@ -1037,21 +994,6 @@ Usage: report
 This command sends a report of your current health to the other people in
 your group.
 #
-RESCUE
-
-Fighters Only.
-
-Usage: rescue <victim>
-
-This command is useful if you want to try and make an attacker hit you
-instead of your poor friend who is being pummeled.  You can only 'turn'
-one monster for each rescue attempt.  This is very useful when playing
-in groups, of course.
-
-Example:
-
-  > rescue Yankee
-#
 SAVE
 
 Usage: save
@@ -1071,7 +1013,7 @@ equipment -- you must find an Inn to store your belongings.
 
 See also: INN, RENT
 #
-SAY TELL ASK WHISPER SHOUT YELL HOLLER '
+SAY TELL ASK WHISPER SHOUT YELL HOLLER
 
 Usage: say | shout | holler <string>
        tell | whisper | ask <player> <string>
@@ -1122,36 +1064,11 @@ See also: BUY, LIST, SHOPS, VALUE
 #
 SLEEP
 
-SLEEP is both a command and the name of a spell.
-
 The SLEEP command puts you to sleep, allowing you to regain your health more
 quickly.  You will be largely unaware of your surroundings while asleep.
 You can awaken yourself with the WAKE command.
 
-The SLEEP spell forces the victim into a magical sleep such that they cannot
-be awakened until the spell wears off.
-
-Usage       : cast 'sleep' <victim>
-Accumulative: Yes (Duration)
-Duration    : 4 hours + level/4
-Level       : Mage level 8.
-
-If failing saving throw versus spell, the person will fall asleep.
-A person who is affected by sleep can only be awakened if attacked.
-
 See also: WAKE
-#
-SNEAK
-
-Thieves Only.
-
-Usage: sneak
-
-Used for sneaking (moving in and out of rooms without anyone taking notice).
-When you type sneak, there is no way to know if you're actually sneaking.
-If you successfully sneak, then you'll continue to sneak for a little while.
-
-See also: HIDE
 #
 SPLIT
 
@@ -1219,20 +1136,9 @@ saved when you quit or rent.
 See also: BRIEF, COMPACT, DISPLAY, NOSHOUT, NOSUMMON, NOTELL, QUEST
           REPEAT, WIMP
 #
-TRACK
-
-Usage: track <victim>
-
-Used for finding the first step on the shortest route to a monster.
-
-Example:
-
-  > track fido
-  You sense a trail south from here!
-#
 UNGROUP
 
-Usage: ungroup [group member]
+Usage: ungroup <group member>
 
 UNGROUP can be used by group leaders to disband the entire group, or
 to kick a specific group member out of the group (and stop him/her from
@@ -1338,30 +1244,11 @@ Example:
 #
 WHO
 
-Usage: who [minlev[-maxlev]] [-n sname] [-c classlist] [-s] [-o] [-q] [-r] [-z]
+Usage: who
 
 Lists the people currently in the game.  Some people may be invisible.
 Command-line options can be used to limit the listing.  The parameters
 can be specified on the command-line in any order.
-
-minlev, maxlev : list only people whose level is at or above minlev, and
-                 optionally, at or below maxlev
--n : list only people whose names or titles contain sname
--c : list only people of a certain class, where classlist is any combination
-     of the letters w, m, c, and t
--s : list names in the short form (4 columns of names, without titles or flags)
--o : list only outlaws (i.e. people with a killer or thief flag)
--q : list only people who are on the Quest
--r : list only people who are in your room
--z : list only people in your zone
-
-Examples:
-
-  > who -c wc -s -l 20
-  List, in short form, warriors and clerics at or above level 20
-
-  > who 15-25 -o -z
-  List all outlaws between levels 15 and 25 who are in your zone.
 #
 WHOAMI
 
@@ -1386,7 +1273,7 @@ See also: EQUIPMENT, REMOVE, WEAR
 #
 WIMPY
 
-Usage: wimpy [hp]
+Usage: wimpy <hp>
 
 Use the WIMPY command to automatically flee once your health drops below
 a certain level.

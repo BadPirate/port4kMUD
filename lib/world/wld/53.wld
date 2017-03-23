@@ -1,44 +1,40 @@
 #5300
-The Great Eastern Desert~
-   A vast desert stretches for miles, the sands constantly shifting around
-you.  Rising out of the sand to the north you see a mighty pyramid.
+Entrance to a Cavern~
+   The ceiling of the cavern is at least a mile from the pink sand of its
+floor.  The entire cavern is filled with a strange white light that illuminates
+everything yet does not really light anything.  Strange hot breezes stir the
+fine pink sand into swirls and dips.  Footprints will not last long here.  To
+the north, a giant pyramid structure gleams whitely against the sand.  A small
+tunnel leads down into the darkness.    
 ~
 53 0 2
 D0
-The sands of the desert continue onward towards the pyramid.
+   The pyramid rises up from the pink sands to the north.    
 ~
 ~
 0 -1 5301
-D1
-Sand as far as the eye can see.
-~
-~
-0 -1 5040
 D2
-Sand as far as the eye can see.
 ~
 ~
-0 -1 5050
-D3
-Sand as far as the eye can see.
-~
-~
-0 -1 5035
+0 0 5363
 E
 pyramid~
 The massive pyramid rises out of the sand, a monument to long-dead pharoahs.
 ~
 S
 #5301
-At The Base Of The Pyramid~
-   The mighty pyramid towers above you out of the hot desert sands, made
-from huge blocks of stone that have been coated over with a rough sandy
-plaster-like substance.  The face of the pyramid is steep, but you think
-you might be able to climb it.
+At the Base of the Pyramid~
+   A large structure in the shape of a pyramid rises up from the pink sands of
+the desert floor.  It is made from huge blocks of stone that have been coated
+over with a rough, sandy plaster-like substance.  The pyramid glows in the
+almost-light present in this giant cave.  Its face is steep, but it's quite
+possible a determined person could climb it.  However, anyone feeling chicken
+could try walking northwest or northeast around it or head south out of the
+cave.    
 ~
-53 0 2
+53 12 2
 D2
-Sand as far as the eye can see.
+   The pink sand covers the cavern floor right up to its sides.    
 ~
 ~
 0 -1 5300
@@ -47,6 +43,17 @@ The steep slope of the pyramid rises up before you.
 ~
 ~
 0 -1 5302
+D6
+   There's just enough room between the pyramid and the cavern wall for someone
+to slip through.    
+~
+~
+0 0 5361
+D7
+   The soft pink sand surrounds the pyramid to the northwest.    
+~
+~
+0 0 5362
 E
 pyramid~
 You wonder how anyone could have built such a massive thing out in this
@@ -55,11 +62,12 @@ heat.
 S
 #5302
 Climbing The Great Pyramid~
-   Hot air rises off the sides of the pyramid, and the wind chokes you with
-a flurry of sand and dust.  So far you have made it halfway up the side.  The
-walls of the pyramid are quite steep.
+   Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  So far you have made it halfway up the side.  The
+walls of the pyramid are quite steep.  Going up looks like you might slip and
+fall to your &RDEATH&n.    
 ~
-53 0 5
+53 8 5
 D0
 If you are daring you could try to skirt around to the northern side.
 ~
@@ -88,11 +96,13 @@ heat.
 S
 #5303
 Climbing The Great Pyramid~
-   Hot air rises off the sides of the pyramid, and the wind chokes you with
-a flurry of sand and dust.  The walls of the pyramid are quite steep, and
-you are having trouble keeping from sliding down into the sands below.
+   Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  The walls of the pyramid are quite steep, and you are
+having trouble keeping from sliding down into the sands below.  Going up looks
+just like going down from here.... looks like the same outcome... just
+like you might slip and fall to your &RDEATH&n.    
 ~
-53 0 5
+53 8 5
 D1
 If you are daring you could try to skirt around to the eastern side.
 ~
@@ -121,11 +131,12 @@ heat.
 S
 #5304
 Climbing The Great Pyramid~
-   Hot air rises off the sides of the pyramid, and the wind chokes you with
-a flurry of sand and dust.  The walls of the pyramid are quite steep, and
-you are having trouble keeping from sliding down into the sands below.
+   Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  The walls of the pyramid are quite steep, and you are
+having trouble keeping from sliding down into the sands below.  Going up or
+down you'd probably slip and fall to your &RDEATH&n.    
 ~
-53 0 5
+53 8 5
 D1
 If you are daring you could try to skirt around to the eastern side.
 ~
@@ -154,12 +165,12 @@ heat.
 S
 #5305
 Climbing The Great Pyramid~
-   Here on the eastern side of the pyramid there is a little more shelter
-from the heat and wind.  The stone side is not nearly so slippery smooth
-from the ravages of time, and you think you may be able to even reach the
-top from here.
+   Here on the eastern side of the pyramid there is a little more shelter from
+the heat and wind.  The stone side is not nearly so slippery smooth from the
+ravages of time, and you think you may be able to even reach the top from here.
+Going down you would probably slip and fall to your &RDEATH&n.    
 ~
-53 0 5
+53 8 5
 D0
 If you are daring you could try to skirt around to the northern side.
 ~
@@ -188,12 +199,16 @@ heat.
 S
 #5306
 The Apex Of The Great Pyramid~
-   Bathed in sweat, you have managed to reach the summit of the great
-pyramid.  The four sides of the pyramid slope sharply down into the
-hot sands in all four cardinal directions.
-A plaque has been set into the sandy stones beneath your feet.
+   Bathed in sweat, you have managed to reach the summit of the great pyramid.
+The four sides of the pyramid slope sharply down into the hot sands in all four
+cardinal directions.  A plaque has been set into the sandy stones beneath your
+feet.  The north is MUCH too steep to climb down, even a small gust of wind
+would knock you to your &RDEATH&n, and seeing as the wind is quite strong right
+now going down there would spell your doom.  In fact, every direction but east
+is much too steep to go down.  So you either go east or fall to your &RDEATH&n.
+  
 ~
-53 0 1
+53 8 1
 D0
 The north side of the pyramid slopes down into the sands.
 It looks really dangerous.  I wouldn't go that way.
@@ -250,7 +265,7 @@ SPLAT.
 
 Ouch.
 ~
-53 bd 0
+53 4106 0
 S
 #5308
 A Ladder~
@@ -259,7 +274,7 @@ the pyramid.  The air around is thick with layers of dust and a strange
 musty smell.  Above you you see tiny beams of light coming through the
 stones of the ceiling.
 ~
-53 cd 0
+53 12 0
 D4
 You see the sandy stones of the ceiling.
 ~
@@ -285,7 +300,7 @@ It would seem that some of the tenants of this monument are still alive.
 Exits lead in all directions.   The door to the west is covered with
 inscriptions.
 ~
-53 d 0
+53 8 0
 D0
 You see a tiny crawlway raised about three feet off the ground.
 ~
@@ -331,7 +346,7 @@ not water but flames of intense heat.  The multicoloured flames lick out
 at you, searching for things to burn.  The pool proceeds to the east into
 a small chamber.
 ~
-53 cd 0
+53 12 0
 D1
 You see a large stone door.
 ~
@@ -349,7 +364,7 @@ The Chamber Of The Efreet~
 Here the flames are nearly as high as your head, singeing your face and 
 evaporating your sweat instantaneously.
 ~
-53 d 7
+53 8 7
 D1
 The pool of fire ends to the east.
 ~
@@ -362,7 +377,7 @@ A Tiny Crawlway~
 space.  The crawlway is thick with sand and dust, and markings of the
 passage of other creatures.
 ~
-53 ad 0
+53 9 0
 D0
 The crawlway continues to the north.
 ~
@@ -385,7 +400,7 @@ A Tiny Crawlway~
 through the inside of the pyramid.  The crawlway is thick with sand, dust, 
 and markings of the passage of other creatures.
 ~
-53 ad 0
+53 9 0
 D2
 The crawlway continues to the south.
 ~
@@ -403,7 +418,7 @@ A Tiny Crawlway~
 through the inside of the pyramid.  The crawlway is thick with sand, dust, 
 and markings of the passage of other creatures.
 ~
-53 ad 0
+53 9 0
 D1
 The crawlway continues to the east.
 ~
@@ -422,7 +437,7 @@ section of the crawlway, as the stones of the pyramid close together about
 you.  Below you is a small, slippery-looking hole that plummets into
 blackness.
 ~
-53 ad 0
+53 9 0
 D1
 The crawlway gets a little larger to the east.
 ~
@@ -446,7 +461,7 @@ close together into a space through which only a snake could fit.   There is
 barely enough space to turn around and make your way back through the tiny
 crawlway to the north.
 ~
-53 ad 0
+53 9 0
 D0
 The crawlway gets a little larger to the north.
 ~
@@ -467,7 +482,7 @@ Under The Hole
 the pyramid now.   The floor is strewn with bones.  To the south is a
 small rocky crevasse.
 ~
-53 acd 0
+53 13 0
 D2
 You see a rocky crevasse that proceeds deep under the pyramid.
 ~
@@ -477,7 +492,7 @@ D4
 The hole looks far too slippery to climb back up.
 ~
 ~
-0 -1 -1
+0 -1 5315
 E
 bones~
 The bones have whitened and cracked in the dry air, apparently the remains 
@@ -490,7 +505,7 @@ Under The Hole~
 the pyramid now.   The floor is strewn with bones.  To the south is a
 small rocky crevasse.
 ~
-53 ad 0
+53 9 0
 D2
 You see a rocky crevasse that proceeds deep under the pyramid.
 ~
@@ -500,7 +515,7 @@ D4
 The hole looks far too slippery to climb back up.
 ~
 ~
-0 -1 -1
+0 -1 0
 E
 bones~
 The bones have whitened and cracked in the dry air, apparently the remains 
@@ -513,7 +528,7 @@ A Rough Crevasse~
 down into the rock on which the pyramid was constructed.  To the south you
 see the flickering light of a fire, and the crevasse proceeds downward.
 ~
-53 d 0
+53 8 0
 D0
 You see a small stone chamber littered with bones.
 ~
@@ -540,7 +555,7 @@ A Small Fire~
 comforting light in the cold, dark, dry air.
 Standing here is a strange-looking old man, who stares at you balefully.
 ~
-53 d 0
+53 8 0
 D0
 You see a massive crevasse that plunges into darkness.
 ~
@@ -564,7 +579,7 @@ Down The Crevasse~
 The air about you is now cold and quite dry, and your light source
 gutters in a cool breeze that wafts up from below.
 ~
-53 ad 0
+53 9 0
 D4
 It is too dark for you to see any further along the crevasse.
 ~
@@ -582,7 +597,7 @@ At The Crevasse's End~
 at your face from a black shape to the south, but the light from your
 source is too dim to see exactly what it is.
 ~
-53 ad 0
+53 9 0
 D2
 You see a strange-looking black shape.
 ~
@@ -619,12 +634,13 @@ guttural rumbling noise and a chill wind.
 Giant heaps of ancient treasure, gold coins, and valuables surround you
 on all sides.
 ~
-53 ad 0
-D0
-Through the jaws of the tiger you see the blackness of the crevasse.
+53 9 0
+D2
+   The jaws of the tiger to the north are closed, but the wall to the south is
+shimmering as if it were water of some sort.    
 ~
 ~
-2 5323 5322
+0 0 5360
 E
 treasure gold coins valuables~
 You reach for some of the tasty goodies, when you hear a loud rumbling
@@ -641,7 +657,7 @@ A Crack In The Wall~
 Dust fills your eyes as you disturb it, and chunks of mortar and stone
 mixed with a touch of sand fall on you as you scrape your way through.
 ~
-53 ad 0
+53 9 0
 D0
 You see a musty chamber.
 ~
@@ -659,7 +675,7 @@ A Looted Tomb~
 smashed sarcophagi, bits of treasure dropped by thieves and
 looters, and corpses pulled from their resting places.
 ~
-53 d 0
+53 8 0
 D0
 You see a small crack in the wall through which you might be able to slide.
 ~
@@ -682,7 +698,7 @@ A Demolished Tomb~
 the treasures of the pharoahs.  Nothing of interest remains in this room,
 except a large stone coffin that leans against the western wall.
 ~
-53 d 0
+53 8 0
 D1
 To the east is another tomb.
 ~
@@ -717,12 +733,12 @@ A Stairway~
 The steps and walls are smooth sandy stone, covered with a thick layer
 of dust.  Some inscriptions are carved into the wall here.
 ~
-53 ad 0
+53 9 0
 D1
 You see the backside of the coffin lid, featureless stone.
 ~
 coffin lid~
-2 -1 5326
+2 5312 5326
 D5
 It is too dark to see down the stairway.
 ~
@@ -746,7 +762,7 @@ A Stairway~
 The smooth, uneven steps of the stairway have not been travelled in what
 appears to be centuries.
 ~
-53 ad 0
+53 9 0
 D4
 It is too dark to see up the stairway.
 ~
@@ -763,7 +779,7 @@ A Stairway~
    You stand now at the base of the uneven stairway.  The walls, floor,
 and ceiling of this small landing are covered with strange hieroglyphics.
 ~
-53 ad 0
+53 9 0
 D2
 You see a seam in the stone wall.
 ~
@@ -788,7 +804,7 @@ gods of an ancient society.  Strange glyphs and sigils cover the walls, a
 peculiar pictorial form of written language that you don't understand.
    Some steps lead to a raised dais to the south.
 ~
-53 ad 0
+53 9 0
 D0
 You see a seam in the stone wall.
 ~
@@ -810,7 +826,7 @@ A Raised Dais~
 absorbing your light so that you cannot see past the steps of the dais.
 A low pedestal rests here.  You see something written into the face of it.
 ~
-53 ad 0
+53 9 0
 D0
 You cannot see past the steps of the dais.
 ~
@@ -833,7 +849,7 @@ S
 The Tomb Of Ramses~
    You stand in an empty tomb, a cubicle no more then ten feet to a side.
 ~
-53 ad 0
+53 9 0
 D4
 That leads back the way you came.
 ~
@@ -845,7 +861,7 @@ A Ransacked Tomb~
   This tomb has been completely ransacked and destroyed by the actions
 of pyramid thieves and looters.  The floor is littered with junk.
 ~
-53 d 0
+53 8 0
 D1
 To the east is a low-ceilinged tunnel.
 ~
@@ -861,7 +877,7 @@ S
 A Tunnel~
    The low-ceilinged tunnel runs east-west.
 ~
-53 ad 0
+53 9 0
 D1
 You cannot see into the darkness of the low tunnel.
 ~
@@ -878,17 +894,12 @@ A Fork In The Tunnel~
    Here the tunnel forks off through a gaping hole down in the
 southern wall, continuing onward to the east and west as well.
 ~
-53 ad 0
+53 9 0
 D1
 You cannot see into the darkness of the low tunnel.
 ~
 ~
 0 -1 5336
-D2
-The hole is low, at the floor of the southern wall.
-~
-~
-0 -1 -1
 D3
 You cannot see into the darkness of the low tunnel.
 ~
@@ -909,7 +920,7 @@ A Tunnel~
    The low-ceilinged tunnel makes a turn to the west and ends
 to the north as it spills out into a dusty hallway.
 ~
-53 ad 0
+53 9 0
 D0
 The mouth of the tunnel is stone that has been torn away by looters.
 ~
@@ -927,7 +938,7 @@ A Dank Chamber~
 in the dust betray the recent passage of some sort of creatures.  A hole 
 in the floor lies to the west and a stairway is to the east.
 ~
-53 d 0
+53 8 0
 D1
 You see a spiral stone stairway.
 ~
@@ -944,7 +955,7 @@ A Spiral Stairway~
    Some dusty, broken stone stairs here spiral slowly in a constricted
 space down towards a dusty hallway.
 ~
-53 d 0
+53 8 0
 D4
 The stairs spiral up into a dank chamber.
 ~
@@ -962,7 +973,7 @@ A Dust-Covered Hallway~
 centuries that the pyramid has stood.  Small markings and footprints
 in the dust betray the recent passage of others -- perhaps thieves?
 ~
-53 d 0
+53 8 0
 D1
 The hallway proceeds to the east towards a strange smell.
 ~
@@ -980,7 +991,7 @@ A Smelly Chamber~
 smell of formaldehyde and other ointments used to preserve the
 corpses of those who died ages ago.
 ~
-53 d 0
+53 8 0
 D1
 You see a dusty hallway.
 ~
@@ -998,7 +1009,7 @@ A Dust-Covered Hallway~
 up to obscure your light source and sting your eyes.  Small marks
 and footprints in the dust betray the recent passage of others.
 ~
-53 d 0
+53 8 0
 D1
 The hallway turns to the north.
 ~
@@ -1022,7 +1033,7 @@ that dead ends to the north and continues on to the west.  To the south
 the stones of the pyramid have been torn asunder by thieves, making
 a low-ceilinged tunnel.
 ~
-53 d 0
+53 8 0
 D0
 The hallway ends to the north.
 ~
@@ -1045,7 +1056,7 @@ A Dead End~
 featureless wall.  Here and there are signs of the recent passage
 of others in the dust.
 ~
-53 d 0
+53 8 0
 D2
 The dusty hall continues to the south.
 ~
@@ -1069,7 +1080,7 @@ many years.  To the north stands a massive stone tomb, which is
 covered in hieroglyphics and gold-lined carvings that mark it as the
 final resting place of the mighty pharoahs of this land.
 ~
-53 acd 0
+53 13 0
 D0
 You see the tomb of the pharoahs.
 ~
@@ -1098,7 +1109,7 @@ withstood the passage of time intact, untouched by the hands of thieves
 and looters.  The treasures taken by the pharoahs to their graves still
 lie before your feet.
 ~
-53 ad 0
+53 9 0
 D2
 That way leads back out of the tomb.
 ~
@@ -1118,7 +1129,7 @@ pyramid.  Now, a massive pile of rubble leads up into a hole high
 in the northern portion of the hallway.  To the south, through the 
 rubble and fallen stones you see a sandstone crypt.
 ~
-53 acd 0
+53 13 0
 D2
 You see a sandstone crypt.
 ~
@@ -1137,7 +1148,7 @@ which sand pours from the desert outside.  A hot wind blows in from the
 desert, drying your skin instantly.  To the east and north the arched
 hallway continues.
 ~
-53 d 0
+53 8 0
 D0
 The arched hallway collapses into rubble shortly to the north.
 ~
@@ -1162,7 +1173,7 @@ covers most of the rest of the pyramid interior is not present here,
 scoured away by the blowing of the desert winds that howl about
 your ears.
 ~
-53 d 0
+53 8 0
 D1
 The arched hall proceeds to the east, making a sharp southward turn.
 ~
@@ -1181,7 +1192,7 @@ exquisitely out of the sandy stones of the pyramid.  To the east is
 a small, golden-coloured crypt, and the hall proceeds to the south
 and north.
 ~
-53 d 0
+53 8 0
 D0
 The arched hall proceeds to the north, making a sharp westward turn.
 ~
@@ -1205,7 +1216,7 @@ golden bricks that obscure the large sandy stones of the pyramid.
 Small rugs and tapestries are scattered about the floor here, and
 they appear to have been used recently.
 ~
-53 d 0
+53 8 0
 D3
 You see an arched hall.
 ~
@@ -1227,7 +1238,7 @@ An Arched Hall~
 exquisitely out of the sandy stones of the pyramid.  The arched
 hall proceeds to the north and ends to the south in a small vault.
 ~
-53 d 0
+53 8 0
 D0
 The arched hall continues to the north.
 ~
@@ -1246,7 +1257,7 @@ almost seeming to shine with an internal light.  As you look closer you
 see tiny glass-like glittery particles within the stones, that reflect
 the light from your light source so perfectly that they seem to shine.
 ~
-53 d 0
+53 8 0
 D0
 You see a hall with a beautifully arched ceiling.
 ~
@@ -1266,7 +1277,7 @@ small hole where the stones of the pyramid have collapsed.  Not
 far to the south is a massive roiling sandstorm; the wind from the
 storm howls and bites at your face even here.
 ~
-53 c 2
+53 4 2
 D0
 You see a small hole leading back into the pyramid.
 ~
@@ -1455,12 +1466,211 @@ Through The Hole In The Sand~
 white chamber.  Above you is a small hole, reachable by climbing up
 the small sandy slope down which you slid.
 ~
-53 acd 0
+53 13 0
 D4
 You see a sand dune.
 ~
 ~
 0 -1 5358
 S
+#5360
+The Cavern &CBeside the Pyramid&n~
+   You are in an unfinished room.  The fine pink sand sifts its way into
+everything.  No doubt anyone walking through here will be finding sand in their
+socks for weeks to come.  The pyramid to the south is built very close to the
+southern wall of the cavern.  Pink sand piles up in drifts against the very
+blank wall.  The side of the pyramid is too steep for anything but a bug to
+climb.  The only way to go is around the pyramid to the southeast and
+southwest.    
+~
+53 8 0
+D8
+   The space between the cavern wall and the pyramid increases to the
+southeast.  There's a strange little table next to the wall as well.    
+~
+~
+0 0 5361
+D9
+   The space between the cavern's wall and the pyramid increases to the
+southwest.    
+~
+~
+0 0 5362
+S
+#5361
+The Cavern &CBeside the Pyramid&n~
+   Pink sand covers the ground all around.  It gathers in all the niches and
+cracks in the wall as well.  A large, stone hunkers up near the wall.  It is
+satiny smooth on top and forms a perfect circle.  It looks rather like a table
+was carved from the very rock of the cavern.  The only way to go is northwest
+and southwest.    
+~
+53 8 0
+D7
+   The space between the cavern's wall and the pyramid narrows down as one
+heads northwest.    
+~
+~
+0 0 5360
+D9
+   There's an open stretch of pink sand to the southwest.    
+~
+~
+0 0 5301
+S
+#5362
+The Cavern &CBeside the Pyramid&n~
+   The fine pink sand will lovingly swallow any foot that dares to walk across
+it.  The sand is pure.  No broken twigs, no trash, no bones disturb its perfect
+sandiness.  It is the same soft pink color throughout.  Such perfection is
+hardly natural.  How is it that this sand got into this mountain of pale stone?
+One can only walk northeast and southeast around the pyramid.    
+~
+53 8 0
+D6
+   The space between the pyramid and the cavern wall narrows down greatly to
+the northeast.    
+~
+~
+0 0 5360
+D8
+   The stretch of sand is much wider to the southeast.    
+~
+~
+0 0 5301
+S
+#5363
+A Cramped Tunnel~
+   There's not much breathing space in this narrow little tunnel.  The ceiling
+is rough with plenty of edges for the tall unwary to bump their head on.  To
+the north, a soft, white light falls into the tunnel mouth and provides enough
+light for navigation.  It looks like a paradise of pink sand is to the north,
+but what is pink sand doing in a mountain?  The tunnel slips down to the
+southwest into darkness.    
+~
+53 264 5
+D0
+   A cavern of pink sand can be seen through the tunnel mouth.    
+~
+~
+0 0 5300
+D9
+   The narrow tunnel slips off to the southwest and darkness.    
+~
+~
+0 0 5364
+S
+#5364
+A Steep Tunnel~
+   The sharp tang of wet stone tickles the nostriles of the sensitive of smell.
+The sides and ceiling of the tunnel are unsmoothed stone, but the floor is made
+of a series of shallow, carefully even steps.  A small riverlet of water slips
+through a crack in the tunnel's southern side and darts across the stairs into
+another crack.  The tunnel slants upwards to the northeast and takes a steep
+dip down as it heads, well, down.    
+~
+53 9 0
+D5
+   The tunnel slants steeply downward.    
+~
+~
+0 0 5365
+D6
+   The tunnel to the northeast seems a bit lighter.  Or maybe that's your eyes
+playing tricks on you.    
+~
+~
+0 0 5363
+S
+#5365
+A Steep Tunnel~
+   You are in an unfinished room.  The tunnel is nearly vertical.  Small
+nitches have been cut into the walls for people to use while climbing.  A
+trickle of water slithers down on the western side of the tunnel.  The sound of
+water hitting the ground after falling a short distance is not very comforting.
+A traveler could claw their way up or drop down to what looks to be a ledge
+below.    
+~
+53 8388617 5
+D4
+   The tunnel slants steeply upwards.    
+~
+~
+0 0 5364
+D5
+   A ledge is there not too far below you.    
+~
+~
+0 0 5368
+S
+#5366
+The Ledge~
+   The floor of the tunnel is a mixture of pale grey stone and flecks of black.
+It is damp with water from the waterfall that tumbles down from above to the
+northeast.  The ledge trembles with the force of the water's impact somewhere
+below.  The ledge continues north or one could jump down to the east onto the
+tunnel floor.    
+~
+53 321 5
+D0
+   The ledge wanders out into an open space.    
+~
+~
+0 0 5367
+D1
+   The tunnel floor is only two feet below the ledge.    
+~
+~
+0 0 288
+S
+#5367
+The Ledge &CBeside the Waterfall&n~
+   A white, foaming stream of water thunders down from above to the east.  The
+water has been falling for so long that nearly half of it has turned into mist
+by the time it reaches the ledge.  The ledge itself is narrow and slick with
+water and moss, both side effects of the waterfall.  The ledge runs north and
+south.  The waterfall is to the east, walking out into it spells &RCERTAIN
+DEATH&n.    
+~
+53 329 5
+D0
+   The narrow ledge regains its ceiling to the north.    
+~
+~
+0 0 5368
+D1
+   Water plunges down from above and continues to fall for a long ways before
+reaching an underground river.  Going to the east would mean stepping out into
+thin air which is likely to get you &RVERY DEAD&n.    
+~
+~
+0 0 289
+D2
+   The ledge slips back into a tunnel that has a wall on all four sides.    
+~
+~
+0 0 5366
+S
+#5368
+The Ledge &CBeneath a Hole&n~
+   The ledge is narrow and the ceiling is low.  Very tall people would have to
+duck down to walk on it.  A large hole is above the ledge.  It appears to be a
+nearly vertical tunnel carved into the rock.  A waterfall thunders down to the
+south and east.  The mist from its passage clogs the air and dampens the stone.
+The ledge runs back south.    
+~
+53 265 5
+D2
+   The ceiling lifts away as the ledge heads south.  A huge waterfall pounds by
+the ledge to the east.    
+~
+~
+0 0 5367
+D4
+   A nearly vertical tunnel heads upwards.  There are handholds cut into the
+tunnel sides for climbers and it's not such a great stretch to reach.    
+~
+~
+0 0 5365
+S
 $~
-

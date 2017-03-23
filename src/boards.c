@@ -74,8 +74,21 @@ Be sure to also change NUM_OF_BOARDS in board.h
 struct board_info_type board_info[NUM_OF_BOARDS] = {
   {3099, 0, 0, LVL_GOD, "etc/board.mort", 0},
   {3098, LVL_IMMORT, LVL_IMMORT, LVL_GRGOD, "etc/board.immort", 0},
-  {3097, LVL_IMMORT, LVL_FREEZE, LVL_IMPL, "etc/board.freeze", 0},
+/*
+  {3097, LVL_IMMORT, LVL_IMMORT, LVL_GRGOD, "etc/board.freeze", 0},
   {3096, 0, 0, LVL_IMMORT, "etc/board.social", 0},
+  {1782, 0, 0, LVL_IMMORT, "etc/board.mist", 0},
+  {19098, 0, 0, LVL_IMMORT, "etc/board.kof", 0},
+  {12089, 0, 0, LVL_IMMORT, "etc/board.trium", 0},
+  {19097, 0, 0, LVL_IMMORT, "etc/board.family1", 0},
+  {1410, 0, 0, LVL_IMMORT, "etc/board.1410", 0},
+  {1411, 0, 0, LVL_IMMORT, "etc/board.1411", 0},
+  {1412, 0, 0, LVL_IMMORT, "etc/board.1412", 0},
+  {1413, 0, 0, LVL_IMMORT, "etc/board.1413", 0},
+  {1414, 0, 0, LVL_IMMORT, "etc/board.1414", 0},
+  {1415, 0, 0, LVL_IMMORT, "etc/board.1415", 0},
+  {2403, 0, 0, LVL_IMMORT, "etc/board.crane", 0}
+*/
 };
 
 
@@ -230,7 +243,7 @@ void Board_write_message(int board_type, struct char_data * ch, char *arg)
   NEW_MSG_INDEX(board_type).heading[len - 1] = '\0';
   NEW_MSG_INDEX(board_type).level = GET_LEVEL(ch);
 
-  send_to_char("Write your message.  Terminate with a @ on a new line.\r\n\r\n", ch);
+  send_to_char("Write your message.  (/s saves /h for help)\r\n\r\n", ch);
   act("$n starts to write a message.", TRUE, ch, 0, 0, TO_ROOM);
 
   if (!IS_NPC(ch))

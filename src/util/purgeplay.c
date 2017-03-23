@@ -60,15 +60,13 @@ void purge(char *filename)
     if (okay && player.level <= LVL_IMMORT) {
 
       if (!(player.char_specials_saved.act & PLR_CRYO)) {
-	if (player.level == 1)		timeout = 4;	/* Lev   1 : 4 days */
-	else if (player.level <= 4)	timeout = 7;	/* Lev 2-4 : 7 days */
-	else if (player.level <= 10)	timeout = 30;	/* Lev 5-10: 30 days */
+	if (player.level == 1)		timeout = 20;	/* Lev   1 : 4 days */
 	else if (player.level <= LVL_IMMORT - 1)
-	  timeout = 60;		/* Lev 11-30: 60 days */
+	  timeout = 250;				/* Lev 11-30: 60 days */
 	else if (player.level <= LVL_IMMORT)
-	  timeout = 90;		/* Lev 31: 90 days */
+	  timeout = 250;		/* Lev 31: 90 days */
       } else
-	timeout = 90;
+	timeout = 250;
 
       timeout *= SECS_PER_REAL_DAY;
 

@@ -35,6 +35,9 @@ int	get_line(FILE *fl, char *buf);
 int	get_filename(char *orig_name, char *filename, int mode);
 struct time_info_data age(struct char_data *ch);
 int	num_pc_in_room(struct room_data *room);
+int     replace_str(char **string, char *pattern, char *replacement, int rep_all, int max_size);
+void    format_text(char **ptr_string, int mode, struct descriptor_data *d, int maxlen);
+char   *stripcr(char *dest, const char *src);
 
 /* undefine MAX and MIN so that our functions are used instead */
 #ifdef MAX
@@ -87,6 +90,7 @@ void	update_pos(struct char_data *victim);
 /* get_filename() */
 #define CRASH_FILE	0
 #define ETEXT_FILE	1
+#define ALIAS_FILE      2
 
 /* breadth-first searching */
 #define BFS_ERROR		-1
@@ -103,6 +107,9 @@ void	update_pos(struct char_data *victim);
 #define SECS_PER_REAL_MIN	60
 #define SECS_PER_REAL_HOUR	(60*SECS_PER_REAL_MIN)
 #define SECS_PER_REAL_DAY	(24*SECS_PER_REAL_HOUR)
+#define SECS_PER_REAL_WEEK	(7*SECS_PER_REAL_DAY)
+#define SECS_PER_REAL_MONTH	(4*SECS_PER_REAL_WEEK)
+#define SECS_PER_REAL_QUARTER   (3*SECS_PER_REAL_MONTH)
 #define SECS_PER_REAL_YEAR	(365*SECS_PER_REAL_DAY)
 
 
@@ -112,8 +119,12 @@ void	update_pos(struct char_data *victim);
 #define YESNO(a) ((a) ? "YES" : "NO")
 #define ONOFF(a) ((a) ? "ON" : "OFF")
 
-#define LOWER(c)   (((c)>='A'  && (c) <= 'Z') ? ((c)+('a'-'A')) : (c))
-#define UPPER(c)   (((c)>='a'  && (c) <= 'z') ? ((c)+('A'-'a')) : (c) )
+// IS_UPPER and IS_LOWER added by dkoepke
+#define IS_UPPER(c) ((c) >= 'A' && (c) <= 'Z')
+#define IS_LOWER(c) ((c) >= 'a' && (c) <= 'z')
+
+#define LOWER(c)   (IS_UPPER(c) ? ((c)+('a'-'A')) : (c))
+#define UPPER(c)   (IS_LOWER(c) ? ((c)+('A'-'a')) : (c))
 
 #define ISNEWL(ch) ((ch) == '\n' || (ch) == '\r') 
 #define IF_STR(st) ((st) ? (st) : "\0")
@@ -165,6 +176,7 @@ void	update_pos(struct char_data *victim);
 #define MOB_FLAGS(ch) ((ch)->char_specials.saved.act)
 #define PLR_FLAGS(ch) ((ch)->char_specials.saved.act)
 #define PRF_FLAGS(ch) ((ch)->player_specials->saved.pref)
+#define EXTRA_LEVEL(ch) ((ch)->player_specials->saved.extralevel)
 #define AFF_FLAGS(ch) ((ch)->char_specials.saved.affected_by)
 #define ROOM_FLAGS(loc) (world[(loc)].room_flags)
 
@@ -212,6 +224,7 @@ void	update_pos(struct char_data *victim);
 #define GET_TITLE(ch)   ((ch)->player.title)
 #define GET_LEVEL(ch)   ((ch)->player.level)
 #define GET_PASSWD(ch)	((ch)->player.passwd)
+#define GET_PROMPT(ch)	((ch)->player.prompt)
 #define GET_PFILEPOS(ch)((ch)->pfilepos)
 
 /*
@@ -223,6 +236,7 @@ void	update_pos(struct char_data *victim);
     GET_LEVEL(ch))
 
 #define GET_CLASS(ch)   ((ch)->player.class)
+#define GET_RACE(ch)	((ch)->player.race)
 #define GET_HOME(ch)	((ch)->player.hometown)
 #define GET_HEIGHT(ch)	((ch)->player.height)
 #define GET_WEIGHT(ch)	((ch)->player.weight)
@@ -255,6 +269,8 @@ void	update_pos(struct char_data *victim);
 #define IS_CARRYING_N(ch) ((ch)->char_specials.carry_items)
 #define FIGHTING(ch)	  ((ch)->char_specials.fighting)
 #define HUNTING(ch)	  ((ch)->char_specials.hunting)
+#define RIDING(ch)	  ((ch)->char_specials.riding)		// (DAK)
+#define RIDDEN_BY(ch)	  ((ch)->char_specials.ridden_by)	// (DAK)
 #define GET_SAVE(ch, i)	  ((ch)->char_specials.saved.apply_saving_throw[i])
 #define GET_ALIGNMENT(ch) ((ch)->char_specials.saved.alignment)
 
@@ -398,7 +414,6 @@ void	update_pos(struct char_data *victim);
 #define OBJN(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
 	fname((obj)->name) : "something")
 
-
 #define EXIT(ch, door)  (world[(ch)->in_room].dir_option[door])
 
 #define CAN_GO(ch, door) (EXIT(ch,door) && \
@@ -407,15 +422,55 @@ void	update_pos(struct char_data *victim);
 
 
 #define CLASS_ABBR(ch) (IS_NPC(ch) ? "--" : class_abbrevs[(int)GET_CLASS(ch)])
+#define RACE_ABBR(ch) (!IS_HUMAN(ch) && !IS_HOBBIT(ch) && !IS_DWARF(ch) && \
+ 		       !IS_ELF(ch) && !IS_WOLF(ch) && !IS_GIANT(ch) && \
+                       !IS_GNOME(ch) && !IS_PIXIE(ch) && \
+                       !IS_GARGOYLE(ch) && !IS_BROWNIE(ch) && \
+                       !IS_TROLL(ch) ? "---" : \
+                        IS_NPC(ch) ? "---" : race_abbrevs[(int)GET_RACE(ch)])
 
 #define IS_MAGIC_USER(ch)	(!IS_NPC(ch) && \
 				(GET_CLASS(ch) == CLASS_MAGIC_USER))
 #define IS_CLERIC(ch)		(!IS_NPC(ch) && \
 				(GET_CLASS(ch) == CLASS_CLERIC))
+#define IS_MASTER(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_MASTER))
+#define IS_NINJA(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_NINJA))
 #define IS_THIEF(ch)		(!IS_NPC(ch) && \
 				(GET_CLASS(ch) == CLASS_THIEF))
 #define IS_WARRIOR(ch)		(!IS_NPC(ch) && \
 				(GET_CLASS(ch) == CLASS_WARRIOR))
+#define IS_PALADIN(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_PALADIN))
+#define IS_VAMPYRE(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_VAMPYRE))
+#define IS_BARD(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_BARD))
+#define IS_SCOUT(ch)		(!IS_NPC(ch) && \
+				(GET_CLASS(ch) == CLASS_SCOUT))
+#define IS_HUMAN(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_HUMAN))
+#define IS_DWARF(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_DWARF))
+#define IS_ELF(ch)              (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_ELF))
+#define IS_HOBBIT(ch)           (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_HOBBIT))
+#define IS_WOLF(ch)             (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_WOLF))
+#define IS_GIANT(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_GIANT))
+#define IS_GNOME(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_GNOME))
+#define IS_PIXIE(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_PIXIE))
+#define IS_GARGOYLE(ch)         (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_GARGOYLE))
+#define IS_BROWNIE(ch)          (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_BROWNIE))
+#define IS_TROLL(ch)            (!IS_NPC(ch) && \
+                                (GET_RACE(ch) == RACE_TROLL))
 
 #define OUTSIDE(ch) (!ROOM_FLAGGED((ch)->in_room, ROOM_INDOORS))
 

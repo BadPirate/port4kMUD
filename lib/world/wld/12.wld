@@ -1,11 +1,11 @@
 #1200
-The Meeting Room Of The Gods~
-   The meeting room is plain and very simple.  A circular table sits
-in the middle of the room, lit by some unseen light source.  There
-are many chairs around the table, all empty.  The Immortal Board Room
-is to the north.
+The Conference Room~
+   Upon entering this you can hear faint talking.  You must have stumbled apon
+the meeting room of the Gods.  When you enter, everyone is quit and glares at
+you, as if you dont belong here.  A while later they ignore you and go back to
+work.    
 ~
-12 d 0
+12 262152 0
 D0
 The Immortal Board Room can be seen to the north.
 ~
@@ -13,33 +13,35 @@ The Immortal Board Room can be seen to the north.
 0 -1 1204
 S
 #1201
-The Inn Of The Gods~
-   The Inn of the Gods is a small room, holding only a shelf with many
-small precious stones on it.  When a God comes to rent his belongings,
-his essence is stored in the stones.  The Immortal Board Room is to
-the south.
+The Workshop~
+   This is the Builders' Room.  This is where the immortals of Daggerfall come
+and post and talk about their zones and coding.  They come here and post their
+ideas/doings on the board that hangs on the wall here.  All along here there
+are book shelves filled with books on how to build zones.  In the corner there,
+almost unnoticed, there is a small TV playing a video on building made e-z.  
 ~
-12 dj 0
+12 262664 0
 D2
-The Immortal Board Room can be seen to the south.
 ~
 ~
-0 -1 1204
+0 0 1204
 S
 #1202
 The Ice Box Of The Gods~
    The Ice Box is for little boys and girls that cannot play nice. Be good
 and maybe someone will come and get you.
 ~
-12 defh 0
+12 1310904 0
 S
 #1203
 The Gods' Mortal Board Room~
-   Here the Gods have magically created an exact copy of the mortal board
-room.  Any God can easily post and read messages from the mortal board room
-without being seen by any mortals.  The Immortal Board Room is to the west.
+   As you stand here in this toom, a strange feeling comes apon you.  It is
+almost as if you remember something.  Dejavu is eating away at you, then you
+remember the good old times being a mortal in the world of Daggerfall, comming
+to the library to read the daily news and post any ideas.  Yeah, those were the
+good old days.    
 ~
-12 d 0 
+12 0 7
 D3
 The Immortal Board Room can be seen to the west.
 ~
@@ -47,73 +49,374 @@ The Immortal Board Room can be seen to the west.
 0 -1 1204
 S
 #1204
-The Immortal Board Room~
-   The main hang out of the Gods, the Immortal Board Room is the place to
-be.  Gods exchange messages here most every day.  The mortal board room is
-to the east and the meeting room for the gods is to the south.  To the north
-is the Gods' Inn and to the west is a post office for Gods.  There is a large
-staircase leading down to the main temple in the city of Midgaard.  In the
-northeast corner you spot a small staircase leading upwards.
+The Living Room~
+   This is a good sized room that takes up most of the first floor of the Frat
+House of the Gods.  Beat up, but comfy chairs are thrown ramdomly around, with
+the occasional coffee table or ottoman strewed in between.  North is the
+Workshop, for all those happy builders out there.  East is the Mortal Board
+room, where anyone who cares can read the mort's whining posts.  South is the
+very dusty, little used Conference Room.  West is Mail Room, how exciting!  
+Don't you just love getting mail?  A staircase near the back of the room leads
+up to the bedrooms, and a creaky staircase leads down into the basement.  
+Don't go down if you are a mere mortal!  &rDEATH&n will come to you!  I would
+choose northwest, personally.    
 ~
-12 d 0
+12 2359304 0
 D0
-The Gods' Inn can be seen just to the north.
 ~
 ~
-0 -1 1201
+0 0 1201
 D1
-The Mortal Board Room can be seen just to the east.
 ~
 ~
-0 -1 1203
+0 0 1203
 D2
-The Gods' Meeting Room is located to the south.
 ~
 ~
-0 -1 1200
+0 0 1200
 D3
 The Gods' Post Office is just to the west.
 ~
 ~
 0 -1 1205
 D4
-There is a small stair in the corner leading up to the social room of
-the Gods.
 ~
 ~
-0 -1 1206
+0 0 1210
 D5
-You see the hustle and bustle of the Temple of Midgaard at the bottom of
-the stairs.
 ~
 ~
-0 -1 3001
+0 0 1211
+D7
+You see the Daggerfall Temple through a misty portal.
+~
+~
+0 0 3001
+E
+map~
+   The new layout is very simple.  There are three floors, with an attic, and
+an ice box in the basement.  Since this is like a house, the floor you are
+currently on is called the first floor.    
+
+&RSecond Floor- &nPersonal rooms, and stairs to the Attic
+
+&BFirst Floor- &nMail Room, Workshop, Mort Board, Conference Room
+
+&CBasement- &nPortals to Daggerfall, Rome, Elven, Mist, and the Ice Box
+~
 S
 #1205
-The Post Office Of The Gods~
-   The Post Office Of The Gods is the same as most Post Offices except that
-it is not as slow.  Even the Postal service knows not to anger the Gods.
-Piles of junk mail line the walls.  I guess even Gods get on mailing lists.
-The Immortal Board Room is to the east.
+The Mail Room~
+   This is the post office of the Gods.  In here is a counter in the center of
+the room dividing it in half.  On the other side is the post office attendant.
+He looks very disturbed and frusterated.  On the west wall there is a small
+sign displaying the price of the mail here.  All around the post office
+attendant there are piles and piles of mail, all over the place, but on the
+side you are on it is very clean.    
 ~
-12 d 0
+12 270344 0
 D1
-The Immortal Board Room is just to the east.
 ~
 ~
-0 -1 1204
+0 0 1204
+E
+sign~
+This is a small sigh displaying the prices of the mail.
+It begins saying, 
+Paper 75
+Stamp 45
+Labor 30
+--------
+Total 150
+
+Then at the bottom of the poster there is small writing saying:
+Immortal mail -FREE-
+~
 S
 #1206
-The Social Gathering Room~
-   This elegantly decorated room has one simple purpose.  To socialize with
-everyone else around in one central location.
+The Dusty Attic~
+   Here you stand, In the mighty social gathering room of the Gods of
+Daggerfall.  This is the room where the gods come and do the little socializing
+they may feel like doing.  On the wall, looking at the board, it appears as if
+there is little or no messages on it.  Goes to show how much socializing they
+do.    
 ~
-12 d 0
+12 262152 0
 D5
-The Immortal Board Room is just down through the floor.  Funny how you
-didn't notice that exit before isn't it?
 ~
 ~
-0 -1 1204
+0 0 1210
 S
-$
+#1207
+Galvanon's Galvanized Domain, without the Zinc~
+This room seems cold and desolate.  The walls and floors are all made of solid
+titanium - it has been said that nothing gets in or out of this room without
+terrible loss.  The ceiling is made of pure gold, but it doesn't help the
+ominous gray atmosphere that overshadows the area.  A slight
+chill can be felt as you walk through this hall, probably due to the massive
+amount of metal used - and the metal drains heat away VERY rapidly.
+~
+12 601 0
+D2
+~
+door~
+2 -1 1205
+S
+#1208
+&bThe Ice Box&n~
+   &bThis is a very cold room.  So cold it freezes the blood in your veins.  
+To be in here, you must have done something wrong and gotten transported here
+by a god.  This is the punishment room for all the bad mortals, and sometimes
+gods that have done wrong.  You are stuck on here with no way out, unless some
+immortal feels you have had enough punishment.    
+&n
+~
+12 1310869 0
+S
+#1209
+The Immortal Corpse Room~
+   Death, torture, stench, These words come to mind apon entering this room.  
+It is almost as if a morgue, with all the filecabnet-like storages for the dead
+bodies.  It has a very terrible stench to it, and seals off to the exit above
+you do the immortals dont have to put up with the smell.  There are candles
+apon the walls, about one every five feet, keeping this large room very well
+lighted.  As you look around, you notice a little demon run up to you and ask
+if he can help you, as almost if you were inside a shop.  He asks if you need
+to identify any bodys or if you can help him.  Then he turns and goes back to
+work.    
+~
+12 262148 0
+D4
+~
+~
+0 0 1212
+S
+#1210
+Dorm Hallway~
+   Here is a long and very wide hallway with comfy looking benches along the
+walls and pictures off all the gods.  All along the walls, there are doors
+leading into all sorts of bedrooms.  Down the staircase is the living room, and
+up is the rarely-used attic.    
+&rREAD THE MAP!!!!!!!!!!&n
+~
+12 262144 0
+D0
+~
+~
+0 0 1298
+D2
+~
+~
+0 0 1278
+D3
+~
+~
+0 0 106
+D4
+~
+~
+0 0 1206
+D5
+~
+~
+0 0 1204
+E
+map~
+   The new layout is very simple.  There are three floors, with an attic, and
+an ice box in the basement.  Since this is like a house, the floor you are
+currently on is called the first floor.    
+
+&RSecond Floor- &nPersonal rooms, and stairs to the Attic
+
+&BFirst Floor- &nMail Room, Workshop, Mort Board, Conference Room
+
+&CBasement- &nPortals to Daggerfall, Rome, Elven, Mist, and the Ice Box
+~
+S
+#1211
+The Basement~
+   Water drips and the noise echoes through the cold, damp basement that you
+have just entered.  Cracked pavement is the only wall there is, shielded only
+by the damp, sagging boxes that are used for storage.  Beneath your feet lies
+the heavy door leading to the old-fashioned ice box, dug deep within the earth.
+When you try loking in the cardinal directions, a strange haze is all you see.
+To the north, is a wavering temple.  The south holds a giant tree.  To the east
+is a majestic parthenon.  The west shows a statue of a gorgeous dragon.  Very
+strange...  &rREAD THE MAP!!!!!!!!!!&n
+~
+12 262146 0
+D0
+~
+~
+0 0 3001
+D1
+~
+~
+0 0 145
+D2
+~
+~
+0 0 19005
+D3
+~
+~
+0 0 1720
+D4
+~
+~
+0 0 1204
+D5
+~
+~
+0 0 1208
+E
+map~
+   The new layout is very simple.  There are three floors, with an attic, and
+an ice box in the basement.  Since this is like a house, the floor you are
+currently on is called the first floor.    
+
+&RSecond Floor- &nPersonal rooms, and stairs to the Attic
+
+&BFirst Floor- &nMail Room, Workshop, Mort Board, Conference Room
+
+&CBasement- &nPortals to Daggerfall, Rome, Elven, Mist, and the Ice Box
+~
+S
+#1212
+The God's Hallway~
+   Here is a long and very wide hallway with comfy looking benches along the
+walls and pictures off all the gods.  All along the walls, there are doors
+leading into all sorts of rooms.  Looking all the way east you can see the
+lobby.    
+
+To the North you can see Galaxie's place, and to the South you can see Jaxom's
+WarRoom.
+~
+12 270336 0
+S
+#1213
+Gad's Praxeum~
+   A simple, plain room lies before you.  A desk covered with papers and ther
+miscellaneous things sits in the corner of the room.  The walls and floor look
+quite the same, the shadows are the only sign that they meet, otherwise one
+might assume the wall was the floor and walk right into it.  The only thing
+disturbing the smooth contours of the room is a small window on the far wall.
+Through it one can see the whole realm.  A telescope sitting beside it makes it
+easier to see the details.  No mortal knows where this room lies.  It is said
+that it lies within a cloud, but no one knows for sure.  You could look up from
+the realms at the many clouds and never know which is the one Gad calls his
+praxeum.  No exits lead away from the room.  No sounds are heard.  Only a place
+for Gad to look upon the world and change it as he sees fit.  It is said that
+he meditates in this room as well, but no one knows for sure.    
+~
+12 272974 0
+S
+#1234
+Unused room~
+This room is undescribed.
+~
+12 262144 0
+S
+#1269
+Xander's Inner Reality~
+     This is a place where the threads of reality are twisted and
+contorted by Xander to make anything he pleases.  At times this 
+place appears as a magnificent den, other times it is the peak of
+a mountain, and sometimes is even underwater.  The very walls twist
+as if being tortured by some malevolent force...this is Xander's
+mind...
+~
+12 264200 0
+S
+#1270
+Xander's Love Nest~
+All there is to say is, 'Oooooh Yeah, Baby!'
+~
+12 0 0
+S
+#1278
+An Empty Room~
+This room is empty, waiting for an imm to take it.
+~
+12 262156 0
+D0
+~
+~
+0 0 1210
+S
+#1296
+An Empty Room~
+Another empty room.
+~
+12 262152 0
+D2
+~
+~
+0 0 1298
+E
+bookcase~
+   The bookcase has but one book on it.  "Striker's Book of Riddles" is on the
+spine.    
+~
+S
+#1297
+&nStriker's Thinking Room~
+   This is Striker's thinking room, where he goes to shut out the noise of the
+outside world and do his deep thought.  Isn't used very often, though.  So to
+make up for not thinking much, he also uses it as his place to trans players
+and yell at them.  The room is plain white, and the door is too, so you can't
+tell which way leads out of the room.  You may be here for a while...  There's
+a red sign here, too.  What's it say?    
+~
+12 1049656 0
+D3
+~
+hidden~
+1 0 1298
+E
+sign red~
+The sign reads:&n
+
+&rIf you are reading this, and you are not Striker, there is an 80% chance you
+are going to be yelled at.
+&n
+~
+S
+#1298
+A Rose Garden~
+   Giant black roses as large as a giant's head form a border around the
+garden.  White roses with blushing red centers are next, sprinkled with the
+occasional daisy.  Poppies and oriental grasses grow in the pillars of pots
+that arch overhead and meet in the middle of the garden.  White flowers with
+long, twisted petals twine their vines about the fountain.  A path of stone
+circles spiral inward around the fountain.    
+~
+12 272938 2
+D1
+~
+void~
+1 0 1299
+S
+#1299
+A Room That Is NOT Finished~
+   It looks unfinished, but that's because you're a worthless mortal who does
+not deserve to be stuck in a room with a decent desc.  You can just sit on the
+floor..  No wait, there is no floor!  Float then.    
+~
+12 272912 0
+D3
+~
+void~
+2 -1 1298
+E
+poster~
+BBBB      EEEEEEE   EEEEEEE   RRRRR
+B    B    E         E         R     R
+B    B    E         E         R     R
+BBBBB     EEEE      EEEE      RRRRRR
+B    B    E         E         R     R
+B    B    E         E         R      R
+BBBBBB    EEEEEE    EEEEEE    R       R
+~
+S
+$~

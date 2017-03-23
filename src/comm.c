@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: comm.c                                        Part of CircleMUD *
 *  Usage: Communication, socket handling, main(), central game loop       *
 *                                                                         *
@@ -12,7 +12,7 @@
 
 #include "conf.h"
 #include "sysdep.h"
-
+#include "screen.h"
 
 #ifdef CIRCLE_WINDOWS		/* Includes for Win32 */
 #include <direct.h>
@@ -32,6 +32,8 @@
 #include "handler.h"
 #include "db.h"
 #include "house.h"
+#include "olc.h"
+#include "clan.h"
 
 #ifdef HAVE_ARPA_TELNET_H
 #include <arpa/telnet.h>
@@ -43,7 +45,11 @@
 #define INVALID_SOCKET -1
 #endif
 
+#define YES	1
+#define NO	0
+
 /* externs */
+extern int exp_to_level(struct char_data *);
 extern int restrict;
 extern int mini_mud;
 extern int no_rent_check;
@@ -52,6 +58,9 @@ extern int DFLT_PORT;
 extern char *DFLT_DIR;
 extern int MAX_PLAYERS;
 extern int MAX_DESCRIPTORS_AVAILABLE;
+void proc_color(char *inbuf, int color);
+
+extern void cleanup_clan_edit(struct descriptor_data *d, int method);
 
 extern struct room_data *world;	/* In db.c */
 extern int top_of_world;	/* In db.c */
@@ -75,6 +84,10 @@ extern int auto_save;		/* see config.c */
 extern int autosave_time;	/* see config.c */
 struct timeval null_time;	/* zero-valued time structure */
 
+static bool fCopyOver;          /* Are we booting in copyover mode? */
+int  mother_desc;        /* Now a global */
+int     port;
+
 /* functions in this file */
 int get_from_q(struct txt_q *queue, char *dest, int *aliased);
 void init_game(int port);
@@ -96,6 +109,7 @@ void record_usage(void);
 void make_prompt(struct descriptor_data *point);
 void check_idle_passwords(void);
 void heartbeat(int pulse);
+void    init_descriptor (struct descriptor_data *newd, int desc);
 
 
 /* extern fcnts */
@@ -110,7 +124,118 @@ void perform_violence(void);
 void show_string(struct descriptor_data *d, char *input);
 int isbanned(char *hostname);
 void weather_and_time(int mode);
+struct drunk_struct
+{
+        int     min_drunk_level;
+        int     number_of_rep;
+        char    *replacement[11];
+};
 
+char    *makedrunk(char *string ,struct char_data *ch);
+
+/* How to make a string look drunk... by Apex (robink@htsa.hva.nl) */
+/* Modified and enhanced for envy(2) by the Maniac from Mythran    */
+/* Ported to Stock Circle 3.0 by Haddixx (haddixx@megamed.com)     */
+
+char * makedrunk (char *string, struct char_data * ch)
+{
+
+/* This structure defines all changes for a character */
+  struct drunk_struct drunk[] =
+  {
+    {3, 10,
+      {"a", "a", "a", "A", "aa", "ah", "Ah", "ao", "aw", "oa", "ahhhh"}},
+    {8, 5,
+     {"b", "b", "b", "B", "B", "vb"}},
+    {3, 5,
+     {"c", "c", "C", "cj", "sj", "zj"}},
+    {5, 2,
+     {"d", "d", "D"}},
+    {3, 3,
+     {"e", "e", "eh", "E"}},
+    {4, 5,
+     {"f", "f", "ff", "fff", "fFf", "F"}},
+    {8, 2,
+     {"g", "g", "G"}},
+    {9, 6,
+     {"h", "h", "hh", "hhh", "Hhh", "HhH", "H"}},
+    {7, 6,
+     {"i", "i", "Iii", "ii", "iI", "Ii", "I"}},
+    {9, 5,
+     {"j", "j", "jj", "Jj", "jJ", "J"}},
+    {7, 2,
+     {"k", "k", "K"}},
+    {3, 2,
+     {"l", "l", "L"}},
+    {5, 8,
+     {"m", "m", "mm", "mmm", "mmmm", "mmmmm", "MmM", "mM", "M"}},
+    {6, 6,
+     {"n", "n", "nn", "Nn", "nnn", "nNn", "N"}},
+    {3, 6,
+     {"o", "o", "ooo", "ao", "aOoo", "Ooo", "ooOo"}},
+    {3, 2,
+     {"p", "p", "P"}},
+    {5, 5,
+     {"q", "q", "Q", "ku", "ququ", "kukeleku"}},
+    {4, 2,
+     {"r", "r", "R"}},
+    {2, 5,
+     {"s", "ss", "zzZzssZ", "ZSssS", "sSzzsss", "sSss"}},
+    {5, 2,
+     {"t", "t", "T"}},
+    {3, 6,
+     {"u", "u", "uh", "Uh", "Uhuhhuh", "uhU", "uhhu"}},
+    {4, 2,
+     {"v", "v", "V"}},
+    {4, 2,
+     {"w", "w", "W"}},
+    {5, 6,
+     {"x", "x", "X", "ks", "iks", "kz", "xz"}},
+    {3, 2,
+     {"y", "y", "Y"}},
+    {2, 9,
+     {"z", "z", "ZzzZz", "Zzz", "Zsszzsz", "szz", "sZZz", "ZSz", "zZ", "Z"}}
+  };
+
+  char buf[MAX_STRING_LENGTH];      /* this should be enough (?) */
+  char temp;
+  int pos = 0;
+  int randomnum;
+
+  if(GET_COND(ch, DRUNK) > 0)  /* character is drunk */
+  {
+     do
+     {
+       temp = toupper(*string);
+       if( (temp >= 'A') && (temp <= 'Z') )
+       {
+         if(GET_COND(ch, DRUNK) > drunk[(temp - 'A')].min_drunk_level)
+         {
+           randomnum = number(0, (drunk[(temp - 'A')].number_of_rep));
+           strcpy(&buf[pos], drunk[(temp - 'A')].replacement[randomnum]);
+           pos += strlen(drunk[(temp - 'A')].replacement[randomnum]);
+         }
+         else
+           buf[pos++] = *string;
+       }
+       else
+       {
+         if ((temp >= '0') && (temp <= '9'))
+         {
+           temp = '0' + number(0, 9);
+           buf[pos++] = temp;
+         }
+         else
+           buf[pos++] = *string;
+       }
+     }while (*string++);
+
+     buf[pos] = '\0';          /* Mark end of the string... */
+     strcpy(string, buf);
+     return(string);
+  }
+  return (string); /* character is not drunk, just return the string */
+}
 
 
 /* *********************************************************************
@@ -133,7 +258,6 @@ void gettimeofday(struct timeval *t, struct timezone *dummy)
 
 int main(int argc, char **argv)
 {
-  int port;
   char buf[512];
   int pos = 1;
   char *dir;
@@ -143,6 +267,10 @@ int main(int argc, char **argv)
 
   while ((pos < argc) && (*(argv[pos]) == '-')) {
     switch (*(argv[pos] + 1)) {
+    case 'C': /* -C<socket number> - recover from copyover, this is the control socket */
+      fCopyOver = TRUE;
+      mother_desc = atoi(argv[pos]+2);
+      break;
     case 'd':
       if (*(argv[pos] + 2))
 	dir = argv[pos] + 2;
@@ -215,20 +343,107 @@ int main(int argc, char **argv)
   return 0;
 }
 
+int enter_player_game(struct descriptor_data *d);
+ 
+/* Reload players after a copyover */
+void copyover_recover()
+{
+	struct descriptor_data *d;
+	FILE *fp;
+	char host[1024];
+    struct char_file_u tmp_store;
+	int desc, player_i;
+    bool fOld;
+    char name[MAX_INPUT_LENGTH];
+	
+ 	log ("Copyover recovery initiated");
+ 	
+ 	fp = fopen (COPYOVER_FILE, "r");
+ 	
+ 	if (!fp) /* there are some descriptors open which will hang forever then ? */
+ 	{
+ 		perror ("copyover_recover:fopen");
+ 		log ("Copyover file not found. Exitting.\n\r");
+ 		exit (1);
+ 	}
+ 
+ 	unlink (COPYOVER_FILE); /* In case something crashes - doesn't prevent reading	*/
+ 	
+ 	for (;;)
+     {
+         fOld = TRUE;
+ 		fscanf (fp, "%d %s %s\n", &desc, name, host);
+ 		if (desc == -1)
+ 			break;
+ 
+ 		/* Write something, and check if it goes error-free */		
+ 		if (write_to_descriptor (desc, "\n\rRestoring from copyover...\n\r") < 0)
+ 		{
+ 			close (desc); /* nope */
+ 			continue;
+ 		}
+ 		
+         /* create a new descriptor */
+         CREATE (d, struct descriptor_data, 1);
+         memset ((char *) d, 0, sizeof (struct descriptor_data));
+ 		init_descriptor (d,desc); /* set up various stuff */
+ 		
+ 		strcpy(d->host, host);
+		d->next = descriptor_list;
+ 		descriptor_list = d;
+ 
+         d->connected = CON_CLOSE;
+ 		/* Now, find the pfile */
+ 		
+         CREATE(d->character, struct char_data, 1);
+         clear_char(d->character);
+         CREATE(d->character->player_specials, struct player_special_data, 1);
+         d->character->desc = d;
+ 
+         if ((player_i = load_char(name, &tmp_store)) >= 0)
+         {
+             store_to_char(&tmp_store, d->character);
+             GET_PFILEPOS(d->character) = player_i;
+             if (!PLR_FLAGGED(d->character, PLR_DELETED))
+                 REMOVE_BIT(PLR_FLAGS(d->character),PLR_WRITING | PLR_MAILING | PLR_CRYO);
+             else
+                 fOld = FALSE;
+         }
+         else
+             fOld = FALSE;
+ 		
+ 		if (!fOld) /* Player file not found?! */
+ 		{
+ 			write_to_descriptor (desc, "\n\rSomehow, your character was lost in the copyover. Sorry.\n\r");
+ 			close_socket (d);			
+ 		}
+ 		else /* ok! */
+ 		{
+             write_to_descriptor (desc, "\n\rCopyover recovery complete.\n\r");
+             enter_player_game(d);
+             d->connected = CON_PLAYING;
+             look_at_room(d->character, 0);
+ 		}
+ 		
+ 	} 	
+ 	fclose (fp);
+}
+ 
 
 
 /* Init sockets, run game, and cleanup sockets */
 void init_game(int port)
 {
-  int mother_desc;
-
   srandom(time(0));
 
   log("Finding player limit.");
   max_players = get_max_players();
 
-  log("Opening mother connection.");
-  mother_desc = init_socket(port);
+  if (!fCopyOver) /* If copyover mother_desc is already set up */
+  {
+    log ("Opening mother connection.");
+    mother_desc = init_socket (port);
+  }
 
   boot_db();
 
@@ -236,6 +451,8 @@ void init_game(int port)
   log("Signal trapping.");
   signal_setup();
 #endif
+  if (fCopyOver) /* reload players */
+    copyover_recover();
 
   log("Entering game loop.");
 
@@ -448,7 +665,7 @@ void game_loop(int mother_desc)
 {
   fd_set input_set, output_set, exc_set, null_set;
   struct timeval last_time, before_sleep, opt_time, process_time, now, timeout;
-  char comm[MAX_INPUT_LENGTH];
+  char comm[MAX_STRING_LENGTH];
   struct descriptor_data *d, *next_d;
   int pulse = 0, missed_pulses, maxdesc, aliased;
 
@@ -587,10 +804,12 @@ void game_loop(int mother_desc)
 	d->wait = 1;
 	d->prompt_mode = 1;
 
-	if (d->str)		/* writing boards, mail, etc.     */
-	  string_add(d, comm);
-	else if (d->showstr_count)	/* reading something w/ pager     */
+	 /* reversed these top 2 if checks so that you can use the page_string */
+	 /* function in the editor */
+	if (d->showstr_count)	/* reading something w/ pager     */
 	  show_string(d, comm);
+	else if (d->str)		/* writing boards, mail, etc.     */
+	  string_add(d, comm);
 	else if (d->connected != CON_PLAYING)	/* in menus, etc. */
 	  nanny(d, comm);
 	else {			/* else: we're playing normally */
@@ -609,10 +828,12 @@ void game_loop(int mother_desc)
     for (d = descriptor_list; d; d = next_d) {
       next_d = d->next;
       if (FD_ISSET(d->descriptor, &output_set) && *(d->output))
+      {
 	if (process_output(d) < 0)
 	  close_socket(d);
 	else
-	  d->prompt_mode = 1;
+       	  d->prompt_mode = 1;
+      }
     }
 
     /* kick out folks in the CON_CLOSE state */
@@ -664,13 +885,21 @@ void game_loop(int mother_desc)
 
 void heartbeat(int pulse)
 {
+  extern void clan_save(int, struct char_data *, int);
+  extern void arena_pulse(void);
   static int mins_since_crashsave = 0;
-
+  void auction_update();
+ 
   if (!(pulse % PULSE_ZONE))
     zone_update();
 
   if (!(pulse % (15 * PASSES_PER_SEC)))		/* 15 seconds */
     check_idle_passwords();
+  if (!(pulse % (15 * PASSES_PER_SEC)))
+    auction_update();
+
+  if (!(pulse % (25 * PASSES_PER_SEC)))
+    arena_pulse();  
 
   if (!(pulse % PULSE_MOBILE))
     mobile_activity();
@@ -688,6 +917,7 @@ void heartbeat(int pulse)
     if (++mins_since_crashsave >= autosave_time) {
       mins_since_crashsave = 0;
       Crash_save_all();
+      clan_save(YES,0,NO);
       House_save_all();
     }
   }
@@ -819,36 +1049,279 @@ void echo_on(struct descriptor_data *d)
 }
 
 
+// this little function right here is taken from my inline color code
+// I wrote some two years ago from the long gone Krimson DIKUMUD... I
+// didn't want to rely upon the easy_color patch (and besides, which,
+// I still don't know the actual codes it uses)  This is how the colors
+// are on my (currently siteless) MUD.
+int is_color(char c) {
+  switch (c) {
+  case 'x': return 30; break;
+  case 'r': return 31; break;
+  case 'g': return 32; break;
+  case 'y': return 33; break;
+  case 'b': return 34; break;
+  case 'm': return 35; break;
+  case 'c': return 36; break;
+  case 'w': return 37; break;
+  
+  case '0': return 40; break;
+  case '1': return 44; break;
+  case '2': return 42; break;
+  case '3': return 46; break;
+  case '4': return 41; break;
+  case '5': return 45; break;
+  case '6': return 43; break;
+  case '7': return 47; break;
+  
+  case 'f': return  1; break;
+  case '&': return -1; break;
+  default : return  0; break;
+  }
+}
+
+
+char *interpret_colors(char *str, bool parse) {
+  int clr = 37, bg_clr = 40, flash = 0;
+  static char cbuf[MAX_STRING_LENGTH];
+  char *cp, *tmp;  
+  char i[256];
+
+  if (!strchr(str, '&'))
+    return (str);
+
+  cp = cbuf;
+  
+  for (;;) {
+    if (*str == '&') {
+      str++;
+      if ((clr = is_color(LOWER(*str))) > 0 && parse) {
+        if (IS_UPPER(*str)) sprintf(i, "\x1b[1;");
+        else                sprintf(i, "\x1b[0;");
+          
+        if (clr >= 40) {
+          bg_clr = 40;
+          str++;
+          continue;
+        } else if (clr == 1) {
+          flash = !flash;
+          str++;
+          continue;
+        }
+          
+        sprintf(i, "%s%s%d;%dm", i, (flash ? "5;" : ""), bg_clr, clr);
+        tmp = i;
+      } else if (clr == -1) {
+        *(cp++) = '&';
+        str++;
+        continue;
+      } else {
+        str++;
+        continue;
+      }
+      while ((*cp = *(tmp++)))
+	cp++;
+      str++;
+    } else if (!(*(cp++) = *(str++)))
+      break;
+  }
+  
+  *cp = '\0';
+  return (cbuf);
+}
+
+/* Initialize a descriptor */
+void init_descriptor (struct descriptor_data *newd, int desc)
+{
+  static int last_desc = 0;
+	newd->descriptor = desc;
+	newd->connected = CON_GET_NAME;
+	newd->idle_tics = 0;
+	newd->wait = 1;
+	newd->output = newd->small_outbuf;
+	newd->bufspace = SMALL_BUFSIZE - 1;
+	newd->next = descriptor_list;
+	newd->login_time = time (0);
+
+	if (++last_desc == 1000)
+		last_desc = 1;
+	newd->desc_num = last_desc;
+}
+
+char *prompt_str(struct char_data *ch) {
+  struct char_data *vict = FIGHTING(ch);  
+  static char pbuf[MAX_STRING_LENGTH];  
+  char *str = GET_PROMPT(ch);
+  struct char_data *tank;
+  int perc, color;  
+  char *cp, *tmp;
+  char i[256];
+  
+  if (!str || !*str)
+    str = "&nDaggerfall: &mSet your prompt '&bhelp prompt&m' or '&bDisplay&n'> ";
+
+  color = (PRF_FLAGGED(ch, PRF_COLOR_1 | PRF_COLOR_2) ? 1 : 0);
+    
+  if (!strchr(str, '%'))
+    return (str);
+  
+  cp = pbuf;
+  
+  for (;;) {
+    if (*str == '%') {
+      switch (*(++str)) {
+      case 'h': // current hitp
+        sprintf(i, "%d", GET_HIT(ch));
+        tmp = i;
+        break;
+      case 'H': // maximum hitp
+        sprintf(i, "%d", GET_MAX_HIT(ch));
+        tmp = i;
+        break;
+      case 'm': // current mana
+        sprintf(i, "%d", GET_MANA(ch));
+        tmp = i;
+        break;
+      case 'M': // maximum mana
+        sprintf(i, "%d", GET_MAX_MANA(ch));
+        tmp = i;
+        break;
+      case 'v': // current moves
+        sprintf(i, "%d", GET_MOVE(ch));
+        tmp = i;
+        break;
+      case 'V': // maximum moves
+        sprintf(i, "%d", GET_MAX_MOVE(ch));
+        tmp = i;
+        break;
+      case 'P':
+      case 'p': // percentage of hitp/move/mana
+        str++;
+        switch (LOWER(*str)) {
+        case 'h':
+          perc = (100 * GET_HIT(ch)) / GET_MAX_HIT(ch);
+          break;
+        case 'm':
+          perc = (100 * GET_MANA(ch)) / GET_MAX_MANA(ch);
+          break;
+        case 'v':
+          perc = (100 * GET_MOVE(ch)) / GET_MAX_MOVE(ch);
+          break;
+        case 'x':
+          perc = (100 * GET_EXP(ch)) / (exp_to_level(ch));
+          break;
+        default :
+          perc = 0;
+          break;
+        }
+        sprintf(i, "%d%%", perc);
+        tmp = i;
+        break;
+      case 'O':
+      case 'o': // opponent
+        if (vict) {
+          perc = (100*GET_HIT(vict)) / GET_MAX_HIT(vict);
+          sprintf(i, "%s (%s)&n", PERS(vict, ch),
+                  (perc >= 95 ? "unscathed" :
+                   perc >= 75 ? "scratched" :
+                   perc >= 50 ? "beaten-up" :
+                   perc >= 25 ? "bloody"    : "near death"));
+          tmp = i;
+        } else {
+          str++;
+          continue;
+        }
+        break;
+      case 'x': // current exp
+        sprintf(i, "%d", GET_EXP(ch));
+        tmp = i;
+        break;
+      case 'X': // exp to level
+        sprintf(i, "%d", exp_to_level(ch));
+        tmp = i;
+        break;
+      case 'g': // gold on hand
+        sprintf(i, "%d", GET_GOLD(ch));
+        tmp = i;
+        break;
+      case 'G': // gold in bank
+        sprintf(i, "%d", GET_BANK_GOLD(ch));
+        tmp = i;
+        break;
+      case 'T':
+      case 't': // tank
+        if (vict && (tank = FIGHTING(vict)) && tank != ch) {
+          perc = (100*GET_HIT(tank)) / GET_MAX_HIT(tank);
+          sprintf(i, "%s (%s)", PERS(tank, ch),
+                  (perc >= 95 ? "unscathed" :
+                   perc >= 75 ? "scratched" :
+                   perc >= 50 ? "beaten-up" :
+                   perc >= 25 ? "bloody"    : "near death"));
+          tmp = i;
+        } else {
+          str++;
+          continue;
+        }
+        break;
+        
+      case '_':
+        tmp = "\r\n";
+        break;
+      case '%':
+        *(cp++) = '%';
+        str++;
+        continue;
+        break;
+      
+      default :
+        str++;
+        continue;
+        break;
+      }
+      
+      while ((*cp = *(tmp++)))
+        cp++;
+      str++;
+    } else if (!(*(cp++) = *(str++)))
+      break;
+  }
+  
+  *cp = '\0';
+  
+  strcat(pbuf, " &n");
+  return (pbuf);
+}
+
+
 void make_prompt(struct descriptor_data *d)
 {
+  char * short_char_cond(struct char_data *);
   char prompt[MAX_INPUT_LENGTH];
 
-  if (d->str)
-    write_to_descriptor(d->descriptor, "] ");
-  else if (d->showstr_count) {
+   /* reversed these top 2 if checks so that page_string() would work in */
+   /* the editor */
+if (d->showstr_count) {
     sprintf(prompt,
 	    "\r[ Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d) ]",
-	    d->showstr_page, d->showstr_count);
-    write_to_descriptor(d->descriptor, prompt);
-  } else if (!d->connected) {
-    char prompt[MAX_INPUT_LENGTH];
-
-    *prompt = '\0';
-
-    if (GET_INVIS_LEV(d->character))
-      sprintf(prompt, "i%d ", GET_INVIS_LEV(d->character));
-
-    if (PRF_FLAGGED(d->character, PRF_DISPHP))
-      sprintf(prompt, "%s%dH ", prompt, GET_HIT(d->character));
-
-    if (PRF_FLAGGED(d->character, PRF_DISPMANA))
-      sprintf(prompt, "%s%dM ", prompt, GET_MANA(d->character));
-
-    if (PRF_FLAGGED(d->character, PRF_DISPMOVE))
-      sprintf(prompt, "%s%dV ", prompt, GET_MOVE(d->character));
-
-    strcat(prompt, "> ");
-    write_to_descriptor(d->descriptor, prompt);
+            d->showstr_page, d->showstr_count);
+      write_to_descriptor(d->descriptor, prompt);
+    } else if (!d->connected) {
+      if (IS_NPC(d->character))
+      {
+        sprintf(prompt, "MOB> ");
+      }
+      else
+      {
+        if(GET_LEVEL(d->character) >= LVL_IMMORT &&
+           GET_INVIS_LEV(d->character) > 0)
+             sprintf(prompt, "i%d %s",GET_INVIS_LEV(d->character), 
+                     prompt_str(d->character));
+        else
+          sprintf(prompt, "%s", prompt_str(d->character));
+      }
+    proc_color(prompt, (clr(d->character, C_NRM)));
+    if (!PLR_FLAGGED(d->character, PLR_WRITING))
+      write_to_descriptor(d->descriptor, prompt);
   }
 }
 
@@ -966,13 +1439,11 @@ void write_to_output(const char *txt, struct descriptor_data *t)
 ****************************************************************** */
 
 
-int new_descriptor(int s)
-{
+int new_descriptor(int s) {
   socket_t desc;
   int sockets_connected = 0;
   unsigned long addr;
   int i;
-  static int last_desc = 0;	/* last descriptor number */
   struct descriptor_data *newd;
   struct sockaddr_in peer;
   struct hostent *from;
@@ -1031,20 +1502,7 @@ int new_descriptor(int s)
   sprintf(buf2, "New connection from [%s]", newd->host);
   mudlog(buf2, CMP, LVL_GOD, FALSE);
 #endif
-
-  /* initialize descriptor data */
-  newd->descriptor = desc;
-  newd->connected = CON_GET_NAME;
-  newd->idle_tics = 0;
-  newd->wait = 1;
-  newd->output = newd->small_outbuf;
-  newd->bufspace = SMALL_BUFSIZE - 1;
-  newd->next = descriptor_list;
-  newd->login_time = time(0);
-
-  if (++last_desc == 1000)
-    last_desc = 1;
-  newd->desc_num = last_desc;
+  init_descriptor(newd, desc);
 
   /* prepend to list */
   descriptor_list = newd;
@@ -1066,7 +1524,6 @@ int process_output(struct descriptor_data *t)
 
   /* now, append the 'real' output */
   strcpy(i + 2, t->output);
-
   /* if we're in the overflow state, notify the user */
   if (t->bufptr < 0)
     strcat(i, "**OVERFLOW**");
@@ -1074,6 +1531,8 @@ int process_output(struct descriptor_data *t)
   /* add the extra CRLF if the person isn't in compact mode */
   if (!t->connected && t->character && !PRF_FLAGGED(t->character, PRF_COMPACT))
     strcat(i + 2, "\r\n");
+  if(t->character)
+     proc_color(i, (clr(t->character, C_NRM)));
 
   /*
    * now, send the output.  If this is an 'interruption', use the prepended
@@ -1363,11 +1822,31 @@ void close_socket(struct descriptor_data *d)
     SEND_TO_Q("Your victim is no longer among us.\r\n", d->snoop_by);
     d->snoop_by->snooping = NULL;
   }
+
+  /*. Kill any OLC stuff .*/
+  switch(d->connected)
+  { case CON_OEDIT:
+    case CON_REDIT:
+    case CON_ZEDIT:
+    case CON_MEDIT:
+    case CON_SEDIT:
+      cleanup_olc(d, CLEANUP_ALL);
+      break;
+    case CON_CLAN_EDIT:
+      cleanup_clan_edit(d, CLEAN_ALL);
+      break;
+    default:
+      break;
+  }
+
   if (d->character) {
     target_idnum = GET_IDNUM(d->character);
     if (d->connected == CON_PLAYING) {
       save_char(d->character, NOWHERE);
-      act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
+/*    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM); */
+      sprintf(buf,"%s has slipped into the RL dimension.\r\n",
+              GET_NAME(d->character));
+      send_to_all(buf);
       sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
       mudlog(buf, NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE);
       d->character->desc = NULL;
@@ -1390,6 +1869,8 @@ void close_socket(struct descriptor_data *d)
     free(d->showstr_head);
   if (d->showstr_count)
     free(d->showstr_vector);
+  if (d->storage)
+    free(d->storage);
 
   free(d);
 }
@@ -1740,6 +2221,7 @@ void act(char *str, int hide_invisible, struct char_data *ch,
 {
   struct char_data *to;
   static int sleep;
+  struct descriptor_data *i;
 
   if (!str || !*str)
     return;
@@ -1766,7 +2248,19 @@ void act(char *str, int hide_invisible, struct char_data *ch,
   if (type == TO_VICT) {
     if ((to = (struct char_data *) vict_obj) && SENDOK(to))
       perform_act(str, ch, obj, vict_obj, to);
-    return;
+    return;  
+  }
+
+  if (type == TO_WORLD) {
+    for (i = descriptor_list; i; i = i->next) {
+      if (!i->connected && i != ch->desc && i->character &&
+          !PLR_FLAGGED(i->character, PLR_WRITING) &&
+	  !PRF_FLAGGED(i->character, PRF_NOGOSS) &&
+          !ROOM_FLAGGED(i->character->in_room, ROOM_SOUNDPROOF)) {
+        send_to_char("[&yEmote&n] ", i->character);
+        perform_act(str, ch, obj, vict_obj, i->character);
+      }
+    }
   }
   /* ASSUMPTION: at this point we know type must be TO_NOTVICT or TO_ROOM */
 

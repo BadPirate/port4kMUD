@@ -1,0 +1,384 @@
+#400
+h c hungry crocodile alligator a~
+a hungry crocodile~
+A hungry crocodile is swimming towards you...
+~
+The crocodile is huge!  It is aroudn 15 feet long and appears to be very,
+very hungry.
+~
+297064 1120 -150 E
+10 13 5 3d3+100 3d3+7
+1000 10000
+8 8 1
+BareHandAttack: 4
+E
+#401
+g a giant alligator crocodile c~
+a giant alligator~
+A giant alligator swims towards you...
+~
+The alligator, is, well, a giant.  It has to be at least ten feet long.  It
+smiles at you with a many-toothed grin.
+~
+268408 1088 -200 E
+11 16 3 5d5+105 3d3+10
+1500 12000
+8 8 2
+BareHandAttack: 9
+E
+#402
+w m water moccasin snake s~
+a water moccasin~
+A water moccasin slithers towards you...
+~
+The water moccasin is a very long, very dangerous looking snake.  It's 
+pointed tongue flicks in your direction.  Aren't water moccasins supposed to
+be poisonous?!
+~
+141432 104 0 E
+12 11 5 5d6+90 3d3+7
+2000 13000
+8 8 1
+BareHandAttack: 4
+E
+#403
+t p pirahna toothy fish~
+a toothy pirahna~
+A toothy pirahna is heading straight for you!
+~
+The pirahna may be small, but it is known for it's deadlyness...
+~
+6248 33888 -500 E
+15 10 5 1d1+50 3d3+12
+2000 15000
+8 8 0
+BareHandAttack: 4
+E
+#404
+m z midgar zolom s snake serpent~
+the Midgar Zolom~
+The Midgar Zolom slithers towards you!
+~
+He is gigantic!  At least twenty-five feet tall, the Midgar Zolom is a mighty
+foe.  His scales ripple with the movements of the muscles underneath.  Can 
+you match this?!
+~
+333944 248 -1000 E
+25 5 2 20d6+500 5d4+15
+5000 30000
+8 8 1
+BareHandAttack: 10
+E
+#405
+w b beautiful y young witch~
+a beautiful young witch~
+The beautiful young witch stands here.
+~
+As you enter, she looks up an smiles.  She is not what you would call the 
+normal example of a witch.  She is young and beautiful, with flowing auburn
+hair and innocent violet eyes.  Do you really want to kill her?
+~
+10330 32824 500 E
+17 12 2 6d6+150 3d3+8
+10000 17000
+8 8 2
+E
+#406
+w weeds r reeds ~
+the deadly weeds~
+The deadly weeds sway in the wind...
+~
+The deadly-looking weeds sway gently in the breeze.
+~
+8250 32 -250 E
+15 10 2 5d3+50 3d3+15
+2000 15000
+8 8 0
+BareHandAttack: 1
+E
+#407
+stone dog rock boulder~
+the stone dog~
+A roughly shaped boulder is lying here.
+~
+   Though at first appearing to merely be a rock, the true shape of the stone
+dog appears at your second glance.  It is a fierce dog, looking somewhat like a
+mix of a Rottweiler and a Sharpei.    
+~
+190554 33832 0 E
+35 5 0 3d3+750 5d5+16
+5000 20000
+8 8 0
+BareHandAttack: 9
+E
+#408
+ivy vines plant~
+the ivy~
+A bunch of ivy hangs here.
+~
+Shiny leaves with wicked thorns.  Scary.
+~
+4936 0 0 E
+30 5 5 4d4+250 4d4+15
+1000 2000
+8 8 2
+BareHandAttack: 2
+E
+#409
+demon hate evil~
+an evil demon of hate~
+An evil demon of hate curses this holy place.
+~
+   The demon, with delightfully evil glowing red eyes, glares at you hatefully.
+  
+~
+190586 4268 -1000 E
+50 2 -2 4d4+2000 5d8+20
+10000 30000
+8 8 1
+BareHandAttack: 8
+E
+#410
+man-eating plant~
+the man-eating plant~
+The man-eating plant hunts here.
+~
+It has a large head and maw that gapes open to grab you with its sharp teeth.
+Hmm, is this something you've seen before, Mario?
+~
+47208 40 0 E
+32 2 2 3d3+300 3d5+15
+500 3000
+8 8 1
+BareHandAttack: 9
+E
+#450
+earth lamia~
+the &gEarth Lamia&n~
+An earth-covered lamia glowers at you from between her coils.
+~
+undefined~
+8 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#451
+wyvern~
+the &MWyvern&n~
+A wyvern hovers here, glaring at you.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#452
+fire djinn~
+the &rFire Djinn&n~
+A djinn peers at you from within some comforting flames.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#453
+shadow~
+a Shadow~
+Something seems to flicker within the shadows.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+#488
+skinless peltless beaver~
+the Beaver~
+A mass of bloodied flesh rots here...Wait a minute, it's moving!
+~
+   This poor creature is apparently a beaver, judging by what's left of its
+tail.  The poor thing has been skinned alive!  Whoever the culprit is, he did a
+good job, since most of the muscle and fat that lay under the skin is intact.
+Blood does ooze from a few spots, but the poor thing is still alive!    
+~
+524378 33824 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#489
+evil footman man~
+the Evil Footman~
+A man in uniform glances around with shifty-looking eyes.
+~
+   The man is dressed in a smart, freshly pressed uniform.  The livery is made
+of blue velvet, and covered in gold trimming.  The man himself is rather
+non-descript, other than the nervous look on his face.    
+~
+8410 32896 0 E
+85 -10 10 1d1+1500 3d5+25
+50000 0
+8 8 1
+E
+#490
+cute adorable pony~
+an adorable pony~
+A cute little pony stands here, just what you've always wanted!
+~
+   The pony is small and cute, standing perhaps twelve hands from the ground.
+Her mane and tail are long and flaxen colored.  Her forelock hangs over her
+eyes, giving her a shy look.  Her golden hide gleams in the light.  She has a
+single white sock over her right foreleg.  Adorable!    
+~
+262218 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 6
+E
+#491
+monkey king~
+the Monkey King~
+The King of all Monkeys graces you with his presence.
+~
+   The Monkey King is a slightly larger than average male monkey.  He has sleek
+brown fur, which is kept insect free by several females rooting through it.  
+On his head is a large crown made entirely of old banana peels, some fresh and
+yellow, others rotting and brown.    
+~
+778314 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+6 6 1
+E
+#492
+Rubicant fire~
+&rRubicant&n~
+The Fiend of &rFire&n, &rRubicant&n, stands aloof.
+~
+   &rRubicant&n, the evil Fiend of &rFire&n, is a tall, aloof man.  With his
+fiery cloak wrapped around him, he seems ready to face, and defeat, any who
+dare stand against him and his reign of terror.    
+~
+190554 5308 -1000 E
+75 14 -10 1d1+7500 5d9+10
+250000 0
+8 8 1
+BareHandAttack: 12
+E
+#493
+Valvalus air~
+Valvalus~
+Valvalus, Fiend of the Air, stares at you menacingly.
+~
+   &yVivalis&n is a very buxom woman, very suprising for the Fiend of &yAir&n.
+She glares at you, and spins into a whirlwind that deflects all of your
+weapons...    
+~
+188506 5372 -1000 E
+50 11 -5 1d1+6000 4d7+13
+200000 0
+8 8 2
+BareHandAttack: 12
+E
+#494
+Kainazzo water~
+&bKainazzo&n~
+&bKainazzo&n, Fiend of the &bWater&n, glares icily at you.
+~
+   &bKainazzo&n is a deformed, monstrous being.  Though he has a man-like head,
+his body is covered in a thick carapace like a turtle.  Fortunately, he is
+hiding most of his ugliness behind a wall of &bWater&n.    
+~
+188506 5372 -1000 E
+50 14 -5 4d7+5000 1d1+13
+200000 0
+8 8 1
+E
+#495
+Milon earth~
+&gMilon&n~
+The Fiend of &gEarth&n, &gMilon&n, snarls at the sight of you.
+~
+   &gMilon&n is a hideous creature.  A grotesque, man-like face stares at you
+from a hulking body of a beast, surrounded by slimey tentacles that lash out at
+you.  The Fiend of &gEarth&n certainly isn't pretty!    
+~
+188442 4284 -1000 E
+27 11 -5 1d1+2500 4d7+9
+175000 0
+8 8 1
+BareHandAttack: 2
+E
+#496
+dragon pup~
+the Dragon Pup~
+A cute little dragon pup runs along.  Watch out, he bites!
+~
+   The dragon pup is the epitome of cute, despite the fact that it will grow up
+to be a fearsome beast.  It has big, eager eyes, a cute little tale, and a
+chubby, roly-poly body.  It's beak doesn't seem to have grown many, if any
+teeth, but still could pinch hard!    
+~
+16524 32832 0 E
+20 10 0 3d3+500 5d3+10
+0 0
+8 8 1
+BareHandAttack: 4
+E
+#497
+wyvern~
+&RWyvern&n~
+The anti-thesis of good, the evil dragon &RWyvern&n glares at you.
+~
+   Wyvern is the anti-thesis of good in every way.  In form, she is a platinum
+dragon, just like &WLord Bahamut&n, but highlighted with sickly browns and
+yellows.  Her yellow, pupiless eyes glare into your soul, and strike terror
+therein, the terror of pure evil.  She looks ready to destroy you in an
+instant.    
+~
+256026 46332 -1000 E
+100 -30 -20 30d127+30000 3d50+50
+500000 0
+8 8 2
+BareHandAttack: 12
+E
+#498
+lord bahamut~
+&WLord Bahamut&n~
+The great lord of dragons, &WBahamut&n, graciously acknowledges your existence.
+~
+   The King of Kings, &WBahamut&n is a magnificent platinum dragon, with silver
+and violet highlights all over.  His wise, pupiless eye gazes straight into
+your soul, and seems to pierce your heart with fear.  He is a good ruler,
+however, and wouldn't harm a soul that didn't deserve it.  His leathery wings
+spread, and he looks ready to depart from this earth at any moment.    
+~
+256026 46332 1000 E
+100 -30 -20 30d127+30000 30d127+50
+0 0
+8 8 1
+BareHandAttack: 12
+E
+#499
+cecil~
+Cecil~
+The Dark Knight Cecil glowers at you from under his helm.
+~
+   The Dark Knight Cecil is encased in a set of armor that seems to absorb all
+light.  Only the light glinting from his eyes can be seen of his face.    
+~
+10 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+$

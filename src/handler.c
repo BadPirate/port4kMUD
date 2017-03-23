@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: handler.c                                     Part of CircleMUD *
 *  Usage: internal funcs: moving and finding chars/objs                   *
 *                                                                         *
@@ -19,6 +19,7 @@
 #include "handler.h"
 #include "interpreter.h"
 #include "spells.h"
+#define WHITESPACE " \t"
 
 /* external vars */
 extern int top_of_world;
@@ -49,41 +50,30 @@ char *fname(char *namelist)
   return (holder);
 }
 
-
 int isname(char *str, char *namelist)
 {
-  register char *curname, *curstr;
+  char *newlist;
+  char *curtok;
 
-  curname = namelist;
-  for (;;) {
-    for (curstr = str;; curstr++, curname++) {
-      if (!*curstr && !isalpha(*curname))
-	return (1);
+  newlist = strdup(namelist); /* make a copy since strtok 'modifies' 
+strings */
 
-      if (!*curname)
-	return (0);
-
-      if (!*curstr || *curname == ' ')
-	break;
-
-      if (LOWER(*curstr) != LOWER(*curname))
-	break;
-    }
-
-    /* skip to next name */
-
-    for (; isalpha(*curname); curname++);
-    if (!*curname)
-      return (0);
-    curname++;			/* first char of new name */
-  }
+  for(curtok = strtok(newlist, WHITESPACE); curtok; curtok = strtok(NULL,
+                WHITESPACE))
+     if(curtok && is_abbrev(str, curtok))
+     {
+        free(newlist);
+        return 1;
+     }
+  free(newlist);
+  return 0;
 }
 
 
-
 void affect_modify(struct char_data * ch, byte loc, sbyte mod, long bitv,
-		        bool add)
+		        bool add, int debug)
 {
+  static int error=0, passfree=0;
   int maxabil;
 
   if (add) {
@@ -189,11 +179,22 @@ void affect_modify(struct char_data * ch, byte loc, sbyte mod, long bitv,
     GET_SAVE(ch, SAVING_SPELL) += mod;
     break;
 
+  case APPLY_RACE:
+    /* ??? GET_RACE(ch) += mod; */
+    break;
+
   default:
-    log("SYSERR: Unknown apply adjust attempt (handler.c, affect_modify).");
+    passfree=1;
+    error++;
     break;
 
   } /* switch */
+  if(passfree == 0 && error != 0)
+  {
+    sprintf(buf, "Had %d incorrect apply adjusts", error);
+    log(buf);
+    error=0;
+  }
 }
 
 
@@ -204,19 +205,37 @@ void affect_total(struct char_data * ch)
 {
   struct affected_type *af;
   int i, j;
+  static int error=0;
+
+  if (strlen(GET_NAME(ch)) == 0)
+  {
+    if (ch == NULL)
+      log("Affecting total for NULL character OOPS!");
+    else
+    {
+      if(error==0)
+      {
+        sprintf(buf, "Affecting total for a character who's name length is %d",
+                strlen(GET_NAME(ch)));
+        log(buf);
+        error=1;
+      }        
+    }
+  }
+  else
+    error=0;
 
   for (i = 0; i < NUM_WEARS; i++) {
     if (GET_EQ(ch, i))
       for (j = 0; j < MAX_OBJ_AFFECT; j++)
 	affect_modify(ch, GET_EQ(ch, i)->affected[j].location,
 		      GET_EQ(ch, i)->affected[j].modifier,
-		      GET_EQ(ch, i)->obj_flags.bitvector, FALSE);
+		      GET_EQ(ch, i)->obj_flags.bitvector, FALSE, 1);
   }
 
 
   for (af = ch->affected; af; af = af->next)
-    affect_modify(ch, af->location, af->modifier, af->bitvector, FALSE);
-
+    affect_modify(ch, af->location, af->modifier, af->bitvector, FALSE, 2);
   ch->aff_abils = ch->real_abils;
 
   for (i = 0; i < NUM_WEARS; i++) {
@@ -224,12 +243,12 @@ void affect_total(struct char_data * ch)
       for (j = 0; j < MAX_OBJ_AFFECT; j++)
 	affect_modify(ch, GET_EQ(ch, i)->affected[j].location,
 		      GET_EQ(ch, i)->affected[j].modifier,
-		      GET_EQ(ch, i)->obj_flags.bitvector, TRUE);
+		      GET_EQ(ch, i)->obj_flags.bitvector, TRUE, 3);
   }
 
 
   for (af = ch->affected; af; af = af->next)
-    affect_modify(ch, af->location, af->modifier, af->bitvector, TRUE);
+    affect_modify(ch, af->location, af->modifier, af->bitvector, TRUE, 4);
 
   /* Make certain values are between 0..25, not < 0 and not > 25! */
 
@@ -266,7 +285,7 @@ void affect_to_char(struct char_data * ch, struct affected_type * af)
   affected_alloc->next = ch->affected;
   ch->affected = affected_alloc;
 
-  affect_modify(ch, af->location, af->modifier, af->bitvector, TRUE);
+  affect_modify(ch, af->location, af->modifier, af->bitvector, TRUE, 5);
   affect_total(ch);
 }
 
@@ -283,7 +302,7 @@ void affect_remove(struct char_data * ch, struct affected_type * af)
 
   assert(ch->affected);
 
-  affect_modify(ch, af->location, af->modifier, af->bitvector, FALSE);
+  affect_modify(ch, af->location, af->modifier, af->bitvector, FALSE, 6);
   REMOVE_FROM_LIST(af, ch->affected, next);
   free(af);
   affect_total(ch);
@@ -468,6 +487,7 @@ void equip_char(struct char_data * ch, struct obj_data * obj, int pos)
 {
   int j;
   int invalid_class(struct char_data *ch, struct obj_data *obj);
+  int invalid_race(struct char_data *ch, struct obj_data *obj);
 
   assert(pos >= 0 && pos < NUM_WEARS);
 
@@ -488,7 +508,7 @@ void equip_char(struct char_data * ch, struct obj_data * obj, int pos)
   if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
-      invalid_class(ch, obj)) {
+      invalid_class(ch, obj) || invalid_race(ch, obj)) {
       act("You are zapped by $p and instantly let go of it.", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is zapped by $p and instantly lets go of it.", FALSE, ch, obj, 0, TO_ROOM);
       obj_to_char(obj, ch);	/* changed to drop in inventory instead of
@@ -507,14 +527,13 @@ void equip_char(struct char_data * ch, struct obj_data * obj, int pos)
     if (pos == WEAR_LIGHT && GET_OBJ_TYPE(obj) == ITEM_LIGHT)
       if (GET_OBJ_VAL(obj, 2))	/* if light is ON */
 	world[ch->in_room].light++;
-  } else
-    log("SYSERR: ch->in_room = NOWHERE when equipping char.");
+  } 
+//    else log("SYSERR: ch->in_room = NOWHERE when equipping char.");
 
   for (j = 0; j < MAX_OBJ_AFFECT; j++)
     affect_modify(ch, obj->affected[j].location,
 		  obj->affected[j].modifier,
-		  obj->obj_flags.bitvector, TRUE);
-
+		  obj->obj_flags.bitvector, TRUE, 7);
   affect_total(ch);
 }
 
@@ -539,16 +558,15 @@ struct obj_data *unequip_char(struct char_data * ch, int pos)
     if (pos == WEAR_LIGHT && GET_OBJ_TYPE(obj) == ITEM_LIGHT)
       if (GET_OBJ_VAL(obj, 2))	/* if light is ON */
 	world[ch->in_room].light--;
-  } else
-    log("SYSERR: ch->in_room = NOWHERE when equipping char.");
+  } 
+// else log("SYSERR: ch->in_room = NOWHERE when equipping char.");
 
   GET_EQ(ch, pos) = NULL;
 
   for (j = 0; j < MAX_OBJ_AFFECT; j++)
     affect_modify(ch, obj->affected[j].location,
 		  obj->affected[j].modifier,
-		  obj->obj_flags.bitvector, FALSE);
-
+		  obj->obj_flags.bitvector, FALSE,8);
   affect_total(ch);
 
   return (obj);
@@ -813,6 +831,7 @@ void extract_char(struct char_data * ch)
   struct descriptor_data *t_desc;
   struct obj_data *obj;
   int i, freed = 0;
+  void dismount_char(struct char_data *ch);
 
   extern struct char_data *combat_list;
 
@@ -831,6 +850,8 @@ void extract_char(struct char_data * ch)
   }
   if (ch->followers || ch->master)
     die_follower(ch);
+  if (RIDING(ch) || RIDDEN_BY(ch))
+    dismount_char(ch);
 
   /* Forget snooping, if applicable */
   if (ch->desc) {
@@ -1211,4 +1232,33 @@ int find_all_dots(char *arg)
     return FIND_ALLDOT;
   } else
     return FIND_INDIV;
+}
+
+
+// dismount_char() / fr: Daniel Koepke (dkoepke@california.com)
+//   If a character is mounted on something, we dismount them.  If
+//   someone is mounting our character, then we dismount that someone.
+//   This is used for cleaning up after a mount is cancelled by
+//   something (either intentionally or by death, etc.)
+void dismount_char(struct char_data *ch) {
+  if (RIDING(ch)) {
+    RIDDEN_BY(RIDING(ch)) = NULL;
+    RIDING(ch) = NULL;
+  }
+  
+  if (RIDDEN_BY(ch)) {
+    RIDING(RIDDEN_BY(ch)) = NULL;
+    RIDDEN_BY(ch) = NULL;
+  }
+}
+
+
+// mount_char() / fr: Daniel Koepke (dkoepke@california.com)
+//   Sets _ch_ to mounting _mount_.  This does not make any checks
+//   what-so-ever to see if the _mount_ is mountable, etc.  That is
+//   left up to the calling function.  This does not present any
+//   messages, either.
+void mount_char(struct char_data *ch, struct char_data *mount) {
+  RIDING(ch) = mount;
+  RIDDEN_BY(mount) = ch;
 }

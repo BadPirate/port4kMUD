@@ -1,0 +1,19 @@
+make ../bin/circle
+make[1]: Entering directory `/home/circle30bpl11/src'
+gcc -c -g -O -Wall -fno-strict-prototypes  clan.c
+clan.c: In function `clan_save':
+clan.c:993: warning: suggest parentheses around assignment used as truth value
+clan.c:996: warning: suggest parentheses around assignment used as truth value
+clan.c:1021: warning: passing arg 1 of `close' makes integer from pointer without a cast
+clan.c:1036: warning: implicit declaration of function `write_clan'
+clan.c:1039: warning: passing arg 1 of `close' makes integer from pointer without a cast
+clan.c: At top level:
+clan.c:1051: warning: type mismatch with previous external decl
+clan.c:1036: warning: previous external decl of `write_clan'
+clan.c:1051: warning: type mismatch with previous implicit declaration
+clan.c:1036: warning: previous implicit declaration of `write_clan'
+clan.c:1051: warning: `write_clan' was previously implicitly declared to return `int'
+clan.c: In function `write_clan':
+clan.c:1052: warning: `preline' might be used uninitialized in this function
+gcc -o ../bin/circle  comm.o act.comm.o act.informative.o act.movement.o act.item.o act.offensive.o act.other.o act.social.o act.wizard.o ban.o boards.o castle.o class.o config.o constants.o db.o fight.o graph.o handler.o house.o interpreter.o limits.o magic.o mail.o mobact.o modify.o objsave.o olc.o shop.o spec_assign.o spec_procs.o spell_parser.o spells.o utils.o weather.o clan.o 
+make[1]: Leaving directory `/home/circle30bpl11/src'

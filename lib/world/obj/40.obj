@@ -3,7 +3,7 @@ ring yellow green~
 a yellow and green ring~
 A ring is here, with yellow and green ornamentation.  It looks very old.~
 ~
-9 dhq 3
+9 65672 3
 0 0 0 0
 1 50 20
 E
@@ -45,7 +45,7 @@ helmet metal~
 a metal helmet~
 A metal helmet in here.~
 ~
-9 g 17
+9 64 17
 -5 0 0 0
 4 3000 100
 E
@@ -73,7 +73,7 @@ dirk~
 a thieves' dirk~
 A beautifully crafted dirk is lying here.~
 ~
-5 np 8193
+5 40960 8193
 0 2 4 11
 2 850 500
 E
@@ -91,7 +91,7 @@ blade black demon~
 a black demon blade~
 A black demon blade is here.~
 ~
-5 mjl 8193 
+5 6656 8193
 0 3 4 11
 8 10000 800
 E
@@ -104,7 +104,7 @@ gloves swordmans~
 a pair of swordsmans' gloves~
 A pair of finely crafted gloves are lying on the ground here.~
 ~
-9 j 129
+9 512 129
 0 0 0 0
 1 3500 800
 E
@@ -133,7 +133,7 @@ a green slime mould~
 A green slime mould is here.  Stinks like you wouldn't believe!~
 ~
 19 0 1
-24 0 0 0
+14 0 0 0
 1 20 8
 E
 smile mould~
@@ -145,10 +145,22 @@ a green slime mould~
 A green slime mould is here.  Stinks like you wouldn't believe!~
 ~
 19 0 1
-24 0 0 1
+14 0 0 1
 1 20 8
 E
 smile mould~
 It wasn't meant to be food -- at least, certainly not for humans.
 ~
-$
+#4194
+Noise Maker~
+&BN&Yo&Ci&Rs&Ge &cM&ra&gk&be&yr&n~
+A &BN&Yo&Ci&Rs&Ge &cM&ra&gk&be&yr&n is lying here, waiting for a party!~
+~
+9 0 129
+5 0 0 0
+0 0 0
+A
+18 2
+A
+19 1
+$~

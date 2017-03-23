@@ -30,6 +30,10 @@ extern struct zone_data *zone_table;
 
 extern int mini_mud;
 extern int pk_allowed;
+extern int sleep_allowed;
+extern int summon_allowed;
+extern int charm_allowed;
+extern int roomaffect_allowed;
 
 extern struct default_mobile_stats *mob_defaults;
 extern char weapon_verbs[];
@@ -344,6 +348,13 @@ void mag_damage(int level, struct char_data * ch, struct char_data * victim,
       dam = dice(11, 6) + 11;
     break;
 
+  case SPELL_METEOR_SWARM:
+    if (is_mage)
+      dam = dice(21, 8) + 21;
+    else
+      dam = dice(21, 6) + 21;
+    break;
+
     /* Mostly clerics */
   case SPELL_DISPEL_EVIL:
     dam = dice(6, 8) + 6;
@@ -435,6 +446,17 @@ void mag_affects(int level, struct char_data * ch, struct char_data * victim,
   }
 
   switch (spellnum) {
+
+  case SKILL_TAUNT:
+    af[0].location = APPLY_HITROLL;
+    if (mag_savingthrow(victim, savetype))
+      af[0].duration = 1;
+    else
+      af[0].duration = 4;
+    af[0].modifier = -(GET_LEVEL(ch)/20+1);
+    accum_duration = FALSE;
+    to_vict = "You feel less effective in combat!";
+    break;
 
   case SPELL_CHILL_TOUCH:
     af[0].location = APPLY_STR;
@@ -582,8 +604,8 @@ void mag_affects(int level, struct char_data * ch, struct char_data * victim,
     to_room = "$n is surrounded by a white aura.";
     break;
 
-  case SPELL_SLEEP:
-    if (!pk_allowed && !IS_NPC(ch) && !IS_NPC(victim))
+  case SPELL_SLEEP:   /* (FIDO) Changed this from pk_allowed to sleep_allowed */
+    if (!sleep_allowed && !IS_NPC(ch) && !IS_NPC(victim))
       return;
     if (MOB_FLAGGED(victim, MOB_NOSLEEP))
       return;
@@ -793,7 +815,11 @@ void mag_areas(int level, struct char_data * ch, int spellnum, int savetype)
       continue;
     if (!IS_NPC(tch) && GET_LEVEL(tch) >= LVL_IMMORT)
       continue;
-    if (!pk_allowed && !IS_NPC(ch) && !IS_NPC(tch))
+    /* (FIDO) Changed this from pk_allowed to roomaffect_allowed */
+    /* The whole idea being, that you can specify whether room affect spells */
+    /* WILL hurt other players or not.  You could even set it up to change */
+    /* from room to room. */
+    if (!roomaffect_allowed && !IS_NPC(ch) && !IS_NPC(tch))
       continue;
     if (!IS_NPC(ch) && IS_NPC(tch) && IS_AFFECTED(tch, AFF_CHARM))
       continue;

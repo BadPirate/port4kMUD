@@ -4,7 +4,7 @@ The Northwest End Of The Concourse~
 goes east, and the bridge is just north of here.  The concourse continues
 south along the city wall.
 ~
-31 0 1
+31 32768 1
 D0
 You see the Bridge.
 ~
@@ -27,7 +27,7 @@ The Promenade~
 continues further east and to the west you see the city wall.  Park Road
 leads south from here.
 ~
-31 0 1
+31 32768 1
 D1
 The promenade continues.
 ~
@@ -46,11 +46,15 @@ You see the Concourse.
 S
 #3102
 The Promenade~
-   The river gently flows westwards just north of here.  The promenade
-continues both east and west.  South of here you see the entrance to
-the park, and a small building seems to be just west of the entrance.
+     A bridge crosses the river to what you smell to be the dump here.  The 
+promenade continues both east and west.  South of here you see the entrance
+to the park, and a small building seems to be just west of that entrance.
 ~
-31 0 1
+31 32768 1
+D0
+~
+~
+0 0 3030
 D1
 You see the promenade.
 ~
@@ -116,11 +120,11 @@ some kind of mortar.  It is far too high to climb.
 S
 #3105
 The Park Entrance~
-   You are standing just inside the small park of Midgaard.  To the north is
+   You are standing just inside the small park of Daggerfall.  To the north is
 the promenade and a small path leads south into the park.  To your east is
 the famous Park Cafe.
 ~
-31 c 1
+31 4 1
 D0
 You see the promenade.
 ~
@@ -143,7 +147,7 @@ Park Cafe~
 seats where you can relax and enjoy the view.  To the east you can
 see the entrance to the park.
 ~
-31 dh 0
+31 136 0
 D3
 You see the park entrance.
 ~
@@ -205,7 +209,7 @@ S
 Cityguard HeadQuarters~
    You are inside a tidy office.
 ~
-31 d 0
+31 8 0
 D1
 You see Park Road.
 ~
@@ -251,7 +255,7 @@ The Western Park Entrance~
    You are standing at the western end of the park.  A small path leads east
 into the park and going west through the entrance you will reach Park Road.
 ~
-31 c 1
+31 4 1
 D1
 ~
 ~
@@ -322,7 +326,7 @@ The Eastern Park Entrance~
 into the park.  Going east through the entrance you will reach Emerald
 Avenue.
 ~
-31 c 1
+31 4 1
 D1
 ~
 ~
@@ -336,7 +340,7 @@ S
 Emerald Avenue~
    You are standing on the north end of Emerald Avenue.  To the north is the
 promenade and to the west is the park entrance.  To the east is the not very
-big Town Hall of Midgaard.
+big Town Hall of Daggerfall.    
 ~
 31 0 1
 D0
@@ -387,11 +391,8 @@ D3
 S
 #3120
 The Road Crossing~
-   You are in the middle of the road cross.  Roads lead in all directions.
-A huge black iron chain as thick as a tree trunk is fastened into the ground
-at the center of the road cross.  Its other end leads directly upwards towards
-the sky.
-A road sign is here.
+   You are in the middle of the road crossing.  Roads lead out in all
+directions.  Isn't that nice?  A road sign is here.    
 ~
 31 0 1
 D0
@@ -410,11 +411,6 @@ D3
 ~
 ~
 0 -1 3135
-D4
-The chain disappears in the clouds.
-~
-~
-0 -1 7914
 E
 sign~
 The sign points in all directions:
@@ -423,11 +419,6 @@ The sign points in all directions:
    East  - Park Road.
    South - Emerald Avenue.
    West  - Park Road.
-
-Someone has added the following with red paint:
-
-   Up    - Redferne's Flying Citadel.
-
 ~
 E
 chain~
@@ -529,7 +520,7 @@ On The Concourse~
    You are at the southwest corner of the city wall.  The Concourse leads
 both north and east.
 ~
-31 0 1
+31 32768 1
 D0
 ~
 ~
@@ -538,18 +529,13 @@ D1
 ~
 ~
 0 -1 3128
-D3
-Through the South Gate you can see a small path leading southwards.
-~
-~
-0 -1 3504
 S
 #3128
 On The Concourse~
    The Concourse continues both east and west.  Emerald Avenue is north of
 here.
 ~
-31 0 1
+31 32768 1
 D0
 ~
 ~
@@ -565,8 +551,8 @@ D3
 S
 #3129
 On The Concourse~
-   The Concourse continues both east and west.  Park Road is north of here
-and an iron grate leads south to the graveyard.
+   The Concourse continues both east and west.  Park Road is north of here.  
+
 ~
 31 0 1
 D0
@@ -577,11 +563,6 @@ D1
 ~
 ~
 0 -1 3130
-D2
-Through the solid iron bars you see the graveyard.
-~
-grate~
-2 3106 3150
 D3
 ~
 ~
@@ -606,7 +587,7 @@ S
 Park Road~
    You are at Park Road which continues north and south.
 ~
-31 0 1
+31 32768 1
 D0
 ~
 ~
@@ -701,7 +682,7 @@ The Waiting Room~
 along the walls and a long desk with a typewriter is placed in the middle of
 the room.
 ~
-30 d 0
+31 8 0
 D1
 It looks like some kind of office.
 ~
@@ -730,12 +711,12 @@ a Cray II look like a laptop.
 S
 #3138
 The Mayor's Office~
-   You are in the not very big office of the Mayor of Midgaard.  A large and
+   You are in the not very big office of the Mayor of Daggerfall.  A large and
 polished but completely empty desk is standing in front of an armchair that
 looks so comfortable that it most of all resembles a bed with the head end
-raised slightly.
+raised slightly.  On his desk lies a note, half-hidden.    
 ~
-30 d 0
+31 8 0
 D3
 The waiting room is to the west.
 ~
@@ -751,6 +732,11 @@ chair armchair~
 This chair is really a masterpiece.  A chair where one can sit as comfortably
 as in a bed.  All auditoriums should be equipped with these things.  A shame
 that there wouldn't be room for the students too, though.
+~
+E
+note~
+I've handed the matter of the Queen's visit over to the Chief Cityguard.  Good
+to be rid of the burden...  I hate dwarves.    
 ~
 S
 #3139
@@ -849,7 +835,7 @@ A Gravel Road In The Graveyard~
   You are on a well-kept gravel road that leads north-south through the
 graveyard.  On both sides of the road grow dark evergreen trees.
 ~
-34 0 1
+31 0 1
 D0
 The gravel road continues northwards.
 ~
@@ -885,7 +871,7 @@ Inside The Chapel~
 do not let much light through.  A few rows of worn wooden benches stand here
 and an ancient altar sits in the middle of the floor.
 ~
-34 ad 0
+31 9 0
 D0
 The chapel door is made of dark wood.
 ~
@@ -906,108 +892,4 @@ benches rows~
 The benches are not of the comfortable kind.
 ~
 S
-#3200
-Under The Bridge~
-   The arch under the bridge is covered by seaweed about a foot above the
-surface of the river.  The water gently flows through an opening in the lower
-part of the city wall.
-~
-31 0 7
-D1
-~
-~
-0 -1 3201
-D3
-~
-~
-0 -1 900
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  Looks pretty solid.
-~
-S
-#3201
-On The River~
-   North of here you see the miserable buildings of Poor Alley.  The
-river flows west towards the bridge.  The riverbanks are too steep to
-climb.
-~
-31 0 7
-D1
-~
-~
-0 -1 3202
-D3
-~
-~
-0 -1 3200
-S
-#3202
-On The River~
-   North of here you see the dump.  The river flows from east to west.  The
-riverbanks are too steep to climb.
-~
-31 0 7
-D1
-~
-~
-0 -1 3203
-D3
-~
-~
-0 -1 3201
-S
-#3203
-On The River~
-   The levee is directly north of here.  The river flows in an east west
-direction.
-~
-31 0 7
-D0
-~
-~
-0 -1 3049
-D1
-~
-~
-0 -1 3204
-D3
-~
-~
-0 -1 3202
-S
-#3204
-On The River~
-   You see the warehouse on the northern riverbank.  East of here you see the
-city wall.  The river flows west towards the levee.
-~
-31 0 7
-D1
-~
-~
-0 -1 3205
-D3
-~
-~
-0 -1 3203
-S
-#3205
-On The River~
-   The river enters from a hole in the eastern city wall.  The hole has been
-blocked by several vertically positioned iron bars set into the wall.
-~
-31 0 7
-D1
-The iron bars make it difficult to pass through the hole in the wall.
-Beyond the bars you see that the river leads into a cavern below the
-mountain range to the east.
-~
-~
-0 -1 5001
-D3
-~
-~
-0 -1 3204
-S
-$
+$~

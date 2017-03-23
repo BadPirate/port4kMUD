@@ -8,6 +8,8 @@
 *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
 ************************************************************************ */
 
+/* now with auto-equip - BK */
+
 #include "conf.h"
 #include "sysdep.h"
 
@@ -34,17 +36,19 @@ extern int top_of_p_table;
 extern int min_rent_cost;
 
 /* Extern functions */
-ACMD(do_tell);
+ACMD(do_action);
 SPECIAL(receptionist);
 SPECIAL(cryogenicist);
 
-struct obj_data *Obj_from_store(struct obj_file_elem object)
+
+struct obj_data *Obj_from_store_to(struct obj_file_elem object, int *locate)
 {
   struct obj_data *obj;
   int j;
 
   if (real_object(object.item_number) > -1) {
     obj = read_object(object.item_number, VIRTUAL);
+    *locate = (int) object.locate;
     GET_OBJ_VAL(obj, 0) = object.value[0];
     GET_OBJ_VAL(obj, 1) = object.value[1];
     GET_OBJ_VAL(obj, 2) = object.value[2];
@@ -64,12 +68,23 @@ struct obj_data *Obj_from_store(struct obj_file_elem object)
 
 
 
-int Obj_to_store(struct obj_data * obj, FILE * fl)
+/* this function used in house.c */
+struct obj_data *Obj_from_store(struct obj_file_elem object)
+{
+  int locate;
+
+  return Obj_from_store_to(object, &locate);
+}
+
+
+
+int Obj_to_store_from(struct obj_data * obj, FILE * fl, int locate)
 {
   int j;
   struct obj_file_elem object;
 
   object.item_number = GET_OBJ_VNUM(obj);
+  object.locate = (sh_int) locate; /* where worn or inventory? */
   object.value[0] = GET_OBJ_VAL(obj, 0);
   object.value[1] = GET_OBJ_VAL(obj, 1);
   object.value[2] = GET_OBJ_VAL(obj, 2);
@@ -86,6 +101,13 @@ int Obj_to_store(struct obj_data * obj, FILE * fl)
     return 0;
   }
   return 1;
+}
+
+
+
+int Obj_to_store(struct obj_data * obj, FILE * fl)
+{
+  return Obj_to_store_from(obj, fl, 0);
 }
 
 
@@ -257,9 +279,9 @@ void Crash_listrent(struct char_data * ch, char *name)
     if (!feof(fl))
       if (real_object(object.item_number) > -1) {
 	obj = read_object(object.item_number, VIRTUAL);
-	sprintf(buf, "%s [%5d] (%5dau) %-20s\r\n", buf,
+	sprintf(buf, "%s [%5d] (%5dau) <%2d> %-20s\r\n", buf,
 		object.item_number, GET_OBJ_RENT(obj),
-		obj->short_description);
+		object.locate, obj->short_description);
 	extract_obj(obj);
       }
   }
@@ -280,6 +302,103 @@ int Crash_write_rentcode(struct char_data * ch, FILE * fl, struct rent_info * re
 
 
 
+/* so this is gonna be the auto equip (hopefully) */
+void auto_equip(struct char_data *ch, struct obj_data *obj, int locate)
+{
+  int j;
+
+  if (locate > 0) { /* was worn */
+    switch (j = locate-1) {
+    case WEAR_LIGHT:
+      break;
+    case WEAR_FINGER_R:
+    case WEAR_FINGER_L:
+      if (!CAN_WEAR(obj,ITEM_WEAR_FINGER)) /* not fitting :( */
+	locate = 0;
+      break;
+    case WEAR_NECK_1:
+    case WEAR_NECK_2:
+      if (!CAN_WEAR(obj,ITEM_WEAR_NECK))
+	locate = 0;
+      break;
+    case WEAR_BODY:
+      if (!CAN_WEAR(obj,ITEM_WEAR_BODY))
+	locate = 0;
+      break;
+    case WEAR_HEAD:
+      if (!CAN_WEAR(obj,ITEM_WEAR_HEAD))
+	locate = 0;
+      break;
+    case WEAR_LEGS:
+      if (!CAN_WEAR(obj,ITEM_WEAR_LEGS))
+	locate = 0;
+      break;
+    case WEAR_FEET:
+      if (!CAN_WEAR(obj,ITEM_WEAR_FEET))
+	locate = 0;
+      break;
+    case WEAR_HANDS:
+      if (!CAN_WEAR(obj,ITEM_WEAR_HANDS))
+	locate = 0;
+      break;
+    case WEAR_ARMS:
+      if (!CAN_WEAR(obj,ITEM_WEAR_ARMS))
+	locate = 0;
+      break;
+    case WEAR_SHIELD:
+      if (!CAN_WEAR(obj,ITEM_WEAR_SHIELD))
+	locate = 0;
+      break;
+    case WEAR_ABOUT:
+      if (!CAN_WEAR(obj,ITEM_WEAR_ABOUT))
+	locate = 0;
+      break;
+    case WEAR_WAIST:
+      if (!CAN_WEAR(obj,ITEM_WEAR_WAIST))
+	locate = 0;
+      break;
+    case WEAR_WRIST_R:
+    case WEAR_WRIST_L:
+      if (!CAN_WEAR(obj,ITEM_WEAR_WRIST))
+	locate = 0;
+      break;
+    case WEAR_WIELD:
+      if (!CAN_WEAR(obj,ITEM_WEAR_WIELD))
+	locate = 0;
+      break;
+    case WEAR_HOLD:
+      if (!CAN_WEAR(obj,ITEM_WEAR_HOLD) &&
+	  !(IS_WARRIOR(ch) &&
+	    CAN_WEAR(obj,ITEM_WEAR_WIELD) && GET_OBJ_TYPE(obj) == ITEM_WEAPON))
+	locate = 0;
+      break;
+    default:
+      locate = 0;
+    }
+    if (locate > 0) {
+      if (!GET_EQ(ch,j)) {
+/* check ch's alignment to prevent $M from being zapped through auto-equip */
+	if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+	    (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
+	    (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)))
+	  locate = 0;
+	else
+	  equip_char(ch, obj, j);
+      }
+      else  /* oops - saved player with double equipment[j]? */
+	locate = 0;
+    }
+  }
+  if (locate <= 0)
+    obj_to_char(obj, ch);
+}
+
+
+
+#define MAX_BAG_ROW 5
+/* should be enough - who would carry a bag in a bag in a bag in a
+   bag in a bag in a bag ?!? */
+
 int Crash_load(struct char_data * ch)
 /* return values:
 	0 - successful load, keep char in rent room.
@@ -295,6 +414,10 @@ int Crash_load(struct char_data * ch)
   struct rent_info rent;
   int cost, orig_rent_code;
   float num_of_days;
+  struct obj_data *obj;
+  int locate, j;
+  struct obj_data *obj1;
+  struct obj_data *cont_row[MAX_BAG_ROW];
 
   if (!get_filename(GET_NAME(ch), fname, CRASH_FILE))
     return 1;
@@ -331,6 +454,11 @@ int Crash_load(struct char_data * ch)
   }
   switch (orig_rent_code = rent.rentcode) {
   case RENT_RENTED:
+    if(GET_LEVEL(ch) < LVL_IMMORT)
+    {
+      sprintf(buf, "%s enters the game.\r\n", GET_NAME(ch));
+      send_to_all(buf);
+    }
     sprintf(buf, "%s un-renting and entering game.", GET_NAME(ch));
     mudlog(buf, NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE);
     break;
@@ -353,6 +481,9 @@ int Crash_load(struct char_data * ch)
     break;
   }
 
+  for (j = 0;j < MAX_BAG_ROW;j++)
+    cont_row[j] = NULL; /* empty all cont lists (you never know ...) */
+
   while (!feof(fl)) {
     fread(&object, sizeof(struct obj_file_elem), 1, fl);
     if (ferror(fl)) {
@@ -361,7 +492,103 @@ int Crash_load(struct char_data * ch)
       return 1;
     }
     if (!feof(fl))
-      obj_to_char(Obj_from_store(object), ch);
+      if ((obj = Obj_from_store_to(object, &locate))) {
+	auto_equip(ch, obj, locate);
+
+/*
+what to do with a new loaded item:
+
+  if there's a list with <locate> less than 1 below this:
+    (equipped items are assumed to have <locate>==0 here) then its
+    container has disappeared from the file   *gasp*
+     -> put all the list back to ch's inventory
+
+  if there's a list of contents with <locate> 1 below this:
+    check if it's a container
+    - if so: get it from ch, fill it, and give it back to ch (this way the
+        container has its correct weight before modifying ch)
+    - if not: the container is missing -> put all the list to ch's inventory
+
+  for items with negative <locate>:
+    if there's already a list of contents with the same <locate> put obj to it
+    if not, start a new list
+
+Confused? Well maybe you can think of some better text to be put here ...
+
+since <locate> for contents is < 0 the list indices are switched to
+non-negative
+*/
+
+	if (locate > 0) { /* item equipped */
+	  for (j = MAX_BAG_ROW-1;j > 0;j--)
+	    if (cont_row[j]) { /* no container -> back to ch's inventory */
+	      for (;cont_row[j];cont_row[j] = obj1) {
+		obj1 = cont_row[j]->next_content;
+		obj_to_char(cont_row[j], ch);
+	      }
+	      cont_row[j] = NULL;
+	    }
+	  if (cont_row[0]) { /* content list existing */
+	    if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+	      /* rem item ; fill ; equip again */
+	      obj = unequip_char(ch, locate-1);
+	      obj->contains = NULL; /* should be empty - but who knows */
+	      for (;cont_row[0];cont_row[0] = obj1) {
+		obj1 = cont_row[0]->next_content;
+		obj_to_obj(cont_row[0], obj);
+	      }
+	      equip_char(ch, obj, locate-1);
+	    } else { /* object isn't container -> empty content list */
+	      for (;cont_row[0];cont_row[0] = obj1) {
+		obj1 = cont_row[0]->next_content;
+		obj_to_char(cont_row[0], ch);
+	      }
+	      cont_row[0] = NULL;
+	    }
+	  }
+	} else { /* locate <= 0 */
+	  for (j = MAX_BAG_ROW-1;j > -locate;j--)
+	    if (cont_row[j]) { /* no container -> back to ch's inventory */
+	      for (;cont_row[j];cont_row[j] = obj1) {
+		obj1 = cont_row[j]->next_content;
+		obj_to_char(cont_row[j], ch);
+	      }
+	      cont_row[j] = NULL;
+	    }
+
+	  if (j == -locate && cont_row[j]) { /* content list existing */
+	    if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+	      /* take item ; fill ; give to char again */
+	      obj_from_char(obj);
+	      obj->contains = NULL;
+	      for (;cont_row[j];cont_row[j] = obj1) {
+		obj1 = cont_row[j]->next_content;
+		obj_to_obj(cont_row[j], obj);
+	      }
+	      obj_to_char(obj, ch); /* add to inv first ... */
+	    } else { /* object isn't container -> empty content list */
+	      for (;cont_row[j];cont_row[j] = obj1) {
+		obj1 = cont_row[j]->next_content;
+		obj_to_char(cont_row[j], ch);
+	      }
+	      cont_row[j] = NULL;
+	    }
+	  }
+
+	  if (locate < 0 && locate >= -MAX_BAG_ROW) {
+		/* let obj be part of content list
+		   but put it at the list's end thus having the items
+		   in the same order as before renting */
+	    obj_from_char(obj);
+	    if ((obj1 = cont_row[-locate-1])) {
+	      while (obj1->next_content)
+		obj1 = obj1->next_content;
+	      obj1->next_content = obj;
+	    } else
+	      cont_row[-locate-1] = obj;
+	  }
+	}
+      }
   }
 
   /* turn this into a crash file by re-writing the control block */
@@ -380,15 +607,15 @@ int Crash_load(struct char_data * ch)
 
 
 
-int Crash_save(struct obj_data * obj, FILE * fp)
+int Crash_save(struct obj_data * obj, FILE * fp, int locate)
 {
   struct obj_data *tmp;
   int result;
 
   if (obj) {
-    Crash_save(obj->contains, fp);
-    Crash_save(obj->next_content, fp);
-    result = Obj_to_store(obj, fp);
+    Crash_save(obj->next_content, fp, locate);
+    Crash_save(obj->contains, fp, MIN(0,locate)-1);
+    result = Obj_to_store_from(obj, fp, locate);
 
     for (tmp = obj->in_obj; tmp; tmp = tmp->in_obj)
       GET_OBJ_WEIGHT(tmp) -= GET_OBJ_WEIGHT(obj);
@@ -446,6 +673,26 @@ void Crash_extract_norents(struct obj_data * obj)
 }
 
 
+/* get norent items from eq to inventory and
+   extract norents out of worn containers */
+void Crash_extract_norents_from_equipped(struct char_data * ch)
+{
+  int j;
+
+  for (j = 0;j < NUM_WEARS;j++) {
+    if (GET_EQ(ch,j)) {
+      if (IS_OBJ_STAT(GET_EQ(ch,j), ITEM_NORENT) ||
+	  GET_OBJ_RENT(GET_EQ(ch,j)) < 0 ||
+	  GET_OBJ_RNUM(GET_EQ(ch,j)) <= NOTHING ||
+	  GET_OBJ_TYPE(GET_EQ(ch,j)) == ITEM_KEY)
+	obj_to_char(unequip_char(ch,j),ch);
+      else
+	Crash_extract_norents(GET_EQ(ch,j));
+    }
+  }
+}
+
+
 void Crash_extract_expensive(struct obj_data * obj)
 {
   struct obj_data *tobj, *max;
@@ -490,20 +737,21 @@ void Crash_crashsave(struct char_data * ch)
     fclose(fp);
     return;
   }
-  if (!Crash_save(ch->carrying, fp)) {
+  for (j = 0; j < NUM_WEARS; j++)
+    if (GET_EQ(ch,j)) {
+      if (!Crash_save(GET_EQ(ch,j), fp, j+1)) {
+	fclose(fp);
+	return;
+      }
+      Crash_restore_weight(GET_EQ(ch,j));
+    }
+
+  if (!Crash_save(ch->carrying, fp, 0)) {
     fclose(fp);
     return;
   }
   Crash_restore_weight(ch->carrying);
 
-  for (j = 0; j < NUM_WEARS; j++)
-    if (GET_EQ(ch, j)) {
-      if (!Crash_save(GET_EQ(ch, j), fp)) {
-	fclose(fp);
-	return;
-      }
-      Crash_restore_weight(GET_EQ(ch, j));
-    }
   fclose(fp);
   REMOVE_BIT(PLR_FLAGS(ch), PLR_CRASH);
 }
@@ -514,7 +762,7 @@ void Crash_idlesave(struct char_data * ch)
   char buf[MAX_INPUT_LENGTH];
   struct rent_info rent;
   int j;
-  int cost;
+  int cost, cost_eq;
   FILE *fp;
 
   if (IS_NPC(ch))
@@ -525,26 +773,43 @@ void Crash_idlesave(struct char_data * ch)
   if (!(fp = fopen(buf, "wb")))
     return;
 
-  for (j = 0; j < NUM_WEARS; j++)
-    if (GET_EQ(ch, j))
-      obj_to_char(unequip_char(ch, j), ch);
+  Crash_extract_norents_from_equipped(ch);
 
   Crash_extract_norents(ch->carrying);
 
   cost = 0;
   Crash_calculate_rent(ch->carrying, &cost);
+
+  cost_eq = 0;
+  for (j = 0; j < NUM_WEARS; j++)
+    Crash_calculate_rent(GET_EQ(ch,j), &cost_eq);
+
   cost <<= 1;			/* forcerent cost is 2x normal rent */
-  while ((cost > GET_GOLD(ch) + GET_BANK_GOLD(ch)) && ch->carrying) {
-    Crash_extract_expensive(ch->carrying);
-    cost = 0;
-    Crash_calculate_rent(ch->carrying, &cost);
-    cost <<= 1;
+  cost_eq <<= 1;
+
+  if (cost+cost_eq > GET_GOLD(ch) + GET_BANK_GOLD(ch)) {
+    for (j = 0; j < NUM_WEARS; j++) /* unequip player with low money */
+      if (GET_EQ(ch,j))
+	obj_to_char(unequip_char(ch, j), ch);
+    cost += cost_eq;
+    cost_eq = 0;
+
+    while ((cost > GET_GOLD(ch) + GET_BANK_GOLD(ch)) && ch->carrying) {
+      Crash_extract_expensive(ch->carrying);
+      cost = 0;
+      Crash_calculate_rent(ch->carrying, &cost);
+      cost <<= 1;
+    }
   }
 
   if (!ch->carrying) {
-    fclose(fp);
-    Crash_delete_file(GET_NAME(ch));
-    return;
+    for (j = 0; j < NUM_WEARS && !(GET_EQ(ch,j)); j++)
+      ;
+    if (j == NUM_WEARS) { /* no eq nor inv */
+      fclose(fp);
+      Crash_delete_file(GET_NAME(ch));
+      return;
+    }
   }
   rent.net_cost_per_diem = cost;
 
@@ -556,7 +821,17 @@ void Crash_idlesave(struct char_data * ch)
     fclose(fp);
     return;
   }
-  if (!Crash_save(ch->carrying, fp)) {
+
+  for (j = 0; j < NUM_WEARS; j++)
+    if (GET_EQ(ch,j)) {
+      if (!Crash_save(GET_EQ(ch,j), fp, j+1)) {
+	fclose(fp);
+	return;
+      }
+      Crash_restore_weight(GET_EQ(ch,j));
+      Crash_extract_objs(GET_EQ(ch,j));
+    }
+  if (!Crash_save(ch->carrying, fp, 0)) {
     fclose(fp);
     return;
   }
@@ -581,9 +856,7 @@ void Crash_rentsave(struct char_data * ch, int cost)
   if (!(fp = fopen(buf, "wb")))
     return;
 
-  for (j = 0; j < NUM_WEARS; j++)
-    if (GET_EQ(ch, j))
-      obj_to_char(unequip_char(ch, j), ch);
+  Crash_extract_norents_from_equipped(ch);
 
   Crash_extract_norents(ch->carrying);
 
@@ -596,7 +869,16 @@ void Crash_rentsave(struct char_data * ch, int cost)
     fclose(fp);
     return;
   }
-  if (!Crash_save(ch->carrying, fp)) {
+  for (j = 0; j < NUM_WEARS; j++)
+    if (GET_EQ(ch,j)) {
+      if (!Crash_save(GET_EQ(ch,j), fp, j+1)) {
+	fclose(fp);
+	return;
+      }
+      Crash_restore_weight(GET_EQ(ch,j));
+      Crash_extract_objs(GET_EQ(ch,j));
+    }
+  if (!Crash_save(ch->carrying, fp, 0)) {
     fclose(fp);
     return;
   }
@@ -621,9 +903,7 @@ void Crash_cryosave(struct char_data * ch, int cost)
   if (!(fp = fopen(buf, "wb")))
     return;
 
-  for (j = 0; j < NUM_WEARS; j++)
-    if (GET_EQ(ch, j))
-      obj_to_char(unequip_char(ch, j), ch);
+  Crash_extract_norents_from_equipped(ch);
 
   Crash_extract_norents(ch->carrying);
 
@@ -638,7 +918,16 @@ void Crash_cryosave(struct char_data * ch, int cost)
     fclose(fp);
     return;
   }
-  if (!Crash_save(ch->carrying, fp)) {
+  for (j = 0; j < NUM_WEARS; j++)
+    if (GET_EQ(ch,j)) {
+      if (!Crash_save(GET_EQ(ch,j), fp, j+1)) {
+	fclose(fp);
+	return;
+      }
+      Crash_restore_weight(GET_EQ(ch,j));
+      Crash_extract_objs(GET_EQ(ch,j));
+    }
+  if (!Crash_save(ch->carrying, fp, 0)) {
     fclose(fp);
     return;
   }
@@ -721,7 +1010,7 @@ int Crash_offer_rent(struct char_data * ch, struct char_data * receptionist,
 
   norent = Crash_report_unrentables(ch, receptionist, ch->carrying);
   for (i = 0; i < NUM_WEARS; i++)
-    norent += Crash_report_unrentables(ch, receptionist, GET_EQ(ch, i));
+    norent += Crash_report_unrentables(ch, receptionist, GET_EQ(ch,i));
 
   if (norent)
     return 0;
@@ -731,7 +1020,7 @@ int Crash_offer_rent(struct char_data * ch, struct char_data * receptionist,
   Crash_report_rent(ch, receptionist, ch->carrying, &totalcost, &numitems, display, factor);
 
   for (i = 0; i < NUM_WEARS; i++)
-    Crash_report_rent(ch, receptionist, GET_EQ(ch, i), &totalcost, &numitems, display, factor);
+    Crash_report_rent(ch, receptionist, GET_EQ(ch,i), &totalcost, &numitems, display, factor);
 
   if (!numitems) {
     act("$n tells you, 'But you are not carrying anything!  Just quit!'",
@@ -771,8 +1060,6 @@ int gen_receptionist(struct char_data * ch, struct char_data * recep,
   sh_int save_room;
   char *action_table[] = {"smile", "dance", "sigh", "blush", "burp",
   "cough", "fart", "twiddle", "yawn"};
-
-  ACMD(do_action);
 
   if (!ch->desc || IS_NPC(ch))
     return FALSE;

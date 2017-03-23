@@ -1,0 +1,182 @@
+#8300
+black widow spider shopkeeper dark~
+the &RBlack Widow&n~
+A large hulking black spider glares at you from all eight eyes.
+~
+   This spider is a bit larger than normal.  The top of her large, hairy
+abdomen is almost six feet off the ground.  Eight long, many-jointed legs just
+out from it.  On the bottom of her belly is the trademark hour-glass shape of
+her species.  Attached to the abdomen is her head.  Eight eyes of varying sizes
+range around it, glittering irridescently from reflected light.  Large fangs
+project outward from below the two largest, frontmost eyes.  Venom drips
+menacingly from them.    
+~
+712715 1064 0 E
+100 -30 10 9d9+30000 9d9+50
+0 99999999
+8 8 2
+E
+#8301
+black widow spider shopkeeper dark~
+the &RBlack Widow&n~
+A large hulking black spider glares at you from all eight eyes.
+~
+   This spider is a bit larger than normal.  The top of her large, hairy
+abdomen is almost six feet off the ground.  Eight long, many-jointed legs jut
+out from it.  On the bottom of her belly is the trademark hour-glass s hape of
+her species.  Attached to the abdomen is her head.  Eight eyes of varying sizes
+range around it, glittering irridescently from reflected light.  Large fangs
+project outward from below the two largest, frontmost eyes.  Venom drips
+menacingly from them.    
+~
+548890 32 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#8302
+clan shopkeeper~
+the clan shopkeeper~
+A clan shopkeeper is here pedeling his wares.
+~
+He looks like he might have some good stuff..
+~
+581642 32 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#8303
+silk thief clan shopkeeper~
+Silk the Thief~
+A dark man in a hooded cloak pulls you aside and offers to show you his wares.
+~
+He looks like he's got good stuff to sell, but I wouldn't mess with him.
+~
+778266 1064 0 E
+100 -30 -20 9d9+30000 9d9+50
+0 999999999
+8 8 1
+E
+#8304
+lonely old woman healer~
+a lonely old woman~
+A lonely old woman sits at her table wearing every piece of jewelry she owns.
+~
+   Night after night she sits here, wearing every piece of jewelry in her
+possession, hoping that maybe tonight will be the night that her man walks
+through the door.  And night after night, she drowns her sorrows in whiskey
+when he doesn't appear.  Maybe if you help to soothe her sighs with another
+shot of Jack, she will reward you with what little remains of her once profound
+talent in white magic.    
+~
+524298 40 0 E
+100 20 10 1d1+10000 1d1+0
+0 0
+8 8 2
+E
+#8305
+dark clan healer sheila dyslexic aliehs~
+Aliehs, Dark's Dyslexic Clan Healer~
+.ereh gnittis si aliahS
+~
+tuo dna ni gnirekcilf ydob reh ,ecno ta secalp ynam ni gnitsixe ,stis ehS
+.slleps tub gnihton yas ot wov a edam ehs taht deromur s'tI  .ecnatsixe fo
+~
+540682 1064 0 E
+100 20 -20 1d1+10000 1d1+0
+0 999999999
+8 8 2
+E
+#8306
+shopkeeper hempkeeper~
+the hempkeeper~
+A man stands here with a bong in one hand and a lighter in the other.
+~
+The hempkeeper's eyes are glazed over a hazy white.  His breath speaks heavily
+of many a mighty hit from the bong he carries.  Even stoned out of anyone
+else's mind, he manages to keep his shop running smoothly.    
+~
+778266 128 0 E
+69 20 10 1d1+68 1d1+0
+1000000 0
+8 8 1
+E
+#8335
+puff dragon shopkeeper~
+Puff, the Magic Dragon~
+Puff, the Magic Dragon stands here
+~
+Not quite the Puff, youre used to from DikuMUD..
+it seems more... cheerful.
+~
+647176 32808 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+#8395
+boss lady~
+the boss~
+A bossy lady stands here shouting orders.
+~
+undefined~
+206984 1056 -1000 E
+50 10 10 1d1+499 10d2+10
+0 0
+8 8 2
+E
+#8396
+zerg ultralisk~
+a Zerg Ultralisk~
+Something that looks like a severely mutated elephant is here, stamping wildly.
+~
+It looks, err, unfinished.
+~
+4136 1024 0 E
+60 0 0 1d1+900 5d6+15
+10000 66000
+8 8 0
+BareHandAttack: 9
+E
+#8397
+monkey hunter~
+a monkey hunter~
+A monkey hunter stands here.
+~
+It looks, err, unfinished.
+~
+10 1024 0 E
+30 5 0 1d1+600 4d5+7
+5000 33000
+8 8 0
+BareHandAttack: 1
+E
+#8398
+man~
+a man holding a &bsign&n~
+A man stands here, holding a &bsign&n.
+~
+5
+The sign the man holds reads 'The &gjade monkey&n may hold the prize you seek.'
+~
+524362 1024 0 E
+15 10 0 1d1+350 3d4+3
+3000 10000
+8 8 1
+BareHandAttack: 4
+E
+#8399
+jade monkey~
+the &gjade monkey&n~
+A small &ggreen monkey&n chatters and runs around here.
+~
+He looks to be holding something.
+~
+254108 263336 0 E
+50 8 -1 1d1+2000 5d5+12
+5000 100000
+8 8 0
+BareHandAttack: 13
+E
+$

@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: act.movement.c                                Part of CircleMUD *
 *  Usage: movement commands, door handling, & sleep/rest/etc state        *
 *                                                                         *
@@ -34,14 +34,17 @@ extern int movement_loss[];
 int special(struct char_data *ch, int cmd, char *arg);
 void death_cry(struct char_data *ch);
 int find_eq_pos(struct char_data * ch, struct obj_data * obj, char *arg);
-
-
+void dismount_char(struct char_data * ch);
+void mount_char(struct char_data *ch, struct char_data *mount);
 
 /* simple function to determine if char can walk on water */
 int has_boat(struct char_data *ch)
 {
   struct obj_data *obj;
   int i;
+
+  if (GET_LEVEL(ch) >= LVL_IMMORT)
+    return 1;
 /*
   if (ROOM_IDENTITY(ch->in_room) == DEAD_SEA)
     return 1;
@@ -64,17 +67,77 @@ int has_boat(struct char_data *ch)
 
   
 
-/* do_simple_move assumes
+/*  do_simple_move assumes
  *    1. That there is no master and no followers.
  *    2. That the direction exists.
  *
  *   Returns :
- *   1 : If succes.
+ *   1 : If success.
  *   0 : If fail
  */
+int move_modify(struct char_data *ch, int base)
+{
+    int val;
+    if(IS_DWARF(ch) && (SECT(ch->in_room) == SECT_MOUNTAIN)) {
+         if(GET_LEVEL(ch)<20) val=2*base/3;
+         else val=base/2;
+    } else val=base;
+    return(val);
+}
+
+// Fun with falling!
+void falling(struct char_data *ch)
+{
+  int speed=0, ouch=0;
+  sh_int down_room;
+
+  send_to_char("You lose your grip!\r\n",ch);
+  if (number(1,20) < GET_DEX(ch) && GET_MOVE(ch) > 20)
+  {
+    send_to_char("But you manage to grab hold of something, whew!\r\n",ch);
+    GET_MOVE(ch) -= 20;
+    return;
+  }
+  send_to_char("You've lost your footing and have begun to fall!\r\n",ch);
+  if (!EXIT(ch,DOWN))
+  {
+    send_to_char("You fall harmlessly to the floor\r\n",ch);
+    return;
+  }
+  while(EXIT(ch,DOWN))
+  {
+    speed++;
+    ouch+=15*speed;
+    send_to_char("You fall farther down!  This is gonna hurt!\r\n",ch);  
+    
+    down_room = EXIT(ch, DOWN)->to_room;
+    char_from_room(ch);
+    char_to_room(ch, down_room);
+    if((number(1,20)*(speed+1)) < GET_DEX(ch) && GET_MOVE(ch) > 
+       ((speed+1)*20))
+    {
+      send_to_char("You miraculously grab onto something and stop your plummet!\r\n",ch);
+      GET_MOVE(ch) -= (speed+1)*20;
+      return;
+    }
+  }
+  send_to_char("&rYour body makes a sickening crunch as it hits the ground&n\r\n",ch);
+  damage(ch, ch, ouch, -1);
+  return;
+}
+
 int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
 {
+  extern int arena_status;
+  void falling(struct char_data *);
+  int same_room = 0, riding = 0, ridden_by = 0;
   int was_in, need_movement;
+  int vnum;
+  void handle_dt_items(struct char_data *);
+
+//  struct obj_data *obj;
+ 
+/*  int check_dir, is_exit; */
 
   int special(struct char_data *ch, int cmd, char *arg);
 
@@ -85,7 +148,23 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
   if (need_specials_check && special(ch, dir + 1, ""))
     return 0;
 
-  /* charmed? */
+  // check if they're mounted
+  if (RIDING(ch))    riding = 1;
+  if (RIDDEN_BY(ch)) ridden_by = 1;
+  
+  // if they're mounted, are they in the same room w/ their mount(ee)?
+  if (riding && RIDING(ch)->in_room == ch->in_room)
+    same_room = 1;
+  else if (ridden_by && RIDDEN_BY(ch)->in_room == ch->in_room)
+    same_room = 1;
+
+  // tamed mobiles cannot move about (DAK)
+  if (ridden_by && same_room && AFF_FLAGGED(ch, AFF_TAMED)) {
+    send_to_char("You've been tamed.  Now act it!\r\n", ch);
+    return 0;
+  }
+
+  // charmed?
   if (IS_AFFECTED(ch, AFF_CHARM) && ch->master && ch->in_room == ch->master->in_room) {
     send_to_char("The thought of leaving your master makes you weep.\r\n", ch);
     act("$n bursts into tears.", FALSE, ch, 0, 0, TO_ROOM);
@@ -95,7 +174,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
   /* if this room or the one we're going to needs a boat, check for one */
   if ((SECT(ch->in_room) == SECT_WATER_NOSWIM) ||
       (SECT(EXIT(ch, dir)->to_room) == SECT_WATER_NOSWIM)) {
-    if (!has_boat(ch)) {
+    if ((riding && !has_boat(RIDING(ch))) || !has_boat(ch)) {
       send_to_char("You need a boat to go there.\r\n", ch);
       return 0;
     }
@@ -105,46 +184,164 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
   need_movement = (movement_loss[SECT(ch->in_room)] +
 		   movement_loss[SECT(EXIT(ch, dir)->to_room)]) >> 1;
 
-  if (GET_MOVE(ch) < need_movement && !IS_NPC(ch)) {
-    if (need_specials_check && ch->master)
-      send_to_char("You are too exhausted to follow.\r\n", ch);
-    else
-      send_to_char("You are too exhausted.\r\n", ch);
-
+  if (riding) {
+    if (GET_MOVE(RIDING(ch)) < need_movement) {
+      send_to_char("Your mount is too exhausted.\r\n", ch);
+      return 0;
+    }
+  } else {
+    if (GET_MOVE(ch) < need_movement && !IS_NPC(ch)) {
+      if (need_specials_check && ch->master)
+        send_to_char("You are too exhausted to follow.\r\n", ch);
+      else
+        send_to_char("You are too exhausted.\r\n", ch);
+      return 0;
+    }
+  }
+  
+  if (riding && GET_SKILL(ch, SKILL_RIDING) < number(1, 101)-number(-4,need_movement)) {
+    act("$N rears backwards, throwing you to the ground.", FALSE, ch, 0, RIDING(ch), TO_CHAR);
+    act("You rear backwards, throwing $n to the ground.", FALSE, ch, 0, RIDING(ch), TO_VICT);
+    act("$N rears backwards, throwing $n to the ground.", FALSE, ch, 0, RIDING(ch), TO_NOTVICT);
+    dismount_char(ch);
+    damage(ch, ch, dice(1,6), -1);
     return 0;
   }
+  
+  vnum = world[EXIT(ch, dir)->to_room].number;
+  
+  if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_FALL) && number(1,20) >
+      GET_DEX(ch))
+  {
+    falling(ch);
+    return(0);
+  }
+
+  if (arena_status != -1)
+  {
+    if (IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room), ROOM_ARENA)  && 
+        !IS_SET(ROOM_FLAGS(ch->in_room), ROOM_ARENA))
+    {
+      send_to_char("There is an arena going on, I'm afraid you can't enter\r\n", ch);
+      return 0;
+    }
+    if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_ARENA)  &&
+        !IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room), ROOM_ARENA))
+    {
+      send_to_char("You have entered, and now you can't leave :-P\r\n",ch);
+      return 0;
+    }
+  }
   if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_ATRIUM)) {
-    if (!House_can_enter(ch, world[EXIT(ch, dir)->to_room].number)) {
+    if (!House_can_enter(ch, vnum)) {
       send_to_char("That's private property -- no trespassing!\r\n", ch);
       return 0;
     }
   }
-  if (IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room), ROOM_TUNNEL) &&
-      num_pc_in_room(&(world[EXIT(ch, dir)->to_room])) > 1) {
-    send_to_char("There isn't enough room there for more than one person!\r\n", ch);
+  
+  if ((riding || ridden_by) && IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room), ROOM_TUNNEL)) {
+    send_to_char("There isn't enough room there, while mounted.\r\n", ch);
     return 0;
+  } else {
+    if (IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room), ROOM_TUNNEL) &&
+        num_pc_in_room(&(world[EXIT(ch, dir)->to_room])) > 1) {
+      send_to_char("There isn't enough room there for more than one person!\r\n", ch);
+      return 0;
+    }
   }
-  if (GET_LEVEL(ch) < LVL_IMMORT && !IS_NPC(ch))
-    GET_MOVE(ch) -= need_movement;
+  if (GET_LEVEL(ch) < LVL_IMMORT && !IS_NPC(ch) && !(riding || ridden_by))
+    GET_MOVE(ch) -= move_modify(ch,need_movement);
+  else if (riding)
+    GET_MOVE(RIDING(ch)) -= move_modify(RIDING(ch),need_movement/2);
+  else if (ridden_by)
+    GET_MOVE(RIDDEN_BY(ch)) -= move_modify(RIDDEN_BY(ch),need_movement);
 
-  if (!IS_AFFECTED(ch, AFF_SNEAK)) {
+  if (riding) 
+  {
+    if (!IS_AFFECTED(RIDING(ch), AFF_SNEAK))
+    {
+      if (IS_AFFECTED(ch, AFF_SNEAK)) 
+      {
+        sprintf(buf2,  "$n leaves %s.", dirs[dir]);
+        act(buf2, TRUE, RIDING(ch), 0, 0, TO_ROOM);
+      } 
+      else 
+      {
+        sprintf(buf2, "$n rides $N %s.", dirs[dir]);
+        act(buf2, TRUE, ch, 0, RIDING(ch), TO_NOTVICT);
+      }
+    }
+  }  
+  else if (ridden_by) 
+  {
+    if (!IS_AFFECTED(ch, AFF_SNEAK))
+    {
+      if (IS_AFFECTED(RIDDEN_BY(ch), AFF_SNEAK)) 
+      {
+        sprintf(buf2, "$n leaves %s.", dirs[dir]);
+        act(buf2, TRUE, ch, 0, 0, TO_ROOM);
+      } 
+      else 
+      {
+        sprintf(buf2, "$n rides $N %s.", dirs[dir]);
+        act(buf2, TRUE, RIDDEN_BY(ch), 0, ch, TO_NOTVICT);
+      }
+    }
+  } else if (!IS_AFFECTED(ch, AFF_SNEAK)) {
     sprintf(buf2, "$n leaves %s.", dirs[dir]);
     act(buf2, TRUE, ch, 0, 0, TO_ROOM);
   }
+  
   was_in = ch->in_room;
   char_from_room(ch);
   char_to_room(ch, world[was_in].dir_option[dir]->to_room);
 
-  if (!IS_AFFECTED(ch, AFF_SNEAK))
-    act("$n has arrived.", TRUE, ch, 0, 0, TO_ROOM);
+  if (riding && same_room && RIDING(ch)->in_room != ch->in_room) {
+    char_from_room(RIDING(ch));
+    char_to_room(RIDING(ch), ch->in_room);
+  } else if (ridden_by && same_room && RIDDEN_BY(ch)->in_room != ch->in_room) {
+    char_from_room(RIDDEN_BY(ch));
+    char_to_room(RIDDEN_BY(ch), ch->in_room);
+  }
+
+  if (!IS_AFFECTED(ch, AFF_SNEAK)) {
+    if (riding && same_room && !IS_AFFECTED(RIDING(ch), AFF_SNEAK)) {
+      sprintf(buf2, "$n arrives from %s%s, riding $N.",
+              (dir < UP  ? "the " : ""),
+              (dir == UP ? "below": dir == DOWN ? "above" : dirs[rev_dir[dir]]));
+      act(buf2, TRUE, ch, 0, RIDING(ch), TO_ROOM);
+    } else if (ridden_by && same_room && !IS_AFFECTED(RIDDEN_BY(ch), AFF_SNEAK)) {
+      sprintf(buf2, "$n arrives from %s%s, ridden by $N.",
+      	      (dir < UP  ? "the " : ""),
+      	      (dir == UP ? "below": dir == DOWN ? "above" : dirs[rev_dir[dir]]));
+      act(buf2, TRUE, ch, 0, RIDDEN_BY(ch), TO_ROOM);
+    } else if (!riding || (riding && !same_room)) {
+      act("$n has arrived.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+}
 
   if (ch->desc != NULL)
     look_at_room(ch, 0);
 
-  if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_DEATH) && GET_LEVEL(ch) < LVL_IMMORT) {
-    log_death_trap(ch);
-    death_cry(ch);
-    extract_char(ch);
+  // DT! (Hopefully these are rare in your MUD) -dak
+  if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_DEATH)) {
+    if (GET_LEVEL(ch) < LVL_IMMORT) {
+      log_death_trap(ch);
+      death_cry(ch);
+      handle_dt_items(ch);
+    }
+    
+    if (riding && GET_LEVEL(RIDING(ch)) < LVL_IMMORT) {
+      log_death_trap(ch);
+      death_cry(ch);
+      extract_char(ch);
+    }
+    
+    if (ridden_by && GET_LEVEL(RIDDEN_BY(ch)) < LVL_IMMORT) {
+      log_death_trap(ch);
+      death_cry(ch);
+      extract_char(ch);
+    }
     return 0;
   }
   return 1;
@@ -156,8 +353,10 @@ int perform_move(struct char_data *ch, int dir, int need_specials_check)
   int was_in;
   struct follow_type *k, *next;
 
-  if (ch == NULL || dir < 0 || dir >= NUM_OF_DIRS)
-    return 0;
+  if (ch == NULL || dir < 0 || dir > NUM_OF_DIRS) {
+    sprintf(buf2, "Invalid direction: &r%d&w contact implementor.\r\n", dir);
+    send_to_char(buf2 ,ch);
+    return 0; }
   else if (!EXIT(ch, dir) || EXIT(ch, dir)->to_room == NOWHERE)
     send_to_char("Alas, you cannot go that way...\r\n", ch);
   else if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)) {
@@ -187,15 +386,93 @@ int perform_move(struct char_data *ch, int dir, int need_specials_check)
   return 0;
 }
 
+ACMD(do_recall)
+{
+  extern struct townstart_struct townstart[];
+  struct follow_type *k, *next;
+  sh_int was_in;
+
+  was_in = ch->in_room;
+  if (ch == NULL || IS_NPC(ch))
+    return;
+
+  if ( IS_SET(ROOM_FLAGS(ch->in_room), ROOM_NORECALL) && 
+       GET_LEVEL(ch) < LVL_IMMORT)
+  {
+    send_to_char("You wave your hands, but feel powerless\r\n",ch);
+    return;
+  }
+
+  act("$n disappears.", TRUE, ch, 0, 0, TO_ROOM);
+  char_from_room(ch);
+  if (GET_LOADROOM(ch) == -1)
+    char_to_room(ch, real_room(townstart[0].loadroom));
+  else
+    char_to_room(ch, real_room(GET_LOADROOM(ch)));
+  act("$n appears in the middle of the room.", TRUE, ch, 0, 0, TO_ROOM);
+  look_at_room(ch, 0);
+  if(ch->followers)
+    for (k = ch->followers; k; k = next) 
+    {
+      next = k->next;
+      if ((k->follower->in_room == was_in) &&
+          (GET_POS(k->follower) >= POS_STANDING)) 
+      {
+        if(IS_NPC(k->follower))
+        {
+          act("$n disappears.", TRUE, k->follower, 0, 0, TO_ROOM);
+          char_from_room(k->follower);
+          if (GET_LOADROOM(ch) == -1)
+            char_to_room(k->follower, real_room(townstart[0].loadroom));
+          else
+            char_to_room(k->follower, real_room(GET_LOADROOM(ch)));
+          act("$n appears in the middle of the room.", TRUE, k->follower, 0,
+              0, TO_ROOM);
+          look_at_room(k->follower, 0);
+          send_to_char("You recall with your master.\r\n",k->follower);
+        }
+        else
+        {
+          if (GET_LOADROOM(k->follower) != GET_LOADROOM(ch))
+            send_to_char("You may not recall to that city.\r\n",k->follower);
+          else
+          {
+            act("$n disappears.", TRUE, k->follower, 0, 0, TO_ROOM);
+            char_from_room(k->follower);
+            if (GET_LOADROOM(ch) == -1)
+              char_to_room(k->follower, real_room(townstart[0].loadroom));
+            else
+              char_to_room(k->follower, real_room(GET_LOADROOM(ch)));
+            act("$n appears in the middle of the room.", TRUE, k->follower,
+              0, 0, TO_ROOM);
+            look_at_room(k->follower, 0);
+            send_to_char("You recall with the leader.\r\n",k->follower);
+          }
+        } 
+      } 
+    }  
+}
 
 ACMD(do_move)
 {
-  /*
-   * This is basically a mapping of cmd numbers to perform_move indices.
-   * It cannot be done in perform_move because perform_move is called
-   * by other functions which do not require the remapping.
-   */
-  perform_move(ch, cmd - 1, 0);
+  int good_dirs[NUM_OF_DIRS], i, j;
+
+  if ( IS_SET(ROOM_FLAGS(ch->in_room), ROOM_MAZE) 
+       && GET_INT(ch) < number(1, 20)) {
+    if (!CAN_GO(ch, cmd - 1))
+      perform_move(ch, cmd - 1, 0);
+    else {
+      /* gotta gather all the good directions to go to */
+      for (i = 0, j = 0; i < NUM_OF_DIRS; i++)
+        if (CAN_GO(ch, i))
+          good_dirs[j++] = i;
+
+      /* now choose a random slot from our harvested directions and go there */
+      send_to_char("You feel lost\r\n",ch);
+      perform_move(ch, good_dirs[number(0, j-1)], 0);
+    }
+  } else
+    perform_move(ch, subcmd - 1, 0);
 }
 
 
@@ -429,15 +706,15 @@ ACMD(do_gen_door)
 }
 
 
-
+/*
 ACMD(do_enter)
 {
   int door;
 
   one_argument(argument, buf);
 
-  if (*buf) {			/* an argument was supplied, search for door
-				 * keyword */
+  if (*buf) {			
+				
     for (door = 0; door < NUM_OF_DIRS; door++)
       if (EXIT(ch, door))
 	if (EXIT(ch, door)->keyword)
@@ -450,7 +727,6 @@ ACMD(do_enter)
   } else if (IS_SET(ROOM_FLAGS(ch->in_room), ROOM_INDOORS))
     send_to_char("You are already indoors.\r\n", ch);
   else {
-    /* try to locate an entrance */
     for (door = 0; door < NUM_OF_DIRS; door++)
       if (EXIT(ch, door))
 	if (EXIT(ch, door)->to_room != NOWHERE)
@@ -462,7 +738,7 @@ ACMD(do_enter)
     send_to_char("You can't seem to find anything to enter.\r\n", ch);
   }
 }
-
+*/
 
 ACMD(do_leave)
 {
@@ -690,3 +966,203 @@ ACMD(do_follow)
     }
   }
 }
+
+
+// Mounts (DAK)
+ACMD(do_mount) {
+  char arg[MAX_INPUT_LENGTH];
+  struct char_data *vict;
+  
+  one_argument(argument, arg);
+  
+  if (!arg || !*arg) {
+    send_to_char("Mount who?\r\n", ch);
+    return;
+  } else if (!(vict = get_char_room_vis(ch, arg))) {
+    send_to_char("There is no-one by that name here.\r\n", ch);
+    return;
+  } else if (!IS_NPC(vict) && GET_LEVEL(ch) < LVL_IMMORT) {
+    send_to_char("Ehh... no.\r\n", ch);
+    return;
+  } else if (RIDING(ch) || RIDDEN_BY(ch)) {
+    send_to_char("You are already mounted.\r\n", ch);
+    return;
+  } else if (RIDING(vict) || RIDDEN_BY(vict)) {
+    send_to_char("It is already mounted.\r\n", ch);
+    return;
+  } else if (GET_LEVEL(ch) < LVL_IMMORT && IS_NPC(vict) && !AFF_FLAGGED(vict, AFF_TAMED)) {
+    send_to_char("You can't mount that!\r\n", ch);
+    return;
+  } else if (!GET_SKILL(ch, SKILL_MOUNT)) {
+    send_to_char("First you need to learn *how* to mount.\r\n", ch);
+    return;
+  } else if (GET_SKILL(ch, SKILL_MOUNT) <= number(1, 101)) {
+    act("You try to mount $N, but slip and fall off.", FALSE, ch, 0, vict, TO_CHAR);
+    act("$n tries to mount you, but slips and falls off.", FALSE, ch, 0, vict, TO_VICT);
+    act("$n tries to mount $N, but slips and falls off.", TRUE, ch, 0, vict, TO_NOTVICT);
+    damage(ch, ch, dice(1, 2), -1);
+    return;
+  }
+  
+  act("You mount $N.", FALSE, ch, 0, vict, TO_CHAR);
+  act("$n mounts you.", FALSE, ch, 0, vict, TO_VICT);
+  act("$n mounts $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+  mount_char(ch, vict);
+  
+  if (IS_NPC(vict) && !AFF_FLAGGED(vict, AFF_TAMED) && GET_SKILL(ch, SKILL_MOUNT) <= number(1, 101)) {
+    act("$N suddenly bucks upwards, throwing you violently to the ground!", FALSE, ch, 0, vict, TO_CHAR);
+    act("$n is thrown to the ground as $N violently bucks!", TRUE, ch, 0, vict, TO_NOTVICT);
+    act("You buck violently and throw $n to the ground.", FALSE, ch, 0, vict, TO_VICT);
+    dismount_char(ch);
+    damage(vict, ch, dice(1,3), -1);
+  }
+}
+
+
+ACMD(do_dismount) {
+  if (!RIDING(ch)) {
+    send_to_char("You aren't even riding anything.\r\n", ch);
+    return;
+  } else if (SECT(ch->in_room) == SECT_WATER_NOSWIM && !has_boat(ch)) {
+    send_to_char("Yah, right, and then drown...\r\n", ch);
+    return;
+  }
+  
+  act("You dismount $N.", FALSE, ch, 0, RIDING(ch), TO_CHAR);
+  act("$n dismounts from you.", FALSE, ch, 0, RIDING(ch), TO_VICT);
+  act("$n dismounts $N.", TRUE, ch, 0, RIDING(ch), TO_NOTVICT);
+  dismount_char(ch);
+}
+
+
+ACMD(do_buck) {
+  if (!RIDDEN_BY(ch)) {
+    send_to_char("You're not even being ridden!\r\n", ch);
+    return;
+  } else if (AFF_FLAGGED(ch, AFF_TAMED)) {
+    send_to_char("But you're tamed!\r\n", ch);
+    return;
+  }
+  
+  act("You quickly buck, throwing $N to the ground.", FALSE, ch, 0, RIDDEN_BY(ch), TO_CHAR);
+  act("$n quickly bucks, throwing you to the ground.", FALSE, ch, 0, RIDDEN_BY(ch), TO_VICT);
+  act("$n quickly bucks, throwing $N to the ground.", FALSE, ch, 0, RIDDEN_BY(ch), TO_NOTVICT);
+  GET_POS(RIDDEN_BY(ch)) = POS_SITTING;
+  if (number(0, 4)) {
+    send_to_char("You hit the ground hard!\r\n", RIDDEN_BY(ch));
+    damage(RIDDEN_BY(ch), RIDDEN_BY(ch), dice(2,4), -1);
+  }
+  dismount_char(ch);
+  
+  
+  // you might want to call set_fighting() or some non-sense here if you
+  // want the mount to attack the unseated rider or vice-versa.
+}
+
+
+ACMD(do_tame) {
+  char arg[MAX_INPUT_LENGTH];
+  struct affected_type af;
+  struct char_data *vict;
+  
+  one_argument(argument, arg);
+  
+  if (!arg || !*arg) {
+    send_to_char("Tame who?\r\n", ch);
+    return;
+  } else if (!(vict = get_char_room_vis(ch, arg))) {
+    send_to_char("They're not here.\r\n", ch);
+    return;
+  } else if (GET_LEVEL(ch) < LVL_IMMORT && IS_NPC(vict) && !MOB_FLAGGED(vict, MOB_MOUNTABLE)) {
+    send_to_char("You can't do that to them.\r\n", ch);
+    return;
+  } else if (!GET_SKILL(ch, SKILL_TAME)) {
+    send_to_char("You don't even know how to tame something.\r\n", ch);
+    return;
+  } else if (!IS_NPC(vict) && GET_LEVEL(ch) < LVL_IMMORT) {
+    send_to_char("You can't do that.\r\n", ch);
+    return;
+  } else if (GET_SKILL(ch, SKILL_TAME) <= number(1, 101)) {
+    send_to_char("You fail to tame it.\r\n", ch);
+    return;
+  }
+  
+  af.type = SKILL_TAME;
+  af.duration = 24;
+  af.modifier = 0;
+  af.location = APPLY_NONE;
+  af.bitvector = AFF_TAMED;
+  affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
+  
+  act("You tame $N.", FALSE, ch, 0, vict, TO_CHAR);
+  act("$n tames you.", FALSE, ch, 0, vict, TO_VICT);
+  act("$n tames $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+}
+
+#define DTSHOP 1460
+#define DTMOB 161
+
+void handle_dt_items(struct char_data *ch)
+{
+  /*
+     OK.  DF has been really ugly with object handling so we should clean
+     this up while we're at it.  Call this function with the hapless person and
+     this should handle everything.  Just Raw Kill and dont extract.
+  */
+
+  struct obj_data *obj,*one;
+  struct char_data *dtguy=0;
+  int junk_stuff_anyway=0, dtguyroom, eq, rmob, cnum;
+  
+  
+  if ((rmob=real_mobile(DTMOB))>0) {
+    dtguyroom=real_room(DTSHOP);
+    for(dtguy=world[dtguyroom].people; dtguy;
+	dtguy=dtguy->next) {
+      if(!IS_NPC(dtguy)) continue;
+      if(dtguy->nr == rmob) break;
+    }
+  } else junk_stuff_anyway=1;
+
+  if (!dtguy) junk_stuff_anyway=1;
+
+  for(obj=ch->carrying; obj; obj=one) {
+    one=obj->next_content;
+    obj_from_char(obj);
+    if(junk_stuff_anyway) obj_to_room(obj,ch->in_room);
+    else 
+    {
+      if(GET_OBJ_TYPE(obj) == ITEM_CONTAINER)
+      {
+        cnum = GET_OBJ_RNUM(obj);
+        extract_obj(obj);
+        obj = read_object(cnum, REAL); 
+      }
+      obj_to_char(obj, dtguy);
+    }
+  }
+
+  for(eq=0;eq<NUM_WEARS;eq++) {
+    if(GET_EQ(ch,eq)) {
+      obj=unequip_char(ch, eq);
+      if(junk_stuff_anyway) obj_to_room(obj,ch->in_room);
+      else 
+      {
+        if(GET_OBJ_TYPE(obj) == ITEM_CONTAINER)
+        {
+          cnum = GET_OBJ_RNUM(obj);
+          extract_obj(obj);
+          obj = read_object(cnum, REAL); 
+        }
+        obj_to_char(obj,dtguy);
+      }
+    }
+  }
+  
+  gain_exp(ch, -(GET_EXP(ch) >> 1));  
+  char_from_room(ch);
+  char_to_room(ch, real_room(DTSHOP));
+  GET_HIT(ch) = 1;
+  look_at_room(ch, 0);
+}
+

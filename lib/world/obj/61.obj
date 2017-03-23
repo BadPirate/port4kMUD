@@ -27,15 +27,15 @@ A colossal tree blocks the way westward.~
 1000 0 0 0
 0 0 0
 E
+opening~
+The opening is far too narrow for you to squeeze through but it looks as if
+the tree is hollow.
+~
+E
 tree~
 This enormous tree must be a thousand years old.  Its rough bark looks grey
 and pale and is decorated with scratches and clawmarks.  On its west side is
 a small opening just above ground level.
-~
-E
-opening~
-The opening is far too narrow for you to squeeze through but it looks as if
-the tree is hollow.
 ~
 #6103
 branch grey long~
@@ -86,7 +86,7 @@ a toadstool~
 A large toadstool grows nearby.~
 ~
 19 0 1
-12 0 0 0
+10 0 0 0
 5 20 20
 E
 toadstool~
@@ -122,7 +122,7 @@ potion blue~
 a blue potion~
 A blue potion has been left here.~
 ~
-10 g 1
+10 64 1
 15 28 -1 -1
 2 68000 5000
 E
@@ -134,7 +134,7 @@ potion yellow musky~
 a musky yellow potion~
 A yellow potion has been left here.~
 ~
-10 g 1
+10 64 1
 15 39 -1 -1
 2 1000 200
 E
@@ -158,7 +158,7 @@ crown iron~
 an iron crown~
 An iron crown rests on the ground.~
 ~
-9 g 17
+9 64 17
 6 0 0 0
 20 7000 500
 E
@@ -170,7 +170,7 @@ sceptre iron~
 an iron sceptre~
 An iron sceptre lies on the ground.~
 ~
-1 g 16385
+1 64 16385
 0 0 -1 0
 10 5000 700
 E
@@ -182,7 +182,7 @@ ring iron~
 an iron ring~
 An iron ring has been left here.~
 ~
-11 g 3
+11 64 3
 0 0 0 0
 10 5000 500
 E
@@ -197,9 +197,9 @@ A
 #6115
 star morning-star~
 the morning star~
-the morning star is here collecting dust while it lies on the ground.~
+The morning star is here collecting dust while it lies on the ground.~
 ~
-5 g 8193
+5 64 8193
 0 2 9 7
 10 15000 2000
 A
@@ -209,7 +209,7 @@ shirt scale~
 a black dragon scale shirt~
 A black dragon scale shirt has been left here.~
 ~
-9 g 9
+9 64 9
 6 0 0 0
 10 10000 100
 E
@@ -224,7 +224,7 @@ skirt scale~
 a black dragon scale skirt~
 A black dragon scale skirt has been left here.~
 ~
-9 g 33
+9 64 33
 6 0 0 0
 8 5000 100
 E
@@ -239,7 +239,7 @@ cloak black~
 a black, hooded cloak~
 A large, hooded cloak, as dark as the night, has been left here.~
 ~
-11 g 1025
+11 64 1025
 0 0 0 0
 20 8000 4000
 E
@@ -256,7 +256,7 @@ belt silver~
 a broad silver belt~
 A broad silver belt has been left here.~
 ~
-9 ag 2049
+9 65 2049
 6 0 0 0
 4 5000 3500
 E
@@ -268,7 +268,7 @@ sword long slender~
 a long, slender sword~
 A long, slender sword lies on the ground.~
 ~
-5 agjl 8193
+5 10817 8193
 0 3 6 3
 4 30000 6000
 E
@@ -280,4 +280,20 @@ A
 18 4
 A
 19 2
-$
+#6121
+toadstool~
+toadstool~
+A large toadstool grows nearby.~
+~
+15 0 0
+50 5 -1 0
+10 0 0
+#6122
+key~
+a small key~
+A small key sits here, it's covered in something.~
+~
+18 4 1
+0 0 0 0
+5 0 0
+$~

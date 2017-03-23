@@ -404,64 +404,11 @@ FILE argument, and once without -- to make sure that the change takes.
 
 For toggled fields (BINARY), the value must be ON, OFF, YES, or NO.
 
-The following are valid fields:
-
-Field          Level Required   Who     Value Type   Decription
------------------------------------------------------------------------------
-brief          LVL_GOD          PC      BINARY       Brief mode
-invstart       LVL_GOD          PC      BINARY       Invisible @ Start
-title          LVL_GOD          PC      MISC         Player's title
-nosummon       LVL_GRGOD        PC      BINARY       NOSUMMON flag
-maxhit         LVL_GRGOD        BOTH    NUMBER       Max HP
-maxmana        LVL_GRGOD        BOTH    NUMBER       Max mana
-maxmove        LVL_GRGOD        BOTH    NUMBER       Max movement
-hit            LVL_GRGOD        BOTH    NUMBER       Current HP
-mana           LVL_GRGOD        BOTH    NUMBER       Current mana
-move           LVL_GRGOD        BOTH    NUMBER       Current movement
-align          LVL_GOD          BOTH    NUMBER       Alignment
-str            LVL_GRGOD        BOTH    NUMBER       Strength
-stradd         LVL_GRGOD        BOTH    NUMBER       Additional STR (18/xx)
-int            LVL_GRGOD        BOTH    NUMBER       Inteligence
-wis            LVL_GRGOD        BOTH    NUMBER       Wisdom
-dex            LVL_GRGOD        BOTH    NUMBER       Dexterity
-con            LVL_GRGOD        BOTH    NUMBER       Constitution
-cha            LVL_GRGOD        BOTH    NUMBER       Charisma
-sex            LVL_GRGOD        BOTH    MISC         Sex
-ac             LVL_GRGOD        BOTH    NUMBER       Armor class
-gold           LVL_GOD          BOTH    NUMBER       Gold (On hand)
-bank           LVL_GOD          PC      NUMBER       Gold in bank
-exp            LVL_GRGOD        BOTH    NUMBER       Experience points
-hitroll        LVL_GRGOD        BOTH    NUMBER       To-Hit modifier
-damroll        LVL_GRGOD        BOTH    NUMBER       Damage modifier
-invis          LVL_IMPL         PC      NUMBER       Invisible (level)
-nohassle       LVL_GRGOD        PC      BINARY       NOHASSLE flag
-frozen         LVL_FREEZE       PC      BINARY       FROZEN flag
-practices      LVL_GRGOD        PC      NUMBER       # of practices
-lessons        LVL_GRGOD        PC      NUMBER       # of practices
-drunk          LVL_GRGOD        BOTH    MISC         Drunkeness
-hunger         LVL_GRGOD        BOTH    MISC         Hrs to hunger
-thirst         LVL_GRGOD        BOTH    MISC         Hrs to thirst
-killer         LVL_GOD          PC      BINARY       KILLER flag
-thief          LVL_GOD          PC      BINARY       THIEF flag
-level          LVL_IMPL         BOTH    NUMBER       Level
-room           LVL_IMPL         BOTH    NUMBER       Move to room
-roomflag       LVL_GRGOD        PC      BINARY       ROOMFLAGS flag
-siteok         LVL_GRGOD        PC      BINARY       SITEOK flag
-deleted        LVL_IMPL         PC      BINARY       DELETED flag
-class          LVL_GRGOD        BOTH    MISC         Class (W/T/C/M)
-nowizlist      LVL_GOD          PC      BINARY       Not Wizlistable flag
-quest          LVL_GOD          PC      BINARY       QUESTING flag
-loadroom       LVL_GRGOD        PC      MISC         Room to load in (#/off)
-color          LVL_GOD          PC      BINARY       COLOR flag
-idnum          LVL_IMPL         PC      NUMBER       ID Number
-passwd         LVL_IMPL         PC      MISC         Player password
-nodelete       LVL_GOD          PC      BINARY       Undeletable flag
-
 See also: STAT
 #
 SHOW
 
-Usage: show <mode> [argument]
+Usage: show <mode> <argument>
 
 Valid Modes:
 
@@ -702,15 +649,7 @@ WIZNET ;
 
 The immortal communication channel.
 
-Usage: wiznet [ '@' | '+' | '-' | '#' ] [<text>]
-
-Examples:
-
-  >; <text>    - just sends text
-  >; @         - shows all gods that are on and visible to you
-               - also shows if the gods who are visible to you are writing
-
-This code was provided by Gnort.
+Usage: wiznet <message>
 
 See also: NOWIZ
 #

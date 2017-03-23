@@ -1,0 +1,86 @@
+#1300
+Lao Tse man~
+Lao Tse~
+The old man, Lao Tse, is sitting here.
+~
+Lao Tse lives in the strength of simplicity.  While he is obviously old, 
+he looks far from frail, and his eyes show that his spirit is of 
+unmentionable strength.
+~
+253962 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+6 5 1
+E
+#1301
+young duel duelist~
+the Young Duelist~
+The Young Duelist draws his sword as he prepares to engage you.
+~
+This young man is dressed up in fine regalia, though he does not seem to be
+well armoured at all.  He grins wryly at you as he unsheaths his weapon.
+~
+58 0 2 E
+30 8 7 10d10+250 2d8+13
+5000 8500
+8 8 1
+E
+#1302
+duelist duel du female fem~
+a Female Duelist~
+A female glares at your audacity and draws her weapon!
+~
+She is of slight build, yet the scars on her body tell stories of her 
+ferocity, determination, and ability.  She obviously is no push-over.
+~
+8234 0 -350 E
+32 8 4 2d12+350 2d8+13
+7500 10000
+8 8 2
+E
+#1303
+Man cloth clo cleric cler duelist duel du~
+the Cleric Duelist~
+A man of the cloth stands here, intending to show you the way or destroy you.
+~
+   The cleric is wearing nothing that seems to give any affiliation to any
+abbey, nor can you guess from his features where he may be from.  What you can
+tell is that this man is a fanatic, and has been in more than one situation in
+which force was used by or on him.  His arms bulge with human and holy strength
+as he glares at you.    
+~
+256058 4224 475 E
+36 6 -3 1d45+900 6d8+16
+1 10000
+8 8 1
+BareHandAttack: 7
+E
+#1304
+Were Werewolf wolf~
+Werewolf~
+A Werewolf stands here, drooling and snarling.
+~
+   This creature looks extremely tortured...  Of course, it's probably not a
+pleasant existance as a were-anything.  If you don't stop reading this and
+start defending yourself, however, it is entirely possible that you could share
+this poor creature's fate!    
+~
+8250 2 -675 E
+37 -13 10 1d1+1200 8d6+35
+0 8750
+8 8 0
+BareHandAttack: 8
+E
+#1399
+Test~
+Test Mob~
+This is a stupid little test mob that is lost.
+~
+It looks, err, stupid.
+~
+2152 0 222 E
+31 10 7 1d1+300 4d4+10
+5 7500
+8 8 1
+E
+$

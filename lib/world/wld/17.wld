@@ -1,0 +1,1381 @@
+#1700
+The Outskirts of Mist~
+   You are approaching a small village to the north.  You cannot make out it's
+features clearly, because of the heavy fog that seems, from the greeness of the
+flora, to constantly rest in this small valley.  The dirt path you are on
+gradually changes to cobblestone as it continues into the village.  You can
+vaguely make out figures moving eerily through the mist to the north.    
+~
+17 4 2
+D0
+~
+~
+0 0 1701
+D2
+~
+~
+0 0 436
+S
+#1701
+The Village Mist~
+   You are now in the town proper.  A small sign near the road reads "Village
+Mist.  " While not very imaginative, it is a very descriptive name.  You can
+only see clearly for a few feet.  South is the path out of the village, or you
+can continue north farther into the mist.    
+~
+17 0 1
+D0
+~
+~
+0 0 1702
+D2
+~
+~
+0 0 1700
+S
+#1702
+The Village Mist~
+   As you venture farther into the fog, you begin to make out some more
+features of the village.  Small cottages surround the town square, which opens
+up to the north.  There also seems to be a myriad of quaint little shops.  
+South, the road leads through the deep fog and out of Mist.    
+~
+17 0 1
+D0
+~
+~
+0 0 1703
+D2
+~
+~
+0 0 1701
+S
+#1703
+The Village Square~
+   This is the village square of Mist.  The peaceful village spreads itself
+outward from this quaint, yet welcoming center.  Decorative benches lend
+themselves for the benefit of the weary traveler.  In the exact middle of the
+square, a graceful fountain bubbles joyfully.  Upon closer inspection, you see
+that it is covered in detailed reliefs of dragons, in all postions, from flying
+to fighting knights-errant.  This must truly be a place where man and monster
+coexist peacefully.    
+~
+17 0 1
+D0
+~
+~
+0 0 1710
+D1
+~
+~
+0 0 1704
+D2
+~
+~
+0 0 1702
+D3
+~
+~
+0 0 1712
+S
+#1704
+Alchemy Avenue~
+   You are just east of the main square of Mist.  To your north is a brightly
+fronted store, with flickering candles that illuminate "Demon's Realm Grocery.
+" Your nose twitches, and as you catch the wonderful smell of freshly-baked
+cookies, you see the "Hanzel and Gretel Bakery" to your south.  To the east is
+Sorcery Street.    
+~
+17 0 1
+D0
+~
+~
+0 0 1729
+D1
+~
+~
+0 0 1705
+D2
+~
+~
+0 0 1728
+D3
+~
+~
+0 0 1703
+S
+#1705
+Intersection of Alchemy and Sorcery~
+   Here is the intersection of Alchemy Avenue and Sorcery Street.  To the west
+continues Alchemy Avenue while Sorcery Street runs north and south from here.
+A short way to the west are the entrances to the Demon's Realm Grocery and the
+Hansel and Gretel Bakery.
+~
+17 0 1
+D0
+~
+~
+0 0 1708
+D2
+~
+~
+0 0 1706
+D3
+~
+~
+0 0 1704
+S
+#1706
+Sorcery Street~
+   Here, Sorcery Street continues to make its way along the inside of the city
+wall.  The fog gives the wall the effect of looming high over you, dark and
+mysterious.  The intersection of Alchemy and Sorcery is to the north, and
+Sorcery Street continues to the south.    
+~
+17 0 1
+D0
+~
+~
+0 0 1705
+D2
+~
+~
+0 0 1707
+S
+#1707
+Sorcery Street~
+   Here is the end of Sorcery Street.  Not surprisingly, the wall surrounding
+the village is the most prominent feature here.  Far to the north is the
+intersection of Alchemy Avenue and Sorcery Street.  To the west is a huge
+building.  What could be inside?    
+~
+17 0 1
+D0
+~
+~
+0 0 1706
+D3
+~
+~
+0 0 1727
+S
+#1708
+Sorcery Street~
+   Here Sorcery Street narrows into almost an alley, with walls of buildings
+pushing close against you.  The rough stone scrapes you painfully, and when you
+look back at the narrow place, you see threads from your clothes clinging to
+the stone.  To the south is the intersection of Alchemy and Sorcery, and
+Sorcery Street continues to the north.    
+~
+17 0 1
+D0
+~
+~
+0 0 1709
+D1
+~
+~
+0 0 1770
+D2
+~
+~
+0 0 1705
+S
+#1709
+Sorcery Street~
+   This is a very quiet place.  Apparently, not many are willing to brave the
+narrow alleyway that Sorcery Street turns into just to the south.  However,
+here the mist seems not forboding and mysterious, but warm and comfortable,
+almost like a second skin.  An old building rises into invisibilty in the mist
+to the west.    
+~
+17 0 1
+D2
+~
+~
+0 0 1708
+D3
+~
+~
+0 0 1737
+S
+#1710
+The Village Mist~
+   Here the nameless pathway continues its journey through Mist.  The
+cobblestone is bumpier here, as if not much traffic masses this way, or not as
+much time and effort was expended in trying to fit it together.  To the south
+is the village square and the path continues to the north.    
+~
+17 0 1
+D0
+~
+~
+0 0 1711
+D2
+~
+~
+0 0 1703
+S
+#1711
+Outskirts of Mist~
+   Here, the road once again abruptly turns into a narrow, dirt path.  
+However, in contrast to how it was earlier, here it is hard to make out among
+the dead and dying weeds that line it.  Apparently, not many people brave the
+path to confront whatever lies ahead...    
+~
+17 0 1
+D0
+~
+~
+0 0 2000
+D2
+~
+~
+0 0 1710
+S
+#1712
+Alchemy Avenue~
+   You are just to the west of the village square.  The ever-present mist seems
+to encrouch upon you further here than elsewhere.  To the north, you hear
+sounds of merriment.  That must be where the Flaming Drake Inn is.  To the
+south, you can make out a sign that says "Mail.  " The Mist Courier must be in
+that direction.    
+~
+17 0 1
+D0
+~
+~
+0 0 1723
+D1
+~
+~
+0 0 1703
+D2
+~
+~
+0 0 1718
+D3
+~
+~
+0 0 1713
+S
+#1713
+Alchemy Avenue~
+   Here, Alchemy Avenue makes a sharp turn to the south.  Far off to the east,
+you can barely make out the trickling of the fountain that is in the village
+square.  To the north, piles of junk are stacked up everywhere in the Pack Rat
+Pawn Shop.  Finally, to the west is the sacred Temple of Mist.    
+~
+17 0 1
+D0
+~
+~
+0 0 1722
+D1
+~
+~
+0 0 1712
+D2
+~
+~
+0 0 1714
+D3
+~
+~
+0 0 1720
+S
+#1714
+Alchemy Avenue~
+   You continue strolling through the town.  Despite the thick mist that gives
+the town both it's name and a feeling of mystery, it is a pleasant village,
+where all those born of magic and those who use it may interact peacefully.  
+To the north, Alchemy Avenue makes a bend near the Temple and Pack Rat Pawn
+Shop.  To the south is an intersection.    
+~
+17 0 1
+D0
+~
+~
+0 0 1713
+D2
+~
+~
+0 0 1715
+S
+#1715
+Alchemy Avenue~
+   Once again, you approach the wall surrounding Mist.  What is around here
+that such a small village would have such a large wall?  Far to the north,
+Alchemy Avenue turns to the east, giving access to the town's Temple and Pawn
+Shop.  To the west is the entrance to the Guard House.  And to the east...?  
+~
+17 0 1
+D0
+~
+~
+0 0 1714
+D1
+~
+~
+0 0 1716
+D3
+~
+~
+0 0 1717
+S
+#1716
+The Dead-End~
+   Stange...  You have come from Alchemy Avenue to the west into-a dead-end.  
+What is the purpose of this place?  Is it intended for a park, a building, or
+some nefarious deeds of the underworld?  It might be safer if you return to the
+west...    
+~
+17 0 1
+D3
+~
+~
+0 0 1715
+S
+#1717
+Alchemy Avenue~
+   Here Alchemy Avenue abruptly ends at the wall enclosing Mist.  The fog is so
+thick here, you almost made an impression of the wall in your face!  You can
+barely make out the entrance to the Guard House to the north.  To the east is
+Alchemy Avenue.    
+~
+17 0 1
+D0
+~
+~
+0 0 1719
+D1
+~
+~
+0 0 1715
+S
+#1718
+The Courier~
+   You have entered the Mist Courier Service.  Here, for a small fee, you can
+send mudmail to anyone you want to correspond with.  To judge by the numerous
+boxes and parcels of various sizes, the Courier does fairly good business.  A
+sign on one of the walls reads "Guaranteed Instant Delivery or Your Money
+Back!!  "
+~
+17 16 0
+D0
+~
+~
+0 0 1712
+S
+#1719
+The Guard House~
+   You have entered the Guard House.  Here, the various packs of Hellhounds
+gather to sleep, relax, or discuss current issues.  It is kept quite neat and
+tidy, especially when you consider the fact that Hellhounds have paws, not
+hands.  There are doors leading off to the sides of the main room, the houses
+of the different guards.  Right in front of you is the desk of the Chief of the
+Hounds.    
+~
+17 0 0
+D2
+~
+~
+0 0 1717
+S
+#1720
+The Mist Temple~
+   You are in the main room of the Mist Temple.  Rows of columnades spring from
+the floor to connect with the ceiling.  An exquisite sculpture of the Master of
+Dragons, Bahamut, rises above all in the center of the room.  To the north is
+the Room of Healing, a place where people can get well.  To the south is the
+Dragon's Hoard Credit Union.  To the west is the Mist Commons, where you can
+have intellectual, or not so intellectual, conversations with any you wish.  
+Up is the Mist Donation Room.  East leads out to Alchemy Avenue.  And down
+leads...?    
+~
+17 220 0
+D0
+~
+~
+0 0 1731
+D1
+~
+~
+0 0 1713
+D2
+~
+~
+0 0 1735
+D3
+~
+~
+0 0 1734
+D4
+~
+~
+0 0 1732
+D5
+~
+~
+0 0 1736
+S
+#1721
+The Secret Magic Shop~
+   You have entered the low building.  Though it appeared small from the
+outside, you now see that it is quite large, and filled to the brim.  
+Everywhere are stacks of dried herbs, salves, and magical potions.  This must
+be the magic shop.  Looking around, you search for the proprieter...    
+~
+17 262352 0
+D0
+~
+~
+0 0 1726
+S
+#1722
+The Pack Rat Pawn Shop~
+   You have entered the rather cluttered Pawn Shop of Mist.  This shop has
+EVERYTHING in it.  From bent and rusted nails to shiny new swords to bags full
+of who-knows-what, you can buy or sell anything in this shop.  What kind of
+creature would run such a shop.  You would think that it could at least have
+the decency to keep it organized.  You can exit to the south.    
+~
+17 144 0
+D2
+~
+~
+0 0 1713
+S
+#1723
+The Dancing Drake Inn~
+   The Flaming Drake Inn is a pleasant, busy tavern filled with normal tap-room
+noise.  A huge fire blazes happily in the hearth, and many imp waiters dance
+around serving the patrons.  A large Gargoyle, who must be the innkeeper,
+supervises closely the scene.  There are, of course, many unusual guests, from
+the gryphon gesticulating wildly at a shrieking harpy, to the earth elemental
+discussing spells with a human wizard.  You immediately fell welcome.    
+~
+17 16 0
+D0
+~
+~
+0 0 1724
+D2
+~
+~
+0 0 1712
+S
+#1724
+The Dancing Drake's Kitchen~
+   This is the kitchen of the Flaming Drake Inn, where all the delicious items
+served are prepared.  There are many imp servers running around in all
+directions, preparing food, bringing in dirty dishes, and taking out freshly-
+made orders.  One wall is stacked with boxes.  Is there something behind
+them...?    
+~
+17 0 0
+D2
+~
+~
+0 0 1723
+D3
+~
+door~
+1 0 1725
+S
+#1725
+The Secret Street~
+   What is this?  A hidden street?  The mist seems to settle ever more closely
+in the narrow street that creeps between the wall surrounding Mist and the
+backs of buildings.  To the east is the door back into the kitchen of the
+Flaming Drake and to the west...    
+~
+17 262208 1
+D1
+~
+door~
+1 0 1724
+D3
+~
+~
+0 0 1726
+S
+#1726
+The Secret Street~
+   You are on the Secret Street of Mist.  Far to the east, through the fog you
+can barely make out the door to the Flaming Drake Inn's kitchen.  However, to
+the south, is a low building hiding in the mist.  A much more interesting place
+than a common kitchen...    
+~
+17 262208 1
+D1
+~
+~
+0 0 1725
+D2
+~
+~
+0 0 1721
+S
+#1727
+An Empty Building...~
+   It's very, well, empty.  Your footsteps echo into the rafters high above
+your head.  Dust coats the floor and cobwebs hang in the various corners of the
+large, one-room building.  It could be a warehouse, or anything else that
+requires room.  Will it ever be filled?    
+~
+17 0 0
+D1
+~
+~
+0 0 1707
+D9
+A wall, just like any other.  Wait, is that a small hole in it?
+~
+wall~
+2 1717 1772
+S
+#1728
+The Hansel and Gretel Bakery~
+   You have entered the bakery.  You inhale deeply of the wondrous smells of
+sweets right out of the oven.  Racks of cooling cookies cause your mouth to
+water.  A display case is full of little gingerbread men, all decorated in
+bright, cheery colors and patterns.  The proprietess is currently engaged in
+taking fresh apple pies out of the huge oven that dominates the scene.  The
+exit is to the north.    
+~
+17 128 0
+D0
+~
+~
+0 0 1704
+S
+#1729
+Demon's Realm Grocery~
+   You have entered the local grocery store.  However, instead of finding the
+normal boxes, bags, and lanterns of most such stores, you are surrouned by a
+plethora of...unusual items.  Colorful, twisted straws abound.  Velvet sacks
+hang from a variety of hooks.  And, the strangest of strange things, the
+shopkeeper is a demon.    
+~
+17 128 0
+D2
+~
+~
+0 0 1704
+S
+#1730
+The Master Guild~
+   As your eyes attempt to adjust to the gloom of this room, the odors common
+to libraries full of old books assault you.  Blinking, you realize the walls
+are stacked with shelves of books and scrolls packed as close together as
+possible.  What could be the purpose of this place?  As you casually saunter
+through the room, you some of the titles of the books.  "Of Spells and Sorcery.
+" "A Scout's Guide to Tracking.  " "How to Heal Yourself and Others.  " You
+realize that you are in the Master Guild of Mist.    
+~
+17 0 0
+D1
+~
+~
+0 0 1737
+S
+#1731
+The Healer's Room~
+   In this peaceful room, a famous healer known throughout the world resides.
+She is known for her successful treatments of the most severely injured
+warriors, and serenely heals the most traumatic and gory wounds without a
+flinch.  Though she seems to be in many places at once, in Daggerfall, Rome,
+and other places, here is her true home.  For only here, in the tiny village of
+Mist, is harmony sought for instead of the discord and anarchy encouraged in
+most places.    
+~
+17 2097180 0
+D2
+~
+~
+0 0 1720
+D5
+~
+~
+0 0 1733
+S
+#1732
+The Mist Donation Room~
+   Here is a donation room, where items donated by friendly, helpful people
+fall randomly.  However, it is often times empty, for either no one is kind
+enough to donate to help newbies, or evil people raid the rooms and sell the
+donated items for profit.  The cobwebs hang down in this nearly-abandoned room.
+  
+~
+17 12 0
+D5
+~
+~
+0 0 1720
+S
+#1733
+The Stench of Death...~
+   You are in a room dominated by the nauseous stench of rotting flesh.  As you
+glance around, you see it is because you ARE in a room full of rotting flesh.
+However, one thing stands out over all in this temple of rot and decay.  A
+fresh corpse.  Your corpse.    
+&rFor info on corpse retrieval type &bread info&r or &bhelp&n
+~
+17 156 0
+D4
+~
+~
+0 0 1731
+E
+info~
+Haden was added to prevent people from being able to steal other player corpses.
+However he does come at a price.  And the price goes by the following equation:
+price = (&gYour level-10&n) * 1000
+ 
+So, its free for the first 10 levels, and it costs you 1000 gold for each level
+afterwards.
+ 
+So then what if you cant afford it?  Then do a &bcorpse return&n and go get your
+own, back where you died.
+~
+S
+#1734
+The Mist Commons~
+   Here is the Mist Commons.  Here, you can talk to people either in person or
+by the bulletin board.  Comfortable couches, chairs, and cushions lay scattered
+all around the room, suitable for people of all races.  Also, one wall of the
+room is covered with a bookshelve with various tomes of useful information, or
+just good old entertainment.    
+~
+17 0 0
+D1
+~
+~
+0 0 1720
+D3
+~
+~
+0 0 1793
+S
+#1735
+The Dragon's Hoard Credit Union~
+   You are in the Dragon's Hoard Credit Union (DHCU).  Obviously, from the name
+of the Credit Union, the owner wants people to feel safe giving their money to
+him.  The inside of DHCU is spacious, with fanciful paintings and sculptures of
+cute, little, friendly dragons.  Of course, you know that dragons are neither
+friendly nor cute, but you decide not to disillusion the other patrons.    
+~
+17 220 0
+D0
+~
+~
+0 0 1720
+S
+#1736
+The Portal Room~
+   Here is hte mystical portal room.  To the north is a shimmering portal, with
+waves flowing across it like those across a pool of water taht a rock has been
+thrown into.  Through this window, you see a hazy picture of the entrance to
+Ethereal Street.  Up is the main room of the Mist Temple.    
+~
+17 188 0
+D0
+~
+~
+0 0 1400
+D4
+~
+~
+0 0 1720
+S
+#1737
+The Old Building~
+   This is the entry room for the old building.  Despite its outer appearance,
+it seems to be in good repair on the inside.  The smooth, wooden floors attest
+to much use, but none-the-less, they are spotless.  This building must be very
+important, for a guard is standing here.    
+~
+17 262344 0
+D1
+~
+~
+0 0 1709
+D3
+~
+~
+0 0 1730
+S
+#1738
+Hell...~
+   Slowly, you come to.  As you shake your head, glancing around, you realize
+you are in a void.  However, soon a red light shines, and you realize you are
+being pulled into it.  Then the fires and brimstone overcome your senses with
+pain and suffering.  Maybe you should try better not to die next time?    
+~
+17 262316 0
+D4
+~
+~
+0 0 1733
+S
+#1739
+Approaching Tsim Egalliv~
+   Here is the beginning of the city that harbors monsters of all shapes,
+sizes, types, and species.  Tsim Egalliv.  The sister city of Mist, it seems
+very similar to the former, minus the enshrouding fog.  However, this city's
+inhabitents are monsters, and few humans are welcome here...    
+~
+17 68 1
+D0
+~
+~
+0 0 1740
+D2
+~
+~
+0 0 2067
+S
+#1740
+Tsim Egalliv~
+   You are deep into Tsim Egalliv, the monster's city.  To the south is the
+road leading out.  It looks very inviting right now, as opposed to the northern
+direction, which leads farther into the town.  Just to the north is the village
+square.    
+~
+17 0 1
+D0
+~
+~
+0 0 1741
+D2
+~
+~
+0 0 1739
+S
+#1741
+Village Square~
+   Here is the center of Tsim Egalliv.  A beautiful green surrounded by
+pleasant paths and decorative benches gives testament to the care given to the
+city by the monsters.  A graceful fountain, twin to the one in Mist, draws the
+eye to the center of the green.  With the combination of the warm sun and the
+pleasant surroundings, leaving this area is a difficult task to undertake.    
+~
+17 0 1
+D0
+~
+~
+0 0 1748
+D1
+~
+~
+0 0 1742
+D2
+~
+~
+0 0 1740
+D3
+~
+~
+0 0 1750
+S
+#1742
+Arch-Mage Avenue~
+   You are just east of the village square, at the head of Arch-Mage Avenue.  
+Apparently the monsters have a fondness for magical names of streets like the
+humans of Mist.  To the west the Avenue continues.  To the north is the famous
+Theseus' Wonderful World of Weapons, and to the south is the mysterious
+Dragon's Realm Armoury.    
+~
+17 0 1
+D0
+~
+~
+0 0 1765
+D1
+~
+~
+0 0 1743
+D2
+~
+~
+0 0 1766
+D3
+~
+~
+0 0 1741
+S
+#1743
+Arch-Mage Avenue~
+   Here Arch-Mage Avenue suddenly splits into two directions, north and south.
+Despite the confusion it creates, it is still called by the one name.  You can
+see it go for quite a distance to both the north and south.  To the west is the
+beginning of the Avenue, and the weapon and armor shops.    
+~
+17 0 1
+D0
+~
+~
+0 0 1746
+D1
+~
+~
+0 0 2068
+D2
+~
+~
+0 0 1744
+D3
+~
+~
+0 0 1742
+S
+#1744
+Arch-Mage Avenue~
+   This is the southern branch of Arch-Mage Avenue.  It leads deep into the
+commercial zone of the city.  To the north is an intersection from which you
+can travel to the village square.  To the south, more buildings rise overhead,
+and the road continues.    
+~
+17 0 1
+D0
+~
+~
+0 0 1743
+D2
+~
+~
+0 0 1745
+S
+#1745
+Arch-Mage Avenue~
+   You have come to a rather deserted portion of town.  To the north, Arch-Mage
+Avenue continues.  To the south is the wall surrounding Tsim Egalliv.  From the
+west, hacking and snarling is heard.  It sounds like a fiece-some battle is
+underway.  What is over there...?    
+~
+17 0 1
+D0
+~
+~
+0 0 1744
+D3
+~
+~
+0 0 1767
+S
+#1746
+Arch-Mage Avenue~
+   Here is a continuation of Arch-Mage Avenue.  The walls of the surrounding
+buildings rise high above you, allowing for only a thin beam of sunlight to
+break through the encroaching walls.  To the south is an intersection, and the
+Avenue continues to the north.    
+~
+17 0 1
+D0
+~
+~
+0 0 1747
+D2
+~
+~
+0 0 1743
+S
+#1747
+Arch-Mage Avenue~
+   Suddenly, you come to a wall and Arch-Mage Avenue comes to an abrupt halt.
+However, the road continues to the south.  To the west is a small, barn-like
+building.  From it comes the sound of warbling.  It must be the Greenery, the
+local fruit and vegetable stand.    
+~
+17 0 1
+D1
+~
+~
+0 0 1768
+D2
+~
+~
+0 0 1746
+D3
+~
+~
+0 0 1764
+S
+#1748
+Tsim Egalliv~
+   Here continues the nameless path that passes straight through the center of
+Tsim Egalliv.  To the south is the village square, complete with fountain, and
+the road continues for some time to the north.  Where it ends up, nobody
+knows...    
+~
+17 0 1
+D0
+~
+~
+0 0 1749
+D2
+~
+~
+0 0 1741
+S
+#1749
+The End of Tsim Egalliv~
+   Finally, Tsim Egalliv comes to a complete and sudden stop.  While the path
+continues a dirt trail to the north, the houses and shops have utterly
+disappeared.  To the south they begin again, but what is it to the north that
+no one wants to be by...?    
+~
+17 0 1
+D0
+~
+~
+0 0 2082
+D2
+~
+~
+0 0 1748
+S
+#1750
+Behemoth Boulevard~
+   This is the head of Behemoth Boulevard.  Its name fits aptly, for it is a
+very wide, cobblestoned road.  To the east is the peaceful village square with
+the bubbling fountain.  To the north is the Will O the Wisp Inn.  To the west,
+Behemoth Boulevard continues wending its large bulk through the town.    
+~
+17 0 1
+D0
+~
+~
+0 0 1760
+D1
+~
+~
+0 0 1741
+D3
+~
+~
+0 0 1751
+S
+#1751
+Behemoth Boulevard~
+   The wide avenue of Behemoth Boulevard continues to wend its way through Tsim
+Egalliv.  To the east is the entrance to the Will O' the Wisp, and even farther
+east, the village square.  To the north is The Pond Pawn Shop, where you can
+buy or sell almost anything.  And exit from the city is to the west, and the
+road continues to the south.    
+~
+17 0 1
+D0
+~
+~
+0 0 1759
+D1
+~
+~
+0 0 1750
+D2
+~
+~
+0 0 1752
+D3
+~
+~
+0 0 1756
+S
+#1752
+Behemoth Boulevard~
+   Suddenly, Behemoth Boulevard makes a sharp turn to the south and narrows.  
+This is a very orderly part of town, a residential part.  To the north,
+Behemoth Boulevard widens and makes its tour through the commercial zone of
+town.  To the south are houses and various other buildings.    
+~
+17 0 1
+D0
+~
+~
+0 0 1751
+D2
+~
+~
+0 0 1753
+S
+#1753
+Behemoth Boulevard~
+   Here Behemoth Boulevard comes to a complete and utter end, running into the
+enclosing wall surrounding Tsim Egalliv.  However, all is not lost in your urge
+to explore, for there are small side streets running off to the east and west.
+The one to the west takes you immediately to the Library, and the one to the
+east to the Guard House.    
+~
+17 0 1
+D0
+~
+~
+0 0 1752
+D1
+~
+~
+0 0 1754
+D3
+~
+~
+0 0 1755
+S
+#1754
+The Library~
+   A plethora of books abound here.  As you blissfully breathe in the smell of
+old leather and paper, you soak in the sight of books covering shelves from
+floor to ceiling.  In the center of the room rest several worn armchairs and
+ottomans, which seem to invite you to grab a book and sit.  You notice several
+interesting sounding titles near you: Odin, The Art of Calling, and Breeding
+Chocobos.    
+~
+17 0 0
+D3
+~
+~
+0 0 1753
+E
+breeding chocobos~
+   Breeding chocobos is a tiring, but worthy task.  First, one must have
+somewhere to put them.  Then, you must capture some good wild stock and feed
+them well, possibly even race them for a time.  Through hard work and using the
+right nuts, you may eventually breed some rare and special chocobos.  \
+~
+E
+the art of calling~
+   The art of calling is a mysterious, little-known area of magic.  
+Supposedly, the Caller who has mastered his talent has the ability to cast
+black magic spells and summon great beasts to defend him.    
+~
+E
+odin~
+   Odin is a, or rather the Norse god of some repute.  He is the head god, and
+master of lightning, the equivalent of the Greek god Zeus.  However, he is also
+known as a deadly foe in many worlds, and is said to be defeated only when his
+sword was struck by lightning.    
+~
+S
+#1755
+Side Street~
+   This is a small side street coming off of Behemoth Boulevard.  Though small,
+it does its function well, leaving a clear path to the Guard House.  To the
+west, it runs into Behemoth Boulevard and disappears into nothingness.  To the
+north is the Guard House.    
+~
+17 0 1
+D0
+~
+~
+0 0 1757
+D1
+~
+~
+0 0 1753
+S
+#1756
+Edge of Tsim Egalliv~
+   This is the edge of the monster's village, Tsim Egalliv.  To the west, a
+path leads on into the darkness of the wilderness.  To the east, the dirt trail
+you are on meets with Behemoth Boulevard and turns into a nice, cobblestoned
+road.    
+~
+17 0 1
+D1
+~
+~
+0 0 1751
+D3
+~
+~
+0 0 2066
+S
+#1757
+Guard House~
+   This is an official branch of the Mist Guard House.  While it is not the
+main office, this is still a substantial building, housing all of the hellhound
+guards and their records and paperwork.  Right in front of you is the main
+reception area, also the main office of the branch.  A desk fills both of these
+functions, and provides a place for the Head of the Guards to work.    
+~
+17 0 0
+D2
+~
+~
+0 0 1755
+S
+#1758
+Oriental Magic~
+   You blink as your eyes become adjusted to the dark that dominates this
+fantastic shop.  The first thing you become aware of is the pleasant scent of
+incense floating gently through the building.  As you look around, you notice
+pendants, wands, and staffs of all shapes and types.  On an organized shelf
+various potions are lined neatly and well-organized.  A very mysterious, yet
+welcoming shop...    
+~
+17 262360 0
+D0
+~
+~
+0 0 1763
+S
+#1759
+The Pond Pawn Shop~
+   The Pond Pawn Shop is a neatly kept store.  Here you may find anything,
+especially since the owner keeps it well organized and stocked.  He is ready to
+buy anything and everything, and add it to the collection.  Despite the
+neatness, however, it is also a rather dirty place, because of the sprinklers
+the frog uses to keep his skin moist.  The wetness causes algae to grown and
+cover everything with a thin blanket of fuzz.    
+~
+17 80 0
+D2
+~
+~
+0 0 1751
+S
+#1760
+The Will O' the Wisp Inn~
+   Despite being a well-occupied tavern, the Will O' the Wisp is a relatively
+quiet spot.  Many of the occupants sit silently solitary at the various tables.
+Apparently the Sylph, despite her feminine, frail appearance, doesn't put up
+with any nonsense.    
+~
+17 24 0
+D0
+~
+~
+0 0 1761
+D2
+~
+~
+0 0 1750
+S
+#1761
+The Will O' the Wisp's Kitchen~
+   This is the busy kitchen of the Will O' the Wisp Inn.  Fairy cooks bang pots
+and pans around in an attempt to keep up with the patron's orders.  Imp servers
+rush in and out with steaming plates and mugs.  Stacked on the western wall is
+a bunch of crates...    
+~
+17 0 0
+D2
+~
+~
+0 0 1760
+D3
+~
+door~
+1 0 1762
+S
+#1762
+Secret Street~
+   This is the secret road hidden behind the Will O' the Wisp Inn.  It is
+eerily quiet here.  The high walls of the buildings and the fortifying wall
+around Tsim Egalliv block out all sounds coming from the more common
+thoroughfares.  To the east is the Will O' the Wisp, and the Secret Street
+continues to the west.    
+~
+17 262144 1
+D1
+~
+door~
+1 0 1761
+D3
+~
+~
+0 0 1763
+S
+#1763
+Secret Street~
+   This is the continuation of the Secret Street of Tsim Egalliv.  The walls
+lean over the road in almost a tunnel, blocking off most of the light from the
+sun.  To the far east is the Will O' the Wisp Inn, and to the south is Oriental
+Magic, the magic shop of the town.    
+~
+17 262144 1
+D1
+~
+~
+0 0 1762
+D2
+~
+~
+0 0 1758
+S
+#1764
+The Greenery~
+   Crates are stacked to the brim with fruits and vegetables in this barn-like
+building.  The stacks tower overhead, seemingly ready to fall at any instance.
+To one side, a small counter rests, waiting to aid you in any purchases you
+might make.  This is the Greenery, a fantastic shop filled with all kinds of
+fruit and vegetables.    
+~
+17 144 0
+D1
+~
+~
+0 0 1747
+S
+#1765
+Theseus' Wonderful World of Weapons~
+   This is the famous shop, Theseus' Wonderful World of Weapons.  Everywhere,
+on the walls, in cases, hanging from the ceiling, are weapons.  At first, you
+are greatly impressed, until you begin to look more closely at them.  Most of
+them are props.  Useless.  Very few are actually useful for defending yourself.
+You feel disappointed, but decide to keep the deception to yourself.    
+~
+17 144 0
+D2
+~
+~
+0 0 1742
+S
+#1766
+Dragon's Realm Armoury~
+   Somehow transported here from the far away land of Dragon's Realm, the Quel
+had to learn to make his living here in Tsim Egalliv.  An armoury seems quite
+appropriate, considering its proprietor.  Armor of all shapes, sizes, and types
+surrounds you, filling your nostrils with the odor of leather and polished
+metal.    
+~
+17 144 0
+D0
+~
+~
+0 0 1742
+S
+#1767
+The Butcher~
+   The inner room of this building is spattered with blood and gore.  Numerous
+carcasses hang limply from the ceiling.  A glass case displays prime cuts of
+beef and ham.  While this is obviously the butcher's shop, somehow the site of
+it leaves you feeling less than hungry.    
+~
+17 16 0
+D1
+~
+~
+0 0 1745
+S
+#1768
+The Craft Shop~
+   The soothing scent of leather and wood drifts around this small shop.  
+Shelves on one side of the room are filled with leather and wood working tools.
+In bins opposite, there are many different bits of leather, wood, and metal,
+all waiting to be made into strange and exciting new items.  In a barrel in the
+corner, long staves of various kinds of wood wait for someone to buy them.  A
+shop with scope for the imagination.    
+~
+17 152 0
+D3
+~
+~
+0 0 1747
+S
+#1770
+Diviner Drive~
+   Here is the beginning of Diviner Drive.  The street leads out of the
+commercial district of Mist and into the more residential area.  Small cottages
+line both sides of the street, fading in and out of the ever-moving mist like
+ghost houses.    
+~
+17 0 0
+D1
+~
+~
+0 0 1771
+D3
+~
+~
+0 0 1708
+S
+#1771
+Diviner Drive~
+   Diviner Drive continues to wend its way among the myriad gardens and homes
+here.  However, directly to the north is a looming stone building that greatly
+contrasts with the thatch-covered cottages that predominate in the village.  
+What could the building be?  To the far west is Sorcery Street.    
+~
+17 8192 0
+D3
+~
+~
+0 0 1770
+S
+#1772
+Secret Room~
+   Somehow, you've stumbled into a secret room!  Water drips slowly down the
+walls, creating strange echos.  Torchlight flickers eerily on the damp walls,
+creating bizarre shadows.  Smoke drifts slowly through the small room.  In the
+exact center of this tiny chamber lies a still pool.  Rather than the room
+being reflected in the still waters, however, a columned city shows clearly.  
+How strange...    
+~
+17 5506045 0
+D5
+~
+~
+0 0 145
+S
+#1793
+The Opinion Room~
+   This is a room bare of all furnishings but a single bulletin board.  Its
+hard, cold walls encourage you to express your opinion quickly and concisely,
+and then get out.  For while everyone is willing to hear your opinion, they
+don't need to hear three pages worth of stuff.  Also remember that swearing
+isn't necessary to get your point across.    
+~
+17 28 0
+D1
+~
+~
+0 0 1734
+S
+#1794
+&wThe Temple of the &rFirebyrd&n~
+   Tall, graceful ionic columns rise majestically in four spots around the
+large, airy room, supporting the tiled ceiling.  Beautiful white and grey
+marble, smoothed to a silken finish, makes up the floor.  Sculpted murals seem
+to smile down on you from the walls.  In each corner of the square-shaped
+chamber lies a short pedestool, empty.  In the center of the room, a lovely
+fountain with water shooting from the mouth of a magnificent bird tinkles
+quietly.    
+~
+17 2359388 0
+S
+#1795
+OPEN ROOM~
+Empty~
+17 264792 0
+S
+#1796
+OPEN ROOM~
+Empty~
+17 268928 0
+S
+#1797
+OPEN ROOM~
+Empty~
+17 277084 0
+S
+#1798
+OPEN ROOM~
+Empty~
+17 270428 0
+S
+#1799
+The Czar's Tower~
+   You stand at the very top of the highest tower in the Czar's palace.  In
+front of you is a little door, which you open and go though.  Before you is a
+beautiful view, of all the lands, stretching from horizon to horizon.  Lakes,
+rivers, towns, all seem small and far away from this far up.  The wind rustles
+your hair, and makes you wish that YOU had the ability to fly.  But only the
+birds can do such a thing, and all the little people below you will never know
+of this strange longing you have.  Restraining yourself from a leap of fate off
+the edge, you go back inside the tower, and, sorrowfully, shut the door.    
+~
+17 272980 0
+S
+$~

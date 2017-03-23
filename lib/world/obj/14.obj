@@ -1,0 +1,228 @@
+#1410
+board~
+empty board 1410~
+There's nothing here.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1411
+contract board nowhere~
+&R--{&WN&wo&WW&where&R}--&n's Contract Board~
+This is the board the NoWhere's members sign their souls to.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1412
+board~
+extra board 3~
+A board.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1413
+board dark bulletin~
+the &RDark&n Bulletin Board~
+A deep black message board hangs on the wall.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1414
+board DOA bulletin~
+the DOA Bulletin Board~
+A board for clan members' messages hangs on the wall.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1415
+board~
+extra board 6~
+A board.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#1480
+scroll invisibility detect~
+&R--{&WD&wetect &WI&wnvisibility&R}--&n~
+A small scroll lays on the ground here.~
+~
+2 33603584 1
+100 19 0 0
+5 600 0
+#1481
+scroll sense life~
+&R--{&WS&wense &WL&wife&R}--&n~
+A large scroll lays on the ground here.~
+~
+2 64 1
+100 44 0 0
+10 8000 0
+#1482
+scroll sanctuary~
+&R--{&WS&wanctuary&R}--&n~
+A medium scroll lays here on the ground.~
+~
+2 33603584 1
+100 1 3 36
+3 12000 0
+#1487
+soulhunter scroll of identify~
+the &wS&Wo&wu&Wl&wH&Wu&wn&Wt&we&Wr&y Scroll of Identify&n~
+A &b|&wH&WU&wN&WT&wE&WR&b|&y scroll seems to fill your head with information.~
+~
+2 64 1
+100 0 0 0
+1 0 0
+#1488
+gourd bottomless~
+a bottomless gourd~
+A bottomless gourd sits here.~
+~
+17 65536 1
+999999999 999999999 0 0
+1000000004 0 0
+#1489
+soulhunter wand of invisibility~
+a &wS&Wo&wu&Wl&wH&Wu&wn&Wt&we&Wr&n &rWand of Invisibility&n~
+A &wS&Wo&wu&Wl&wH&Wu&wn&Wt&we&Wr&r Wand of Invisibility&y fades in and out of your vision.~
+~
+3 72 16385
+100 2 2 29
+2 4000 0
+#1490
+combiner #1 arena~
+Arena Token Combiner #1~
+Arena Token Combiner #1 sits here.~
+~
+25 0 0
+154 154 1492 0
+0 0 0
+E
+combiner #1 arena~
+   Use this combiner to turn arena tokens into a red token.  It will require
+six arena tokens.    
+
+Type - "combine #1 arena arena"
+
+   This will create a second combiner that creates a third.  Do not lose them.
+~
+#1491
+sign notice~
+a directional sign~
+A sign sits here waiting for someone to read it.~
+~
+13 0 0
+0 0 0 0
+10 0 0
+E
+sign direction notice~
+   If you have come here to get to the chessboard, know this: it has moved.  
+It is now 2s, 9e, 3n of DF.  Open the door and go through the window.    
+~
+#1492
+arena combiner #2~
+Arena Token Combiner #2~
+Arena Token Combiner #2 sits here.~
+~
+25 128 1
+154 154 1493 1
+1 0 0
+E
+combiner arena #2~
+Type - "combine #2 arena arena"
+
+   To make your third combiner.
+~
+#1493
+arena combiner #3~
+Arena Token Combiner #3~
+Arena Token Combiner #3 sits here.~
+~
+25 0 1
+154 154 100 1
+1 1 0
+E
+combine arena #3~
+Type - "combine #3 arena arena"
+
+   To make your red token.
+~
+#1494
+red combiner Ajak~
+Ajak the Red Token Combiner~
+Ajak, the Red Token Combiner, sits here.~
+~
+25 0 0
+100 100 144 0
+1 0 0
+E
+red combiner ajak~
+   Use this combiner to turn two red tokens into a cyan token.    
+
+Type - "combine ajak red red"
+~
+#1495
+cusko cyan combiner~
+Cusko the Cyan Token Combiner~
+Cusko, the Cyan Token Combiner, sits here.~
+~
+25 0 0
+144 144 143 0
+0 0 0
+E
+cusko cyan combiner~
+   Use this combiner to turn two cyan tokens into a blue token.    
+
+Type - "combine cusko blue blue"
+~
+#1496
+Iree combiner blue~
+Iree the Blue Token Combiner~
+Iree, the Blue Token Combiner, sits here.~
+~
+25 0 0
+143 143 142 0
+0 0 0
+E
+Iree combiner blue~
+   Use this combiner to turn two blue tokens into a platinum.
+
+Type - "combine iree blue blue"
+~
+#1497
+hunter clan box treasure chest~
+the &B|&wH&WU&wN&WT&wE&WR&B|&n Treasure Chest~
+The &B|&wH&WU&wN&WT&wE&WR&B|&n Treasure Chest waits for donations.  HINT HINT.~
+~
+15 0 0
+1000000 0 -1 0
+6 6500 0
+#1498
+fountain marble~
+a marble fountain~
+A lovely marble fountain bubbles merrily.~
+~
+23 0 0
+230 230 0 0
+5000 0 0
+E
+fountain marble~
+   The fountain's base is a thick marble square that provides a place for the
+weary traveler to sit.  Its rim is also wide enough to sit on comfortably.  As
+far as fountains go, this one is rather unimpressive, but there is quiet beauty
+in its pure white basin.    
+~
+#1499
+statue xuric~
+a statue of Xuric~
+A statue stands here, its color shifting between onyx and pearl.~
+~
+8 65992 16385
+0 0 0 0
+10 1 0
+$~

@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: spell_parser.c                                Part of CircleMUD *
 *  Usage: top-level magic routines; outside points of entry to magic sys. *
 *                                                                         *
@@ -91,17 +91,17 @@ char *spells[] =
   "group recall",
   "infravision",		/* 50 */
   "waterwalk",
-  "!UNUSED!",
-  "!UNUSED!",
-  "!UNUSED!",
-  "!UNUSED!",
+  "mana",
+  "meteor storm",
+  "arcane word",
+  "arcane portal",
   "!UNUSED!",
   "!UNUSED!",
   "!UNUSED!",
   "!UNUSED!",
   "!UNUSED!",			/* 60 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 65 */
-  "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 70 */
+  "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "meteor swarm",/* 70 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 75 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 80 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 85 */
@@ -127,8 +127,12 @@ char *spells[] =
   "sneak",
   "steal",
   "track",			/* 140 */
-  "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 145 */
-  "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 150 */
+  "second attack", 
+  "third attack",
+  "mount",
+  "riding",
+  "tame",
+  "statue", "taunt", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 150 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 155 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 160 */
   "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!", "!UNUSED!",	/* 165 */
@@ -389,12 +393,15 @@ int call_magic(struct char_data * caster, struct char_data * cvict,
   if (IS_SET(SINFO.routines, MAG_MANUAL))
     switch (spellnum) {
     case SPELL_CHARM:		MANUAL_SPELL(spell_charm); break;
+    case SPELL_MANA:    	MANUAL_SPELL(spell_mana); break;
     case SPELL_CREATE_WATER:	MANUAL_SPELL(spell_create_water); break;
     case SPELL_DETECT_POISON:	MANUAL_SPELL(spell_detect_poison); break;
     case SPELL_ENCHANT_WEAPON:  MANUAL_SPELL(spell_enchant_weapon); break;
     case SPELL_IDENTIFY:	MANUAL_SPELL(spell_identify); break;
     case SPELL_LOCATE_OBJECT:   MANUAL_SPELL(spell_locate_object); break;
     case SPELL_SUMMON:		MANUAL_SPELL(spell_summon); break;
+    case SPELL_ARCANE_WORD:	MANUAL_SPELL(spell_arcane_word); break;
+    case SPELL_ARCANE_PORTAL:	MANUAL_SPELL(spell_arcane_portal); break;
     case SPELL_WORD_OF_RECALL:  MANUAL_SPELL(spell_recall); break;
     }
 
@@ -555,7 +562,7 @@ int cast_spell(struct char_data * ch, struct char_data * tch,
 {
   char buf[256];
 
-  if (spellnum < 0 || spellnum > TOP_SPELL_DEFINE) {
+  if (spellnum <= 0 || spellnum > TOP_SPELL_DEFINE) {
     sprintf(buf, "SYSERR: cast_spell trying to call spellnum %d\n", spellnum);
     log(buf);
     return 0;
@@ -616,7 +623,7 @@ ACMD(do_cast)
   struct char_data *tch = NULL;
   struct obj_data *tobj = NULL;
   char *s, *t;
-  int mana, spellnum, i, target = 0;
+  int mana, spellnum, i, target = 0, known = 0;
 
   if (IS_NPC(ch))
     return;
@@ -642,7 +649,13 @@ ACMD(do_cast)
     send_to_char("Cast what?!?\r\n", ch);
     return;
   }
-  if (GET_LEVEL(ch) < SINFO.min_level[(int) GET_CLASS(ch)]) {
+  if(!IS_NPC(ch))
+    for(i=0, known=0; i < NUM_CLASSES && known == 0; i++)
+      if(SINFO.min_level[(int) i] < LVL_IMMORT && 
+        IS_SET(ch->player_specials->saved.classes_been, (1 << i)))
+           known = 1;
+  if (GET_LEVEL(ch) < SINFO.min_level[(int) GET_CLASS(ch)] && known == 0)
+  {
     send_to_char("You do not know that spell!\r\n", ch);
     return;
   }
@@ -862,6 +875,11 @@ void mag_assign_spells(void)
     unused_spell(i);
   /* Do not change the loop above */
 
+  spello(SPELL_ARCANE_WORD, 45, 30, 3, POS_STANDING,
+         TAR_IGNORE, FALSE, MAG_MANUAL);
+
+  spello(SPELL_ARCANE_PORTAL, 75, 60, 1, POS_STANDING, TAR_IGNORE, FALSE, MAG_MANUAL);
+
   spello(SPELL_ARMOR, 30, 15, 3, POS_FIGHTING,
 	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS);
 
@@ -967,6 +985,9 @@ void mag_assign_spells(void)
   spello(SPELL_MAGIC_MISSILE, 25, 10, 3, POS_FIGHTING,
 	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE);
 
+  spello(SPELL_METEOR_SWARM, 80, 50, 4, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE);
+
   spello(SPELL_POISON, 50, 20, 3, POS_STANDING,
 	TAR_CHAR_ROOM | TAR_NOT_SELF | TAR_OBJ_INV, TRUE, MAG_AFFECTS | MAG_ALTER_OBJS);
 
@@ -1005,6 +1026,8 @@ void mag_assign_spells(void)
   spello(SPELL_IDENTIFY, 0, 0, 0, 0,
 	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM, FALSE, MAG_MANUAL);
 
+  spello(SPELL_MANA, 0, 0, 0, 0,
+         TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_MANUAL);          
 
   /*
    * Declaration of skills - this actually doesn't do anything except
@@ -1022,5 +1045,10 @@ void mag_assign_spells(void)
   skillo(SKILL_SNEAK);
   skillo(SKILL_STEAL);
   skillo(SKILL_TRACK);
+  skillo(SKILL_MOUNT);
+  skillo(SKILL_RIDING);
+  skillo(SKILL_TAME);
+  skillo(SKILL_SECOND_ATTACK);
+  skillo(SKILL_THIRD_ATTACK);
 }
 

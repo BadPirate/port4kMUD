@@ -1,18 +1,7 @@
-FRENCH
-
-Don't you know how they kiss in France?? -- try it!
-#
-KISS
-
-Well can't you guess?
-#
-SMILE
-
-Whenever you feel like smiling...
 #
 SOCIALS
 
-Usage: <social> [<victim>]
+Usage: <social> <victim>
 
 Socials are commands used to show your affective state to others.  The
 actor, victim and bystanders may receive different messages.  Generally,

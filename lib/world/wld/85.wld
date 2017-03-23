@@ -1,0 +1,111 @@
+#8500
+Stairway to Flames~
+   The room is unbearably hot.  Practically as soon as sweat leaves your pores,
+it evaporates off your skin.  The air shimmers and waves from the searing
+inferno.  What could possibly survive down here?  The answer lies at the bottom
+of the stairs...  Dare you continue?    
+~
+85 262152 0
+D4
+~
+~
+0 0 5311
+D5
+~
+~
+0 0 8501
+S
+#8501
+Stairway to Flames~
+   The stairwell continues down, down, down forever.  There is no reason for
+any torch or light of yours, since the flames light the room.  The heat is
+blistering.  You fear that any metal you wear may melt and burn through your
+skin, or that you may spontaneously combust...  The air seems to kindle in your
+lungs with every breath.  You don't know how much more you can take...    
+~
+85 262152 0
+D4
+~
+~
+0 0 8500
+D5
+~
+~
+0 0 8502
+S
+#8502
+Bottom of the Stairs~
+   At the bottom of the stairs, nothing but leaping flames greet you.  The rock
+the stairs are made of begins to warp and bend.  It seems to be struggling to
+maintain its shape, to not melt under the heat.  Through the blaze, you can
+make out an exit to the north.  There seems to be a lot of fire there...    
+~
+85 262152 0
+D0
+~
+~
+0 0 8503
+D4
+~
+~
+0 0 8501
+S
+#8503
+The Fire Chamber~
+   This is the chamber of Fire.  The former residents of the Pyramid were
+trying to unearth this place, a long time ago.  The fires burn bright around
+you, but don't touch you.  They don't seem to burn, and the room is a pleasant,
+almost cool one.  Somehow this room is one with fire, and so the flames can't
+harm.  You hope they can't harm, anyway, because if one of these waves of flame
+even brushes you you'd be a charred corpse before you knew what hit you...    
+~
+85 262152 0
+D0
+~
+~
+0 0 8504
+D2
+~
+~
+0 0 8502
+S
+#8504
+The Inner Sanctum~
+   This is the very center of the Element of Fire's power...  Beneath the
+Pyramid anyway.  The energy radiates throughout the room, dazzlingly bright,
+almost blinding you.  A fleeting thought passes through your mind: If you could
+control the source of all this power...    
+~
+85 262152 0
+D2
+~
+~
+0 0 8503
+S
+#8505
+The Honeymoon suite~
+   This suite is done up quite nicely, it's got a hot tub, a wet bar, even a
+large heart shaped waterbed.  It is adivioulsy the honeymoon suite.  By the
+way, this is one of a few rooms in the mud that is IMMUNE to the PG rating that
+is there on the rest of the mud, so feel free (as it's also silent and VERY
+private) to do whatever you want in here.  You crazy lovebirds.    
+~
+85 2359708 0
+S
+#8506
+Smoke~
+Clan room for Smoke
+~
+85 262152 0
+S
+#8507
+&rFirebyrd's&n Trivia Room~
+   A stage faces a large, filled audience in this room.  On the stage are
+several chairs, just waiting to be filled with contestants.  On the wall in
+bright, gaudy letters are the words "&rFirebyrd's&n Trivia Game.  " You must be
+a lucky person (and hopefully smart too!  ) to be able to get on this
+prestigious game show.    
+~
+85 512 0
+S
+$~

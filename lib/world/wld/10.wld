@@ -1,0 +1,1442 @@
+#1000
+Waiting to Enter the &rArena&n~
+   &nThis is the place where players go before they enter the &rArena&n.  
+Looking around at those around you, you don't see enemies or friends.  All you
+see are people who will be one of two things to you in the next 10 minutes:
+Either your victims, or your killers.  Fight well, and you shall triumph and
+gain a much-sought prize.  Fail, and you will die.  You can almost feel Death
+hovering over your shoulder, waiting for you to make a critical mistake.  Good
+luck...    
+~
+10 1048720 0
+S
+#1001
+Arena Entrance~
+   &nThis is where brave (and sometimes foolhardy) combatants like yourself
+enter the &rArena&n.  Each doorway leading out of this room glows with a
+mystical light, and once you enter it you will end up in a different part of
+the arena.  Better hurry through before the other gladiators get TOO ready for
+you...    
+~
+10 1114264 0
+D0
+~
+~
+0 0 1003
+D1
+~
+~
+0 0 1005
+D2
+~
+~
+0 0 1004
+D3
+~
+~
+0 0 1006
+D5
+~
+~
+0 0 1002
+S
+#1002
+The Center of the &rArena&n~
+   &nThis room is the central hub of the wheel-shaped &rArena&n.  The few
+veterans of this place call it the Kill Zone.  It has this name for a reason,
+as you can plainly tell from the rotting remains of past fighters.  There are
+more corpses here than anywhere else, and the plain dark grey walls of the
+&rArena&n have become almost totally &Rred&n from the spraying blood of the
+vanquished.  You can go in all of the cardinal directions from here.  You can
+also make out something below you through a hole in the center of the floor.  
+It's dark through the hole but you seem to be able to see a ledge of some sort.
+~
+10 9502792 0
+D0
+~
+~
+0 0 1003
+D1
+~
+~
+0 0 1005
+D2
+~
+~
+0 0 1004
+D3
+~
+~
+0 0 1006
+D5
+~
+~
+0 0 1024
+S
+#1003
+&nThe Northern Hall~
+   &nThis hall's blood-spattered walls lead north, to a wall, and south, to the
+center.  You can also leave southeast and southwest.  A crushed skull with a
+look of agony on its face serves as a chilling reminder not to stay in one
+place for long...    
+~
+10 1114184 0
+D0
+~
+~
+0 0 1007
+D2
+~
+~
+0 0 1002
+D8
+~
+~
+0 0 1005
+D9
+~
+~
+0 0 1006
+S
+#1004
+&nThe Southern Hall~
+   &nThis hallway leads north and south.  You can feel the almost-palpable
+tension in the air...  The walls seem to be confining, closing in on you like
+the lid to your coffin.  You shake your head to clear it and listen closely for
+your fellow challengers.  South, you can see a wall.  North is the center of
+the &rArena&n.  You can also go northeast and northwest.    
+~
+10 1114184 0
+D0
+~
+~
+0 0 1002
+D2
+~
+~
+0 0 1010
+D6
+~
+~
+0 0 1005
+D7
+~
+~
+0 0 1006
+S
+#1005
+&nThe Eastern Hall~
+   &nThis is just a boring-looking hallway leading east and west...  
+Boring-looking, that is, until you notice the unusual pool of dried blood.  It
+looks as if some poor soul hit the ground and his head was hit with such force
+his blood and brains burst out the back of his skull...  You shiver as you
+realize that could very well happen to you.  You should probably get moving.  
+
+~
+10 1114184 0
+D1
+~
+~
+0 0 1008
+D3
+~
+~
+0 0 1002
+D7
+~
+~
+0 0 1003
+D9
+~
+~
+0 0 1004
+S
+#1006
+&nThe Western Hall~
+   &nA severed hand greets you in this hall, leaning against the south wall.  
+Eeww!  You stare at it in morbid curiosity.  Wait...  Did that hand just....  
+WAVE to you?  No, it couldn't have.  Yet it seemed...  You snap back to reality
+with a suppressed shudder.  You can't think of anything worse than being
+trapped in this gory &rArena&n, and then death comes to mind.  You can go east
+and west, or northeast and southeast.    
+~
+10 1114184 0
+D1
+~
+~
+0 0 1002
+D3
+~
+~
+0 0 1009
+D6
+~
+~
+0 0 1003
+D8
+~
+~
+0 0 1004
+S
+#1007
+&nNorth Hall~
+   &nThe hall leading north from the &rArena&n center stops here, at a
+grey-and-red- colored wall...  The grey comes from the &rArena&n's normal paint
+job, the red comes from long-since-spilled blood.  You can either go east or
+west, or south.    
+~
+10 1114184 0
+D1
+~
+~
+0 0 1011
+D2
+~
+~
+0 0 1003
+D3
+~
+~
+0 0 1014
+S
+#1008
+&nEast Hall~
+   &nThis is the end of the east-west hall running from the Kill Zone.  You
+scan around you, examining your surroundings...  Wait...  What was that noise?
+You listen closely...  You jump as you hear an agonized shriek in the distance.
+You begin to sweat.  You can go east no longer, but now south and north are
+open to you.  You pick a direction, hoping it's not towards the source of the
+scream.    
+~
+10 1114184 0
+D0
+~
+~
+0 0 1013
+D2
+~
+~
+0 0 1017
+D3
+~
+~
+0 0 1005
+S
+#1009
+&nWest Hall~
+   &nThis is the end of the western hall of the &rArena&n.  The feeling of
+paranoia is in the air, and you realize that around every corner, hiding in
+every shadow, a fellow gladiator could be lurking in wait to slaughter you.  
+You listen closely, and the adrenaline seems to heighten your senses.  You
+don't hear, smell or see anyone around you, but that doesn't mean all is
+safe...    
+~
+10 1114184 0
+D0
+~
+~
+0 0 1016
+D1
+~
+~
+0 0 1006
+D2
+~
+~
+0 0 1022
+S
+#1010
+&nSouth Hall~
+&nStrangely enough, the end of the south hallway seems to have avoided much
+of the combat that this &rArena&n has seen.  The carnage present everywhere else
+doesn't seem to be very present here.  You take slight comfort in that fact.
+Still, though, you don't want to add YOUR blood to this place.
+You can go east, west, or north back to the center.
+~
+10 1376320 0
+D0
+~
+~
+0 0 1004
+D1
+~
+~
+0 0 1019
+D3
+~
+~
+0 0 1020
+S
+#1011
+&nNortheast Wall~
+   &nThis is the northeast wall of the circular &rArena&n.  Compared to most
+other areas, this isn't visited much, and there seems to be less gore here than
+elsewhere.  You can go west to the northern hall, or southeast along the wall.
+~
+10 1114184 0
+D3
+~
+~
+0 0 1007
+D8
+~
+~
+0 0 1012
+S
+#1012
+&nNortheast Wall~
+   &nThis is the northeast wall of the circular &rArena&n.  Compared to most
+other areas, this isn't visited much, and there seems to be less gore here than
+elsewhere.  You can go northwest or southeast along the wall.    
+~
+10 1114184 0
+D7
+~
+~
+0 0 1011
+D8
+~
+~
+0 0 1013
+S
+#1013
+&nNortheast Wall~
+&nThis is the northeast wall of the circular &rArena&n.  Compared to most other
+areas, this isn't visited much, and there seems to be less gore here than elsewhere.
+You can go south to the eastern hall, or northwest along the wall.
+~
+10 1114184 0
+D2
+~
+~
+0 0 1008
+D7
+~
+~
+0 0 1012
+S
+#1014
+&nNorthwest Wall~
+   &nYou are wandering along the northwest wall.  The stench here is
+overpowering, apparently a Troll of some sort was disemboweled in this
+corridor...  You guess this because of the sickly-colored rotting entrails
+lying on the floor.  You think you should leave this hallway before you add
+your vomit to the pile.  You can go east to the north hall, or southwest along
+the wall.    
+~
+10 1114184 0
+D1
+~
+~
+0 0 1007
+D9
+~
+~
+0 0 1015
+S
+#1015
+&nNorthwest Wall~
+&nYou are wandering along a hallway running down the northwest wall of the &rArena&n.
+There is a slight odor coming from the northeast.  You're not sure if you want
+to see what it is...Your luck it'll just be another corpse.  You suddenly wonder
+if, someday, a challenger in this bloody battle will stumble on your eviscerated
+remains.  You certainly hope not...
+~
+10 1114184 0
+D6
+~
+~
+0 0 1014
+D9
+~
+~
+0 0 1016
+S
+#1016
+&nNorthwest Hall~
+   &nYou are wandering along a hallway running down the northwest wall of the
+&rArena&n.  This room looks as if a battle between two mages was fought here.
+There are black, charred spots on the wall, and faded splashes of all colors of
+the rainbow remain on the wall.  &rRed&n mixes with &bblue&n, &ggreen&n,
+&yyellow&n, &ccyan&n, &mviolet&n, and many others.  They look almost beautiful,
+except that those colors caused someone's death in a color spray.    
+~
+10 1114184 0
+D2
+~
+~
+0 0 1009
+D6
+~
+~
+0 0 1015
+S
+#1017
+&nSoutheast Wall~
+   &nYou are walking along the southeast hall of the &rArena&n.  This section
+of the &rArena&n seems unstable...  The walls are cracked, the ceiling has
+small holes in it, and the floor is covered with dust and debris.  It looks as
+though an earthquake happened here.  Perhaps you shouldn't stay here very long.
+If this collapses, it would be the end of you.    
+~
+10 1376328 0
+D0
+~
+~
+0 0 1008
+D9
+~
+~
+0 0 1018
+S
+#1018
+&nSoutheast Wall~
+   &nThis part of the hall has sustained the most damage.  The ceiling has
+nearly fallen off onto the floor, which is buried in rubble, and the walls have
+large fractures running down them.  You look up through the holes in the
+ceiling to see a &mdark violet&n sky with odd-shaped black clouds.  You have no
+idea where this &rArena&n is located.  Right now, though, the thing that
+matters is evading death and dismemberment.  You scan the area for your next
+fight.    
+~
+10 1114184 0
+D6
+~
+~
+0 0 1017
+D9
+~
+~
+0 0 1019
+S
+#1019
+&nSoutheast Wall~
+   &nThis is the hall that runs along the southeast wall.  You see some
+structural instabilities in the walls, and you notice cracks in the wall
+leading to the northeast.  You can go to the east to the southern hall, too.  
+~
+10 1114184 0
+D3
+~
+~
+0 0 1010
+D6
+~
+~
+0 0 1018
+S
+#1020
+&nSouthwest Wall~
+   &nThis is the hall that leads along the southwest side of the &rArena&n.  
+This is a very dark hall.  Anything could be lurking in the shadows here...  
+Your hair stands on end.  Goosebumps form on your arms, and you begin glancing
+repeatedly behind you.  You want to check every direction, but you fear that
+when you look one way, something will get you from behind...  The hall gets
+lighter to the east, and darker to the northwest.    
+~
+10 1114184 0
+D1
+~
+~
+0 0 1010
+D7
+~
+~
+0 0 1021
+S
+#1021
+&nSouthwest Hall~
+   &nThis hallway is almost completely dark.  You can imagine thousands of
+different horrors unnamed waiting in the dark to kill you...  Not to mention
+those other fighters who want to obliterate you.  You shudder and shiver,
+feeling suddenly very cold...  You can escape the darkness to the southeast or
+the northwest.    
+~
+10 1114184 0
+D7
+~
+~
+0 0 1022
+D8
+~
+~
+0 0 1020
+S
+#1022
+&nSouthwest Hall~
+   &nThis is the hall that leads along the southwest side of the &rArena&n.  
+This is a very dark hall.  Anything could be lurking in the shadows here...  
+You begin to get goosebumps on top of goosebumps.  You want to check every
+direction at once, but you are terrified that if you look too long in one
+direction, something will gut you from behind...  The hall gets lighter to the
+north, and darker to the southeast.    
+~
+10 1114184 0
+D0
+~
+~
+0 0 1009
+D8
+~
+~
+0 0 1021
+S
+#1023
+Gladiator waiting room~
+   You stand here behind a large gate, looking at the other gladiators.  You
+can hear the voice of an important Roman senator explaining the story.    
+
+"A wise Roman general once ran into a group of barbarians who were resisting
+Roman influence.  But rather than lose men fighting these barbarians he sent his
+best spy to start rumors floating around their camp that would encourage rage 
+and jealousy, and sure enough, they soon began to squabble, and battle.  And in 
+the end only one was left, which the Roman army then enlisted as he was the only
+worthy fighter among the barbarians.  We have here today that battle."
+
+   As he finishes you hear the crowd go wild with anticipation of blood, and you
+prepare to fight, not to be part of the play, but to save your meager life!
+~
+10 24 0
+S
+#1024
+&nFalling!~
+   &nOops...  You seem to have taken a slight misstep.  You plummet down from
+the center of the &rArena&n into this dark shaft.  As you fall you can see less
+and less above you and more and more below...  It seems you will have a safe
+landing, if not a rough one.  You hold your breath and hope you don't land on
+your head...    
+~
+10 8388608 0
+D4
+~
+~
+0 0 1002
+D5
+~
+~
+0 0 1025
+S
+#1025
+&nThe Bottom~
+   &nYour landing wasn't TOO rough.  Your fall just bruised you.  You stand up
+and look about you.  Above you can just make out the center of the &rArena&n.
+The walls around you are circular, and the room you are in is round.  You don't
+seem to be able to climb the smooth walls upward, so it looks like you're stuck
+here.    
+~
+10 1114184 0
+D4
+~
+~
+0 0 1024
+S
+#1026
+Gladiator Ready Room~
+   You stand here behind a large gate, looking at the other gladiators.  You
+can hear the voice of an important Roman senator explaining the story.    
+
+"A wise Roman general once ran into a group of barbarians who were resisting
+Roman influence.  But rather than lose men fighting these barbarians he sent his
+best spy to start rumors floating around their camp that would encourage rage
+and jealousy, and sure enough, they soon began to squabble, and battle.  And in
+the end only one was left, which the Roman army then enlisted as he was the only
+worthy fighter among the barbarians.  We have here today that battle."
+
+   As he finishes you hear the crowd go wild with anticipation of blood, and you
+prepare to fight, not to be part of the play, but to save your meager life!
+~
+10 1114136 0
+S
+#1027
+Outside the entry gates~
+   Here you stand, thrown into the sunlight.  The cheering reaches an all time
+peak as you and the other gladiators stumble out into the arena.  You can now
+see that it is square in shape, with little hatches in the corners and a large
+walkway around the outside where daring citizens can get a closer look at the
+risk of being too close.    
+~
+10 65540 1
+D0
+~
+~
+0 0 1058
+D1
+~
+~
+0 0 1028
+D2
+~
+~
+0 0 1030
+S
+#1028
+Center of Arena~
+   You are standing in the dead center of this glorious arena, from here you
+can see almost all around you.  Standing here is both an advantage as well as a
+disadvantage as people can see you as well.    
+   There are a number of holes in the ground that lead to the lions pit, so you have to watch your step here or you might fall in.  What strikes you as unusual is the gladiator who is managing to climb out of one of the holes.  The one in 
+the very center.  You make a mental note that in the middle of the lions den 
+there might be a way out!
+~
+10 8454148 0
+D0
+~
+~
+0 0 1059
+D1
+~
+~
+0 0 1029
+D2
+~
+~
+0 0 1031
+D3
+~
+~
+0 0 1027
+D5
+~
+~
+0 0 1053
+D6
+~
+~
+0 0 1060
+D7
+~
+~
+0 0 1058
+D8
+~
+~
+0 0 1032
+D9
+~
+~
+0 0 1030
+S
+#1029
+The East Wall~
+   As you walk along the wall here, you get spit on by some of the young boys
+running around the area marked above as "Dangerous".  You wonder why, seeing as
+the walls are higher than you think you could every climb, without some kind of
+boost.  But the children still run away like cowards after spitting on you,
+hoping that you won't notice their faces.    
+~
+10 65540 0
+D0
+~
+~
+0 0 1060
+D2
+~
+~
+0 0 1032
+D3
+~
+~
+0 0 1028
+S
+#1030
+The Southwest Corner~
+   You try to walk carefully to avoid lots of pits, but it's going to take a
+feat of dexterity to avoid falling in them.  The lions look exceptionally
+hungry today and you are not eager to feed them.  You look down just in time to
+avoid falling in one of the pits.  As your stomach turns from the sight of well
+picked human bones.    
+~
+10 8454148 1
+D0
+~
+~
+0 0 1029
+D1
+~
+~
+0 0 1031
+D5
+~
+~
+0 0 1049
+D6
+~
+~
+0 0 1028
+S
+#1031
+The South Wall~
+   This wall is a lot like the other 3, but the primary difference is the
+somewhat grotesque pile of bodies that is piled against it.  Although the
+thought bothers you, you realize that there might be a way onto the side, and
+perhaps have a better chance at tackling an unaware opponent.  Or at least
+killing those little kids who spit at you.
+~
+10 65540 1
+D0
+~
+~
+0 0 1028
+D1
+~
+~
+0 0 1032
+D3
+~
+~
+0 0 1030
+D4
+~
+~
+0 0 1043
+S
+#1032
+The Southeast Corner~
+   You try to walk carefully to avoid lots of pits, but it's going to take a
+feat of dexterity to avoid falling in them.  The lions look exceptionally
+hungry today and you are not eager to feed them.  You look down just in time to
+avoid falling in one of the pits.  As your stomach turns from the sight of well
+picked human bones.    
+~
+10 8454148 1
+D0
+~
+~
+0 0 1029
+D3
+~
+~
+0 0 1031
+D5
+~
+~
+0 0 1051
+D7
+~
+~
+0 0 1028
+S
+#1033
+The Northwest Corner of the Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1034
+D2
+~
+~
+0 0 1038
+D5
+~
+~
+0 0 1058
+S
+#1034
+Along the North Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1035
+D3
+~
+~
+0 0 1033
+D5
+~
+~
+0 0 1058
+S
+#1035
+Along the North Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1036
+D3
+~
+~
+0 0 1034
+D5
+~
+~
+0 0 1059
+S
+#1036
+Along the North Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1037
+D3
+~
+~
+0 0 1035
+D5
+~
+~
+0 0 1060
+S
+#1037
+The Northeast Corner of the Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D2
+~
+~
+0 0 1045
+D3
+~
+~
+0 0 1036
+D5
+~
+~
+0 0 1060
+S
+#1038
+Along the West Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1033
+D2
+~
+~
+0 0 1039
+D5
+~
+~
+0 0 1058
+S
+#1039
+Along the West Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1038
+D2
+~
+~
+0 0 1040
+D5
+~
+~
+0 0 1027
+S
+#1040
+Along the West Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1039
+D2
+~
+~
+0 0 1041
+D5
+~
+~
+0 0 1030
+S
+#1041
+Southwestern Corner of Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1040
+D1
+~
+~
+0 0 1042
+D5
+~
+~
+0 0 1030
+S
+#1042
+Along the South Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1043
+D3
+~
+~
+0 0 1041
+D5
+~
+~
+0 0 1030
+S
+#1043
+Atop the Outer Rim~
+   This here appears to be the only place in the arena where combatants can
+actually get up onto the outer rim.  Which you notice is mostly just a slightly
+slanted surface so as to make the blood run-off cleanup a bit easier.  You spot
+a few citizens running around harrasing the gladiators.  Perhaps they hadn't
+noticed the way up yet...  Well they were warned not to stand on the rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1044
+D3
+~
+~
+0 0 1042
+D5
+~
+~
+0 0 1031
+S
+#1044
+Along the South Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D1
+~
+~
+0 0 1048
+D3
+~
+~
+0 0 1043
+D5
+~
+~
+0 0 1032
+S
+#1045
+Along the East Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1037
+D2
+~
+~
+0 0 1046
+D5
+~
+~
+0 0 1060
+S
+#1046
+Along the East Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1045
+D2
+~
+~
+0 0 1047
+D5
+~
+~
+0 0 1029
+S
+#1047
+Along the East Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1046
+D2
+~
+~
+0 0 1048
+D5
+~
+~
+0 0 1032
+S
+#1048
+The Southeast Corner of the Rim~
+   You walk around the Rim, looking for a good place or opportunity to spring
+on someone.  You appreciate the risk that the pesky citizens put up with to
+spit on you, because this rim, while splattered with blood is quite slick.  
+And you seem on the verge of losing your footing and falling at any move.  
+Every now and again you see a citizen walk by who seems quite shocked to see
+you.  Even as you recall a small boy comes near, see's you, and in a panic
+tries to run.  But you can tell the boy has already lost his footing, and he
+falls into the lion's den; such a sad mess.  They told them not to play on the
+rim.    
+~
+10 8454144 0
+D0
+~
+~
+0 0 1047
+D3
+~
+~
+0 0 1044
+D5
+~
+~
+0 0 1032
+S
+#1049
+The Southwest Corner of the Lions Den~
+   Oh god!  You've fallen right where you didn't want to be.  You can still see
+the swinging gate that you fell through, and it seems so adviously placed to
+you...  NOW.  Sounds like you better get out of here quick, or your going to
+have some very angry lions on your hands.  And maybe some of your own blood as
+well, but you would rather not think of that right now.    
+~
+10 1376256 0
+D0
+~
+~
+0 0 1052
+D1
+~
+~
+0 0 1050
+D6
+~
+~
+0 0 1053
+S
+#1050
+The South Wall of the Lions Den~
+   You scramble madly about, trying to avoid lions everywhere.  Through this
+section it gets darker as there are only support rafters and no open grates for
+more people to drop by.  At least you have one less direction to be worried
+about.  Now all you have to do is figure out a way out of this insane place.  
+~
+10 1376256 0
+D0
+~
+~
+0 0 1053
+D1
+~
+~
+0 0 1051
+D3
+~
+~
+0 0 1049
+S
+#1051
+The Southeast Corner of the Lions Den~
+   Oh god!  You've fallen right where you didn't want to be.  You can still see
+the swinging gate that you fell through, and it seems so adviously placed to
+you...  NOW.  Sounds like you better get out of here quick, or your going to
+have some very angry lions on your hands.  And maybe some of your own blood as
+well, but you would rather not think of that right now.    
+~
+10 1376256 0
+D0
+~
+~
+0 0 1054
+D3
+~
+~
+0 0 1050
+D7
+~
+~
+0 0 1053
+S
+#1052
+The Western Side of the Lions Den~
+   You scramble madly about, trying to avoid lions everywhere.  Through this
+section it gets darker as there are only support rafters and no open grates for
+more people to drop by.  At least you have one less direction to be worried
+about.  Now all you have to do is figure out a way out of this insane place.  
+~
+10 1376256 0
+D0
+~
+~
+0 0 1055
+D1
+~
+~
+0 0 1053
+D2
+~
+~
+0 0 1049
+S
+#1053
+A way out!~
+   It gets the hairiest through here, as most of the lions have created a small
+circle of carnage in the center and shepherded all the weaker gladiators into a
+small area, tearing at them one by one.  But this is actually good for you, as
+you notice that some of the smarter gladiators have piled the dead bodies in
+the center and have managed to gain a way up into the regular arena.  This is
+your way out!    
+~
+10 1376256 0
+D0
+~
+~
+0 0 1056
+D1
+~
+~
+0 0 1054
+D2
+~
+~
+0 0 1050
+D3
+~
+~
+0 0 1052
+D4
+~
+~
+0 0 1028
+D6
+~
+~
+0 0 1057
+D7
+~
+~
+0 0 1055
+D8
+~
+~
+0 0 1051
+D9
+~
+~
+0 0 1049
+S
+#1054
+The Eastern Wall of the Lions Den~
+   You scramble madly about, trying to avoid lions everywhere.  Through this
+section it gets darker as there are only support rafters and no open grates for
+more people to drop by.  At least you have one less direction to be worried
+about.  Now all you have to do is figure out a way out of this insane place.  
+~
+10 1376256 0
+D0
+~
+~
+0 0 1057
+D2
+~
+~
+0 0 1051
+D3
+~
+~
+0 0 1053
+S
+#1055
+The Northwest Corner of the Lions Den~
+   Oh god!  You've fallen right where you didn't want to be.  You can still see
+the swinging gate that you fell through, and it seems so adviously placed to
+you...  NOW.  Sounds like you better get out of here quick, or your going to
+have some very angry lions on your hands.  And maybe some of your own blood as
+well, but you would rather not think of that right now.    
+~
+10 1376256 0
+D1
+~
+~
+0 0 1056
+D2
+~
+~
+0 0 1052
+D8
+~
+~
+0 0 1053
+S
+#1056
+The Northern Wall of the Lions Den~
+   You scramble madly about, trying to avoid lions everywhere.  Through this
+section it gets darker as there are only support rafters and no open grates for
+more people to drop by.  At least you have one less direction to be worried
+about.  Now all you have to do is figure out a way out of this insane place.  
+~
+10 1376256 0
+D1
+~
+~
+0 0 1057
+D2
+~
+~
+0 0 1053
+D3
+~
+~
+0 0 1055
+S
+#1057
+The Northeast Corner of the Lions Den~
+   Oh god!  You've fallen right where you didn't want to be.  You can still see
+the swinging gate that you fell through, and it seems so adviously placed to
+you...  NOW.  Sounds like you better get out of here quick, or your going to
+have some very angry lions on your hands.  And maybe some of your own blood as
+well, but you would rather not think of that right now.    
+~
+10 1376256 0
+D2
+~
+~
+0 0 1054
+D3
+~
+~
+0 0 1056
+D9
+~
+~
+0 0 1053
+S
+#1058
+The Northwest Corner~
+   You try to walk carefully to avoid lots of pits, but it's going to take a
+feat of dexterity to avoid falling in them.  The lions look exceptionally
+hungry today and you are not eager to feed them.  You look down just in time to
+avoid falling in one of the pits.  As your stomach turns from the sight of well
+picked human bones.    
+~
+10 8454148 1
+D1
+~
+~
+0 0 1059
+D2
+~
+~
+0 0 1027
+D5
+~
+~
+0 0 1055
+D8
+~
+~
+0 0 1028
+S
+#1059
+The North Wall~
+   As you walk along the wall here, you get spit on by some of the young boys
+running around the area marked above as "Dangerous".  You wonder why, seeing as
+the walls are higher than you think you could every climb, without some kind of
+boost.  But the children still run away like cowards after spitting on you,
+hoping that you won't notice their faces.    
+~
+10 65540 1
+D1
+~
+~
+0 0 1060
+D2
+~
+~
+0 0 1028
+D3
+~
+~
+0 0 1058
+S
+#1060
+The Northeast Corner~
+   You try to walk carefully to avoid lots of pits, but it's going to take a
+feat of dexterity to avoid falling in them.  The lions look exceptionally
+hungry today and you are not eager to feed them.  You look down just in time to
+avoid falling in one of the pits.  As your stomach turns from the sight of well
+picked human bones.    
+~
+10 8454148 1
+D2
+~
+~
+0 0 1029
+D3
+~
+~
+0 0 1059
+D5
+~
+~
+0 0 1057
+D9
+~
+~
+0 0 1028
+S
+#1061
+Waiting Room~
+   The walls are covered in various weapons.  Swords, daggers, maces, weapons
+like you have never seen before.  Some of the weapons have blood dried up on
+the ends.  Your heart starts beating faster as you realize your about to die in
+the &rARENA&n.    
+~
+10 1114136 0
+S
+#1062
+Entrance~
+   This is the entrance to the arena.  There was a door here from when you came
+in, but it is gone now.  All you see is blood, lining the walls, and floor.  
+When you try to walk your feet slip, you almost fall over, but you manage to
+stumble back to your feet.    
+~
+10 1376268 0
+S
+$~

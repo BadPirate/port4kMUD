@@ -1,0 +1,827 @@
+#100
+quest token special NOCHANGETHIS red~
+a &rRed&n Quest Token~
+A &rRed&g quest token is here.~
+~
+12 2097152 1
+0 0 0 0
+0 1000000 0
+#101
+ring diamond big fat~
+a big fat diamond ring~
+A big fat diamond wedding ring is lying on the ground (I bet you the husband lost it)~
+~
+11 9 3
+0 0 0 0
+0 10000000 0
+A
+6 25
+A
+8 30
+#102
+sleek smoking jacket pocket~
+a smoking jacket~
+A sleek smoking jacket is lying on the ground here~
+~
+15 0 9
+0 0 0 0
+0 0 0
+#103
+necklace power jaxom~
+Jaxom's Necklace of Power~
+Jaxom's Necklace of Power is lying here. (VERY POWERFUL!)~
+~
+9 65609 5
+200 0 0 0
+0 0 0
+A
+18 56
+A
+19 40
+#104
+pass entry arena club special 102~
+an &rArena Club &wentry pass&n~
+An &rArena Club&g entry pass is lying here (WOW!)&n~
+~
+16 2097153 1
+0 0 0 0
+1 5000 0
+#105
+rum drink shot glass~
+some rum~
+Some rum is here in a large shot glass.~
+~
+17 65536 1
+2 2 3 0
+7 2 0
+#106
+sheep fluffy purple~
+a fluffy purple sheep~
+A fluffy purple sheep grazes on the green, green grass.~
+$n pushes the button and begins zinging off to another place.
+~
+12 0 0
+0 0 0 0
+0 0 0
+#107
+fountain~
+roman fountain~
+A large marble fountain, with the roman gods carved in it, sits here.~
+~
+23 0 1
+99000 99000 15 0
+99005 0 0
+#108
+whimsical green squirrel~
+a whimsical green squirrel~
+A Whimsical GREEN squirrel has been left here. (SPECIAL ITEM)~
+$n hug's $s whimsical green squirrel and the warmth rejuvinates him.
+~
+8 64 16385
+0 0 0 0
+2 1500000 0
+A
+13 50
+A
+14 50
+A
+12 50
+#109
+The mappers key~
+the mappers key~
+The mappers key lies here.~
+~
+18 65664 16385
+0 0 0 0
+0 0 0
+#110
+pass morphing~
+a pass of morphing~
+A pass of morping is lying here.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+pass morphing~
+   Give this to jaxom to be morphed into whatever creature you want to be,
+until death, you quit, or type return.    
+~
+#111
+ring strength~
+a ring of strength~
+A ring of strength is here.~
+~
+11 0 16387
+0 0 0 0
+1 50000 0
+A
+1 2
+#112
+ring intelligence~
+a ring of intelligence~
+A ring of intelligence is lying here.~
+~
+11 0 3
+0 0 0 0
+1 40000 0
+A
+3 2
+#113
+ring enlightenment~
+a ring of enlightenment~
+A ring of enlightenment is lying here.~
+~
+11 0 3
+0 0 0 0
+1 30000 0
+A
+4 2
+#114
+ring trickery~
+a ring of trickery~
+A ring of trickery is lying here.~
+~
+11 0 3
+0 0 0 0
+1 50000 0
+A
+2 2
+#115
+ring constitution~
+a ring of constitution~
+A small ring is lying on the ground here.~
+~
+11 0 3
+0 0 0 0
+1 50000 0
+A
+5 2
+#116
+tea dragon green~
+a &GGreen Dragon&n cup~
+A cup of expensive &GGreen Dragon&g tea sits here.~
+~
+17 0 1
+7 7 11 0
+12 1000 0
+E
+tea dragon green~
+   Green dragon tea has a rich green color.  Its smell reminds many people of
+spring.  It is served in a small, red clay cup.    
+~
+#117
+tea black~
+a cup~
+A cup of black tea steams quietly.~
+~
+17 0 1
+8 8 11 0
+13 40 0
+E
+tea black~
+   The tea is a rich brown instead of black.  It smells woodsy and fresh.  The
+tea is served in a plain, orange clay cup.    
+~
+A
+17 -20
+A
+18 3
+A
+19 4
+#118
+pass portal 118~
+a mystical portal pass~
+A mystical portal pass is lying on the ground here.~
+~
+16 1 1
+0 0 0 0
+1 20000 0
+#119
+coffee black~
+a mug~
+A mug of black coffee perches sinisterly on a flat surface.~
+~
+17 0 1
+10 10 12 0
+15 50 0
+E
+coffee black~
+   The mug is thick to keep the coffee scalding hot.  The coffee itself is so
+black that it could eat a hole through your stomach and still have enough umph
+left to kill your liver.  It will certainly wake the dead.  Whether or not the
+dead wish to be waken is another story.    
+~
+#120
+cookie shortbread~
+a shortbread cookie~
+A little golden cookie sits on ground getting dirty and icky.~
+~
+19 0 1
+6 0 0 0
+3 10 0
+E
+cookie shortbread~
+   The little golden cookie is shaped into a leaf.  It smells slightly minty.
+  
+~
+#121
+ore mithril~
+some mithril ore~
+Some mithril ore is lying here.~
+~
+8 0 1
+0 0 0 0
+4 1000 0
+#122
+mitril sword~
+a mithril sword~
+A shiny mithril sword is lying here on the ground.~
+~
+5 1056768 24577
+1 3 6 3
+20 5000 0
+A
+19 1
+#123
+mithril chainmail~
+some mithril chainmail~
+Some mithril chainmail is stacked in a heap here.~
+~
+9 1024 9
+6 0 0 0
+20 5000 0
+#124
+pastry meat~
+a meat pastry~
+A fluffy pastry that smells of meat is lying here.~
+~
+19 0 1
+18 0 0 0
+4 120 0
+E
+pastry meat~
+   The crust is a flaky golden brown.  The smell of meat, spices, and onions
+drifts up from the hot pastry and incites hunger in empty bellies.    
+~
+#125
+sword fenris * wolf~
+&ra sword of the Fenris Wolf&n~
+&rA sword of the Fenris Wolf is here. *&g~
+~
+5 1090 8193
+0 3 6 3
+18 10000 0
+A
+19 2
+A
+23 5
+#126
+fangs dameon's~
+&rDa&Rme&ron&R's &wFA&WN&wGS&n~
+Ouch!  Dameon's fangs are lying here, what is he supposed to eat with now?~
+~
+5 2191368 8193
+0 10 6 10
+16 2000000 0
+E
+fang dameon~
+&wLong, pearly, and sharp!  Perfect, just like the person whose mouth they
+belong in.  Don't they just make you want to reach out and bite someone?  &n
+~
+A
+17 -40
+A
+18 6
+A
+19 6
+#127
+pastry bean~
+a bean pastry~
+A pipping hot pastry cools down on the ground.~
+~
+19 0 1
+20 0 0 0
+5 100 0
+E
+pastry bean~
+   The flaky pastry is stuffed with a sweet, mashed bean paste.  A delicious
+and healthy treat.    
+~
+#128
+pastry fruit peach~
+a fruit pastry~
+A pastry that smells of peaches has been dropped on the ground.~
+~
+19 0 1
+14 0 0 0
+4 140 0
+E
+pastry peach fruit~
+   The flaky pastry has been filled with peaches and cinnamon.  The syrup leaks
+through a crack in the pastry.  It smells delicious.    
+~
+#129
+cleaner toilet rubber~
+a rubber &wtoilet cleaner&n~
+Laying here is a dirty old rubber toilet cleaner.  Yuck!~
+~
+5 29768 8193
+0 2 3 0
+30 3 0
+A
+17 -40
+A
+18 6
+A
+19 6
+#130
+axe trium clan~
+&MA &CTriumvirate &MClan Battle Axe&n   *~
+A &CTriumvirate &MClan&n Battle Axe lies on the ground here. ~
+~
+5 65608 8193
+0 8 5 6
+16 1000000 0
+A
+18 4
+A
+19 4
+A
+17 -20
+#131
+armor trium toga~
+&MAn Official Clan &CTriumvirate &MToga&n  *~
+An official &MClan &CTriumvirate &MToga&n is lying on the ground here.~
+~
+9 64 9
+11 0 0 0
+10 100000 0
+A
+18 2
+A
+19 2
+A
+6 -2
+#133
+axe trium clan~
+&MCeres &CTriumvirate &MClan Battle Axe&n  *~
+A &CTriumvirate &MClan&n Battle Axe lies on the ground here. ~
+~
+5 65608 8193
+0 8 5 6
+16 1000000 0
+A
+18 8
+A
+19 8
+A
+17 -20
+#134
+potion restoration *~
+a potion of restoration~
+A potion of restoration lies here. (QUEST ITEM)~
+$n glows with an eerie ora.
+~
+10 0 1
+106 28 28 28
+0 0 0
+#135
+drumstick turkey~
+a turkey drumstick~
+A fat juicy turkey drumstick lies here.~
+~
+19 128 26629
+24 0 0 0
+2 10 0
+A
+10 100
+A
+6 18
+A
+1 -18
+#136
+bfs big fucking sword~
+tHE BFS~
+The BFS (Big Something Sword) lies here.~
+~
+5 259 8193
+2147483647 2147483647 20 10
+0 2147483647 0
+A
+14 100
+A
+12 100
+A
+13 100
+A
+17 -100
+A
+1 30
+A
+5 30
+#137
+bungie cord wand snap~
+a bungie cord~
+A long bungie cord is here ready to snap people back to reality.~
+$n pulls back a bungie cord and lets it fly.
+~
+3 0 1
+100 5 5 42
+3 50000 0
+#138
+towers key~
+the towers key~
+The key to the tower lies here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#139
+potion heal~
+a healing potion~
+A healing potion full of a VERY thick liquid is here.~
+$n closes holds $s nose and closes $s eyes, and takes a drink.
+~
+10 0 1
+75 28 15 11
+10 5000 0
+#140
+puff dragon sword *~
+the Puff Sword~
+The &mPUFF&g sword lies here.~
+~
+5 64 8193
+1000 1 1 8
+10 10000 0
+A
+18 50
+#141
+heart of karn silver golem *~
+the heart of karn~
+The &rHeart&g of Karn the &nSilver&g Golem~
+~
+11 64 13
+0 0 0 0
+10 0 0
+A
+20 100
+A
+22 100
+A
+12 20
+A
+13 20
+A
+3 2
+A
+2 -7
+#142
+platinum quest token special *~
+a &nPLATINUM&n quest token~
+&gA &nPLATINUM&g quest token lies here.~
+~
+12 2097152 1
+0 0 0 0
+1 8000000 0
+#143
+blue quest token special *~
+a &bblue&n quest token~
+A &bBlue&g Quest Token is here.~
+~
+12 2097152 1
+0 0 0 0
+1 4000000 0
+#144
+cyan quest token special *~
+a &cCyan&n Quest Token~
+A &cCyan&g Quest Token is here.~
+~
+12 2097152 1
+0 0 0 0
+1 2000000 0
+#145
+dagger newbie~
+an overpriced newbie dagger~
+A REALLY expensive newbie dagger is here. (someone got ripped off)~
+~
+5 65 24577
+0 1 4 11
+0 1500000 0
+A
+19 1
+#146
+see invis wand flute bard~
+a bard's flute of invis~
+A beautiful flute for Bard's is sitting here. (see invis)~
+~
+3 46198786 16389
+100 5 5 19
+5 1000 0
+#147
+walking staff scout bless~
+a walking staff of bless~
+The scouts walking staff. (bless)~
+~
+4 29421888 16393
+100 5 5 3
+3 5000 0
+#148
+paladin cross sanctuary~
+a paladins cross of sanctuary~
+A paladins cross is lying here. (sanctuary)~
+~
+4 58781760 16385
+100 5 5 36
+2 10000 0
+#149
+vampyre vampire blood rite invisibility~
+Vampyre's blood rite of invisibility~
+Vampyre's blood rite is here. (invisibility)~
+   $n begins chanting, blood seems fresh in $s mouth as he looks to the sky
+you notice two long fangs...    
+~
+3 54587456 16385
+100 10 10 29
+2 2000 0
+#150
+wand fireball mage~
+Mage's wand of Fireball~
+A Mages wand is here. (fireball)~
+~
+3 62971968 16385
+1000 10 10 26
+1 5000 0
+#151
+cleric staff cure light~
+a clerics staff of cure light~
+A Cleric's Staff is here.  (cure light)~
+~
+4 62967872 16385
+100 5 5 16
+4 10000 0
+#152
+thieves theif scroll destructive flee~
+a thieves scroll of destructive flee~
+A theives scroll of destructive flee is here. (earthquake group recall)~
+~
+2 62959680 1
+50 23 2 42
+3 20000 0
+#153
+french tickler~
+a french tickler~
+A french tickler lies here in all it's destructive uselessness~
+~
+5 0 8193
+0 0 0 11
+0 0 0
+A
+19 -100
+A
+18 -100
+#154
+arena ear token~
+an arena token~
+The bloody ear of someone lies here, &rARENA TOKEN&g~
+~
+12 2097152 1
+0 0 0 0
+1 100 0
+#155
+grassy green potion mana~
+a &gGrassy Green&n Potion~
+Some sort of a potion with a light green fluid inside lay here~
+~
+10 49216 1
+25 52 0 0
+5 1000 0
+#156
+sky blue mana potion~
+a &cSky Blue&n Potion~
+A lightly blue colored potion sits on the ground here~
+~
+10 0 1
+50 52 0 0
+7 1750 0
+#157
+potion colors~
+a Potion of many &gC&wo&ml&bo&yr&rs&n~
+A large, rainbow colored potion rests on the ground~
+~
+10 0 1
+100 52 52 52
+10 100000 0
+#158
+cap jester~
+a Jester's Cap~
+A strange cap with bells on it lies here.~
+~
+9 65600 17
+20 0 0 0
+2 50 0
+A
+13 25
+A
+19 1
+A
+6 3
+#159
+mace~
+a mace~
+A mace lies here.~
+~
+5 0 8193
+0 2 3 5
+7 0 0
+#160
+scroll runes seeing~
+a scroll inscribed with runes of seeing~
+A scroll lies here, rolled up and unused.~
+~
+2 16 1
+75 19 0 0
+0 20000 0
+#196
+Striker bag tricks~
+&gStriker&n's&b Bag &ro' &cTricks&n~
+A small bag lies here, discarded.~
+~
+15 0 16385
+2147483647 5 -1 0
+0 0 0
+#197
+answer sheet striker~
+Striker's Answer Sheet~
+A sheet of paper is lying here.  Maybe Striker dropped it?~
+~
+12 0 1
+0 0 0 0
+0 0 0
+E
+I~
+Man.
+~
+E
+II~
+The stars.
+~
+E
+III~
+Tomorrow.
+~
+E
+IV~
+A shoe.
+~
+E
+V~
+The letter E.
+~
+E
+VI~
+A watermelon.
+~
+E
+VII~
+An egg.
+~
+E
+VIII~
+A coffin.
+~
+E
+IX~
+The catcher and the umpire.
+~
+E
+X~
+Ten minutes.
+~
+E
+XI~
+Nothing.
+~
+#198
+book riddles striker~
+Striker's Book of Riddles~
+A book of riddles lies here, gathering mold.~
+~
+12 0 16385
+0 0 0 0
+1 0 0
+E
+riddles book~
+   It's a book of brain-twisting, thought-sucking riddles.  Some of these are
+quite puzzling, so if you start to feel faint, STOP THINKING!    
+Read the number of the riddle you want to test your wits against.
+~
+E
+one 1~
+   What walks on four legs in the morning, two in the afternoon, and one in the
+evening?    
+~
+E
+two 2~
+At night they come without being fetched.
+By day they are lost without being stolen.
+~
+E
+three 3~
+I never was, am always to be,
+No one ever saw me, nor ever will,
+And yet I am the confidence of all,
+To live and breathe on this terrestrial ball.
+~
+E
+four 4~
+Runs over fields and woods all day
+Under the bed at night sits not alone
+With long tongue hanging out,
+Waiting for a bone.
+~
+E
+five 5~
+At the beginning of eternity
+At the end of time and space
+At the beginning of every end
+At the end of every place
+~
+E
+six 6~
+There was a green house.
+Inside the green house there was a white house.
+Inside the white house there was a red house.
+Inside the red house there were lots of babies.
+~
+E
+seven 7~
+A box without key, hinge, or lid
+Yet inside golden treasure is hid.
+~
+E
+eight 8~
+The man who built it does not want it.
+The man who bought it does not need it.
+The man who needs it does not know it.
+What is it?
+~
+E
+nine 9~
+   A man leaves home and makes three left turns.  Upon returning home he
+discovers only two men, both of them in masks.  Who are these men?    
+~
+E
+ten 10~
+   If it takes ten cats to kill ten rats in ten minutes, how long will it take
+one hundred cats to kill one hundred rats?    
+~
+E
+eleven 11~
+What lives forever, and if you eat it, you'll die?
+~
+#199
+book journal dymus~
+Dymus' Journal~
+A dull, boring, uninteresting-looking book lies here.~
+~
+12 0 16385
+0 0 0 0
+1 0 0
+E
+book entry entries journal dymus~
+You can make out multiple entries in a hastily scrawled, error-ridden style of writing.
+[Read the number of the entry you wish to read.]
+~
+E
+one 1~
+   6.  2.  00- Daggerfall finally back up.  Idea for new clan: Apocalypse.  
+Between myself, Jamie, Derrick, and Brodie, we've come up with a dragon-based
+clan.  We'll begin obtaining funds at once.    
+~
+E
+two 2~
+   6.  24.  00- Finally.  Wyvern floor started.  Working on shop/keeper and
+healer.  Brodie stepped down, more concerned with immortal business.  Replaced
+him with Eric.  Plans basically unaltered.    
+~
+E
+three 3~
+   7.  3.  00- Wyvern floor finished.  Basement started, have basement and
+library but no librarian.  Have Dragon floor finished, but no weapon in shop.
+Wyvern has healer, shopkeeper and weapon.  No work on Wyrm yet.    
+~
+E
+four 4~
+   7.  10.  00- Brodie has added 12 rooms, 2 healers, 1 weapon, 1 armor, 1
+fountain, 1 shopkeeper, and all clan EQ.  His mortal has been added to clan,
+also.  Possible promotion in future.  Clan funds continue to fluctuate due to
+high spending and midlevel accumulation.    
+~
+E
+five 5~
+   7.  11.  00- Getting frustrated.  No funds are coming in so far.  With armor
+and weapon and quest improves, no donations are being made.  Planning to wipe a
+lot of lower members and transform clan into elite clan.    
+~
+$~

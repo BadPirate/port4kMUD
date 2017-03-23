@@ -42,7 +42,34 @@ void mobile_activity(void)
   for (ch = character_list; ch; ch = next_ch) {
     next_ch = ch->next;
 
-    if (!IS_MOB(ch) || FIGHTING(ch) || !AWAKE(ch))
+    if (!IS_MOB(ch) || !AWAKE(ch))
+      continue;
+
+    /* Check to see if they should cast some spells */
+    for(obj = ch->carrying; obj; obj = obj->next_content)
+      if(GET_OBJ_TYPE(obj) == ITEM_MOBSPELL && number(1,GET_OBJ_VAL(obj,1)) == 1)
+      {
+        WAIT_STATE(ch, PULSE_VIOLENCE);
+        switch(GET_OBJ_VAL(obj,0))
+        {
+          case 1: cast_spell(ch, ch, NULL, GET_OBJ_VAL(obj,2)); break; // Cast Self
+          case 2:  // Cast Someone in the room
+            found = FALSE;
+            for(vict = world[ch->in_room].people; vict && !found; )
+              if(!IS_NPC(vict) && CAN_SEE(ch,vict) && !PRF_FLAGGED(vict, PRF_NOHASSLE) &&
+                 !(MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict)))
+                found = TRUE;
+              else
+                vict=vict->next_in_room;
+            if(found)
+              cast_spell(ch, vict, NULL, GET_OBJ_VAL(obj,2)); break;
+          case 3: // Cast Whomever their fighting with
+            if(FIGHTING(ch))
+              cast_spell(ch, FIGHTING(ch), NULL, GET_OBJ_VAL(obj,2)); break;
+        }
+      }
+
+    if (FIGHTING(ch))
       continue;
 
     /* Examine call for special procedure */
@@ -57,6 +84,7 @@ void mobile_activity(void)
 	  continue;		/* go to next char */
       }
     }
+
     /* Scavenger (picking up objects) */
     if (MOB_FLAGGED(ch, MOB_SCAVENGER) && !FIGHTING(ch) && AWAKE(ch))
       if (world[ch->in_room].contents && !number(0, 10)) {

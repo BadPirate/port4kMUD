@@ -1,0 +1,98 @@
+Wed Aug 12 21:47:22 :: Debug requested by user
+
+Debug requested by: Jaxom
+Debug request type: -GLOBAL VARIABLES-
+
+-CLAN STATUS-
+
+Clan # | Status
+-------|-------
+  100  | 0    
+  200  | 0    
+
+
+Debug request type: -CROSS REFERENCE-
+
+Clan # | Index
+-------|------
+100    | 0
+200    | 1
+
+2 valid records, 9997 empty records.
+
+Debug request type: -CLAN EDIT NODES-
+
+Node # | Clan # | Mode   | Owner
+-------|--------|--------|-------------------
+
+0 nodes used, 10 free nodes.
+
+Wed Aug 12 22:00:30 :: Debug requested by user
+
+Debug requested by: Jaxom
+Debug request type: -GLOBAL VARIABLES-
+
+-CLAN STATUS-
+
+Clan # | Status
+-------|-------
+  100  | 0    
+  200  | 0    
+
+
+Wed Aug 12 22:00:33 :: Debug requested by user
+
+Debug requested by: Jaxom
+Debug request type: -GLOBAL VARIABLES-
+
+-CLAN STATUS-
+
+Clan # | Status
+-------|-------
+  100  | 0    
+  200  | 0    
+
+
+Debug request type: -CROSS REFERENCE-
+
+Clan # | Index
+-------|------
+100    | 0
+200    | 1
+
+2 valid records, 9997 empty records.
+
+Debug request type: -CLAN EDIT NODES-
+
+Node # | Clan # | Mode   | Owner
+-------|--------|--------|-------------------
+
+0 nodes used, 10 free nodes.
+
+Mon Jul 26 14:06:13 :: Debug requested by user
+
+Debug requested by: Jaxom
+Debug request type: -GLOBAL VARIABLES-
+
+-CLAN STATUS-
+
+Clan # | Status
+-------|-------
+  100  | 0    
+
+
+Debug request type: -CROSS REFERENCE-
+
+Clan # | Index
+-------|------
+100    | 0
+
+1 valid records, 9998 empty records.
+
+Debug request type: -CLAN EDIT NODES-
+
+Node # | Clan # | Mode   | Owner
+-------|--------|--------|-------------------
+
+0 nodes used, 10 free nodes.
+

@@ -1,0 +1,742 @@
+/* ************************************************************************
+*   File: clan.c				    Addition to CircleMUD *
+*  Usage: Source file for clan-specific code                              *
+*                                                                         *
+*  Copyright (c) to Daniel Muller					  *
+*									  *
+************************************************************************ */
+
+/*
+ * This file attempts to concentrate all of the clan specific code for the
+ * implementation of clans in CircleMUD.  I've tried to mimic the code 
+ * style of the rest of CircleMUD's code, to make it easier for you to
+ * modify as needed.
+*/
+
+
+
+#include "conf.h"
+#include "sysdep.h"
+#include "string.h"
+
+#include "structs.h"
+#include "db.h"
+#include "utils.h"
+#include "spells.h"
+#include "interpreter.h"
+#include "comm.h"
+#include "screen.h"
+#include "clan.h"
+#include "handler.h"
+
+/*   external vars  */
+extern struct descriptor_data *descriptor_list;
+extern char *class_abbrevs[];
+extern FILE *player_fl;
+
+/*   external functions */
+extern int file_to_string(char *name, char *buf);
+
+/*
+ * Clan names go here.
+ *
+ * Restrictions: A clan title must not be longer than 25 characters.
+ *               A Owner's name may not be longer than 15 characters.
+ *		 Rank titles must not be longer than 10 characters.
+ *               
+ *       Format: "clan title", "colour of title", "Owner", 
+ *		 "clan description filename", "Title of rank SOLDIER",
+ *		 "Title of rank SARGEANT", "Title of rank CAPTAIN",
+ *		 "Title of rank RULER"
+ *
+ *       Dialog: For the colour of the title, use valid CircleMUD colour codes
+ *               ie. CCBLU
+ *
+ *               The "Owner" is the name of the clan owner character.  This is
+ *               displayed in the clan information command as a reference point
+ *
+ *		 The "clan description filename" is the filename + path of a
+ *		 plain textfile with a short clan description.  Put "\n" if
+ * 		 you don't want one to display.  It goes in the lib/ dir.
+ *
+ *		 The rank titles are simply the clan names for each rank.
+ *
+ *               Feel free to change the two existing clans.
+ *
+ */
+const struct clan_info clans[] = {
+  { "Da Funky Immortals"      , "CCMAG", "Regulator"     , "clanimm",
+    "Grunt"  , "Sarge"  , "Captain", "Ruler"  },
+  { "Da Gross Mortals"        , "CCBLU", "Regulator"     , "clanmort",
+    "Absolum", "Tweekie", "Mr."    , "SIR!" },
+
+  /* New clans go here */
+
+  /* This must go at the end */
+  { "\n"                      , "NULL" , "NULL"          , "NULL",
+    "NULL", "NULL", "NULL", "NULL" }
+};
+
+/*
+ * Clan levels
+*/
+const int CLAN_APPLY = 1;
+const int CLAN_SOLDIER = 2;
+const int CLAN_SARGEANT = 3;
+const int CLAN_CAPTAIN = 4;
+const int CLAN_RULER = 5;
+
+/*
+ * General functions go here
+*/
+
+
+
+
+/*
+ * The general player commands go here
+*/
+ACMD(do_clan)
+{
+  char subbcmd[MAX_INPUT_LENGTH], val_arg[MAX_INPUT_LENGTH];
+  int  ccmd = 0, value = 0, found = 0, temp = 0, temp2 = 0, player_i = 0;
+  struct char_data *cbuf = NULL, *vict = NULL;
+  struct char_file_u tmp_store;
+  struct descriptor_data *pt;
+
+  half_chop(argument, subbcmd, buf);
+  strcpy(val_arg, buf);
+  
+  if (strcasecmp(subbcmd, "list") == 0)
+  {
+    /* Display title for list */
+    send_to_char("[ # Clan Title                Clan Owner     ]\r\n", ch);
+    /* List all clans and owners */
+    for (ccmd = 0; clans[ccmd].title != "\n"; ccmd++)
+    {
+      if (clans[ccmd].colour == "CCNRM") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCNRM(ch, C_NRM), clans[ccmd].title, 
+        CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCRED") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCRED(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCYEL") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCYEL(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCGRN") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCGRN(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCBLU") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCBLU(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCMAG") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCMAG(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCCYN") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCCYN(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      if (clans[ccmd].colour == "CCWHT") sprintf(buf, " %2d %s%-25s%s %-15s\r\n", 
+        ccmd, CCWHT(ch, C_NRM), clans[ccmd].title, 
+	CCNRM(ch, C_NRM), clans[ccmd].owner);
+      send_to_char(buf, ch);
+    }
+  sprintf(buf, "\r\n[%d clans displayed.]\r\n", ccmd);
+  send_to_char(buf, ch);
+
+  }
+
+  if (strcasecmp(subbcmd, "info") == 0)
+  {
+    /* Use index to retrieve information on clan */
+    value = atoi(val_arg);
+    if (value != 0)
+    {
+      for (ccmd = 0; clans[ccmd].title != "\n"; ccmd++)
+	if (ccmd == value)
+	{
+	  found = 1;
+	  temp2 = 0;
+	  
+	  /* Find number of members in clan */
+	  /* This is stored in the owners char structure */
+	  if (!(vict = get_char_vis(ch, clans[ccmd].owner)))
+	  {
+	    CREATE(cbuf, struct char_data, 1);
+            clear_char(cbuf);
+    	    if ((player_i = load_char(clans[ccmd].owner, &tmp_store)) > -1) 
+	    {
+              store_to_char(&tmp_store, cbuf);
+              vict = cbuf;
+            } 
+	    else 
+            {
+              free(cbuf);
+  	      sprintf(buf, "Clan info: Unable to find owner of '%s' clan.", 
+		          clans[ccmd].title);
+      	      mudlog(buf, BRF, LVL_GOD, TRUE);
+              return;
+            }
+	  }
+	  else temp2 = 1;
+
+	  temp = CLANPLAYERS(vict);
+
+	  /* Store player record */
+	  if (temp2 == 0)
+	  {
+            char_to_store(vict, &tmp_store);
+  	    fseek(player_fl, (player_i) * sizeof(struct char_file_u), SEEK_SET);
+    	    fwrite(&tmp_store, sizeof(struct char_file_u), 1, player_fl);
+    	    free_char(cbuf);
+	  }
+
+	  temp2 = 0;
+	  /* Find number of clan members currently online */
+  	  for (pt = descriptor_list; pt; pt = pt->next)
+    	    if (!pt->connected && pt->character && 
+                pt->character->player_specials->saved.clannum == value)
+	      temp2++;
+
+	  /* Display info header */
+	  if (clans[ccmd].colour == "CCNRM")
+	    sprintf(buf, "[%s", CCNRM(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCRED")
+	    sprintf(buf, "[%s", CCRED(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCGRN")
+	    sprintf(buf, "[%s", CCGRN(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCYEL")
+	    sprintf(buf, "[%s", CCYEL(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCBLU")
+	    sprintf(buf, "[%s", CCBLU(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCMAG")
+	    sprintf(buf, "[%s", CCMAG(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCWHT")
+	    sprintf(buf, "[%s", CCWHT(ch, C_NRM));
+	  if (clans[ccmd].colour == "CCCYN")
+	    sprintf(buf, "[%s", CCCYN(ch, C_NRM));
+	  
+	  sprintf(buf, "%s%-25s%s]\r\n", buf, clans[ccmd].title, CCNRM(ch, C_NRM));
+	  send_to_char(buf, ch);
+	
+	  send_to_char("\r\n", ch);
+	  sprintf(buf, "Owner: %-15s\r\n", clans[ccmd].owner);
+	  send_to_char(buf, ch);
+	  sprintf(buf, "Members currently online: %-3d\r\nTotal number of members: %-3d\r\n", temp2, temp);
+	  send_to_char(buf, ch);
+	  send_to_char("\r\n", ch);
+
+	  if (!(clans[ccmd].fname == "\n"))
+	  {
+	    file_to_string(clans[ccmd].fname, buf);
+	    send_to_char(CCGRN(ch, C_NRM), ch);
+	    send_to_char(buf, ch);
+	    send_to_char(CCNRM(ch, C_NRM), ch);
+	  }
+	  send_to_char("\r\n", ch);
+	}
+    
+      if (found == 0)
+      {
+	send_to_char("Unable to find a clan with that number.\r\n", ch);
+	return;
+      }
+    }
+    else
+    {
+      send_to_char("Unable to find a clan with that number.\r\n", ch);
+    }
+  }
+
+  if (strcasecmp(subbcmd, "resign") == 0)
+  {
+    temp2 = 0;
+
+    /* This handles clan resignations */
+    if ((ch->player_specials->saved.clannum == 0) && (CLANRANK(ch) == 0))
+    {
+      send_to_char("But you don't belong to any clan!\r\n", ch);
+      return;
+    }
+
+    if (strcasecmp(GET_NAME(ch), CLANOWNER(ch)) == 0)
+    {
+      send_to_char("You can't resign from a clan you own!\r\n", ch);
+      return;
+    }
+
+    value = ch->player_specials->saved.clannum;
+    ch->player_specials->saved.clannum = 0;
+    ch->player_specials->saved.clanrank = 0;
+    
+    /* Update number of members in clan */
+    /* This is stored in the owners char structure */
+    for (ccmd = 0; clans[ccmd].title != "\n"; ccmd++)
+      if (ccmd == value)
+	  if (!(vict = get_char_vis(ch, clans[ccmd].owner)))
+	  {
+	    CREATE(cbuf, struct char_data, 1);
+            clear_char(cbuf);
+    	    if ((player_i = load_char(clans[ccmd].owner, &tmp_store)) > -1) 
+	    {
+              store_to_char(&tmp_store, cbuf);
+              vict = cbuf;
+            } 
+	    else 
+            {
+              free(cbuf);
+  	      sprintf(buf, "Clan info: Unable to find owner of '%s' clan.", 
+		          clans[ccmd].title);
+      	      mudlog(buf, BRF, LVL_GOD, TRUE);
+              return;
+            }
+	  }
+      else
+	temp2 = 1;
+
+    if (!(CLANRANK(ch) == CLAN_APPLY))    
+      vict->player_specials->saved.numclanmembers--;
+
+	  /* Store player record */
+	if (temp2 == 0)
+	{
+          char_to_store(vict, &tmp_store);
+  	  fseek(player_fl, (player_i) * sizeof(struct char_file_u), SEEK_SET);
+    	  fwrite(&tmp_store, sizeof(struct char_file_u), 1, player_fl);
+    	  free_char(cbuf);
+	}
+
+    send_to_char("You have resigned from your clan.\r\n", ch);
+
+  }
+
+  if (strcasecmp(subbcmd, "apply") == 0)
+  {
+    /* This handles clan applications */
+    if (CLANRANK(ch) != 0)
+    {
+      send_to_char("You must resign from the clan you currently belong to, first.\r\n", ch);
+      return;
+    }
+
+    value = 0;
+    found = 0;
+    value = atoi(val_arg);
+    if (value >= 0)
+    {
+      for (ccmd = 0; ((clans[ccmd].title != "\n") && (found != 1)); ccmd++)
+        if (ccmd == value)
+	{
+	  found = 1;
+
+	  CLANNUM(ch) = ccmd;
+	  CLANRANK(ch) = CLAN_APPLY;
+
+	  sprintf(buf, "You have applied to the clan '%s'.\r\n", CLANNAME(ch));
+	  send_to_char(buf, ch);
+	}
+
+      if (found != 1)
+      {
+	send_to_char("Unable to find that clan.\r\n", ch);
+	return;
+      }
+    }
+    else
+    {
+      send_to_char("Which clan number?!\r\n", ch);
+      return;
+    }
+
+  }
+
+  if (strcasecmp(subbcmd, "enlist") == 0)
+  {
+    /* This handles the enlistment of characters who have applied to your
+     * clan.
+     *
+     * Implementors can force an enlistment.  So, when creating a new clan,
+     * make sure your owner applies to join it.  Then the implementor must
+     * do a 'clan enlist <character>' so that the owner belongs to the clan.
+    */
+    
+    if (!(GET_LEVEL(ch) == LVL_IMPL))
+    {
+      if (CLANRANK(ch) == 0)
+      {
+        send_to_char("But you don't belong to any clan!\r\n", ch);
+        return;
+      }
+
+      if (!(CLANRANK(ch) >= CLAN_SARGEANT))
+      {
+	send_to_char("You have insufficent rank in your clan to do this.\r\n", ch);
+	return;
+      }
+
+      if ((vict = get_player_vis(ch, val_arg, 0)))
+      {
+	if (CLANRANK(vict) != CLAN_APPLY)
+	{
+	  send_to_char("But that person isn't applying to any clan!\r\n", ch);
+	  return;
+	}
+
+	if (CLANNUM(vict) != CLANNUM(ch))
+	{
+	  send_to_char("But that person isn't applying to your clan!\r\n", ch);
+	  return;
+	}
+
+	CLANRANK(vict) = CLAN_SOLDIER;
+	sprintf(buf, "You have been enlisted into the ranks of the '%s' clan.\r\n", 
+		CLANNAME(ch));
+	send_to_char(buf, vict);
+
+	sprintf(buf, "You have enlisted '%s' into your clan.\r\n", 
+		GET_NAME(vict));
+	send_to_char(buf, ch);
+
+	SET_BIT(PRF_FLAGS(vict), PRF_CLANTALK);
+
+	/* Update number of clan members */
+	/* This is stored in the owners char structure */
+	    if (!(vict = get_char_vis(ch, clans[CLANNUM(ch)].owner)))
+	    {
+	      CREATE(cbuf, struct char_data, 1);
+              clear_char(cbuf);
+    	      if ((player_i = load_char(clans[CLANNUM(ch)].owner, &tmp_store)) > -1) 
+	      {
+                store_to_char(&tmp_store, cbuf);
+                vict = cbuf;
+              } 
+	      else 
+              {
+                free(cbuf);
+  	        sprintf(buf, "Clan info: Unable to find owner of '%s' clan.", 
+		          clans[CLANNUM(ch)].title);
+      	        mudlog(buf, BRF, LVL_GOD, TRUE);
+                return;
+              }
+	    }
+        else
+	  temp2 = 1;
+    
+      vict->player_specials->saved.numclanmembers++;
+
+	  /* Store player record */
+	  if (temp2 == 0)
+	  {
+            char_to_store(vict, &tmp_store);
+  	    fseek(player_fl, (player_i) * sizeof(struct char_file_u), SEEK_SET);
+    	    fwrite(&tmp_store, sizeof(struct char_file_u), 1, player_fl);
+    	    free_char(cbuf);
+	  }
+	
+	
+      }
+      else
+      {
+	send_to_char("But there is noone here by that name!\r\n", ch);
+	return;
+      }
+    }
+    else
+    {
+
+      if ((vict = get_player_vis(ch, val_arg, 0)))
+      {
+        if (CLANRANK(vict) != CLAN_APPLY)
+        {
+	  send_to_char("But that person isn't applying to any clan!\r\n", ch);
+	  return;
+      	}
+
+	if (strcasecmp(GET_NAME(vict), CLANOWNER(vict)) == 0)
+	  CLANRANK(vict) = CLAN_RULER;
+	else
+	  CLANRANK(vict) = CLAN_SOLDIER;
+
+	sprintf(buf, "You have forced the enlistment of '%s' into the clan '%s'.\r\n", 
+		GET_NAME(vict), CLANNAME(vict));
+	send_to_char(buf, ch);
+
+	sprintf(buf, "You have been enlisted into the clan '%s'.\r\n", 
+		CLANNAME(vict));
+	send_to_char(buf, vict);
+
+	/* Update number of clan members */
+	/* This is stored in the owners char structure */
+	    if (!(vict = get_char_vis(ch, clans[CLANNUM(ch)].owner)))
+	    {
+	      CREATE(cbuf, struct char_data, 1);
+              clear_char(cbuf);
+    	      if ((player_i = load_char(clans[CLANNUM(ch)].owner, &tmp_store)) > -1) 
+	      {
+                store_to_char(&tmp_store, cbuf);
+                vict = cbuf;
+              } 
+	      else 
+              {
+                free(cbuf);
+  	        sprintf(buf, "Clan info: Unable to find owner of '%s' clan.", 
+		          clans[CLANNUM(ch)].title);
+      	        mudlog(buf, BRF, LVL_GOD, TRUE);
+                return;
+              }
+	    }
+        else
+	  temp2 = 1;
+    
+      vict->player_specials->saved.numclanmembers++;
+
+	  /* Store player record */
+	  if (temp2 == 0)
+	  {
+            char_to_store(vict, &tmp_store);
+  	    fseek(player_fl, (player_i) * sizeof(struct char_file_u), SEEK_SET);
+    	    fwrite(&tmp_store, sizeof(struct char_file_u), 1, player_fl);
+    	    free_char(cbuf);
+	  }
+      }
+      else
+      {
+        send_to_char("Unable to find a character of that name.\r\n", ch);
+        return;
+      }
+
+    }
+  }
+
+  if (strcasecmp(subbcmd, "promote") == 0)
+  {
+    /* Clan promotions */
+    if (CLANRANK(ch) < CLAN_CAPTAIN)
+    {
+      send_to_char("You have insufficent rank to do that.\r\n", ch);
+      return;
+    }
+
+    if ((vict = get_player_vis(ch, val_arg, 0)))
+    {
+      if (CLANRANK(vict) > CLANRANK(ch))
+      {
+	send_to_char("You can't promote someone who ranks higher than you!\r\n", ch);
+	return;
+      }
+  
+      if ((CLANRANK(vict) < CLAN_SOLDIER) || (CLANNUM(vict) != CLANNUM(ch)))
+      {
+	send_to_char("You can't promote someone who doesn't belong to your clan!\r\n", ch);
+	return;
+      }
+
+      if (CLANRANK(vict) == CLAN_RULER)
+      {
+	send_to_char("You can't promote this person any higher in rank!\r\n", ch);
+	return;
+      }
+
+      CLANRANK(vict)++;
+      sprintf(buf, "%sYou have been promoted to ", CCRED(vict, C_NRM));
+      if (CLANRANK(vict) == CLAN_SARGEANT)
+        strcat(buf, SARGEANTTITLE(vict));
+      if (CLANRANK(vict) == CLAN_CAPTAIN) strcat(buf, CAPTAINTITLE(vict));
+      if (CLANRANK(vict) == CLAN_RULER) strcat(buf, RULERTITLE(vict));
+
+      sprintf(buf, "%s in your clan.%s\r\n", buf, CCNRM(ch, C_NRM));
+      send_to_char(buf, vict);
+
+      sprintf(buf, "%sYou have promoted '%s' to the rank of ", 
+		CCRED(vict, C_NRM), GET_NAME(vict));
+      if (CLANRANK(vict) == CLAN_SARGEANT) strcat(buf, SARGEANTTITLE(vict));
+      if (CLANRANK(vict) == CLAN_CAPTAIN) strcat(buf, CAPTAINTITLE(vict));
+      if (CLANRANK(vict) == CLAN_RULER) strcat(buf, RULERTITLE(vict));
+
+      sprintf(buf, "%s in your clan.%s\r\n", buf, CCNRM(ch, C_NRM));
+      send_to_char(buf, ch);
+    }
+    else
+    {
+      send_to_char("Promote who?!\r\n", ch);
+      return;
+    }
+
+  }
+
+  if (strcasecmp(subbcmd, "demote") == 0)
+  {
+    /* Clan demotions */
+    if (CLANRANK(ch) == 0)
+    {
+      send_to_char("But you don't belong to any clan!\r\n", ch);
+      return;
+    }
+
+    if (CLANRANK(ch) < CLAN_CAPTAIN)
+    {
+      send_to_char("You have insufficent rank to do that.\r\n", ch);
+      return;
+    }
+
+    if ((vict = get_player_vis(ch, val_arg, 0)))
+    {
+      if (CLANRANK(vict) > CLANRANK(ch))
+      {
+	send_to_char("You can't demote someone who ranks higher than you!\r\n", ch);
+	return;
+      }
+  
+      if ((CLANRANK(vict) < CLAN_SOLDIER) || (CLANNUM(vict) != CLANNUM(ch)))
+      {
+	send_to_char("You can't demote someone who doesn't belong to your clan!\r\n", ch);
+	return;
+      }
+
+      if (CLANRANK(vict) == CLAN_SOLDIER)
+      {
+	send_to_char("You can't demote this person any lower! Try clan boot <person>!\r\n", ch);
+	return;
+      }
+
+      if (strcasecmp(GET_NAME(vict), CLANOWNER(vict)) == 0)
+      {
+	send_to_char("You can't demote the clan owner!\r\n", ch);
+	return;
+      }
+
+      CLANRANK(vict)--;
+      sprintf(buf, "%sYou have been demoted to ", CCRED(vict, C_NRM));
+      if (CLANRANK(vict) == CLAN_SOLDIER) strcat(buf, SOLDIERTITLE(vict));
+      if (CLANRANK(vict) == CLAN_SARGEANT) strcat(buf, SARGEANTTITLE(vict));
+      if (CLANRANK(vict) == CLAN_CAPTAIN) strcat(buf, CAPTAINTITLE(vict));
+
+      sprintf(buf, "%s in your clan.%s\r\n", buf, CCNRM(ch, C_NRM));
+      send_to_char(buf, vict);
+
+      sprintf(buf, "%sYou have demoted '%s' to the rank of ", 
+		CCRED(vict, C_NRM), GET_NAME(vict));
+      if (CLANRANK(vict) == CLAN_SOLDIER) strcat(buf, SOLDIERTITLE(vict));
+      if (CLANRANK(vict) == CLAN_CAPTAIN) strcat(buf, CAPTAINTITLE(vict));
+      if (CLANRANK(vict) == CLAN_SARGEANT) strcat(buf, SARGEANTTITLE(vict));
+
+      sprintf(buf, "%s in your clan.%s\r\n", buf, CCNRM(ch, C_NRM));
+      send_to_char(buf, ch);
+    }
+    else
+    {
+      send_to_char("Demote who?!\r\n", ch);
+      return;
+    }
+
+  }
+
+  if (strcasecmp(subbcmd, "who") == 0)
+  {
+    /* List all clan members online, along with their clan rank */
+    if ((CLANNUM(ch) == 0) && (CLANRANK(ch) == 0))
+    {
+      send_to_char("But you don't belong to any clan!\r\n", ch);
+      return;
+    }
+
+    sprintf(buf, "Members of the clan '%s' currently online:\r\n", CLANNAME(ch));
+    send_to_char(buf, ch);
+
+    for (pt = descriptor_list; pt; pt = pt->next)
+      if (!pt->connected && pt->character && 
+          pt->character->player_specials->saved.clannum == CLANNUM(ch))
+	{
+          sprintf(buf, "%s[%2d %s ",  
+              (GET_LEVEL(pt->character) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
+              GET_LEVEL(pt->character), CLASS_ABBR(pt->character));
+	  if (CLANRANK(pt->character) == CLAN_APPLY) sprintf(buf, "%s%-10s", buf, "--");
+	  if (CLANRANK(pt->character) == CLAN_SOLDIER) 
+		sprintf(buf, "%s%-10s", buf, SOLDIERTITLE(pt->character)); 
+	  if (CLANRANK(pt->character) == CLAN_SARGEANT) 
+		sprintf(buf, "%s%-10s", buf, SARGEANTTITLE(pt->character)); 
+	  if (CLANRANK(pt->character) == CLAN_CAPTAIN) 
+		sprintf(buf, "%s%-10s", buf, CAPTAINTITLE(pt->character)); 
+	  if (CLANRANK(pt->character) == CLAN_RULER) 
+		sprintf(buf, "%s%-10s", buf, RULERTITLE(pt->character)); 
+	  sprintf(buf, "%s] %s %s%s\r\n", buf, GET_NAME(pt->character), GET_TITLE(pt->character), CCNRM(ch, C_NRM));
+	  send_to_char(buf, ch);
+        }
+  }
+
+  if (strcasecmp(subbcmd, "say") == 0)
+  {
+    /* Clan say */
+    if (CLANRANK(ch) == 0)
+    {
+      send_to_char("But you don't belong to any clan!\r\n", ch);
+      return;
+    }
+
+    if (!PRF_FLAGGED(ch, PRF_CLANTALK))
+    {
+      send_to_char("Try turning your clan talk channel on first, dork!\r\n", ch);
+      return;
+    }    
+
+    for (pt = descriptor_list; pt; pt = pt->next)
+      if (!pt->connected && pt->character && 
+          pt->character->player_specials->saved.clannum == CLANNUM(ch) &&
+	  pt->character != ch && PRF_FLAGGED(ch, PRF_CLANTALK))
+	{
+	  sprintf(buf, "%s%s says to the clan, '%s'%s\r\n", CCRED(pt->character, C_NRM),
+			GET_NAME(ch), val_arg, CCNRM(pt->character, C_NRM));
+	  send_to_char(buf, pt->character);
+        }
+    sprintf(buf, "%sYou say to the clan, '%s'%s\r\n", CCRED(ch, C_NRM),
+		val_arg, CCNRM(ch, C_NRM));
+    send_to_char(buf, ch);
+
+  }
+
+  if (strcasecmp(subbcmd, "channel") == 0)
+  {
+    if (PRF_FLAGGED(ch, PRF_CLANTALK))
+    {
+      TOGGLE_BIT(PRF_FLAGS(ch), PRF_CLANTALK);
+      send_to_char("Clan talk channel turned off.\r\n", ch);
+    }
+    else
+    {
+      TOGGLE_BIT(PRF_FLAGS(ch), PRF_CLANTALK);
+      send_to_char("Clan talk channel turned on.\r\n", ch);
+    }
+  }
+
+};
+
+ACMD(do_clansay)
+{
+    struct descriptor_data *pt;
+  
+    /* Clan say */
+    if (CLANRANK(ch) == 0)
+    {
+      send_to_char("But you don't belong to any clan!\r\n", ch);
+      return;
+    }
+
+    if (!PRF_FLAGGED(ch, PRF_CLANTALK))
+    {
+      send_to_char("Try turning your clan talk channel on first, dork!\r\n", ch);
+      return;
+    }    
+
+    for (pt = descriptor_list; pt; pt = pt->next)
+      if (!pt->connected && pt->character && 
+          pt->character->player_specials->saved.clannum == CLANNUM(ch) &&
+	  pt->character != ch && PRF_FLAGGED(ch, PRF_CLANTALK))
+	{
+	  sprintf(buf, "%s%s says to the clan, '%s'%s\r\n", CCRED(pt->character, C_NRM),
+			GET_NAME(ch), argument, CCNRM(pt->character, C_NRM));
+	  send_to_char(buf, pt->character);
+        }
+    sprintf(buf, "%sYou say to the clan, '%s'%s\r\n", CCRED(ch, C_NRM),
+		argument, CCNRM(ch, C_NRM));
+    send_to_char(buf, ch);
+
+};

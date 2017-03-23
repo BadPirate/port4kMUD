@@ -10,6 +10,8 @@
 
 #define NUM_RESERVED_DESCS	8
 
+#define COPYOVER_FILE "copyover.dat"
+
 /* comm.c */
 void	send_to_all(char *messg);
 void	send_to_char(char *messg, struct char_data *ch);
@@ -28,6 +30,7 @@ struct obj_data *obj, void *vict_obj, int type);
 #define TO_VICT		2
 #define TO_NOTVICT	3
 #define TO_CHAR		4
+#define TO_WORLD    	5
 #define TO_SLEEP	128	/* to char, even if sleeping */
 
 int	write_to_descriptor(socket_t desc, char *txt);

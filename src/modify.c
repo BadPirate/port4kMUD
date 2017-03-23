@@ -21,8 +21,21 @@
 #include "spells.h"
 #include "mail.h"
 #include "boards.h"
+#include "olc.h"
+#include "clan.h"
 
 void show_string(struct descriptor_data *d, char *input);
+extern struct clan_editing clan_edit[];
+
+/* action modes for parse_action */
+#define PARSE_FORMAT		0 
+#define PARSE_REPLACE		1 
+#define PARSE_HELP		2 
+#define PARSE_DELETE		3
+#define PARSE_INSERT		4
+#define PARSE_LIST_NORM		5
+#define PARSE_LIST_NUM		6
+#define PARSE_EDIT		7
 
 char *string_fields[] =
 {
@@ -51,33 +64,504 @@ int length[] =
 *  modification of malloc'ed strings                                      *
 ************************************************************************ */
 
+/*  handle some editor commands */
+void parse_action(int command, char *string, struct descriptor_data *d) {
+   int indent = 0, rep_all = 0, flags = 0, total_len, replaced;
+   register int j = 0;
+   int i, line_low, line_high;
+   char *s, *t, temp;
+   
+   switch (command) { 
+    case PARSE_HELP: 
+      sprintf(buf, 
+	      "Editor command formats: /<letter>\r\n\r\n"
+	      "/a         -  aborts editor\r\n"
+	      "/c         -  clears buffer\r\n"
+	      "/d#        -  deletes a line #\r\n"
+	      "/e# <text> -  changes the line at # with <text>\r\n"
+	      "/f         -  formats text\r\n"
+	      "/fi        -  indented formatting of text\r\n"
+	      "/h         -  list text editor commands\r\n"
+	      "/i# <text> -  inserts <text> before line #\r\n"
+	      "/l         -  lists buffer\r\n"
+	      "/n         -  lists buffer with line numbers\r\n"
+	      "/r 'a' 'b' -  replace 1st occurance of text <a> in buffer with text <b>\r\n"
+	      "/ra 'a' 'b'-  replace all occurances of text <a> within buffer with text <b>\r\n"
+	      "              usage: /r[a] 'pattern' 'replacement'\r\n"
+	      "/s         -  saves text\r\n");
+      SEND_TO_Q(buf, d);
+      break;
+    case PARSE_FORMAT: 
+      while (isalpha(string[j]) && j < 2) {
+	 switch (string[j]) {
+	  case 'i':
+	    if (!indent) {
+	       indent = 1;
+	       flags += FORMAT_INDENT;
+	    }             
+	    break;
+	  default:
+	    break;
+	 }     
+	 j++;
+      }
+      format_text(d->str, flags, d, d->max_str);
+      sprintf(buf, "Text formarted with%s indent.\r\n", (indent ? "" : "out")); 
+      SEND_TO_Q(buf, d);
+      break;    
+    case PARSE_REPLACE: 
+      while (isalpha(string[j]) && j < 2) {
+	 switch (string[j]) {
+	  case 'a':
+	    if (!indent) {
+	       rep_all = 1;
+	    }             
+	    break;
+	  default:
+	    break;
+	 }     
+	 j++;
+      }
+      s = strtok(string, "'");
+      if (s == NULL) {
+	 SEND_TO_Q("Invalid format.\r\n", d);
+	 return;
+      }
+      s = strtok(NULL, "'");
+      if (s == NULL) {
+	 SEND_TO_Q("Target string must be enclosed in single quotes.\r\n", d);
+	 return;
+      }
+      t = strtok(NULL, "'");
+      if (t == NULL) {
+	 SEND_TO_Q("No replacement string.\r\n", d);
+	 return;
+      }
+      t = strtok(NULL, "'");
+      if (t == NULL) {
+	 SEND_TO_Q("Replacement string must be enclosed in single quotes.\r\n", d);
+	 return;
+      }
+      total_len = ((strlen(t) - strlen(s)) + strlen(*d->str));
+      if (total_len <= d->max_str) {
+	 if ((replaced = replace_str(d->str, s, t, rep_all, d->max_str)) > 0) {
+	    sprintf(buf, "Replaced %d occurance%sof '%s' with '%s'.\r\n", replaced, ((replaced != 1)?"s ":" "), s, t); 
+	    SEND_TO_Q(buf, d);
+	 }
+	 else if (replaced == 0) {
+	    sprintf(buf, "String '%s' not found.\r\n", s); 
+	    SEND_TO_Q(buf, d);
+	 }
+	 else {
+	    SEND_TO_Q("ERROR: Replacement string causes buffer overflow, aborted replace.\r\n", d);
+	 }
+      }
+      else
+	SEND_TO_Q("Not enough space left in buffer.\r\n", d);
+      break;
+    case PARSE_DELETE:
+      switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
+       case 0:
+	 SEND_TO_Q("You must specify a line number or range to delete.\r\n", d);
+	 return;
+       case 1:
+	 line_high = line_low;
+	 break;
+       case 2:
+	 if (line_high < line_low) {
+	    SEND_TO_Q("That range is invalid.\r\n", d);
+	    return;
+	 }
+	 break;
+      }
+      
+      i = 1;
+      total_len = 1;
+      if ((s = *d->str) == NULL) {
+	 SEND_TO_Q("Buffer is empty.\r\n", d);
+	 return;
+      }
+      if (line_low > 0) {
+      	 while (s && (i < line_low))
+	   if ((s = strchr(s, '\n')) != NULL) {
+	      i++;
+	      s++;
+	   }
+	 if ((i < line_low) || (s == NULL)) {
+	    SEND_TO_Q("Line(s) out of range; not deleting.\r\n", d);
+	    return;
+	 }
+	 
+	 t = s;
+	 while (s && (i < line_high))
+	   if ((s = strchr(s, '\n')) != NULL) {
+	      i++;
+	      total_len++;
+	      s++;
+	   }
+	 if ((s) && ((s = strchr(s, '\n')) != NULL)) {
+	    s++;
+	    while (*s != '\0') *(t++) = *(s++);
+	 }
+	 else total_len--;
+	 *t = '\0';
+	 RECREATE(*d->str, char, strlen(*d->str) + 3);
+	 sprintf(buf, "%d line%sdeleted.\r\n", total_len,
+		 ((total_len != 1)?"s ":" "));
+	 SEND_TO_Q(buf, d);
+      }
+      else {
+	 SEND_TO_Q("Invalid line numbers to delete must be higher than 0.\r\n", d);
+	 return;
+      }
+      break;
+    case PARSE_LIST_NORM:
+      /* note: my buf,buf1,buf2 vars are defined at 32k sizes so they
+       * are prolly ok fer what i want to do here. */
+      *buf = '\0';
+      if (*string != '\0')
+	switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
+	 case 0:
+	   line_low = 1;
+	   line_high = 999999;
+	   break;
+	 case 1:
+	   line_high = line_low;
+	   break;
+	}
+      else {
+	 line_low = 1;
+	 line_high = 999999;
+      }
+      
+      if (line_low < 1) {
+	 SEND_TO_Q("Line numbers must be greater than 0.\r\n", d);
+	 return;
+      }
+      if (line_high < line_low) {
+	 SEND_TO_Q("That range is invalid.\r\n", d);
+	 return;
+      }
+      *buf = '\0';
+      if ((line_high < 999999) || (line_low > 1)) {
+	 sprintf(buf, "Current buffer range [%d - %d]:\r\n", line_low, line_high);
+      }
+      i = 1;
+      total_len = 0;
+      s = *d->str;
+      while (s && (i < line_low))
+	if ((s = strchr(s, '\n')) != NULL) {
+	   i++;
+	   s++;
+	}
+      if ((i < line_low) || (s == NULL)) {
+	 SEND_TO_Q("Line(s) out of range; no buffer listing.\r\n", d);
+	 return;
+      }
+      
+      t = s;
+      while (s && (i <= line_high))
+	if ((s = strchr(s, '\n')) != NULL) {
+	   i++;
+	   total_len++;
+	   s++;
+	}
+      if (s)	{
+	 temp = *s;
+	 *s = '\0';
+	 strcat(buf, t);
+	 *s = temp;
+      }
+      else strcat(buf, t);
+      /* this is kind of annoying.. will have to take a poll and see..
+      sprintf(buf, "%s\r\n%d line%sshown.\r\n", buf, total_len,
+	      ((total_len != 1)?"s ":" "));
+       */
+      page_string(d, buf, TRUE);
+      break;
+    case PARSE_LIST_NUM:
+      /* note: my buf,buf1,buf2 vars are defined at 32k sizes so they
+       * are prolly ok fer what i want to do here. */
+      *buf = '\0';
+      if (*string != '\0')
+	switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
+	 case 0:
+	   line_low = 1;
+	   line_high = 999999;
+	   break;
+	 case 1:
+	   line_high = line_low;
+	   break;
+	}
+      else {
+	 line_low = 1;
+	 line_high = 999999;
+      }
+      
+      if (line_low < 1) {
+	 SEND_TO_Q("Line numbers must be greater than 0.\r\n", d);
+	 return;
+      }
+      if (line_high < line_low) {
+	 SEND_TO_Q("That range is invalid.\r\n", d);
+	 return;
+      }
+      *buf = '\0';
+      i = 1;
+      total_len = 0;
+      s = *d->str;
+      while (s && (i < line_low))
+	if ((s = strchr(s, '\n')) != NULL) {
+	   i++;
+	   s++;
+	}
+      if ((i < line_low) || (s == NULL)) {
+	 SEND_TO_Q("Line(s) out of range; no buffer listing.\r\n", d);
+	 return;
+      }
+      
+      t = s;
+      while (s && (i <= line_high))
+	if ((s = strchr(s, '\n')) != NULL) {
+	   i++;
+	   total_len++;
+	   s++;
+	   temp = *s;
+	   *s = '\0';
+	   sprintf(buf, "%s%4d:\r\n", buf, (i-1));
+	   strcat(buf, t);
+	   *s = temp;
+	   t = s;
+	}
+      if (s && t) {
+	 temp = *s;
+	 *s = '\0';
+	 strcat(buf, t);
+	 *s = temp;
+      }
+      else if (t) strcat(buf, t);
+      /* this is kind of annoying .. seeing as the lines are #ed
+      sprintf(buf, "%s\r\n%d numbered line%slisted.\r\n", buf, total_len,
+	      ((total_len != 1)?"s ":" "));
+       */
+      page_string(d, buf, TRUE);
+      break;
+
+    case PARSE_INSERT:
+      half_chop(string, buf, buf2);
+      if (*buf == '\0') {
+	 SEND_TO_Q("You must specify a line number before which to insert text.\r\n", d);
+	 return;
+      }
+      line_low = atoi(buf);
+      strcat(buf2, "\r\n");
+      
+      i = 1;
+      *buf = '\0';
+      if ((s = *d->str) == NULL) {
+	 SEND_TO_Q("Buffer is empty, nowhere to insert.\r\n", d);
+	 return;
+      }
+      if (line_low > 0) {
+      	 while (s && (i < line_low))
+	   if ((s = strchr(s, '\n')) != NULL) {
+	      i++;
+	      s++;
+	   }
+	 if ((i < line_low) || (s == NULL)) {
+	    SEND_TO_Q("Line number out of range; insert aborted.\r\n", d);
+	    return;
+	 }
+	 temp = *s;
+	 *s = '\0';
+	 if ((strlen(*d->str) + strlen(buf2) + strlen(s+1) + 3) > d->max_str) {
+	    *s = temp;
+	    SEND_TO_Q("Insert text pushes buffer over maximum size, insert aborted.\r\n", d);
+	    return;
+	 }
+	 if (*d->str && (**d->str != '\0')) strcat(buf, *d->str);
+	 *s = temp;
+	 strcat(buf, buf2);
+	 if (s && (*s != '\0')) strcat(buf, s);
+	 RECREATE(*d->str, char, strlen(buf) + 3);
+	 strcpy(*d->str, buf);
+	 SEND_TO_Q("Line inserted.\r\n", d);
+      }
+      else {
+	 SEND_TO_Q("Line number must be higher than 0.\r\n", d);
+	 return;
+      }
+      break;
+
+    case PARSE_EDIT:
+      half_chop(string, buf, buf2);
+      if (*buf == '\0') {
+	 SEND_TO_Q("You must specify a line number at which to change text.\r\n", d);
+	 return;
+      }
+      line_low = atoi(buf);
+      strcat(buf2, "\r\n");
+      
+      i = 1;
+      *buf = '\0';
+      if ((s = *d->str) == NULL) {
+	 SEND_TO_Q("Buffer is empty, nothing to change.\r\n", d);
+	 return;
+      }
+      if (line_low > 0) {
+	 /* loop through the text counting /n chars till we get to the line */
+      	 while (s && (i < line_low))
+	   if ((s = strchr(s, '\n')) != NULL) {
+	      i++;
+	      s++;
+	   }
+	 /* make sure that there was a THAT line in the text */
+	 if ((i < line_low) || (s == NULL)) {
+	    SEND_TO_Q("Line number out of range; change aborted.\r\n", d);
+	    return;
+	 }
+	 /* if s is the same as *d->str that means im at the beginning of the
+	  * message text and i dont need to put that into the changed buffer */
+	 if (s != *d->str) {
+	    /* first things first .. we get this part into buf. */
+	    temp = *s;
+	    *s = '\0';
+	    /* put the first 'good' half of the text into storage */
+	    strcat(buf, *d->str);
+	    *s = temp;
+	 }
+	 /* put the new 'good' line into place. */
+	 strcat(buf, buf2);
+	 if ((s = strchr(s, '\n')) != NULL) {
+	    /* this means that we are at the END of the line we want outta there. */
+	    /* BUT we want s to point to the beginning of the line AFTER
+	     * the line we want edited */
+	    s++;
+	    /* now put the last 'good' half of buffer into storage */
+	    strcat(buf, s);
+	 }
+	 /* check for buffer overflow */
+	 if (strlen(buf) > d->max_str) {
+	    SEND_TO_Q("Change causes new length to exceed buffer maximum size, aborted.\r\n", d);
+	    return;
+	 }
+	 /* change the size of the REAL buffer to fit the new text */
+	 RECREATE(*d->str, char, strlen(buf) + 3);
+	 strcpy(*d->str, buf);
+	 SEND_TO_Q("Line changed.\r\n", d);
+      }
+      else {
+	 SEND_TO_Q("Line number must be higher than 0.\r\n", d);
+	 return;
+      }
+      break;
+    default:
+      SEND_TO_Q("Invalid option.\r\n", d);
+      mudlog("SYSERR: invalid command passed to parse_action", BRF, LVL_IMPL, TRUE);
+      return;
+   }
+}
+
+
 /* Add user input to the 'current' string (as defined by d->str) */
 void string_add(struct descriptor_data *d, char *str)
 {
-  int terminator = 0;
+  FILE *fl;
+  int terminator = 0, action = 0, i2 = 0;
+   register int i = 2, j = 0;
+   char actions[MAX_INPUT_LENGTH];
   extern char *MENU;
 
   /* determine if this is the terminal string, and truncate if so */
-  /* changed to only accept '@' at the beginning of line - J. Elson 1/17/94 */
+  /* changed to accept '/<letter>' style editing commands - instead */
+  /* of solitary '@' to end - (modification of improved_edit patch) */
+  /*   M. Scott 10/15/96 */
 
   delete_doubledollar(str);
 
-  if ((terminator = (*str == '@')))
+   /* removed old handling of '@' char */
+   /* if ((terminator = (*str == '@'))) *str = '\0'; */
+
+   if ((action = (*str == '/'))) {
+      while (str[i] != '\0') {
+	 actions[j] = str[i];              
+	 i++;
+	 j++;
+      }
+      actions[j] = '\0';
+      *str = '\0';
+      switch (str[1]) {
+       case 'a':
+	 terminator = 2; /* working on an abort message */
+	 break;
+       case 'c':
+	 if (*(d->str)) {
+	    free(*d->str);
+	    *(d->str) = NULL;
+	    SEND_TO_Q("Current buffer cleared.\r\n", d);
+	 }
+	 else
+	   SEND_TO_Q("Current buffer empty.\r\n", d);
+	 break;
+       case 'd':
+	 parse_action(PARSE_DELETE, actions, d);
+	 break;
+       case 'e':
+	 parse_action(PARSE_EDIT, actions, d);
+	 break;
+       case 'f': 
+	 if (*(d->str))
+	   parse_action(PARSE_FORMAT, actions, d);
+	 else
+	   SEND_TO_Q("Current buffer empty.\r\n", d);
+	 break;
+       case 'i':
+	 if (*(d->str))
+	   parse_action(PARSE_INSERT, actions, d);
+	 else
+	   SEND_TO_Q("Current buffer empty.\r\n", d);
+	 break;
+       case 'h': 
+	 parse_action(PARSE_HELP, actions, d);
+	 break;
+       case 'l':
+	 if (*d->str)
+	   parse_action(PARSE_LIST_NORM, actions, d);
+	 else SEND_TO_Q("Current buffer empty.\r\n", d);
+	 break;
+       case 'n':
+	 if (*d->str)
+	   parse_action(PARSE_LIST_NUM, actions, d);
+	 else SEND_TO_Q("Current buffer empty.\r\n", d);
+	 break;
+       case 'r':   
+	 parse_action(PARSE_REPLACE, actions, d);
+	 break;
+       case 's':
+	 terminator = 1;
     *str = '\0';
+	 break;
+       default:
+	 SEND_TO_Q("Invalid option.\r\n", d);
+	 break;
+      }
+   }
 
   if (!(*d->str)) {
     if (strlen(str) > d->max_str) {
       send_to_char("String too long - Truncated.\r\n",
 		   d->character);
       *(str + d->max_str) = '\0';
-      terminator = 1;
+       /* changed this to NOT abort out.. just give warning. */
+       /* terminator = 1; */
     }
     CREATE(*d->str, char, strlen(str) + 3);
     strcpy(*d->str, str);
   } else {
     if (strlen(str) + strlen(*d->str) > d->max_str) {
-      send_to_char("String too long.  Last line skipped.\r\n", d->character);
-      terminator = 1;
+      send_to_char("String too long, limit reached on message.  Last line ignored.\r\n",
+		   d->character);
+      /* terminator = 1; */
     } else {
       if (!(*d->str = (char *) realloc(*d->str, strlen(*d->str) +
 				       strlen(str) + 3))) {
@@ -89,30 +573,142 @@ void string_add(struct descriptor_data *d, char *str)
   }
 
   if (terminator) {
-    if (!d->connected && (PLR_FLAGGED(d->character, PLR_MAILING))) {
-      store_mail(d->mail_to, GET_IDNUM(d->character), *d->str);
+    /*. OLC Edits .*/
+    extern void oedit_disp_menu(struct descriptor_data *d);
+    extern void oedit_disp_extradesc_menu(struct descriptor_data *d);
+    extern void redit_disp_menu(struct descriptor_data *d);
+    extern void redit_disp_extradesc_menu(struct descriptor_data *d);
+    extern void redit_disp_exit_menu(struct descriptor_data *d);
+    extern void medit_disp_menu(struct descriptor_data *d);
+     
+     /* here we check for the abort option and reset the pointers */
+     if ((terminator == 2) &&
+	 ((STATE(d) == CON_REDIT) ||
+          (STATE(d) == CON_TEXTED)||
+	  (STATE(d) == CON_MEDIT) ||
+	  (STATE(d) == CON_OEDIT) ||
+	  (STATE(d) == CON_EXDESC))) {
+	free(*d->str);
+	if (d->backstr) {
+	   *d->str = d->backstr;
+	}
+	else *d->str = NULL;
+	d->backstr = NULL;
+	d->str = NULL;
+     }
+     /* this fix causes the editor to NULL out empty messages -- M. Scott */
+     else if ((d->str) && (*d->str) && (**d->str == '\0')) {
+	free(*d->str);
+	*d->str = NULL;
+     }
+     
+     if (STATE(d) == CON_MEDIT) {
+       medit_disp_menu(d);
+    }
+     
+    if (STATE(d) == CON_OEDIT) {
+      switch(OLC_MODE(d)) {
+      case OEDIT_ACTDESC:
+ 	oedit_disp_menu(d);
+ 	break;
+      case OEDIT_EXTRADESC_DESCRIPTION:
+ 	oedit_disp_extradesc_menu(d);
+      }
+    }
+     else if (STATE(d) == CON_REDIT) {
+      switch(OLC_MODE(d)) {
+      case REDIT_DESC:
+ 	redit_disp_menu(d);
+ 	break;
+      case REDIT_EXIT_DESCRIPTION:
+ 	redit_disp_exit_menu(d);
+ 	break;
+	 case REDIT_EXTRADESC_DESCRIPTION:
+	   redit_disp_extradesc_menu(d);
+	   break;
+      }
+     }
+     else if (!d->connected && (PLR_FLAGGED(d->character, PLR_MAILING))) {
+	if ((terminator == 1) && *d->str) {
+      store_mail(d->mail_to, GET_IDNUM(d->character), d->mail_vnum, *d->str);
+	   SEND_TO_Q("Message sent!\r\n", d);
+	}
+	else SEND_TO_Q("Mail aborted.\r\n", d);
       d->mail_to = 0;
+      d->mail_vnum = NOTHING;
       free(*d->str);
       free(d->str);
-      SEND_TO_Q("Message sent!\r\n", d);
-      if (!IS_NPC(d->character))
-	REMOVE_BIT(PLR_FLAGS(d->character), PLR_MAILING | PLR_WRITING);
     }
-    d->str = NULL;
-
-    if (d->mail_to >= BOARD_MAGIC) {
+     else if (d->mail_to >= BOARD_MAGIC) {
       Board_save_board(d->mail_to - BOARD_MAGIC);
+	SEND_TO_Q("Post not aborted, use REMOVE <post #>.\r\n", d);
       d->mail_to = 0;
     }
-    if (d->connected == CON_EXDESC) {
+     else if (STATE(d) == CON_EXDESC) {
+	if (terminator != 1) SEND_TO_Q("Description aborted.\r\n", d);
       SEND_TO_Q(MENU, d);
       d->connected = CON_MENU;
     }
-    if (!d->connected && d->character && !IS_NPC(d->character))
-      REMOVE_BIT(PLR_FLAGS(d->character), PLR_WRITING);
-  } else
-    strcat(*d->str, "\r\n");
+     else if (!d->connected && d->character && !IS_NPC(d->character)) {
+	if (terminator == 1) {
+	   if (*d->str && strlen(*d->str) == 0) {
+	      free(*d->str);
+	      *d->str = NULL;
+	   }
+	}
+	else {
+	   free(*d->str);
+	   if (d->backstr) {
+	      *d->str = d->backstr;
+	   }
+	   else *d->str = NULL;
+	   d->backstr = NULL;
+	   SEND_TO_Q("Message aborted.\r\n", d);
+	}
+     }
+    /* (FIDO) This handles cleaning up the mess of clan edits */
+    else if (STATE(d) == CON_CLAN_EDIT)
+    {
+      for (i2 = 0; i2 < 10; i2++)
+      if (CLAN_EDIT_DESC(i2) == d)
+      {
+                CLAN_EDIT_MODE(i2) = CLAN_EDIT_DESCRIPTION_FINISHED;
+                SEND_TO_Q("\r\n(s)ave (a)bort : ", d);
+      }
+    }
+      else if (STATE(d) == CON_TEXTED) {
+       if (terminator == 1) {
+          if (!(fl = fopen((char *)d->storage, "w"))) {
+             sprintf(buf, "SYSERR: Can't write file '%s'.", d->storage);
+             mudlog(buf, CMP, LVL_IMPL, TRUE);
+          }
+          else {
+             if (*d->str) {
+                fputs(stripcr(buf1, *d->str), fl);
+             }
+             fclose(fl);
+             sprintf(buf, "OLC: %s saves '%s'.", GET_NAME(d->character),
+                     d->storage);
+             mudlog(buf, CMP, LVL_GOD, TRUE);
+             SEND_TO_Q("Saved.\r\n", d);
+          }
+       }
+       else SEND_TO_Q("Edit aborted.\r\n", d);
+       act("$n stops editing some scrolls.", TRUE, d->character, 0, 0, TO_ROOM);
+       free(d->storage);
+       d->storage = NULL;
+       STATE(d) = CON_PLAYING;
+      }
+
+     if (d->character && !IS_NPC(d->character))
+       REMOVE_BIT(PLR_FLAGS(d->character), PLR_WRITING | PLR_MAILING);
+     if (d->backstr) free(d->backstr);
+     d->backstr = NULL;
+     d->str = NULL;
+  }
+  else if (!action) strcat(*d->str, "\r\n");
 }
+
 
 
 

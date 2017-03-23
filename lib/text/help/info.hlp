@@ -16,6 +16,79 @@ this means 78 on a scale from -100 to 100 (i.e., 7.8 on the scale from
 
 See also: SCORE
 #
+MOUNTS TAME DISMOUNT
+
+  This command lets you ride on top of something.  But first, it must first 
+be tamed, either naturally or by using the function tame.  These are 
+skills that must be practiced.  You can find them in your guild.  
+Currently the only advantage to being mounted is looking cool, but there 
+will be bonuses soon.
+
+EXAMPLES:
+  mount ruth
+  tame ruth
+  dismount ruth
+
+ Simple huh?
+#
+START
+
+Usage: start <city letter>
+
+Lets you change the city you start in to a different one.  Type start with
+no arguments for a list of how to use.  (it costs 1 million gold to 
+change your city.)
+#
+EASYCOLOR
+
+This lets you change the color of your text to look perdy.
+
+For example if you type "&&r Hi. &&w" then it will print out
+&r Hi. &w
+
+Colour code list
+----------------
+
+Normal Colours
+&\c25 or &&k = Black
+&\c01 or &&r = Red
+&\c02 or &&g = Green
+&\c03 or &&y = Yellow
+&\c04 or &&b = Blue
+&\c05 or &&m = Magenta
+&\c06 or &&c = Cyan
+&\c07 or &&w = White
+
+Bold Colours
+&\c29 or &&K = Bright black (No real use.  Just for completeness)
+&\c08 or &&R = Bright red
+&\c09 or &&G = Bright green
+&\c10 or &&Y = Bright yellow
+&\c11 or &&B = Bright blue
+&\c12 or &&M = Bright magenta
+&\c13 or &&C = Bright cyan
+&\c14 or &&W = Bright white
+
+Background Colours
+&\c24 or &&0 = Black background
+&\c15 or &&1 = Red background
+&\c16 or &&2 = Green background
+&\c17 or &&3 = Yellow background
+&\c18 or &&4 = Blue background
+&\c19 or &&5 = Magenta background
+&\c20 or &&6 = Cyan background
+&\c21 or &&7 = White background
+
+Misc Characters
+&\c22 or &&&& = The & character
+&\c23 or &&&\ = The \ character
+
+Special Codes
+&\ c00 or &&n = Normal
+&\ c26 or &&f = Flash (Use normal to turn off flash)
+&\ c27 or &&v = Reverse video
+&\ c28 or &&u = Underline (Only for mono screens)
+#
 AREAS ZONES
 
    This is a listing of the areas available for exploration on this
@@ -116,7 +189,17 @@ You can improve your spells by using the practice command.
 
 See 'help spells' for a list of spells available.
 
-See also: PRACTICE, SPELLS
+See also: PRACTICE, SPELLS, SHILA
+#
+DRUNK
+
+You can get drunk by well, drinking alchohol, and the more you drink, the 
+more messed up and slured your speech gets.
+#
+SHILA
+
+Shila is the cleric of Daggerfall, you can find her above the Temple of 
+DaggerFall.  She will cure your wounds and remove any poison you have.
 #
 EXPERIENCE XP
 

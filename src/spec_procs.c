@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: spec_procs.c                                  Part of CircleMUD *
 *  Usage: implementation of special procedures for mobiles/objects/rooms  *
 *                                                                         *
@@ -29,10 +29,122 @@ extern struct index_data *mob_index;
 extern struct index_data *obj_index;
 extern struct time_info_data time_info;
 extern struct command_info cmd_info[];
+extern int top_of_world;
 
 /* extern functions */
 void add_follower(struct char_data * ch, struct char_data * leader);
 
+#define BTV_NORTH  (1 << 0)
+#define BTV_EAST   (1 << 1)
+#define BTV_SOUTH  (1 << 2)
+#define BTV_WEST   (1 << 3)
+#define BTV_UP     (1 << 4)
+#define BTV_DOWN   (1 << 5)
+
+
+#define NUM_OBJ_SENTINELS 	4
+
+struct gamble_items_struct
+{
+  int vnum;
+  int odds;
+  int prize_vnum;
+  char *name;
+  char *prize_name;
+};
+
+struct obj_sentinel_struct 
+{
+  int vnum;
+  int direction;
+  char *can_pass;
+  char *cannot_pass;
+};
+
+struct arena_sentinels_struct
+{
+  int vnum;
+  int to_room;
+  char push_message[MAX_STRING_LENGTH];
+};
+
+struct gamble_items_struct gamble_items[] =
+{
+  { 
+    154,      
+    5,        
+    100,
+    "Arena Token",
+    "Quest Token"
+  },
+  { 
+    100,      
+    1,        
+    144,
+    "&rRed&n Token",
+    "&cCyan&n Token"
+  },
+  { 
+    144,      
+    1,        
+    143,
+    "&cCyan&n Token",
+    "&bBlue&n Token" 
+  },
+  { 
+    143,      
+    1,        
+    142,
+    "&bBlue&n Token",
+    "PLATINUM Token" 
+  },
+  { -1, -1, -1, "bug", "bug"  }  // This must be last
+};
+    
+struct arena_sentinels_struct arena_sentinels[] =
+{
+  /*  First must be battlemaster */
+  { 159,
+    112,
+    "Hey, not while we're fighting.\r\n"
+  },
+  { 154,
+    3059,
+    "Gotta keep you outta there, sorry.\r\n"
+  },
+  { 155,
+    113,
+    "Enjoy your stay in the arena!\r\n"
+  },
+  { -1,
+    -1,
+    "MUST BE LAST"
+  }
+};
+
+struct obj_sentinel_struct obj_sentinel_data[NUM_OBJ_SENTINELS] = 
+{
+  { 702,
+    NORTH,
+    "Right this way!",
+    "You don't have a ticket!  It must be in your inventory."
+  },
+  { 703,
+    EAST,
+    "Hope you've got a strong stomach.",
+    "You need a freak show ticket in your inventory or no go."
+  },
+  { 102,
+    SOUTH,
+    "You may pass.",
+    "You must have an Arena Club entry pass in your inventory."
+  },
+  { 118,
+    -1,
+    "&rB&gr&ce&ma&bk&n on through to the other side.",
+    "You have to have a Mystic Portal pass in your inventory"
+  }
+};
 
 struct social_type {
   char *cmd;
@@ -115,7 +227,7 @@ void list_skills(struct char_data * ch)
 {
   extern char *spells[];
   extern struct spell_info_type spell_info[];
-  int i, sortpos;
+  int i, sortpos, linepos, class, found=0;
 
   if (!GET_PRACTICES(ch))
     strcpy(buf, "You have no practice sessions remaining.\r\n");
@@ -127,21 +239,847 @@ void list_skills(struct char_data * ch)
 
   strcpy(buf2, buf);
 
-  for (sortpos = 1; sortpos < MAX_SKILLS; sortpos++) {
+  for (sortpos = 1, linepos = 1; sortpos < MAX_SKILLS; sortpos++) 
+  {
     i = spell_sort_info[sortpos];
     if (strlen(buf2) >= MAX_STRING_LENGTH - 32) {
       strcat(buf2, "**OVERFLOW**\r\n");
       break;
     }
-    if (GET_LEVEL(ch) >= spell_info[i].min_level[(int) GET_CLASS(ch)]) {
-      sprintf(buf, "%-20s %s\r\n", spells[i], how_good(GET_SKILL(ch, i)));
+    for(class=0, found=0; found != 2 && class <= NUM_CLASSES; class++)
+      if(IS_SET(ch->player_specials->saved.classes_been, (1 << class)) || 
+         GET_CLASS(ch) == class || GET_LEVEL(ch) >= LVL_IMMORT)
+        if ((spell_info[i].min_level[(int) class] < LVL_IMMORT ||
+            GET_LEVEL(ch) >= LVL_IMMORT) && strcmp(spells[i],"!UNUSED!")
+            != 0) 
+        {
+          if (GET_LEVEL(ch) < spell_info[i].min_level[(int) class] &&
+              GET_CLASS(ch) == class)
+          {
+            found = 1;
+            sprintf(buf, "&r< %-20s - %-2d%% - %-3dlvl >&n", spells[i],
+                    GET_SKILL(ch, i),
+                    spell_info[i].min_level[(int) class]);
+          }
+          else
+          {
+            found = 2;
+            sprintf(buf, "[ %-20s - %-2d%% - %-3dlvl ]&n", spells[i],
+                    GET_SKILL(ch, i),
+                    spell_info[i].min_level[(int) class]);
+          }
+        }
+    if (found != 0)
+    {
       strcat(buf2, buf);
+      switch(linepos)
+      {
+        case 1: linepos++; break;
+        case 2: linepos = 1; strcat(buf2, "\r\n"); break;
+      }
     }
   }
-
+  if(linepos==2)
+    strcat(buf2,"\r\n");
   page_string(ch->desc, buf2, 1);
 }
 
+SPECIAL(corpse_guy)
+{
+  ACMD(do_say);
+  int price=0, stop = FALSE;
+  struct char_data *self;
+  struct obj_data *i, *j;
+
+  self=(struct char_data *) me;
+
+  if(GET_LEVEL(ch) > 10)
+    price = (GET_LEVEL(ch)-10)*1000;
+
+  for (i = world[ch->in_room].contents; i;) 
+    if(GET_OBJ_TYPE(i) == ITEM_CONTAINER && GET_OBJ_VAL(i,3))
+    {
+      j = i;
+      i = i->next_content;
+      obj_from_room(j);
+      obj_to_char(j,self);
+      act("$n greedily snags a corpse.",FALSE,self,0,0,TO_ROOM);
+    }
+    else
+      i = i->next_content;
+
+  if(IS_NPC(ch))
+    return FALSE;
+
+  if(IS_MOVE(cmd) || CMD_IS("corpse"))
+  {
+    if(IS_MOVE(cmd))
+      do_say(self,"Hold on, I may have something for ya",0,0);
+    act("$n begins rummaging through $s stuff", FALSE, self, 0, 0, TO_ROOM);
+    for(i = self->carrying, stop = FALSE; i && !(stop); )
+    {
+      if(GET_OBJ_TYPE(i) == ITEM_CONTAINER && GET_OBJ_VAL(i,3))
+      {
+        act("$n holds up a corpse and compares the face.",FALSE,self,0,0,TO_ROOM);
+        if(isname(GET_NAME(ch), i->name))
+        {
+          if(IS_MOVE(cmd))
+          {
+            do_say(self,"Yup this one's yours, so do go runnin' off",0,0);
+            return TRUE;
+          }
+          stop = TRUE;
+        }
+        else
+        {
+          act("$n doesn't see a likeness, shakes his head and continues",
+              FALSE,self,0,0,TO_ROOM);
+          i = i->next_content;
+        }
+      }
+      else
+      {
+        act("$n looks at something and throws it over his shoulder",FALSE,
+            self,0,0,TO_ROOM);
+        do_say(self,"Wonder how that got in there",0,0);
+        j = i;
+        i = i->next_content;
+        obj_from_char(j);
+        obj_to_room(j,self->in_room);
+      }
+    }
+    if (!(stop))
+    {
+      do_say(self,"Guess not, see ya!",0,0);
+      return FALSE;
+    }
+  }
+  if (CMD_IS("corpse"))
+  {
+    if(!(stop))
+    {
+      do_say(self,"I don't have your corpse",0,0);
+      return TRUE;
+    }
+    two_arguments(argument, buf1, buf2);
+    if(strcmp("price",buf1) == 0)
+    {
+      sprintf(buf,"For the notorious %s? %d coins.\r\n",GET_NAME(ch),price);
+      send_to_char(buf,ch);
+      return TRUE;
+    }
+    else if(strcmp("buy",buf1) == 0)
+    {
+      if(GET_GOLD(ch) < price)
+      {
+        send_to_char("Your too broke, perhaps you should have me put it &bback&n.\r\n",ch);
+        return TRUE;
+      }
+      GET_GOLD(ch) -= price;
+      act("$n hands some money to the man.",FALSE,ch,0,0,TO_ROOM);
+      obj_from_char(i);
+      obj_to_char(i,ch);
+      do_say(self,"There ya go.",0,0);
+      return TRUE;
+    }
+    else if(strcmp(buf1,"back") == 0)
+    {
+      do_say(self,"Your loss.",0,0);
+      obj_from_char(i);
+      obj_to_room(i, real_room(GET_OBJ_VAL(i,3)));
+      return TRUE;
+    }
+  }
+  if(CMD_IS("corpse") || CMD_IS("list") || CMD_IS("help"))
+  {
+    send_to_char("&rA list of my services-&n\r\n"
+                 "&bcorpse buy&n   - buy your corpse back from me\r\n"
+                 "&bcorpse back&n  - Have me put your corpse back to your point of death\r\n"
+                 "&bcorpse price&n - Find out how much it costs for you to buy a corpse\r\n",
+                 ch);
+    return TRUE;
+  }
+  return FALSE;
+}
+
+SPECIAL(gamble_master)
+{
+  extern void death_cry(struct char_data *);
+  extern void raw_kill(struct char_data *);
+  struct obj_data *obj;
+  int x = 0;
+
+  if(!CMD_IS("gamble") && !CMD_IS("list"))
+    return FALSE;
+  if(CMD_IS("gamble"))
+  {
+    two_arguments(argument, buf1, buf2);
+    if(strcmp(buf1, "money") == 0)
+    {
+      if(GET_GOLD(ch) < atoi(buf2))
+      {
+        sprintf(buf, "&rSorry your funds, %d are less than %d&n\r\n",
+                GET_GOLD(ch), atoi(buf2));
+        send_to_char(buf, ch);
+        return TRUE;
+      }
+      if(number(0,1) == 0)
+      {
+        if (atoi(buf2) <= 10000)
+        {
+          GET_GOLD(ch) -= atoi(buf2);
+          sprintf(buf, "&rYOU LOST&n %d coins. You now have %d.\r\n", 
+                  atoi(buf2), GET_GOLD(ch));
+          send_to_char(buf, ch);
+        }
+        else
+        {
+          send_to_char("&rWhoa, too rich for my blood, but I'll do 10,000&n\r\n",ch);
+          GET_GOLD(ch) -= 10000;
+          sprintf(buf, "&rYOU LOST&n 10,000 coins. You now have %d.\r\n", 
+                  GET_GOLD(ch));
+          send_to_char(buf, ch);
+        }
+        WAIT_STATE(ch, PULSE_VIOLENCE);
+        return TRUE;
+      }
+      if (atoi(buf2) <= 10000)
+      {
+        GET_GOLD(ch) += atoi(buf2);
+        sprintf(buf, "&yYOU WON!&n %d coins. You now have %d.\r\n", 
+                atoi(buf2), GET_GOLD(ch));
+        send_to_char(buf, ch);
+      }
+      else
+      {
+        send_to_char("&rWhoa, too rich for my blood, but I'll do 10,000&n\r\n",ch);
+        GET_GOLD(ch) += 10000;
+        sprintf(buf, "&yYOU WON!&n 10,000 coins. You now have %d.\r\n", 
+                GET_GOLD(ch));
+        send_to_char(buf, ch);
+      }
+      WAIT_STATE(ch, PULSE_VIOLENCE);
+      return TRUE;
+    }
+    if(strcmp(buf1, "token") == 0)
+    {
+      if(GET_GOLD(ch) < 1500000)
+      {
+        sprintf(buf, "&rYou need 1.5 million coins to use this, you have %d&n\r\n",
+                GET_GOLD(ch));
+        send_to_char(buf, ch);
+        return TRUE;
+      }
+      GET_GOLD(ch) -= 1500000;
+      if(number(0,1) == 0)
+      {
+        sprintf(buf, "&rYOU LOST.&n You now have %d coins.\r\n", 
+                GET_GOLD(ch));
+        send_to_char(buf, ch);
+        return TRUE;
+      }
+      sprintf(buf, "&yYOU WON!&n You now have %d coins and a Quest Token.\r\n",
+              GET_GOLD(ch));
+      send_to_char(buf, ch);
+      obj = read_object(real_object(100), REAL);
+      obj_to_char(obj, ch);
+      return TRUE;
+    }
+    if(strcmp(buf1, "item") == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, buf2, ch->carrying)))
+      {
+        sprintf(buf, "You don't seem to be carrying a %s", buf2);
+        send_to_char(buf, ch);
+        return TRUE;
+      }
+      for(x=0; gamble_items[x].vnum != -1; x++)
+        if(gamble_items[x].vnum == GET_OBJ_VNUM(obj))
+        {
+          extract_obj(obj);
+          if(number(0, gamble_items[x].odds) != 0)
+          {
+            sprintf(buf, "&rYOU LOST&n a %s.\r\n", gamble_items[x].name);
+            send_to_char(buf,ch);
+            return TRUE;
+          }
+          sprintf(buf, "&yYOU WON&n a %s.\r\n", gamble_items[x].prize_name);
+          send_to_char(buf,ch);
+          obj = read_object(real_object(gamble_items[x].prize_vnum), REAL);
+          obj_to_char(obj, ch);
+          return TRUE;
+        }
+      send_to_char("&rThat item has no gamble capability.&n\r\n",ch);
+      return TRUE;
+    }
+    if(strcmp(buf1, "odds") == 0)
+    {
+      sprintf(buf, "&bGame odds:&n for gamble item\r\n");
+      for(x=0; gamble_items[x].vnum != -1; x++)
+        sprintf(buf, "%s[1 in %d odds of turning %s into %s]\r\n",
+                buf, (gamble_items[x].odds+1), gamble_items[x].name,
+                gamble_items[x].prize_name);
+      send_to_char(buf,ch);
+      return TRUE;
+    }         
+  }
+  send_to_char("&bGambling Options:&n\r\n"
+               "Command-             Usage-\r\n"
+               "- Money              gamble money x\r\n"
+               "  Gamble x coins, if you win it's doubled, otherwise you lose it\r\n\r\n"
+               "- token              gamble token\r\n"
+               "  Pay 1.5 million coins for a 1 out of 2 chance at a Quest Token\r\n\r\n"
+               "- item               gamble item <item name>\r\n"
+               "  put whatever <item> up to a gamble, if it is a gamble able item you\r\n"
+               "  have a chance at getting the prize for that item, otherwise you\r\n"
+               "  lose it.\r\n\r\n"
+               "- odds               gamble odds\r\n"
+               "  Displays the items accepted by gamble item, and their odds of winning\r\n"
+               ,ch);
+  return TRUE;
+}
+
+SPECIAL(quest_token_master)
+{
+  int r_num, item_state = 0, x;
+  struct obj_data *obj, *obj2;
+
+  if (!CMD_IS("quest") && !CMD_IS("list"))
+    return FALSE;
+  if (CMD_IS("quest"))
+  {
+    two_arguments(argument, buf1, buf2);
+    sprintf(buf, "%s used quest%s",GET_NAME(ch),argument);
+    mudlog(buf, NRM, LVL_IMMORT,TRUE);
+    if (strcmp("improve",buf1) == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "cyan", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a &cCyan&r quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 144)
+      {
+        send_to_char("&rDrop your other &cCyan&r objects first&n\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj2 = get_obj_in_list_vis(ch, buf2, ch->carrying)))
+      {
+        send_to_char("You have to be carrying the object\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_TYPE(obj2) != ITEM_WEAPON)
+      {
+        send_to_char("I can only improve weapons\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      for(x=0; x < MAX_OBJ_AFFECT && item_state < 3; x++)
+        if (obj2->affected[x].location == APPLY_NONE)
+        {
+          if ( number(1,20) < x )
+          {
+            extract_obj(obj2);
+            send_to_char("The Questmaster eats your item, Yummie!\r\n",ch);
+            return(TRUE);
+          }
+          if (item_state == 0)
+          {
+            item_state++;
+            obj2->affected[x].location = APPLY_DAMROLL;
+            obj2->affected[x].modifier = 1;
+            send_to_char("Added 1 to damroll.\r\n",ch);
+          }
+          else if (item_state == 1)
+          {
+            item_state++;
+            obj2->affected[x].location = APPLY_HITROLL;
+            obj2->affected[x].modifier = 1;
+            send_to_char("Added 1 to hitroll.\r\n",ch);
+          }
+        }
+        else if(obj2->affected[x].location == APPLY_DAMROLL && 
+                item_state == 0 && obj2->affected[x].modifier <= 1)
+        {
+          item_state++;
+          obj2->affected[x].modifier++;
+          send_to_char("Added 1 to damroll.\r\n",ch);
+        }
+        else if(obj2->affected[x].location == APPLY_HITROLL &&
+                item_state == 1 && obj2->affected[x].modifier <= 1)
+        {
+          item_state++;
+          obj2->affected[x].modifier++;
+          send_to_char("Added 1 to hitroll.\r\n",ch);
+        }
+      if (x == MAX_OBJ_AFFECT && item_state == 0)
+      {
+        send_to_char("&rTHE OBJECT OVERLOADS! And EXPLODES!&n\r\n", ch);
+        extract_obj(obj2);
+        return TRUE;
+      }
+      return TRUE;
+    }
+    if (strcmp("str",buf1) == 0)
+    {
+      if (GET_STR(ch) >= 18)
+      {
+        send_to_char("Your strength is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.str += 1;
+      send_to_char("You feel stronger\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("int",buf1) == 0)
+    {
+      if (GET_INT(ch) >= 18)
+      {
+        send_to_char("Your intelligence is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.intel += 1;
+      send_to_char("You feel smarter.\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("wis",buf1) == 0)
+    {
+      if (GET_WIS(ch) >= 18)
+      {
+        send_to_char("Your wisdom is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.wis += 1;
+      send_to_char("You feel wiser\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("dex",buf1) == 0)
+    {
+      if (GET_DEX(ch) >= 18)
+      {
+        send_to_char("Your dexterity is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.dex += 1;
+      send_to_char("You feel more agile\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("con",buf1) == 0)
+    {
+      if (GET_CON(ch) >= 18)
+      {
+        send_to_char("Your constitution is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.con += 1;
+      send_to_char("You feel tougher\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("cha",buf1) == 0)
+    {
+      if (GET_CHA(ch) >= 18)
+      {
+        send_to_char("Your charisma is at max right now\r\n",ch);
+        return TRUE;
+      }
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou don't have a RED quest token&n\r\n",ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other RED items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      ch->real_abils.cha += 1;
+      send_to_char("You feel more charismatic\r\n",ch);
+      affect_total(ch);
+      return TRUE;
+    }
+    if (strcmp("money",buf1) == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, buf2, ch->carrying)))
+      {
+        sprintf(buf, "&rYou don't have a %s&n\r\n", buf2);
+        send_to_char(buf,ch);
+        return TRUE;
+      }
+      switch(GET_OBJ_VNUM(obj))
+      {
+        case 154: GET_GOLD(ch) += 500000; break;
+        case 100: GET_GOLD(ch) += 3000000; break;
+        case 144: GET_GOLD(ch) += 5000000; break;
+        case 143: GET_GOLD(ch) += 7000000; break;
+        case 142: GET_GOLD(ch) += 9000000; break;
+        default:
+          sprintf(buf, "&r%s is not something that I will pay for&n", buf2);
+          send_to_char(buf,ch);
+          return TRUE;
+          break;
+      };
+      extract_obj(obj);
+      send_to_char("You feel richer.\r\n",ch);
+      return TRUE;
+    }
+    if( strcmp("hunger",buf1) == 0 )
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "blue", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a &bBlue&r token&n\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 143)
+      {
+        send_to_char("&rYou have to drop all your other Blue items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      send_to_char("You are no longer hungry\r\n",ch);
+      GET_COND(ch, FULL) = -1;
+      return TRUE;
+    }
+
+    if( strcmp("thirst",buf1) == 0 )
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "blue", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a &bBlue&r token\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 143)
+      {
+        send_to_char("&rYou have to drop all your other Blue items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      GET_COND(ch, THIRST) = -1;
+      send_to_char("You will no longer be thirsty\r\n",ch);
+      return TRUE;
+    }
+
+    if ( strcmp("exchange",buf1) == 0 )
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a RED token&n\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other red items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      r_num = real_object(104);
+      obj = read_object(r_num, REAL);
+      obj_to_char(obj, ch);
+      r_num = real_object(118);
+      obj = read_object(r_num, REAL);
+      obj_to_char(obj, ch);
+      send_to_char("You now have an arena and mystical portal pass\r\n",ch);
+      return TRUE;
+    }
+
+    if (strcmp(buf1, "hit") == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a RED token&n\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other red items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      sprintf(buf, "You gained %d more hitpoints!",
+              ((5000-GET_HIT(ch))/250));
+      GET_MAX_HIT(ch) += (5000-GET_HIT(ch))/250;
+      GET_HIT(ch) = GET_MAX_HIT(ch);
+      send_to_char(buf,ch);
+      return TRUE;
+    }
+
+    if (strcmp(buf1, "mana") == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a RED token&n\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other red items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      sprintf(buf, "You gained %d more max mana!",
+              ((5000-GET_MANA(ch))/250));
+      GET_MAX_MANA(ch) += (5000-GET_MAX_MANA(ch))/250;
+      GET_MANA(ch) = GET_MAX_MANA(ch);
+      send_to_char(buf,ch);
+      return TRUE;
+    }
+
+    if (strcmp(buf1, "move") == 0)
+    {
+      if(!(obj = get_obj_in_list_vis(ch, "red", ch->carrying)))
+      {
+        send_to_char("&rYou have to be holding a RED token&n\r\n", ch);
+        return TRUE;
+      }
+      if(GET_OBJ_VNUM(obj) != 100)
+      {
+        send_to_char("&rYou have to drop all your other red items&n\r\n",ch);
+        return TRUE;
+      }
+      extract_obj(obj);
+      sprintf(buf, "You gained %d more movepoints!",
+              ((5000-GET_MOVE(ch))/250));
+      GET_MAX_MOVE(ch) += (5000-GET_MOVE(ch))/250;
+      GET_MOVE(ch) = GET_MAX_MOVE(ch);
+      send_to_char(buf,ch);
+      return TRUE;
+    }
+  }
+    send_to_char(
+"Quest Options:\r\n"
+"* quest improve, 1 cyan token, give an item +1/+1, careful I eat items!\r\n"  
+"* quest exchange, 1 red token, get 1 arena and 1 mystical portal pass.\r\n"
+"* quest <stat>, 1 red token, improve your &rstr&n, &rint&n, &rwis&n, &rdex&n, &rcha&n by 1\r\n"
+"* quest <stat>, 1 red token, improve your maximum &rhit&n, &rmove&n, &rmana&n by a few\r\n"
+"* quest money <item>, 1 token, get money for your token, equal to token level\r\n"
+"* quest <stat>, 1 blue token permantely cure your &rhunger&n or &rthirst&n\r\n",ch);
+  return TRUE;
+}
+
+SPECIAL(arena_sentinel)
+{
+  extern int arena_status;
+  int x;
+  struct char_data *self;
+
+  self=(struct char_data *) me;
+
+  if ( IS_NPC(ch) )
+    return FALSE;
+
+  if(arena_status > 0 && GET_MOB_VNUM(self) == arena_sentinels[0].vnum)
+    if(IS_MOVE(cmd))
+    {    
+      send_to_char("Hold your horses, it will start soon.\r\n",ch);
+      return TRUE;
+    }
+
+  if(arena_status == -2)
+  {
+    for(x=0; arena_sentinels[x].vnum != -1; x++)
+      if(arena_sentinels[x].vnum == GET_MOB_VNUM(self))
+      {
+        send_to_char(arena_sentinels[x].push_message, ch);
+        char_from_room(ch);
+        char_to_room(ch, real_room(arena_sentinels[x].to_room));
+        return TRUE;
+      }
+    log("Non-exsistant arena mob call in spec_procs.c arena_sentinel()");
+    return FALSE;
+  }
+  else
+    return FALSE;
+}
+
+
+
+SPECIAL(obj_sentinel)
+{
+  ACMD(do_say);
+  struct char_data *self;
+  struct obj_data *obj;
+  int x, vnum = -1;
+
+  self=(struct char_data *) me;
+
+  for(x=0; x <= NUM_OBJ_SENTINELS; x++)
+    if ( obj_sentinel_data[x].vnum == GET_MOB_VNUM(self) )  
+    {
+      vnum = GET_MOB_VNUM(self);
+      break;
+    }
+  
+  if ( vnum == -1 )
+  {
+    send_to_char("Mob doesn't exist!\r\n",ch);
+    return FALSE;
+  }
+
+  if ( IS_MOVE(cmd) )
+  {
+    if ( (cmd-1) != obj_sentinel_data[x].direction &&
+        obj_sentinel_data[x].direction != -1)
+    {
+//      send_to_char("Direction not blocked!\r\n", ch);
+      return FALSE;
+    }
+    sprintf(buf, "%d", vnum);
+    if ((obj = get_obj_in_list_vis(ch, buf, ch->carrying)))
+    {
+      extract_obj(obj);
+      do_say(self, obj_sentinel_data[x].can_pass, 0, 0);
+      return FALSE;
+    }
+    else
+    {
+      do_say(self, obj_sentinel_data[x].cannot_pass, 0, 0);
+      return TRUE;
+    }
+  }
+  else
+    return FALSE;
+}      
+
+SPECIAL(monkey) {
+  struct char_data *vict;
+  struct obj_data *obj, *list;
+  int to_take, obj_count = 0, found = 0;
+
+  if ((cmd) || (GET_POS(ch) != POS_STANDING))
+    return FALSE;
+
+  /* Pick a victim */
+  for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
+    if (!IS_NPC(vict) && (GET_LEVEL(vict) < LVL_IMMORT) && (!number(0,4)))
+    {
+      if (AWAKE(vict) && (number(0, GET_LEVEL(ch)) == 0))
+      {
+        act("You gasp as you realize $n is attempting to take something from you!", FALSE, ch, 0, vict, TO_VICT);
+        act("$n just tried to take something from $N!", TRUE, ch, 0, vict, TO_NOTVICT);
+        return TRUE;
+      } else
+      {
+        /* Decide whether to take armor or object */
+        switch(number(0,3)) {
+        case 0:
+        case 2:
+          break;
+        case 1:
+          log ("in monkey - case 1");
+          to_take = number(0, 25);
+          if (GET_EQ(vict, to_take) && CAN_SEE_OBJ(ch, GET_EQ(vict,to_take)))
+          {
+            obj = GET_EQ(vict, to_take);
+            act("$n has just stolen $p from $N!!",
+                FALSE, ch, obj, vict, TO_NOTVICT);
+            act("$n has just stolen $p from you!!",
+                FALSE, ch, obj, vict, TO_VICT);
+
+            obj_to_char(unequip_char(vict, to_take), vict);
+            obj_from_char(obj);
+            obj_to_room(obj, ch->in_room);
+            act("$n has just exploded into little bitty bits!",
+                FALSE, ch, 0, 0, TO_ROOM);
+            extract_char(ch);
+            return TRUE;
+          }
+          break;
+        case 3: /* object */
+          list = vict->carrying;
+          for (obj = list; obj; obj = obj->next_content) {
+            if (CAN_SEE_OBJ(vict, obj)) {
+              obj_count += 1;
+              found = 1;
+            }
+          }
+          if (found == 1) /* Ok, they're carrying something, so pick one*/
+          {
+            to_take = number(0, obj_count);
+            obj_count = 0;
+            for (obj = list; obj; obj = obj->next_content)
+            {
+              obj_count += 1;
+              if (obj_count == to_take)
+              {
+                act("$n has just stolen $p from $N!!",
+                    FALSE, ch, obj, vict, TO_NOTVICT);
+                act("$n has just stolen $p from you!!",
+                    FALSE, ch, obj, vict, TO_VICT);
+                obj_from_char(obj);
+                obj_to_room(obj, ch->in_room);
+                act("$n has just exploded into little bitty bits!",
+                    FALSE, ch, 0, 0, TO_ROOM);
+                extract_char(ch);
+                return TRUE;
+              }
+            }
+            break;
+          }
+        } /* end case 2 */
+      }
+    }
+  return FALSE;
+}
 
 SPECIAL(guild)
 {
@@ -190,7 +1128,53 @@ SPECIAL(guild)
   return 1;
 }
 
+SPECIAL(temple_cleric)
+{
+  struct char_data *vict;
+  struct char_data *hitme = NULL;
+  static int this_hour;
+  int temp1 = 100;
+  int temp2 = 100;
 
+  if (cmd) return FALSE;
+
+  if (time_info.hours != 0) {
+
+  this_hour = time_info.hours;
+
+  for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
+    {
+        if (IS_AFFECTED(vict,AFF_POISON)) hitme = vict;
+    }
+    if (hitme != NULL) {
+          cast_spell(ch, hitme, NULL, SPELL_REMOVE_POISON);
+          return TRUE;
+         }
+
+  for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
+    {
+        if (IS_AFFECTED(vict,AFF_BLIND)) hitme = vict;
+    }
+    if (hitme != NULL) {
+          cast_spell(ch, hitme, NULL, SPELL_CURE_BLIND);
+          return TRUE;
+         }
+
+  for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
+    {
+       temp1 = (100*GET_HIT(vict)) / GET_MAX_HIT(vict);
+       if (temp1 < temp2) {
+             temp2 = temp1;
+             hitme = vict;
+            }
+    }
+    if (hitme != NULL) {
+          cast_spell(ch, hitme, NULL, SPELL_CURE_LIGHT);
+          return TRUE;
+         }
+  }
+  return 0;
+}
 
 SPECIAL(dump)
 {
@@ -478,7 +1462,7 @@ SPECIAL(guild_guard)
   for (i = 0; guild_info[i][0] != -1; i++) {
     if ((IS_NPC(ch) || GET_CLASS(ch) != guild_info[i][0]) &&
 	world[ch->in_room].number == guild_info[i][1] &&
-	cmd == guild_info[i][2]) {
+	cmd == guild_info[i][2] && guild_info[i][0] != -1) {
       send_to_char(buf, ch);
       act(buf2, FALSE, ch, 0, 0, TO_ROOM);
       return TRUE;
@@ -505,11 +1489,13 @@ SPECIAL(puff)
     do_say(ch, "How'd all those fish get up here?", 0, 0);
     return (1);
   case 2:
-    do_say(ch, "I'm a very female dragon.", 0, 0);
+    do_say(ch, "I'm a very hermaphroditic dragon.", 0, 0);
     return (1);
   case 3:
     do_say(ch, "I've got a peaceful, easy feeling.", 0, 0);
     return (1);
+  case 4:
+    do_say(ch, "I love Lord Jaxom, He's real cute.",0,0);
   default:
     return (0);
   }
@@ -679,6 +1665,21 @@ SPECIAL(pet_shops)
 ******************************************************************** */
 
 
+SPECIAL(spread)
+{
+  struct obj_data *obj = (struct obj_data *) me;
+
+  if (obj->in_room == real_room(106))
+  {  
+    obj_from_room(obj);
+    obj_to_room(obj, number(1, top_of_world));
+    send_to_char("Something disappears.\r\n", ch); 
+    return 0;
+  }
+  else
+    return 0;
+}
+
 SPECIAL(bank)
 {
   int amount;
@@ -723,5 +1724,92 @@ SPECIAL(bank)
     return 1;
   } else
     return 0;
+}
+
+ACMD(do_enter)
+{
+  struct obj_data *portal;
+  char obj_name[MAX_STRING_LENGTH];
+  sh_int roomto;
+
+  argument = one_argument(argument,obj_name);
+  if (!(portal = get_obj_in_list_vis(ch,obj_name,world[ch->in_room].contents))) 
+  {
+    send_to_char("There is no portal by that name.\r\n",ch);
+    return;
+  }
+  if(GET_OBJ_TYPE(portal) != ITEM_PORTAL)
+  {
+    send_to_char("Thats not a portal.\r\n",ch);
+    return;
+  }
+  if (ch->points.move < 5)
+  {
+    send_to_char("Your too tired.\r\n", ch);
+    return;
+  }
+  if (real_room(GET_OBJ_VAL(portal, 0)) == NOWHERE)
+  {
+    send_to_char("The portal seems to go nowhere..\r\n",ch);
+    send_to_room("A portal vanishes as it loses bounds with reality.\r\n",ch->in_room);
+    log("Portal with non-existant room attached. (spec_procs.c)");
+    extract_obj(portal);
+    return;
+  }
+  roomto = real_room(GET_OBJ_VAL(portal,0));
+  sprintf(buf, "%s enters the portal.\r\n", GET_NAME(ch));
+  send_to_room(buf, ch->in_room);
+  char_from_room(ch);
+  sprintf(buf, "%s pulls open a portal and steps through.\r\n", GET_NAME(ch));
+  send_to_room(buf, roomto);
+  char_to_room(ch, roomto);
+  look_at_room(ch, 0);
+  ch->points.move -= 5;
+  return;
+}
+
+SPECIAL (redbutton)
+{
+  struct obj_data *obj = (struct obj_data *) me;
+  struct obj_data *port;
+  char obj_name[MAX_STRING_LENGTH];
+  int roomto;
+
+    if (!CMD_IS("push")) return FALSE;
+
+    argument = one_argument(argument,obj_name);
+    if (!(port = get_obj_in_list_vis(ch,obj_name,world[ch->in_room].contents))) 
+    {
+      return(FALSE);
+    }
+
+    if (GET_LEVEL(ch) == 1)
+    {
+      send_to_char("The button is dangerous, maybe next level.\r\n",ch);
+      return(TRUE);
+    }
+    if (port != obj)
+      return(FALSE);
+    if (ch->points.move <= 0)
+    {
+      send_to_char("Your too tired.\r\n", ch);
+      return(TRUE);
+    }
+        roomto = number(0, top_of_world);
+        if (ROOM_FLAGGED(roomto, ROOM_NOTELEPORT) || 
+	    ROOM_FLAGGED(roomto, ROOM_HOUSE) || /* Galvanon */
+            ROOM_FLAGGED(roomto, ROOM_DEATH))
+        {
+          send_to_char("BOING!!  The button pops back and nothing happens.\r\n", ch);
+          return(TRUE);
+        }
+        act("$n pushes $p and fades away.", FALSE, ch, port, 0, TO_ROOM);
+        act("You push $p, and you are transported elsewhere", FALSE, ch, port, 0, TO_CHAR);
+        char_from_room(ch);
+        ch->points.move -= 20;
+        char_to_room(ch, roomto);
+        look_at_room(ch, 0);
+        act("$n slowly materializes from nowhere...", FALSE, ch, 0, 0, TO_ROOM);
+        return(TRUE);
 }
 

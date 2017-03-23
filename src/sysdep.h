@@ -202,6 +202,7 @@ unsigned long random(void);
 
 #ifdef __GNUC__
 
+/*
 #ifdef HAVE_RANDOM
 #ifndef random
    long int random();
@@ -210,7 +211,7 @@ unsigned long random(void);
 #ifndef srandom
    void srandom();
 #endif
-#endif /* HAVE_RANDOM */
+#endif  HAVE_RANDOM */
 
 #ifndef atoi
    int atoi();

@@ -1,0 +1,473 @@
+#600
+crab beach red~
+the little beach crab~
+A little red crab is searching for food here.
+~
+The little red crab is busy searching for food.  It doesn't even notice you are here.
+~
+74 0 -1000 E
+1 20 10 9d1+1 1d1+0
+10 20
+8 8 0
+E
+#601
+shark great white~
+a great white shark~
+A great white shark swims around your boat.
+~
+The great white shark looks to be interested in your boat.. Or is it interested in you?  For dinner?
+~
+16488 64 0 E
+3 20 10 11d2+30 2d5+0
+0 350
+8 8 0
+BareHandAttack: 4
+E
+#602
+kraken squid giant~
+a giant kraken~
+A giant kraken is floating in the water here eyeing you.
+~
+This squid is so huge it could easily swallow you and your boat whole.  You
+wonder how something like this could even exist.  How could it ever find enough
+food?    
+~
+116810 0 0 E
+45 2 -2 30d25+60 4d6+19
+0 90000
+8 8 0
+BareHandAttack: 2
+E
+#603
+monkey brown little~
+the little brown monkey~
+There is a little brown monkey here eating a banana.
+~
+This is a small monkey, only a few tall.  He is wandering around while eating
+his banana.    
+~
+204 0 105 E
+5 18 10 30d1+30 4d3+1
+130 720
+8 8 0
+E
+#604
+small ocean fish~
+a small ocean fish~
+A small ocean fish is swimming here.
+~
+It looks, err, unfinished.
+The small ocean fish is brightly colored and pretty to look at.  It is swimming around your boat looking very curious.
+~
+16392 64 0 E
+1 20 10 5d1+1 3d2+0
+0 10
+8 8 0
+BareHandAttack: 4
+E
+#605
+monster dark green slime~
+the pond monster~
+A dark green slime is floating in the pond here. 
+~
+This slime looking substance appears to be moving slowly towards you.  It may
+look nasty, but the smell is a lot worse.    
+~
+16478 130 -320 E
+65 -1 -5 30d60+800 7d6+23
+15000 100000
+8 8 0
+BareHandAttack: 1
+E
+#606
+toad poisonous yellow red~
+a poisonous toad~
+A small bright red and yellow poisonous toad is clinging to a twig here.
+~
+This small toad seems harmless but is very bright and colorful.  Nothing else seems to bother it so perhaps neither should you.
+~
+72 0 -23 E
+2 19 5 6d4+10 1d1+0
+35 52
+8 8 0
+E
+#607
+frond tri-flower man eating~
+the tri-flower frond~
+A colorful man eating Tri-flower Frond is growing here.
+~
+The deep green stalks of this plant are topped by trumpet-shaped flowers of vivid orange, bright yellows, and intense red.
+~
+131194 32 -240 E
+15 0 10 30d10+20 5d4+4
+1630 5300
+8 8 0
+BareHandAttack: 1
+E
+#608
+ants fire swarm~
+the fire ants~
+A MASSIVE swarm of fire ants are here expanding their teritory.
+~
+This massive swarm of ants crawl over everything.  Anything living they group
+together and tear it apart.  I wouldn't get to close if I were you.    
+~
+92 0 -210 E
+29 10 0 30d60+40 10d4+9
+0 181000
+8 8 0
+BareHandAttack: 1
+E
+#609
+monkey brown small~
+the little brown monkey~
+There is a little brown monkey here eating a banana.
+~
+This is a small monkey, only a few feet tall.  He is wandering around while
+eating his banana.    
+~
+206 0 105 E
+5 18 10 30d1+30 4d3+1
+130 720
+8 8 0
+E
+#610
+pirate guard ~
+a pirate guard~
+A pirate is here protecting the hideout...in his sleep...
+~
+This guy looks and smells like he could use a good shower and shave.  He wears
+old rags for clothes and has a patch over one eye.  Lost the eye in a fight
+probably, he doesn't look like he's ever won any.    
+~
+4104 0 -100 E
+25 7 2 1d1+499 5d4+8
+1001 15000
+4 4 1
+E
+#611
+crab beach red~
+the little beach crab~
+A little red crab is searching for food here.
+~
+The little red crab is busy searching for food.  It doesn't even notice you are
+here.    
+~
+74 0 55 E
+1 19 10 9d1+3 1d1+1
+2 25
+8 8 0
+E
+#612
+pirate game gaming~
+the gaming pirate~
+A pirate sits at the table here playing some sort of game.
+~
+This pirate doesn't even notice you.  He is to busy concentrating on his game,
+which appears to be poker.  You notice though that he plays not with gold.  All
+he has is a cleaver, and you see he is missing a few fingers.  What type of
+game is this?    
+~
+74 0 -145 E
+20 5 0 18d20+90 5d3+9
+4300 16000
+8 8 1
+E
+#613
+pirate wandering bored~
+a wandering pirate~
+A pirate is walking around here bored, trying to find something to do.
+~
+   This pirate doesn't look to be that busy.  He's just wandering around the
+hideout in search of a cure to his boredom.    
+~
+6216 0 -89 E
+18 7 0 30d15+60 4d4+9
+3400 13000
+8 8 1
+E
+#614
+pirate snoring sleeping sleepy~
+the sleepy pirate~
+A pirate is sleeping here snoring very loudly.
+~
+This pirate doesn't do anyhting but sleep and sleep some more.  Most of the
+other pirates don't even get to sleep much because he snores so loud.  The
+noise he makes is reason enough to put this poor guy out of his misery.
+~
+74 128 -140 E
+39 1 -2 30d30+70 4d6+20
+5600 25000
+4 4 1
+E
+#615
+guard dungeon pirate~
+the dungeon guard~
+The pirate dungeon guard is here grining at you as he gets ready to attack.
+~
+This smelly, fat, and very ugly pirate doesn't look like he gets out much.  He
+does look mean though and wanting to fight, and since you're here.  The only
+other thing you really notice is that one of his hands is missing and in the
+place of it is a hook.    
+~
+6250 0 -240 E
+20 1 10 16d50+20 3d5+14
+13000 50000
+8 8 1
+E
+#616
+pirate working mean~
+a mean looking pirate~
+A mean looking pirate was working here, until he saw you.
+~
+This pirate does not seem happy that you're on the ship.  His big muscle and
+dark tan show how he's been working out in the sun too long.  I would sugest
+geting away from him, or preparing to fight.    
+~
+53368 0 -230 E
+60 0 -3 30d45+120 5d6+15
+11000 78000
+8 8 1
+E
+#617
+boy cabin~
+the cabin boy~
+The cabin boy sits at his table here, writing the ships logs for the captain.
+~
+This harmless looking guy seems to be the only pirate who has a smile.  He also
+seems to be happy that you're here.  You'd feel bad killing a guy like this.  
+~
+6218 0 230 E
+60 3 -4 30d50+400 6d6+16
+13000 90000
+8 8 1
+E
+#618
+captain pirate~
+the pirate captain~
+The pirate captain glares at you, not happy that you disturbed him.
+~
+My god this guy is huge!  No wonder he is the captain, he could kick easily take on all the other pirates at once. 
+~
+254074 136 -670 E
+90 -8 -4 1d1+3999 6d10+19
+100000 400000
+8 8 1
+BareHandAttack: 10
+E
+#619
+guardian shrine statue~
+the guardian of the shrine~
+A large statue stands here as though it were to protect the shrine.
+~
+This huge statue looks to be as old as the shrine.  Obviously it was put here
+as some type of mythical guardian.  It looks human in shape, but is twice as
+tall and has four arms.  Whith which it holds a very large axe.  You do notice
+though that the eyes seem to follow you as you walk around it.    
+~
+256090 32928 0 E
+85 -5 10 1d1+12500 8d8+50
+100000 3500000
+8 8 0
+BareHandAttack: 6
+E
+#620
+cube gelatinous~
+a gelatinous cube~
+A gelatinous cube is slowly moving down the hall here absorbing all it touches.
+~
+This slimy cude is very hard to see, for it is nearly transparent.  It does not look friendly, and you think you can make out a skeleton inside it.  
+~
+196668 32802 -140 E
+70 -5 -3 1d1+2999 3d6+15
+14000 150000
+8 8 0
+BareHandAttack: 1
+E
+#621
+statue light~
+the statue of light~
+A tall bright statue of light sits against the east wall here.
+~
+It is a tall bright statue standing against the east wall.  It illuminates the room.
+~
+188490 41984 1000 E
+85 -10 -9 1d1+3499 4d6+20
+75000 300000
+8 8 0
+E
+#622
+statue dark~
+the statue of dark~
+A tall dark statue is barley visible in the shadows of the west wall.
+~
+It is a tall dark statue, barely visible in the shadows against the west wall.
+~
+188490 37888 -1000 E
+85 -10 -9 1d1+3499 4d6+20
+75000 300000
+8 8 0
+BareHandAttack: 7
+E
+#623
+statue god ancient~
+the statue of the ancient god~
+A statue sits in the center of the room, holding the sphere of neutrality.
+~
+This statue of the ancient god this temple was made for holds a great sphere.
+This sphere contains light on one side, and dark on the other.  They come together in the center to form true neutral.  A force not made from dark or light, but void of both.
+~
+188442 46212 0 E
+100 -10 -10 1d1+7500 7d7+35
+100000 1000000
+8 8 0
+BareHandAttack: 6
+E
+#659
+baraknar~
+Baraknar~
+&RBaraknar the evil giant stands here making you look really small.
+~
+My god he is huge!  At least 60 feet tall and smells of dead goats.  Best be
+careful with this one.
+~
+124952 0 -1000 E
+80 -20 -15 1d8+24999 30d10+30
+0 0
+8 8 1
+E
+#660
+Princess Zelda~
+Princess Zelda~
+A regal-looking, beautiful blonde woman graces you with her prescence.
+~
+   The beautiful Princess Zelda stands before you.  She has long, gorgeous
+blonde hair and deep blue eyes that you could drown in.  Her elegent silks
+rustle as she turns to gaze upon you, and you feel stunned by her grace and
+wisdom.    
+~
+524298 0 1000 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#661
+pig pink~
+&MA BIG PINK PIG&n~
+&MTheres A BIG PINK PIG here...catch him if you can!&n
+~
+Oink oink goes the pig....
+~
+254092 33792 0 E
+100 20 0 1d1+30000 1d10+0
+0 0
+8 8 1
+BareHandAttack: 4
+E
+#662
+Gannon~
+&BGannon&n~
+The king of thieves and evil, &BGannon&n stands before you.
+~
+   Gannon has been so twisted by his evil ways, he no longer appears human.  
+Instead, he resembles a giant blue pig-man, complete with snout.  His long
+yellow and red cape drapes behind him majestically, and his powerful prescence
+makes you want to cower.    
+~
+256042 42172 -1000 E
+100 -30 -20 20d100+30000 5d5+50
+750000 0
+8 8 1
+BareHandAttack: 3
+E
+#663
+cold prickly~
+a &bcold prickly&n~
+&nA &bcold prickly&n is here, the sight of it makes you shiver.
+~
+Burrrr...
+~
+24604 32 -1000 E
+50 0 0 1d1+799 20d10+25
+10000 0
+8 8 0
+E
+#664
+warm fuzzy~
+a &rwarm fuzzy&n~
+&nA &rwarm fuzzy&n is here, the sight of it makes you all warm inside.
+~
+Mmmm...warm
+~
+24716 32 1000 E
+50 -5 0 1d1+799 20d5+20
+10000 0
+8 8 0
+E
+#695
+mob quest~
+&Y&fA SECRET QUEST MOB&n~
+&Y&fA SECRET QUEST MOB IS HERE, KILL IT IF YOU CAN SEE IT!&n
+~
+&Y&fThis creature should be hard to find...how can you see it?&n
+~
+254092 32906 0 E
+30 10 0 1d1+5000 5d10+10
+0 0
+8 8 0
+BareHandAttack: 12
+E
+#696
+lemming~
+a lemming~
+A lemming is here trying to find a cliff to jump off of.
+~
+It's a lemming!  A small furry creature that lives to die.  Kill it quick, 
+before it kills itself.
+~
+16520 32768 0 E
+1 20 10 1d1+999 1d1+0
+0 0
+8 8 0
+E
+#697
+baby tarrasque~
+a baby Tarrasque~
+A smaller version of the Tarrasque is here, a baby perhaps?
+~
+Could this be?  the Tarrasque has had little ones?!  God save the world.
+~
+258170 33960 0 E
+66 -5 -20 1d1+9999 5d75+25
+0 125000
+8 8 2
+BareHandAttack: 10
+E
+#698
+beast tarrasque~
+the Tarrasque~
+A giant scaly beast is here, just the sight of it terrifies you.
+~
+This mighty beast is the most dreaded among all creatures of the Prime
+Material plane.  It is the mighty Tarrasque, and it will now KILL YOU!
+~
+258170 38060 0 E
+100 -30 -20 1d1+30000 30d120+50
+500000 3000000
+8 8 2
+BareHandAttack: 4
+E
+#699
+olaf god immortal~
+Olaf~
+Olaf, the God of Gods is here, watching over Jupiter.
+~
+This is Olaf!  The God of Gods!  How dare you look at him!
+~
+256090 32936 1000 E
+100 -30 -20 1d1+30000 30d45+50
+0 1
+8 8 1
+BareHandAttack: 6
+E
+$

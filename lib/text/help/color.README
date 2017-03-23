@@ -1,0 +1,144 @@
+New and improved Easy Color v2.2
+--------------------------------
+
+This patch is based on the Easy Color patch by mud@proimages.proimages.com
+
+It will add the & colour codes to the mud whilst still supporting the old \c
+colour codes.  It will also have the ability to make things flash and get
+displayed in reverse video.  (You might want to disable the flash colour
+code because you will eventually end up with huge areas of your mud flashing
+in horrible colours.)
+
+I wrote this patch because I could never remember the numbers for each colour
+in the Easy Color patch.
+
+To install the patch follow the instructions in color.txt
+
+If you have already installed the easy color patch before then all you need
+to do is copy the new color.c over the existing one.  (Remembering to take a
+backup before)
+
+The mud will then have the usual \c?? codes and the new &? codes.
+Reverse video, flashing colours and underline (only for mono screens) will
+also be added.
+
+Colour code list
+----------------
+
+Normal Colours
+\c25 or &k = Black
+\c01 or &r = Red
+\c02 or &g = Green
+\c03 or &y = Yellow
+\c04 or &b = Blue
+\c05 or &m = Magenta
+\c06 or &c = Cyan
+\c07 or &w = White
+
+Bold Colours
+\c29 or &K = Bright black (No real use.  Just for completeness)
+\c08 or &R = Bright red
+\c09 or &G = Bright green
+\c10 or &Y = Bright yellow
+\c11 or &B = Bright blue
+\c12 or &M = Bright magenta
+\c13 or &C = Bright cyan
+\c14 or &W = Bright white
+
+Background Colours
+\c24 or &0 = Black background
+\c15 or &1 = Red background
+\c16 or &2 = Green background
+\c17 or &3 = Yellow background
+\c18 or &4 = Blue background
+\c19 or &5 = Magenta background
+\c20 or &6 = Cyan background
+\c21 or &7 = White background
+
+Misc Characters
+\c22 or && = The & character
+\c23 or &\ = The \ character
+
+Special Codes
+\c00 or &n = Normal
+\c26 or &f = Flash (Use normal to turn off flash)
+\c27 or &v = Reverse video
+\c28 or &u = Underline (Only for mono screens)
+
+Disclaimer
+----------
+Use this code at your own risk.
+
+Send any improvements or any bugs to this address.
+
+ - Trevor Man (tman@dial.pipex.com)
+
+Original README below.
+
+-------------------------------------------------------------------------------
+
+After looking at Circle's color code, I decided something more was needed.
+
+The following code provides an easy way to add color to text files, mob
+descriptions, etc.
+
+Here's how it works:
+
+1. Put in the code
+2. Wherever you want color, use \c followed by a two-digit number.
+
+For example,
+\c01Hello! \c10this is yellow.\c00
+
+Will print Hello! in red, "this is yellow," in bold (extended ANSI) yellow,
+and then turn off color (revert to default color).
+
+Color sequence is red, green, yellow, blue, magenta, cyan, and white.
+
+Color 1 is red, color 8 is bold red (just add 7), color 15 is red background.
+
+For instance,
+
+\c18\c07White on blue background
+
+is just that.
+
+NOTE that in a .c source file, you will need to specify it as "\\c##", two
+backslashes, but in an external text file (motd, etc.) you only need one \.
+
+Ex: when sending something to char --
+sprintf(s,"\\c01Hi\\c00\r\n");
+
+You can, of course, change c to whatever character you want, modify the
+code, etc., to make it better suited to your needs.
+
+Of course, like any code, this can be improved.... but hey, it's FREE!
+
+Use it as you will, crediting me is not necessary (but appreciated).
+
+The other great thing about it is if you're playing around with ANSI
+codes a lot (like I do), you don't have to recompile a bunch of stuff
+after changing a header file (screen.h).
+
+Just make it again, which will only recompile color.c, yaay, lots of time
+saved for more important stuff!
+
+(BTW: CNUL isn't even used in the function, but it's there if you need
+it...)
+
+The other nice thing about this is that you don't have to change all your
+CC macro calls (CCRED(), CCBLU(), etc.), this integrates right in.  Saves
+you time adding more color later if you already have the CC's all over
+the place... ;)
+
+Now it's possible that I missed something or screwed something up in my
+listing or my directions, let me know if you have any problems.
+<mud@proimages.proimages.com>
+
+BUGS:
+The color code doesn't check to make sure that the buffer doesn't exceed
+the maximum output buffer size, but since this is rarely a problem (would
+require 6 full screens of text under bpl11) I didn't bother.
+
+Lines getting chopped in the middle (e.g., "hi\c0" .. "1 there") and
+output separately will not be colored correctly.

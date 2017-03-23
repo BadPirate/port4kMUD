@@ -1,0 +1,141 @@
+&rType "help <whatever>" if you need help on any of these, there might be a file
+Otherwise, just ask or mail a god about it.  Thanx, Jaxom&n
+All things that came out of the IMOTD are in cyan
+
+&n*  Abbreviations have been added.
+&n*  AFK has been added.
+&n*  Aliases save.
+&n*  You get more attacks per round the higher level you are.
+&n*  Autoassist and Autosplit and Autoloot have been added.
+&n*  Equipment saves what position it's in.
+&n*  Scan has been added.
+&n*  Recall has been made a free command.
+&n*  A new death system has been added.
+&n*  New players may now reroll their stats.
+&n*  New players start with eq.
+&n*  Easycolor has been added
+&n*  Getting drunk does something
+&n*  Shila has been added, she is above the temple.
+&n*  a dagger was added at the top of the who list.
+&n*  The arena has been added, so has the arena club, they're NW of temple.
+&n*  Getting drunk makes your speech slurred, it's pretty cool.
+&n*  New leveling system in place.
+&n*  ATM's have been changed into banks, (had to be theme)
+&n*  New Damage messages.
+&n*  Start now added, lets you choose a different starting town that show's
+&n*  your starting town in the who.
+&n*  Mob's get extra attacks at higher levels
+&n*  Mobs condition is displayed while your attacking them
+&n*  Olaf's Pirate zone is in, bring a boat.
+&n*  Pawnshop opened, they buy almost anything!
+&n*  Xander's new zone is in, take a look in the forest :-)
+&n*  More zones added to start, and it's free for level 1 and first time.
+&n*  New classes have been added.
+&n*  Skills have been better spread throughout the levels.
+&n*  Elven city has been revamped, thanks to Xander.
+&n*  Webpage is up www.ezlink.com/~fiona
+&n*  Jolly the tourguide has been added, and fixed.
+&n*  Certain rooms can't be teleported to via the button (!TELEPORT)
+&n*  &c OLC has been patched.
+&n*  Mounting an animal now makes it so that you use half as much movement.
+&n*  We've been updated on the Mudconnector
+&n*  &c Tedit has been added (C-IMP+ command)
+&n*  &c God's can now zreset THEIR zones.
+&n*  Two new channels have been added Ouch, and Music.
+&n*  &c olist, mlist, and rlist have been added.
+&n*  &c NW, NE, SW, SE have been added, add them to your rooms.
+&n*  Players now doesn't show deleted players
+&n*  Xanders city of Necropolis is in.
+&n*  Olaf's Labrinth is in, check it out west of rome.
+&n*  &c The ARENA flag has been added, room 111 has description.
+&n*  Small bug in the leveling of classes has been fixed.
+&n*  Corpse room added to all cities.
+&n*  New exp table added, thanks to Manfred Georg and Dieter Schuldt
+&n*  The Qoute command gives you a random qoute.
+&n*  Score gives a more complete list of info.
+&n*  When you die, it shows up to everyone now.
+&n*  &c !TELEPORT flag has been added, prevents button passage.
+&n*  Leveling is more pronounced, highlighted with better line feeds.
+&n*  &c The MAZE flag has been added it makes move random based on 
+   the moving charcters intellegence.
+&n*  The skills and levels that you get them are on the webpage now :-)
+&n*  &c The DUMP flag has been added, anything dropped is donated.
+&n*  Clans have been added.
+&n*  Races have been added.
+&n*  A new DT system is implemented read the Mortal Message Board.
+&n*  The autogold and Clan channel prefs have been fixed
+&n*  Autogold has been added.
+&n*  The clan function has been disabled for the time being.
+&n*  Shopid has been added it lets you get ID info on a shop item for 100 gold.
+&n*  Skills have been redone AGAIN!
+&n*  Races show up in the who.
+&n*  I now check bugs, ideas, and typos every time I login
+&n*  Multiple objects stack in the form (##)
+&n*  You can no longer use tell to talk to mobs
+&n*  Toggle is more spiff looking
+&n*  Being hungry or thirsty now hurts (level 10 and up)
+&n*  New help files added.
+&n*  Avatar fits whole area
+&n*  New automated DT system added
+&n*  If you are idle for 5 min, you don't take damage from lack of food
+&n*  Everyone now see's when you hit a DT
+&n*  Fancier looking score added.
+&n*  Elven guildguard fixed.
+&n*  The gact command has been added, gact <social> to gact to all
+&n*  The arena guard works differently
+&n*  There has been a split in daggerfall making a change in the area north of the
+   temple.
+&n*  Chat has been added to the webpage
+&n*  7 new races were added
+&n*  Swho is a command that shows you a shortened who, try it out.
+&n*  There are now some race specific abilities
+&n*  You can type group without any args to get info on your group.
+&n*  Your prompt shows your leaders (tanks) health
+&n*  Give works either way (give food dog) (give dog food) both work
+&n*  There are more mistype messages
+&n*  Amount of exp to avatar changed to 125 mil.
+&n*  Time online bug fixed.
+&n*  The home page can now also be reached at http://fly.to/daggerfall
+*   &cThe !LOCATE flag has been added keeping mortals from being able to find item&n
+*   &cThe !CLASS flags for the new races have been added to balance races more.&n
+*  The start code has been changed to add for easier city adding.
+*  The command remort has been added, type help remort for more info.
+*  Hunger will now not hurt you in corpse, recall, or death rooms.
+*  You hometown shows up in score, and some minor things have been fixed in who
+*  corpses must now be picked up using your name.
+*  There is a new quest token master, read the bulletin board for info.
+*   &cThere is a new exp function that makes mobs give out more balanced exp.&n
+*  Character reroller works.
+*  Patch added so that character IDnumber is no longer in the 234millions!
+*  Wizlist command fixed so thats its always accurate and pretty!
+*  The following game play options have been changed:
+   Sleep can be cast on players, Players can be summoned, players can be charmed
+*  Donate fixed, you always donate to your home city, no more oops chance
+   wanted to encourage people to donate things.
+*  !LOCATE is actually working right again
+*  &K and &k just do &N and &n for compatibility
+&c*  Wizlist  command auto updates, check it out!&n
+*  There is a new DT system in place, a new shopkeeper who sells you back
+   your items right after the unfortunate accident, but he'll scalp you :-)
+&c*  Donation fixed, now 100% to your hometown, if you have, else daggerfall&n
+&c*  the world command works better and there is a cheese_allowed prefrence to
+   disallow hiding, invis, etc, for holding arena's etc.&n
+*  No more lying there dead.. with hunger, you just die >:-)
+*  Potions now become less effective the higher level you are, and at level
+   40 they become completely useless, this is to make the mud more difficult
+*  There is a new shop that is just 1 north of Ethreal square check it out!
+*  Okay, got a bad response from the potion patch, the new equation chance is
+   Your level / Avatar, the higher you go, the lower the chances..
+*  Arena no longer gives you full heal (cheesy bastards)
+*  We can also be reached at rightwine.com 4000, check the bulletin board 4 more
+* CLANS WORK AGAIN!  check bulletin board for more info!
+*  New command clan recall takes you back to your clan room
+*  Arena has been revamped check the bulletin board, and arena list for more
+*  The Gambling house has been added, it's west of Ethreal Street Entrance
+*  The questmaster has been changed, check him out! [8/8/99]
+*  Clan withdraw and Clan deposit work again [8/11/99]
+*  Clan prices posted, their official! [8/14/99]
+*  Brew & Scribe have been added, they let Magic users make Potions & Scrolls
+*  Thor has finished a high level zone, north of DF FINALLY! [8/25/99]
+*  As a 101 level avatar you can still level, beyond 20000! [8/29/99]
+*  Our masters will be happy to know that the exp curve is easier [8/29/99]

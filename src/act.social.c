@@ -88,24 +88,75 @@ ACMD(do_action)
   struct social_messg *action;
   struct char_data *vict;
 
+  void do_taunt(struct char_data *, struct char_data *); /*def'd in offenses*/
+  ACMD(do_say);
+
+  if (subcmd == SCMD_GACT)
+  {
+    if(IS_NPC(ch) && IS_AFFECTED(ch,AFF_CHARM)) {
+      do_say(ch, "MOMMY!  Someone's forcing me to gact!", 0, 0);
+      return;
+    }
+    if(PLR_FLAGGED(ch,PLR_NOSHOUT)) {
+      send_to_char("Sorry, you lost your right to use gact. :-(\r\n",ch);
+      return;
+    }
+    one_argument(argument, buf);
+    cmd = find_command(buf);
+  }
+
   if ((act_nr = find_action(cmd)) < 0) {
     send_to_char("That action is not supported.\r\n", ch);
     return;
   }
   action = &soc_mess_list[act_nr];
 
-  if (action->char_found)
-    one_argument(argument, buf);
+  if (subcmd == SCMD_GACT)
+  {
+    if (action->char_found)
+      two_arguments(argument, buf2, buf);
+    else
+     *buf = '\0';
+  }
   else
-    *buf = '\0';
+  {
+    if (action->char_found)
+      one_argument(argument, buf);
+    else
+      *buf = '\0';
+  }
 
   if (!*buf) {
     send_to_char(action->char_no_arg, ch);
     send_to_char("\r\n", ch);
-    act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
+    if (subcmd == SCMD_GACT)
+      act(action->others_no_arg, action->hide, ch, 0, 0, TO_WORLD);
+    else
+      act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
     return;
   }
-  if (!(vict = get_char_room_vis(ch, buf))) {
+
+  if (subcmd == SCMD_GACT)
+  {
+    if ( !(vict = get_char_vis(ch, buf)) ||
+        IS_NPC(get_char_vis(ch, buf)) ) {
+      send_to_char(action->not_found, ch);
+      send_to_char("\r\n", ch);
+    } else if (vict == ch) {
+      send_to_char(action->char_auto, ch);
+      send_to_char("\r\n", ch);
+      act(action->others_auto, action->hide, ch, 0, 0, TO_ROOM);
+    } else {
+      if (GET_POS(vict) < action->min_victim_position)
+        act("$N is not in a proper position for that.",
+  	  FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
+      else {
+        act(action->char_found, 0, ch, 0, vict, TO_CHAR);
+        act(action->others_found, action->hide, ch, 0, vict, TO_WORLD);
+      }
+    }
+  }
+  else if (!(vict = get_char_room_vis(ch, buf))) {
     send_to_char(action->not_found, ch);
     send_to_char("\r\n", ch);
   } else if (vict == ch) {
@@ -116,12 +167,14 @@ ACMD(do_action)
     if (GET_POS(vict) < action->min_victim_position)
       act("$N is not in a proper position for that.",
 	  FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
+
     else {
       act(action->char_found, 0, ch, 0, vict, TO_CHAR | TO_SLEEP);
       act(action->others_found, action->hide, ch, 0, vict, TO_NOTVICT);
       act(action->vict_found, action->hide, ch, 0, vict, TO_VICT);
     }
   }
+  if ((act_nr==find_action(find_command("taunt"))) && vict) do_taunt(ch,vict);
 }
 
 

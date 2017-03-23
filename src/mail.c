@@ -212,7 +212,7 @@ int has_mail(long recipient)
    actual message text (char *).
 */
 
-void store_mail(long to, long from, char *message_pointer)
+void store_mail(long to, long from, sh_int vnum, char *message_pointer)
 {
   header_block_type header;
   data_block_type data;
@@ -233,6 +233,7 @@ void store_mail(long to, long from, char *message_pointer)
   header.header_data.next_block = LAST_BLOCK;
   header.header_data.from = from;
   header.header_data.to = to;
+  header.header_data.vnum = vnum;
   header.header_data.mail_time = time(0);
   strncpy(header.txt, msg_txt, HEADER_BLOCK_DATASIZE);
   header.txt[HEADER_BLOCK_DATASIZE] = '\0';
@@ -305,7 +306,7 @@ void store_mail(long to, long from, char *message_pointer)
 you're retrieving.  It returns to you a char pointer to the message text.
 The mail is then discarded from the file and the mail index. */
 
-char *read_delete(long recipient)
+char *read_delete(long recipient, sh_int *obj_vnum)
 /* recipient is the name as it appears in the index.
    recipient_formatted is the name as it should appear on the mail
    header (i.e. the text handed to the player) */
@@ -366,6 +367,7 @@ char *read_delete(long recipient)
   }
   tmstr = asctime(localtime(&header.header_data.mail_time));
   *(tmstr + strlen(tmstr) - 1) = '\0';
+  *obj_vnum = header.header_data.vnum;
 
   sprintf(buf, " * * * * Midgaard Mail System * * * *\r\n"
 	  "Date: %s\r\n"
@@ -440,6 +442,12 @@ void postmaster_send_mail(struct char_data * ch, struct char_data *mailman,
 {
   long recipient;
   char buf[256];
+  char buf2[256];
+  int price = STAMP_PRICE;
+  struct obj_data *obj;
+  extern struct index_data *obj_index;
+
+  obj = NULL;
 
   if (GET_LEVEL(ch) < MIN_MAIL_LEVEL) {
     sprintf(buf, "$n tells you, 'Sorry, you have to be level %d to send mail!'",
@@ -447,17 +455,11 @@ void postmaster_send_mail(struct char_data * ch, struct char_data *mailman,
     act(buf, FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
-  one_argument(arg, buf);
+  two_arguments(arg, buf, buf2);
 
   if (!*buf) {			/* you'll get no argument from me! */
     act("$n tells you, 'You need to specify an addressee!'",
 	FALSE, mailman, 0, ch, TO_VICT);
-    return;
-  }
-  if (GET_GOLD(ch) < STAMP_PRICE) {
-    sprintf(buf, "$n tells you, 'A stamp costs %d coins.'\r\n"
-	    "$n tells you, '...which I see you can't afford.'", STAMP_PRICE);
-    act(buf, FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
   if ((recipient = get_id_by_name(buf)) < 0) {
@@ -465,13 +467,33 @@ void postmaster_send_mail(struct char_data * ch, struct char_data *mailman,
 	FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
+
+  if (*buf2 && (obj = get_obj_in_list_vis(ch, buf2, ch->carrying))) {
+    act("$n takes $p and prepares it for packaging.", FALSE, mailman, obj, ch, TO_VICT);
+    price += STAMP_PRICE*.1;
+    price += GET_OBJ_WEIGHT(obj)*10;
+  }
+
+  if (GET_GOLD(ch) < price) {
+    sprintf(buf, "$n tells you, 'A stamp costs %d coins.'\r\n"
+          "$n tells you, '...which I see you can't afford.'", price);
+    act(buf, FALSE, mailman, 0, ch, TO_VICT);
+    return;
+  }
+
+  if (obj != NULL) {
+    ch->desc->mail_vnum = GET_OBJ_VNUM(obj);
+    extract_obj(obj);
+  } else
+    ch->desc->mail_vnum = NOTHING;
+
   act("$n starts to write some mail.", TRUE, ch, 0, 0, TO_ROOM);
   sprintf(buf, "$n tells you, 'I'll take %d coins for the stamp.'\r\n"
-       "$n tells you, 'Write your message, use @ on a new line when done.'",
-	  STAMP_PRICE);
+       "$n tells you, 'Write your message, (/s saves /h for help)'",
+       price);
 
   act(buf, FALSE, mailman, 0, ch, TO_VICT);
-  GET_GOLD(ch) -= STAMP_PRICE;
+  GET_GOLD(ch) -= price;
   SET_BIT(PLR_FLAGS(ch), PLR_MAILING | PLR_WRITING);
 
   ch->desc->mail_to = recipient;
@@ -498,7 +520,8 @@ void postmaster_receive_mail(struct char_data * ch, struct char_data *mailman,
 			  int cmd, char *arg)
 {
   char buf[256];
-  struct obj_data *obj;
+  struct obj_data *obj, *mail_obj;
+  sh_int obj_vnum = NOTHING;
 
   if (!has_mail(GET_IDNUM(ch))) {
     sprintf(buf, "$n tells you, 'Sorry, you don't have any mail waiting.'");
@@ -517,13 +540,20 @@ void postmaster_receive_mail(struct char_data * ch, struct char_data *mailman,
     GET_OBJ_WEIGHT(obj) = 1;
     GET_OBJ_COST(obj) = 30;
     GET_OBJ_RENT(obj) = 10;
-    obj->action_description = read_delete(GET_IDNUM(ch));
+    obj->action_description = read_delete(GET_IDNUM(ch), &obj_vnum);
 
     if (obj->action_description == NULL)
       obj->action_description =
 	str_dup("Mail system error - please report.  Error #11.\r\n");
 
     obj_to_char(obj, ch);
+
+    if (obj_vnum != NOTHING && real_object(obj_vnum) != NOTHING) {
+      mail_obj = read_object(real_object(obj_vnum), REAL);
+      obj_to_char(mail_obj, ch);
+      act("$n gives you $p, which was attached to your mail.", FALSE, mailman, mail_obj, ch, TO_VICT);
+      act("$N gives $n $p, which was attached to $S mail.", FALSE, ch, mail_obj, mailman, TO_ROOM);
+    }
 
     act("$n gives you a piece of mail.", FALSE, mailman, 0, ch, TO_VICT);
     act("$N gives $n a piece of mail.", FALSE, ch, 0, mailman, TO_ROOM);

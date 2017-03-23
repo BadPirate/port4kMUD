@@ -87,6 +87,11 @@
 #define SPELL_GROUP_RECALL	     49 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_INFRAVISION	     50 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_WATERWALK		     51 /* Reserved Skill[] DO NOT CHANGE */
+#define SPELL_MANA		     52 //  For adding mana potions
+#define SPELL_METEOR_SWARM           53 /* Our own... */
+#define SPELL_ARCANE_WORD	     54 /* Arcane word spell		*/
+#define SPELL_ARCANE_PORTAL	     55 /* Arcane portal spell		*/
+
 /* Insert new spells here, up to MAX_SPELLS */
 #define MAX_SPELLS		    130
 
@@ -101,6 +106,13 @@
 #define SKILL_SNEAK                 138 /* Reserved Skill[] DO NOT CHANGE */
 #define SKILL_STEAL                 139 /* Reserved Skill[] DO NOT CHANGE */
 #define SKILL_TRACK		    140 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_SECOND_ATTACK	    141 // Second attack (DAK)
+#define SKILL_THIRD_ATTACK	    142 // Third attack (DAK)
+#define SKILL_MOUNT                 143 // Mounting (DAK)
+#define SKILL_RIDING                144 // Riding (DAK)
+#define SKILL_TAME                  145 // Ability to tame (DAK)
+#define SKILL_STATUE                146 /* Skill "Statue" (gargoyles) */
+#define SKILL_TAUNT		    147 /* Taunt "spell" */
 /* New skills may be added here up to MAX_SKILLS (200) */
 
 
@@ -213,10 +225,13 @@ void	spellname(int level, struct char_data *ch, \
 
 #define MANUAL_SPELL(spellname)	spellname(level, caster, cvict, ovict);
 
+ASPELL(spell_mana);
 ASPELL(spell_create_water);
 ASPELL(spell_recall);
 ASPELL(spell_teleport);
 ASPELL(spell_summon);
+ASPELL(spell_arcane_word);
+ASPELL(spell_arcane_portal);
 ASPELL(spell_locate_object);
 ASPELL(spell_charm);
 ASPELL(spell_information);

@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: act.comm.c                                    Part of CircleMUD *
 *  Usage: Player-level communication commands                             *
 *                                                                         *
@@ -25,6 +25,9 @@ extern struct room_data *world;
 extern struct descriptor_data *descriptor_list;
 extern struct char_data *character_list;
 
+/* extern functions */
+char    *makedrunk(char *string ,struct char_data *ch);
+
 ACMD(do_say)
 {
   skip_spaces(&argument);
@@ -32,6 +35,7 @@ ACMD(do_say)
   if (!*argument)
     send_to_char("Yes, but WHAT do you want to say?\r\n", ch);
   else {
+    argument = makedrunk(argument, ch);
     sprintf(buf, "$n says, '%s'", argument);
     act(buf, FALSE, ch, 0, 0, TO_ROOM);
     if (PRF_FLAGGED(ch, PRF_NOREPEAT))
@@ -63,6 +67,7 @@ ACMD(do_gsay)
     else
       k = ch;
 
+    argument = makedrunk(argument, ch);
     sprintf(buf, "$n tells the group, '%s'", argument);
 
     if (IS_AFFECTED(k, AFF_GROUP) && (k != ch))
@@ -114,6 +119,8 @@ ACMD(do_tell)
     send_to_char("Who do you wish to tell what??\r\n", ch);
   else if (!(vict = get_char_vis(ch, buf)))
     send_to_char(NOPERSON, ch);
+  else if (IS_NPC(vict) && GET_LEVEL(ch) < LVL_IMMORT)
+    send_to_char(NOPERSON, ch);
   else if (ch == vict)
     send_to_char("You try to tell yourself something.\r\n", ch);
   else if (PRF_FLAGGED(ch, PRF_NOTELL))
@@ -127,8 +134,28 @@ ACMD(do_tell)
 	FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
   else if (PRF_FLAGGED(vict, PRF_NOTELL) || ROOM_FLAGGED(vict->in_room, ROOM_SOUNDPROOF))
     act("$E can't hear you.", FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
+  else if (PRF_FLAGGED(vict, PRF_AFK))
+  {
+    if ((strlen(buf2) + strlen(vict->player_specials->afkmsgs)) >=
+        MAX_STRING_LENGTH)
+      act("$S buffer is full right now, try later.", FALSE, ch, 0, vict,
+          TO_CHAR | TO_SLEEP);
+    else
+    {
+      send_to_char("(AFK) Your message will be passed along.\r\n",ch);
+      if(strcmp(vict->player_specials->afkmsgs, "none") != 0)
+        sprintf(vict->player_specials->afkmsgs, "%s[ %s ] %s\r\n",
+                vict->player_specials->afkmsgs, GET_NAME(ch), buf2);
+      else
+        sprintf(vict->player_specials->afkmsgs, "[ %s ] %s\r\n",
+                GET_NAME(ch), buf2);
+    }
+  }
   else
-    perform_tell(ch, vict, buf2);
+  {
+    argument = makedrunk(buf2, ch);
+    perform_tell(ch, vict, argument);
+  }
 }
 
 
@@ -156,7 +183,10 @@ ACMD(do_reply)
     if (tch == NULL)
       send_to_char("They are no longer playing.\r\n", ch);
     else
+    {
+      argument = makedrunk(argument, ch);
       perform_tell(ch, tch, argument);
+    }
   }
 }
 
@@ -186,7 +216,7 @@ ACMD(do_spec_comm)
   else if (vict == ch)
     send_to_char("You can't get your mouth close enough to your ear...\r\n", ch);
   else {
-    sprintf(buf, "$n %s you, '%s'", action_plur, buf2);
+    argument = makedrunk(argument, ch);
     act(buf, FALSE, ch, 0, vict, TO_VICT);
     if (PRF_FLAGGED(ch, PRF_NOREPEAT))
       send_to_char(OK, ch);
@@ -270,8 +300,24 @@ ACMD(do_write)
     send_to_char("There's something written on it already.\r\n", ch);
   else {
     /* we can write - hooray! */
-    send_to_char("Write your note.  End with '@' on a new line.\r\n", ch);
+     /* this is the PERFECT code example of how to set up:
+      * a) the text editor with a message already loaed
+      * b) the abort buffer if the player aborts the message
+      */
+     ch->desc->backstr = NULL;
+     send_to_char("Write your note.  (/s saves /h for help)\r\n", ch);
+     /* ok, here we check for a message ALREADY on the paper */
+     if (paper->action_description) {
+	/* we str_dup the original text to the descriptors->backstr */
+	ch->desc->backstr = str_dup(paper->action_description);
+	/* send to the player what was on the paper (cause this is already */
+	/* loaded into the editor) */
+	send_to_char(paper->action_description, ch);
+     }
     act("$n begins to jot down a note.", TRUE, ch, 0, 0, TO_ROOM);
+     /* assign the descriptor's->str the value of the pointer to the text */
+     /* pointer so that we can reallocate as needed (hopefully that made */
+     /* sense :>) */
     ch->desc->str = &paper->action_description;
     ch->desc->max_str = MAX_NOTE_LENGTH;
   }
@@ -332,6 +378,9 @@ ACMD(do_gen_comm)
     PRF_NOGOSS,
     PRF_NOAUCT,
     PRF_NOGRATZ,
+    PRF_NOMUSIC,
+    PRF_NOOUCH,
+    0,
     0
   };
 
@@ -343,29 +392,50 @@ ACMD(do_gen_comm)
    */
   static char *com_msgs[][4] = {
     {"You cannot holler!!\r\n",
-      "holler",
+      "&yHoller&n",
       "",
-    KYEL},
+    KNRM},
 
     {"You cannot shout!!\r\n",
-      "shout",
+      "&yShout&n",
       "Turn off your noshout flag first!\r\n",
-    KYEL},
+    KNRM},
 
     {"You cannot gossip!!\r\n",
-      "gossip",
+      "&yGossip&n",
       "You aren't even on the channel!\r\n",
-    KYEL},
+    KNRM},
 
     {"You cannot auction!!\r\n",
-      "auction",
+      "&mAuction&n",
       "You aren't even on the channel!\r\n",
-    KMAG},
+    KNRM},
 
     {"You cannot congratulate!\r\n",
-      "congrat",
+      "&gCongrat&n",
       "You aren't even on the channel!\r\n",
-    KGRN}
+    KNRM},
+  
+    {"You cannot sing... tee hee.\r\n",
+     "&rMuSiC&n",
+     "You aren't even on that channel!\r\n",
+    KNRM},
+   
+    {"You can't ouch.\r\n",
+     "&bOUCH!&n",
+     "You aren't on that channel!\r\n",
+    KNRM},
+
+    {"You can't speak in the &rarena&n.\r\n",
+     "&rArena&n",
+     "You aren't in the arena!\r\n",
+     KNRM},
+
+    { "You can't talk on the newbie channel\r\n",
+      "&cNewbie&n",
+      "You aren't a newbie!\r\n",
+      KNRM
+    }
   };
 
   /* to keep pets, etc from being ordered to shout */
@@ -376,7 +446,7 @@ ACMD(do_gen_comm)
     send_to_char(com_msgs[subcmd][0], ch);
     return;
   }
-  if (ROOM_FLAGGED(ch->in_room, ROOM_SOUNDPROOF)) {
+  if (subcmd != SCMD_ARENA && ROOM_FLAGGED(ch->in_room, ROOM_SOUNDPROOF)) {
     send_to_char("The walls seem to absorb your words.\r\n", ch);
     return;
   }
@@ -388,10 +458,20 @@ ACMD(do_gen_comm)
     return;
   }
   /* make sure the char is on the channel */
-  if (PRF_FLAGGED(ch, channels[subcmd])) {
+  if (subcmd == SCMD_ARENA && !ROOM_FLAGGED(ch->in_room, ROOM_ARENA)) {
     send_to_char(com_msgs[subcmd][2], ch);
+    return; 
+  }
+  if (subcmd == SCMD_NEWBIE && (GET_LEVEL(ch) > 5 && GET_LEVEL(ch) < LVL_IMMORT))
+  {
+    send_to_char(com_msgs[subcmd][2],ch);
     return;
   }
+  if (subcmd != SCMD_ARENA && subcmd != SCMD_NEWBIE)
+    if (PRF_FLAGGED(ch, channels[subcmd])) {
+      send_to_char(com_msgs[subcmd][2], ch);
+      return;
+    }
   /* skip leading spaces */
   skip_spaces(&argument);
 
@@ -402,9 +482,12 @@ ACMD(do_gen_comm)
     send_to_char(buf1, ch);
     return;
   }
-  if (subcmd == SCMD_HOLLER) {
+  if ((subcmd == SCMD_HOLLER || subcmd == SCMD_GOSSIP || subcmd
+== SCMD_GRATZ || subcmd == SCMD_OUCH || subcmd == SCMD_MUSIC ||
+SCMD_AUCTION) && GET_LEVEL(ch) < LVL_IMMORT)
+{
     if (GET_MOVE(ch) < holler_move_cost) {
-      send_to_char("You're too exhausted to holler.\r\n", ch);
+      send_to_char("You're too exhausted to speak so loud.\r\n", ch);
       return;
     } else
       GET_MOVE(ch) -= holler_move_cost;
@@ -412,31 +495,45 @@ ACMD(do_gen_comm)
   /* set up the color on code */
   strcpy(color_on, com_msgs[subcmd][3]);
 
+  /* Adding in drunk text here */
+  argument = makedrunk(argument,ch);
+
   /* first, set up strings to be given to the communicator */
   if (PRF_FLAGGED(ch, PRF_NOREPEAT))
     send_to_char(OK, ch);
   else {
     if (COLOR_LEV(ch) >= C_CMP)
-      sprintf(buf1, "%sYou %s, '%s'%s", color_on, com_msgs[subcmd][1],
+      sprintf(buf1, "&w[%s%s: YOU&n] %s%s", color_on, com_msgs[subcmd][1],
 	      argument, KNRM);
     else
-      sprintf(buf1, "You %s, '%s'", com_msgs[subcmd][1], argument);
+      sprintf(buf1, "[%s: YOU] %s", com_msgs[subcmd][1], argument);
     act(buf1, FALSE, ch, 0, 0, TO_CHAR | TO_SLEEP);
   }
 
-  sprintf(buf, "$n %ss, '%s'", com_msgs[subcmd][1], argument);
+  sprintf(buf, "[%s: $n] %s", com_msgs[subcmd][1], argument);
 
   /* now send all the strings out */
   for (i = descriptor_list; i; i = i->next) {
     if (!i->connected && i != ch->desc && i->character &&
-	!PRF_FLAGGED(i->character, channels[subcmd]) &&
 	!PLR_FLAGGED(i->character, PLR_WRITING) &&
 	!ROOM_FLAGGED(i->character->in_room, ROOM_SOUNDPROOF)) {
+
+      if (subcmd != SCMD_ARENA && subcmd != SCMD_NEWBIE)
+        if (PRF_FLAGGED(i->character, channels[subcmd]))
+          continue;
 
       if (subcmd == SCMD_SHOUT &&
 	  ((world[ch->in_room].zone != world[i->character->in_room].zone) ||
 	   GET_POS(i->character) < POS_RESTING))
 	continue;
+     
+      if (subcmd == SCMD_NEWBIE && ((GET_LEVEL(ch) > 5 && GET_LEVEL(ch) <
+          LVL_IMMORT) || (GET_LEVEL(i->character) > 5 && GET_LEVEL(i->character) < LVL_IMMORT)))
+        continue;
+
+      if (subcmd == SCMD_ARENA &&
+          !ROOM_FLAGGED(i->character->in_room, ROOM_ARENA))
+        continue;
 
       if (COLOR_LEV(i->character) >= C_NRM)
 	send_to_char(color_on, i->character);
@@ -451,11 +548,25 @@ ACMD(do_gen_comm)
 ACMD(do_qcomm)
 {
   struct descriptor_data *i;
+  int can_quest = 0;
+
+  for (i = descriptor_list; i; i = i->next)
+    if (!i->connected && i != ch->desc &&
+        PRF_FLAGGED(i->character, PRF_QUEST) &&
+        GET_LEVEL(i->character) >= LVL_IMMORT)
+      can_quest = 1;
 
   if (!PRF_FLAGGED(ch, PRF_QUEST)) {
     send_to_char("You aren't even part of the quest!\r\n", ch);
     return;
   }
+  
+  if (can_quest == 0)
+  {
+    send_to_char("There is no quest going on now!\r\n",ch);
+    return; 
+  }
+
   skip_spaces(&argument);
 
   if (!*argument) {
@@ -464,6 +575,7 @@ ACMD(do_qcomm)
     CAP(buf);
     send_to_char(buf, ch);
   } else {
+    argument = makedrunk(argument, ch);
     if (PRF_FLAGGED(ch, PRF_NOREPEAT))
       send_to_char(OK, ch);
     else {

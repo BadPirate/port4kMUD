@@ -65,12 +65,19 @@ void ASSIGNROOM(int room, SPECIAL(fname))
 /* assign special procedures to mobiles */
 void assign_mobiles(void)
 {
+  SPECIAL(corpse_guy);
+  SPECIAL(arena_sentinel);
+  SPECIAL(quest_token_master);
+  SPECIAL(gamble_master);
   SPECIAL(postmaster);
   SPECIAL(cityguard);
   SPECIAL(receptionist);
   SPECIAL(cryogenicist);
   SPECIAL(guild_guard);
+  SPECIAL(temple_cleric);
   SPECIAL(guild);
+  SPECIAL(monkey);
+  SPECIAL(obj_sentinel);
   SPECIAL(puff);
   SPECIAL(fido);
   SPECIAL(janitor);
@@ -78,11 +85,24 @@ void assign_mobiles(void)
   SPECIAL(snake);
   SPECIAL(thief);
   SPECIAL(magic_user);
-  void assign_kings_castle(void);
-
-  assign_kings_castle();
 
   ASSIGNMOB(1, puff);
+
+  /* New Classes */
+  ASSIGNMOB(1709, guild);
+  ASSIGNMOB(149, guild);
+  ASSIGNMOB(106, guild);
+  ASSIGNMOB(108, guild);
+  ASSIGNMOB(110, guild);
+  ASSIGNMOB(113, guild);
+  ASSIGNMOB(115, guild);
+  ASSIGNMOB(148, guild_guard);
+  ASSIGNMOB(105, guild_guard);
+  ASSIGNMOB(107, guild_guard);
+  ASSIGNMOB(109, guild_guard);
+  ASSIGNMOB(112, guild_guard);
+  ASSIGNMOB(114, guild_guard);
+  ASSIGNMOB(138, guild_guard);
 
   /* Immortal Zone */
   ASSIGNMOB(1200, receptionist);
@@ -119,7 +139,7 @@ void assign_mobiles(void)
   ASSIGNMOB(4103, thief);
 
   /* Redferne's */
-  ASSIGNMOB(7900, cityguard);
+//  ASSIGNMOB(7900, cityguard);
 
   /* PYRAMID */
   ASSIGNMOB(5300, snake);
@@ -135,7 +155,8 @@ void assign_mobiles(void)
   ASSIGNMOB(5317, magic_user);
 
   /* High Tower Of Sorcery */
-  ASSIGNMOB(2501, magic_user); /* should likely be cleric */
+/*
+  ASSIGNMOB(2501, magic_user);
   ASSIGNMOB(2504, magic_user);
   ASSIGNMOB(2507, magic_user);
   ASSIGNMOB(2508, magic_user);
@@ -177,13 +198,14 @@ void assign_mobiles(void)
   ASSIGNMOB(2560, magic_user);
   ASSIGNMOB(2562, magic_user);
   ASSIGNMOB(2564, magic_user);
+*/
 
   /* SEWERS */
   ASSIGNMOB(7006, snake);
   ASSIGNMOB(7009, magic_user);
-  ASSIGNMOB(7200, magic_user);
-  ASSIGNMOB(7201, magic_user);
-  ASSIGNMOB(7202, magic_user);
+//  ASSIGNMOB(7200, magic_user);
+//  ASSIGNMOB(7201, magic_user);
+//  ASSIGNMOB(7202, magic_user);
 
   /* FOREST */
   ASSIGNMOB(6112, magic_user);
@@ -201,10 +223,10 @@ void assign_mobiles(void)
   ASSIGNMOB(6315, magic_user);
 
   /* Desert */
-  ASSIGNMOB(5004, magic_user);
-  ASSIGNMOB(5005, guild_guard); /* brass dragon */
-  ASSIGNMOB(5010, magic_user);
-  ASSIGNMOB(5014, magic_user);
+//  ASSIGNMOB(5004, magic_user);
+//  ASSIGNMOB(5005, guild_guard); /* brass dragon */
+//  ASSIGNMOB(5010, magic_user);
+//  ASSIGNMOB(5014, magic_user);
 
   /* Drow City */
   ASSIGNMOB(5103, magic_user);
@@ -219,6 +241,7 @@ void assign_mobiles(void)
 
   /* New Thalos */
 /* 5481 - Cleric (or Mage... but he IS a high priest... *shrug*) */
+/*
   ASSIGNMOB(5404, receptionist);
   ASSIGNMOB(5421, magic_user);
   ASSIGNMOB(5422, magic_user);
@@ -235,6 +258,7 @@ void assign_mobiles(void)
   ASSIGNMOB(5462, cityguard);
   ASSIGNMOB(5463, cityguard);
   ASSIGNMOB(5482, cityguard);
+*/
 /*
 5400 - Guildmaster (Mage)
 5401 - Guildmaster (Cleric)
@@ -265,6 +289,25 @@ void assign_mobiles(void)
   ASSIGNMOB(6502, magic_user);
   ASSIGNMOB(6509, magic_user);
   ASSIGNMOB(6516, magic_user);
+
+ /* KEVIN'S MOBS */
+  ASSIGNMOB(158, corpse_guy);
+  ASSIGNMOB(1111, magic_user);
+  ASSIGNMOB(164, gamble_master);
+  ASSIGNMOB(1103, temple_cleric);
+  ASSIGNMOB(101, temple_cleric);
+  ASSIGNMOB(2401, temple_cleric);
+  ASSIGNMOB(150, quest_token_master);
+//  ASSIGNMOB(603, monkey);
+//  ASSIGNMOB(609, monkey);
+  ASSIGNMOB(702, obj_sentinel);
+  ASSIGNMOB(703, obj_sentinel);
+  ASSIGNMOB(159, arena_sentinel);
+  ASSIGNMOB(154, arena_sentinel);
+  ASSIGNMOB(155, arena_sentinel);
+  ASSIGNMOB(102, obj_sentinel);
+  ASSIGNMOB(118, obj_sentinel);
+  ASSIGNMOB(146, janitor);
 }
 
 
@@ -274,14 +317,31 @@ void assign_objects(void)
 {
   SPECIAL(bank);
   SPECIAL(gen_board);
+  SPECIAL(redbutton);
+  SPECIAL(spread);
 
   ASSIGNOBJ(3096, gen_board);	/* social board */
   ASSIGNOBJ(3097, gen_board);	/* freeze board */
   ASSIGNOBJ(3098, gen_board);	/* immortal board */
   ASSIGNOBJ(3099, gen_board);	/* mortal board */
+  ASSIGNOBJ(1782, gen_board);   /* Mist board */
+  ASSIGNOBJ(19098, gen_board);  /* KoF board */
+  ASSIGNOBJ(12089, gen_board);  /* Trium */
+  ASSIGNOBJ(19097, gen_board);  /* Family 1 */
+  ASSIGNOBJ(2403, gen_board);    /* Crane Clan Board */
 
+  ASSIGNOBJ(1410, gen_board); /* Generic board #1 */
+  ASSIGNOBJ(1411, gen_board); /* Generic board #2 */
+  ASSIGNOBJ(1412, gen_board); /* Generic board #3 */
+  ASSIGNOBJ(1413, gen_board); /* Generic board #4 */
+  ASSIGNOBJ(1414, gen_board); /* Generic board #5 */
+  ASSIGNOBJ(1415, gen_board); /* Generic board #6 */
+
+  ASSIGNOBJ(106, redbutton);
   ASSIGNOBJ(3034, bank);	/* atm */
   ASSIGNOBJ(3036, bank);	/* cashcard */
+  ASSIGNOBJ(100, spread);
+  ASSIGNOBJ(104, spread);
 }
 
 

@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *   File: spells.c                                      Part of CircleMUD *
 *  Usage: Implementation of "manual spells".  Circle 2.2 spell compat.    *
 *                                                                         *
@@ -32,6 +32,10 @@ extern struct zone_data *zone_table;
 
 extern int mini_mud;
 extern int pk_allowed;
+extern int summon_allowed;
+extern int sleep_allowed;
+extern int charm_allowed;
+extern int roomaffect_allowed;
 
 extern struct default_mobile_stats *mob_defaults;
 extern char weapon_verbs[];
@@ -53,6 +57,14 @@ int mag_savingthrow(struct char_data * ch, int type);
 /*
  * Special spells appear below.
  */
+
+ASPELL(spell_mana)
+{
+  GET_MANA(ch) += level;
+  if (GET_MANA(ch) > GET_MAX_MANA(ch))
+    GET_MANA(ch) = GET_MAX_MANA(ch);
+  send_to_char("You flow with the dao\r\n",ch);
+}
 
 ASPELL(spell_create_water)
 {
@@ -87,14 +99,21 @@ ASPELL(spell_create_water)
 
 ASPELL(spell_recall)
 {
-  extern sh_int r_mortal_start_room;
+  int to_room,x,y;
+  extern struct townstart_struct townstart[];
 
   if (victim == NULL || IS_NPC(victim))
     return;
 
+  to_room = real_room(townstart[0].loadroom);
+  for(x=0;townstart[x].minlevel != -1;x++);
+  y = number(0, (x-1));
+  if (GET_LEVEL(ch) >= townstart[y].minlevel)
+    to_room = real_room(townstart[y].loadroom);
+
   act("$n disappears.", TRUE, victim, 0, 0, TO_ROOM);
   char_from_room(victim);
-  char_to_room(victim, r_mortal_start_room);
+  char_to_room(victim, to_room);
   act("$n appears in the middle of the room.", TRUE, victim, 0, 0, TO_ROOM);
   look_at_room(victim, 0);
 }
@@ -122,6 +141,119 @@ ASPELL(spell_teleport)
 
 #define SUMMON_FAIL "You failed.\r\n"
 
+ASPELL(spell_arcane_portal)
+{
+  extern int max_portal_time;
+  int x, y=0, m=10;
+  sh_int roomto;
+  struct obj_data *k, *portal;
+
+  if (ch == NULL || ch->in_room == NOWHERE)
+    return;
+
+  if(!*arg)
+  {
+    send_to_char("Usage: cast 'arcane portal' <room name>\r\n",ch);
+    return;
+  }
+  if(strlen(arg) < 3)
+  {
+    send_to_char("Too short, use arcane word to get room name\r\n",ch);
+    return;
+  }
+  for(m=10, x=1; x < (strlen(arg)-2); x++, m*=10);
+  for(x=1; x < (strlen(arg)); x++, m /= 10)
+  {
+    switch(tolower(arg[x]))
+    {
+      case 'a': y += 1*m; break;
+      case 'e': y += 2*m; break;
+      case 'i': y += 3*m; break;
+      case 'o': y += 4*m; break;
+      case 's': y += 5*m; break;
+      case 't': y += 6*m; break;
+      case 'm': y += 7*m; break;
+      case 'p': y += 8*m; break;
+      case 'l': y += 9*m; break;
+      case 'n': y += 0; break;
+      default:
+        send_to_char("You spake a bad word, BLEH to thee! Use arcane word!\r\n",ch);
+        return; break;
+    }
+  }
+  y = y/24;
+
+  if(real_room(y) == NOWHERE)
+  {
+    send_to_char("The portal opens, and fades.  The destination was wrong.\r\n",ch);
+    return;
+  }
+  roomto = real_room(y);
+  if(ROOM_FLAGGED(roomto, ROOM_NOTELEPORT) ||
+     ROOM_FLAGGED(roomto, ROOM_DEATH) ||
+     ROOM_FLAGGED(roomto, ROOM_HOUSE))
+  {
+    send_to_char("Some hostile magic prevents you opening a portal there.\r\n",ch);
+    return;
+  }  
+  for(k = object_list; k; k = k->next)
+    if((GET_OBJ_TYPE(k) == ITEM_PORTAL && GET_OBJ_VAL(k, 1) == GET_IDNUM(ch)) ||
+       (k->in_room == ch->in_room))
+    {
+      send_to_room("A portal vanishes from the room.\r\n", k->in_room);
+      extract_obj(k);
+    }
+  portal = create_obj();
+  portal->item_number = NOTHING;
+  portal->in_room = NOWHERE;
+  portal->name = strdup("magic portal");
+  sprintf(buf, "A portal created by %s to %s (&benter portal&g)", GET_NAME(ch),
+          world[real_room(y)].name);
+  portal->description = strdup(buf);
+  portal->short_description = strdup("the magic portal");
+  GET_OBJ_TYPE(portal) = ITEM_PORTAL;
+  GET_OBJ_WEAR(portal) = ITEM_WEAR_HEAD;
+  GET_OBJ_VAL(portal, 0) = y;
+  GET_OBJ_VAL(portal, 1) = GET_IDNUM(ch);
+  GET_OBJ_WEIGHT(portal) = 1;
+  GET_OBJ_RENT(portal) = 0;
+  GET_OBJ_TIMER(portal) = max_portal_time;
+  obj_to_room(portal, ch->in_room);
+  send_to_room("A glowing magical portal forms from space, wonder where it goes?\r\n",
+               ch->in_room);    
+  send_to_char("You create a portal!\r\n",ch);
+}
+
+ASPELL(spell_arcane_word)
+{
+  char converted[20], roomname[MAX_STRING_LENGTH] = "The word for this room is ";
+  int x=0;
+
+  if (ch == NULL || ch->in_room == NOWHERE)
+    return;
+  sprintf(converted, "%d", ((world[ch->in_room].number)*24));
+  while(x < strlen(converted))
+  {
+    switch (converted[x])
+    {
+      case '1': strcat(roomname, "a"); break;
+      case '2': strcat(roomname, "e"); break;
+      case '3': strcat(roomname, "i"); break;
+      case '4': strcat(roomname, "o"); break;
+      case '5': strcat(roomname, "s"); break;
+      case '6': strcat(roomname, "t"); break;
+      case '7': strcat(roomname, "m"); break;
+      case '8': strcat(roomname, "p"); break;
+      case '9': strcat(roomname, "l"); break;
+      case '0': strcat(roomname, "n"); break;
+      default: sprintf(roomname, "%s(%d)",roomname, converted[x]); break;
+    }
+    x++;
+  }
+  strcat(roomname,".\r\n");
+  send_to_char(roomname,ch);
+}
+
 ASPELL(spell_summon)
 {
   if (ch == NULL || victim == NULL)
@@ -132,7 +264,8 @@ ASPELL(spell_summon)
     return;
   }
 
-  if (!pk_allowed) {
+  /* (FIDO) Changed from pk_allowed to summon_allowed */
+  if (!summon_allowed) {
     if (MOB_FLAGGED(victim, MOB_AGGRESSIVE)) {
       act("As the words escape your lips and $N travels\r\n"
 	  "through time and space towards you, you realize that $E is\r\n"
@@ -181,37 +314,47 @@ ASPELL(spell_summon)
 ASPELL(spell_locate_object)
 {
   struct obj_data *i;
-  char name[MAX_INPUT_LENGTH];
-  int j;
+  char name[MAX_INPUT_LENGTH], output[MAX_STRING_LENGTH];
+  int j, overflow =0;
 
+  strcpy(output, "Found:\r\n");
   strcpy(name, fname(obj->name));
   j = level >> 1;
 
   for (i = object_list; i && (j > 0); i = i->next) {
     if (!isname(name, i->name))
       continue;
-
-    if (i->carried_by)
+    
+    if ( (i->carried_by) && (!(IS_OBJ_STAT(i, ITEM_ANTI_LOCATE)) ||
+       (GET_LEVEL(ch) > LVL_IMMORT))) 
       sprintf(buf, "%s is being carried by %s.\n\r",
 	      i->short_description, PERS(i->carried_by, ch));
-    else if (i->in_room != NOWHERE)
+    else if ((i->in_room != NOWHERE) && (!(IS_OBJ_STAT(i, ITEM_ANTI_LOCATE))
+      || (GET_LEVEL(ch) > LVL_IMMORT))) 
       sprintf(buf, "%s is in %s.\n\r", i->short_description,
 	      world[i->in_room].name);
-    else if (i->in_obj)
+    else if ((i->in_obj) && (!(IS_OBJ_STAT(i, ITEM_ANTI_LOCATE))
+      || (GET_LEVEL(ch) > LVL_IMMORT)))
       sprintf(buf, "%s is in %s.\n\r", i->short_description,
 	      i->in_obj->short_description);
-    else if (i->worn_by)
+    else if ((i->worn_by) && (!(IS_OBJ_STAT(i, ITEM_ANTI_LOCATE))
+      || (GET_LEVEL(ch) > LVL_IMMORT))) 
       sprintf(buf, "%s is being worn by %s.\n\r",
 	      i->short_description, PERS(i->worn_by, ch));
     else
       sprintf(buf, "%s's location is uncertain.\n\r",
 	      i->short_description);
-
-    CAP(buf);
-    send_to_char(buf, ch);
+    
+    if((strlen(buf) + strlen(output) + 12) < MAX_STRING_LENGTH)
+      strcat(output, buf);      
+    else
+      overflow = 1;
     j--;
   }
 
+  if(overflow == 1)
+    strcat(output, "\r\nOVERFLOW\r\n");
+  page_string(ch->desc, output, 1);
   if (j == level >> 1)
     send_to_char("You sense nothing.\n\r", ch);
 }
@@ -227,8 +370,12 @@ ASPELL(spell_charm)
 
   if (victim == ch)
     send_to_char("You like yourself even better!\r\n", ch);
-  else if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))
-    send_to_char("You fail because SUMMON protection is on!\r\n", ch);
+  else if (!IS_NPC(victim))
+    {
+      if (charm_allowed == 0)
+        if (!PRF_FLAGGED(victim, PRF_SUMMONABLE))
+          send_to_char("You fail because SUMMON protection is on!\r\n", ch);
+    }
   else if (IS_AFFECTED(victim, AFF_SANCTUARY))
     send_to_char("Your victim is protected by sanctuary!\r\n", ch);
   else if (MOB_FLAGGED(victim, MOB_NOCHARM))
@@ -238,7 +385,8 @@ ASPELL(spell_charm)
   else if (IS_AFFECTED(victim, AFF_CHARM) || level < GET_LEVEL(victim))
     send_to_char("You fail.\r\n", ch);
   /* player charming another player - no legal reason for this */
-  else if (!pk_allowed && !IS_NPC(victim))
+  /* (FIDO) Changed from pk_allowed to charm_allowed */
+  else if (!charm_allowed && !IS_NPC(victim))
     send_to_char("You fail - shouldn't be doing it anyway.\r\n", ch);
   else if (circle_follow(victim, ch))
     send_to_char("Sorry, following in circles can not be allowed.\r\n", ch);

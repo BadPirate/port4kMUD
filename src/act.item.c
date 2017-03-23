@@ -51,6 +51,89 @@ void perform_put(struct char_data * ch, struct obj_data * obj,
 	all objects to be put into container must be in inventory.
 */
 
+ACMD(do_combine)
+{
+  extern struct index_data *obj_index;
+  struct obj_data *combiner, *obj1 = NULL, *obj2 = NULL, *created, *i;
+  int obj_num, in_room=0;
+
+  one_argument(argument, arg);
+  if(!(combiner = get_obj_in_list_vis(ch, arg, ch->carrying)))
+    if(!(combiner = get_obj_in_list_vis(ch, arg, world[ch->in_room].contents)))
+    {
+      sprintf(buf, "%s must be in the same room as you, or in your inventory.\r\n", arg);
+      send_to_char(buf,ch);
+      in_room=1;
+      return;
+    }
+
+  if(GET_OBJ_TYPE(combiner) != ITEM_COMBINE)
+  {
+    send_to_char("Thats not a combiner!\r\n",ch);
+    return;
+  }
+  for(i = ch->carrying; i; i = i->next_content)
+  {
+    if(!obj1)
+    {
+      if(GET_OBJ_VNUM(i) == GET_OBJ_VAL(combiner, 0))
+        obj1 = i;
+    }
+    else 
+    if(!obj2)
+    {
+      if(GET_OBJ_VNUM(i) == GET_OBJ_VAL(combiner, 1))
+        obj2 = i;
+    }
+  }
+  if(!obj1 || !obj2)
+  {
+    send_to_char("Your missing one of the pieces (they need to be in your inventory).\r\n",ch);
+    return;
+  }
+  if((obj_num = real_object(GET_OBJ_VAL(combiner,2))) < 0)
+  {
+    send_to_char("Let an Imm know, this shouldn't be seen.\r\n",ch);
+    return;
+  }
+  created = read_object(obj_num, REAL);
+  obj_to_char(created, ch);
+  act("$n plays with some parts and creates $p",FALSE,ch,created,0,TO_ROOM);
+  act("You create a $p.",FALSE,ch,created,0,TO_CHAR);
+  obj_from_char(obj1);
+  extract_obj(obj1);
+  obj_from_char(obj2);
+  extract_obj(obj2);
+  if(GET_OBJ_VAL(combiner, 3) == 1)
+  {
+    if(in_room == 1)
+      obj_from_room(combiner);
+    else
+      obj_from_char(combiner);
+    extract_obj(combiner);
+  }
+}
+
+ACMD(do_sacrifice)
+{
+  struct obj_data *i, *j;
+
+    for (i = world[ch->in_room].contents; i;)
+    if(GET_OBJ_TYPE(i) == ITEM_CONTAINER && GET_OBJ_VAL(i,3))
+    {
+      j = i;
+      i = i->next_content;
+      extract_obj(j);
+      act("$n makes a sacrifice.",FALSE,ch,0,0,TO_ROOM);
+      if(GET_CLASS(ch)!=CLASS_WARRIOR || GET_CLASS(ch)!=CLASS_SCOUT)
+        GET_MANA(ch)=MIN((GET_MANA(ch)+10),GET_MAX_MANA(ch)); 
+      GET_GOLD(ch) += 10;
+      send_to_char("You are rewarded for your sacrifice\r\n",ch);
+    }
+    else
+      i = i->next_content;
+}
+
 ACMD(do_put)
 {
   char arg1[MAX_INPUT_LENGTH];
@@ -121,7 +204,7 @@ int can_take_obj(struct char_data * ch, struct obj_data * obj)
   } else if ((IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch)) {
     act("$p: you can't carry that much weight.", FALSE, ch, obj, 0, TO_CHAR);
     return 0;
-  } else if (!(CAN_WEAR(obj, ITEM_WEAR_TAKE))) {
+  } else if (!(CAN_WEAR(obj, ITEM_WEAR_TAKE)) || GET_OBJ_TYPE(obj) == ITEM_MOBSPELL) {
     act("$p: you can't take that!", FALSE, ch, obj, 0, TO_CHAR);
     return 0;
   }
@@ -168,6 +251,9 @@ void get_from_container(struct char_data * ch, struct obj_data * cont,
 
   obj_dotmode = find_all_dots(arg);
 
+/* ANTI PLOOT */
+  /* hmm not done */
+/* END ANTI PLOOT */
   if (IS_SET(GET_OBJ_VAL(cont, 1), CONT_CLOSED))
     act("$p is closed.", FALSE, ch, cont, 0, TO_CHAR);
   else if (obj_dotmode == FIND_INDIV) {
@@ -290,6 +376,7 @@ ACMD(do_get)
       for (cont = ch->carrying; cont; cont = cont->next_content)
 	if (CAN_SEE_OBJ(ch, cont) &&
 	    (cont_dotmode == FIND_ALL || isname(arg2, cont->name)))
+        {
 	  if (GET_OBJ_TYPE(cont) == ITEM_CONTAINER) {
 	    found = 1;
 	    get_from_container(ch, cont, arg1, FIND_OBJ_INV);
@@ -297,9 +384,11 @@ ACMD(do_get)
 	    found = 1;
 	    act("$p is not a container.", FALSE, ch, cont, 0, TO_CHAR);
 	  }
+        }
       for (cont = world[ch->in_room].contents; cont; cont = cont->next_content)
 	if (CAN_SEE_OBJ(ch, cont) &&
 	    (cont_dotmode == FIND_ALL || isname(arg2, cont->name)))
+        {
 	  if (GET_OBJ_TYPE(cont) == ITEM_CONTAINER) {
 	    get_from_container(ch, cont, arg1, FIND_OBJ_ROOM);
 	    found = 1;
@@ -307,6 +396,7 @@ ACMD(do_get)
 	    act("$p is not a container.", FALSE, ch, cont, 0, TO_CHAR);
 	    found = 1;
 	  }
+        } 
       if (!found) {
 	if (cont_dotmode == FIND_ALL)
 	  send_to_char("You can't seem to find any containers.\r\n", ch);
@@ -405,17 +495,17 @@ int perform_drop(struct char_data * ch, struct obj_data * obj,
 
 ACMD(do_drop)
 {
-  extern sh_int donation_room_1;
-#if 0
-  extern sh_int donation_room_2;  /* uncomment if needed! */
-  extern sh_int donation_room_3;  /* uncomment if needed! */
-#endif
+  int x;
+
   struct obj_data *obj, *next_obj;
   sh_int RDR = 0;
   byte mode = SCMD_DROP;
   int dotmode, amount = 0;
   char *sname;
+  extern struct townstart_struct townstart[];
 
+  if (ROOM_FLAGGED(ch->in_room, ROOM_DUMP))
+    subcmd = SCMD_DONATE;
   switch (subcmd) {
   case SCMD_JUNK:
     sname = "junk";
@@ -424,22 +514,12 @@ ACMD(do_drop)
   case SCMD_DONATE:
     sname = "donate";
     mode = SCMD_DONATE;
-    switch (number(0, 2)) {
-    case 0:
-      mode = SCMD_JUNK;
-      break;
-    case 1:
-    case 2:
-      RDR = real_room(donation_room_1);
-      break;
-/*    case 3: RDR = real_room(donation_room_2); break;
-      case 4: RDR = real_room(donation_room_3); break;
-*/
-    }
-    if (RDR == NOWHERE) {
-      send_to_char("Sorry, you can't donate anything right now.\r\n", ch);
-      return;
-    }
+    RDR=real_room(townstart[0].donation);
+
+    if(PLR_FLAGGED(ch, PLR_LOADROOM))
+      for(x=0; townstart[x].minlevel != -1; x++)
+        if (GET_LOADROOM(ch) == townstart[x].loadroom)
+          RDR= real_room(townstart[x].donation);
     break;
   default:
     sname = "drop";
@@ -544,7 +624,6 @@ struct char_data *give_find_vict(struct char_data * ch, char *arg)
     send_to_char("To who?\r\n", ch);
     return NULL;
   } else if (!(vict = get_char_room_vis(ch, arg))) {
-    send_to_char(NOPERSON, ch);
     return NULL;
   } else if (vict == ch) {
     send_to_char("What's the point of that?\r\n", ch);
@@ -601,8 +680,16 @@ ACMD(do_give)
     }
   } else {
     one_argument(argument, buf1);
-    if (!(vict = give_find_vict(ch, buf1)))
-      return;
+    if (!(vict = give_find_vict(ch, buf1))) 
+    {
+      if((vict = give_find_vict(ch, arg)))
+        strcpy(arg, buf1);
+      else
+      {
+        send_to_char(NOPERSON, ch);
+        return;      
+      }
+    }
     dotmode = find_all_dots(arg);
     if (dotmode == FIND_INDIV) {
       if (!(obj = get_obj_in_list_vis(ch, arg, ch->carrying))) {
@@ -892,7 +979,7 @@ ACMD(do_pour)
       return;
     }
     if (!(to_obj = get_obj_in_list_vis(ch, arg1, ch->carrying))) {
-      send_to_char("You can't find it!", ch);
+      send_to_char("You can't find it!\r\n", ch);
       return;
     }
     if (GET_OBJ_TYPE(to_obj) != ITEM_DRINKCON) {

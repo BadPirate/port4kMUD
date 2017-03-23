@@ -1,0 +1,1472 @@
+#1400
+The Beginning of the &yYellow Brick Road&n~
+   The yellow brick road starts in the middle of nowhere.  After three turns
+around its beginning, it branches off in three seperate roads heading west,
+north, and east.  The road to the north leads to a castle.  The road to the
+west leads to a beatiful chapel.  And the road to the east leads into a series
+of very odd-looking buildings.    
+~
+14 16 1
+D0
+   The castle looks very dirty and unkempt.    
+~
+~
+0 0 18600
+D1
+   The yellow brick road heads east into a series of strange shops.    
+~
+~
+0 0 1403
+D3
+   The yellow brick road heads west to a chapel.    
+~
+~
+0 0 1401
+S
+#1401
+The &yYellow Brick Road&n~
+   The yellow brick road is finely made and magical by nature.  It glows a warm
+mellow yellow against the bright green grass of the field.  The field is
+spotted with several different kinds of wild flowers.  To the west and north, a
+beautiful chapel rises up out of the grass.  Its stained glass windows form a
+different rainbow from the flowers.  The yellow brick road's beginning lies to
+the east.    
+~
+14 0 0
+D1
+   The yellow brick road begins to the east.    
+~
+~
+0 0 1400
+D3
+   The road continues west for a few more paces before twisting northward
+straight to a chapel.    
+~
+~
+0 0 1402
+S
+#1402
+The &yYellow Brick Road &CBefore the Chapel&n~
+   The brick of the road is laid so close to each other that its surface
+appears to be completely seamless when one runs a hand across it.  The grass
+grows neatly on either side, but makes no attempt to infringe on the road
+itself.  A beautiful chapel made of pure white marble and glorious stained
+glass windows rises up to the north.  To the east, the road trails past a small
+castle and on into a series of buildings.    
+~
+14 16 1
+D0
+   A few steps forward and a traveler would be inside the chapel.    
+~
+~
+0 0 2297
+D1
+   The road continues east where it wanders into a bunch of odd-looking
+buildings.    
+~
+~
+0 0 1401
+S
+#1403
+The &yYellow Brick Road&n~
+   The yellow road marches through the grass in anything but a straight line.
+It looks like it was made by drunks!  The bricks themselves are neatly laid,
+but there is little reason for the road to wander the way it does on such a
+flat field.  A little shop pops up out of the grass to the north.  The road
+itself runs in a vague west/east direction.  There is a small but well worn
+path that winds around behind the shop to the northwest.
+~
+14 16 1
+D0
+   The little shop's roof is thatched with bright red straw!    
+~
+~
+0 0 1496
+D1
+~
+~
+0 0 1404
+D3
+   The beginning of the yellow brick road lies to the west.    
+~
+~
+0 0 1400
+D7
+~
+~
+0 0 8302
+S
+#1404
+A Loop in the &yYellow Brick Road&n~
+   The yellow brick road turns around in a great big loop as it heads in a
+general east and west direction.  There is no real reason for it to do so but
+it loops nonetheless.  The emerald green grass grows to either side of the road
+and forms a little island inside the loop.    
+~
+14 16 0
+D1
+   The road wanders into a sort of shop square.    
+~
+~
+0 0 1405
+D3
+   The beginning of the road can be seen a ways to the west.  It is as typical
+as the road itself and starts from nowhere.    
+~
+~
+0 0 1403
+S
+#1405
+The &yYellow Brick Road&n~
+   This is not so much a shopping center as a shopping blob.  Three
+different-colored yellow roads converge on one spot and simple splatter
+outward, forming an irregular shape.  The road to the north is a pale yellow.
+The road to the west is a rich yellow-gold.  And the road to the south is a
+deep goldenrod.  A yellow stairway walks up into thin air and stops when it
+reaches a huge box shape that floats in the sky.    
+~
+14 16 1
+D0
+   The road turns a soft yellow color as it heads north.    
+~
+~
+0 0 1407
+D2
+   The yellow road darkens to a rich goldenrod color as it heads south.    
+~
+~
+0 0 1406
+D3
+   The yellow road loops up on itself before continuing westward.    
+~
+~
+0 0 1404
+D4
+   The stairway leads up to a huge box that hovers in the sky.    
+~
+~
+0 0 1471
+E
+box shape stairway~
+   The stairway is made from the same brick as the road.  It is completely
+unsupported by any pillars or other delightfully supportful things.  The box it
+leads to is large enough to fit a dozen giants with room to spare.    
+~
+S
+#1406
+The &yGoldenrod Brick Road&n~
+   The road is a deep goldenrod color with flashes of a rich orange every now
+and then.  It ends here in this culdesac of strange buildings and an uncovered
+manhole leading down into the sewer.  The building to the west is covered with
+cheap mage globes, half of which have burned out.  The building to the south is
+made of rough lava rock and smells of sulfur.  The building to the east would
+be perfectly normal if it didn't look like it had been built upside down.    
+~
+14 16 1
+D0
+   The yellow brick shopping blob lies to the north.    
+~
+~
+0 0 1405
+D1
+   An auction block lies to the east.    
+~
+~
+0 0 175
+D2
+   A store of hellfire and brimestone lies to the south.    
+~
+~
+0 0 1460
+D3
+   The greatest of evils--gambling--is practiced in the building to the west.
+  
+~
+~
+0 0 109
+D5
+   Stinky smells rise from the sewer.  Ewwww!    
+~
+~
+0 0 1495
+S
+#1407
+The &yYellow Brick Road&n~
+   The road is made of pale stone and wanders from side to side as if it is not
+quite sure where it is going or what it should do when it gets there.  A small
+stand made of braided straw and cobwebs has been set up in the middle of the
+street.  It also has a counter made of solid marble.  The air is filled with
+the smell of coffee from the cafe to the east and pastries from the stand.  
+Another store made of sandblasted glass is to the west.  The road runs north
+and south.    
+~
+14 16 1
+D0
+   The yellow brick road encounters more strange little shops as it heads
+north.    
+~
+~
+0 0 1409
+D1
+   A tiny little cafe with elegant iron chairs and tables with silk umbrellas
+set up outside it lies to the east.    
+~
+~
+0 0 1408
+D2
+   The yellow brick shopping blob lies to the south.    
+~
+~
+0 0 1405
+D3
+   The glass door stands open, just walk right in!    
+~
+~
+0 0 2201
+S
+#1408
+Dremor's Jop~
+   The cafe is split into two sections: indoors and outdoors.  Outside, there
+are tables and chairs made of cold iron with bright red silk umbrellas on top.
+The sun shines brightly down on the shrubs and flowers that have been carefully
+cultivated all around.  Inside Dremor's Jop is soothing darkness and the quiet
+sounds of an unseen violin being played.  The chairs and tables are made from
+darkly stained oak.  The yellow brick road is to the west of Dremor's Jop.    
+~
+14 24 0
+D3
+   A road made of pale yellow brick lies to the west.    
+~
+~
+0 0 1407
+S
+#1409
+The &yYellow Brick Road&n~
+   The shop to the east looks like a giant, squat candle.  The little "wick" on
+top is actually a chimney.  The smell of baked goods and rich fods wafts
+outward from the welcoming open door.  A sign hangs above that same door.  
+Next to the shop is a stand made of burlap and thick green vines.  It is
+festooned with brightly colored flowers.  The road runs north and south.    
+~
+14 16 1
+D0
+   The yellow brick road continues northwards for a ways before stopping
+abruptly.    
+~
+~
+0 0 1410
+D1
+   Heading east would take a traveler inside the caterer's store.    
+~
+~
+0 0 2202
+D2
+   The yellow brick road ducks between two shop: one, a fancy little cafe; the
+other, a building made of glass.    
+~
+~
+0 0 1407
+E
+sign door~
+The sign reads:
+
+Yolis' Caterers
+~
+S
+#1410
+The &yYellow Brick Road&n~
+   The yellow brick road ends abruptly.  One minute, it is bumbling along on
+its drunken path; the other, it turns into the same grass as the field.  To the
+west, a large rock formation with a cave can be seen.  It would be a little
+more normal-looking if the rock were not a bright green color.  The road falls
+back to the south.    
+~
+14 16 1
+D1
+   A large velvet curtain has been hung up deeper inside the cave mouth.    
+~
+~
+0 0 2203
+D2
+   The yellow brick road passes by a building shaped like a candle.    
+~
+~
+0 0 1409
+S
+#1411
+The Masterminds treasure room~
+   This room only half appears to be in this dimention, you see shimmering
+images from all over when you look around.  This experience alone was worth
+killing the Mastermind, but then again, the treasure don't hurt much.    
+~
+14 0 0
+D4
+~
+magic portal door~
+1 102 1410
+S
+#1412
+Top section drop point~
+THe drop point for the top section of the volcano
+~
+14 262144 0
+D0
+~
+~
+0 0 182
+D1
+~
+~
+0 0 183
+D2
+~
+~
+0 0 184
+D3
+~
+~
+0 0 186
+D4
+~
+~
+0 0 185
+D5
+~
+~
+0 0 188
+D6
+~
+~
+0 0 189
+D7
+~
+~
+0 0 190
+D8
+~
+~
+0 0 191
+S
+#1413
+A hall drop~
+You are in an unfinished room.
+~
+14 262144 0
+D0
+~
+~
+0 0 193
+D1
+~
+~
+0 0 194
+D2
+~
+~
+0 0 195
+D3
+~
+~
+0 0 196
+S
+#1414
+C Hall drop~
+You are in an unfinished room.
+~
+14 262144 0
+D0
+~
+~
+0 0 1402
+D1
+~
+~
+0 0 1403
+D2
+~
+~
+0 0 1404
+D3
+~
+~
+0 0 1405
+S
+#1415
+B hall drop~
+You are in an unfinished room.
+~
+14 262144 0
+D0
+~
+~
+0 0 1401
+D1
+~
+~
+0 0 197
+D2
+~
+~
+0 0 198
+D3
+~
+~
+0 0 199
+S
+#1416
+C hall drop~
+You are in an unfinished room.
+~
+14 262144 0
+D0
+~
+~
+0 0 1406
+D1
+~
+~
+0 0 1407
+D2
+~
+~
+0 0 1408
+D3
+~
+~
+0 0 1409
+S
+#1417
+Entrance to Ethreal Street~
+   You are standing on, or in Ethreal Street, this whole street is enveloped
+and surrounded by swirling colorful gases.  The way you used to get here
+appears to be no longer existant.  So the only way to return how would be to
+have your city call you home (&rRecall&n).  To the east the street wanders on,
+maybe you'll find what you are looking for, but I doubt it.    
+  You hear the sound of rolling dice and buzzers coming off from the west.
+  Above you is the auctioning block, where auctioneers go after transacting.
+~
+14 262152 0
+D0
+~
+~
+0 0 1496
+D1
+~
+~
+0 0 1418
+D3
+~
+~
+0 0 109
+D4
+~
+~
+0 0 175
+S
+#1418
+Ethreal Square~
+   Ever since the shread in time space, this has been a very popular square, it
+would seem that certain things that were lost into the void can be traveled to
+via this square.  The colors of gas are very entertaining but also very hard to
+see through at times, making it tough to disconcern which direction to go.    
+
+North- Sunnyside road (mystic portal, newbie zone)
+Up   - Arena (arena club)
+~
+14 262148 0
+D0
+~
+~
+0 0 3059
+D3
+~
+~
+0 0 1417
+D4
+~
+~
+0 0 1471
+S
+#1419
+More of the Gatekeepers Realm~
+   You now stand in the mystical realm of the Gatekeeper.  Here you must have a
+pass to the portals, which can only be found in the arena club.  The portals
+lead to the begining of different places, and are not for the weak.  Some of
+these portal will take you to where there are hostile creatures, you are
+warned.    
+&GSouth West: &WMore Portals&n
+&GNorth: &WRome&n
+&GEast: &WElven City&n
+&GSouth:&W Daggerfall&n
+&GUp:&W Monk Monastery&n
+&GDown:&W Pirate Isle&n
+~
+14 0 0
+D0
+~
+~
+0 0 145
+D1
+~
+~
+0 0 19005
+D2
+~
+~
+0 0 3001
+D4
+~
+~
+0 0 501
+D5
+~
+~
+0 0 601
+D9
+~
+~
+0 0 180
+S
+#1420
+The Super Guildroom~
+Empty~
+14 262168 0
+D2
+~
+~
+0 0 1421
+S
+#1421
+Super Guildroom Entrance~
+Empty~
+14 262160 0
+D0
+~
+~
+0 0 1420
+D8
+~
+~
+0 0 1204
+S
+#1422
+The storm mob drop room~
+You are in an unfinished room.
+~
+14 262168 0
+D0
+~
+~
+0 0 3052
+D1
+~
+~
+0 0 3053
+D2
+~
+~
+0 0 1417
+D3
+~
+~
+0 0 19000
+D5
+~
+~
+0 0 12033
+D6
+~
+~
+0 0 12030
+S
+#1423
+Warrior Guild~
+   You see about 10 warriors standing line on line fighting against eachother,
+and you see a drill sargeant shouting commands and giving ridicule and the
+occasional congratulations to his fighters for their quality of fighting.  
+They seem to be learning a lot from him.  Maybe you could learn something here
+too?  There is a sign here letting warriors know at what levels the master will
+teach them what skills.    
+~
+14 188 0
+D1
+~
+~
+0 0 1428
+E
+sign skills levels~
+Kick,       1
+Tame,       3
+Track,      9
+Second Attk,20
+Bash,       45
+Third Attak,60
+Rescue,     85
+~
+S
+#1424
+Bard Guildroom~
+   This is a room full of much merriment, music and stories can be heard from
+all directions, tantalizing the senses.  You see a table with various flavorful
+foods lined up on it and a fine wine dispenser attached to a wall with a glass
+by it for filling, for the easy flow of the alchohol only serves to increase
+the merriment..  And so the festivities continue.  You see a large bald man
+with a big happy smile who appears to be the head of the party.  There is a
+sign tacked to the wall that has been painted pretty colors, telling you what
+you can get and at what level.    
+~
+14 188 0
+D1
+~
+~
+0 0 1429
+E
+sign list level skills~
+Magic Missile,      1
+Create Food,        3
+Infravision,        9
+Steal,             12
+Detect Poison,     20
+Control Weather,   26
+Tame,              32
+Charm,             38
+Armor,             44
+Sleep,             50
+Second Attack,     56
+Detect Invisible,  62
+Pick lock,         68
+Track,             74
+Rescue,            80
+Third Attack,      86
+Sanctuary,         90
+~
+S
+#1425
+The shady dead end~
+   Both to the north and the south are buildings, raising up about 20 feet or
+so, and there is only one exit to the east.  Wouldn't this be a great place to
+set up an ambush?    
+~
+14 0 1
+D1
+~
+~
+0 0 1430
+S
+#1426
+The Vampyre Guildroom~
+   There is an ambiance to this room, vampyres walk around talking of things
+that matter only to their race.  Certain internal politics etc.  It would seem
+that there are more people in this room than you count, you check your back
+just to make certain.  It would appear as if they are there, but you can't see
+them fully.  There is a sign here telling you what you can get.    
+~
+14 188 0
+D1
+~
+~
+0 0 1431
+E
+vampyre sign list~
+You can have the following skills/spells:
+Magic Missile,           1
+Detect Invisible,        3
+Infravision,             9
+Hide,                   12
+Invisible,              20
+Tame,                   27
+Energy Drain,           34
+Locate Object,          41
+Blindness,              48
+Sleep,                  56
+Detect Poison,          63
+Sneak,                  70
+Charm,                  77
+Second Attack,          84
+Backstab,               91
+Third Attack,           98
+~
+S
+#1427
+Mage Guildroom~
+   This room is kind of fried, what with all the mages practicing their small
+spells of destruction and not quite getting them right, the room is charred
+from top to bottom from the remainders of Magic Missile spells, and the mixing
+of wrong chemicals in the mages ever present search for the bigger boom.  
+There is a sign here telling what you can get and at what level.    
+~
+14 180 0
+D1
+~
+~
+0 0 1432
+E
+sign mage list~
+You can get the following spells at the following levels:
+Magic Missile,        1
+Armor,                3
+Detect Magic,         5
+Infravision,          7
+Chill Touch,          9
+Strength,            11
+Invisible,           13
+Burning hands,       18
+Locate Object,       20
+Tame,                26
+Charm,               32
+Enchant Weapon,      38
+Sleep,               44
+Shocking Grasp,      50
+Blindness,           56
+Detect Poison,       62
+Lightning Bolt,      68
+Color Spray,         74
+Energy Drain,        80
+Curse,               86
+Fireball,            92
+Second Attack,       98
+~
+S
+#1428
+Guild Street~
+   You have reached the end of Guild Street, the crowds of unique people have
+kind of died down a little bit and you can see that the only people remaining
+looks like the warriors and the paladins.  It would seem that if you aren't one
+of them then you have come to the wrong place.  To the west is the warriors
+guild, and to the east you can see the guild of the paladins.  Back south is
+more of the Guild Street.    
+~
+14 0 1
+D1
+~
+~
+0 0 1433
+D2
+~
+~
+0 0 1429
+D3
+~
+~
+0 0 1423
+S
+#1429
+North Guild Street~
+   You are walking along Guildstreet.  There is a fairly large amount of people
+walking along with you, all of the warriors and paladins keep walking north
+they're armor chinking and clanking as they walk.  And you can see that all of
+the bards are going west, while all the clerics are going east.    
+~
+14 0 1
+D0
+~
+~
+0 0 1428
+D1
+~
+~
+0 0 1434
+D2
+~
+~
+0 0 1430
+D3
+~
+~
+0 0 1424
+S
+#1430
+Guild Square~
+   If you are looking to practice your skills you are crossing the right
+street.  This street is filled with many people, familiar and unfamilar,
+experienced and unexperienced; who seem to be looking for a place to hone their
+skills.  Warriors, Paladins, Bards, and Clerics go north, while Vampyres,
+Thieves, Mages, and Scouts can go south.  Daggerfall's main street continues
+east, and there is a dark dead end to the west.    
+~
+14 0 1
+D0
+~
+~
+0 0 1429
+D1
+~
+~
+0 0 1435
+D2
+~
+~
+0 0 1431
+D3
+~
+~
+0 0 1425
+S
+#1431
+South Guild Street~
+   You are walking down Guild Street.  A wide variety of people are walking
+with you along this cobblestone street.  You can see a lampost where a lamp is
+hung to brighten dark nights.  Vampyres should go west; Thieves east; and,
+Mages and Scouts should go south.    
+~
+14 0 1
+D0
+~
+~
+0 0 1430
+D1
+~
+~
+0 0 1436
+D2
+~
+~
+0 0 1432
+D3
+~
+~
+0 0 1426
+S
+#1432
+crossroads~
+   You are standing at the far southern end of Guild Street.  The masses of
+people have thinned out a little down here and it would seem that only mages
+and scouts are left walking the streets.  You can see the mage guild to the
+west, and the scout guild to the east.    
+~
+14 0 1
+D0
+~
+~
+0 0 1431
+D1
+~
+~
+0 0 1437
+D3
+~
+~
+0 0 1427
+S
+#1433
+Paladin Guildroom~
+   You see a long hallway with suits of gleaming armor lining either side all
+look ready to suit up in, but also have a few usless decorations that would
+hinder movement and performance, not to mention some of them are made of soft
+metals like gold.  There are fencers and healers practicing here.  There is a
+sign listing what skills you can get and when here.    
+~
+14 188 0
+D3
+~
+~
+0 0 1428
+E
+sign list paladin~
+Cure light,     1
+Create food,    3
+Detect Align,   9
+Kick,          12
+Tame,          20
+Infravision,   27
+Bless,         34
+Dispel Evil,   44
+Harm,          51
+Second Attack, 58
+Prot from evil,66
+Track,         73
+Third Attack,  80
+Group Armor,   87
+Sanctuary,     94
+Summon,        98
+~
+S
+#1434
+Cleric Guildroom~
+   This room glows with an eerie white light, healers walking around everywhere
+and magic flowing through the room.  You are welcomed inside to a warm drink.
+It would seem that there is a high level of hospitality here, and everyone is
+your friend.  Back off in some of the corners you see sparks of white light as
+healers practice their spells.  There is a sign here listing what skills you
+can get and at what levels.    
+~
+14 188 0
+D3
+~
+~
+0 0 1429
+E
+sign cleric list skills~
+You can get the following skills at the following levels
+Armor,          1
+Create Food,    3
+Create Water,   5
+Detect Poison,  7
+Detect Align,   9
+Cure Blind,    12
+Bless,         15
+Detect Invis,  20
+Blindness,     23
+Infravision,   26
+Prot from evil,29
+Group Armor,   32
+Cure Critical, 35
+Summon,        38
+Remove Poison, 41
+Tame,          44
+Word of Recall,47
+Earthquake,    50
+Dispel Evil,   53
+Dispel Good,   56
+Sanctuary,     59
+Call lightning,62
+Heal,          65
+Cont Weather,  68
+Harm,          71
+Curse,         77
+Second Attack, 90
+~
+S
+#1435
+Main Street~
+   You continue your walk along mainstreet..  Either side of the street is
+lined with a big building, what you might recognize as a few guild houses.  
+The street gets narrow and croweded as you are still near the heart of the
+city.  You can continue west towards Guild Street, or head back east down
+mainstreet
+~
+14 0 1
+D1
+~
+~
+0 0 1440
+D3
+~
+~
+0 0 1430
+S
+#1436
+Thieves Guildroom~
+   You are standing in the guild of thieves, you instinctivly grab at your
+pouch but are glad to find that as far as you know nothing is missing.  You see
+a lot of dummies with bells on them hanging from the ceiling, and thieves
+ducking in and out, creating diversions and picking the pockets of the dummies
+without ringing the bells.  Some are better than others and you think that some
+should have been warriors.  There is a sign here detailing when your master
+will teach you skills.    
+~
+14 188 0
+D3
+~
+~
+0 0 1431
+E
+thief thieves skill list sign~
+Sneak,                1
+Pick Lock,            3
+Backstab,             9
+Tame,                12
+Steal,               20
+Hide,                40
+Track,               55
+Second Attack,       65
+Third Attack,        85
+~
+S
+#1437
+Scout Guildroom~
+   You you barely recognize anyone in the room and are about to leave when
+people start appearing seemingly from nothing; camoflage spots on the walls,
+welcoming you into their guild.  The scouts seem very welcoming, and trusting,
+but all seem to have their own agendas below their calm smiles.  There is a
+sign on the wall listing what you can get and when the master will teach it to
+you.    
+~
+14 188 0
+D3
+~
+~
+0 0 1432
+E
+sign scout list skills~
+You can get the following skills at the following levels:
+Sneak,            1
+Kick,             3
+Hide,             9
+Track,           12
+Backstab,        20
+Second Attack,   50
+Tame,            70
+Third Attack,    85
+~
+S
+#1438
+Worn trail~
+   You've reached the end of the path that leads to the weapon smith.  You can
+see the large shop just to your east.  You pass by a couple exiting with what
+looks like an ornamental sword for their mantle at home.    
+~
+14 0 1
+D1
+~
+~
+0 0 1441
+D2
+~
+~
+0 0 1439
+S
+#1439
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1440
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1441
+weapon shop~
+You are in an unfinished room.
+~
+14 156 0
+S
+#1442
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1443
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1444
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1445
+armor shop~
+You are in an unfinished room.
+~
+14 128 0
+S
+#1446
+magic shop~
+You are in an unfinished room.
+~
+14 128 0
+S
+#1447
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1448
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1449
+Brutus (healer)~
+You are in an unfinished room.
+~
+14 28 0
+S
+#1450
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1451
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1452
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1453
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1454
+Commons~
+You are in an unfinished room.
+~
+14 28 0
+S
+#1455
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1456
+The lift~
+   This small, old lift takes you up to the second floor of the conglomeration.
+The lift looks pretty old, but you can clearly tell that it has been kept up
+pretty nicely.  The ropes used to move up and down look worn down, but they do
+not look like they are ready to break yet.  You can go down, to return to the
+main room, or you can continue on to your personal room.    
+~
+14 270344 1
+D0
+~
+~
+0 0 1468
+D5
+~
+~
+0 0 1488
+S
+#1457
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1458
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1459
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1460
+Hell's retailer~
+&rYOU HAVE DIED!!!&n
+
+   It would seem that even though you have died, you may still have a chance at
+the small possessions you had in life.  A demon stands here smiling as your
+equipment is about to mean his profit.  The shopkeeper has all of your
+equipment and that of many others whom have walked the wrong path, right into
+their bloody end.  All you have to do is be able to afford his price and you
+can go on your merry way.  Otherwise, you might as well just (&rRecall&n)
+~
+14 136 0
+D0
+~
+~
+0 0 1406
+S
+#1461
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1462
+Emperors office~
+You are in an unfinished room.
+~
+14 128 0
+S
+#1463
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1464
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1465
+guardhouse and information~
+You are in an unfinished room.
+~
+14 128 0
+S
+#1466
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1467
+crossroads~
+You are in an unfinished room.
+~
+14 0 1
+S
+#1468
+OPEN ROOM~
+Empty~
+14 264712 0
+S
+#1469
+OPEN ROOM~
+Empty~
+14 0 0
+S
+#1470
+The Gatekeepers Realm~
+   You now stand in the mystical realm of the Gatekeeper.  Here you must have a
+pass to the portals, which can only be found in the arena club.  The portals
+lead to the begining of different places, and are not for the weak.  Some of
+these portal will take you to where there are hostile creatures, you are
+warned.    
+&GSouth East:&n More Portals
+&GNorth:&n Mist City
+~
+14 0 0
+D0
+~
+~
+0 0 1720
+D8
+~
+~
+0 0 180
+S
+#1471
+The &bMain &rArena &bEntrance&n~
+   Above you is the Arena.  Where all the great warriors go to fight and kill
+each other.  Only there can they do it without really being killed.  It's more
+of a game.  A test of strength and weaponry.  In other words, it's just a place
+for people who are stuck on themselves to show off.    
+&rThere is a sign here describing the arena&n
+~
+14 20 0
+D4
+~
+~
+0 0 112
+D5
+~
+door~
+2 -1 1405
+E
+arena sign~
+Here's what happens when you die normally...
+You're killed, you lose exp, your eq is put in a corpse, and your sent to hell
+
+However when you die in the arena...
+
+You're killed, your sent to hell with all your eq on you
+
+When an official arena is going on, you can earn exp from beating up people,
+and for each person you kill in an official arena you get 1 arena token, which
+you can gamble away in attempts at a &rred token&n at the gamble master.  Also
+there can be other prizes for the champion of an arena, as well as everyone who
+participates gets a full heal when they die.  So there is no pentalty for losing
+and there is plenty of opportunities to win, even if you are the weakest person
+on the mud, you can still try to get into the bigger fights for the chance of a
+kill blow.
+
+However when an official arena is not going, any battles in the arena don't give
+you exp, and don't give you a full heal when your done, however they still don't
+take away exp when you die, and you don't have to collect eq
+
+&bSO PLAY IN THE ARENA TODAY!&n
+~
+S
+#1472
+OPEN ROOM~
+Empty~
+14 6656 0
+S
+#1473
+Ceremonial Room~
+   You are standing at the end of long hallway, with people cheering on all
+sides rows of people are standing in attention.  There is a red carpet rolled
+out for the lucky immortal.    
+~
+14 176 0
+S
+#1474
+OPEN ROOM~
+Empty~
+14 277080 0
+S
+#1475
+OPEN ROOM~
+Empty~
+14 264732 0
+S
+#1480
+Residential District C~
+You're in residential District "C"... Wow.
+~
+14 270336 0
+D3
+~
+~
+0 0 174
+S
+#1481
+OPEN ROOM~
+Empty~
+14 10760 0
+S
+#1482
+OPEN ROOM~
+Empty~
+14 272904 0
+S
+#1483
+OPEN ROOM~
+Empty~
+14 272904 0
+S
+#1484
+OPEN ROOM~
+Empty~
+14 264712 0
+S
+#1485
+OPEN ROOM~
+Empty~
+14 2560 0
+S
+#1486
+OPEN ROOM~
+Empty~
+14 10752 0
+S
+#1487
+Residential Block C~
+   This is more of Residential Block C.  To the west is the beginning of the
+district.  To the north is a conglomeration of houses: Thor's, Micken's, and
+Artanis'.  To the south, you see Zorgoth's private house.
+~
+14 8192 0
+D0
+~
+~
+0 0 1488
+D2
+~
+~
+0 0 1475
+D3
+~
+~
+0 0 1480
+S
+#1488
+OPEN ROOM~
+Empty~
+14 272984 0
+S
+#1489
+OPEN ROOM~
+Empty~
+14 264792 0
+S
+#1490
+OPEN ROOM~
+Empty~
+14 262232 0
+S
+#1491
+OPEN ROOM~
+Empty~
+14 262232 0
+S
+#1492
+OPEN ROOM~
+Empty~
+14 272984 0
+S
+#1493
+OPEN ROOM~
+Empty~
+14 272984 0
+S
+#1494
+OPEN ROOM~
+Empty~
+14 2560 0
+S
+#1495
+The Sewage Dump~
+   There is a few shoots on all the sides of this wonderful place that
+occasionally people come shooting out of into the muck that surrounds you.  
+This is where the gods flush their garbage when they are done speaking with
+them, and it is recommended that you crawl out before you pick up some kind of
+permanant odor.  If you haven't already that is.    
+~
+14 12 0
+D4
+~
+~
+0 0 1406
+S
+#1496
+The class shop~
+   This shop has a lot of class...  It is where you can buy items that are
+specific to your clans trade, and magical in that way.  The floors are carpeted
+with a nice deep red carpet that you feel you are always sinking deeper into.
+And there are beautiful lounge chairs on both sides of the room.    
+~
+14 24 0
+D2
+   A bright yellow road can be seen through the southern door.    
+~
+~
+0 0 1403
+S
+#1497
+The Crossing Path~
+   You stand upon a stone walkway.  The walls about you are littered with
+doors, signs, and plaques.  The doors are of different types, styles and sizes.
+Exits lead EVERYWHERE (but they all end up in NoWhere).    
+~
+14 264704 0
+D2
+~
+wall~
+1 0 1495
+S
+#1498
+OPEN ROOM~
+Empty~
+14 2560 0
+S
+#1499
+Armitage and Connavar's Abode~
+   The room is a confused room.  As you look around you see a divide in the
+room, ac ross which a battle is being fought.  On one side, there is a land of
+chaos and death.  Weapons number in there thousands and various preserved human
+body parts decorate the scene as trophies of battles won.  On the other side a
+state of pure calm exists, it is well ordered and only the real necessities
+take up the space.  Incense burns in the corner purifying the air of hate that
+rules the world.    
+~
+14 264776 0
+D0
+~
+~
+0 0 103
+E
+mat floor~
+It reads;
+Welcome!
+~
+S
+$~

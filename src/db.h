@@ -15,6 +15,7 @@
 #define DB_BOOT_ZON	3
 #define DB_BOOT_SHP	4
 #define DB_BOOT_HLP	5
+#define DB_BOOT_CLAN	6
 
 /* names of various files and directories */
 #define INDEX_FILE	"index"		/* index of world files		*/
@@ -25,6 +26,7 @@
 #define ZON_PREFIX	"world/zon"	/* zon defs & command tables	*/
 #define SHP_PREFIX	"world/shp"	/* shop definitions		*/
 #define HLP_PREFIX	"text/help"	/* for HELP <keyword>		*/
+#define CLAN_PREFIX	"text/clan"		/* For clan info		*/
 
 #define CREDITS_FILE	"text/credits"	/* for the 'credits' command	*/
 #define NEWS_FILE	"text/news"	/* for the 'news' command	*/
@@ -37,6 +39,7 @@
 #define BACKGROUND_FILE	"text/background" /* for the background story	*/
 #define POLICIES_FILE	"text/policies"	/* player policies/rules	*/
 #define HANDBOOK_FILE	"text/handbook"	/* handbook for new immorts	*/
+#define HELP_FILE	"text/help/help.hlp" /* unified help file */
 
 #define IDEA_FILE	"misc/ideas"	/* for the 'idea'-command	*/
 #define TYPO_FILE	"misc/typos"	/*         'typo'		*/
@@ -91,6 +94,7 @@ struct reset_com {
    int	arg1;		/*                                      */
    int	arg2;		/* Arguments to the command             */
    int	arg3;		/*                                      */
+   int  arg4;
    int line;		/* line number this command appears on  */
 
    /* 
@@ -153,6 +157,7 @@ struct player_index_element {
 struct help_index_element {
    char	*keyword;
    char *entry;
+   int min_level;
    int duplicate;
 };
 

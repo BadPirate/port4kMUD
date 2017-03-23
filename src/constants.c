@@ -32,6 +32,26 @@ const char *dirs[] =
   "west",
   "up",
   "down",
+  "northeast",
+  "northwest",
+  "southeast",
+  "southwest",
+  "\n"
+};
+
+/* autoexit directions */
+const char *AEdirs[] =
+{
+  "N",
+  "E",
+  "S",
+  "W",
+  "U",
+  "D",
+  "NE",
+  "NW",
+  "SE",
+  "SW",
   "\n"
 };
 
@@ -53,7 +73,15 @@ const char *room_bits[] = {
   "HCRSH",
   "ATRIUM",
   "OLC",
-  "*",				/* BFS MARK */
+  "*", 			/* BFS MARK */
+  "ARENA",
+  "MAZE",
+  "!TELEPORT",
+  "DUMP",
+  "!RECALL",
+  "HEAL",
+  "OPPRESS",
+  "FALL",
   "\n"
 };
 
@@ -150,6 +178,8 @@ const char *action_bits[] = {
   "!SLEEP",
   "!BASH",
   "!BLIND",
+  "MOUNTABLE",
+  "!ATTACK",
   "\n"
 };
 
@@ -160,15 +190,12 @@ const char *preference_bits[] = {
   "COMPACT",
   "DEAF",
   "!TELL",
-  "D_HP",
-  "D_MANA",
-  "D_MOVE",
   "AUTOEX",
   "!HASS",
   "QUEST",
   "SUMN",
   "!REP",
-  "LIGHT",
+  "LIGHT", /* 10 */
   "C1",
   "C2",
   "!WIZ",
@@ -178,6 +205,14 @@ const char *preference_bits[] = {
   "!GOS",
   "!GTZ",
   "RMFLG",
+  "AFK",
+  "AASSIST",
+  "ASPLIT", // 20
+  "ALOOT",
+  "!MUSIC",
+  "!OUCH",
+  "CLANTALK",
+  "AUTOGOLD",
   "\n"
 };
 
@@ -201,12 +236,13 @@ const char *affected_bits[] =
   "PROT-GOOD",
   "SLEEP",
   "!TRACK",
-  "UNUSED",
-  "UNUSED",
+  "TAMED",
+  "STATUE",
   "SNEAK",
   "HIDE",
   "UNUSED",
   "CHARM",
+  "STATUE",
   "\n"
 };
 
@@ -230,6 +266,14 @@ const char *connected_types[] = {
   "Changing PW 3",
   "Self-Delete 1",
   "Self-Delete 2",
+  "Object edit",
+  "Room edit",
+  "Zone edit",
+  "Mobile edit",
+  "Shop edit",
+  "Text edit",
+  "Editing Clans",
+  "Select Race",
   "\n"
 };
 
@@ -307,6 +351,9 @@ const char *item_types[] = {
   "PEN",
   "BOAT",
   "FOUNTAIN",
+  "PORTAL",
+  "COMBINE",
+  "MOBSPELL",
   "\n"
 };
 
@@ -351,6 +398,22 @@ const char *extra_bits[] = {
   "!THIEF",
   "!WARRIOR",
   "!SELL",
+  "!MASTER",
+  "!DWARF",
+  "!NINJA",
+  "!HOBBIT",
+  "!LOCATE",
+  "!PALADIN",
+  "!VAMPYRE",
+  "!BARD",
+  "!SCOUT",
+  "!WOLF",
+  "!GIANT",
+  "!GNOME",
+  "!PIXIE",
+  "!GARGOYLE",
+  "!BROWNIE",
+  "!TROLL",
   "\n"
 };
 
@@ -382,6 +445,7 @@ const char *apply_types[] = {
   "SAVING_PETRI",
   "SAVING_BREATH",
   "SAVING_SPELL",
+  "RACE",
   "\n"
 };
 
@@ -750,7 +814,125 @@ const char *spell_wear_off_msg[] = {
   "!Group Recall!",
   "Your night vision seems to fade.",	/* 50 */
   "Your feet seem less boyant.",
-  "!UNUSED!"
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*60*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!meteor swarm!", /*70*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*80*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*90*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*100*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*110*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*120*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*130*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*140*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "You calm down after being enraged.",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*150*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!", /*160*/
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!",
+  "!UNUSED!" /*170*/
 };
 
 
@@ -790,9 +972,9 @@ const int movement_loss[] =
 
 
 const char *weekdays[] = {
-  "the Day of the Moon",
-  "the Day of the Bull",
-  "the Day of the Deception",
+  "the Day of the Great Reckoning",
+  "the Day of No Lord",
+  "the Day of Fire",
   "the Day of Thunder",
   "the Day of Freedom",
   "the day of the Great Gods",

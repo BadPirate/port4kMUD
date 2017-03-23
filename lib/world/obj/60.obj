@@ -3,7 +3,7 @@ axe lumber~
 a lumber axe~
 A heavy lumber axe lies here.~
 ~
-5 d 8193
+5 8 8193
 0 2 3 3
 12 50 15
 E
@@ -17,7 +17,7 @@ shirt chequered~
 a chequered shirt~
 A chequered shirt lies here.~
 ~
-9 d 9
+9 8 9
 1 0 0 0
 2 20 8
 E
@@ -29,7 +29,7 @@ boots leather~
 a pair of worn leather boots~
 A pair of worn leather boots lies here.~
 ~
-9 d 65
+9 8 65
 2 0 0 0
 4 60 10
 E
@@ -60,17 +60,17 @@ A hooded brass lantern has been left here.~
 0 0 100 0
 4 60 10
 E
-lantern brass hooded~
-It is a large and robust but somewhat battered oil lantern made from brass,
-and it is equipped with a handle to make it handy and a hood to protect its
-flame.  Some letters have been scratched on its bottom.
-~
-E
 letters~
 The letters say:
 
 Use 'hold lantern' to activate.
 
+~
+E
+lantern brass hooded~
+It is a large and robust but somewhat battered oil lantern made from brass,
+and it is equipped with a handle to make it handy and a hood to protect its
+flame.  Some letters have been scratched on its bottom.
 ~
 #6005
 chest wooden~
@@ -90,7 +90,7 @@ key brass~
 a small brass key~
 A small brass key lies here.~
 ~
-18 c 16385
+18 4 16385
 6006 0 0 0
 1 0 0
 E
@@ -114,8 +114,8 @@ blackberries berries~
 some blackberries~
 Some blackberries grow on a bush nearby.~
 ~
-19 c 1
-3 0 0 0
+19 4 1
+5 0 0 0
 1 0 0
 E
 blackberries berries~
@@ -127,7 +127,7 @@ a mushroom~
 A small mushroom grows nearby.~
 ~
 19 0 1
-6 0 0 0
+4 0 0 0
 1 10 10
 E
 mushroom~
@@ -142,11 +142,6 @@ A large sign mounted on a pole is standing by the roadside.~
 0 0 0 0
 100 0 0
 E
-pole~
-Not the most interesting pole in the world.
-Better leave it here, though, as it holds the sign in place.
-~
-E
 sign~
 It says :-
 
@@ -157,6 +152,11 @@ It says :-
      Please report any strange occurrences to Furry,
      as Quifael and Derkhil are currently indisposed.
 
+~
+E
+pole~
+Not the most interesting pole in the world.
+Better leave it here, though, as it holds the sign in place.
 ~
 #6013
 water barrel~
@@ -171,9 +171,9 @@ water brook~
 a small brook~
 A small brook trickles through the forest beside the path.~
 ~
-23 0 0 
+23 0 0
 50000 50000 15 0
-0 0 0
+50005 0 0
 E
 water brook~
 The water looks clean and refreshing.
@@ -181,31 +181,31 @@ The water looks clean and refreshing.
 #6015
 water lake~
 the lake~
+A lake is here, with small water based animals floating on it.~
 ~
-~
-23 0 0 
+23 0 0
 50000 50000 0 0
-0 0 0
+50005 0 0
 #6016
 cudgel oak oaken limb~
 an oaken cudgel~
 A limb has fallen here.~
 ~
-5 g 8193
+5 64 8193
 0 1 7 7
 16 1 20
-A
-19 2
-A
-1 -2
 E
 cudgel oak oaken limb~
 The cudgel looks quite sturdy, and would make a nice weapon.
 ~
+A
+19 2
+A
+1 -2
 #6017
 corpse boar~
 the corpse of a boar~
-~
+A corpse ot a boar is on the ground here.~
 ~
 15 0 0
 100 0 0 0
@@ -227,7 +227,7 @@ tusks pair~
 a pair of boar tusks~
 A pair of large boar tusks have been dropped here.~
 ~
-8 0 16385 
+8 0 16385
 0 0 0 0
 10 60 1
 E
@@ -237,7 +237,7 @@ They look like they might be worth something to a craftsman.
 #6020
 log hollow floating~
 a hollow log~
-~
+An old hollow log is resting on the ground here.~
 ~
 22 0 1
 0 0 0 0
@@ -249,7 +249,7 @@ It looks like it would probably float.
 #6021
 nest bird~
 the bird's nest~
-~
+A birds nest is siting here and a branch of the tree.~
 ~
 15 0 0
 30 0 0 0
@@ -280,6 +280,54 @@ a piece of venison~
 A large piece of venison.~
 ~
 19 0 1
-24 0 0 0
+18 0 0 0
 10 80 20
-$
+#6025
+spit roast~
+a small spit~
+A small, fire-blackened spit sits here.~
+~
+25 0 0
+6024 6026 6027 0
+40 0 0
+E
+spit roast blackened~
+   It looks like just the thing for roasting a bit of venison with maybe some
+mint leaves for flavor.    
+~
+#6026
+mint leaves herbs spices~
+some mint leaves~
+A few minty-smelling leaves are scattered about the ground.~
+~
+19 0 1
+2 0 0 0
+1 2 0
+E
+mint herbs spices~
+   The leaves are bright green ovals with little spikey edges along the rim of
+the leaf.  They smell fresh and pleasant, perfect for adding a bit of flavor
+to, say...  Venison.    
+~
+#6027
+venison minty flavored cooked~
+a minty venison steak~
+A piece of well-cooked venison is lying in the dirt.~
+~
+19 0 1
+24 0 0 0
+8 500 0
+E
+venison minty steak~
+   It looks as if someone cut little holes into the venison and stuffed them
+with mint before roasting it on a spit.  Yum!    
+~
+#6099
+pond~
+a small pond~
+A small pond filled with clear water has formed on the floor here.~
+~
+23 0 0
+9999 9999 15 0
+10004 0 0
+$~

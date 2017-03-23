@@ -6,11 +6,10 @@ gust of wind blows by you into the deserted, and seemingly destroyed,
 city.
 ~
 52 0 1
-D1 
-The desert sands stretch on for miles and miles.
+D1
 ~
-~
-0 -1 5044
+Gate~
+1 0 276
 D3
 You see devastation everywhere.  Houses lie in ruin and skeletons litter
 the streets.  You see strange beasts stalking the shadows.
@@ -488,7 +487,7 @@ the floor as if some massive battle had taken place here.  Draped along
 the back wall is a tattered, jet-black banner with the symbol of the
 Darkside set upon it.
 ~
-52 d 1
+52 8 1
 D1
 A small side street runs past the building.
 ~
@@ -519,7 +518,7 @@ The Smithy~
 and items.  The walls have been stripped clean and only a few incomplete
 pieces of armor and weaponry are left.
 ~
-52 d 1
+52 8 1
 D1
 A small side street runs past the building.
 ~
@@ -609,7 +608,7 @@ A Ruined Clay Dwelling~
 and a bed.  A cold fireplace suggests that the city has been abandoned
 for quite a while.  Almost nothing remains of this humble abode.
 ~
-52 d 1
+52 8 1
 D1
 Outside is a small side street.
 ~
@@ -651,7 +650,7 @@ but inside these cramped quarters you discover what used to be a shop
 filled with armor, weapons, and various other goods.  A small sign
 flutters in the wind.
 ~
-52 d 1
+52 8 1
 D3
 A small side street runs past the shop.
 ~
@@ -682,7 +681,7 @@ and most of the valuable items have been taken, leaving worthless debris.
 A few chairs have survived, as well as a large curved desk.  To the east
 is a vine-covered archway leading out into a private courtyard.
 ~
-52 d 1
+52 8 1
 D0
 The long hallway leads back to the main reception area of the city hall.
 ~
@@ -701,7 +700,7 @@ A large gaping hole in the west wall allows you to see out to one of
 the city's side streets.  Obviously no one will be seeing you through today.  
 Hallways lead south and east.
 ~
-52 d 1
+52 8 1
 D0
 Main street runs past the city hall.
 ~
@@ -722,7 +721,7 @@ D3
 ~
 0 -1 5212
 S
-#5233 
+#5233
 The East Wing Of The City Hall~
    Here lies the remnants of a fancy office, possibly the mayor's.  A few
 withered plants and broken pieces of furniture make this place anything
@@ -730,7 +729,7 @@ but fancy, though.  The only thing remaining intact here is a large
 glass cabinet.  A long hallway leads west back to the reception area and
 an ivy-covered archway leads south into a private courtyard.
 ~
-52 d 1
+52 8 1
 D2
 ~
 ~
@@ -766,7 +765,7 @@ A Small Guard House~
 shell, this small shack still stands guarding the entrance both to the
 city and to the city hall.
 ~
-52 d 1
+52 8 1
 D0
 Main street runs by this building.
 ~
@@ -788,14 +787,15 @@ Main street runs past this ruined home.
 S
 #5237
 A Tall Dwelling~
-   This seems to be the tallest structure remaining in the city.  At
-one time this could have been an inn of some sort, but now it is just
-a mess.  The back wall as been completely knocked down revealing an 
-entrance into another building through yet another collapsed wall.
-Between the two buildings are a few blast craters and boulders.  An old
-set of wooden steps leads up to a creaking second floor.
+   This seems to be the tallest structure remaining in the city.  At one time
+this could have been an inn of some sort, but now it is just a mess.  The back
+wall as been completely knocked down revealing an entrance into another
+building through yet another collapsed wall.  Between the two buildings are a
+few blast craters and boulders.  An old set of wooden steps leads up to a
+creaking second floor.  You're not sure that going up there would be safe, you
+might fall through the floor and &RDIE&n.    
 ~
-52 d 1
+52 8 1
 D1
 ~
 ~
@@ -820,7 +820,7 @@ find broken shelves and workbenches with various vials and pouches spilling
 contents all across the floor.  This was possibly the magic shop of the
 city.  The doorway to the east is blocked, making the only exit back west.
 ~
-52 d 1
+52 8 1
 D3
 ~
 ~
@@ -891,7 +891,7 @@ yields a dead body floating around in it, skin melted away from months
 of floating in there.  The west wall has collapsed revealing another
 collapsed house.
 ~
-52 d 1
+52 8 1
 D0
 ~
 ~
@@ -932,7 +932,7 @@ Except for the massive hole in the east wall, everything else looks
 intact, including the windows.  Great amounts of steam issue forth from
 the hole in the east wall.
 ~
-52 d 1
+52 8 1
 D1
 ~
 ~
@@ -949,7 +949,7 @@ On The Second Floor~
 The old rotted floorboards suddenly give way and you fall down, impaling
 yourself on jagged boards below.
 ~
-52 bd 1
+52 4106 1
 S
 #5246
 The North-West Watchtower~
@@ -981,11 +981,11 @@ S
 #5248
 The North-East Watchtower~
    You stand atop one of the city watchtowers.  The view is magnificent
-from here and you the desert sand stretches to the horizon.  No wonder
-this place stood for so long.  The ladder leading down seems rotted in
-some places!
+from here and the desert stretches to the horizon.  No wonder this place
+has stood for so long.  The ladder leading down into darkness is very
+rotted, and &rIT WOULD SURELY SPELL YOUR DEMISE!&n
 ~
-52 c 1
+52 4 1
 D5
 The city lies below... far, far below.
 ~
@@ -997,7 +997,7 @@ Under A Watchtower~
    As you descend the ladder, the rotted rungs break, sending you quickly
 to your demise far below on the city street.  Splat.
 ~
-52 bd 1
+52 4106 1
 S
 #5250
 The Temple Of Thalos~
@@ -1011,7 +1011,7 @@ strange tongue.
      Wind gusts through the four archways and howls and screams can be
 heard from all parts of the city.
 ~
-52 cdh 1
+52 12 1
 D0
 A side street leads to the northern half of the city.
 ~
@@ -1033,4 +1033,4 @@ The market place lies this way.
 ~
 0 -1 5205
 S
-$
+$~

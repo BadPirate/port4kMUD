@@ -76,7 +76,10 @@ struct shop_data {
 #define TRADE_NOCLERIC		16
 #define TRADE_NOTHIEF		32
 #define TRADE_NOWARRIOR		64
-
+#define TRADE_NOHUMAN		128
+#define TRADE_NODWARF		256
+#define TRADE_NOELF		512
+#define TRADE_NOHOBBIT		1024
 
 struct stack_data {
    int data[100];
@@ -95,7 +98,7 @@ struct stack_data {
 #define OPER_NOT		4
 #define MAX_OPER		4
 
-
+#ifdef __SHOP_C__
 const char *operator_str[] = {
 	"[({",
 	"])}",
@@ -103,7 +106,7 @@ const char *operator_str[] = {
 	"&*",
 	"^'"
 } ;
-
+#endif
 
 #define SHOP_NUM(i)		(shop_index[(i)].virtual)
 #define SHOP_KEEPER(i)		(shop_index[(i)].keeper)
@@ -131,9 +134,13 @@ const char *operator_str[] = {
 #define NOTRADE_CLERIC(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOCLERIC))
 #define NOTRADE_THIEF(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOTHIEF))
 #define NOTRADE_WARRIOR(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOWARRIOR))
-
+#define NOTRADE_HUMAN(i)        (IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOHUMAN))
+#define NOTRADE_DWARF(i)        (IS_SET(SHOP_TRADE_WITH((i)), TRADE_NODWARF))
+#define NOTRADE_ELF(i)          (IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOELF))
+#define NOTRADE_HOBBIT(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOHOBBIT))
 
 /* Constant list for printing out who we sell to */
+#ifdef __SHOP_C__
 const char *trade_letters[] = {
 	"Good",			/* First, the alignment based ones */
 	"Evil",
@@ -142,8 +149,13 @@ const char *trade_letters[] = {
 	"Cleric",
 	"Thief",
 	"Warrior",
+        "Human",                /* And finally the race based ones */
+        "Dwarf",
+        "Elf",
+        "Hobbit",
 	"\n"
 } ;
+#endif
 
 
 #define	WILL_START_FIGHT	1
@@ -152,11 +164,13 @@ const char *trade_letters[] = {
 #define SHOP_KILL_CHARS(i)	(IS_SET(SHOP_BITVECTOR(i), WILL_START_FIGHT))
 #define SHOP_USES_BANK(i)	(IS_SET(SHOP_BITVECTOR(i), WILL_BANK_MONEY))
 
+#ifdef __SHOP_C__
 char *shop_bits[] = {
 	"WILL_FIGHT",
 	"USES_BANK",
 	"\n"
 } ;
+#endif
 
 #define MIN_OUTSIDE_BANK	5000
 #define MAX_OUTSIDE_BANK	15000
@@ -168,6 +182,7 @@ char *shop_bits[] = {
 #define MSG_NO_SEE_CHAR		"I don't trade with someone I can't see!"
 #define MSG_NO_SELL_ALIGN	"Get out of here before I call the guards!"
 #define MSG_NO_SELL_CLASS	"We don't serve your kind here!"
+#define MSG_NO_SELL_RACE	"Get out of here, we don't serve your kind!"
 #define MSG_NO_USED_WANDSTAFF	"I don't buy used up wands or staves!"
 #define MSG_CANT_KILL_KEEPER	"Get out of here before I call the guards!"
 

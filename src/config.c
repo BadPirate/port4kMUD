@@ -44,6 +44,15 @@
 
 /* GAME PLAY OPTIONS */
 
+/* Level of mortal/immortal play is an attempt at keeping honest men honest
+ * based on the level of play, you can choose how much allowances go in
+ * = 0 - No restrictions, regular play
+ * = 1 - Whenever a mort and an immort are on from same IP it logs
+ * = 2 - Disallows morts and immorts to be on at same time
+ */
+
+int IMMORTPLAY = 1;
+
 /*
  * pk_allowed sets the tone of the entire game.  If pk_allowed is set to
  * NO, then players will not be allowed to kill, summon, charm, or sleep
@@ -52,6 +61,11 @@
  * PK Mud, just set pk_allowed to YES - and anything goes.
  */
 int pk_allowed = NO;
+int summon_allowed = NO;
+int charm_allowed = YES;
+int sleep_allowed = YES;
+int roomaffect_allowed = NO;
+int cheese_allowed = YES;
 
 /* is playerthieving allowed? */
 int pt_allowed = NO;
@@ -60,7 +74,7 @@ int pt_allowed = NO;
 int level_can_shout = 1;
 
 /* number of movement points it costs to holler */
-int holler_move_cost = 20;
+int holler_move_cost = 5;
 
 /* exp change limits */
 int max_exp_gain = 100000;	/* max gainable per kill */
@@ -69,14 +83,15 @@ int max_exp_loss = 500000;	/* max losable per death */
 /* number of tics (usually 75 seconds) before PC/NPC corpses decompose */
 int max_npc_corpse_time = 5;
 int max_pc_corpse_time = 10;
+int max_portal_time = 8;
 
 /* should items in death traps automatically be junked? */
-int dts_are_dumps = YES;
+int dts_are_dumps = NO;
 
 /* "okay" etc. */
-char *OK = "Okay.\r\n";
-char *NOPERSON = "No-one by that name here.\r\n";
-char *NOEFFECT = "Nothing seems to happen.\r\n";
+char *OK = "Sure.\r\n";
+char *NOPERSON = "I would love to, but.. They aren't around.\r\n";
+char *NOEFFECT = "You hear the sound of distant laughter.\r\n";
 
 /****************************************************************************/
 /****************************************************************************/
@@ -126,20 +141,10 @@ int rent_file_timeout = 30;
 sh_int mortal_start_room = 3001;
 
 /* virtual number of room that immorts should enter at by default */
-sh_int immort_start_room = 1204;
+sh_int immort_start_room = 1200;
 
 /* virtual number of room that frozen players should enter at */
-sh_int frozen_start_room = 1202;
-
-/*
- * virtual numbers of donation rooms.  note: you must change code in
- * do_drop of act.item.c if you change the number of non-NOWHERE
- * donation rooms.
- */
-sh_int donation_room_1 = 3063;
-sh_int donation_room_2 = NOWHERE;	/* unused - room for expansion */
-sh_int donation_room_3 = NOWHERE;	/* unused - room for expansion */
-
+sh_int frozen_start_room = 1206;
 
 /****************************************************************************/
 /****************************************************************************/
@@ -159,7 +164,7 @@ int DFLT_PORT = 4000;
 char *DFLT_DIR = "lib";
 
 /* maximum number of players allowed before game starts to turn people away */
-int MAX_PLAYERS = 300;
+int MAX_PLAYERS = 10000;
 
 /* maximum size of bug, typo and idea files in bytes (to prevent bombing) */
 int max_filesize = 50000;
@@ -188,43 +193,81 @@ int nameserver_is_slow = NO;
 
 char *MENU =
 "\r\n"
-"Welcome to CircleMUD!\r\n"
-"0) Exit from CircleMUD.\r\n"
-"1) Enter the game.\r\n"
-"2) Enter description.\r\n"
-"3) Read the background story.\r\n"
-"4) Change password.\r\n"
-"5) Delete this character.\r\n"
+"**************************************************\r\n"
+" *  WELCOME TO DAGGERFALL.CIRCLEMUD.NET 4000      *\r\n"
+"  *  YOUR PRESENCE IS APPRECIATED                  *\r\n"
+"   *  THANK YOU FOR SPONSERING DAGGERFALLS RETURN   *\r\n"
+"    **************************************************\r\n"
+"     *  MENU  *****************************************\r\n"
+"      **************************************************\r\n"
+"       *  0.  LEAVE THE GAME                            *\r\n"
+"        *  1.  ENTER DAGGERFALL                          *\r\n"
+"         *  2.                                            *\r\n"
+"          *  3.  READ THE HISTORY OF DAGGERFALL            *\r\n"
+"           *  4.  CHANGE YOUR CHARACTERS PASSWORD           *\r\n"
+"            *  5.  DELETE YOUR CHARACTER, *COMPLETELY*       *\r\n"
+"             **************************************************\r\n"
 "\r\n"
-"   Make your choice: ";
-
+"Your Choice? ";
 
 
 char *GREETINGS =
 
 "\r\n\r\n"
-"                              Your MUD Name Here\r\n"
-"\r\n"
-"                            Based on CircleMUD 3.0,\r\n"
-"                            Created by Jeremy Elson\r\n"
-"\r\n"
-"                      A derivative of DikuMUD (GAMMA 0.0)\r\n"
-"                                  Created by\r\n"
-"                     Hans Henrik Staerfeldt, Katja Nyboe,\r\n"
-"               Tom Madsen, Michael Seifert, and Sebastian Hammer\r\n"
-"\r\n\r\n"
-"By what name do you wish to be known? ";
-
+"     #########   *****    *   ***** ***** ***** ****  *****   *   *     *\r\n"
+"      #######    *    *  * *  *     *     *     *   * *      * *  *     *\r\n"
+"      #######    *    * ***** * *** * *** ****  ****  ****  ***** *     *\r\n"
+"      #######    *    * *   * *   * *   * *     *   * *     *   * *     *\r\n"
+"      #######    *****  *   * ***** ***** ****  *   * *     *   * ***** *****\r\n"
+"      #######\r\n"
+"      #######     Based on Circlemud beta patch level 11\r\n"
+"  |-------------| With special thanks to Jeremy Elson for the code and\r\n"
+"      |     |     Address -- YOU ROCK JEREMY!\r\n"
+"      |  |  | \r\n"
+"      |  |  |     Written by Kevin Lohman\r\n"
+"      |  |  |     Head Imp-     Jaxom-     Kevin Lohman\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      |  |  |\r\n"
+"      \\     /\r\n"
+"       \\   /\r\n"
+"        \\ /\r\n"
+"         V\r\n"
+"Character Login: ";
 
 char *WELC_MESSG =
 "\r\n"
-"Welcome to the land of CircleMUD!  May your visit here be... Interesting."
+"Daggerfall, Where the men are strong, the women are beautiful,\r\n"
+"and the children are demons."
 "\r\n\r\n";
 
 char *START_MESSG =
-"Welcome.  This is your new CircleMUD character!  You can now earn gold,\r\n"
-"gain experience, find weapons and equipment, and much more -- while\r\n"
-"meeting people from around the world!\r\n";
+"     ___      _      ____    ____  _____  ___  _____   _ \r\n"
+"    |   \\    / \\    /    \\  /    \\ |     |   \\ |      / \\   |     | \r\n"
+"    |    \\  /   \\  |       |       |__   |   | |__   /   \\  |     | \r\n"
+"    |    | /_____\\ |    __ |    __ |     |___/ |    /_____\\ |     | \r\n"
+"    |    / |     | |     | |     | |     |  \\  |    |     | |     | \r\n"
+"    |___/  |     |  \\___/|  \\___/| |____ |   \\ |    |     | |____ |____ \r\n"
+"                                    _ \r\n"
+"                                   /_\\ \r\n"
+"                                  /,V,\\ \r\n"
+"                                  \\ _ / \r\n"
+"                                  /\\_/\\ \r\n"
+"                               __/_   _\\__ \r\n"
+"                              /\\ \\ \\_/ / /\\ \r\n"
+"                             / /\\ \\___/ /\\ \\ \r\n"
+"                            / /  \\_____/  \\ \\ \r\n"
+"                            \\ \\  |_____|  / / \r\n"
+"                         ____\\_\\_|_____|_/_/___ \r\n"
+"                         |                    | \r\n"
+"                         | Welcome to ...     | \r\n"
+"                         |                    | \r\n"
+"                         |   ... Daggerfall   | \r\n"
+"                         |____________________| \r\n";
 
 /****************************************************************************/
 /****************************************************************************/
@@ -234,7 +277,7 @@ char *START_MESSG =
 
 /* Should the game automatically create a new wizlist/immlist every time
    someone immorts, or is promoted to a higher (or lower) god level? */
-int use_autowiz = YES;
+int use_autowiz = NO;
 
 /* If yes, what is the lowest level which should be on the wizlist?  (All
    immort levels below the level you specify will go on the immlist instead.) */

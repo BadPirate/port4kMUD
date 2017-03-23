@@ -46,8 +46,8 @@
 
 int	scan_file(void);
 int	has_mail(long recipient);
-void	store_mail(long to, long from, char *message_pointer);
-char	*read_delete(long recipient);
+void	store_mail(long to, long from, sh_int vnum, char *message_pointer);
+char	*read_delete(long recipient, sh_int *obj_vnum);
 
 
 #define HEADER_BLOCK  -1
@@ -64,6 +64,7 @@ struct header_data_type {
    long	next_block;		/* if header block, link to next block	*/
    long from;			/* idnum of the mail's sender		*/
    long to;			/* idnum of mail's recipient		*/
+   sh_int vnum;			// vnum of obj being mailed
    time_t mail_time;		/* when was the letter mailed?		*/
 };
 

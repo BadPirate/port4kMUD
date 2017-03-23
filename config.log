@@ -1,0 +1,1322 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:540: checking for less
+configure:573: checking for gcc
+configure:603: checking for cc
+configure:686: checking whether the C compiler (cc  ) works
+configure:702: cc -o conftest    conftest.c  1>&5
+configure:728: checking whether the C compiler (cc  ) is a cross-compiler
+configure:733: checking whether we are using GNU C
+configure:742: cc -E conftest.c
+configure:761: checking whether cc accepts -g
+configure:796: checking whether cc -Wall also needs -Wno-char-subscripts
+configure:815: cc -c -g -O2 -Wall -Werror  conftest.c 1>&5
+configure:832: checking whether cc accepts -Wno-char-subscripts
+configure:847: cc -c -g -O2 -Wno-char-subscripts  conftest.c 1>&5
+configure:880: checking for gethostbyaddr
+configure:908: cc -o conftest -g -O2   conftest.c  1>&5
+configure:969: checking for socket
+configure:997: cc -o conftest -g -O2   conftest.c  1>&5
+configure:1058: checking for malloc
+configure:1086: cc -o conftest -g -O2   conftest.c  1>&5
+configure:1154: checking for crypt
+configure:1182: cc -o conftest -g -O2   conftest.c  1>&5
+configure:1250: checking how to run the C preprocessor
+configure:1271: cc -E  conftest.c >/dev/null 2>conftest.out
+configure:1267: undefined type, found `Syntax'
+configure:1267: illegal external declaration, missing `;' after `Error'
+cpp-precomp: warning: errors during smart preprocessing, retrying in basic mode
+configure: failed program was:
+#line 1265 "configure"
+#include "confdefs.h"
+#include <assert.h>
+Syntax Error
+configure:1288: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1330: checking for ANSI C header files
+configure:1343: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1410: cc -o conftest -g -O2   conftest.c  1>&5
+configure:1434: checking for sys/wait.h that is POSIX.1 compatible
+configure:1455: cc -c -g -O2  conftest.c 1>&5
+configure:1479: checking for fcntl.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1479: checking for sys/fcntl.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1479: checking for errno.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1479: checking for net/errno.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1485: net/errno.h: No such file or directory
+configure: failed program was:
+#line 1484 "configure"
+#include "confdefs.h"
+#include <net/errno.h>
+configure:1479: checking for string.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1479: checking for strings.h
+configure:1489: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1519: checking for limits.h
+configure:1529: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1519: checking for sys/time.h
+configure:1529: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1519: checking for sys/select.h
+configure:1529: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1519: checking for sys/types.h
+configure:1529: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1519: checking for unistd.h
+configure:1529: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1559: checking for memory.h
+configure:1569: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1559: checking for crypt.h
+configure:1569: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1565: crypt.h: No such file or directory
+configure: failed program was:
+#line 1564 "configure"
+#include "confdefs.h"
+#include <crypt.h>
+configure:1559: checking for assert.h
+configure:1569: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1559: checking for arpa/telnet.h
+configure:1569: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1559: checking for arpa/inet.h
+configure:1569: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1599: checking for sys/stat.h
+configure:1609: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1599: checking for sys/socket.h
+configure:1609: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1599: checking for sys/resource.h
+configure:1609: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1599: checking for netinet/in.h
+configure:1609: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1599: checking for netdb.h
+configure:1609: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1639: checking for signal.h
+configure:1649: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1639: checking for sys/uio.h
+configure:1649: cc -E -traditional-cpp  conftest.c >/dev/null 2>conftest.out
+configure:1678: checking whether crypt needs over 10 characters
+configure:1717: cc -o conftest -g -O2   conftest.c  1>&5
+configure: failed program was:
+#line 1694 "configure"
+#include "confdefs.h"
+
+#define _XOPEN_SOURCE
+#include <string.h>
+#include <unistd.h>
+
+
+int main(void)
+{
+  char pwd[11], pwd2[11];
+
+  strncpy(pwd, (char *)crypt("FooBar", "BazQux"), 10);
+  pwd[10] = '\0';
+  strncpy(pwd2, (char *)crypt("xyzzy", "BazQux"), 10);
+  pwd2[10] = '\0';
+  if (strcmp(pwd, pwd2) == 0)
+    exit(0);
+  exit(1);
+}
+
+
+configure:1744: checking for working const
+configure:1798: cc -c -g -O2  conftest.c 1>&5
+configure:1819: checking for pid_t
+configure:1852: checking for size_t
+configure:1885: checking for ssize_t
+configure:1918: checking whether time.h and sys/time.h may both be included
+configure:1932: cc -c -g -O2  conftest.c 1>&5
+configure:1968: checking for struct in_addr
+configure:1980: cc -c -g -O2  conftest.c 1>&5
+configure:2007: checking for typedef socklen_t
+configure:2019: cc -c -g -O2  conftest.c 1>&5
+/usr/include/sys/socket.h:176: undefined type, found `u_char'
+/usr/include/sys/socket.h:177: undefined type, found `u_char'
+/usr/include/sys/socket.h:187: undefined type, found `u_short'
+/usr/include/sys/socket.h:188: undefined type, found `u_short'
+/usr/include/sys/socket.h:202: undefined type, found `u_char'
+/usr/include/sys/socket.h:203: undefined type, found `u_char'
+/usr/include/sys/socket.h:205: undefined type, found `int64_t'
+/usr/include/sys/socket.h:328: undefined type, found `caddr_t'
+/usr/include/sys/socket.h:329: undefined type, found `u_int'
+/usr/include/sys/socket.h:331: undefined type, found `u_int'
+/usr/include/sys/socket.h:332: undefined type, found `caddr_t'
+/usr/include/sys/socket.h:333: undefined type, found `u_int'
+/usr/include/sys/socket.h:360: undefined type, found `u_int'
+/usr/include/sys/socket.h:396: undefined type, found `u_short'
+/usr/include/sys/socket.h:404: undefined type, found `caddr_t'
+/usr/include/sys/socket.h:408: undefined type, found `caddr_t'
+/usr/include/sys/socket.h:443: undefined type, found `ssize_t'
+/usr/include/sys/socket.h:443: syntax error, found `size_t'
+/usr/include/sys/socket.h:443: illegal function definition, found `)'
+/usr/include/sys/socket.h:444: undefined type, found `ssize_t'
+/usr/include/sys/socket.h:444: syntax error, found `size_t'
+/usr/include/sys/socket.h:444: illegal function definition, found `)'
+/usr/include/sys/socket.h:445: undefined type, found `ssize_t'
+/usr/include/sys/socket.h:446: undefined type, found `ssize_t'
+/usr/include/sys/socket.h:446: syntax error, found `size_t'
+/usr/include/sys/socket.h:446: illegal function definition, found `)'
+/usr/include/sys/socket.h:447: undefined type, found `ssize_t'
+/usr/include/sys/socket.h:447: syntax error, found `size_t'
+/usr/include/sys/socket.h:447: illegal function definition, found `)'
+/usr/include/sys/socket.h:449: undefined type, found `ssize_t'
+configure:2015: undefined type, found `socklen_t'
+cpp-precomp: warning: errors during smart preprocessing, retrying in basic mode
+In file included from configure:2013:
+/usr/include/sys/socket.h:176: parse error before `u_char'
+/usr/include/sys/socket.h:176: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:177: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:179: parse error before `}'
+/usr/include/sys/socket.h:187: parse error before `u_short'
+/usr/include/sys/socket.h:187: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:188: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:202: parse error before `u_char'
+/usr/include/sys/socket.h:202: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:203: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:204: `int64_t' undeclared here (not in a function)
+/usr/include/sys/socket.h:204: `u_char' undeclared here (not in a function)
+/usr/include/sys/socket.h:204: size of array `_ss_pad1' is negative
+/usr/include/sys/socket.h:205: parse error before `_ss_align'
+/usr/include/sys/socket.h:205: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:206: `u_char' undeclared here (not in a function)
+/usr/include/sys/socket.h:206: `int64_t' undeclared here (not in a function)
+/usr/include/sys/socket.h:206: `u_char' undeclared here (not in a function)
+/usr/include/sys/socket.h:206: `int64_t' undeclared here (not in a function)
+/usr/include/sys/socket.h:207: parse error before `}'
+/usr/include/sys/socket.h:328: parse error before `caddr_t'
+/usr/include/sys/socket.h:328: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:329: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:331: parse error before `msg_iovlen'
+/usr/include/sys/socket.h:331: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:332: parse error before `msg_control'
+/usr/include/sys/socket.h:332: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:333: parse error before `msg_controllen'
+/usr/include/sys/socket.h:333: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:335: parse error before `}'
+/usr/include/sys/socket.h:360: parse error before `u_int'
+/usr/include/sys/socket.h:360: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:364: parse error before `}'
+/usr/include/sys/socket.h:396: parse error before `u_short'
+/usr/include/sys/socket.h:396: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:398: parse error before `}'
+/usr/include/sys/socket.h:404: parse error before `caddr_t'
+/usr/include/sys/socket.h:404: warning: no semicolon at end of struct or union
+/usr/include/sys/socket.h:408: parse error before `msg_accrights'
+/usr/include/sys/socket.h:408: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:410: parse error before `}'
+In file included from configure:2013:
+/usr/include/sys/socket.h:443: parse error before `recv'
+/usr/include/sys/socket.h:443: parse error before `size_t'
+/usr/include/sys/socket.h:443: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:444: parse error before `recvfrom'
+/usr/include/sys/socket.h:444: parse error before `size_t'
+/usr/include/sys/socket.h:444: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:445: parse error before `recvmsg'
+/usr/include/sys/socket.h:445: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:446: parse error before `send'
+/usr/include/sys/socket.h:446: parse error before `size_t'
+/usr/include/sys/socket.h:446: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:447: parse error before `sendto'
+/usr/include/sys/socket.h:447: parse error before `size_t'
+/usr/include/sys/socket.h:448: warning: data definition has no type or storage class
+/usr/include/sys/socket.h:449: parse error before `sendmsg'
+/usr/include/sys/socket.h:449: warning: data definition has no type or storage class
+configure: In function `main':
+configure:2015: `socklen_t' undeclared (first use in this function)
+configure:2015: (Each undeclared identifier is reported only once
+configure:2015: for each function it appears in.)
+configure:2015: parse error before `sl'
+configure:2015: `sl' undeclared (first use in this function)
+configure: failed program was:
+#line 2012 "configure"
+#include "confdefs.h"
+#include <sys/socket.h>
+int main() {
+socklen_t sl; sl=0;
+; return 0; }
+configure:2043: checking return type of signal handlers
+configure:2065: cc -c -g -O2  conftest.c 1>&5
+configure:2089: checking for inet_addr
+configure:2117: cc -o conftest -g -O2   conftest.c   1>&5
+configure:2089: checking for inet_aton
+configure:2117: cc -o conftest -g -O2   conftest.c   1>&5
+configure:2149: checking if accept is prototyped
+configure:2171: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2160:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 2155 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef accept
+  error - already defined!
+#endif
+void accept(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2201: checking if atoi is prototyped
+configure:2223: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2212:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2216: conflicting types for `atoi'
+src/sysdep.h:217: previous declaration of `atoi'
+configure: failed program was:
+#line 2207 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef atoi
+  error - already defined!
+#endif
+void atoi(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2253: checking if atol is prototyped
+configure:2275: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2264:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2268: conflicting types for `atol'
+src/sysdep.h:221: previous declaration of `atol'
+configure: failed program was:
+#line 2259 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef atol
+  error - already defined!
+#endif
+void atol(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2305: checking if bind is prototyped
+configure:2327: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2316:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 2311 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef bind
+  error - already defined!
+#endif
+void bind(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2357: checking if bzero is prototyped
+configure:2379: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2368:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2372: conflicting types for `bzero'
+src/sysdep.h:225: previous declaration of `bzero'
+configure: failed program was:
+#line 2363 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef bzero
+  error - already defined!
+#endif
+void bzero(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2409: checking if chdir is prototyped
+configure:2431: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2420:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2424: conflicting types for `chdir'
+/usr/include/unistd.h:89: previous declaration of `chdir'
+configure: failed program was:
+#line 2415 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef chdir
+  error - already defined!
+#endif
+void chdir(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2461: checking if close is prototyped
+configure:2483: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2472:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2476: conflicting types for `close'
+/usr/include/unistd.h:91: previous declaration of `close'
+configure: failed program was:
+#line 2467 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef close
+  error - already defined!
+#endif
+void close(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2513: checking if crypt is prototyped
+configure:2535: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2524:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2528: conflicting types for `crypt'
+src/sysdep.h:229: previous declaration of `crypt'
+configure: failed program was:
+#line 2519 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef crypt
+  error - already defined!
+#endif
+void crypt(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2565: checking if fclose is prototyped
+configure:2587: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2576:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2580: conflicting types for `fclose'
+src/sysdep.h:233: previous declaration of `fclose'
+configure: failed program was:
+#line 2571 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fclose
+  error - already defined!
+#endif
+void fclose(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2617: checking if fcntl is prototyped
+configure:2639: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2628:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2632: conflicting types for `fcntl'
+src/sysdep.h:237: previous declaration of `fcntl'
+configure: failed program was:
+#line 2623 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fcntl
+  error - already defined!
+#endif
+void fcntl(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2669: checking if fflush is prototyped
+configure:2691: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2680:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2684: conflicting types for `fflush'
+src/sysdep.h:241: previous declaration of `fflush'
+configure: failed program was:
+#line 2675 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fflush
+  error - already defined!
+#endif
+void fflush(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2721: checking if fprintf is prototyped
+configure:2743: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2732:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2736: conflicting types for `fprintf'
+src/sysdep.h:245: previous declaration of `fprintf'
+configure: failed program was:
+#line 2727 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fprintf
+  error - already defined!
+#endif
+void fprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2773: checking if fputc is prototyped
+configure:2795: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2784:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2788: conflicting types for `fputc'
+/usr/include/stdio.h:251: previous declaration of `fputc'
+configure: failed program was:
+#line 2779 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fputc
+  error - already defined!
+#endif
+void fputc(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2825: checking if fputs is prototyped
+configure:2847: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2836:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2840: conflicting types for `fputs'
+/usr/include/stdio.h:252: previous declaration of `fputs'
+configure: failed program was:
+#line 2831 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fputs
+  error - already defined!
+#endif
+void fputs(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2877: checking if fread is prototyped
+configure:2899: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2888:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2892: conflicting types for `fread'
+src/sysdep.h:249: previous declaration of `fread'
+configure: failed program was:
+#line 2883 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fread
+  error - already defined!
+#endif
+void fread(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2929: checking if fscanf is prototyped
+configure:2951: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2940:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2944: conflicting types for `fscanf'
+src/sysdep.h:253: previous declaration of `fscanf'
+configure: failed program was:
+#line 2935 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fscanf
+  error - already defined!
+#endif
+void fscanf(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:2981: checking if fseek is prototyped
+configure:3003: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:2992:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:2996: conflicting types for `fseek'
+src/sysdep.h:257: previous declaration of `fseek'
+configure: failed program was:
+#line 2987 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fseek
+  error - already defined!
+#endif
+void fseek(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3033: checking if fwrite is prototyped
+configure:3055: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3044:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3048: conflicting types for `fwrite'
+src/sysdep.h:261: previous declaration of `fwrite'
+configure: failed program was:
+#line 3039 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef fwrite
+  error - already defined!
+#endif
+void fwrite(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3085: checking if getpeername is prototyped
+configure:3107: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3096:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3091 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef getpeername
+  error - already defined!
+#endif
+void getpeername(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3137: checking if getpid is prototyped
+configure:3159: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3148:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3152: conflicting types for `getpid'
+src/sysdep.h:265: previous declaration of `getpid'
+configure: failed program was:
+#line 3143 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef getpid
+  error - already defined!
+#endif
+void getpid(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3189: checking if getrlimit is prototyped
+configure:3211: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3200:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3195 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef getrlimit
+  error - already defined!
+#endif
+void getrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3241: checking if getsockname is prototyped
+configure:3263: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3252:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3247 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef getsockname
+  error - already defined!
+#endif
+void getsockname(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3293: checking if gettimeofday is prototyped
+configure:3315: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3304:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3308: conflicting types for `gettimeofday'
+src/sysdep.h:269: previous declaration of `gettimeofday'
+configure: failed program was:
+#line 3299 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef gettimeofday
+  error - already defined!
+#endif
+void gettimeofday(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3345: checking if htonl is prototyped
+configure:3367: cc -c -g -O2  conftest.c 1>&5
+configure:3358: illegal external declaration, missing `;' after `error'
+configure:3358: illegal method definition, found `defined'
+configure:3360: too many args (8) to macro 'htonl' (1 expected)
+configure:3360: illegal method definition, missing `{' after `htonl'
+cpp-precomp: warning: errors during smart preprocessing, retrying in basic mode
+configure: failed program was:
+#line 3351 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef htonl
+  error - already defined!
+#endif
+void htonl(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3397: checking if htons is prototyped
+configure:3419: cc -c -g -O2  conftest.c 1>&5
+configure:3410: illegal external declaration, missing `;' after `error'
+configure:3410: illegal method definition, found `defined'
+configure:3412: too many args (8) to macro 'htons' (1 expected)
+configure:3412: illegal method definition, missing `{' after `htons'
+cpp-precomp: warning: errors during smart preprocessing, retrying in basic mode
+configure: failed program was:
+#line 3403 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef htons
+  error - already defined!
+#endif
+void htons(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3449: checking if inet_addr is prototyped
+configure:3471: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3460:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3455 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef inet_addr
+  error - already defined!
+#endif
+void inet_addr(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3501: checking if inet_aton is prototyped
+configure:3523: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3512:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3507 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef inet_aton
+  error - already defined!
+#endif
+void inet_aton(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3553: checking if inet_ntoa is prototyped
+configure:3575: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3564:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3559 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef inet_ntoa
+  error - already defined!
+#endif
+void inet_ntoa(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3605: checking if listen is prototyped
+configure:3627: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3616:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 3611 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef listen
+  error - already defined!
+#endif
+void listen(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3657: checking if ntohl is prototyped
+configure:3679: cc -c -g -O2  conftest.c 1>&5
+configure:3670: illegal external declaration, missing `;' after `error'
+configure:3670: illegal method definition, found `defined'
+configure:3672: too many args (8) to macro 'ntohl' (1 expected)
+configure:3672: illegal method definition, missing `{' after `ntohl'
+cpp-precomp: warning: errors during smart preprocessing, retrying in basic mode
+configure: failed program was:
+#line 3663 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef ntohl
+  error - already defined!
+#endif
+void ntohl(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3709: checking if perror is prototyped
+configure:3731: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3720:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3724: conflicting types for `perror'
+src/sysdep.h:273: previous declaration of `perror'
+configure: failed program was:
+#line 3715 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef perror
+  error - already defined!
+#endif
+void perror(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3761: checking if printf is prototyped
+configure:3783: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3772:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3776: conflicting types for `printf'
+/usr/include/stdio.h:268: previous declaration of `printf'
+configure: failed program was:
+#line 3767 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef printf
+  error - already defined!
+#endif
+void printf(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3813: checking if qsort is prototyped
+configure:3835: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3824:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3828: conflicting types for `qsort'
+src/sysdep.h:277: previous declaration of `qsort'
+configure: failed program was:
+#line 3819 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef qsort
+  error - already defined!
+#endif
+void qsort(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3865: checking if read is prototyped
+configure:3887: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3876:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3880: conflicting types for `read'
+/usr/include/unistd.h:119: previous declaration of `read'
+configure: failed program was:
+#line 3871 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef read
+  error - already defined!
+#endif
+void read(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3917: checking if remove is prototyped
+configure:3939: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3928:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3932: conflicting types for `remove'
+/usr/include/stdio.h:272: previous declaration of `remove'
+configure: failed program was:
+#line 3923 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef remove
+  error - already defined!
+#endif
+void remove(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:3969: checking if rewind is prototyped
+configure:3991: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:3980:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:3984: conflicting types for `rewind'
+src/sysdep.h:281: previous declaration of `rewind'
+configure: failed program was:
+#line 3975 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef rewind
+  error - already defined!
+#endif
+void rewind(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4021: checking if select is prototyped
+configure:4043: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4032:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4036: conflicting types for `select'
+/usr/include/unistd.h:189: previous declaration of `select'
+configure: failed program was:
+#line 4027 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef select
+  error - already defined!
+#endif
+void select(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4073: checking if setitimer is prototyped
+configure:4095: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4084:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4088: conflicting types for `setitimer'
+/usr/include/sys/time.h:171: previous declaration of `setitimer'
+configure: failed program was:
+#line 4079 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef setitimer
+  error - already defined!
+#endif
+void setitimer(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4125: checking if setrlimit is prototyped
+configure:4147: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4136:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 4131 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef setrlimit
+  error - already defined!
+#endif
+void setrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4177: checking if setsockopt is prototyped
+configure:4199: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4188:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 4183 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef setsockopt
+  error - already defined!
+#endif
+void setsockopt(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4229: checking if socket is prototyped
+configure:4251: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4240:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure: failed program was:
+#line 4235 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef socket
+  error - already defined!
+#endif
+void socket(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4281: checking if sprintf is prototyped
+configure:4303: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4292:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4296: conflicting types for `sprintf'
+/usr/include/stdio.h:278: previous declaration of `sprintf'
+configure: failed program was:
+#line 4287 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef sprintf
+  error - already defined!
+#endif
+void sprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4333: checking if sscanf is prototyped
+configure:4355: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4344:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4348: conflicting types for `sscanf'
+src/sysdep.h:285: previous declaration of `sscanf'
+configure: failed program was:
+#line 4339 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef sscanf
+  error - already defined!
+#endif
+void sscanf(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4385: checking if strerror is prototyped
+configure:4407: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4396:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4400: conflicting types for `strerror'
+/usr/include/string.h:84: previous declaration of `strerror'
+configure: failed program was:
+#line 4391 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef strerror
+  error - already defined!
+#endif
+void strerror(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4437: checking if system is prototyped
+configure:4459: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4448:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4452: conflicting types for `system'
+src/sysdep.h:289: previous declaration of `system'
+configure: failed program was:
+#line 4443 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef system
+  error - already defined!
+#endif
+void system(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4489: checking if time is prototyped
+configure:4511: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4500:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4504: conflicting types for `time'
+src/sysdep.h:293: previous declaration of `time'
+configure: failed program was:
+#line 4495 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef time
+  error - already defined!
+#endif
+void time(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4541: checking if unlink is prototyped
+configure:4563: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4552:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4556: conflicting types for `unlink'
+src/sysdep.h:297: previous declaration of `unlink'
+configure: failed program was:
+#line 4547 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef unlink
+  error - already defined!
+#endif
+void unlink(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
+configure:4593: checking if write is prototyped
+configure:4615: cc -c -g -O2  conftest.c 1>&5
+In file included from configure:4604:
+src/sysdep.h:200: conflicting types for `random'
+/usr/include/stdlib.h:174: previous declaration of `random'
+configure:4608: conflicting types for `write'
+/usr/include/unistd.h:131: previous declaration of `write'
+configure: failed program was:
+#line 4599 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef write
+  error - already defined!
+#endif
+void write(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }

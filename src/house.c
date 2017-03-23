@@ -216,6 +216,36 @@ int find_house(int vnum)
   return -1;
 }
 
+void House_fixup(void)
+{
+  int h,g,x;
+  int real_guests;
+  long guest_list[MAX_GUESTS];
+
+  for(h=0;h<num_of_houses;++h) {
+    /* Check roomnumber.  If doesn't exist, we should delete this house */
+
+    /* Check Atrium.  If this doesn't exist, we should delete this house */
+
+    /* Check Exits.  Delete house if bad too */
+
+    /* make sure we dont go into really long loops */
+    if (house_control[h].num_of_guests > 400) 
+      house_control[h].num_of_guests=400;
+    /* fix guest list */
+    real_guests=0;
+    for(g=0;g<house_control[h].num_of_guests;++g) {
+      /* need to check all guests and delete all the trash ones */
+      x=house_control[h].guests[g];
+      if (get_name_by_id(x) != NULL) {
+        guest_list[real_guests]=x;
+        ++real_guests;
+      }
+    }
+    house_control[h].num_of_guests=real_guests;
+    for(g=0;g<real_guests;++g) house_control[h].guests[g]=guest_list[g];
+  }
+}
 
 
 /* Save the house control information */
@@ -254,7 +284,7 @@ void House_boot(void)
     if (feof(fl))
       break;
 
-    if (get_name_by_id(temp_house.owner) == NULL)
+    if (get_name_by_id(temp_house.owner) == NULL && temp_house.owner != -1)
       continue;			/* owner no longer exists -- skip */
 
     if ((real_house = real_room(temp_house.vnum)) < 0)
@@ -284,6 +314,7 @@ void House_boot(void)
 }
 
 
+char *numstr(int n){static char foo[20];sprintf(foo,"[%d]",n);return(foo);}
 
 /* "House Control" functions */
 
@@ -291,9 +322,10 @@ char *HCONTROL_FORMAT =
 "Usage: hcontrol build <house vnum> <exit direction> <player name>\r\n"
 "       hcontrol destroy <house vnum>\r\n"
 "       hcontrol pay <house vnum>\r\n"
+"       hcontrol compact\r\n"
 "       hcontrol show\r\n";
 
-#define NAME(x) ((temp = get_name_by_id(x)) == NULL ? "<UNDEF>" : temp)
+#define NAME(x) ((temp = get_name_by_id(x)) == NULL ? numstr(x) : temp)
 
 void hcontrol_list_houses(struct char_data * ch)
 {
@@ -403,7 +435,12 @@ void hcontrol_build_house(struct char_data * ch, char *arg)
     send_to_char(HCONTROL_FORMAT, ch);
     return;
   }
-  if ((owner = get_id_by_name(arg1)) < 0) {
+  if(strcmp(arg1, "all") == 0)
+  {
+    send_to_char("House will be open to all.\r\n",ch);
+    owner = -1;
+  }
+  else if ((owner = get_id_by_name(arg1)) < 0) {
     sprintf(buf, "Unknown player '%s'.\r\n", arg1);
     send_to_char(buf, ch);
     return;
@@ -509,6 +546,8 @@ ACMD(do_hcontrol)
     hcontrol_pay_house(ch, arg2);
   else if (is_abbrev(arg1, "show"))
     hcontrol_list_houses(ch);
+  else if (is_abbrev(arg1, "compact"))
+    House_fixup();
   else
     send_to_char(HCONTROL_FORMAT, ch);
 }
@@ -519,14 +558,17 @@ ACMD(do_house)
 {
   int i, j, id;
   char *temp;
+  int gov;
 
   one_argument(argument, arg);
+
+  gov=(GET_LEVEL(ch)>=LVL_GOD); /* GOD Override */
 
   if (!IS_SET(ROOM_FLAGS(ch->in_room), ROOM_HOUSE))
     send_to_char("You must be in your house to set guests.\r\n", ch);
   else if ((i = find_house(world[ch->in_room].number)) < 0)
     send_to_char("Um.. this house seems to be screwed up.\r\n", ch);
-  else if (GET_IDNUM(ch) != house_control[i].owner)
+  else if (! ((GET_IDNUM(ch) == house_control[i].owner)||gov) )
     send_to_char("Only the primary owner can set guests.\r\n", ch);
   else if (!*arg) {
     send_to_char("Guests of your house:\r\n", ch);
@@ -549,6 +591,10 @@ ACMD(do_house)
 	send_to_char("Guest deleted.\r\n", ch);
 	return;
       }
+    if ((1+house_control[i].num_of_guests) >= MAX_GUESTS) {
+      send_to_char("Sorry, there are too many guests to your house.\r\n", ch);
+      return;
+    }
     j = house_control[i].num_of_guests++;
     house_control[i].guests[j] = id;
     House_save_control();
@@ -579,11 +625,13 @@ int House_can_enter(struct char_data * ch, sh_int house)
 {
   int i, j;
 
-  if (GET_LEVEL(ch) >= LVL_GRGOD || (i = find_house(house)) < 0)
+  if (GET_LEVEL(ch) >= LVL_IMMORT || (i = find_house(house)) < 0)
     return 1;
 
   switch (house_control[i].mode) {
   case HOUSE_PRIVATE:
+    if (house_control[i].owner == -1)
+      return 1;
     if (GET_IDNUM(ch) == house_control[i].owner)
       return 1;
     for (j = 0; j < house_control[i].num_of_guests; j++)

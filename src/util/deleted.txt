@@ -1,0 +1,335 @@
+Deleting: 
+   1. Covenant             Level  1 idle for  62 days
+   2. Aaren                Deleted flag set
+   3. Arrhae               Deleted flag set
+   4. Magus                Level  1 idle for  62 days
+   5. Mama                 Deleted flag set
+   6. Chris                Level  1 idle for  60 days
+   7. Vanyel               Deleted flag set
+   8. Kefka                Level  1 idle for  64 days
+   9. Ozzman               Deleted flag set
+  10. FYRE                 Deleted flag set
+  11. Pric                 Deleted flag set
+  12. Ender                Deleted flag set
+  13. Yuki                 Deleted flag set
+  14. Ricky                Deleted flag set
+  15. Spyder               Deleted flag set
+  16. Fool                 Deleted flag set
+  17. Slave                Level  1 idle for  58 days
+  18. Mortis               Deleted flag set
+  19. Chrono               Deleted flag set
+  20. Dack                 Deleted flag set
+  21. Slayne               Level  1 idle for  64 days
+  22. Cleaver              Deleted flag set
+  23. Rathgar              Deleted flag set
+  24. JesseJames           Deleted flag set
+  25. Richard              Level  1 idle for  64 days
+  26. Wil                  Level  1 idle for  63 days
+  27. Synex                Level  1 idle for  65 days
+  28. Chikin               Level  1 idle for  67 days
+  29. Kinisin              Level  1 idle for  66 days
+  30. Fire                 Level  1 idle for  66 days
+  31. Skylark              Level  1 idle for  34 days
+  32. Gherwig              Level  1 idle for  65 days
+  33. Alfarif              Level  1 idle for  64 days
+  34. Drexes               Level  1 idle for  63 days
+  35. Jake                 Level  1 idle for  63 days
+  36. Drearan              Level  1 idle for  62 days
+  37. Kabal                Level  1 idle for  32 days
+  38. Xwolfe               Level  1 idle for  62 days
+  39. Waldo                Level  1 idle for  62 days
+  40. Elizta               Level  1 idle for  62 days
+  41. Dolby                Level  1 idle for  61 days
+  42. Narg                 Level  1 idle for  60 days
+  43. Kurse                Level  1 idle for  60 days
+  44. Lovitare             Level  1 idle for  60 days
+  45. Kil                  Level  1 idle for  60 days
+  46. Shad                 Level  1 idle for  60 days
+  47. Jenifer              Level  1 idle for  60 days
+  48. Rza                  Level  1 idle for  59 days
+  49. Leov                 Level  1 idle for  59 days
+  50. Kyrel                Level  1 idle for  59 days
+  51. Mortimer             Deleted flag set
+  52. Avery                Level  1 idle for  58 days
+  53. Dygon                Level  1 idle for  58 days
+  54. Testing              Deleted flag set
+  55. Frohz                Deleted flag set
+  56. Rigor                Deleted flag set
+  57. Chronic              Level  1 idle for  57 days
+  58. Og                   Level  1 idle for  57 days
+  59. Methos               Level  1 idle for  57 days
+  60. Elmo                 Level  1 idle for  57 days
+  61. Navi                 Deleted flag set
+  62. Beldin               Level  1 idle for  57 days
+  63. Rutee                Deleted flag set
+  64. Xanthus              Level  1 idle for  57 days
+  65. Zelam                Deleted flag set
+  66. Iria                 Level  1 idle for  56 days
+  67. Jinxx                Deleted flag set
+  68. Diablo               Deleted flag set
+  69. Darkkin              Deleted flag set
+  70. Zuul                 Level  1 idle for  56 days
+  71. Dude                 Deleted flag set
+  72. Robert               Level  1 idle for  56 days
+  73. God                  Level  1 idle for  55 days
+  74. Lynne                Level  1 idle for  53 days
+  75. Manatarms            Deleted flag set
+  76. Adlskfja             Deleted flag set
+  77. Danny                Level  1 idle for  55 days
+  78. Kiklius              Level  1 idle for  55 days
+  79. Highland             Level  1 idle for  54 days
+  80. Culain               Never entered game
+  81. Dhaemiv              Level  1 idle for  54 days
+  82. Fade                 Level  1 idle for  54 days
+  83. Kriegssturm          Level  1 idle for  53 days
+  84. Drivi                Level  1 idle for  54 days
+  85. Turbo                Level  1 idle for  54 days
+  86. Lesath               Deleted flag set
+  87. Toad                 Level  1 idle for  53 days
+  88. Rainmaker            Level  1 idle for  52 days
+  89. Mikan                Deleted flag set
+  90. Delphi               Deleted flag set
+  91. Edmund               Level  1 idle for  52 days
+  92. HosesAss             Level  1 idle for  52 days
+  93. Dork                 Level  1 idle for  52 days
+  94. Guile                Level  1 idle for  49 days
+  95. Zevs                 Deleted flag set
+  96. Katie                Deleted flag set
+  97. Pantere              Never entered game
+  98. Snob                 Level  1 idle for  41 days
+  99. Aragonie             Level  1 idle for  48 days
+ 100. Ghob                 Level  1 idle for  47 days
+ 101. Skyfyre              Deleted flag set
+ 102. Death                Deleted flag set
+ 103. Fenix                Deleted flag set
+ 104. Huff                 Level  1 idle for  24 days
+ 105. Ripp                 Deleted flag set
+ 106. Golddust             Deleted flag set
+ 107. Manx                 Deleted flag set
+ 108. Powerknight          Level  1 idle for  45 days
+ 109. Justin               Level  1 idle for  39 days
+ 110. Camulos              Deleted flag set
+ 111. Archon               Deleted flag set
+ 112. Stimpy               Deleted flag set
+ 113. Ash                  Level  1 idle for  45 days
+ 114. Ristar               Level  1 idle for  44 days
+ 115. Cipher               Level  1 idle for  42 days
+ 116. Alvar                Level  1 idle for  44 days
+ 117. Nosmo                Level  1 idle for  44 days
+ 118. Yoda                 Level  1 idle for  44 days
+ 119. Daedric              Level  1 idle for  44 days
+ 120. Charr                Level  1 idle for  44 days
+ 121. Xar                  Level  1 idle for  43 days
+ 122. Talon                Deleted flag set
+ 123. Avigell              Never entered game
+ 124. MrLevel              Deleted flag set
+ 125. Emily                Deleted flag set
+ 126. Christine            Deleted flag set
+ 127. Theoden              Level  1 idle for  43 days
+ 128. Sissy                Deleted flag set
+ 129. Hellica              Level  1 idle for  43 days
+ 130. Exodus               Level  1 idle for  42 days
+ 131. Lanstari             Never entered game
+ 132. OBMalekit            Never entered game
+ 133. Superbeast           Level  1 idle for  41 days
+ 134. CoreLeader           Level  1 idle for  41 days
+ 135. Enix                 Deleted flag set
+ 136. Rand                 Level  1 idle for  41 days
+ 137. Whoever              Deleted flag set
+ 138. Sero                 Level  1 idle for  40 days
+ 139. Cayla                Deleted flag set
+ 140. Tim                  Deleted flag set
+ 141. Ahriman              Deleted flag set
+ 142. Asatoth              Deleted flag set
+ 143. Urza                 Level  1 idle for  40 days
+ 144. Zigzag               Level  1 idle for  39 days
+ 145. Sengir               Level  1 idle for  39 days
+ 146. Seifer               Deleted flag set
+ 147. Carnax               Deleted flag set
+ 148. Mandorallen          Level  1 idle for  39 days
+ 149. Khellendross         Level  1 idle for  39 days
+ 150. Mike                 Deleted flag set
+ 151. Thogar               Deleted flag set
+ 152. Sabre                Level  1 idle for  39 days
+ 153. Gouki                Deleted flag set
+ 154. Rain                 Level  1 idle for  39 days
+ 155. Raptor               Level  1 idle for  38 days
+ 156. Ashen                Level  1 idle for  38 days
+ 157. Volrath              Level  1 idle for  38 days
+ 158. MonicaLewinski       Deleted flag set
+ 159. Raistlin             Level  1 idle for  38 days
+ 160. Rt                   Deleted flag set
+ 161. Elembar              Level  1 idle for  38 days
+ 162. Derk                 Level  1 idle for  37 days
+ 163. Siva                 Level  1 idle for  33 days
+ 164. Gwahr                Deleted flag set
+ 165. Pogrom               Level  1 idle for  37 days
+ 166. Gariot               Level  1 idle for  37 days
+ 167. Jendo                Deleted flag set
+ 168. Merlin               Level  1 idle for  37 days
+ 169. Beowulf              Deleted flag set
+ 170. Drkahen              Level  1 idle for  36 days
+ 171. Tybor                Level  1 idle for  36 days
+ 172. Suji                 Deleted flag set
+ 173. Lakota               Level  1 idle for  36 days
+ 174. Darksav              Level  1 idle for  35 days
+ 175. Sarris               Level  1 idle for  35 days
+ 176. Spawn                Level  1 idle for  35 days
+ 177. Graggle              Level  1 idle for  35 days
+ 178. Harken               Level  1 idle for  35 days
+ 179. Rilian               Deleted flag set
+ 180. Cara                 Deleted flag set
+ 181. Kirlian              Level  1 idle for  34 days
+ 182. Ran                  Deleted flag set
+ 183. Kyronis              Level  1 idle for  34 days
+ 184. Piell                Deleted flag set
+ 185. Noi                  Level  1 idle for  34 days
+ 186. Pieklll              Deleted flag set
+ 187. Randark              Deleted flag set
+ 188. Ronin                Level  1 idle for  34 days
+ 189. Sdljkfg              Level  1 idle for  34 days
+ 190. Sdhasj               Level  1 idle for  34 days
+ 191. Sdjkf                Level  1 idle for  34 days
+ 192. Saewufhdd            Level  1 idle for  34 days
+ 193. Sdkjfh               Level  1 idle for  34 days
+ 194. Fjk                  Level  1 idle for  34 days
+ 195. Fgsecnkmc            Level  1 idle for  34 days
+ 196. Dsjf                 Level  1 idle for  34 days
+ 197. Sdj                  Level  1 idle for  34 days
+ 198. Sdfmn                Level  1 idle for  34 days
+ 199. Doiufe               Level  1 idle for  34 days
+ 200. Dshasjkd             Level  1 idle for  34 days
+ 201. Quief                Level  1 idle for  34 days
+ 202. Destroyer            Deleted flag set
+ 203. Nakor                Level  1 idle for  34 days
+ 204. Treydeyen            Deleted flag set
+ 205. Teut                 Deleted flag set
+ 206. Malidor              Deleted flag set
+ 207. Lerris               Level  1 idle for  33 days
+ 208. Mephisto             Level  1 idle for  33 days
+ 209. Dwfj                 Deleted flag set
+ 210. Chame                Never entered game
+ 211. Melinko              Level  1 idle for  33 days
+ 212. Lordmerlin           Level  1 idle for  32 days
+ 213. Cryptica             Level  1 idle for  32 days
+ 214. Aviendha             Level  1 idle for  32 days
+ 215. Dytara               Deleted flag set
+ 216. Aryte                Deleted flag set
+ 217. Test                 Deleted flag set
+ 218. Destavulo            Level  1 idle for  31 days
+ 219. Norx                 Level  1 idle for  31 days
+ 220. Bahamut              Never entered game
+ 221. Methil               Level  1 idle for  31 days
+ 222. Cinder               Level  1 idle for  30 days
+ 223. Draven               Deleted flag set
+ 224. Jwebb                Level  1 idle for  30 days
+ 225. Wied                 Level  1 idle for  30 days
+ 226. Jewbb                Level  1 idle for  30 days
+ 227. Dragar               Level  1 idle for  29 days
+ 228. Kagero               Level  1 idle for  29 days
+ 229. Monkeybait           Level  1 idle for  29 days
+ 230. Abuzer               Deleted flag set
+ 231. Ansel                Deleted flag set
+ 232. Lestat               Level  1 idle for  28 days
+ 233. Nortix               Level  1 idle for  28 days
+ 234. Danar                Level  1 idle for  28 days
+ 235. Steve                Level  1 idle for  25 days
+ 236. Belgareth            Deleted flag set
+ 237. Garion               Deleted flag set
+ 238. Pentrath             Deleted flag set
+ 239. Allanon              Deleted flag set
+ 240. Phantom              Deleted flag set
+ 241. Quintar              Level  1 idle for  26 days
+ 242. Kiss                 Level  1 idle for  26 days
+ 243. Mikado               Deleted flag set
+ 244. Yerdra               Level  1 idle for  26 days
+ 245. Kira                 Never entered game
+ 246. Pepe                 Level  1 idle for  25 days
+ 247. Varkas               Level  1 idle for  25 days
+ 248. Spire                Level  1 idle for  25 days
+ 249. Pimpsa               Level  1 idle for  24 days
+ 250. Oont                 Deleted flag set
+ 251. Shiro                Level  1 idle for  24 days
+ 252. Themis               Deleted flag set
+ 253. Jim                  Level  1 idle for  24 days
+ 254. Tool                 Level  1 idle for  24 days
+ 255. Tristan              Level  1 idle for  24 days
+ 256. Faulk                Level  1 idle for  24 days
+ 257. Edward               Deleted flag set
+ 258. Yurisash             Deleted flag set
+ 259. Mark                 Level  1 idle for  23 days
+ 260. Drackill             Level  1 idle for  23 days
+ 261. Oin                  Level  1 idle for  23 days
+ 262. Elinbain             Level  1 idle for  23 days
+ 263. Cormathus            Level  1 idle for  23 days
+ 264. ManaKnight           Deleted flag set
+ 265. BlackDeath           Level  1 idle for  22 days
+ 266. Nybris               Deleted flag set
+ 267. Litos                Deleted flag set
+ 268. Darkanion            Level  1 idle for  22 days
+ 269. Shin                 Level  1 idle for  22 days
+ 270. Memnoch              Level  1 idle for  22 days
+ 271. Rainn                Level  1 idle for  22 days
+ 272. Aviva                Level  1 idle for  22 days
+ 273. Zhulandyr            Deleted flag set
+ 274. Skyline              Level  1 idle for  22 days
+ 275. Syphen               Deleted flag set
+ 276. Moonshadow           Never entered game
+ 277. Farem                Level  1 idle for  20 days
+ 278. Mouser               Deleted flag set
+ 279. Cyrez                Never entered game
+ 280. Morthalion           Deleted flag set
+ 281. LamerPak             Never entered game
+ 282. Mariel               Never entered game
+ 283. RAS                  Deleted flag set
+ 284. Jessie               Deleted flag set
+ 285. Tarn                 Deleted flag set
+ 286. Oriane               Never entered game
+ 287. Seraph               Deleted flag set
+ 288. Nazrat               Deleted flag set
+ 289. Helix                Deleted flag set
+ 290. Gallowbraid          Deleted flag set
+ 291. Marius               Never entered game
+ 292. Chromium             Deleted flag set
+ 293. Bibalo               Deleted flag set
+ 294. Gandolf              Deleted flag set
+ 295. Tritain              Deleted flag set
+ 296. Aczuru               Deleted flag set
+ 297. Jarle                Deleted flag set
+ 298. Juji                 Deleted flag set
+ 299. Canth                Never entered game
+ 300. Chapel               Deleted flag set
+ 301. Dagger               Deleted flag set
+ 302. Tristran             Deleted flag set
+ 303. Jander               Deleted flag set
+ 304. Nunja                Never entered game
+ 305. MySelf               Deleted flag set
+ 306. Aclors               Deleted flag set
+ 307. Asaf                 Never entered game
+ 308. Rewen                Deleted flag set
+ 309. Zaratomb             Deleted flag set
+ 310. Maleag               Deleted flag set
+ 311. LordJAXOM            Deleted flag set
+ 312. Monkeybumper         Deleted flag set
+ 313. Slim                 Deleted flag set
+ 314. Daimeon              Deleted flag set
+ 315. Daimen               Deleted flag set
+ 316. Daelene              Deleted flag set
+ 317. Sarina               Deleted flag set
+ 318. Kailene              Deleted flag set
+ 319. Daena                Deleted flag set
+ 320. Uher                 Never entered game
+ 321. Andryor              Deleted flag set
+ 322. Pickit               Deleted flag set
+ 323. Archimaeda           Deleted flag set
+ 324. Poison               Deleted flag set
+ 325. Validor              Deleted flag set
+ 326. Yuck                 Deleted flag set
+ 327. Khaavren             Deleted flag set
+ 328. Zagril               Deleted flag set
+ 329. MasterD              Deleted flag set
+ 330. Rathelas             Deleted flag set
+ 331. Soulfly              Deleted flag set
+ 332. Vordisha             Never entered game
+ 333. Kintara              Never entered game
+Done.

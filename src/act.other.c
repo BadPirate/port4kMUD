@@ -1,13 +1,3 @@
-/* ************************************************************************
-*   File: act.other.c                                   Part of CircleMUD *
-*  Usage: Miscellaneous player-level commands                             *
-*                                                                         *
-*  All rights reserved.  See license.doc for complete information.        *
-*                                                                         *
-*  Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University *
-*  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
-************************************************************************ */
-
 #include "conf.h"
 #include "sysdep.h"
 
@@ -23,6 +13,8 @@
 #include "screen.h"
 #include "house.h"
 
+#define IS_GOD(ch)               (!IS_NPC(ch) && (GET_LEVEL(ch) >= LVL_GOD))
+
 /* extern variables */
 extern struct str_app_type str_app[];
 extern struct room_data *world;
@@ -35,7 +27,223 @@ extern char *class_abbrevs[];
 
 /* extern procedures */
 SPECIAL(shop_keeper);
+void write_aliases(struct char_data *ch);
 
+/* Towns Subroutine */
+const struct townstart_struct townstart[] =
+{
+//abbrv	   Town Name	start	corpse	hell	minlv	x	donate
+{ "&rD&n", "Daggerfall",3001,  	11,	101, 	0,   	"d",	3063 },
+{ "&gE&n", "Elven City",19005,  19042,	19042, 	5,   	"e",	150  },
+{ "&mR&n", "Rome",	145,  	12069,	12069, 	15,   	"r",	151  },
+{ "&bM&n", "Mist",	1720,  	1733,	1733, 	25,   	"m",	1732 },
+{ "&uI&n", "Immortals", 1204,  	1209,	1209,	101, 	"i",	1201 },
+{ "USED", "RESERVED",   -1,    -1,    -1,    -1,  } // END STRUCT
+};
+
+ACMD(do_remort)
+{
+  int i, class, cb=0, total;
+  int parse_class(char);
+  extern int do_start(struct char_data *);
+  extern char *class_menu;
+  one_argument(argument, arg);
+
+  if(IS_NPC(ch))
+  {
+    send_to_char("Mobs don't remort, go away",ch);
+    return;
+  }
+  cb = ch->player_specials->saved.classes_been;
+  if(GET_LEVEL(ch) < 101)
+  {
+    send_to_char("Your not high enough to remort.\r\n",ch);
+    return;
+  }
+  for(i=0, total=1; i < NUM_CLASSES; i++)
+    if(IS_SET(cb, (1 << i)))
+      total++;
+  if(*arg)
+  {
+    if(strcmp(arg, "master") == 0)
+    {
+      if (total >= 4)
+      { 
+        class = CLASS_MASTER;
+      }
+      else
+      {
+        send_to_char("You have to be four other classes before you can master\r\n",ch);
+        return;
+      }
+    }
+    else
+    { 
+
+      class = parse_class(arg[0]);
+      if (class == CLASS_UNDEFINED || (class == CLASS_MASTER && total < 4))
+      {
+        send_to_char("Thats not an option\r\n",ch);
+        send_to_char(class_menu,ch);
+        return;
+      }
+    }
+    if (IS_SET(cb, (1 << class)))
+    {
+      send_to_char("You've been that class!\r\n",ch);
+      return;
+    }
+    if (GET_CLASS(ch) == class)
+    {
+      send_to_char("You are that class!\r\n",ch);
+      return;
+    }
+    if (GET_CLASS(ch) == CLASS_MASTER)
+    {
+      send_to_char("You are already a master!\r\n",ch);
+      return;
+    }
+    if (GET_LEVEL(ch) >= LVL_IMMORT)
+    {
+      send_to_char("You really don't want to do that :-)\r\n",ch);
+      return;
+    }
+    if (class != CLASS_MASTER && total >= 4)
+    {
+      send_to_char("You already have your 4 remorts, you can go master now!\r\n",ch);
+      class = CLASS_MASTER;
+    }
+    if (GET_CLASS(ch) == CLASS_NINJA && total == 1)
+    {
+      send_to_char("Your playing old rules, go on to master!\r\n",ch);
+      class = CLASS_MASTER;
+    }
+    SET_BIT(ch->player_specials->saved.classes_been, (1 << GET_CLASS(ch)));
+    GET_CLASS(ch) = class;  
+
+    for (i = 0; i < NUM_WEARS; i++)
+      if (ch->equipment[i])
+        obj_to_char(unequip_char(ch, i), ch);
+ 
+    GET_MAX_HIT(ch) = 1;
+    GET_MAX_MOVE(ch) = 60;
+    GET_MAX_MANA(ch) = 100;
+    GET_LEVEL(ch) = 0;
+    do_start(ch);
+    sprintf(buf, "Succesfully Remorted #%d.  You're a newbie again and your old items are in your\r\ninventory! (WARNING: your invisible items are in your inventory too.)\r\n",(total));
+    send_to_char(buf,ch);
+  }
+  else
+  {
+    send_to_char("Usage:  Remort <class letter>\r\n",ch);
+    if(total >= 4)
+      send_to_char("        Remort master\r\n",ch);
+    send_to_char(class_menu,ch);
+    return;
+  }
+}
+
+ACMD(do_quote)
+{
+  FILE *quotefile;
+  int randnum, counter, x;
+  char line[90];
+
+  strcpy(buf, "*");
+  quotefile = fopen("../lib/quotes","r");
+  randnum = number(0,340);
+
+  for(counter=0; counter < randnum; counter++)
+    do fgets(line, 80, quotefile); while ( line[0] != '-' );
+
+  for(x=0; line[x]; x++)
+    if (line[x] == '\r' || line[x] == '\n')
+      line[x] = ' ';
+  
+  do {
+    fgets(line, 80, quotefile);
+    sprintf(buf,"%s%s\r", buf,line);
+  } while ( line[0] != '-' );
+  fclose(quotefile);
+  strcat("\r\n\0", buf);  
+  page_string(ch->desc, buf, 1);  
+}
+
+int find_rnum_object(char *obj)
+{
+  int nr=-1;
+  extern int top_of_objt;
+  extern struct obj_data *obj_proto;
+  for (nr=0;!isname(obj,obj_proto[nr].name)&&nr<=top_of_objt;nr++) {
+  }
+  return(nr>top_of_objt?-1:nr);
+}
+
+ACMD(do_howl)
+{
+  int levelchance(struct char_data *);
+  ACMD(do_flee);
+  struct char_data *tch, *tch_next;
+
+  send_to_char("You howl at the heavens.\n",ch);
+  act("$n howls at the heavens.", TRUE, ch, 0, FALSE, TO_ROOM);
+  if(IS_WOLF(ch)) {
+    for (tch = world[ch->in_room].people; tch; tch = tch_next) {
+      tch_next=tch->next_in_room;
+      if ((tch!=ch) && IS_NPC(tch) && !MOB_FLAGGED(tch, MOB_SENTINEL))
+        if ( levelchance(ch) )
+          do_flee(tch,"",0,0);
+    }
+    WAIT_STATE(ch, PULSE_VIOLENCE);
+  }
+}
+
+ACMD(do_statue)
+{
+  int levelchance(struct char_data *);
+  
+  send_to_char("You try to stay still as a statue.\n",ch);
+  act("$n tries to pose as a statue.", TRUE, ch, 0, FALSE, TO_ROOM);
+  if (IS_GARGOYLE(ch)) {
+    if(levelchance(ch)) {
+      send_to_char("You feel yourself turn into stone!\n",ch);
+      act("$n solidifies into solid stone!", TRUE, ch, 0, FALSE, TO_ROOM);
+      SET_BIT(AFF_FLAGS(ch), AFF_STATUE);
+      WAIT_STATE(ch, PULSE_VIOLENCE);
+    }
+  }
+}
+
+ACMD(do_food)
+{
+/* blc - elven food command */
+  struct obj_data *obj;
+  int onu;
+  
+  if(IS_ELF(ch)) {
+    if(GET_MOVE(ch) >= 30) {
+      onu=find_rnum_object("waybread");
+      if(onu>=0) {
+	obj=read_object(onu, REAL);
+	obj_to_char(obj,ch);
+	act("$n dances a little jig.", TRUE, ch, 0, FALSE, TO_ROOM);
+	act("A waybread falls into $n's hands!", TRUE, ch, 0, FALSE, TO_ROOM);
+	GET_MOVE(ch)-=30;
+	send_to_char("You dance a little jig to please the food God.\r\n",ch);
+	send_to_char("A waybread suddenly appears in your hands!\r\n",ch);
+        WAIT_STATE(ch, PULSE_VIOLENCE);
+      } else {
+	send_to_char("An error occurred.  Waybread not found?!?!!.\r\n",ch);
+      }
+    } else {
+      send_to_char("You're too tired to do the elven food dance.\r\n",ch);
+    }
+  } else {
+    send_to_char("You do a little silly dance for the food God.\r\n",ch);
+    act("$n dances a little jig but it makes a fool out of $mself.",
+	TRUE, ch, 0, FALSE, TO_ROOM);
+  }
+}
 
 ACMD(do_quit)
 {
@@ -48,6 +256,12 @@ ACMD(do_quit)
   if (IS_NPC(ch) || !ch->desc)
     return;
 
+  if ( IS_SET(ROOM_FLAGS(ch->in_room), ROOM_NORECALL) &&
+       GET_LEVEL(ch) < LVL_IMMORT)
+  {
+    send_to_char("The room holds you here.\r\n",ch);
+    return;
+  }
   if (subcmd != SCMD_QUIT && GET_LEVEL(ch) < LVL_IMMORT)
     send_to_char("You have to type quit--no less, to quit!\r\n", ch);
   else if (GET_POS(ch) == POS_FIGHTING)
@@ -56,8 +270,14 @@ ACMD(do_quit)
     send_to_char("You die before your time...\r\n", ch);
     die(ch);
   } else {
-    if (!GET_INVIS_LEV(ch))
+    if (GET_LEVEL(ch) >= LVL_IMMORT)
       act("$n has left the game.", TRUE, ch, 0, 0, TO_ROOM);
+    else
+    {
+      act("$n has left the game.", TRUE, ch, 0, 0, TO_ROOM);
+      sprintf(buf, "%s has quit the game.\r\n", GET_NAME(ch));
+      send_to_all(buf);
+    }
     sprintf(buf, "%s has quit the game.", GET_NAME(ch));
     mudlog(buf, NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE);
     send_to_char("Goodbye, friend.. Come back soon!\r\n", ch);
@@ -89,6 +309,9 @@ ACMD(do_quit)
 
 ACMD(do_save)
 {
+  struct char_data *wch;
+  struct descriptor_data *d;
+
   if (IS_NPC(ch) || !ch->desc)
     return;
 
@@ -96,10 +319,23 @@ ACMD(do_save)
     sprintf(buf, "Saving %s.\r\n", GET_NAME(ch));
     send_to_char(buf, ch);
   }
-  save_char(ch, NOWHERE);
-  Crash_crashsave(ch);
-  if (ROOM_FLAGGED(ch->in_room, ROOM_HOUSE_CRASH))
-    House_crashsave(world[ch->in_room].number);
+
+  for (d = descriptor_list; d; d = d->next) 
+  {
+    if (d->connected)
+      continue;
+
+    if (d->original)
+      wch = d->original;
+    else if (!(wch = d->character))
+      continue;
+
+    write_aliases(wch);
+    save_char(wch, NOWHERE);
+    Crash_crashsave(wch);
+    if (ROOM_FLAGGED(wch->in_room, ROOM_HOUSE_CRASH))
+      House_crashsave(world[wch->in_room].number);
+  }
 }
 
 
@@ -153,8 +389,56 @@ ACMD(do_hide)
   SET_BIT(AFF_FLAGS(ch), AFF_HIDE);
 }
 
-
-
+ACMD(do_tstart)
+{
+  int x;
+  char foo[MAX_INPUT_LENGTH];
+  argument = one_argument(argument, foo);
+  
+  if (*foo)
+  {
+    for(x=0; townstart[x].minlevel != -1; x++)
+    {
+      if(strcmp(foo, townstart[x].entrychar) == 0)
+      {
+        if(GET_LEVEL(ch) < townstart[x].minlevel)
+        {
+          sprintf(buf, "You are not high enough level (%d) to live in %s\r\n", townstart[x].minlevel, townstart[x].longname);
+          send_to_char(buf, ch);
+          return;
+        }
+        if(PLR_FLAGGED(ch, PLR_LOADROOM) && GET_LEVEL(ch) <= LVL_IMMORT)
+        {
+          if(GET_GOLD(ch) < 1000000)
+          {
+            send_to_char("You don't have enough gold\r\n",ch);
+            return;
+          }
+          else
+           GET_GOLD(ch) -= 1000000;
+        }
+        SET_BIT(PLR_FLAGS(ch), PLR_LOADROOM);   
+        GET_LOADROOM(ch) = townstart[x].loadroom;
+        sprintf(buf, "You now start in %s, you recall to go there\r\n",
+                townstart[x].longname);
+        send_to_char(buf, ch);
+        return;
+      }
+    }
+  }
+  send_to_char("&rAvailable starting rooms\r\n",ch);
+  send_to_char("------------------------&c\r\n",ch);
+  send_to_char("Num Name          MinLvl\r\n",ch);
+  send_to_char("--- ------------- ------&n\r\n",ch);
+  for(x=0; townstart[x].minlevel != -1 ; x++)
+  {
+    sprintf(buf, "%2s. %13s %6d\r\n", townstart[x].entrychar, 
+            townstart[x].longname, townstart[x].minlevel);
+    send_to_char(buf, ch);
+  }
+  send_to_char("Switching costs 1 million gold,\r\n",ch);      
+  send_to_char("Unless you haven't switched before.\r\n", ch);
+}
 
 ACMD(do_steal)
 {
@@ -184,8 +468,18 @@ ACMD(do_steal)
   if (GET_POS(vict) < POS_SLEEPING)
     percent = -1;		/* ALWAYS SUCCESS */
 
-  if (!pt_allowed && !IS_NPC(vict))
+  if (!pt_allowed && !IS_NPC(vict)) {
     pcsteal = 1;
+  }
+
+  if (pcsteal && !IS_GOD(ch)) {
+    SET_BIT(PLR_FLAGS(ch), PLR_THIEF);
+    sprintf(buf, "PC Thief bit set on %s for stealing from %s at %s.",
+            GET_NAME(ch), GET_NAME(vict), world[vict->in_room].name);
+    mudlog(buf, BRF, LVL_IMMORT, TRUE);
+    act("Oops..", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
 
   /* NO NO With Imp's and Shopkeepers, and if player thieving is not allowed */
   if (GET_LEVEL(vict) >= LVL_IMMORT || pcsteal ||
@@ -207,7 +501,7 @@ ACMD(do_steal)
 	act("$E hasn't got that item.", FALSE, ch, 0, vict, TO_CHAR);
 	return;
       } else {			/* It is equipment */
-	if ((GET_POS(vict) > POS_STUNNED)) {
+	if ((GET_POS(vict) > POS_SLEEPING)) {
 	  send_to_char("Steal the equipment now?  Impossible!\r\n", ch);
 	  return;
 	} else {
@@ -302,18 +596,26 @@ ACMD(do_visible)
 
 ACMD(do_title)
 {
+  int maxlength;
   skip_spaces(&argument);
   delete_doubledollar(argument);
 
+  if (GET_LEVEL(ch) >= LVL_IMMORT)
+    maxlength=80-24-strlen(GET_NAME(ch));
+  else
+    maxlength=80-18-strlen(GET_NAME(ch));
   if (IS_NPC(ch))
     send_to_char("Your title is fine... go away.\r\n", ch);
   else if (PLR_FLAGGED(ch, PLR_NOTITLE))
     send_to_char("You can't title yourself -- you shouldn't have abused it!\r\n", ch);
   else if (strstr(argument, "(") || strstr(argument, ")"))
     send_to_char("Titles can't contain the ( or ) characters.\r\n", ch);
-  else if (strlen(argument) > MAX_TITLE_LENGTH) {
-    sprintf(buf, "Sorry, titles can't be longer than %d characters.\r\n",
-	    MAX_TITLE_LENGTH);
+  else if (strstr(argument, "<") || strstr(argument, ">"))
+    send_to_char("Titles can't contain the < or > characters.\r\n", ch);
+  else if (strlen(argument) > maxlength)
+  {
+    sprintf(buf, "Sorry, your title can't be more than %d characters.\r\n",
+	    maxlength);
     send_to_char(buf, ch);
   } else {
     set_title(ch, argument);
@@ -350,18 +652,20 @@ void print_group(struct char_data *ch)
     k = (ch->master ? ch->master : ch);
 
     if (IS_AFFECTED(k, AFF_GROUP)) {
-      sprintf(buf, "     [%3dH %3dM %3dV] [%2d %s] $N (Head of group)",
-	      GET_HIT(k), GET_MANA(k), GET_MOVE(k), GET_LEVEL(k), CLASS_ABBR(k));
+      sprintf(buf, "     [%4d/%4dH %4d/%4dM %3d/%3dV] [%2d %s] $N (Head of group)",
+	      GET_HIT(k), GET_MAX_HIT(k), GET_MANA(k), GET_MAX_MANA(k),
+	      GET_MOVE(k), GET_MAX_MOVE(k), GET_LEVEL(k), CLASS_ABBR(k));
       act(buf, FALSE, ch, 0, k, TO_CHAR);
     }
 
     for (f = k->followers; f; f = f->next) {
       if (!IS_AFFECTED(f->follower, AFF_GROUP))
 	continue;
-
-      sprintf(buf, "     [%3dH %3dM %3dV] [%2d %s] $N", GET_HIT(f->follower),
-	      GET_MANA(f->follower), GET_MOVE(f->follower),
-	      GET_LEVEL(f->follower), CLASS_ABBR(f->follower));
+      sprintf(buf, "     [%4d/%4dH %4d/%4dM %3d/%3dV] [%2d %s] $N",
+	      GET_HIT(f->follower), GET_MAX_HIT(f->follower), 
+              GET_MANA(f->follower), GET_MAX_MANA(f->follower),
+	      GET_MOVE(f->follower), GET_MAX_MOVE(f->follower), 
+              GET_LEVEL(f->follower), CLASS_ABBR(f->follower));
       act(buf, FALSE, ch, 0, f->follower, TO_CHAR);
     }
   }
@@ -574,7 +878,7 @@ ACMD(do_split)
 ACMD(do_use)
 {
   struct obj_data *mag_item;
-  int equipped = 1;
+  int equipped = 1, percent;
 
   half_chop(argument, arg, buf);
   if (!*arg) {
@@ -612,6 +916,14 @@ ACMD(do_use)
       send_to_char("You can only quaff potions.", ch);
       return;
     }
+    percent=number(1, LVL_IMMORT);
+    if (percent<GET_LEVEL(ch) && GET_LEVEL(ch) < LVL_IMMORT)
+    {
+      send_to_char("Your body doesn't seem as affected as it used to.\r\n", ch);
+      obj_from_char(mag_item);
+      extract_obj(mag_item);
+      return;
+    }
     break;
   case SCMD_RECITE:
     if (GET_OBJ_TYPE(mag_item) != ITEM_SCROLL) {
@@ -638,9 +950,22 @@ ACMD(do_wimpy)
   int wimp_lev;
 
   one_argument(argument, arg);
-
+ 
+  if (subcmd == SCMD_AWIMP)
+  {
+    send_to_char(
+"You will now autowimp, when you get hit, you will flee if the\r\n"
+"same amount of damage you were just hit with would kill you\r\n", ch);
+    return;
+  }
   if (!*arg) {
-    if (GET_WIMP_LEV(ch)) {
+    if (GET_WIMP_LEV(ch) == -1)
+    {
+      send_to_char(
+"You are currently autowimping, when you get hit, you will flee if the\r\n"
+"same amount of damage you were just hit with would kill you\r\n", ch);
+      return;
+    } else if (GET_WIMP_LEV(ch) > 0) {
       sprintf(buf, "Your current wimp level is %d hit points.\r\n",
 	      GET_WIMP_LEV(ch));
       send_to_char(buf, ch);
@@ -652,7 +977,14 @@ ACMD(do_wimpy)
   }
   if (isdigit(*arg)) {
     if ((wimp_lev = atoi(arg))) {
-      if (wimp_lev < 0)
+      if (wimp_lev == -1)
+      {
+        send_to_char(
+"You will now run away if you take a hit that if repeated would kill you\r\n"
+"&b(autowimp)&n\r\n",ch);
+        GET_WIMP_LEV(ch) = -1;
+        return;
+      } else if (wimp_lev < 0)
 	send_to_char("Heh, heh, heh.. we are jolly funny today, eh?\r\n", ch);
       else if (wimp_lev > GET_MAX_HIT(ch))
 	send_to_char("That doesn't make much sense, now does it?\r\n", ch);
@@ -676,41 +1008,76 @@ ACMD(do_wimpy)
 }
 
 
-ACMD(do_display)
-{
-  size_t i;
+ACMD(do_display) {
+   char arg[MAX_INPUT_LENGTH];
+   int i, x;
 
-  if (IS_NPC(ch)) {
-    send_to_char("Mosters don't need displays.  Go away.\r\n", ch);
-    return;
-  }
+   const char *def_prompts[][2] = {
+     { "Normal"                 , "&n%hhp %mmp %vmv> " 	},
+     { "Off"                    , "&n> " 		},
+     { "Dymus", "&n%h/%HH %m/%MM %v/%VV> %t %px - %x/%Xexp "},
+     { "Reju","[ &g%ph HP&n ] [ &r%pm mana&n ] [ &m%pv move&n ] [ &c%px exp&n ] [ &y%g gold&n ]%_(%o opp)(%t tank): "},
+     { "Algernon","<&c%h&n/&c%H|&r%m&n/&r%M&n|&b%v&n/&b%V&n> <&rTANK: %t&n> "},
+     { "\n"                       , "\n"                }
+   };
+
+   one_argument(argument, arg);
+
+   if (!arg || !*arg) {
+     send_to_char("The following pre-set prompts are availible...\r\n", ch);
+     for (i = 0; *def_prompts[i][0] != '\n'; i++) {
+       sprintf(buf, "  %d. %-25s \r\n", i, def_prompts[i][0]);
+       send_to_char(buf, ch);
+     }
+     send_to_char("Usage: display <number>\r\n"
+                  "To create your own prompt, use _prompt <str>_.\r\n", ch);
+     return;
+   } else if (!isdigit(*arg)) {
+     send_to_char("Usage: display <number>\r\n", ch);
+     send_to_char("Type _display_ without arguments for a list of preset prompts.\r\n", ch);
+      return;
+    }
+
+   i = atoi(arg);
+
+   if (i < 0) {
+     send_to_char("The number cannot be negative.\r\n", ch);
+      return;
+    }
+
+   for (x = 0; *def_prompts[x][0] != '\n'; x++);
+
+   if (i >= x) {
+     sprintf(buf, "The range for the prompt number is 0-%d.\r\n", x);
+     send_to_char(buf, ch);
+     return;
+    }
+
+   if (GET_PROMPT(ch))
+     free(GET_PROMPT(ch));
+   GET_PROMPT(ch) = str_dup(def_prompts[i][1]);
+
+   sprintf(buf, "Set your prompt to the %s preset prompt.\r\n", def_prompts[i][0]);
+   send_to_char(buf, ch);
+}
+
+ACMD(do_prompt) {
   skip_spaces(&argument);
 
   if (!*argument) {
-    send_to_char("Usage: prompt { H | M | V | all | none }\r\n", ch);
+    sprintf(buf, "Your prompt is currently: %s\r\n", (GET_PROMPT(ch) ? GET_PROMPT(ch) : "n/a"));
+    send_to_char(buf, ch);
     return;
   }
-  if ((!str_cmp(argument, "on")) || (!str_cmp(argument, "all")))
-    SET_BIT(PRF_FLAGS(ch), PRF_DISPHP | PRF_DISPMANA | PRF_DISPMOVE);
-  else {
-    REMOVE_BIT(PRF_FLAGS(ch), PRF_DISPHP | PRF_DISPMANA | PRF_DISPMOVE);
 
-    for (i = 0; i < strlen(argument); i++) {
-      switch (LOWER(argument[i])) {
-      case 'h':
-	SET_BIT(PRF_FLAGS(ch), PRF_DISPHP);
-	break;
-      case 'm':
-	SET_BIT(PRF_FLAGS(ch), PRF_DISPMANA);
-	break;
-      case 'v':
-	SET_BIT(PRF_FLAGS(ch), PRF_DISPMOVE);
-	break;
-      }
-    }
-  }
+  delete_doubledollar(argument);
 
-  send_to_char(OK, ch);
+  if (GET_PROMPT(ch))
+    free(GET_PROMPT(ch));
+  GET_PROMPT(ch) = str_dup(argument);
+
+  sprintf(buf, "Okay, set your prompt to: %s\r\n", GET_PROMPT(ch));
+  send_to_char(buf, ch);
 }
 
 
@@ -818,7 +1185,23 @@ ACMD(do_gen_tog)
     {"Nameserver_is_slow changed to NO; IP addresses will now be resolved.\r\n",
     "Nameserver_is_slow changed to YES; sitenames will no longer be resolved.\r\n"},
     {"Autoexits disabled.\r\n",
-    "Autoexits enabled.\r\n"}
+    "Autoexits enabled.\r\n"},
+    {"AFK flag is now off.\r\n",
+     "AFK flag is now on.\r\n"},
+    {"You will no longer Auto-Assist.\r\n",
+     "You will now Auto-Assist.\r\n"},
+    {"AutoSplit disabled.\r\n",
+     "AutoSplit enabled.\r\n"},
+    {"AutoLooting disabled.\r\n",
+     "AutoLooting enabled.\r\n"},
+    {"You can hear the music.\r\n",
+     "You can't hear the music anymore :'-(\r\n"},
+    {"You can now hear the ouch channel\r\n",
+     "You will no longer hear of others pain\r\n"},
+    {"AutoGold diabled.\r\n",
+     "AutoGold enabled.\r\n"},
+    {"You are no longer a pkiller.\r\n",
+     "You can now kill pkillers, (and be killed by them).\r\n"},
   };
 
 
@@ -873,6 +1256,41 @@ ACMD(do_gen_tog)
     break;
   case SCMD_AUTOEXIT:
     result = PRF_TOG_CHK(ch, PRF_AUTOEXIT);
+    break;
+  case SCMD_AFK:
+    result = PRF_TOG_CHK(ch, PRF_AFK);
+    if (PRF_FLAGGED(ch, PRF_AFK))
+    {
+      act("$n has gone AFK.", TRUE, ch, 0, 0, TO_ROOM);
+      sprintf(ch->player_specials->afkmsgs, "none");
+    }
+    else
+      act("$n has come back from AFK.", TRUE, ch, 0, 0, TO_ROOM);
+    break;
+  case SCMD_AUTOASSIST:
+    result = PRF_TOG_CHK(ch, PRF_AUTOASSIST);
+    break;
+  case SCMD_AUTOSPLIT:
+    result = PRF_TOG_CHK(ch, PRF_AUTOSPLIT);
+    break;
+  case SCMD_AUTOLOOT:
+    result = PRF_TOG_CHK(ch, PRF_AUTOLOOT);
+    break;
+  case SCMD_AUTOGOLD:
+    result = PRF_TOG_CHK(ch, PRF_AUTOGOLD);
+    break;
+  case SCMD_NOMUSIC:
+    result = PRF_TOG_CHK(ch, PRF_NOMUSIC);
+    break;
+  case SCMD_NOOUCH:
+    result = PRF_TOG_CHK(ch, PRF_NOOUCH);
+    break;
+  case SCMD_PKILL:
+    result = -1;
+    if(PRF_FLAGGED(ch, PRF_PKILL) && GET_LEVEL(ch) < LVL_IMMORT)
+      send_to_char("You can't turn it off :-P\r\n", ch);
+    else      
+      result = PRF_TOG_CHK(ch, PRF_PKILL);
     break;
   default:
     log("SYSERR: Unknown subcmd in do_gen_toggle");

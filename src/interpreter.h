@@ -57,6 +57,7 @@ struct alias {
   struct alias *next;
 };
 
+#define MULTIPLAY	3	//  The max number of same IP's on at once
 #define ALIAS_SIMPLE	0
 #define ALIAS_COMPLEX	1
 
@@ -70,6 +71,15 @@ struct alias {
  *   subcommands are independent from function to function.
  */
 
+// do_wimp
+#define SCMD_AWIMP	1
+
+/* do_who */
+#define SCMD_SHORT	1
+
+/* do_action */
+#define SCMD_GACT 	1
+
 /* directions */
 #define SCMD_NORTH	1
 #define SCMD_EAST	2
@@ -77,6 +87,10 @@ struct alias {
 #define SCMD_WEST	4
 #define SCMD_UP		5
 #define SCMD_DOWN	6
+#define SCMD_NORTHEAST  7
+#define SCMD_NORTHWEST  8
+#define SCMD_SOUTHEAST  9
+#define SCMD_SOUTHWEST  10
 
 /* do_gen_ps */
 #define SCMD_INFO       0
@@ -91,6 +105,7 @@ struct alias {
 #define SCMD_IMOTD	9
 #define SCMD_CLEAR	10
 #define SCMD_WHOAMI	11
+#define SCMD_PLAYERS	12
 
 /* do_gen_tog */
 #define SCMD_NOSUMMON   0
@@ -109,6 +124,15 @@ struct alias {
 #define SCMD_HOLYLIGHT	13
 #define SCMD_SLOWNS	14
 #define SCMD_AUTOEXIT	15
+#define SCMD_AFK        16
+#define SCMD_AUTOASSIST 17
+#define SCMD_AUTOSPLIT 18
+#define SCMD_AUTOLOOT  19
+#define SCMD_NOMUSIC   20
+#define SCMD_NOOUCH    21
+#define SCMD_AUTOGOLD  22
+#define SCMD_PKILL     23
+#define SCMD_AUTODISP  24
 
 /* do_wizutil */
 #define SCMD_REROLL	0
@@ -129,6 +153,10 @@ struct alias {
 #define SCMD_GOSSIP	2
 #define SCMD_AUCTION	3
 #define SCMD_GRATZ	4
+#define SCMD_MUSIC      5
+#define SCMD_OUCH       6
+#define SCMD_ARENA      7
+#define SCMD_NEWBIE	8
 
 /* do_shutdown */
 #define SCMD_SHUTDOW	0
@@ -198,3 +226,12 @@ struct alias {
 #define SCMD_UNLOCK     2
 #define SCMD_LOCK       3
 #define SCMD_PICK       4
+
+/*. do_olc .*/
+#define SCMD_OLC_REDIT  0
+#define SCMD_OLC_OEDIT  1
+#define SCMD_OLC_ZEDIT  2
+#define SCMD_OLC_MEDIT  3
+#define SCMD_OLC_SEDIT  4
+#define SCMD_OLC_SAVEINFO  5
+

@@ -1,0 +1,60 @@
+#1401
+Dremor niffin shopkeeper~
+Dremor the owner~
+A niffin with green points polishes the counter.
+~
+   Dremor has short, tawny fur all over his body.  His tufted ears are a
+greenish brown, as are the ends of his paws.  He has a tendency to grind his
+beak when he's thinking.  He is grinding his beak now.    
+~
+778250 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+BareHandAttack: 8
+E
+#1402
+drosdor Zinzziss shopkeeper pastry~
+Zinzziss the drosdor~
+A spindley drosdor polishes the marble counter of her stand.
+~
+   She looks to be made from string and bones.  Her inky skin is stretched over
+a frame of ribs and knuckles.  Her hair is so light it drifts around her face
+instead of hanging down her back.  Large yellow eyes keep an eye on the baking
+pastries she sells.  The tattoos on the drosdor's arm mark her as the third
+born of her house.    
+~
+778250 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 3
+E
+#1472
+soul shopkeeper blighted~
+the Blighted Soul~
+A blighted soul waits for release.
+~
+   Tranluscent and smokey, you have to squint to even tell that it's there.  
+However, since it IS your clan shopkeeper, you figure you can deal with its
+ephereal state of existence.    
+~
+761947 40 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+#1495
+dragon puff magic shopkeeper~
+Puff the Magic Dragon~
+Puff the Magic Dragon stands here.
+~
+It doesn't quite look like the Puff you've been acquainted with on DikuMUDs...
+Rather it looks more cheerful....
+~
+581835 0 0 E
+1 19 10 1d1+0 1d1+1
+0 0
+8 8 2
+E
+$

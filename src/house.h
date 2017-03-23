@@ -1,5 +1,5 @@
 #define MAX_HOUSES	100
-#define MAX_GUESTS	10
+#define MAX_GUESTS	100
 
 #define HOUSE_PRIVATE	0
 

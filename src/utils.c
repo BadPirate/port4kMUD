@@ -51,6 +51,10 @@ int dice(int number, int size)
   return sum;
 }
 
+int levelchance(struct char_data *ch) /* returns TRUE if success */
+{
+  return ( ((GET_LEVEL(ch)*GET_LEVEL(ch))/85+10) >= dice(1,LVL_IMMORT) );
+}
 
 int MIN(int a, int b)
 {
@@ -84,11 +88,12 @@ int str_cmp(char *arg1, char *arg2)
   int chk, i;
 
   for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
       if (chk < 0)
 	return (-1);
       else
 	return (1);
+    }
   return (0);
 }
 
@@ -101,11 +106,12 @@ int strn_cmp(char *arg1, char *arg2, int n)
   int chk, i;
 
   for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n > 0); i++, n--)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
       if (chk < 0)
 	return (-1);
       else
 	return (1);
+    }
 
   return (0);
 }
@@ -116,7 +122,10 @@ void log_death_trap(struct char_data * ch)
 {
   char buf[150];
   extern struct room_data *world;
-
+  
+  sprintf(buf, "%s hit the %s death trap, ouch :-(\r\n", GET_NAME(ch),
+          world[ch->in_room].name);
+  send_to_all(buf);
   sprintf(buf, "%s hit death trap #%d (%s)", GET_NAME(ch),
 	  world[ch->in_room].number, world[ch->in_room].name);
   mudlog(buf, BRF, LVL_IMMORT, TRUE);
@@ -124,6 +133,7 @@ void log_death_trap(struct char_data * ch)
 
 
 /* writes a string to the log */
+/*
 void log(char *str)
 {
   time_t ct;
@@ -134,7 +144,7 @@ void log(char *str)
   *(tmstr + strlen(tmstr) - 1) = '\0';
   fprintf(stderr, "%-19.19s :: %s\n", tmstr, str);
 }
-
+*/
 
 /* the "touch" command, essentially. */
 int touch(char *path)
@@ -423,6 +433,10 @@ int get_filename(char *orig_name, char *filename, int mode)
     prefix = "plrtext";
     suffix = "text";
     break;
+  case ALIAS_FILE:
+    prefix = "plralias";
+    suffix = "alias";
+    break;
   default:
     return 0;
     break;
@@ -473,5 +487,192 @@ int num_pc_in_room(struct room_data *room)
   return i;
 }
 
+int exp_to_level(struct char_data *ch)
+{
+  int exp, level;
+   
+  if(GET_LEVEL(ch) == 101 && GET_CLASS(ch) == CLASS_MASTER)
+    level = GET_LEVEL(ch) + EXTRA_LEVEL(ch);
+  else
+    level = GET_LEVEL(ch);
 
+// 85mil  exp = 85 * GET_LEVEL(ch) * GET_LEVEL(ch) * GET_LEVEL(ch);
+  exp = (126.339621 * level * level * level) -
+        (513.3866242  * level * level) +
+        (713.62962428 * level) -
+        (240);
+  if (GET_CLASS(ch) == CLASS_NINJA)
+    exp *= 2;
+  if (GET_CLASS(ch) == CLASS_MASTER)
+    exp *= 3;
+  return exp;
+}
+
+
+
+/* string manipulation fucntion originally by Darren Wilson */
+/* (wilson@shark.cc.cc.ca.us) improved and bug fixed by Chris (zero@cnw.com) */
+/* completely re-written again by M. Scott 10/15/96 (scottm@workcommn.net), */
+/* substitute appearances of 'pattern' with 'replacement' in string */
+/* and return the # of replacements */
+int replace_str(char **string, char *pattern, char *replacement, int rep_all,
+		int max_size) {
+   char *replace_buffer = NULL;
+   char *flow, *jetsam, temp;
+   int len, i;
+   
+   if ((strlen(*string) - strlen(pattern)) + strlen(replacement) > max_size)
+     return -1;
+   
+   CREATE(replace_buffer, char, max_size);
+   i = 0;
+   jetsam = *string;
+   flow = *string;
+   *replace_buffer = '\0';
+   if (rep_all) {
+      while ((flow = (char *)strstr(flow, pattern)) != NULL) {
+	 i++;
+	 temp = *flow;
+	 *flow = '\0';
+	 if ((strlen(replace_buffer) + strlen(jetsam) + strlen(replacement)) > max_size) {
+	    i = -1;
+	    break;
+	 }
+	 strcat(replace_buffer, jetsam);
+	 strcat(replace_buffer, replacement);
+	 *flow = temp;
+	 flow += strlen(pattern);
+	 jetsam = flow;
+      }
+      strcat(replace_buffer, jetsam);
+   }
+   else {
+      if ((flow = (char *)strstr(*string, pattern)) != NULL) {
+	 i++;
+	 flow += strlen(pattern);  
+	 len = ((char *)flow - (char *)*string) - strlen(pattern);
+   
+	 strncpy(replace_buffer, *string, len);
+	 strcat(replace_buffer, replacement);
+	 strcat(replace_buffer, flow);
+      }
+   }
+   if (i == 0) return 0;
+   if (i > 0) {
+      RECREATE(*string, char, strlen(replace_buffer) + 3);
+      strcpy(*string, replace_buffer);
+   }
+   free(replace_buffer);
+   return i;
+}
+
+
+/* re-formats message type formatted char * */
+/* (for strings edited with d->str) (mostly olc and mail)     */
+void format_text(char **ptr_string, int mode, struct descriptor_data *d, int maxlen) {
+   int total_chars, cap_next = TRUE, cap_next_next = FALSE;
+   char *flow, *start = NULL, temp;
+   /* warning: do not edit messages with max_str's of over this value */
+   char formated[MAX_STRING_LENGTH];
+   
+   flow   = *ptr_string;
+   if (!flow) return;
+
+   if (IS_SET(mode, FORMAT_INDENT)) {
+      strcpy(formated, "   ");
+      total_chars = 3;
+   }
+   else {
+      *formated = '\0';
+      total_chars = 0;
+   } 
+
+   while (*flow != '\0') {
+      while ((*flow == '\n') ||
+	     (*flow == '\r') ||
+	     (*flow == '\f') ||
+	     (*flow == '\t') ||
+	     (*flow == '\v') ||
+	     (*flow == ' ')) flow++;
+
+      if (*flow != '\0') {
+
+	 start = flow++;
+	 while ((*flow != '\0') &&
+		(*flow != '\n') &&
+		(*flow != '\r') &&
+		(*flow != '\f') &&
+		(*flow != '\t') &&
+		(*flow != '\v') &&
+		(*flow != ' ') &&
+		(*flow != '.') &&
+		(*flow != '?') &&
+		(*flow != '!')) flow++;
+
+	 if (cap_next_next) {
+	    cap_next_next = FALSE;
+	    cap_next = TRUE;
+	 }
+
+	 /* this is so that if we stopped on a sentance .. we move off the sentance delim. */
+	 while ((*flow == '.') || (*flow == '!') || (*flow == '?')) {
+	    cap_next_next = TRUE;
+	    flow++;
+	 }
+	 
+	 temp = *flow;
+	 *flow = '\0';
+
+	 if ((total_chars + strlen(start) + 1) > 79) {
+	    strcat(formated, "\r\n");
+	    total_chars = 0;
+	 }
+
+	 if (!cap_next) {
+	    if (total_chars > 0) {
+	       strcat(formated, " ");
+	       total_chars++;
+	    }
+	 }
+	 else {
+	    cap_next = FALSE;
+	    *start = UPPER(*start);
+	 }
+
+	 total_chars += strlen(start);
+	 strcat(formated, start);
+
+	 *flow = temp;
+      }
+
+      if (cap_next_next) {
+	 if ((total_chars + 3) > 79) {
+	    strcat(formated, "\r\n");
+	    total_chars = 0;
+	 }
+	 else {
+	    strcat(formated, "  ");
+	    total_chars += 2;
+	 }
+      }
+   }
+   strcat(formated, "\r\n");
+
+   if (strlen(formated) > maxlen) formated[maxlen] = '\0';
+   RECREATE(*ptr_string, char, MIN(maxlen, strlen(formated)+3));
+   strcpy(*ptr_string, formated);
+}
   
+/* strips \r's from line */
+char *stripcr(char *dest, const char *src) {
+   int i, length;
+   char *temp;
+
+   if (!dest || !src) return NULL;
+   temp = &dest[0];
+   length = strlen(src);
+   for (i = 0; *src && (i < length); i++, src++)
+     if (*src != '\r') *(temp++) = *src;
+   *temp = '\0';
+   return dest;
+}

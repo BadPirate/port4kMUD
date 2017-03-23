@@ -3,7 +3,7 @@ key treasury~
 a treasury key~
 There is a key for the treasury lying here.~
 ~
-18 c 16385
+18 4 16385
 6500 0 0 0
 1 0 0
 #6501
@@ -19,7 +19,7 @@ key mine~
 a mine key~
 There is a key to the mines lying here.~
 ~
-18 c 16385
+18 4 16385
 6502 0 0 0
 1 0 0
 #6503
@@ -27,7 +27,7 @@ key bright gold~
 a bright golden key~
 There is a bright golden key lying here.~
 ~
-18 c 16385
+18 4 16385
 6503 0 0 0
 1 0 0
 #6504
@@ -51,7 +51,7 @@ stick black long~
 a long, black stick~
 There is a long, black stick lying here.~
 ~
-4 q 16385
+4 65536 16385
 4 2 2 28
 1 100 6000
 #6507
@@ -59,7 +59,7 @@ stick black long~
 a long, black stick~
 There is a long, black stick here.~
 ~
-1 q 16385
+1 65536 16385
 0 0 0 0
 1 100 6000
 #6508
@@ -75,7 +75,7 @@ axe two-handed dwarven~
 a two-handed dwarven axe~
 A two-handed dwarven axe is here.~
 ~
-5 g 8193
+5 64 8193
 0 2 7 3
 14 5000 3000
 A
@@ -95,7 +95,7 @@ ring gold dwarven~
 a golden dwarven ring~
 A golden dwarven ring is lying here.~
 ~
-11 g 3
+11 64 3
 0 0 0 0
 1 10000 10000
 A
@@ -127,7 +127,7 @@ pick mining~
 a mining pick~
 There is a mining pick here.~
 ~
-5 i 8193
+5 256 8193
 0 2 3 11
 9 300 10
 E
@@ -139,7 +139,7 @@ key deep green~
 a deep green key~
 There is a deep green key lying here.~
 ~
-18 c 16385
+18 4 16385
 6515 0 0 0
 10 0 0
 #6516
@@ -147,7 +147,63 @@ key old~
 an old key~
 Someone seems to have dropped an old key.~
 ~
-18 c 16385
+18 4 16385
 6516 0 0 0
 1 0 0
-$
+#6517
+note paper~
+a scrap of paper~
+A scrap of paper with a hastily scrawled note lies here, forgotten.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note paper~
+The Queen's in good health for her trip to Daggerfall.  I hope the Mayor will
+appreciate her beauty..    
+~
+#6518
+note~
+a note~
+A note of some sort lies here.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note~
+I hate dwarves..  Especially their stuck-up princesses.  Lets see how the Queen
+looks without her peresious earrings.  I gave them to John the Lumberjack for
+safe keeping.    
+~
+#6519
+note~
+a note~
+A note of some sort has bene left here.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note~
+I've decided that the Chief cityguard's nothing but a jerk!  So i've given the
+earring he gave me for safekeeping to my one true love: Isha.    
+~
+#6520
+earrings ear rings queens~
+a pair of royal earrings~
+A pair of earrings the likes of which could make a queen jealous lie here.~
+~
+12 2097153 17
+0 0 0 0
+6 20000 0
+A
+17 -20
+A
+18 1
+A
+19 1
+A
+6 3
+$~

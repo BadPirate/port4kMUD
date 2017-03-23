@@ -18,21 +18,34 @@
 #define SPECIAL(name) \
    int (name)(struct char_data *ch, void *me, int cmd, char *argument)
 
+/* misc editor defines **************************************************/
+
+/* format modes for format_text */
+#define FORMAT_INDENT		(1 << 0)
+
 
 /* room-related defines *************************************************/
 
 
 /* The cardinal directions: used as index to room_data.dir_option[] */
+#define NUM_ROOM_SECTORS        10 // Number of directions
+
 #define NORTH          0
 #define EAST           1
 #define SOUTH          2
 #define WEST           3
 #define UP             4
 #define DOWN           5
+#define NORTHEAST      6
+#define NORTHWEST      7
+#define SOUTHEAST      8
+#define SOUTHWEST      9
 
 
 /* Room flags: used in room_data.room_flags */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
+#define NUM_ROOM_FLAGS          24	   /* Number of room flags      */
+
 #define ROOM_DARK		(1 << 0)   /* Dark			*/
 #define ROOM_DEATH		(1 << 1)   /* Death trap		*/
 #define ROOM_NOMOB		(1 << 2)   /* MOBs not allowed		*/
@@ -49,7 +62,14 @@
 #define ROOM_ATRIUM		(1 << 13)  /* (R) The door to a house	*/
 #define ROOM_OLC		(1 << 14)  /* (R) Modifyable/!compress	*/
 #define ROOM_BFS_MARK		(1 << 15)  /* (R) breath-first srch mrk	*/
-
+#define ROOM_ARENA              (1 << 16)  /* No punish                 */
+#define ROOM_MAZE		(1 << 17)  /* Lost yet?? Randomize dir. */
+#define ROOM_NOTELEPORT         (1 << 18)  /* Sorry, no teleport here   */
+#define ROOM_DUMP		(1 << 19)  /* Things droped are donated */
+#define ROOM_NORECALL           (1 << 20)  /* Can't recall while here   */
+#define ROOM_HEAL		(1 << 21)  /* Room heals you at 2x rate */
+#define ROOM_OPPRESSIVE		(1 << 22)  /* Room provides 0 healing	*/
+#define ROOM_FALL		(1 << 23)  // Chance for falling Doown  */
 
 /* Exit info: used in room_data.dir_option.exit_info */
 #define EX_ISDOOR		(1 << 0)   /* Exit is a door		*/
@@ -80,8 +100,14 @@
 #define CLASS_CLERIC      1
 #define CLASS_THIEF       2
 #define CLASS_WARRIOR     3
+#define CLASS_PALADIN     4
+#define CLASS_VAMPYRE     5
+#define CLASS_BARD        6
+#define CLASS_SCOUT       7
+#define CLASS_NINJA	  8
+#define CLASS_MASTER      9
 
-#define NUM_CLASSES	  4  /* This must be the number of classes!! */
+#define NUM_CLASSES	  10  /* This must be the number of classes!! */
 
 /* NPC classes (currently unused - feel free to implement!) */
 #define CLASS_OTHER       0
@@ -91,6 +117,19 @@
 #define CLASS_DRAGON      4
 #define CLASS_GIANT       5
 
+/* Races */
+#define RACE_UNDEFINED	-1
+#define RACE_HUMAN	0
+#define RACE_DWARF	1
+#define RACE_ELF	2
+#define RACE_HOBBIT	3
+#define RACE_WOLF	4
+#define RACE_GIANT	5
+#define RACE_GNOME	6
+#define RACE_PIXIE	7
+#define RACE_GARGOYLE	8
+#define RACE_BROWNIE	9
+#define RACE_TROLL	10
 
 /* Sex */
 #define SEX_NEUTRAL   0
@@ -130,6 +169,8 @@
 
 
 /* Mobile flags: used by char_data.char_specials.act */
+#define NUM_MOB_FLAGS           20 // OLC number of mob flags
+
 #define MOB_SPEC         (1 << 0)  /* Mob has a callable spec-proc	*/
 #define MOB_SENTINEL     (1 << 1)  /* Mob should not move		*/
 #define MOB_SCAVENGER    (1 << 2)  /* Mob picks up stuff on the ground	*/
@@ -148,35 +189,43 @@
 #define MOB_NOSLEEP	 (1 << 15) /* Mob can't be slept		*/
 #define MOB_NOBASH	 (1 << 16) /* Mob can't be bashed (e.g. trees)	*/
 #define MOB_NOBLIND	 (1 << 17) /* Mob can't be blinded		*/
-
+#define MOB_MOUNTABLE	 (1 << 18) // Is the mob mountable? (DAK)
+#define MOB_NOATTACK	 (1 << 19) // Can't attack this mob.
 
 /* Preference flags: used by char_data.player_specials.pref */
 #define PRF_BRIEF       (1 << 0)  /* Room descs won't normally be shown	*/
 #define PRF_COMPACT     (1 << 1)  /* No extra CRLF pair before prompts	*/
 #define PRF_DEAF	(1 << 2)  /* Can't hear shouts			*/
 #define PRF_NOTELL	(1 << 3)  /* Can't receive tells		*/
-#define PRF_DISPHP	(1 << 4)  /* Display hit points in prompt	*/
-#define PRF_DISPMANA	(1 << 5)  /* Display mana points in prompt	*/
-#define PRF_DISPMOVE	(1 << 6)  /* Display move points in prompt	*/
-#define PRF_AUTOEXIT	(1 << 7)  /* Display exits in a room		*/
-#define PRF_NOHASSLE	(1 << 8)  /* Aggr mobs won't attack		*/
-#define PRF_QUEST	(1 << 9)  /* On quest				*/
-#define PRF_SUMMONABLE	(1 << 10) /* Can be summoned			*/
-#define PRF_NOREPEAT	(1 << 11) /* No repetition of comm commands	*/
-#define PRF_HOLYLIGHT	(1 << 12) /* Can see in dark			*/
-#define PRF_COLOR_1	(1 << 13) /* Color (low bit)			*/
-#define PRF_COLOR_2	(1 << 14) /* Color (high bit)			*/
-#define PRF_NOWIZ	(1 << 15) /* Can't hear wizline			*/
-#define PRF_LOG1	(1 << 16) /* On-line System Log (low bit)	*/
-#define PRF_LOG2	(1 << 17) /* On-line System Log (high bit)	*/
-#define PRF_NOAUCT	(1 << 18) /* Can't hear auction channel		*/
-#define PRF_NOGOSS	(1 << 19) /* Can't hear gossip channel		*/
-#define PRF_NOGRATZ	(1 << 20) /* Can't hear grats channel		*/
-#define PRF_ROOMFLAGS	(1 << 21) /* Can see room flags (ROOM_x)	*/
-
+#define PRF_AUTOEXIT	(1 << 4)  /* Display exits in a room		*/
+#define PRF_NOHASSLE	(1 << 5)  /* Aggr mobs won't attack		*/
+#define PRF_QUEST	(1 << 6)  /* On quest				*/
+#define PRF_SUMMONABLE	(1 << 7) /* Can be summoned			*/
+#define PRF_NOREPEAT	(1 << 8) /* No repetition of comm commands	*/
+#define PRF_HOLYLIGHT	(1 << 9) /* Can see in dark			*/
+#define PRF_COLOR_1	(1 << 10) /* Color (low bit)			*/
+#define PRF_COLOR_2	(1 << 11) /* Color (high bit)			*/
+#define PRF_NOWIZ	(1 << 12) /* Can't hear wizline			*/
+#define PRF_LOG1	(1 << 13) /* On-line System Log (low bit)	*/
+#define PRF_LOG2	(1 << 14) /* On-line System Log (high bit)	*/
+#define PRF_NOAUCT	(1 << 15) /* Can't hear auction channel		*/
+#define PRF_NOGOSS	(1 << 16) /* Can't hear gossip channel		*/
+#define PRF_NOGRATZ	(1 << 17) /* Can't hear grats channel		*/
+#define PRF_ROOMFLAGS	(1 << 18) /* Can see room flags (ROOM_x)	*/
+#define PRF_AFK         (1 << 19) /* Is Away From Keyboard or AFK       */
+#define PRF_AUTOASSIST  (1 << 20) /* Player will automatically assist   */
+#define PRF_AUTOSPLIT   (1 << 21) /* Will split gold with group         */
+#define PRF_AUTOLOOT    (1 << 22) /* Will loot corpses automatically    */
+#define PRF_NOMUSIC     (1 << 23) /* Music channel La la la             */
+#define PRF_NOOUCH      (1 << 24) /* Ouch channel, that hurts...        */
+#define PRF_CLANTALK    (1 << 25) /* Can hear clan talk */
+#define PRF_AUTOGOLD    (1 << 26) /* Takes gold from corpses */
+#define PRF_PKILL	(1 << 27) /* Willing to Pkill 			*/
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
+#define NUM_AFF_FLAGS           22 // OLC - Number of affect flags
+
 #define AFF_BLIND             (1 << 0)	   /* (R) Char is blind		*/
 #define AFF_INVISIBLE         (1 << 1)	   /* Char is invisible		*/
 #define AFF_DETECT_ALIGN      (1 << 2)	   /* Char is sensitive to align*/
@@ -193,13 +242,13 @@
 #define AFF_PROTECT_GOOD      (1 << 13)	   /* Char protected from good  */
 #define AFF_SLEEP             (1 << 14)	   /* (R) Char magically asleep	*/
 #define AFF_NOTRACK	      (1 << 15)	   /* Char can't be tracked	*/
-#define AFF_UNUSED16	      (1 << 16)	   /* Room for future expansion	*/
-#define AFF_UNUSED17	      (1 << 17)	   /* Room for future expansion	*/
+#define AFF_TAMED   	      (1 << 16)	   // Char has been tamed (DAK)
+#define AFF_STATUE	      (1 << 17)	   /* Char is a statue		*/
 #define AFF_SNEAK             (1 << 18)	   /* Char can move quietly	*/
 #define AFF_HIDE              (1 << 19)	   /* Char is hidden		*/
 #define AFF_UNUSED20	      (1 << 20)	   /* Room for future expansion	*/
 #define AFF_CHARM             (1 << 21)	   /* Char is charmed		*/
-
+#define AFF_UNUSED22          (1 << 22)    /* Room for future expansion */
 
 /* Modes of connectedness: used by descriptor_data.state */
 #define CON_PLAYING	 0		/* Playing - Nominal state	*/
@@ -219,7 +268,15 @@
 #define CON_CHPWD_VRFY   14		/* Verify new password		*/
 #define CON_DELCNF1	 15		/* Delete confirmation 1	*/
 #define CON_DELCNF2	 16		/* Delete confirmation 2	*/
-
+#define CON_OEDIT	 17		/*. OLC mode - object edit     .*/
+#define CON_REDIT	 18		/*. OLC mode - room edit       .*/
+#define CON_ZEDIT	 19		/*. OLC mode - zone info edit  .*/
+#define CON_MEDIT	 20		/*. OLC mode - mobile edit     .*/
+#define CON_SEDIT	 21		/*. OLC mode - shop edit       .*/
+#define CON_QROLLSTATS   22             /* Rolling Stats                */
+#define CON_TEXTED       23             /* Text editor                  */
+#define CON_CLAN_EDIT    24		/*. Clan edit mode	       .*/
+#define CON_QRACE        25		/* Checking which race		*/
 
 /* Character equipment positions: used as index for char_data.equipment[] */
 /* NOTE: Don't confuse these constants with the ITEM_ bitvectors
@@ -250,6 +307,8 @@
 
 
 /* Item types: used by obj_data.obj_flags.type_flag */
+#define NUM_ITEM_TYPES          27      // Used by OLC
+
 #define ITEM_LIGHT      1		/* Item is a light source	*/
 #define ITEM_SCROLL     2		/* Item is a scroll		*/
 #define ITEM_WAND       3		/* Item is a wand		*/
@@ -273,9 +332,13 @@
 #define ITEM_PEN       21		/* Item is a pen		*/
 #define ITEM_BOAT      22		/* Item is a boat		*/
 #define ITEM_FOUNTAIN  23		/* Item is a fountain		*/
-
+#define ITEM_PORTAL    24		/* Item is a portal		*/
+#define ITEM_COMBINE   25		/* Item is for combining items  */
+#define ITEM_MOBSPELL  26		/* For mobs to cast spells      */
 
 /* Take/Wear flags: used by obj_data.obj_flags.wear_flags */
+#define NUM_ITEM_WEARS          15
+
 #define ITEM_WEAR_TAKE		(1 << 0)  /* Item can be takes		*/
 #define ITEM_WEAR_FINGER	(1 << 1)  /* Can be worn on finger	*/
 #define ITEM_WEAR_NECK		(1 << 2)  /* Can be worn around neck 	*/
@@ -294,6 +357,8 @@
 
 
 /* Extra object flags: used by obj_data.obj_flags.extra_flags */
+#define NUM_ITEM_FLAGS          31 // OLC moved from olc.h
+
 #define ITEM_GLOW          (1 << 0)	/* Item is glowing		*/
 #define ITEM_HUM           (1 << 1)	/* Item is humming		*/
 #define ITEM_NORENT        (1 << 2)	/* Item cannot be rented	*/
@@ -311,9 +376,24 @@
 #define ITEM_ANTI_THIEF	   (1 << 14)	/* Not usable by thieves	*/
 #define ITEM_ANTI_WARRIOR  (1 << 15)	/* Not usable by warriors	*/
 #define ITEM_NOSELL	   (1 << 16)	/* Shopkeepers won't touch it	*/
-
+#define ITEM_ANTI_MASTER   (1 << 17)    /* Not usable by masters        */
+#define ITEM_ANTI_DWARF    (1 << 18)    /* Not usable by dwarves        */
+#define ITEM_ANTI_NINJA    (1 << 19)    /* Not usable by ninja          */
+#define ITEM_ANTI_HOBBIT   (1 << 20)    /* Not usable by hobbits        */
+#define ITEM_ANTI_LOCATE   (1 << 21)    /* Not Locateable		*/
+#define ITEM_ANTI_PALADIN  (1 << 22)	/* Not usable by Paladins	*/
+#define ITEM_ANTI_VAMPYRE  (1 << 23)	/* Not usable by Vampyres	*/
+#define ITEM_ANTI_BARD     (1 << 24)	/* Not usable by Bards		*/
+#define ITEM_ANTI_SCOUT	   (1 << 25)	/* Not usable by Scouts		*/
+#define ITEM_ANTI_WOLF	   (1 << 26)
+#define ITEM_ANTI_GIANT    (1 << 27)
+#define ITEM_ANTI_GNOME    (1 << 28)
+#define ITEM_ANTI_PIXIE    (1 << 29)
+#define ITEM_ANTI_GARGOYLE (1 << 30)
 
 /* Modifier constants used with obj affects ('A' fields) */
+#define NUM_APPLIES             25      // Number of applies OLC
+
 #define APPLY_NONE              0	/* No effect			*/
 #define APPLY_STR               1	/* Apply to strength		*/
 #define APPLY_DEX               2	/* Apply to dexterity		*/
@@ -339,6 +419,7 @@
 #define APPLY_SAVING_PETRI     22	/* Apply to save throw: petrif	*/
 #define APPLY_SAVING_BREATH    23	/* Apply to save throw: breath	*/
 #define APPLY_SAVING_SPELL     24	/* Apply to save throw: spells	*/
+#define APPLY_RACE             25       /* Apply to race                */
 
 
 /* Container flags - value[1] */
@@ -349,6 +430,8 @@
 
 
 /* Some different kind of liquids for use in values of drink containers */
+#define NUM_LIQ_TYPES           16 // OLC moved from OLC.h
+
 #define LIQ_WATER      0
 #define LIQ_BEER       1
 #define LIQ_WINE       2
@@ -407,14 +490,15 @@
  * Other changes throughout the code are required.  See coding.doc for
  * details.
  */
-#define LVL_IMPL	34
-#define LVL_GRGOD	33
-#define LVL_GOD		32
-#define LVL_IMMORT	31
+#define LVL_IMPL	106
+#define LVL_CIMP	105
+#define LVL_GRGOD	104
+#define LVL_GOD		103
+#define LVL_IMMORT	102
 
 #define LVL_FREEZE	LVL_GRGOD
 
-#define NUM_OF_DIRS	6	/* number of directions in a room (nsewud) */
+#define NUM_OF_DIRS	10	/* number of directions in a room (nsewud) */
 
 #define OPT_USEC	100000	/* 10 passes per second */
 #define PASSES_PER_SEC	(1000000 / OPT_USEC)
@@ -461,7 +545,6 @@ typedef char			byte;
 typedef sh_int	room_num;
 typedef sh_int	obj_num;
 
-
 /* Extra description: used in objects, mobiles, and rooms */
 struct extra_descr_data {
    char	*keyword;                 /* Keyword in look/examine          */
@@ -493,6 +576,18 @@ struct obj_affected_type {
    sbyte modifier;     /* How much it changes by              */
 };
 
+/* Start Room Subroutines */
+struct townstart_struct
+{
+  char *shortname;
+  char *longname;
+  int loadroom;
+  int corpseroom;
+  int deathroom;
+  int minlevel;
+  char *entrychar;
+  sh_int donation;
+};
 
 /* ================== Memory Structure for Objects ================== */
 struct obj_data {
@@ -524,7 +619,8 @@ struct obj_data {
 /*                 BEWARE: Changing it will ruin rent files		   */
 struct obj_file_elem {
    obj_num item_number;
-
+   sh_int locate;  /* that's the (1+)wear-location (when equipped) or
+		      (20+)index in obj file (if it's in a container) BK */
    int	value[4];
    int	extra_flags;
    int	weight;
@@ -624,8 +720,10 @@ struct char_player_data {
    char	*long_descr;   /* for 'look'			       */
    char	*description;  /* Extra descriptions                   */
    char	*title;        /* PC / NPC's title                     */
+   char *prompt;       // PC's prompt
    byte sex;           /* PC / NPC's sex                       */
    byte class;         /* PC / NPC's class		       */
+   byte race;          /* PC / NPC's race                      */
    byte level;         /* PC / NPC's level                     */
    int	hometown;      /* PC s Hometown (zone)                 */
    struct time_data time;  /* PC's AGE in days                 */
@@ -687,6 +785,8 @@ struct char_special_data_saved {
 struct char_special_data {
    struct char_data *fighting;	/* Opponent				*/
    struct char_data *hunting;	/* Char hunted by this char		*/
+   struct char_data *riding;	// Who are they riding? (DAK)
+   struct char_data *ridden_by; // Who is riding them? (DAK)
 
    byte position;		/* Standing, fighting, sleeping, etc.	*/
 
@@ -728,17 +828,17 @@ struct player_special_data_saved {
    ubyte spare4;
    ubyte spare5;
    int spells_to_learn;		/* How many can you learn yet this level*/
-   int spare7;
+   int olc_zone;
    int spare8;
-   int spare9;
-   int spare10;
-   int spare11;
-   int spare12;
+   int clannum;			/* Index number of clan you belong to (FIDO) */
+   int extralevel;	        /* Levels "Beyond" 101 */
+   int clanrank;                /* Rank within clan */
+   int spare12;		
    int spare13;
    int spare14;
    int spare15;
    int spare16;
-   long	spare17;
+   long	classes_been;
    long	spare18;
    long	spare19;
    long	spare20;
@@ -755,6 +855,7 @@ struct player_special_data_saved {
 struct player_special_data {
    struct player_special_data_saved saved;
 
+   char afkmsgs[MAX_STRING_LENGTH];
    char	*poofin;		/* Description on arrival of a god.     */
    char	*poofout;		/* Description upon a god's exit.       */
    struct alias *aliases;	/* Character's aliases			*/
@@ -833,9 +934,11 @@ struct char_file_u {
    char	name[MAX_NAME_LENGTH+1];
    char	description[EXDSCR_LENGTH];
    char	title[MAX_TITLE_LENGTH+1];
+   char prompt[MAX_INPUT_LENGTH+1];
    byte sex;
    byte class;
    byte level;
+   byte race;
    sh_int hometown;
    time_t birth;   /* Time of birth of character     */
    int	played;    /* Number of secs played in total */
@@ -886,8 +989,10 @@ struct descriptor_data {
    int  showstr_count;		/* number of pages to page through	*/
    int  showstr_page;		/* which page are we currently showing?	*/
    char	**str;			/* for the modify-str system		*/
+   char *backstr;		/* added for handling abort buffers     */
    size_t	max_str;		/*		-			*/
    long	mail_to;		/* name for mail system			*/
+   sh_int mail_vnum;		// virtual number of obj you're mailing
    int	prompt_mode;		/* control of prompt-printing		*/
    char	inbuf[MAX_RAW_INPUT_LENGTH];  /* buffer for raw input		*/
    char	last_input[MAX_INPUT_LENGTH]; /* the last input			*/
@@ -902,6 +1007,8 @@ struct descriptor_data {
    struct descriptor_data *snooping; /* Who is this char snooping	*/
    struct descriptor_data *snoop_by; /* And who is snooping this char	*/
    struct descriptor_data *next; /* link to next descriptor		*/
+   struct olc_data *olc;	     /*. OLC info - defined in olc.h   .*/
+   char *storage;
 };
 
 
@@ -976,13 +1083,6 @@ struct weather_data {
    int	change;	/* How fast and what way does it change. */
    int	sky;	/* How is the sky. */
    int	sunlight;	/* And how much sun. */
-};
-
-
-struct title_type {
-   char	*title_m;
-   char	*title_f;
-   int	exp;
 };
 
 

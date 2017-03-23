@@ -1,7 +1,7 @@
 #0
 bug~
 a bug~
-This object is BAD!  If you see it, there must be a bug in the game.  Please
+This object is BAD!  If you see it, there must be a bug in the game.  Please
 report it immediately using the BUG command.~
 ~
 13 0 0
@@ -15,12 +15,32 @@ A pair of wings is sitting here.~
 9 0 17
 6 0 0 0
 0 0 200
+#4
+necklace power~
+a necklace of power~
+A necklace of power (VERY POWERFUL) is lying here.~
+~
+11 0 5
+0 0 0 0
+0 0 0
+A
+19 32
+A
+18 64
+A
+17 -56
+A
+17 -56
+A
+17 -56
+A
+17 -56
 #10
 waybread bread~
 a waybread~
 Some waybread has been put here.~
 ~
-19 g 1
+19 64 1
 24 0 0 0
 1 50 50
 E
@@ -28,14 +48,30 @@ waybread bread~
 The waybread is the traditional feed of elves when travelling, they
 call it lembas.  It is said to refresh the weary traveler greatly.
 ~
+#77
+staff magi~
+Staff of the Magi~
+A large glowing staff of magic lays here.~
+~
+5 33603649 8193
+0 6 6 7
+8 0 0
+A
+12 100
+A
+12 100
+A
+18 2
+A
+19 3
 #99
 scythe death~
-the Scythe of Death~
-The Scythe of Death rests heavily on the ground.~
+Scythe of Death~
+Scythe of Death lies heavily on the floor here.~
 ~
-5 cdjkmno 8193
+5 30220 8193
 0 15 15 5
-40 0 50000
+40 0 5000
 E
 scythe death~
 It is a very heavy scythe.  The grey handle is made from hard wood and the
@@ -43,4 +79,3 @@ long iron blade is completely smooth from countless years of use.  It feels
 cold to the touch.
 ~
 $~
-

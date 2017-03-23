@@ -63,6 +63,16 @@ You cackle gleefully.
 $n throws back $s head and cackles with insane glee!
 #
 
+cheer 0 0
+Yay!!!
+$n cheers wildly!
+Yay for $M!!!!
+$n cheers for $N wildly!
+$n cheers for you!!!!
+Umm.. who was that?
+You cheer for yourself!
+$n cheers wildly for $mself!!!
+
 chuckle 0 0
 You chuckle politely.
 $n chuckles politely.
@@ -217,6 +227,16 @@ frown 0 0
 What's bothering you?
 $n frowns.
 #
+
+fux 0 0
+The storm clouds brew above you.
+$n grows really angry and storm clouds surround the area.
+You throw a &b&flightning bolt&n at $M.  ZAP!
+&f&bA huge lightning bolt from $n strikes $N squarely.&n &YOUCH&n.
+&f&B$n throws a HUGE lightning bolt at you!!!&n  &ROUCH! that really DID hurt!!!!&n
+You realize there's nobody to throw a lightning bolt at.
+The storm clouds rain over you.
+A small storm cloud floats over $n, and rains all over $m.
 
 fume 1 5
 Take it easy now!  Count to ten, very slowly.
