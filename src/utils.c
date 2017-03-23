@@ -133,8 +133,8 @@ void log_death_trap(struct char_data * ch)
 
 
 /* writes a string to the log */
-/*
-void log(char *str)
+
+void basic_mud_log(char *str)
 {
   time_t ct;
   char *tmstr;
@@ -144,7 +144,7 @@ void log(char *str)
   *(tmstr + strlen(tmstr) - 1) = '\0';
   fprintf(stderr, "%-19.19s :: %s\n", tmstr, str);
 }
-*/
+
 
 /* the "touch" command, essentially. */
 int touch(char *path)

@@ -13,17 +13,13 @@
 
 extern struct weather_data weather_info;
 
-#undef log
-
-#ifdef CIRCLE_WINDOWS
 #define log(x) basic_mud_log(x)
-#endif
 
 /* public functions in utils.c */
 char	*str_dup(const char *source);
 int	str_cmp(char *arg1, char *arg2);
 int	strn_cmp(char *arg1, char *arg2, int n);
-void	log(char *str);
+void	basic_mud_log(char *str);
 int	touch(char *path);
 void	mudlog(char *str, char type, int level, byte file);
 void	log_death_trap(struct char_data *ch);
