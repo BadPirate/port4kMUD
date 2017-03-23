@@ -1,3 +1,5 @@
 config.log
 Makefile
 config.status
+*.o
+bin
