@@ -10,7 +10,7 @@ CC = gcc
 # Following two lines will enable glibc2 compiles
 # GLIBC=-Drandom=random -Dhtonl=htonl -Dntohl=ntohl
 # LIBFILES=-lcrypt
-MYFLAGS = -Wall -fno-strict-prototypes $(GLIBC)
+MYFLAGS = -Wall $(GLIBC)
 
 #flags for profiling (see hacker.doc for more information)
 PROFILE = 
