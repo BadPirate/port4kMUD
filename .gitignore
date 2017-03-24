@@ -14,8 +14,6 @@ lib/house/*.house
 misc/bugs
 misc/ideas
 misc/typos
-plralias/*
-plrobjs/*/*
 log/*
 lib/etc/*
 .killscript
