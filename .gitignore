@@ -3,12 +3,9 @@ config.log
 Makefile
 config.status
 *.o
-bin/*
-log/*
-syslog*
 badsites
 etc/board.*
-lib/pcount
+pcount
 DELETED
 lib/house/*.house
 misc/bugs
