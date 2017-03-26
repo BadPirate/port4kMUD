@@ -1011,10 +1011,10 @@ ACMD(do_stat)
 
   strcpy(home, "Other");
   if (GET_LOADROOM(k) == -1)
-    strcpy(home, townstart[0].longname);
+    strncpy(home, townstart[0].longname,strlen(townstart[0].longname));
   for(x=0; townstart[x].minlevel != -1; x++)
     if (GET_LOADROOM(k) == townstart[x].loadroom)
-      strcpy(home, townstart[x].longname);
+      strncpy(home, townstart[x].longname,strlen(townstart[0].longname));
 
   if (GET_LEVEL(ch) < LVL_IMMORT)
   {
