@@ -1,3 +1,4 @@
+syslog*
 config.cache
 config.log
 Makefile
