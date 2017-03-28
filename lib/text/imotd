@@ -1,20 +1,2 @@
-[ 08/09/00 ] All OLC commands are now just for imps, use builders port to build
-[ 08/09/00 ] Moved all the In progress zones onto the builders port
-[ 08/14/00 ] added what the FALL flag does to the descriptions in my room
-[ 08/16/00 ] Made myself a level above the rest (ego demanded it)
-[ 08/16/00 ] !RECALL also means !AUCTION and !QUIT now
-[ 08/16/00 ] Got rid of the extra space in the way set logged
-[ 08/19/00 ] Added an item type COMBINE, use oedit to make combinable items!
-[ 08/19/00 ] Added a &bflush&n command, for clearing those morts from your room
-[ 08/19/00 ] Added an item type MOBSPELL, make it load into a mobs inventory to
-             make mobs cast spells!  Use oedit to make the items!
-[ 08/26/00 ] All of you immorts have been assigned a &fQuest!&n read mortal board
-             and then immortal board for information on how they are to be run.
-[ 08/26/00 ] Changed the quest schedule, due to a date that doesn't work
-[ 08/27/00 ] Added percentage loading... WHOOPIE!
-[ 08/27/00 ] Added rcopy command, copies room your in to room you state
-[ 09/16/00 ] [Jaxom] New job!  If my title is lightbrite then i'll be demi-afk
-[ 09/23/00 ] use the &bNewbie&n channel to talk to chars levels 1-5 thanks!
-[ 10/12/00 ] People can only use &bqsay&n when one of you have the flag on now
-[ 03/04/01 ] Changed set so that gods can do more with it
 [ 06/15/01 ] &rBUILDERS PORT&n running at daggerfall.circlemud.net 5000
+[ 03/28/17 ] Holy shit, 16 years?
