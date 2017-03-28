@@ -1166,10 +1166,10 @@ ACMD(do_who)
     }
   }				/* end while (parser) */
 
-  strcpy(Imm_buf, "&vImmortals&w currently on &bDaggerfall&n\r\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\r\n");
-  strcpy(Mort_buf,"&rMortals&w currently on &bDaggerfall&n\r\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\r\n");
+  strcpy(Imm_buf, "&vImmortals&w currently on &bPort 4000&n\r\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\r\n");
+  strcpy(Mort_buf,"&rMortals&w currently on &bPort 4000&n\r\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\r\n");
 
-  strcpy(Short_buf,"People currently on &bDaggerfall&n-\r\n");
+  strcpy(Short_buf,"People currently on &bPort 4000&n-\r\n");
 /* The dagger */
   for (d = descriptor_list; d; d = d->next) {
     if (d->connected)
