@@ -431,8 +431,8 @@ void build_player_index(void)
     return;
   }
 
-  strcpy(player_cmd, "Current Players on Daggerfall:\r\n");
-  strcpy(wizlist_cmd, "Current Immortals on Daggerfall:\r\n");
+  strcpy(player_cmd, "Current Players on Port 4000:\r\n");
+  strcpy(wizlist_cmd, "Current Immortals on Port 4000:\r\n");
   for (; !feof(player_fl);) {
     fread(&dummy, sizeof(struct char_file_u), 1, player_fl);
     if (!feof(player_fl)) {	/* new record */

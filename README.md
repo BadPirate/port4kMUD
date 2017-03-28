@@ -1,6 +1,6 @@
 Some time in 1997 a MUD (Multi User Dungeon) was launched under the name “AAA Stockmud”.  It was launched by then 15 year old Kevin Lohman using the source code from [Circlemud](http://circlemud.org) patch 11 by Jeremy Ellison.  It grew a lot from there, eventually being put on a *VERY* extended hiatus when Kevin joined the Navy back in 2002.  The source was made public at that time.     And it was lost for a while.  It’s 2016, and Jaxom (Kevin Lohman) has found it again.
 
-**Daggerfall MUD is** A highly modified derivative of Circlemud which is in itself a derivative of Dikumud.  (See the license file).
+**Port 4000 MUD is** A highly modified derivative of Circlemud which is in itself a derivative of Dikumud.  (See the license file).
 
 # Build
 

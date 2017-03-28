@@ -335,7 +335,7 @@ LIGHTNING BOLT
 Usage       : cast 'lightning bolt' <victim>
 Level       : Mage - 68
 
-A lightning bolt from the sky will strike down onto the mageís victim. 
+A lightning bolt from the sky will strike down onto the mages victim. 
 This spell is more powerful than the shocking grasp spell.
 
 See also: SHOCKING GRASP
@@ -518,12 +518,12 @@ RESCUE
 Usage       : rescue <target>
 Level       : Bard - 80, Warrior - 85
 
-Player can now rescue a person in combat directing them out of harmís
+Player can now rescue a person in combat directing them out of harms
 way and tanks against the creature.
 #
 METEOR SWARM
 
-Usage       : c ëmeteor swarmí <victim>
+Usage       : c meteor swarm <victim>
 Level       : Mage - 92
 
 Player can call upon the heavens to bring down the wrath of a meteor
@@ -531,7 +531,7 @@ swarm to fall onto their enemy.
 #
 CLASS
 
-Daggerfall offers 8 different classes to choose from.  They fall into 3
+Port 4000 offers 8 different classes to choose from.  They fall into 3
 main categories:  Spellcaster, Fighter, and Nomad.
 
 Fighter:                 Spellcaster:               Nomad:          
@@ -548,7 +548,7 @@ SCOUT
 #
 RACE
 
-Here is a list of the different races offered by Daggerfall and their
+Here is a list of the different races offered by Port 4000 and their
 bonuses.
   1) Human      No Modifiers
   2) Dwarf      +2 Con +1 Str -2 Cha -1 Dex
@@ -735,7 +735,7 @@ GROUP ARMOR
 Usage       : cast 'group armor'
 Level       : Cleric - 32, Paladin - 87
 
-The group armor spell will improve your groupís AC by 20.
+The group armor spell will improve your groups AC by 20.
 #
 WARRIOR
 
