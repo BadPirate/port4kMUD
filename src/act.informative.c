@@ -1584,7 +1584,7 @@ ACMD(do_users)
       sprintf(line, format, d->desc_num, "   -   ", "UNDEFINED",
 	      state, idletime, timeptr);
 
-    if (d->host && *d->host)
+    if (*d->host)
       sprintf(line + strlen(line), "[%s]\r\n", d->host);
     else
       strcat(line, "[Hostname unknown]\r\n");
