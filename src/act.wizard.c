@@ -998,7 +998,7 @@ ACMD(do_stat)
   int i, i2;
   struct obj_data *j;
   struct char_data *k = ch;
-  char sex[20], pclass[20], home[10];
+  char sex[20], pclass[21], home[20];
 
   half_chop(argument, buf1, buf2);
 
@@ -1011,10 +1011,10 @@ ACMD(do_stat)
 
   strcpy(home, "Other");
   if (GET_LOADROOM(k) == -1)
-    strncpy(home, townstart[0].longname,strlen(townstart[0].longname));
+    strcpy(home, townstart[0].longname);
   for(x=0; townstart[x].minlevel != -1; x++)
     if (GET_LOADROOM(k) == townstart[x].loadroom)
-      strncpy(home, townstart[x].longname,strlen(townstart[0].longname));
+      strcpy(home, townstart[x].longname);
 
   if (GET_LEVEL(ch) < LVL_IMMORT)
   {
