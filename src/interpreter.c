@@ -1782,13 +1782,12 @@ void nanny(struct descriptor_data *d, char *arg)
 	SEND_TO_Q(imotd, d);
       else
 	SEND_TO_Q(motd, d);
-      counterfile  = fopen("../lib/pcount","r");
-      fscanf(counterfile, "%d", &counter);
-      sprintf(to_counter, "there have been %d connections since 6/26/98\r\n", 
-              counter);
-      SEND_TO_Q(to_counter, d);
-      fclose(counterfile);
-
+      if((counterfile  = fopen("../lib/pcount","r"))) {
+        fscanf(counterfile, "%d", &counter);
+        sprintf(to_counter, "there have been %d connections since 6/26/98\r\n", counter);
+        SEND_TO_Q(to_counter, d);
+        fclose(counterfile);
+      }
       sprintf(buf, "%s [%s] has connected.", GET_NAME(d->character), d->host);
       mudlog(buf, BRF, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE);
 
@@ -1938,14 +1937,16 @@ void nanny(struct descriptor_data *d, char *arg)
     break;
 
   case CON_MENU:		/* get selection from main menu  */
-    counterfile = fopen("../lib/pcount","r");
-    fscanf(counterfile, "%d", &counter);
-    counter++;
-    sprintf(to_counter, "%d", counter);
-    fclose(counterfile);
-    counterfile = fopen("../lib/pcount","w");
-    fputs(to_counter, counterfile);
-    fclose(counterfile);
+    if((counterfile = fopen("../lib/pcount","r"))) {
+      fscanf(counterfile, "%d", &counter);
+      counter++;
+      sprintf(to_counter, "%d", counter);
+      fclose(counterfile);
+      counterfile = fopen("../lib/pcount","w");
+      fputs(to_counter, counterfile);
+      fclose(counterfile);
+    }
+
     switch (*arg) {
     case '0':
       intrest = (GET_BANK_GOLD(d->character)*.06) *
