@@ -456,7 +456,7 @@ int Crash_load(struct char_data * ch)
   case RENT_RENTED:
     if(GET_LEVEL(ch) < LVL_IMMORT)
     {
-      sprintf(buf, "%s enters the game.\r\n", GET_NAME(ch));
+      sprintf(buf, "%s enters the game.\a\r\n", GET_NAME(ch));
       send_to_all(buf);
     }
     sprintf(buf, "%s un-renting and entering game.", GET_NAME(ch));
