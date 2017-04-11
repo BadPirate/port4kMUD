@@ -29,10 +29,10 @@
 #define IMM_LMARG "   "
 #define IMM_NSIZE  16
 #define LINE_LEN   64
-#define MIN_LEVEL LEVEL_IMMORT
+#define MIN_LEVEL LVL_IMMORT
 
 /* max level that should be in columns instead of centered */
-#define COL_LEVEL LEVEL_IMMORT
+#define COL_LEVEL LVL_IMMORT
 
 struct name_rec {
   char name[25];
