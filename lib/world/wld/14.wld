@@ -75,6 +75,8 @@ but there is little reason for the road to wander the way it does on such a
 flat field.  A little shop pops up out of the grass to the north.  The road
 itself runs in a vague west/east direction.  There is a small but well worn
 path that winds around behind the shop to the northwest.
+
+Directly to the south you hear the sound of karaoke music and brawling.
 ~
 14 16 1
 D0
@@ -86,6 +88,10 @@ D1
 ~
 ~
 0 0 1404
+D2
+~
+~
+0 0 1481
 D3
    The beginning of the yellow brick road lies to the west.    
 ~
@@ -1319,9 +1325,44 @@ D3
 0 0 174
 S
 #1481
-OPEN ROOM~
-Empty~
-14 10760 0
+Clan Daggerfall Clubhouse~
+Walking into this tavern from the bright light of the yellow brick road can be
+a bit of a shock.  Almost immediately upon opening the door you are assaulted.
+First, there is a loud his and complaint about the light from the patrons,
+followed by the sharp impact of your head on the low doorway, followed by the
+smell of peanut shells, stale beer, and spilled liquor.  If you managed to
+stumble through the doorway however, a well worn rut in the floor will drive you
+to an open seat at the bar, assuming you make the right choice at the fork and
+don't end up stumbling towards the bathroom, an easy mistake to make any time
+during the 30 minutes it takes for your eyes to adjust to the dark.
+
+Once your eyes have adjusted, you can actually look around.
+
+&gThere seems to be something scribbled into the bar here.&n
+~
+14 10776 0
+D0
+~
+~
+0 0 1403
+E
+bar~
+The once rich brown of this bar has changed over the years to an oily black.
+You look around for a bartender, but realize that the taps are all facing you,
+and when you see one of the patrons reach over and pour themselves a pint, it
+becomes clear that is how things are done around here.  The taps are all labeled
+with the image of a bicycle, and seem to come from the land of "New Belgium"
+
+In various scrawls, enscribed into the wood are the names of those who came
+before:
+
+Olaf
+MSKing
+The Firebyrd
+Xander
+
+And many more that have been worn off with time and booze.
+~
 S
 #1482
 OPEN ROOM~
