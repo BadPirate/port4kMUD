@@ -424,8 +424,9 @@ CLANRANK(ch) = 0;
 
   if (strcasecmp(subbcmd, "promote") == 0)
   {
+
     /* Clan promotions */
-    if (CLANRANK(ch) < CLAN_RULER)
+    if (CLANRANK(ch) < CLAN_RULER && GET_LEVEL(ch) < LVL_IMMORT)
     {
       send_to_char("You have insufficent rank to do that.\r\n", ch);
       return;
@@ -433,14 +434,13 @@ CLANRANK(ch) = 0;
 
     if ((vict = get_player_vis(ch, val_arg, 0)))
     {
-      if (CLANRANK(vict) > CLANRANK(ch))
+      if (CLANRANK(vict) > CLANRANK(ch) && GET_LEVEL(ch) < LVL_IMMORT)
       {
 	send_to_char("You can't promote someone who ranks higher than you!\r\n", ch);
 	return;
       }
   
-      if ((CLANRANK(vict) < CLAN_SOLDIER) || 
-		(PLAYERCLAN(vict) != PLAYERCLAN(ch)))
+      if (((CLANRANK(vict) < CLAN_SOLDIER) || (PLAYERCLAN(vict) != PLAYERCLAN(ch))) && GET_LEVEL(ch) < LVL_IMMORT)
       {
 	send_to_char("You can't promote someone who doesn't belong to your clan!\r\n", ch);
 	return;
