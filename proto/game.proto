@@ -1,8 +1,0 @@
-syntax = "proto3";
-package net.badpirate.awaygame;
-
-message Game {
-  int32 min_players = 1;
-  int32 max_players = 2;
-  string game_code = 3;
-}

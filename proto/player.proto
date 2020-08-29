@@ -1,6 +1,0 @@
-syntax = "proto3";
-package net.badpirate.awaygame;
-
-message Player {
-  map<string, Any> info = 1;
-}
