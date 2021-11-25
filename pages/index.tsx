@@ -8,7 +8,7 @@ const Home = () => (
     <RootNav>
       <Card>
         <Card.Body>
-          <Card.Title>Nextstrap</Card.Title>
+          <Card.Title><a href="https://github.com/BadPirate/nextstrap">Nextstrap</a></Card.Title>
           <Card.Text>
             A template for building full stack projects, just the way BadPirate likes it.
           </Card.Text>
