@@ -1,16 +1,23 @@
-import { Card } from 'react-bootstrap'
+import { Card, ListGroup, Nav, Navbar } from 'react-bootstrap'
+import RootNav from '../src/components/RootNav'
 
-const Home = () => {
-  return <div>
+const Home = () => <div>
+  <RootNav>
     <Card>
-      <Card.Title>
-        Get Strapped
-      </Card.Title>
       <Card.Body>
-        <a href="https://github.com/BadPirate/nextstrap">BadPirate NextStrap</a>
+        <Card.Title>Nextstrap</Card.Title>
+        <Card.Text>
+      A template for building full stack projects, just the way BadPirate likes it.
+        </Card.Text>
+        <ListGroup>
+          <ListGroup.Item>Next JS</ListGroup.Item>
+          <ListGroup.Item>Typescript</ListGroup.Item>
+          <ListGroup.Item>ESLint</ListGroup.Item>
+          <ListGroup.Item>ReactBootstrap</ListGroup.Item>
+        </ListGroup>
       </Card.Body>
     </Card>
-  </div>
-}
+  </RootNav>
+</div>
 
 export default Home
