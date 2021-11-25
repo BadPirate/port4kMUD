@@ -1,16 +1,19 @@
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Container } from 'react-bootstrap'
 
-const RootNav = ({children} : {children : JSX.Element}) =>  
+const RootNav = ({ children } : {children : JSX.Element}) => (
   <div>
     <Navbar variant="dark" bg="secondary">
-      <Navbar.Brand href="http://badpirate.net" style={{marginLeft: "1em"}}>
-      BadPirate
+      <Navbar.Brand href="/" style={{ marginLeft: '1em', textTransform: 'capitalize' }}>
+        {process.env.NEXT_PUBLIC_APP_NAME}
       </Navbar.Brand>
-      <Nav.Link href="https://github.com/BadPirate/nextstrap">Nextstrap</Nav.Link>
+      <Navbar.Text>
+        {`v${process.env.NEXT_PUBLIC_APP_VERSION}`}
+      </Navbar.Text>
     </Navbar>
-    <Container style={{marginTop: '1em'}}>
+    <Container style={{ marginTop: '1em' }}>
       {children}
     </Container>
-  </div> 
+  </div>
+)
 
 export default RootNav
