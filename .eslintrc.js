@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['next/core-web-vitals', 'airbnb', 'airbnb/hooks'],
+  extends: ['next/core-web-vitals', 'airbnb', 'plugin:react/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -29,6 +29,6 @@ module.exports = {
       unnamedComponents: 'arrow-function',
     }],
     'react/react-in-jsx-scope': 0,
-    'import/extensions': ['error', 'always', { tsx: 'never', js: 'never' }],
+    'import/extensions': ['error', 'always', { tsx: 'never', js: 'never', ts: 'never' }],
   },
 }
