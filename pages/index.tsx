@@ -1,27 +1,10 @@
-import {
-  Card, ListGroup,
-} from 'react-bootstrap'
-import RootNav from '../src/components/RootNav'
+import Page from '../src/components/Page'
+import WelcomeCard from '../src/cards/WelcomeCard'
 
-const Home = () => (
-  <div>
-    <RootNav>
-      <Card>
-        <Card.Body>
-          <Card.Title><a href="https://github.com/BadPirate/nextstrap">Nextstrap</a></Card.Title>
-          <Card.Text>
-            A template for building full stack projects, just the way BadPirate likes it.
-          </Card.Text>
-          <ListGroup>
-            <ListGroup.Item>Next JS</ListGroup.Item>
-            <ListGroup.Item>Typescript</ListGroup.Item>
-            <ListGroup.Item>ESLint</ListGroup.Item>
-            <ListGroup.Item>ReactBootstrap</ListGroup.Item>
-          </ListGroup>
-        </Card.Body>
-      </Card>
-    </RootNav>
-  </div>
+const Index = () => (
+  <Page title="Welcome to Campfire">
+    <WelcomeCard />
+  </Page>
 )
 
-export default Home
+export default Index
