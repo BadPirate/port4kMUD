@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import NextAuth from 'next-auth'
+import CredentialsProvider from 'next-auth/providers/credentials'
 
 type ProfileData = {
   sub: string,
@@ -14,8 +15,31 @@ type ProfileData = {
   exp: number
 }
 
+// Enable a simple credentials-based login when TEST_MODE is true (e.g., during Playwright tests)
+const isTestMode = process.env.TEST_MODE === 'true'
+// Provide a default secret for NextAuth (override via NEXTAUTH_SECRET in production)
+const authSecret = process.env.NEXTAUTH_SECRET || 'test-secret'
+
 export default NextAuth({
-  providers: [
+  secret: authSecret,
+  providers: isTestMode ? [
+    // Credentials provider for test mode: accepts any email/password, returns a user with id and name set to password
+    CredentialsProvider({
+      id: 'GarageAuth',
+      name: 'TestLogin',
+      credentials: {
+        email: { label: 'Email', type: 'text', placeholder: 'you@example.com' },
+        password: { label: 'Password', type: 'text', placeholder: 'test password' }
+      },
+      async authorize(credentials: any) {
+        if (credentials && credentials.email && credentials.password) {
+          return { id: credentials.password, name: credentials.password, email: credentials.email }
+        }
+        return null
+      }
+    })
+  ] : [
+    // Standard OAuth provider
     {
       id: 'campfire',
       name: 'GarageAuth',
