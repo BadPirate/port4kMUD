@@ -7,7 +7,7 @@ const RootNav = ({ children } : {children : React.ReactNode}) => (
   <div>
     <Navbar variant="dark" bg="secondary">
       <Navbar.Brand href="/" style={{ marginLeft: '1em', textTransform: 'capitalize' }}>
-        {process.env.NEXT_PUBLIC_APP_NAME}
+        {process.env.NEXT_PUBLIC_APP_NAME || 'nextstrap'}
       </Navbar.Brand>
       <span className="ms-auto me-3">
         <WithSession
