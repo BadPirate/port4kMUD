@@ -17,13 +17,11 @@ test('navbar is visible and displays app name', async ({ page }) => {
 test.describe('authentication UI', () => {
   test('shows login button when unauthenticated', async ({ page }) => {
     // Mock session as unauthenticated
-    await page.route('**/api/auth/session', route =>
-      route.fulfill({
-        status: 200,
-        contentType: 'application/json',
-        body: JSON.stringify({ status: 'unauthenticated', data: null }),
-      })
-    )
+    await page.route('**/api/auth/session', (route) => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({ status: 'unauthenticated', data: null }),
+    }))
     await page.goto('/')
     const loginBtn = page.getByRole('button', { name: 'Login' })
     await expect(loginBtn).toBeVisible()
@@ -35,13 +33,11 @@ test.describe('authentication UI', () => {
       user: { name: 'Test User' },
       expires: new Date(Date.now() + 3600 * 1000).toISOString(),
     }
-    await page.route('**/api/auth/session', route =>
-      route.fulfill({
-        status: 200,
-        contentType: 'application/json',
-        body: JSON.stringify({ status: 'authenticated', data: fakeSession }),
-      })
-    )
+    await page.route('**/api/auth/session', (route) => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({ status: 'authenticated', data: fakeSession }),
+    }))
     await page.goto('/')
     const logoutBtn = page.getByRole('button', { name: 'Test User' })
     await expect(logoutBtn).toBeVisible()

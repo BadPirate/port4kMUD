@@ -23,21 +23,22 @@ const authSecret = process.env.NEXTAUTH_SECRET || 'test-secret'
 export default NextAuth({
   secret: authSecret,
   providers: isTestMode ? [
-    // Credentials provider for test mode: accepts any email/password, returns a user with id and name set to password
+    // Credentials provider for test mode: accepts any email/password,
+    // returns a user with id and name set to password
     CredentialsProvider({
       id: 'GarageAuth',
       name: 'TestLogin',
       credentials: {
         email: { label: 'Email', type: 'text', placeholder: 'you@example.com' },
-        password: { label: 'Password', type: 'text', placeholder: 'test password' }
+        password: { label: 'Password', type: 'text', placeholder: 'test password' },
       },
       async authorize(credentials: any) {
         if (credentials && credentials.email && credentials.password) {
           return { id: credentials.password, name: credentials.password, email: credentials.email }
         }
         return null
-      }
-    })
+      },
+    }),
   ] : [
     // Standard OAuth provider
     {
