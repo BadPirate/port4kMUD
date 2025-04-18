@@ -49,14 +49,34 @@ Feel free to fork for your own project if want to make a quick web project based
 ## Theme
 
 This project uses React-Bootstrap for UI components and is styled with the [Cyborg](https://bootswatch.com/cyborg/) theme. The compiled CSS is located at `styles/bootstrap.min.css`. To use a different theme, replace this file with your theme's minified CSS.
- 
+
 ## Authentication
- 
+
 This branch provides a base [NextAuth.js](https://next-auth.js.org/) with a custom OAuth provider.
- 
+
 - Click the **Login** button in the navigation bar to sign in.
 - After signing in, your name is displayed and the button becomes **Logout**.
 - The `SessionProvider` in `pages/_app.tsx` wraps your application and provides session context.
 - Use the `useSession` hook or the `WithSession` component (`src/components/WithSession.tsx`) to render content based on authentication status.
- 
+
 Configuration for the OAuth provider is located in `pages/api/auth/[...nextauth].tsx`. Update the `issuer`, `clientId`, `clientSecret`, and `wellKnown` URLs as needed.
+
+## Testing
+
+This project includes an end-to-end test suite powered by [Playwright Test](https://playwright.dev).
+
+- Tests are located in the `tests/` directory, with configuration in `playwright.config.ts`.
+- Browser binaries can be installed (or shared) via:
+  ```bash
+  npx playwright install
+  ```
+- Run the full suite with:
+  ```bash
+  yarn test
+  ```
+  (alias for `npx playwright test`, which will automatically start the local dev server on port 3000)
+- Common flags:
+  - `--headed` to view browsers during tests
+  - `--debug` to launch the interactive inspector
+  - `--project=chromium|firefox|webkit` to target a specific browser
+- ESLint is configured to allow devDependencies in test files (via an override in `.eslintrc.js`), so imports from `@playwright/test` won’t trigger extraneous-dependencies errors.

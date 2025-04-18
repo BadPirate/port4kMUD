@@ -31,4 +31,13 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/extensions': ['error', 'always', { tsx: 'never', js: 'never', ts: 'never' }],
   },
+  // Allow devDependencies (e.g., Playwright) in test files without extraneous-dependencies errors
+  overrides: [
+    {
+      files: ['tests/**/*.{js,jsx,ts,tsx}'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 }
