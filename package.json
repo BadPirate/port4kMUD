@@ -3,11 +3,11 @@
   "version": "2025.1.31",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 127.0.0.1",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "playwright test"
+    "test": "playwright install && playwright test"
   },
   "dependencies": {
     "jquery": "^3.7.1",
