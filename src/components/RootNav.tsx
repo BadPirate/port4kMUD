@@ -22,7 +22,7 @@ const RootNav = ({ children }: { children: React.ReactNode }) => {
               </Button>
             )}
             unauthenticated={(
-              <Button onClick={() => { signIn('GarageAuth', { callbackUrl: '/' }) }}>
+              <Button onClick={() => { signIn('unified', { callbackUrl: '/' }) }}>
                 Login
               </Button>
             )}

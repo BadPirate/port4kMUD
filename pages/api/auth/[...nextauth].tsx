@@ -26,8 +26,9 @@ export default NextAuth({
     // Credentials provider for test mode: accepts any email/password,
     // returns a user with id and name set to password
     CredentialsProvider({
-      id: 'GarageAuth',
-      name: 'TestLogin',
+      // Use project name as provider id to allow direct signIn redirect
+      id: 'nextstrap',
+      name: 'TestAuth',
       credentials: {
         email: { label: 'Email', type: 'text', placeholder: 'you@example.com' },
         password: { label: 'Password', type: 'text', placeholder: 'test password' },
@@ -42,7 +43,8 @@ export default NextAuth({
   ] : [
     // Standard OAuth provider
     {
-      id: 'campfire',
+      // Use project name as provider id for direct signIn
+      id: 'nextstrap',
       name: 'GarageAuth',
       type: 'oauth',
       version: '2.0',
