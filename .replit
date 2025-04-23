@@ -38,6 +38,15 @@ mode = "sequential"
 task = "shell.exec"
 args = "yarn lint"
 
+[[workflows.workflow]]
+name = "Coverage"
+mode = "sequential"
+author = 41832294
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "yarn test:coverage"
+
 [[ports]]
 localPort = 3000
 externalPort = 80
