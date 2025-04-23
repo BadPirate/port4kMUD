@@ -4,8 +4,16 @@ import { SessionProvider } from 'next-auth/react'
 import RootNav from '../src/components/RootNav'
 
 describe('Navigation', () => {
+  beforeEach(() => {
+    process.env.NEXT_PUBLIC_APP_NAME = 'nextstrap'
+  })
+
   test('navbar displays app name', () => {
-    render(<RootNav>Test</RootNav>)
+    render(
+      <SessionProvider session={null}>
+        <RootNav>Test</RootNav>
+      </SessionProvider>
+    )
     const brand = screen.getByRole('link', { name: /nextstrap/i })
     expect(brand).toBeInTheDocument()
   })

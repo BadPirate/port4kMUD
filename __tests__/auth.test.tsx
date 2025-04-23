@@ -2,6 +2,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { signIn } from 'next-auth/react'
 import { SessionProvider } from 'next-auth/react'
+import RootNav from '../src/components/RootNav'
 
 jest.mock('next-auth/react', () => ({
   ...jest.requireActual('next-auth/react'),
