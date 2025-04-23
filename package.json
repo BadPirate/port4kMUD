@@ -3,20 +3,17 @@
   "version": "2025.1.31",
   "private": true,
   "scripts": {
-    "db:up": "docker compose -f docker-compose.dev.yml up -d",
-    "db:down": "docker compose -f docker-compose.dev.yml down -v",
-    "dev": "yarn db:up && npx wait-on tcp:localhost:5432 && DATABASE_URL=postgresql://postgres:postgres@localhost:5432/nextstrap_dev?schema=public yarn prisma generate && npx wait-on tcp:localhost:5432 && DATABASE_URL=postgresql://postgres:postgres@localhost:5432/nextstrap_dev?schema=public yarn prisma db push && DATABASE_URL=postgresql://postgres:postgres@localhost:5432/nextstrap_dev?schema=public SMTP_HOST=localhost SMTP_PORT=1025 NEXTAUTH_URL=http://localhost:3000 next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
     "prisma:generate": "prisma generate",
-    "postinstall": "playwright install",
-    "test:up": "docker compose -f docker-compose.test.yml up -d db mailhog test-server && npx wait-on tcp:localhost:3000",
-    "test:e2e": "npx playwright test --forbid-only --max-failures=1",
-    "test:down": "docker compose -f docker-compose.test.yml down -v",
-    "test": "bash scripts/test-all.sh"
+    "db:up": "node scripts/setup-test-db.js",
+    "db:down": "rm -f test.db*",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "jquery": "^3.7.1",
@@ -45,12 +42,17 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "@playwright/test": "^1.35.0",
-    "playwright": "^1.35.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@types/jest": "^29.5.0",
     "typescript": "^5.8.3",
     "prisma": "^6.6.0",
-    "concurrently": "^8.2.1",
-    "wait-on": "^7.0.1"
+    "wait-on": "^7.0.1",
+    "better-sqlite3": "^8.0.0",
+    "smtp-tester": "^2.0.1"
   },
   "resolutions": {
     "eslint-plugin-react-hooks": "5.1.0"
