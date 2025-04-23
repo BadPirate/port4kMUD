@@ -11,7 +11,16 @@ jest.mock('next-auth/react', () => ({
 }))
 
 describe('Authentication', () => {
-  test('allows login via button click', async () => {
+  beforeEach(() => {
+    process.env.NEXT_PUBLIC_TEST_MODE = 'false'
+  })
+
+  afterEach(() => {
+    delete process.env.NEXT_PUBLIC_TEST_MODE
+    jest.clearAllMocks()
+  })
+
+  test('allows login via button click in normal mode', async () => {
     const mockSignIn = signIn as jest.Mock
     
     render(
@@ -19,6 +28,29 @@ describe('Authentication', () => {
         <RootNav>Test</RootNav>
       </SessionProvider>
     )
+
+
+
+  test('allows login via button click in test mode', async () => {
+    const mockSignIn = signIn as jest.Mock
+    process.env.NEXT_PUBLIC_TEST_MODE = 'true'
+    
+    render(
+      <SessionProvider session={null}>
+        <RootNav>Test</RootNav>
+      </SessionProvider>
+    )
+
+    const loginBtn = screen.getByRole('button', { name: /login/i })
+    fireEvent.click(loginBtn)
+
+    expect(mockSignIn).toHaveBeenCalledWith(
+      'email',
+      expect.objectContaining({
+        callbackUrl: '/'
+      })
+    )
+  })
 
     const loginBtn = screen.getByRole('button', { name: /login/i })
     fireEvent.click(loginBtn)

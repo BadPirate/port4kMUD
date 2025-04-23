@@ -6,9 +6,26 @@ import RootNav from '../src/components/RootNav'
 describe('Navigation', () => {
   beforeEach(() => {
     process.env.NEXT_PUBLIC_APP_NAME = 'nextstrap'
+    process.env.NEXT_PUBLIC_TEST_MODE = 'false'
   })
 
-  test('navbar displays app name', () => {
+  afterEach(() => {
+    delete process.env.NEXT_PUBLIC_APP_NAME
+    delete process.env.NEXT_PUBLIC_TEST_MODE
+  })
+
+  test('navbar displays default app name when not set', () => {
+    delete process.env.NEXT_PUBLIC_APP_NAME
+    render(
+      <SessionProvider session={null}>
+        <RootNav>Test</RootNav>
+      </SessionProvider>
+    )
+    const brand = screen.getByRole('link', { name: /nextstrap/i })
+    expect(brand).toBeInTheDocument()
+  })
+
+  test('navbar displays capitalized app name', () => {
     render(
       <SessionProvider session={null}>
         <RootNav>Test</RootNav>
