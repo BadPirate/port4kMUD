@@ -3,6 +3,7 @@ run = "npm run dev"
 
 [nix]
 channel = "stable-24_05"
+packages = ["chromium", "xvfb-run", "playwright-driver"]
 
 [deployment]
 run = ["sh", "-c", "npm run dev"]
