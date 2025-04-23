@@ -1,27 +1,21 @@
+/* eslint-disable no-unused-vars */
 import { useSession } from 'next-auth/react'
-import { Spinner } from 'react-bootstrap'
-import { Session } from 'next-auth'
+import type { Session } from 'next-auth'
+import type { ReactNode } from 'react'
 
 type BodyOptions = {
-  // eslint-disable-next-line no-unused-vars
-  authenticated: (session: Session) => React.ReactNode,
-  loading?: React.ReactNode,
-  unauthenticated: React.ReactNode
+  authenticated: (_session: Session) => ReactNode
+  unauthenticated: ReactNode
 }
 
-const WithSession = ({ authenticated, loading, unauthenticated }: BodyOptions) => {
-  const { data: session, status } = useSession()
-  return (
-    <>
-      { status === 'loading' ? loading : null }
-      { status === 'unauthenticated' ? unauthenticated : null }
-      { status === 'authenticated' ? authenticated(session) : null }
-    </>
-  )
+const WithSession = ({ authenticated, unauthenticated }: BodyOptions) => {
+  const { data, status } = useSession()
+  // Show authenticated content when session exists; else show unauthenticated
+  return (status === 'authenticated' && data)
+    ? authenticated(data)
+    : unauthenticated
 }
 
-WithSession.defaultProps = {
-  loading: <Spinner />,
-}
+// No loading state in this simplified version
 
 export default WithSession

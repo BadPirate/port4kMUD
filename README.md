@@ -30,20 +30,25 @@ Feel free to fork for your own project if want to make a quick web project based
    }
    ```
 
-3. Create a `.env.local` file in the project root with the following environment variables:
+3. Create a `.env.local` file in the project root by copying the example and customizing as needed:
 
-   ```
-   NEXT_PUBLIC_APP_NAME=MyCoolNextProject
-   NEXTAUTH_URL=http://localhost:3000
-   GARAGE_AUTH_CLIENT_ID=your_garage_auth_client_id
-   GARAGE_AUTH_CLIENT_SECRET=your_garage_auth_client_secret
+   ```bash
+   cp .env.local.example .env.local
+   # Edit .env.local to set your values for:
+   # DATABASE_URL, NEXTAUTH_SECRET, NEXTPUBLIC_APP_NAME,
+   # SMTP_HOST, SMTP_PORT, EMAIL_FROM, GARAGE_AUTH_CLIENT_ID, etc.
    ```
 
-4. Install dependencies and start the development server:
+4. Install dependencies, bring up Docker services, and start the development server:
 
    ```bash
    yarn install
-   yarn dev
+   yarn db:up      # start Postgres & MailHog via Docker Compose
+   yarn dev        # starts Next.js (connects to above services)
+   ```
+   When finished, you can shut down the services:
+   ```bash
+   yarn db:down
    ```
 
 ## Theme
@@ -66,17 +71,22 @@ Configuration for the OAuth provider is located in `pages/api/auth/[...nextauth]
 This project includes an end-to-end test suite powered by [Playwright Test](https://playwright.dev).
 
 - Tests are located in the `tests/` directory, with configuration in `playwright.config.ts`.
-- Browser binaries can be installed (or shared) via:
-  ```bash
-  npx playwright install
-  ```
 - Run the full suite with:
   ```bash
   yarn test
   ```
-  (alias for `npx playwright test`, which will automatically start the local dev server on port 3000)
-- Common flags:
-  - `--headed` to view browsers during tests
-  - `--debug` to launch the interactive inspector
-  - `--project=chromium|firefox|webkit` to target a specific browser
-- ESLint is configured to allow devDependencies in test files (via an override in `.eslintrc.js`), so imports from `@playwright/test` won’t trigger extraneous-dependencies errors.
+  This will:
+  - install Playwright browsers (`npx playwright install`)
+  - spin up the app in test mode (SQLite + mock email provider)
+  - run all navigation and email-login tests
+
+### System dependencies for Playwright
+Before running tests, ensure the required libraries are installed on your system.
+On Debian/Ubuntu, for example:
+```bash
+sudo apt-get update && sudo apt-get install -y \
+  libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
+  libx11-6 libxcomposite1 libxdamage1 libxext6 libxfixes3 libxrandr2 \
+  libgbm1 libasound2 libcairo2 libpulse0 libvulkan1
+```
+Refer to https://playwright.dev/docs/ci#install-dependencies for other platforms.

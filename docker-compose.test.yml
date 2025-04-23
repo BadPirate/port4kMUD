@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: nextstrap_test_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nextstrap_test
+    volumes:
+      - nextstrap_test_db:/var/lib/postgresql/data
+    # Map default Postgres port for test environment
+    ports:
+      - "5432:5432"
+
+  mailhog:
+    container_name: nextstrap_test_mailhog
+    image: mailhog/mailhog:latest
+    platform: linux/amd64
+    restart: unless-stopped
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+
+  test-server:
+    image: node:20-bullseye
+    container_name: nextstrap_test_server
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "yarn prisma generate --schema=prisma/schema.prisma && yarn prisma db push --schema=prisma/schema.prisma && npx next dev -H 0.0.0.0 -p 3000"
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@db:5432/nextstrap_test?schema=public"
+      SMTP_HOST: mailhog
+      SMTP_PORT: '1025'
+      NEXTAUTH_URL: http://localhost:3000
+      TEST_MODE: 'true'
+      NEXT_PUBLIC_TEST_MODE: 'true'
+      NEXT_PUBLIC_APP_NAME: nextstrap
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+      - mailhog
+
+  # test-runner removed; tests will run via host Playwright CLI
+
+volumes:
+  nextstrap_test_db:

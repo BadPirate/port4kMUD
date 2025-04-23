@@ -34,3 +34,4 @@ yarn-error.log*
 .vercel
 tsconfig.tsbuildinfo
 test-results
+dev-test.db

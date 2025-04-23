@@ -17,12 +17,19 @@ const RootNav = ({ children }: { children: React.ReactNode }) => {
           <WithSession
             // eslint-disable-next-line react/no-unstable-nested-components
             authenticated={(session) => (
-              <Button onClick={() => { signOut() }}>
-                {session.user?.name ?? 'Logout'}
+              <Button onClick={() => signOut()}>
+                {session.user?.name ?? session.user?.email ?? 'Logout'}
               </Button>
             )}
             unauthenticated={(
-              <Button onClick={() => { signIn('unified', { callbackUrl: '/' }) }}>
+              <Button
+                onClick={() => {
+                  const provider = process.env.NEXT_PUBLIC_TEST_MODE === 'true'
+                    ? 'email'
+                    : 'nextstrap'
+                  signIn(provider, { callbackUrl: '/' })
+                }}
+              >
                 Login
               </Button>
             )}
