@@ -13,7 +13,8 @@
     "db:up": "node scripts/setup-test-db.js",
     "db:down": "rm -f test.db*",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "jquery": "^3.7.1",
