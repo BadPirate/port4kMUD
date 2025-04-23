@@ -1,21 +1,22 @@
-import { Card } from 'react-bootstrap'
+
+import { Card, CardBody, CardTitle } from 'react-bootstrap'
 
 const WelcomeCard = () => (
   <Card>
-    <Card.Body>
-      <Card.Title>Welcome to Nextstrap</Card.Title>
-      <Card.Text>
-        <strong>This template includes:</strong>
+    <CardBody>
+      <CardTitle>Welcome to Nextstrap</CardTitle>
+      <p className="card-text">
+        <strong>A Next.js template with Bootstrap and authentication.</strong>
+      </p>
+      <div className="features">
         <ul>
-          <li>Next.js</li>
-          <li>TypeScript</li>
-          <li>ESLint with Airbnb config</li>
-          <li>React-Bootstrap (Cyborg theme)</li>
-          <li>NextAuth.js authentication</li>
-          <li>Playwright end-to-end testing</li>
+          <li>Next.js 13+ with React 18+</li>
+          <li>Bootstrap 5 styling</li>
+          <li>Built-in authentication</li>
+          <li>TypeScript support</li>
         </ul>
-      </Card.Text>
-    </Card.Body>
+      </div>
+    </CardBody>
   </Card>
 )
 
