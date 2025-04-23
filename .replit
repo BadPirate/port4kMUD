@@ -9,7 +9,7 @@ packages = ["chromium", "xvfb-run", "playwright-driver"]
 run = ["sh", "-c", "npm run dev"]
 
 [workflows]
-runButton = "Test"
+runButton = "Dev"
 
 [[workflows.workflow]]
 name = "Test"
