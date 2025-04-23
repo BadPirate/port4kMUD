@@ -29,7 +29,16 @@ describe('Authentication', () => {
       </SessionProvider>
     )
 
+    const loginBtn = screen.getByRole('button', { name: /login/i })
+    fireEvent.click(loginBtn)
 
+    expect(mockSignIn).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        callbackUrl: '/'
+      })
+    )
+  })
 
   test('allows login via button click in test mode', async () => {
     const mockSignIn = signIn as jest.Mock
@@ -46,17 +55,6 @@ describe('Authentication', () => {
 
     expect(mockSignIn).toHaveBeenCalledWith(
       'email',
-      expect.objectContaining({
-        callbackUrl: '/'
-      })
-    )
-  })
-
-    const loginBtn = screen.getByRole('button', { name: /login/i })
-    fireEvent.click(loginBtn)
-
-    expect(mockSignIn).toHaveBeenCalledWith(
-      expect.any(String),
       expect.objectContaining({
         callbackUrl: '/'
       })
