@@ -9,7 +9,7 @@ packages = ["chromium", "xvfb-run", "playwright-driver"]
 run = ["sh", "-c", "npm run dev"]
 
 [workflows]
-runButton = "Test"
+runButton = "Dev"
 
 [[workflows.workflow]]
 name = "Test"
@@ -28,6 +28,15 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "yarn dev"
+
+[[workflows.workflow]]
+name = "Unit Tests"
+author = 41832294
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "yarn jest"
 
 [[ports]]
 localPort = 3000
