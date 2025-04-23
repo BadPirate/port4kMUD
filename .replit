@@ -20,6 +20,15 @@ mode = "sequential"
 task = "shell.exec"
 args = "yarn test"
 
+[[workflows.workflow]]
+name = "Dev"
+author = 41832294
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "yarn dev"
+
 [[ports]]
 localPort = 3000
 externalPort = 80
