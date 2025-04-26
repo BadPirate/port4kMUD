@@ -1,0 +1,10 @@
+node_modules/
+.next/
+schema.dump
+schema.sqlite.sql
+scripts/
+public/
+attached_assets/
+**/.eslintrc.js
+jest.config.js
+jest.setup.js
