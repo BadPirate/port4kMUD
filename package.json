@@ -22,7 +22,7 @@
     "@prisma/client": "6.6.0",
     "bootstrap": "^5.3.2",
     "dotenv": "^16.5.0",
-    "next": "^13.4.0",
+    "next": "^14.2.26",
     "pg": "^8.11.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
