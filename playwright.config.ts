@@ -13,7 +13,7 @@ const configPromise: Promise<PlaywrightTestConfig> = (async () => {
     retries: 2,
     outputDir: 'test-results/',
     webServer: {
-      command: 'npm run dev',
+      command: 'yarn dev',
       url: baseURL,
       timeout: 120 * 1000,
       reuseExistingServer: !process.env.CI,
