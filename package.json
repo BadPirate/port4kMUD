@@ -11,8 +11,8 @@
     "test:e2e": "yarn playwright test",
     "typecheck": "tsc --noEmit",
     "lint": "echo '\n=== RUNNING PRETTIER ===\n' && prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss,html}\" && echo '\n=== RUNNING ESLINT ===\n' && eslint -c .eslintrc.js . --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0 && echo '\n=== RUNNING TYPESCRIPT TYPE CHECK ===\n' && tsc --noEmit || (echo '\n⚠️  Linting or type-checking failed. Please fix errors before committing.\n' && exit 1)",
-    "db:up": "rm -f funey.db && cat schema.sqlite.sql | sqlite3 funey.db",
-    "db:down": "rm -f funey.db",
+    "db:up": "rm -f dev.db && cat schema.sqlite.sql | sqlite3 dev.db",
+    "db:down": "rm -f dev.db",
     "db:clean": "yarn build:prisma-schemas && node scripts/db-clean.js",
     "build:prisma-schemas": "node scripts/build-schemas.js",
     "prepare": "husky"
@@ -22,14 +22,11 @@
     "@prisma/client": "6.6.0",
     "bootstrap": "^5.3.2",
     "dotenv": "^16.5.0",
-    "moment": "^2.29.4",
     "next": "^13.4.0",
     "pg": "^8.11.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-    "sha256": "^0.2.0",
-    "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
