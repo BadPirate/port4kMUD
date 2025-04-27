@@ -17,3 +17,19 @@ lib/etc/*
 .killscript
 nohup.out
 .vscode
+
+# Build output
+/bin/
+
+# Generated files in src
+/src/Makefile
+/src/config.h
+/src/make.log
+
+# Potentially generated world index
+/lib/world/index
+
+# Potential runtime status file
+/status
+lib/text/clan/normal.clan
+lib/etc/players

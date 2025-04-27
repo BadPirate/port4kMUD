@@ -58,6 +58,9 @@ SHELL=${CONFIG_SHELL-/bin/sh}
 # Maximum number of lines to put in a shell here document.
 ac_max_here_lines=12
 
+# Add the gnu89 standard flag for compatibility with older C code
+CFLAGS="$CFLAGS -std=gnu89"
+
 ac_prev=
 for ac_option
 do
@@ -247,11 +250,7 @@ EOF
     no_recursion=yes ;;
 
   -oldincludedir | --oldincludedir | --oldincludedi | --oldincluded \
-  | --oldinclude | --oldinclud | --oldinclu | --oldincl | --oldinc \
-  | --oldin | --oldi | --old | --ol | --o)
-    ac_prev=oldincludedir ;;
-  -oldincludedir=* | --oldincludedir=* | --oldincludedi=* | --oldincluded=* \
-  | --oldinclude=* | --oldinclud=* | --oldinclu=* | --oldincl=* | --oldinc=* \
+  | --oldinclude | --oldinclud=* | --oldinclu=* | --oldincl=* | --oldinc=* \
   | --oldin=* | --oldi=* | --old=* | --ol=* | --o=*)
     oldincludedir="$ac_optarg" ;;
 
@@ -279,14 +278,6 @@ EOF
   | --program-transform-n | --program-transform- \
   | --program-transform | --program-transfor \
   | --program-transfo | --program-transf \
-  | --program-trans | --program-tran \
-  | --progr-tra | --program-tr | --program-t)
-    ac_prev=program_transform_name ;;
-  -program-transform-name=* | --program-transform-name=* \
-  | --program-transform-nam=* | --program-transform-na=* \
-  | --program-transform-n=* | --program-transform-=* \
-  | --program-transform=* | --program-transfor=* \
-  | --program-transfo=* | --program-transf=* \
   | --program-trans=* | --program-tran=* \
   | --progr-tra=* | --program-tr=* | --program-t=*)
     program_transform_name="$ac_optarg" ;;
@@ -302,11 +293,6 @@ EOF
     sbindir="$ac_optarg" ;;
 
   -sharedstatedir | --sharedstatedir | --sharedstatedi \
-  | --sharedstated | --sharedstate | --sharedstat | --sharedsta \
-  | --sharedst | --shareds | --shared | --share | --shar \
-  | --sha | --sh)
-    ac_prev=sharedstatedir ;;
-  -sharedstatedir=* | --sharedstatedir=* | --sharedstatedi=* \
   | --sharedstated=* | --sharedstate=* | --sharedstat=* | --sharedsta=* \
   | --sharedst=* | --shareds=* | --shared=* | --share=* | --shar=* \
   | --sha=* | --sh=*)
@@ -323,9 +309,6 @@ EOF
     srcdir="$ac_optarg" ;;
 
   -sysconfdir | --sysconfdir | --sysconfdi | --sysconfd | --sysconf \
-  | --syscon | --sysco | --sysc | --sys | --sy)
-    ac_prev=sysconfdir ;;
-  -sysconfdir=* | --sysconfdir=* | --sysconfdi=* | --sysconfd=* | --sysconf=* \
   | --syscon=* | --sysco=* | --sysc=* | --sys=* | --sy=*)
     sysconfdir="$ac_optarg" ;;
 
@@ -368,16 +351,10 @@ EOF
     with_x=yes ;;
 
   -x-includes | --x-includes | --x-include | --x-includ | --x-inclu \
-  | --x-incl | --x-inc | --x-in | --x-i)
-    ac_prev=x_includes ;;
-  -x-includes=* | --x-includes=* | --x-include=* | --x-includ=* | --x-inclu=* \
   | --x-incl=* | --x-inc=* | --x-in=* | --x-i=*)
     x_includes="$ac_optarg" ;;
 
   -x-libraries | --x-libraries | --x-librarie | --x-librari \
-  | --x-librar | --x-libra | --x-libr | --x-lib | --x-li | --x-l)
-    ac_prev=x_libraries ;;
-  -x-libraries=* | --x-libraries=* | --x-librarie=* | --x-librari=* \
   | --x-librar=* | --x-libra=* | --x-libr=* | --x-lib=* | --x-li=* | --x-l=*)
     x_libraries="$ac_optarg" ;;
 

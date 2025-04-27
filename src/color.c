@@ -11,6 +11,8 @@
 ************************************************************************ */
 
 #include "conf.h"
+#include <stdio.h>
+#include <string.h>
 
 #define CNRM  "\x1B[0;0m"
 #define CBLK  "\x1B[0;0m"
