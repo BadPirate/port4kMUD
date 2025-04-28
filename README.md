@@ -20,6 +20,22 @@ Feel free to fork for your own project if want to make a quick web project based
 - **Prettier for Code Formatting**: Enforces consistent code style.
 - **TypeScript Strict Mode**: Ensures type safety with strict mode enabled.
 - **Custom Prisma Schema Generation**: Scripts for dynamic schema generation for multiple database providers.
+- **Customizable Bootstrap Theme**: Easily swap Bootswatch themes by replacing a single CSS file.
+-
+
+## Features added to improve quality and assist with Agentic usage
+
+AI can be difficult to work with without strict quality enforcement (so that it doesn't add a bunch of tech debt along side the features)
+
+- **Strict ESLint and Prettier Integration**: Enforces Airbnb, TypeScript, and Next.js linting rules, with Prettier for formatting and a no-semicolons style.
+- **TypeScript Strict Mode**: TypeScript is configured in strict mode for maximum type safety.
+- **Automated Prisma Schema Generation**: Scripts for dynamic schema generation for multiple database providers (SQLite, PostgreSQL).
+- **End-to-End and Unit Testing Setup**: Playwright for E2E tests (with auto server start), Jest for unit tests, and Testing Library utilities preconfigured.
+- **Environment Variable Management**: Uses dotenv for local environment configuration.
+- **Husky and Lint-Staged**: Pre-commit hooks for linting, formatting, and type-checking before every commit.
+- **Modern Project Structure**: Separation of concerns with `src/`, `pages/`, `styles/`, and `prisma/` directories.
+- **CI/CD Ready**: Scripts and configuration are ready for integration into continuous integration pipelines.
+- **No Forking Semicolons**: Enforced code style with no semicolons, as per project philosophy.
 
 ## Using
 
@@ -113,3 +129,51 @@ This project uses [Prisma](https://www.prisma.io/) as the ORM for database manag
    ```bash
    yarn build:prisma-schemas
    ```
+
+## How to Add Model Elements
+
+1. Edit `prisma/models.prisma` to define or update your data models. For example, to add a new field to the `User` model or create a new model, simply edit this file.
+2. After making changes, you must rebuild the generated Prisma schemas for all supported databases:
+
+   ```bash
+   yarn build:prisma-schemas
+   ```
+
+3. (Optional) If you want to reset your development database to match the new schema, see the next section.
+
+## How to Build the Database
+
+To generate the database schema and Prisma client for your current environment:
+
+```bash
+yarn build:prisma-schemas
+```
+
+## How to Launch a Clean Local SQLite Database for Development
+
+To reset and initialize a fresh local SQLite database for development, run:
+
+```bash
+yarn db:clean
+```
+
+This will:
+
+- Rebuild the Prisma schemas
+- Remove any existing local SQLite database file (`dev.db` by default)
+- Push the latest schema to the database
+- Generate the Prisma client
+
+You can now start your dev server with:
+
+```bash
+yarn dev
+```
+
+## How to Use This Template for Your Own Project
+
+- Fork or clone this repository.
+- Edit `package.json` to update the project name and details.
+- Update or replace models in `prisma/models.prisma`.
+- Run `yarn build:prisma-schemas` and `yarn db:clean` to set up your database.
+- Start developing your app!
