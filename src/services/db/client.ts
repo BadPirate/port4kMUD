@@ -1,11 +1,9 @@
 import path from 'path'
 import { PrismaClient } from '@prisma/client'
-import dotenv from 'dotenv'
+import config from '@/src/utils/config'
 
-dotenv.config()
+let connectionString = config.DATABASE_URL
 
-// Use DATABASE_URL env var or fallback to local SQLite dev.db
-let connectionString = process.env.DATABASE_URL || 'file:./dev.db'
 // If using filesystem SQLite URL, convert to absolute file URL so paths resolve consistently
 if (connectionString.startsWith('file:')) {
   const filePath = connectionString.replace(/^file:(?:\/\/)?/, '')
