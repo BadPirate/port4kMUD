@@ -1,21 +1,19 @@
+import Card from 'react-bootstrap/Card'
+import config from '../utils/config'
 
-import { Card, CardBody, CardTitle } from 'react-bootstrap'
-
-const WelcomeCard = () => (
-  <Card>
-    <CardBody>
-      <CardTitle>Welcome to Nextstrap</CardTitle>
-      <strong>A Next.js template with Bootstrap and authentication.</strong>
-      <div className="features">
-        <ul>
-          <li>Next.js 13+ with React 18+</li>
-          <li>Bootstrap 5 styling</li>
-          <li>Built-in authentication</li>
-          <li>TypeScript support</li>
-        </ul>
-      </div>
-    </CardBody>
-  </Card>
-)
+const WelcomeCard = () => {
+  return (
+    <Card>
+      <Card.Header>
+        <Card.Title data-testid="welcome-title">
+          Welcome to {config.NEXT_PUBLIC_APP_NAME}
+        </Card.Title>
+      </Card.Header>
+      <Card.Body>
+        <p>Your app is up and running!</p>
+      </Card.Body>
+    </Card>
+  )
+}
 
 export default WelcomeCard

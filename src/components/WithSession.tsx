@@ -11,9 +11,7 @@ type BodyOptions = {
 const WithSession = ({ authenticated, unauthenticated }: BodyOptions) => {
   const { data, status } = useSession()
   // Show authenticated content when session exists; else show unauthenticated
-  return (status === 'authenticated' && data)
-    ? authenticated(data)
-    : unauthenticated
+  return status === 'authenticated' && data ? authenticated(data) : unauthenticated
 }
 
 // No loading state in this simplified version

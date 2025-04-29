@@ -6,15 +6,15 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import prisma from '../../../src/lib/prisma'
 
 type ProfileData = {
-  sub: string,
-  client_id: string,
-  aud: string,
-  scope: string,
-  iss: string,
-  email: string,
-  name: string,
-  picture: string,
-  iat: number,
+  sub: string
+  client_id: string
+  aud: string
+  scope: string
+  iss: string
+  email: string
+  name: string
+  picture: string
+  iat: number
   exp: number
 }
 
@@ -51,7 +51,7 @@ if (isTestMode) {
         email: { label: 'Email', type: 'text', placeholder: 'you@example.com' },
         password: { label: 'Password', type: 'text', placeholder: 'test password' },
       },
-      async authorize(credentials: any) {
+      async authorize(credentials) {
         if (credentials?.email && credentials?.password) {
           return { id: credentials.password, name: credentials.password, email: credentials.email }
         }
@@ -73,13 +73,14 @@ if (isTestMode) {
     authorization: { params: { scope: 'openid profile email' } },
     checks: ['state', 'pkce'],
     async profile(profileData: ProfileData) {
-      const {
-        sub, name, email, picture, client_id, iss,
-      } = profileData
+      const { sub, name, email, picture, client_id, iss } = profileData
       if (client_id !== process.env.GARAGE_AUTH_CLIENT_ID) throw new Error('Invalid client_id')
       if (iss !== 'https://auth.badpirate.net') throw new Error('Invalid issuer')
       return {
-        id: sub, name, email, image: picture,
+        id: sub,
+        name,
+        email,
+        image: picture,
       }
     },
   })

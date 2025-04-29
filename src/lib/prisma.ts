@@ -1,5 +1,6 @@
 /* eslint-disable no-trailing-spaces, no-multiple-empty-lines, eol-last */
 import { PrismaClient } from '@prisma/client'
+import config from '../utils/config'
 
 // Prevent multiple instances of Prisma Client in development
 declare global {
@@ -8,8 +9,6 @@ declare global {
 }
 
 const prisma = global.prisma || new PrismaClient()
-if (process.env.NODE_ENV !== 'production') global.prisma = prisma
+if (config.NODE_ENV !== 'production') global.prisma = prisma
 
 export default prisma
-  
-  

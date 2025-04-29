@@ -1,0 +1,47 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x] # Test against Node.js 20.x
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn' # Cache yarn dependencies
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Run linters
+      run: yarn lint # Ensure code style and quality
+
+    # Prisma schemas should be generated during the build or test setup if needed
+    # The setup-test-db.js script checks for generated schemas
+    # Ensure build:prisma-schemas is run if schemas aren't checked in
+    # - name: Build Prisma Schemas if necessary
+    #   run: yarn build:prisma-schemas
+
+    - name: Build project
+      run: yarn build
+
+    - name: Run tests
+      run: yarn test
+      env:
+        # DATABASE_URL is set by the jest globalSetup script (setup-test-db.js)
+        # Add any other necessary env vars here if required by tests
+        CI: true # Often useful to indicate running in a CI environment
