@@ -37,11 +37,18 @@ const env = requireEnv({
   DATABASE_URL: 'file:./dev.db',
 })
 
+// Optional environment variables with defaults
+const optionalEnv = {
+  PORT: process.env.PORT,
+  CI: process.env.CI === 'true',
+}
+
 // Use values directly from package.json
 const config = {
   NEXT_PUBLIC_APP_NAME: packageJson.name,
   NEXT_PUBLIC_APP_VERSION: packageJson.version,
   ...env,
+  ...optionalEnv,
 }
 
 export default config

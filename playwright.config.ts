@@ -1,9 +1,12 @@
 import path from 'path'
 import getPort from 'get-port'
 import { defineConfig, devices, PlaywrightTestConfig } from '@playwright/test'
+import config from './src/utils/config'
 
 const configPromise: Promise<PlaywrightTestConfig> = (async () => {
-  const PORT = process.env.PORT ? Number(process.env.PORT) : await getPort()
+  const PORT = config.PORT ? Number(config.PORT) : await getPort()
+  // We can't avoid this direct assignment as it needs to be available for other processes
+  // eslint-disable-next-line no-restricted-syntax
   process.env.PORT = String(PORT)
   const baseURL = `http://localhost:${PORT}`
 
@@ -16,7 +19,7 @@ const configPromise: Promise<PlaywrightTestConfig> = (async () => {
       command: 'yarn dev',
       url: baseURL,
       timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: !config.CI,
       env: { PORT: String(PORT) },
     },
     globalSetup: require.resolve('./scripts/setup-test-db.js'),

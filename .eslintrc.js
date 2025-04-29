@@ -60,6 +60,14 @@ module.exports = {
         caughtErrorsIgnorePattern: '^_',
       },
     ],
+    // Forbid direct usage of process.env
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'MemberExpression[object.name="process"][property.name="env"]',
+        message: 'Direct use of process.env is forbidden. Use the config utility instead.',
+      },
+    ],
   },
   overrides: [
     {
@@ -129,6 +137,15 @@ module.exports = {
         // Completely turn off camelcase for database files
         camelcase: 'off',
         '@typescript-eslint/camelcase': 'off',
+        // Allow direct usage of process.env in database files
+        'no-restricted-syntax': 'off',
+      },
+    },
+    {
+      // Allow process.env usage in the centralized config file
+      files: ['**/src/utils/config.ts'],
+      rules: {
+        'no-restricted-syntax': 'off',
       },
     },
   ],
