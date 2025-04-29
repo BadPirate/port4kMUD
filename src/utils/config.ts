@@ -20,8 +20,11 @@ const requireEnv = <T extends Record<string, string | undefined>, U = string>(
       throw new Error(`Missing required environment variable: ${key}`)
     }
     const typedValue = type ? type(value) : (value as unknown as U)
-    if (type && typeof typedValue !== typeof type(value)) {
-      throw new Error(`Environment variable ${key} is not of the expected type`)
+    if (type) {
+      const convertedValue = type(value)
+      if (typeof typedValue !== typeof convertedValue) {
+        throw new Error(`Environment variable ${key} is not of the expected type`)
+      }
     }
     result[key] = typedValue
   }
