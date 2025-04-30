@@ -47,6 +47,7 @@ const schemaPath = path.resolve(
   'generated',
   `${provider}.prisma`,
 );
+
 // Prepare environment for Prisma CLI
 const env = Object.assign({}, process.env, { DATABASE_URL: finalDatabaseUrl });
 
