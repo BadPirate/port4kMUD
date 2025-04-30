@@ -20,11 +20,8 @@ const optional = {
   PORT: process.env.PORT,
   CI: process.env.CI,
 
-  // Email provider settings
-  SMTP_HOST: process.env.SMTP_HOST,
-  SMTP_PORT: process.env.SMTP_PORT,
-  SMTP_USER: process.env.SMTP_USER,
-  SMTP_PASS: process.env.SMTP_PASS,
+  // Email provider settings - simplified to just URL and from address
+  SMTP_URL: process.env.SMTP_URL,
   EMAIL_FROM: process.env.EMAIL_FROM,
 
   // Testing modes
@@ -43,15 +40,22 @@ if (required.NODE_ENV === 'development') {
   required.GARAGE_AUTH_CLIENT_ID = required.GARAGE_AUTH_CLIENT_ID || optional.NEXT_PUBLIC_APP_NAME
   required.GARAGE_AUTH_CLIENT_SECRET = required.GARAGE_AUTH_CLIENT_SECRET || 'development_secret'
   required.NEXTAUTH_SECRET = 'development_secret'
+
+  // Set default SMTP_URL for development
+  optional.SMTP_URL = optional.SMTP_URL || 'smtp://localhost:1025'
+  optional.EMAIL_FROM = optional.EMAIL_FROM || 'dev@example.com'
 } else if (required.NODE_ENV === 'test') {
   // In test mode, we can set the database URL to a test database
   required.DATABASE_URL = required.DATABASE_URL || 'file:./test.db'
-  optional.SMTP_HOST = optional.SMTP_HOST || 'localhost'
-  optional.SMTP_PORT = optional.SMTP_PORT || '1025'
-  optional.SMTP_USER = optional.SMTP_USER || ''
-  optional.SMTP_PASS = optional.SMTP_PASS || ''
+
+  // Set default SMTP_URL for test
+  optional.SMTP_URL = optional.SMTP_URL || 'smtp://localhost:1025'
   optional.EMAIL_FROM = optional.EMAIL_FROM || 'nextstrap@example.com'
   optional.TEST_MODE = optional.TEST_MODE || 'true'
+  required.GARAGE_AUTH_CLIENT_ID =
+    required.GARAGE_AUTH_CLIENT_ID || `${optional.NEXT_PUBLIC_APP_NAME}-test`
+  required.GARAGE_AUTH_CLIENT_SECRET = required.GARAGE_AUTH_CLIENT_SECRET || 'test_secret'
+  required.NEXTAUTH_SECRET = 'test_secret'
 }
 
 for (const key in required) {

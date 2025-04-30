@@ -30,11 +30,7 @@ const providers: NextAuthOptions['providers'] = []
 if (isTestMode) {
   providers.push(
     EmailProvider({
-      server: {
-        host: config.SMTP_HOST,
-        port: Number(config.SMTP_PORT),
-        auth: { user: config.SMTP_USER, pass: config.SMTP_PASS },
-      },
+      server: config.SMTP_URL,
       from: config.EMAIL_FROM,
       // Capture emails in test mode
       sendVerificationRequest: async ({ identifier, url }) => {

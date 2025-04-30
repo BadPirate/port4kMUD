@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "test": "jest",
-    "test:e2e": "yarn playwright test",
+    "test:e2e": "NODE_ENV=test playwright test",
     "typecheck": "tsc --noEmit",
     "lint": "echo '\n=== RUNNING PRETTIER ===\n' && prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss,html}\" && echo '\n=== RUNNING ESLINT ===\n' && eslint -c .eslintrc.js . --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0 && echo '\n=== RUNNING TYPESCRIPT TYPE CHECK ===\n' && tsc --noEmit || (echo '\n⚠️  Linting or type-checking failed. Please fix errors before committing.\n' && exit 1)",
     "build:dev-db": "yarn build:prisma-schemas && node scripts/db-clean.js",

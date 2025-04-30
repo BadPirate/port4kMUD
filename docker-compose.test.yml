@@ -29,23 +29,16 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-    command: >
-      sh -c "yarn prisma generate --schema=prisma/schema.prisma && yarn prisma db push --schema=prisma/schema.prisma && npx next dev -H 0.0.0.0 -p 3000"
     environment:
-      DATABASE_URL: "postgresql://postgres:postgres@db:5432/nextstrap_test?schema=public"
-      SMTP_HOST: mailhog
-      SMTP_PORT: '1025'
-      NEXTAUTH_URL: http://localhost:3000
-      TEST_MODE: 'true'
-      NEXT_PUBLIC_TEST_MODE: 'true'
-      NEXT_PUBLIC_APP_NAME: nextstrap
-    ports:
-      - '3000:3000'
+      # Use SMTP_URL format for simplified configuration
+      SMTP_URL: smtp://mailhog:1025
+      EMAIL_FROM: test@example.com
+      NODE_ENV: test
+    command: >
+      sh -c "npm run build && npm run start"
     depends_on:
       - db
       - mailhog
-
-  # test-runner removed; tests will run via host Playwright CLI
 
 volumes:
   nextstrap_test_db:
