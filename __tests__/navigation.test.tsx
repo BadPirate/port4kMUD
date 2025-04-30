@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { SessionProvider } from 'next-auth/react'
 import RootNav from '../src/components/RootNav'
-import config from '../src/utils/config'
+import _config from '../src/utils/config'
 
 // Mock the config object for tests
 jest.mock('../src/utils/config', () => {
