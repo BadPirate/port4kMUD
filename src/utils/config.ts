@@ -41,6 +41,20 @@ const env = requireEnv({
 const optionalEnv = {
   PORT: process.env.PORT,
   CI: process.env.CI === 'true',
+  // Auth-related environment variables
+  NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET || 'test-secret',
+  // OAuth provider settings
+  GARAGE_AUTH_CLIENT_ID: process.env.GARAGE_AUTH_CLIENT_ID || '',
+  GARAGE_AUTH_CLIENT_SECRET: process.env.GARAGE_AUTH_CLIENT_SECRET || '',
+  // Email provider settings
+  SMTP_HOST: process.env.SMTP_HOST || 'localhost',
+  SMTP_PORT: process.env.SMTP_PORT || '1025',
+  SMTP_USER: process.env.SMTP_USER || '',
+  SMTP_PASS: process.env.SMTP_PASS || '',
+  EMAIL_FROM: process.env.EMAIL_FROM || 'nextstrap@example.com',
+  // Testing modes
+  TEST_MODE: process.env.TEST_MODE === 'true',
+  NEXT_PUBLIC_TEST_MODE: process.env.NEXT_PUBLIC_TEST_MODE === 'true',
 }
 
 // Use values directly from package.json

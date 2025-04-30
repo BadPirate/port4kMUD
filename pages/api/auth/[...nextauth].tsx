@@ -4,6 +4,7 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import EmailProvider from 'next-auth/providers/email'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import prisma from '../../../src/lib/prisma'
+import config from '../../../src/utils/config'
 
 type ProfileData = {
   sub: string
@@ -19,9 +20,9 @@ type ProfileData = {
 }
 
 // Enable a simple credentials-based login when TEST_MODE is true (e.g., during Playwright tests)
-const isTestMode = process.env.TEST_MODE === 'true'
+const isTestMode = config.TEST_MODE
 // Provide a default secret for NextAuth (override via NEXTAUTH_SECRET in production)
-const authSecret = process.env.NEXTAUTH_SECRET || 'test-secret'
+const authSecret = config.NEXTAUTH_SECRET
 
 // Build NextAuth provider list
 const providers: NextAuthOptions['providers'] = []
@@ -30,11 +31,11 @@ if (isTestMode) {
   providers.push(
     EmailProvider({
       server: {
-        host: process.env.SMTP_HOST || 'localhost',
-        port: Number(process.env.SMTP_PORT) || 1025,
-        auth: { user: process.env.SMTP_USER || '', pass: process.env.SMTP_PASS || '' },
+        host: config.SMTP_HOST,
+        port: Number(config.SMTP_PORT),
+        auth: { user: config.SMTP_USER, pass: config.SMTP_PASS },
       },
-      from: process.env.EMAIL_FROM || 'nextstrap@example.com',
+      from: config.EMAIL_FROM,
       // Capture emails in test mode
       sendVerificationRequest: async ({ identifier, url }) => {
         // Store the magic link in memory
@@ -67,14 +68,14 @@ if (isTestMode) {
     type: 'oauth',
     version: '2.0',
     issuer: 'https://auth.badpirate.net',
-    clientId: process.env.GARAGE_AUTH_CLIENT_ID,
-    clientSecret: process.env.GARAGE_AUTH_CLIENT_SECRET,
+    clientId: config.GARAGE_AUTH_CLIENT_ID,
+    clientSecret: config.GARAGE_AUTH_CLIENT_SECRET,
     wellKnown: 'https://auth.badpirate.net/.well-known/openid-configuration',
     authorization: { params: { scope: 'openid profile email' } },
     checks: ['state', 'pkce'],
     async profile(profileData: ProfileData) {
       const { sub, name, email, picture, client_id, iss } = profileData
-      if (client_id !== process.env.GARAGE_AUTH_CLIENT_ID) throw new Error('Invalid client_id')
+      if (client_id !== config.GARAGE_AUTH_CLIENT_ID) throw new Error('Invalid client_id')
       if (iss !== 'https://auth.badpirate.net') throw new Error('Invalid issuer')
       return {
         id: sub,

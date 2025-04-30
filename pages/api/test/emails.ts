@@ -1,7 +1,8 @@
 // Next.js API route to inspect captured emails in test mode
 import type { NextApiRequest, NextApiResponse } from 'next'
+import config from '../../../src/utils/config'
 
-const isTestMode = process.env.TEST_MODE === 'true'
+const isTestMode = config.TEST_MODE
 
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   if (!isTestMode) {

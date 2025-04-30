@@ -24,8 +24,7 @@ const RootNav = ({ children }: { children: React.ReactNode }) => (
           unauthenticated={
             <Button
               onClick={() => {
-                const provider =
-                  process.env.NEXT_PUBLIC_TEST_MODE === 'true' ? 'email' : 'nextstrap'
+                const provider = config.NEXT_PUBLIC_TEST_MODE ? 'email' : 'nextstrap'
                 signIn(provider, { callbackUrl: '/' })
               }}
             >

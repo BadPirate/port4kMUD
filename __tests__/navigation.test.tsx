@@ -1,20 +1,28 @@
 import { render, screen } from '@testing-library/react'
 import { SessionProvider } from 'next-auth/react'
 import RootNav from '../src/components/RootNav'
+import config from '../src/utils/config'
+
+// Mock the config object for tests
+jest.mock('../src/utils/config', () => {
+  const originalConfig = jest.requireActual('../src/utils/config').default
+  return {
+    __esModule: true,
+    default: {
+      ...originalConfig,
+      NEXT_PUBLIC_APP_NAME: 'nextstrap',
+      NEXT_PUBLIC_TEST_MODE: false,
+    },
+  }
+})
 
 describe('Navigation', () => {
-  beforeEach(() => {
-    process.env.NEXT_PUBLIC_APP_NAME = 'nextstrap'
-    process.env.NEXT_PUBLIC_TEST_MODE = 'false'
-  })
-
   afterEach(() => {
-    delete process.env.NEXT_PUBLIC_APP_NAME
-    delete process.env.NEXT_PUBLIC_TEST_MODE
+    jest.clearAllMocks()
   })
 
   test('navbar displays default app name when not set', () => {
-    delete process.env.NEXT_PUBLIC_APP_NAME
+    // No need for spyOn, the mock above already sets NEXT_PUBLIC_APP_NAME to 'nextstrap'
     render(
       <SessionProvider session={null}>
         <RootNav>Test</RootNav>

@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { signIn } from 'next-auth/react'
 import { SessionProvider } from 'next-auth/react'
 import RootNav from '../src/components/RootNav'
+import config from '../src/utils/config'
 
 jest.mock('next-auth/react', () => ({
   ...jest.requireActual('next-auth/react'),
@@ -9,13 +10,25 @@ jest.mock('next-auth/react', () => ({
   useSession: () => ({ data: null, status: 'unauthenticated' }),
 }))
 
+// Mock the config object for tests
+jest.mock('../src/utils/config', () => {
+  const originalConfig = jest.requireActual('../src/utils/config').default
+  return {
+    __esModule: true,
+    default: {
+      ...originalConfig,
+      NEXT_PUBLIC_TEST_MODE: false,
+    },
+  }
+})
+
 describe('Authentication', () => {
   beforeEach(() => {
-    process.env.NEXT_PUBLIC_TEST_MODE = 'false'
+    // Update the mocked config values
+    config.NEXT_PUBLIC_TEST_MODE = false
   })
 
   afterEach(() => {
-    delete process.env.NEXT_PUBLIC_TEST_MODE
     jest.clearAllMocks()
   })
 
@@ -41,7 +54,7 @@ describe('Authentication', () => {
 
   test('allows login via button click in test mode', async () => {
     const mockSignIn = signIn as jest.Mock
-    process.env.NEXT_PUBLIC_TEST_MODE = 'true'
+    config.NEXT_PUBLIC_TEST_MODE = true
 
     render(
       <SessionProvider session={null}>
