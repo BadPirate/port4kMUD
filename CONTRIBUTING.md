@@ -12,10 +12,12 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 2. Clone your fork: `git clone git@github.com:<your-username>/nextstrap.git`
 3. Navigate to the project directory: `cd nextstrap`
 4. Install dependencies: `yarn install`
+5. Generate Prisma schemas: `yarn build:prisma-schemas`
+6. Set up your development database: `yarn build:dev-db`
 
 **Note**: This project uses the Yarn package manager, not npm.
 
-5. Start the development server: `yarn dev`
+7. Start the development server: `yarn dev`
 
 ## Development Guidelines
 
@@ -30,7 +32,14 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
   - `src/` for additional components and utilities.
   - `styles/` for global CSS (Bootstrap theme).
   - `public/` for static assets.
-- **Testing**: Run `yarn test` (Playwright Test; see README.md for usage details).
+- **Database Changes**:
+  - Edit models in `prisma/models.prisma`
+  - Run `yarn build:prisma-schemas` to regenerate schemas
+  - Run `yarn build:dev-db` to update your local database
+- **Testing**:
+  - Unit tests: `yarn test`
+  - End-to-end tests: `yarn test:e2e`
+  - See README.md for more details on testing.
 
 ## Commit Messages
 

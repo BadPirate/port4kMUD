@@ -1,41 +1,43 @@
 # Nextstrap
 
-A simple project the way Badpirate likes it:
-
-- Next JS
-- Typescript
-- Eslint (Airbnb)
-- No forking semi-colons
+A simple project starter template for modern web development.
 
 Feel free to fork for your own project if want to make a quick web project based on the best setup available.
 
 ## Features
 
-- **Prisma ORM**: Manage databases with Prisma, supporting SQLite and PostgreSQL.
-- **Playwright for End-to-End Testing**: Browser-based testing with debugging and headless options.
-- **Jest for Unit Testing**: Comprehensive unit testing setup with mocking and testing-library support.
-- **Bootstrap and Bootswatch Themes**: Preinstalled Cyborg theme with easy customization.
-- **Environment Variable Management**: `.env` files for app configuration.
-- **Husky for Git Hooks**: Pre-commit hooks for linting and formatting.
-- **Prettier for Code Formatting**: Enforces consistent code style.
-- **TypeScript Strict Mode**: Ensures type safety with strict mode enabled.
-- **Custom Prisma Schema Generation**: Scripts for dynamic schema generation for multiple database providers.
-- **Customizable Bootstrap Theme**: Easily swap Bootswatch themes by replacing a single CSS file.
--
+This project includes a comprehensive set of features designed to maintain high code quality standards, making it ideal for working with AI assistants and ensuring consistent development practices.
 
-## Features added to improve quality and assist with Agentic usage
+### Core Technologies
 
-AI can be difficult to work with without strict quality enforcement (so that it doesn't add a bunch of tech debt along side the features)
+- **Next.js**: React framework with server-side rendering and routing
+- **TypeScript**: With strict mode enabled for maximum type safety
+- **Prisma ORM**: Database management supporting both SQLite and PostgreSQL
+- **Bootstrap & React Bootstrap**: UI framework with Bootswatch themes
 
-- **Strict ESLint and Prettier Integration**: Enforces Airbnb, TypeScript, and Next.js linting rules, with Prettier for formatting and a no-semicolons style.
-- **TypeScript Strict Mode**: TypeScript is configured in strict mode for maximum type safety.
-- **Automated Prisma Schema Generation**: Scripts for dynamic schema generation for multiple database providers (SQLite, PostgreSQL).
-- **End-to-End and Unit Testing Setup**: Playwright for E2E tests (with auto server start), Jest for unit tests, and Testing Library utilities preconfigured.
-- **Environment Variable Management**: Uses dotenv for local environment configuration.
-- **Husky and Lint-Staged**: Pre-commit hooks for linting, formatting, and type-checking before every commit.
-- **Modern Project Structure**: Separation of concerns with `src/`, `pages/`, `styles/`, and `prisma/` directories.
-- **CI/CD Ready**: Scripts and configuration are ready for integration into continuous integration pipelines.
-- **No Forking Semicolons**: Enforced code style with no semicolons, as per project philosophy.
+### Development & Quality Tools
+
+- **Strict ESLint & Prettier Integration**: Enforces Airbnb TypeScript and Next.js linting rules
+- **No Semicolons Style**: Enforced code style as per project philosophy
+- **Environment Variable Management**: `.env` files for app configuration using dotenv
+- **Husky & Lint-Staged**: Pre-commit hooks for linting, formatting, and type-checking
+- **Modern Project Structure**: Separation of concerns with `src/`, `pages/`, `styles/`, and `prisma/` directories
+
+### Database Features
+
+- **Custom Prisma Schema Generation**: Scripts for dynamic schema generation for multiple database providers
+- **Database Utilities**: Scripts for cleaning, rebuilding, and setting up test databases
+
+### Testing Suite
+
+- **Playwright for End-to-End Testing**: Browser-based testing with debugging and headless options
+- **Jest for Unit Testing**: Comprehensive testing setup with mocking and testing-library utilities
+- **CI/CD Ready**: Scripts and configuration for continuous integration pipelines
+
+### UI & Styling
+
+- **Bootswatch Theme Support**: Preinstalled with Cyborg theme
+- **Customizable Bootstrap Theme**: Easily swap themes by replacing a single CSS file
 
 ## Using
 
@@ -107,28 +109,19 @@ This project uses [Prisma](https://www.prisma.io/) as the ORM for database manag
    yarn install
    ```
 
-2. Generate Prisma client:
+2. Generate Prisma schemas for your selected database provider:
 
-   ```bash
-   npx prisma generate
-   ```
-
-3. Push the database schema:
-
-   ```bash
-   npx prisma db push
-   ```
-
-4. For testing, ensure the test database is set up:
-
-   ```bash
-   node scripts/setup-test-db.js
-   ```
-
-5. To clean and rebuild schemas:
    ```bash
    yarn build:prisma-schemas
    ```
+
+3. Set up your development database:
+
+   ```bash
+   yarn build:dev-db
+   ```
+
+4. For testing, the test database is automatically set up when running tests.
 
 ## How to Add Model Elements
 
@@ -139,7 +132,11 @@ This project uses [Prisma](https://www.prisma.io/) as the ORM for database manag
    yarn build:prisma-schemas
    ```
 
-3. (Optional) If you want to reset your development database to match the new schema, see the next section.
+3. To reset your development database to match the new schema:
+
+   ```bash
+   yarn build:dev-db
+   ```
 
 ## How to Build the Database
 
@@ -154,7 +151,7 @@ yarn build:prisma-schemas
 To reset and initialize a fresh local SQLite database for development, run:
 
 ```bash
-yarn db:clean
+yarn build:dev-db
 ```
 
 This will:
@@ -175,5 +172,5 @@ yarn dev
 - Fork or clone this repository.
 - Edit `package.json` to update the project name and details.
 - Update or replace models in `prisma/models.prisma`.
-- Run `yarn build:prisma-schemas` and `yarn db:clean` to set up your database.
+- Run `yarn build:prisma-schemas` and `yarn build:dev-db` to set up your database.
 - Start developing your app!
