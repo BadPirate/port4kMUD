@@ -24,6 +24,21 @@ services:
       - "1025:1025"  # SMTP
       - "8025:8025"  # Web UI
 
+  # Example app service with SMTP_URL configuration
+  app:
+    image: node:20-bullseye
+    container_name: nextstrap_dev_app
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      # Simplified email configuration with single SMTP_URL
+      SMTP_URL: smtp://localhost:1025
+      EMAIL_FROM: dev@example.com
+      NODE_ENV: development
+    depends_on:
+      - db
+      - mailhog
   
 volumes:
   nextstrap_dev_db:

@@ -8,61 +8,73 @@ if (typeof window === 'undefined') {
   dotenv.config()
 }
 
-const requireEnv = <T extends Record<string, string | undefined>, U = string>(
-  values: T,
-  type?: (value: string) => U,
-): { [K in keyof T]: U } => {
-  const result: Partial<{ [K in keyof T]: U }> = {}
-
-  for (const key in values) {
-    const value = process.env[key] || values[key]
-    if (!value) {
-      throw new Error(`Missing required environment variable: ${key}`)
-    }
-    const typedValue = type ? type(value) : (value as unknown as U)
-    if (type) {
-      const convertedValue = type(value)
-      if (typeof typedValue !== typeof convertedValue) {
-        throw new Error(`Environment variable ${key} is not of the expected type`)
-      }
-    }
-    result[key] = typedValue
-  }
-
-  return result as { [K in keyof T]: U }
+const required = {
+  NODE_ENV: process.env.NODE_ENV,
+  DATABASE_URL: process.env.DATABASE_URL,
+  GARAGE_AUTH_CLIENT_ID: process.env.GARAGE_AUTH_CLIENT_ID,
+  GARAGE_AUTH_CLIENT_SECRET: process.env.GARAGE_AUTH_CLIENT_SECRET,
+  NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 }
 
-const env = requireEnv({
-  NODE_ENV: 'development',
-  DATABASE_URL: 'file:./dev.db',
-})
-
-// Optional environment variables with defaults
-const optionalEnv = {
+const optional = {
   PORT: process.env.PORT,
-  CI: process.env.CI === 'true',
-  // Auth-related environment variables
-  NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET || 'test-secret',
-  // OAuth provider settings
-  GARAGE_AUTH_CLIENT_ID: process.env.GARAGE_AUTH_CLIENT_ID || '',
-  GARAGE_AUTH_CLIENT_SECRET: process.env.GARAGE_AUTH_CLIENT_SECRET || '',
-  // Email provider settings
-  SMTP_HOST: process.env.SMTP_HOST || 'localhost',
-  SMTP_PORT: process.env.SMTP_PORT || '1025',
-  SMTP_USER: process.env.SMTP_USER || '',
-  SMTP_PASS: process.env.SMTP_PASS || '',
-  EMAIL_FROM: process.env.EMAIL_FROM || 'nextstrap@example.com',
+  CI: process.env.CI,
+
+  // Email provider settings - simplified to just URL and from address
+  SMTP_URL: process.env.SMTP_URL,
+  EMAIL_FROM: process.env.EMAIL_FROM,
+
   // Testing modes
-  TEST_MODE: process.env.TEST_MODE === 'true',
-  NEXT_PUBLIC_TEST_MODE: process.env.NEXT_PUBLIC_TEST_MODE === 'true',
+  TEST_MODE: process.env.TEST_MODE,
+  NEXT_PUBLIC_TEST_MODE: process.env.NEXT_PUBLIC_TEST_MODE,
+
+  // Next.js specific environment variables
+  NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME || packageJson.name,
+  NEXT_PUBLIC_APP_VERSION: process.env.NEXT_PUBLIC_APP_VERSION || packageJson.version,
 }
 
-// Use values directly from package.json
+if (required.NODE_ENV === 'development') {
+  // In development, we can use the default values for some environment variables
+  required.DATABASE_URL = required.DATABASE_URL || 'file:./dev.db'
+  optional.PORT = optional.PORT || '3000'
+  required.GARAGE_AUTH_CLIENT_ID = required.GARAGE_AUTH_CLIENT_ID || optional.NEXT_PUBLIC_APP_NAME
+  required.GARAGE_AUTH_CLIENT_SECRET = required.GARAGE_AUTH_CLIENT_SECRET || 'development_secret'
+  required.NEXTAUTH_SECRET = 'development_secret'
+
+  // Set default SMTP_URL for development
+  optional.SMTP_URL = optional.SMTP_URL || 'smtp://localhost:1025'
+  optional.EMAIL_FROM = optional.EMAIL_FROM || 'dev@example.com'
+} else if (required.NODE_ENV === 'test') {
+  // In test mode, we can set the database URL to a test database
+  required.DATABASE_URL = required.DATABASE_URL || 'file:./test.db'
+
+  // Set default SMTP_URL for test
+  optional.SMTP_URL = optional.SMTP_URL || 'smtp://localhost:1025'
+  optional.EMAIL_FROM = optional.EMAIL_FROM || 'nextstrap@example.com'
+  optional.TEST_MODE = optional.TEST_MODE || 'true'
+  required.GARAGE_AUTH_CLIENT_ID =
+    required.GARAGE_AUTH_CLIENT_ID || `${optional.NEXT_PUBLIC_APP_NAME}-test`
+  required.GARAGE_AUTH_CLIENT_SECRET = required.GARAGE_AUTH_CLIENT_SECRET || 'test_secret'
+  required.NEXTAUTH_SECRET = 'test_secret'
+}
+
+for (const key in required) {
+  if (!required[key as keyof typeof required]) {
+    throw new Error(`Missing required environment variable: ${key}`)
+  }
+}
+const validatedRequired = required as { [key in keyof typeof required]: string }
+
 const config = {
-  NEXT_PUBLIC_APP_NAME: packageJson.name,
-  NEXT_PUBLIC_APP_VERSION: packageJson.version,
-  ...env,
-  ...optionalEnv,
+  ...validatedRequired,
+  ...optional,
+
+  // Convert string values
+  TEST_MODE: required.NODE_ENV === 'test' || optional.TEST_MODE === 'true',
+  NEXT_PUBLIC_TEST_MODE: required.NODE_ENV === 'test' || optional.NEXT_PUBLIC_TEST_MODE === 'true',
+  NEXT_PUBLIC_APP_NAME:
+    optional.NEXT_PUBLIC_APP_NAME.charAt(0).toUpperCase() + optional.NEXT_PUBLIC_APP_NAME.slice(1),
+  NEXT_PUBLIC_APP_VERSION: optional.NEXT_PUBLIC_APP_VERSION,
 }
 
 export default config
