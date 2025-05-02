@@ -11,31 +11,40 @@ AC_PROG_CC
 CFLAGS="$CFLAGS -std=gnu89"
 AC_SUBST(CFLAGS)
 
-# Checks for header files. (Add more if needed)
+# Checks for header files.
 AC_CHECK_HEADERS([string.h stdlib.h sys/time.h unistd.h])
 
-# Check for the crypt function and its location
-# First check if it's in the standard library
-AC_CHECK_FUNC([crypt],
-  [AC_DEFINE([HAVE_CRYPT], [1], [Define to 1 if you have the 'crypt' function.])],
-  [# If not in standard library, check in -lcrypt
-   AC_CHECK_LIB([crypt], [crypt],
-     [LIBFILES="-lcrypt"
-      AC_DEFINE([HAVE_CRYPT], [1], [Define to 1 if you have the 'crypt' function.])
-      AC_DEFINE([CIRCLE_CRYPT], [1], [Define to 1 if the crypt function is declared in unistd.h.])
-     ]
-   )
-  ]
+# Check for crypt() function, first in libc, then in libcrypt
+AC_CHECK_FUNC(crypt, 
+  [AC_DEFINE(CIRCLE_CRYPT, 1, [Define if crypt is available])],
+  [AC_CHECK_LIB(crypt, crypt,
+    [LIBFILES="-lcrypt"
+     AC_DEFINE(CIRCLE_CRYPT, 1, [Define if crypt is available in libcrypt])],
+    [AC_MSG_WARN([crypt() not found, password encryption disabled])]
+  )]
 )
+
+# Other necessary glibc compatibility settings
+GLIBC=
+
+# Some systems need these defines for proper compilation
+AC_CHECK_FUNC(random, 
+  [], 
+  [GLIBC="$GLIBC -Drandom=random"]
+)
+AC_CHECK_FUNC(htonl, 
+  [], 
+  [GLIBC="$GLIBC -Dhtonl=htonl"]
+)
+AC_CHECK_FUNC(ntohl, 
+  [], 
+  [GLIBC="$GLIBC -Dntohl=ntohl"]
+)
+
+# Make sure these variables get substituted in the Makefile
+AC_SUBST(GLIBC)
 AC_SUBST(LIBFILES)
 
-# Checks for typedefs, structures, and compiler characteristics.
-# AC_C_CONST (If needed)
-# AC_TYPE_SIZE_T (If needed)
-
-# Checks for library functions. (Add more if needed)
-# AC_FUNC_MALLOC (If needed)
-# AC_CHECK_FUNCS([memset sqrt strdup])
-
+# Configure all Makefiles
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT

@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     libcrypt-dev \
+    autoconf \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -19,12 +20,11 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Configure and build the MUD server with explicit linking to crypt
+# Regenerate the configure script and build the MUD server
 RUN cd mud && \
+    autoconf && \
     ./configure && \
     cd src && \
-    # Modify the compile command for ../bin/circle directly
-    sed -i 's/\(^\t\$(CC).*\$(OBJFILES)\)/\1 -lcrypt/' Makefile && \
     make
 
 # Install and build the web application
@@ -35,7 +35,6 @@ RUN cd server && \
 # Expose ports for the MUD server (telnet) and web interface (HTTP)
 EXPOSE 4000
 # Use a placeholder - the actual port will be set by Dokku via PORT env variable
-# This is just documentation that the container serves web content
 EXPOSE 80
 
 # Set the launch script as the entrypoint
