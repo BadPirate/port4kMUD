@@ -1,0 +1,429 @@
+#2001
+phoenix~
+the &rPhoenix&n~
+The &rPhoenix&y preens himself vigorously.
+~
+   The &rPhoenix&n is a creature that awes you.  He is brilliantly colored in reds,
+and various highlights from all the rainbow.  All of his quick, sharp movements
+sends small sparks flying off into the air.  He looks down at you with wise,
+bright blue eyes that seem almost...  Human.    
+~
+256090 1260 1000 E
+100 -25 -15 30d100+30000 30d80+45
+500000 1000
+8 8 1
+BareHandAttack: 8
+E
+#2002
+unicorn~
+the &wUnicorn&n~
+The &wUnicorn&y grazes in the soft, green grass.
+~
+   The &wUnicorn&n is an exquisite creature.  Her fur is pure white, almost painful
+to look at in the noonday sun because of its brightness.  She has a long,
+delicate golden horn curling upwards from her broad forehead.  Golden cloven
+hooves and gentle violet eyes complete the picture of perfection: The Unicorn.
+~
+518218 1236 1000 E
+75 -15 -10 2d3+25000 25d30+35
+250000 0
+8 8 2
+BareHandAttack: 11
+E
+#2003
+tritoch~
+the &rT&br&yi&rt&bo&yc&rh&n~
+The &rT&br&yi&rt&bo&yc&rh&y floats here, his mind on another world.
+~
+   The &rT&br&yi&rt&bo&yc&rh&n is an very unworldly looking being.  Graced with
+brightly colored feathers and scales, it almost resembles what Quetzalcoatl,
+the Feathered Serpent, must have looked like.  For the &rT&br&yi&rt&bo&yc&rh&n
+has the body of a serpent, the legs and wings of a bird, and a head that
+resembles neither...    
+~
+256074 1276 1 E
+90 -15 -10 3d3+25000 25d30+35
+250000 0
+8 8 1
+BareHandAttack: 12
+E
+#2004
+tiamat dragon~
+&MTiamat&n~
+&MTiamat&y, the fiercesome dragon, is admiring her image in a pool of water.
+~
+   She is a huge, beautiful dragon with jeweled scales.  Her four heads are
+four different colors, yellow representing Air, green Earth, red Fire, and blue
+Water.  However, beneath the beauty, is a dreadfully evil beast, ready to kill
+for the pleasure of killing.    
+~
+256122 1256 -1000 E
+100 -25 -10 30d100+30000 30d30+45
+500000 0
+8 8 2
+BareHandAttack: 9
+E
+#2005
+fire cat~
+the &rFire Cat&n~
+The &rFire Cat&y hisses at you.
+~
+   The &rFire Cat&n is a giant, fiercesome feline made entirely out of fire.  
+From his royal muzzle, to his bushy tail, he glows with heat.  Following in his
+path is a trail of soot, all that's left of anything flammable that gets in his
+way.  When he sees you, he bushes his fur up, and hisses, glaring his bright
+blue eyes at you.    
+~
+256090 38072 -1000 E
+75 0 -5 5d3+15000 20d20+25
+50000 0
+8 8 1
+BareHandAttack: 8
+E
+#2006
+sylph~
+the &MSylph&n~
+Here, a &MSylph&y floats contentedly.&n
+~
+   The &MSylph&n is a kind of fairie creature, with gossamer wings and antenae.  
+However, while fairies often commit only innocent jokes and mischeif, the Sylph
+is capable of much more, being able to drain an enemies very life out of them.
+~
+256090 33016 0 E
+82 -10 -10 3d3+20000 25d25+25
+100000 0
+8 8 2
+BareHandAttack: 12
+E
+#2007
+god  indra~
+the God &MIndra&n~
+The God &MIndra&y contemplates his many worlds.&n
+~
+   Resembling an old man with a magnificent beard, &MIndra&n is an impressive
+figure.  His flashy purple robes draw attention away from his plain staff,
+which is his real symbol of power.  For, with this staff, it is possible to
+call lightning down to blast all foes.    
+~
+260186 33980 0 E
+75 0 -5 3d3+15000 20d20+25
+50000 0
+8 8 1
+BareHandAttack: 13
+E
+#2008
+god odin~
+the God &gOdin&n~
+The God &gOdin&y polishes his great sword.
+~
+   He is the epitome of godhood.  He has bulging muscles and a battle-hardened
+face, not even lacking the scars that attest to his experience at battle.  His
+great blade glimmers in the light, as if it is eager to taste your blood.  
+Odin doesn't even bother to glance at you, as if you are so below him as to not
+even matter to the world.    
+~
+256090 33980 1000 E
+100 -25 -15 30d100+30000 30d30+45
+500000 0
+8 8 1
+E
+#2009
+kirin~
+the &wKirin&n~
+A &wKirin&y rests in the soft, sea-green grass.
+~
+   The &w&wKirin&n&n is an oriental unicorn that resembles a cross between a white elk
+and a green dragon.  The forepart of the &wKirin&n is an elk, brilliantly white,
+with sea-green antlers rising above the silken fur and velvet, sea-green eyes.
+Her hindpart is a bright green dragon, with polished scales, and a long,
+sinuous tail.    
+~
+260186 107684 1000 E
+75 0 -5 3d3+15000 20d20+25
+50000 0
+8 8 2
+BareHandAttack: 11
+E
+#2010
+air elemental~
+the &MElemental of Air&n~
+An &MElemental of Air&y twirls here.
+~
+   The &MElemental of Air&n, is well, made of air.  It looks like a little
+whirlwind with eyes.  However, it is not cute.  The eyes are purple, and rage
+like a storm at your intrusion
+~
+256060 33916 0 E
+50 0 0 1d1+5000 15d20+20
+10000 0
+8 8 0
+BareHandAttack: 12
+E
+#2011
+seraphim angel~
+the &wSeraphim&n~
+A &wSeraphim&y kneels before the altar, worshipping her God.
+~
+   The &wSeraphim&n resembles a beautiful women, with soft blonde hair and violet
+eyes.  However, the holy light around her, and her six wings take away what
+humanity she might have.  She seems-something more than human.  Who could
+attain to reach this level of perfection?    
+~
+260186 42172 1000 E
+82 -10 -10 1d1+20000 25d25+25
+100000 0
+8 8 2
+E
+#2012
+shiva god~
+the &bGod Shiva&n~
+The &bGod Shiva&y sits in the throne with great authority.
+~
+   &bShiva&n is a strange looking god.  While he IS male, his face and body
+look like a slim, pretty female.  Despite his odd appearance, he conveys great
+strength and authority in his position of God of the Dance.    
+~
+256090 34012 0 E
+100 -25 -15 30d100+30000 30d30+45
+500000 0
+8 8 1
+BareHandAttack: 13
+E
+#2013
+water elemental~
+the &bElemental of Water&n~
+An &bElemental of Water&y spins viciously here.
+~
+The &bElemental of Water&n spins madly around and around.  It
+looks like a little storm cloud, a little waterspout.  However,
+fiery, red eyes stare out at you, glaring at you in hate.
+~
+124988 33916 1 E
+50 0 0 1d1+5000 15d20+20
+10000 0
+8 8 0
+BareHandAttack: 12
+E
+#2014
+pastha~
+the &bPastha&n~
+The &bPastha&y gleams wetly on the rock.
+~
+   The &bPastha&n is a blue-tinted, smooth-skinned water creature.  Her kind
+eyes gaze down on you with wisdom and intelligence.  Her flippers run sleek and
+smooth down her sides, and her proud crest tops the magnifecent head with a
+perfect touch.    
+~
+254026 33984 1000 E
+82 -10 -10 1d1+20000 25d25+25
+100000 0
+8 8 2
+BareHandAttack: 10
+E
+#2015
+atlus~
+&gAtlus&n~
+&gAtlus&n holds the world on his shoulders.
+~
+   &gAtlus&n, a giant of a man, is covered in rippling muscles and smooth skin.
+Great drops of sweat run down his brow and into his eyes, as he strains to hold
+up the entire world.  For he is no ordinary man, he is a legendary TITAN!    
+~
+256090 33980 1 E
+90 -15 -10 1d1+25000 25d30+35
+250000 0
+8 8 1
+BareHandAttack: 13
+E
+#2016
+fenris wolf~
+&gFenris&n~
+The great wolf, &gFenris&n, hunts here.
+~
+   &gFenris&n, the evil wolf destined to destroy the world, glares at you with
+deep green eyes.  A truly formidable predator, his head stands at your
+shoulder, the biggest wolf in all creation.  Sharp, shiny teeth glimmer in the
+light as he lolls his tongue out at you, not even considering you a threat.  
+~
+256090 33964 -1000 E
+82 -10 -10 1d1+20000 25d25+25
+100000 0
+8 8 1
+BareHandAttack: 4
+E
+#2017
+golem earth~
+the &gEarth Golem&n~
+A &gGolem&n made of earth guards here.
+~
+   The &gGolem&n looks like a crude man made of hard-packed earth.  Vague
+facial features form a disturbing physiognomy.  It towers above you.    
+~
+256090 33980 0 E
+75 0 -5 1d1+15000 20d20+25
+50000 1
+8 8 0
+BareHandAttack: 6
+E
+#2018
+elemental of earth~
+the &gElemental of Earth&n~
+An &gElemental of Earth&y slithers around.
+~
+   It looks something like a giant, malevolent snake.  Nothing to compare to
+the monsters that you hear live on the Indian sub-continent, but a good 30 feet
+at least.  Its purple, slitted eyes glare at you.    
+~
+190524 33852 0 E
+50 0 0 1d1+5000 15d20+20
+10000 1
+8 8 0
+BareHandAttack: 10
+E
+#2019
+elemental fire~
+the &rElemental of Fire&n~
+An &rElemental of Fire&y burns peacefully.
+~
+   A vague form made entirely of fire burns before you.  Even as you watch, it
+changes its form, from thta of a man sitting, to that of a bird, to a small
+lizard-like creature, then a bonfire.  Slowly, it seems to stretch, and it
+opens its eyes, a surprising sapphire blue.  Seeing you, it begins to burn even
+hotter, and reaches towards you with hands of fire!    
+~
+254012 33852 0 E
+50 0 0 1d1+5000 15d20+20
+10000 1
+8 8 0
+BareHandAttack: 12
+E
+#2020
+ifrit demon~
+&rIfrit&n the demon~
+The demon &rIfrit&y sits comfortably in a blazing fire-pit.&n
+~
+   &rIfrit&n is the ideal of the male human physique, with bulging muscles and
+a rather handsome face.  However, the large horns that are perched on his head
+take away any human-ness he might have, and give him an unearthly, demonic
+aura.    
+~
+256090 33960 1000 E
+82 -10 -10 1d1+20000 25d25+25
+100000 1
+8 8 1
+BareHandAttack: 8
+E
+#2021
+loch ness monster nessie~
+&bNessie&n~
+The legendary &bLoch Ness Monster&n suns herself.
+~
+   It's the legendary &bLoch Ness Monster&n herself!  &bNessie&n, the
+supposedly mythical beast, suns her smooth, shiny skin, resting in the
+comfortable sand.  She looks something like a prehistoric water reptile, with a
+long, long neck and a long, long tail, and big flippers in between.  Yes, very
+like the ancient Plesiosaur.    
+~
+125018 42216 1000 E
+75 0 -5 1d1+15000 20d20+25
+50000 0
+8 8 2
+BareHandAttack: 6
+E
+#2022
+leviathan~
+&bLeviathan&n~
+&bLeviathan&n, king of the sea, watches you with his ancient eyes.
+~
+   &bLeviathan&n is a gigantic sea serpent.  His elegant aqua coils are
+decorated with deep red fins.  His great jaws gape wide to expose a gaping maw
+that makes you realize, that despite his surprising beauty, he is a monstrous
+beast that dwarfs your house!    
+~
+256090 46332 1000 E
+100 -30 -20 30d100+30000 30d100+50
+500000 2
+8 8 1
+BareHandAttack: 10
+E
+#2023
+tritoch~
+the &yT&rr&bi&yt&ro&bc&yh&n~
+The &yT&rr&bi&yt&ro&bc&yh&n floats here, his mind on another world.
+~
+   The &yT&rr&bi&yt&ro&bc&yh&n is a very unworldly looking being.  Graced with
+brightly colored feathers and scales, it almost resembles what Quetzalcoatl,
+the Feathered Serpent, must have looked like.  For the &yT&rr&bi&yt&ro&bc&yh&n
+has the body of a serpent, the legs and wings of a bird, and a head that
+resembles neither.    
+~
+256074 1276 1 E
+90 -15 -10 1d1+25000 25d30+35
+250000 0
+8 8 1
+BareHandAttack: 12
+E
+#2024
+tritoch~
+&bT&yr&ri&bt&yo&rc&bh&n~
+The &bT&yr&ri&bt&yo&rc&bh&n floats here, his mind on another world.
+~
+   The &bT&yr&ri&bt&yo&rc&bh&n is a very unworldly looking being.  Graced with
+brightly colored feathers and scales, it almost resembles what Quetzalcoatl,
+the Feathered Serpent, must have looked like.  For the &bT&yr&ri&bt&yo&rc&bh&n
+has the body of a serpent, the legs and wings of a bird, and a head that
+resembles neither.    
+~
+254026 33020 0 E
+90 -15 -10 1d1+25000 25d30+35
+250000 0
+8 8 1
+BareHandAttack: 12
+E
+#2050
+little bo peep~
+Little Bo Peep~
+A cute little girl with a shepherd's crook smiles shyly.
+~
+   Little Bo Peep has big blue eyes in a pale little face.  She peeks out from
+under a delicate bonnet that protects her face from the sun and partially
+covers her long, silky brown hair.  Her dress is spotlessly white, with tiny
+pink roses on it, bordered by frilly lace.    
+~
+524360 32768 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#2051
+lost sheep~
+a lost sheep~
+A sheep stands by itself, baaaaing pitifully.
+~
+   The sheep is fluffy white, with a short tail, and a black head and legs.  
+It looks about with dark, soulful eyes, baaaing sadly.    
+~
+72 32768 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#2099
+cockatryce bird~
+the &wCockatryce&n~
+A strange creature, part bird, part woman, part something else, stares eerily at you.
+~
+   The &wCockatryce&n stares arrogantly at you.  She is a beautiful woman, with
+strange, irridescent white hair and glowering green eyes.  From her back
+springs a pair of magnificent irridescent wings.  From a slit in her simple
+silk dress flows a muscular scaled tail, also an irridescent, glimmering white
+color.  Her stare chills your soul, and you realize that this is not a woman to
+mess with.    
+~
+247834 46332 1000 E
+100 -30 -20 30d120+30000 30d120+50
+0 0
+8 8 2
+BareHandAttack: 10
+E
+$

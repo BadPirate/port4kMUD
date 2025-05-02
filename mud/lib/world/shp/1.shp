@@ -1,0 +1,323 @@
+CircleMUD v3.0 Shop File~
+#101~
+104
+12017
+15008
+12023
+19022
+6415
+3004
+105
+5211
+108
+111
+112
+113
+114
+115
+118
+702
+-1
+1.20
+0.90
+8treasure pirate
+-1
+%s Sorry, we don't have that item here at the club.  We only sell cool stuff.~
+%s You ain't got that stuff.~
+%s Dangit, I don't buy those.~
+%s Hey?!  Where did my wallet go?  I swear I had enough.~
+%s I'd love to, but next time, try it with money?~
+%s Pleasure doin' buisness with ya, that'll be %d coins.~
+%s Pleasure doin' buisness wit' ya, here's your %d coins.~
+0
+2
+103
+0
+121
+-1
+0
+28
+0
+0
+#102~
+-1
+1.25
+0.40
+0*
+1*
+2*
+3*
+4*
+5*
+6*
+7*
+8*
+9*
+10*
+11*
+12*
+14*
+15*
+16*
+17*
+18*
+20*
+21*
+22*
+23*
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s Probably doesn't have a value, or I can't buy that.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+104
+0
+127
+153
+154
+155
+-1
+0
+28
+0
+0
+#103~
+130
+131
+12095
+12094
+-1
+1.00
+1.00
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+147
+0
+12099
+12094
+-1
+0
+28
+0
+0
+#118~
+118
+-1
+1.00
+0.20
+16
+-1
+%s Pay for passage or leave.~
+%s Pay for passage of leave.~
+%s Pay for passage or leave.~
+%s Pay for passage or leave.~
+%s You can not afford passage, leave.~
+%s Passage is %d coins.~
+%s &s For this I give you %d coins.~
+0
+3
+1
+0
+-1
+1
+23
+0
+0
+#121~
+-1
+1.00
+1.00
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+2218
+0
+-1
+0
+28
+0
+0
+#190~
+19001
+3020
+3021
+3023
+19006
+-1
+1.30
+0.40
+5
+6
+7
+0
+0
+-1
+%s Sorry, I don't have that weapon.~
+%s Sorry, you don't seem to have that...~
+%s I don't buy such an item, try some other shop.~
+%s Sorry, that's a too expensive weapon for me, try in Thewston.~
+%s Get some money if you wanna buy something...~
+%s Ok, I'll charge you %d coins for it.~
+%s Here you are, I'll give you %d coins for it.~
+2
+0
+19004
+0
+19011
+-1
+0
+28
+0
+0
+#191~
+3042
+3086
+3076
+19002
+6002
+-1
+1.00
+0.50
+9
+0
+0
+0
+0
+-1
+%s Sorry, I don't have that armour.~
+%s Sorry, you don't seem to have that.~
+%s I don't buy such a item, try some other shop.~
+%s Sorry, that's a too expensive armour for me, try in Thewston.~
+%s Get some money if you like to buy something...~
+%s Ok, that'll be %d coins, please.~
+%s Here you are, I'll give you %d coins for it.~
+0
+0
+19005
+0
+19010
+-1
+0
+28
+0
+0
+#192~
+3050
+3051
+19009
+19010
+19011
+156
+155
+160
+-1
+1.05
+0.15
+2
+3
+4
+10
+0
+-1
+%s To bad, I don't seem to have that item.~
+%s Sorry, I don't buy something you don't have.~
+%s Sorry that's not my part of business...~
+%s Sorry, that's a too expensive item for me, try in Thewston.~
+%s Get lost punk! You don't have that much money.~
+%s That'll be %d coins!~
+%s I'll give you about %d coins for it.~
+0
+0
+19006
+0
+19014
+-1
+0
+28
+0
+0
+#193~
+19013
+19014
+19015
+19016
+19017
+-1
+1.50
+0.40
+1
+15
+16
+21
+8
+-1
+%s Sorry, I'm unfortunatly out of that for the moment.~
+%s You don't seem to be a honest man, maybe I should call the guards?~
+%s I don't trade in that kind of objects.~
+%s Sorry, I'm out of cash, try in Thewston, or give it to me. :-)~
+%s You seem to have been robbed if you thought you had that kind of money? ~
+%s That'll be %d coins, please...~
+%s I'll give you about %d coins for it, here you go...~
+0
+0
+19007
+0
+19013
+-1
+0
+28
+0
+0
+#194~
+3102
+19018
+19019
+19020
+3009
+-1
+1.00
+0.90
+17
+19
+0
+0
+0
+-1
+%s It's very noisy in here, what did you say you wanted to buy?~
+%s You don't seem to be a honest man, maybe I should call the guards?~
+%s I don't trade in that kind of objects.~
+%s Sorry, I'm out of cash, try in Thewston, or give it to me for free...:-)~
+%s Are you drunk or what ??? - NO CREDIT!~
+%s That'll be - say %d coins.~
+%s I'll give you about %d coins for it, here you go...~
+0
+0
+19008
+0
+19016
+-1
+0
+28
+0
+0
+$~

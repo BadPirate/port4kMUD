@@ -1,0 +1,428 @@
+#3200
+needle bone~
+a &wbone&n needle~
+A needle made of bone lies here.~
+~
+25 0 1
+3201 3202 3203 1
+1 0 0
+E
+bone needle~
+   The needle looks very fragile and thin.  It will probably break if someone
+uses it on a tightly woven cloth.    
+~
+#3201
+shirt flannel~
+a flannel shirt~
+A pile of flannel cloth lies here.~
+~
+11 134217728 1
+0 0 0 0
+5 100 0
+E
+shirt flannel~
+   The shirt is made of tightly woven blue, grey, and pale yellow cloth.  A row
+of tarnished silver buttons march down the front.  One of them seems to be
+missing.    
+~
+A
+17 -5
+A
+9 2
+#3202
+button silver~
+a silver button~
+A plain silver button has fallen off its shirt.~
+~
+11 64 1
+0 0 0 0
+1 15 0
+E
+button silver~
+   The silver button is rather primitive.  The hammer marks from its making
+still show in its surface and the holes cut into it are crude and unsmoothed.
+Yet, the silver is shiny and untarnished.  A grey shimmer moves beneath its
+surface...    
+~
+#3203
+vest silver leather black~
+a &Wblack&n vest~
+A black vest has been thrown to the ground.~
+~
+9 174064256 1
+8 0 0 0
+15 0 0
+E
+vest silver black leather~
+   The vest is made from plain black leather.  A silver cord laces the vest up
+in front.  The shoulders of the vest are covered with solid silver embroidery.
+A soft silvery mist billows out from the arm holes and flows out into the shape
+of ghostly sleeves.    
+~
+A
+5 1
+A
+4 1
+#3204
+shoe leather~
+a leather shoe~
+A tattered leather shoe melts into the ground.~
+~
+13 0 1
+0 0 0 0
+3 0 0
+E
+shoe leather~
+   Despite the fact that it is in an advanced state of decay and likely has
+been left out of doors for a very long period of time, the shoe manages to reek
+of unwashed mortal feet.  Its laces have probably been carted off by a bluejay
+long ago.    
+~
+#3205
+cheese goat~
+a round of goat cheese~
+A round of smelly cheese lies here.~
+~
+19 0 1
+20 0 0 0
+5 50 0
+E
+goat cheese~
+   The cheese is a pale yellow in color.  It is rather large and smelly, but
+will fill a traveler up pretty well.    
+~
+#3206
+flower death's tear~
+death's tear~
+A red-leafed plant grows here.~
+~
+12 0 0
+0 0 0 0
+1 4000 0
+E
+death's tear~
+   The red leaves of the plant are narrow and ridged all around the edges.  
+The inside of the leaf is so dark a red, it appears to be black.  The color
+lightens to a bloody ruby color at the leaf tips.  The flower itself is a
+tear-shaped black petal with two long, narrow petals curling downward and back
+to the stem.  The stamen of the flower are the same color as the leaves.    
+~
+#3207
+vine morning glory~
+morning glory vine~
+The vines of a morning glory twine themselves around the apple tree's roots.~
+~
+15 0 0
+1 0 -1 0
+12 0 0
+E
+vine morning glory~
+   The morning glory's vines determindely cling to the ground.  They would be
+impossible to move.    
+~
+#3208
+flower morning glory~
+a morning glory blossom~
+A pale blue morning glory lies on the ground.~
+~
+12 0 16385
+0 0 0 0
+1 10 0
+E
+flower morning glory~
+   The pale blue flower's petals form the bell of a trumpet.  The petals
+themselves are heart-shaped.    
+~
+#3209
+bush jayberry~
+a jayberry bush~
+A bush that produces berries grows here.~
+~
+15 0 0
+1 0 -1 0
+20000 0 0
+E
+bush~
+   The leaves of the jayberry bush are a pale green and as fuzzy as a
+caterpillar's backside.  The berries it produces are edible for most animals,
+including humans.  It is called a jayberry bush because where ever they grow,
+there are blue jays somewhere about.    
+~
+#3210
+berry jayberry~
+a handful of jayberries~
+A handful of ripe jayberries have been scattered on the ground.~
+~
+19 0 1
+12 0 0 0
+2 10 0
+E
+jayberry berry~
+   The jayberries have a rich purple skin and slightly green center.  They are
+slightly tart with a sweet aftertaste.    
+~
+#3211
+tree apple~
+an &Rap&rple&n tree~
+An &Rap&rple &gtree with grey bark grows here.~
+~
+15 0 0
+1 0 -1 0
+500 0 0
+E
+tree apple~
+   The apple tree's leaves are broad and green.  A good half of the limbs
+appear to be in the process of dying, but the tree courageously continues to
+produce delicious &Rred &rapples&n.
+~
+#3212
+apple tree~
+an &Rapple&n tree~
+A tree with rich, &Rred &gapples grows here.~
+~
+15 0 0
+1 0 -1 0
+600 0 0
+E
+tree apple~
+   The bark is a dark grey-brown.  The leaves are broad with pointy tips and
+thick stems.  This tree appears to be as healthy as trees come even if it grows
+in the wild.    
+~
+#3213
+tree apple~
+an &wapple&n tree~
+A golden &wapple&n tree grows here.~
+~
+15 64 0
+0 0 0 0
+10000 0 0
+E
+tree apple~
+   The trunk of the tree is made of pure gold.  The leaves are beaten brass
+with platinum veins.  The apples and blossoms that grow in this magical tree
+are made of pure silver and rumored to have magical powers.  But beware, for
+magical apples are seldom left unguarded...    
+~
+#3214
+apple fruit~
+a &Rred &rapple&n~
+A fresh &Rred &rapple &glies on the ground.~
+~
+19 0 1
+6 0 0 0
+2 0 0
+E
+apple fruit~
+   The &Rap&rple&n looks freshly picked.  The skin is mainly a rich red color
+with an orange flush at the fullest parts of the apple.    
+~
+#3215
+apple fruit~
+a large &rred&n apple~
+A large, red apple sits plumpy on the ground.~
+~
+19 0 1
+12 0 0 0
+5 20 0
+E
+apple fruit~
+   This apple is larger than most and probably more filling.  Its texture is a
+little mealy and the skin feels a tad rubbery.    
+~
+#3216
+apple fruit~
+a &yyellow&n apple~
+A &yyellow &gapple has fallen out of its tree.~
+~
+19 0 1
+5 0 0 0
+0 0 0
+E
+apple fruit~
+   The skin of the apple is strangely smooth and thin.  It looks like it would
+bruise easily, yet the fall from the tree has left it undamaged.    
+~
+#3217
+apple fruit~
+a &rred&n apple~
+A bruised red apple lies here.~
+~
+19 0 1
+5 0 0 1
+3 0 0
+E
+apple fruit~
+   The apple is very bruised and its smell is a little off.  It may not be safe
+to eat.    
+~
+#3218
+apple wormy~
+a wormy apple~
+A wormy old apple is lying here.~
+~
+19 0 1
+2 0 0 0
+3 0 0
+E
+apple wormy~
+   This apple has probably been lying on the ground too long.  Its sides are
+peppered with insect nibbles and holes.    
+~
+#3219
+apple dry~
+a dry apple~
+A shriveled little apple lies here.~
+~
+19 0 1
+4 0 0 0
+1 10 0
+E
+dry apple~
+   The dry little apple is all wrinkled and old.  It still smells like an apple
+and would probably taste like one, but it is certainly not as juicy as an
+apple that is fresh.
+~
+#3220
+apple silver~
+a &wsilver&n apple~
+A &wsilver &gapple graces the ground with its presence.~
+~
+19 65536 1
+24 0 0 0
+10 1000000 0
+E
+silver apple~
+   The apple smells like a mixture of apple, cloves, and pears.  The chances of
+it tasting like a normal apple are very slight.  The apple glows from within.
+Could it be...  Holy?    
+~
+#3280
+obi holdable~
+Obi~
+It's a li'l mini Obi!  How...cute?~
+~
+13 0 16385
+0 0 0 0
+35 0 0
+E
+obi mini~
+You see nothing special...
+Hey! Is that Obi?
+~
+#3293
+bouquet rose lilac~
+a bouquet of &Wroses&n and &Mlilacs&n~
+A bouquet of &Wblack roses&n and &Mlilacs&n perfumes the air.~
+~
+12 0 16385
+0 0 0 0
+20 0 0
+E
+rose black lilac bouquet~
+   The roses are so black they are purple where the light touches them.  The
+petals are soft and velvety to the touch.  The roses do not have much of a
+scent, but the lilacs more than make up for it.  The light &Mpurple&n contrasts
+marvelously with the &Wblack&n.  A few sprigs of fern frame the ensemble with a
+baby's breath accent that adds its own perfume to the mix.  A little card is
+attatched to the bouquet.    
+~
+E
+card~
+The card reads:
+
+Just because I could.
+
+With all the fuzziness in a hellcat's heart,
+MSKing
+~
+#3294
+band wedding Dameon~
+a &wwedding&n band~
+Like Dameon would ever drop his wedding band on the ground!~
+~
+22 136 3
+0 0 0 0
+2 0 0
+E
+wedding band Dameon~
+   The beatiful white gold ring is a quiet declaration of marriage to all who
+pay the slightest amount of attention.  The inside of the ring has a stylized
+kissy face engraved into it and the name 'Dameon.  '
+~
+A
+18 4
+A
+19 4
+A
+17 3
+#3295
+elephant~
+a &wwedding&n ring~
+Like MSKing would ever drop her wedding ring on the ground. :p~
+~
+8 136 3
+0 0 0 0
+2 0 0
+E
+ring wedding~
+   The ring itself is modest.  It is a simple band of white gold with runes
+carved on its insides.  No stone or scratch marks the perfect ring.    
+~
+#3296
+post scratching MSKing~
+MSKing's &rscratching&n post~
+A chuck of carpet-covered wood floats in space.~
+~
+0 0 1
+0 0 0 0
+400 0 0
+#3297
+bag body~
+a Body Bag~
+It's Wisp's body...bag.~
+~
+15 0 16385
+600 0 -1 0
+0 0 0
+#3298
+elephant~
+a deep &bblue&n cocktail dress~
+A puddle of blue silk and shimmery stars has been tossed here.~
+~
+11 0 9
+0 0 0 0
+5 0 0
+E
+gown silk~
+Made of the finest silk, this gown was hardly made for modesty.  It has a low
+back and a long slit up the side.  Sexy and elegant at the same time.  Someone
+has taste.    
+~
+A
+12 100
+A
+12 100
+A
+12 100
+A
+12 100
+A
+12 100
+A
+12 100
+#3299
+stiletos shoes red~
+&ra pair of red stiletos&n~
+&rMSKing has kicked off her evil three inch heels and left them here.&n~
+~
+11 0 65
+0 0 0 0
+10 0 0
+E
+stiletos heels red~
+The sharp, three in heels of these shoes are perfect for punishing kicks and
+bad for moving quickly.  Regardless, they are sexy and impractical so MSKing
+will wear them.  And they're silk! :)
+~
+$~

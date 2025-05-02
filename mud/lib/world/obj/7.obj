@@ -1,0 +1,1002 @@
+#700
+black jewled pendant~
+a black jeweled pendant~
+A small, black pendant lies in the dust here.~
+~
+9 655888 5
+3 0 0 0
+5 10000 0
+A
+18 1
+A
+19 1
+#701
+white jeweled pendant~
+a white jeweled pendant~
+A small, white pendant lies in the dust here.~
+~
+9 33857 5
+3 0 0 0
+5 10000 0
+A
+18 1
+A
+19 1
+#702
+big top ticket 702~
+a &bB&wi&bg &wT&bo&wp&n ticket~
+A ticket to allow the carrier to enter the &bB&wi&bg &wT&bo&wp&n shines here.~
+~
+12 1 16385
+0 0 0 0
+1 100000 0
+E
+big top ticket~
+   It is a small piece of paper, blue, with the words, "Big Top" printed across
+it in white.  In small black print beneath that, it states, Admit One.    
+~
+A
+18 1
+A
+19 2
+#703
+freak show ticket 703~
+a &gF&mr&ge&ma&gk &mS&gh&mo&gw&n ticket~
+A ticket to the &gF&mr&ge&ma&gk &mS&gh&mo&gw&n screams at your presence.~
+~
+12 2 16385
+0 0 0 0
+1 100000 0
+E
+freak show ticket~
+   This is a very neon green ticket, with magenta letters reading, "Freak Show:
+Admit One" across it.  It is probably bright enough to blind someone.    
+~
+A
+1 -2
+A
+19 2
+A
+12 25
+#704
+white bracelet~
+a &wwhite &nbracelet~
+A &wwhite &nhoop is here.~
+~
+9 1024 4097
+0 0 0 0
+0 7500 0
+A
+18 2
+A
+19 1
+#705
+black bracelet~
+a black bracelet~
+A black hoop is here.~
+~
+9 1024 4097
+0 0 0 0
+0 7500 0
+A
+18 2
+A
+19 1
+#706
+coke coca-cola coca cola~
+a &YCoke&n~
+A paper cup full of &YCoke&n is fizzing here.~
+~
+17 0 16385
+2 2 0 0
+7 1000 0
+E
+cup coke~
+   Here is a small, white paper cup.  It in is a fizzing, brown liquid that
+exudes a very sweet smell.    
+~
+#707
+diet coke~
+a &YDiet Coke&n~
+A paper cup filled to the brim with &YDiet Coke&n sits here.~
+~
+17 0 16385
+2 2 14 0
+7 1000 0
+E
+cup diet coke~
+   This is a small, white paper cup.  It is filled with a strange, foaming
+brown liquid.    
+~
+#708
+dr. pepper dr~
+a &MDr. Pepper&n~
+A paper cup full of &MDr. Pepper&n is just waiting to be drunk.~
+~
+17 0 16385
+2 2 0 0
+7 1000 0
+E
+dr. pepper dr cup~
+   Inside of a white paper cup is a dark brown, almost fruity smelling,
+beverage.    
+~
+#709
+sprite~
+a &wSprite&n~
+A paper cup fizzing with &wSprite&n sits here.~
+~
+17 0 16385
+2 2 0 0
+7 1000 0
+E
+cup sprite~
+   Inside the white paper cup, a clear liquid jumps and hisses at you.    
+~
+A
+18 2
+A
+19 1
+A
+3 1
+#710
+mountain dew~
+a &gMountain Dew&n~
+A paper cup full of urine sits here...or is it &gMountain Dew&n?~
+~
+17 0 16385
+2 2 0 0
+7 1000 0
+E
+mountain dew cup~
+   Inside this poor paper cup is a strange liquid that rather resembles
+radioactive urine.    
+~
+#711
+root beer~
+a &YRoot Beer&n~
+A paper cup is almost full of &YRoot Beer&n.~
+~
+17 0 16385
+2 2 0 0
+7 1000 0
+E
+cup rootbeer~
+   A very dark brown liquid resides in this white paper cup.    
+~
+#712
+lemonade~
+a &yLemonade&n~
+A paper cup full of fresh, home-made &yLemonade&n has been set here.~
+~
+17 0 16385
+3 3 6 0
+8 1500 0
+E
+cup lemonade~
+   This is a small, paper cup, filled to the brim with a yellow beverage.  On
+the side, a lemon slice has been placed.  Could it be lemonade?    
+~
+#713
+hot dog~
+a &Yhot dog&n~
+A large, ketchup-covered &Yhot dog&n waits to be eaten.~
+~
+19 0 16385
+4 0 0 0
+1 4000 0
+E
+hotdog~
+   In a large bun, sliced down the middle, lies an unidentifiable piece of
+meat.  It is cylindrical, rounded on the ends, like a sausage.  It is bathed in
+a rich, tomatoey sauce.    
+~
+#714
+corn dog~
+a &ycorn dog&n~
+A &ycorn dog&n sits here on its stick.~
+~
+19 0 16385
+4 0 0 0
+1 4000 0
+E
+corn dog corndog~
+   A sausage-like piece of meat is wrapped snugly in a covering of baked corn
+meal.  From one end protrudes a stick, for easy handling.    
+~
+#715
+mystic robes~
+&bmystic&n robes~
+Some robes lie in a heap here.~
+~
+9 49152 9
+10 0 0 0
+5 0 0
+A
+18 2
+A
+19 1
+A
+4 3
+A
+12 50
+#716
+hamburger~
+a &Yhamburger&n~
+A &Yhamburger&n lies forgotten on the ground.~
+~
+19 0 16385
+4 0 0 0
+1 5000 0
+E
+hamburger~
+   A flat piece of ground beef lies comfortably insdie a bun.  Bits of ketchup
+and mustard peek shyly from beneath the top bun.  A sliced pickle nervously
+exposes itself, too.  An enticing smell rises from the entire ensemble.    
+~
+#717
+druidic druid staff~
+a Druidic staff~
+A staff created by the druids lies here.~
+~
+5 50242 8193
+0 4 5 5
+10 0 0
+A
+18 2
+A
+19 1
+A
+13 25
+A
+12 50
+#718
+cheeseburger~
+a &ycheeseburger&n~
+A &ycheeseburger&n peers out of its wrapper.~
+~
+19 0 16385
+4 0 0 0
+1 6000 0
+E
+cheeseburger~
+   Melted cheese drips enticingly from the sides of the steaming hamburger.  
+Rich ketchup oozes out from underneath the sesame seed bun.  A delicious
+looking cheeseburger, indeed.    
+~
+#719
+pickled pig's feet pig~
+some &gpickled pig's feet&n~
+Some &gpickled pig's feet&n lay oh-so-invitingly on the ground.~
+~
+19 0 16385
+4 0 0 3
+1 4000 0
+E
+picked pigs feet~
+   On a flimsy paper plate are several pickled hooves.  Disgusting.    
+~
+#720
+pickle~
+a large &Gpickle&n~
+A large, kosher &Gpickle&n floods the area with vinegar.~
+~
+19 0 16385
+1 0 0 0
+1 3000 0
+E
+pickle~
+   From inside a white paper wrapper, vinegar soaks and drips, making the
+wrapper transparent in places.  Inside is nestled a very large, juicy pickle.
+Yum!    
+~
+#721
+french fries~
+some &yfrench fries&n~
+A package of &yfrench fries&n sends its delightful odor towards you.~
+~
+19 0 16385
+2 0 0 0
+1 3000 0
+E
+french fries~
+   Here is a cardboard container filled to overflowing with golden brown, fried
+potato sticks.  Salt and grease glisten from the delicious french fries.    
+~
+#722
+cotton candy~
+some &mcotton candy&n~
+A plastic bag full of soft, sugary &mcotton candy&n melts here.~
+~
+19 0 16385
+0 0 0 0
+0 3000 0
+E
+cotton candy~
+   A clear plastic sack is stuffed with fluffy, pink cotton candy.  The sugary
+strands just beg to be eaten.    
+~
+#723
+churro~
+a &Ychurro&n~
+A delicious, sugar and cinnamon sprinkled churro begs to be eaten.~
+~
+19 0 16385
+1 0 0 0
+1 4000 0
+E
+churro~
+   A long, slender, corrugated stick drips buttery sugar and cinnamon.  Yum, a
+churro!    
+~
+#724
+scone~
+a &Yscone&n~
+A fresh, hot scones dribbles grease.~
+~
+19 0 16385
+1 0 0 0
+1 3500 0
+E
+scone~
+   A white paper plate is soaked with grease from a fresh, steaming scone.  A
+small cup full of honey butter is placed next to it on the plate.    
+~
+#725
+bag peanuts~
+a bag of &Ypeanuts&n~
+&YPeanuts&n, spilled from a small paper bag, crunch underfoot.~
+~
+19 0 16385
+1 0 0 0
+1 2500 0
+E
+bag of peanuts~
+   A red and white striped paper is overflowing with whole peanuts.  The
+fibrous husks give off a nutty smell.    
+~
+#726
+bon-bons bon bons~
+some &wbon-bons&n~
+A box of &wbon-bons&n lie here forgotten.~
+~
+19 0 16385
+1 0 0 0
+1 5000 0
+E
+box bon-bons bon bons~
+   A small, neat cardboard box contains several straight rows of delicous
+bon-bons.    
+~
+#727
+vanilla ice cream cone~
+a &wvanilla ice cream cone&n~
+A cone dripping &wvanilla ice cream&n is sprawled in the dirt.~
+~
+19 0 16385
+1 0 0 0
+1 4500 0
+E
+vanilla ice cream cone~
+   Vanilla ice cream melts and drips down a delicious waffle cone onto your
+hand.    
+~
+#728
+chocolate ice cream cone~
+a &Ychocolate ice cream cone&n~
+A &Ychocolate ice cream cone&n has been dropped here.~
+~
+19 0 16385
+1 0 0 0
+1 4500 0
+E
+choclate ice cream cone~
+   A scoop of choclate ice cream is perched unsteadily on top of a sugary
+waffle cone.    
+~
+#729
+strawberry ice cream cone~
+a &mstrawberry ice cream cone&n~
+A child has misplaced his or her &mstrawberry ice cream cone&n.~
+~
+19 0 16385
+1 0 0 0
+1 4500 0
+E
+strawberry ice cream cone~
+   A bright pink scoop of ice cream is nestled lovingly into the cup of a
+waffle cone.    
+~
+#730
+swirl ice cream cone~
+a &ws&Yw&wi&Yr&wl &Yi&wc&Ye &wc&Yr&we&Ya&wm &Yc&wo&Yn&we&n~
+A &ws&Yw&wi&Yr&wl &Yi&wc&Ye &wc&Yr&we&Ya&wm &Yc&wo&Yn&we&n, with &Ychocolate&n and &wvanilla&n ice cream, lies forgotten.~
+~
+19 0 16385
+1 0 0 0
+1 4500 0
+E
+swirled ice cream cone~
+   A scoop of ice cream, made of swirled chocolate and vanilla, steadily melts
+in a cone.    
+~
+#731
+pretzel~
+a large &Ypretzel&n~
+A large &Ypretzel&n, sprinkle with salt, hides in a napkin.~
+~
+19 0 16385
+1 0 0 0
+1 4000 0
+E
+pretzel~
+   This is a large pretzel, dough shaped into a strange, intertwined shape,
+then baked, dipped in butter, and sprinkled with salt.    
+~
+#732
+fuzzy dice~
+a &wpair of fuzzy dice&n~
+A pair of &wfuzzy dice&n dangle enticingly here.~
+~
+12 0 16385
+0 0 0 0
+1 10000 0
+E
+fuzzy dice~
+   A red silken cord binds together two large, white, fuzzy dice.  On all sides
+of the stuffed cubes are a varying number of black dots, ranging in number from
+one to six.    
+~
+#733
+stuffed animal lemming~
+a &Ystuffed lemming&n~
+A &Ystuffed lemming&n smiles vacantly.~
+~
+12 0 16385
+0 0 0 0
+1 12500 0
+E
+stuffed animal lemming~
+   This is a stuffed replica of a small, brown, furry rodent.  Its plastic eyes
+stare ahead in what seems to be an even more vacant look than most stuffed
+animals have.    
+~
+#734
+stuffed animal dragonpup~
+a &mstuffed dragonpup&n~
+An adorable &mdragonpup&n stuffed animal begs to be hugged.~
+~
+12 0 16385
+0 0 0 0
+1 20000 0
+E
+stuffed dragonpup~
+   This has got to be the most adorable stuffed animal in existence, modeled
+after the insanely cute (if deadly) dragonpups.  Its stubby little forearms
+reach forward for a hug, while its hind legs have something stiff in them so
+the 'pup can stand up.  Cute, posable wings stretch from its back.  Don't you
+just want to hug it?    
+~
+A
+18 1
+#735
+green glowstick~
+a &ggreen glowstick&n~
+A bright &ggreen glowstick&n lights the room.~
+~
+1 1 16385
+0 0 48 0
+1 7500 0
+E
+green glowstick~
+   The glowstick is a short, cylindrical tube that glows bright green.    
+~
+#736
+blue glowstick~
+a &bblue glowstick&n~
+A &bblue glowstick&n sends off an eerie light.~
+~
+1 1 16385
+0 0 48 0
+1 7500 0
+E
+blue glowstick~
+   An eerie blue light shines from the small rod that is a glowstick.    
+~
+#737
+white glowstick~
+a &wwhite glowstick&n~
+A &wwhite glowstick&n sends off a pure light.~
+~
+1 1 16385
+0 0 48 0
+1 7500 0
+E
+white glowstick~
+   A white glowstick is a small, wandlike item that gives off a pure, white
+light.    
+~
+#738
+squirt gun~
+a squirt gun~
+A small plastic gun sloshes.~
+~
+17 0 16385
+1 1 0 0
+1 12000 0
+E
+squirt gun~
+   The small plastic gun is filled with water.  A plastic stopper allows it to
+be filled when empty.  The bright trigger is very prominent and easy to reach,
+waiting to squirt people.    
+~
+#739
+noisemaker~
+a noisemaker~
+A small, plastic noisemaker is ready to make some racket.~
+~
+12 2 16385
+0 0 0 0
+1 5000 0
+E
+noisemaker~
+   Made out of plastic, the noisemaker is a rod with several clappers attached
+to it.  It makes a very loud noise when shaken.    
+~
+#740
+goldfish bag~
+a &ygoldfish in a bag&n~
+A small plastic bag filled with water contains a &ygoldfish&n.~
+~
+12 0 16385
+0 0 0 0
+2 20000 0
+E
+goldfish bag~
+   This is a small, clear plastic bag filled with water.  Inside, a small,
+sickly-looking goldfish swims weakly around.    
+~
+#741
+ethereal circus party hat~
+an &gOfficial Ethereal Circus Party Hat&n~
+A small green party hat is waiting to strangle someone with its rubber string.~
+~
+11 0 16401
+0 0 0 0
+1 5000 0
+E
+ethereal circus party hat~
+   This small hat is made out of cardboard, stapled in the shape of a cone, and
+has a rubber string attached to it to keep it on the wearer's head.    
+~
+#742
+ethereal circus jester cap~
+an &cOfficial Ethereal Circus Jester Cap&n~
+A floppy jester cap waits to be worn.~
+~
+11 0 16401
+0 0 0 0
+1 10000 0
+E
+ethereal circus jester cap~
+   The jester cap starts out with a single, wide base, but quickly splits into
+three sections.  Each flops and dangles, and from each end chimes a small bell.
+Anyone wearing this would make music as they walk!    
+~
+#743
+ethereal circus t-shirt tee-shirt shirt~
+an &rOfficial Ethereal Circus T-Shirt&n~
+A colorful t-shirt with a logo on it has been left here.~
+~
+11 0 16393
+0 0 0 0
+1 15000 0
+E
+ethereal circus t-shirt tee-shirt shirt~
+   This colorful t-shirt boasts the official logo of the Ethereal Circus on it.
+The tag states that it is extra-large.  Will it fit you?    
+~
+#744
+ethereal circus baggy clown pants~
+some &yOfficial Ethereal Circus Clown Pants&n~
+A pair of baggy pants look ready to walk away.~
+~
+11 0 16417
+0 0 0 0
+1 20000 0
+E
+ethereal circus baggy clown pants~
+   These wildly striped pants are huge!  They are baggy enough that several
+people could probably fit in them.    
+~
+#745
+ethereal circus flag~
+an &bOfficial Ethereal Circus Flag&n~
+A flag with the Ethereal Circus logo on it has been stuck into the ground.~
+~
+12 0 16385
+0 0 0 0
+1 5000 0
+E
+ethereal circus flag~
+   A small, triangular flag is stapled around a smooth wooden dowel.  It
+proudly displays the logo of the Ethereal Circus.    
+~
+#746
+bad fortune~
+a bad fortune~
+A singed piece of paper has been left here.~
+~
+16 0 16385
+0 0 0 0
+1 1000 0
+E
+bad fortune~
+The bad fortune is written on a badly singed piece of paper.  It says:
+    "Watch your back!  A friend will betray you!"
+~
+#747
+pretty bad fortune~
+a pretty bad fortune~
+A cumpled piece of paper has been forgotten here.~
+~
+16 0 16385
+0 0 0 0
+1 2000 0
+E
+pretty bad fortune~
+The words of the pretty bad fortune are hard to make out through 
+the wrinkles.  They say:
+     "You will lose all your worldly goods!"
+~
+#748
+okay fortune~
+an okay fortune~
+A dirty piece of paper is curled here.~
+~
+16 0 16385
+0 0 0 0
+1 4000 0
+E
+okay fortune~
+The okay fortune is smeared with dirt.  It says:
+     "You will find a lucky gold coin."
+~
+#749
+pretty good fortune~
+a pretty good fortune~
+A white piece of paper is waiting to be read.~
+~
+16 0 16385
+0 0 0 0
+1 8000 0
+E
+pretty good fortune~
+The pretty good fortune is on white paper.  It reads:
+     "You will find a new friend during your travels."
+~
+#750
+good fortune~
+a good fortune~
+A very white, clean piece of paper is waiting to be rescued from the ground.~
+~
+16 0 16385
+0 0 0 0
+1 16000 0
+E
+good fortune~
+The good fortune easily unrolls, as if it is eager to be read.
+     "You will accomplish a long-term goal that you have been
+     striving for."
+~
+#751
+great fortune~
+a great fortune~
+A bright white piece of paper attempts to repel the dirt of the ground.~
+~
+16 0 16385
+0 0 0 0
+1 32000 0
+E
+great fortune~
+The great fortune is written on brilliantly white paper.  It says:
+     "A promotion is in your near future."
+~
+#752
+excellent fortune~
+an excellent fortune~
+A white piece of paper seems to glow.~
+~
+16 1 16385
+0 0 0 0
+1 64000 0
+E
+excellent fortune~
+The excellent fortune is so bright, it's almost blinding.
+     "Your fondest wish will come true shortly."
+~
+#753
+small mound blubber key~
+a small mound of blubber~
+A small mound of blubber quivers at the least disturbance.~
+~
+18 32 16385
+0 0 0 0
+10 0 0
+E
+small mound blubber~
+   This is a small mound of blubber.  It is made of fat, through and through.
+  
+~
+#754
+wolf boy collar~
+the Wolf Boy's collar~
+A collar, made to go around a small neck, lies here.~
+~
+9 134217864 16389
+5 0 0 0
+1 0 0
+E
+wolf boy's collar~
+   This small collar has large spikes coming from it, and a thick metal ring to
+attach a chain to.    
+~
+A
+18 2
+A
+19 1
+#755
+chiffon dress~
+a chiffon dress~
+A pretty dress has been carelessly dropped.~
+~
+11 0 16393
+0 0 0 0
+1 10000 0
+E
+chiffon dress~
+This dress is made of light, elegant chiffon.
+~
+A
+17 -2
+#756
+transparent gauze gauzey material~
+some gauzy material~
+A long length of a translucent, gauzy material seems to float.~
+~
+11 0 17725
+0 0 0 0
+0 5000 0
+A
+2 2
+#757
+fake beard~
+a fake blonde beard~
+A scraggly, blonde fake beard flops on the ground.~
+~
+18 0 16401
+0 0 0 0
+1 0 0
+E
+fake blonde beard~
+   The beard is long, blonde, and scraggly.  Bits of it come off in your hands.
+There is a sticky glue on the back so it can be worn.    
+~
+#758
+small green loincloth~
+a small green loincloth~
+A small green piece of cloth flutters on the ground.~
+~
+11 0 18433
+0 0 0 0
+1 500 0
+E
+small green loincloth~
+   This small piece of green cloth has a string attached, making it easy to tie
+around a humanoid waist.    
+~
+A
+17 8
+#759
+red spandex suit~
+a red spandex suit~
+A wad of red, stretchy spandex is balled up here.~
+~
+11 0 16393
+0 0 0 0
+1 1500 0
+E
+red spandex suit~
+   The spandex suit is very red and very stretchy.  When worn, however, it
+cleans fiercely to the body beneath it, showing off every fold and curve.    
+~
+#760
+chair~
+a chair~
+A scarred wooden chair calmly sits.~
+~
+12 0 16385
+0 0 0 0
+5 1000 0
+E
+chair~
+   The chair is wooden, with a high straight back with supporting crossbars.  
+It has the scars of many a battle on its legs and seat.    
+~
+A
+2 -3
+A
+18 1
+A
+19 2
+#761
+beast tamer's whip~
+a beast tamer's whip~
+A long, thin, black whip is coiled on the ground.~
+~
+5 541097984 24577
+2 6 7 2
+2 15000 0
+E
+beast tamer's whip~
+   The whip is long, very flexible, and strong.  It is made out of a black
+leather that has been braided to a thin tip, perfect for snapping.    
+~
+A
+19 2
+#762
+tight-rope walker's pole~
+a thick pole~
+A thick pole juts out of the ground.~
+~
+12 0 0
+0 0 0 0
+1000000 0 0
+E
+pole~
+   The pole is thick enough that two men could not reach their arms around it.
+It is rouch hewn, and bit of bark are flaking off of it.  It stretches high in
+the air towards the ceiling.    
+~
+#763
+microphone~
+a microphone~
+A strange black object with a ball set on top of a stick rests in the dirt.~
+~
+12 2 16385
+0 0 0 0
+1 10000 0
+E
+microphone~
+   The microphone is made out of black plastic and metal.  The base is a hard,
+hollow cylinder of plastic.  Perched on top of this is a sphere of metal net,
+also painted black.  Sound becomes amplified when focused into the microphone.
+~
+A
+18 2
+A
+1 2
+#764
+fake flower squirter~
+a bright plastic flower~
+A brightly colored flower made out of plastic grows here.~
+~
+12 0 16385
+0 0 0 0
+1 0 0
+E
+stem~
+   The stem of the flower is very long and made out of a very soft, very
+pliable green plastic.  At the base is a small plug that fits neatly into the
+stem.  It's a trick flower!  You can squirt people with it!    
+~
+E
+bright plastic flower~
+   The flower is made out of bright pink and blue plastic.  It seems almost
+real, other than the unnatural colors.  However, on closer inspection, there
+seems to be something funny about the stem...    
+~
+#765
+piece candy~
+a piece of &mcandy&n~
+A pristine, wrapped piece of &mcandy&n waits to be eaten.~
+~
+19 0 16385
+1 0 0 0
+0 0 0
+E
+piece candy~
+   The piece of candy is wrapped in bright pink cellophane.    
+~
+#766
+piece candy~
+a piece of &mcandy&n~
+A pristine, wrapped piece of &mcandy&n waits to be eaten.~
+~
+19 0 16385
+1 0 0 -5
+0 0 0
+E
+piece candy~
+   The piece of candy is wrapped in bright pink cellophane.    
+~
+#767
+bottle snake's oil cure-all~
+a bottle of cure-all~
+A small bottle of something rests on the ground.~
+~
+17 136 16385
+2 2 14 -5
+2 25000 0
+E
+label peel~
+   The label is peeling off a bit at the corner, revealing a bit more
+lettering.  It appears that there is another label underneath!  It reads
+"Snake's Oil.  "
+~
+E
+bottle cure-all snake's oil~
+   The bottle is small, made of a thick brown glass.  The label reads
+"Magnifico's Famous Cure-All!  " In smaller letters underneath is, "For all
+that ails you!  " The label is peeling off a bit at a corner.    
+~
+#768
+balloon~
+a balloon~
+A bright balloon rises slowly into the air.~
+~
+12 0 16385
+0 0 0 0
+0 100 0
+E
+balloon~
+   The balloon is made out of rubber, and has been filled with a gas to make it
+rise.  It bobs happily on the surrounding air currents.    
+~
+#769
+knife juggler's~
+a juggler's knife~
+The knife of a juggler has been left and forgotten.~
+~
+5 0 24577
+2 3 3 11
+3 25000 0
+E
+juggler's knife~
+   The juggler's knife is light-weight, and perfectly balanced, just right for
+throwing.    
+~
+A
+19 2
+#770
+wooden stilts pair~
+a pair of wooden stilts~
+A long pair of wooden stilts have been left here.~
+~
+11 0 16417
+0 0 0 0
+10 5000 0
+E
+pair wooden stilts~
+   The stilts are made of unfinished wood, yellow and splintery.  A long ways
+up the side of them are twin platforms for the wearer to rest his or her feet
+on.  Leather straps are nailed near these so the wearer can strap himself or
+herself on.    
+~
+A
+17 -12
+A
+11 5
+A
+18 2
+A
+19 1
+#799
+null item~
+null item~
+Nothing~
+~
+8 2 1
+0 0 0 0
+0 0 0
+$~

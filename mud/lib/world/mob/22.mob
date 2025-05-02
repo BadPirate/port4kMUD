@@ -1,0 +1,142 @@
+#2201
+tailor man shopkeeper~
+a tailor~
+A finely-dressed man with pins in his mouth stands behind the counter.
+~
+   His clothes are made of fine linen and velvet.  They are tailored to fit his
+body perfectly.  Around his wrist is a strip of cloth full of pins and needles
+for ready accessibility.  His eyes are the same deep orange as his hair.    
+~
+712714 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+BareHandAttack: 1
+E
+#2202
+yolis' caterer shopkeeper blue~
+Yolis the caterer~
+A scrawny, blue shopkeeper waits for the next customer.
+~
+   Yolis looks to be more skin and bone then flesh and blood.  His skin is a
+pale blue-grey color that looks rather sickly.  What was that about not
+trusting a thin cook?  But surely Yolis can be trusted since he's been in the
+business so long.  He smiles cheerfully and occasionally samples the food he
+sells.    
+~
+778250 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+BareHandAttack: 7
+E
+#2203
+Tok-Ti fern plant woman shopkeeper~
+Tok-Ti~
+A woman-shaped plant calmly arranges her selection of flowers.
+~
+   Her skin is the smooth white bark of the birch tree.  A strip of it was
+ripped away at her right wrist and the result is a long, black scar.  Her hair
+is not hair at all, but long, thin leaves of a deep greenish-purple shade.  
+Her yellow eyes are that of a fly.  Tok-Ti waits for you to buy some flowers.
+~
+778250 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 2
+E
+#2204
+jeweler Melisand ocrean shopkeeper~
+Melisand the jeweler~
+A beautiful female ocrean waits for the next customer.
+~
+   Melisand runs the shop, which is why it is named after her.  Her brother and
+their dwarven friend also make jewelery.  However, Melisand is the only one who
+will work with a variety of jewels.  Her soft grey skin shimmers moistly in the
+bright lights of the shop.    
+~
+712714 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 8
+E
+#2290
+firebird~
+the &rFirebird&n~
+A brightly-colored &rFirebird&n flits through the trees.
+~
+   The &rFirebird&n is a beautifully plumaged bird.  Bright sparks come off of
+his body in all directions.  However, his bright, beady little eye glares at
+you.  After all, he is the loyal creation and servant of the goddess, the
+Firebyrd, and he wouldn't betray his creator.    
+~
+194568 9408 1000 E
+50 -5 -10 3d3+1500 3d2+25
+1000 0
+8 8 1
+BareHandAttack: 8
+E
+#2291
+salamander~
+&rA fiery red salamander&n~
+&rA fiery red salamander is here burning everything in site&n
+~
+ICK!  it's burning everything!
+~
+57352 40 0 E
+50 -10 -5 1d1+1999 3d40+30
+0 0
+8 8 0
+BareHandAttack: 12
+E
+#2292
+firebird captain~
+the &rFirebird&n Captain~
+The Captain of all the &rFirebirds&n glares at you, the enemy.
+~
+   The Captain is a beautiful bird.  She is bright red, and bigger than all of
+the other firebirds.  They must be related to raptors then, you think, since
+raptors are rare and different because of the fact that the females are always
+bigger and stronger than the males.  How typical of the Firebyrd to make her
+female monsters stronger.    
+~
+258154 46328 1000 E
+100 -30 -20 30d30+25000 3d40+50
+0 0
+8 8 2
+BareHandAttack: 8
+E
+#2296
+golbez~
+Golbez~
+A man dressed all in black, the evil Golbez stands here.
+~
+   He is a strong, tall man, all dressed in black armor.  What you can see of
+his warrior's face is lined and worn.  He seems to have carried a very heavy
+burden, with no release in sight.  What has this man done to look like this?  
+
+~
+254042 32936 -1000 E
+100 -30 -20 9d30+30000 3d3+50
+0 0
+8 8 1
+BareHandAttack: 6
+E
+#2299
+Zeromus~
+Zeromus, the Incarnation of Evil~
+Zeromus, the personification of all hatred, glares at you.
+~
+   He's a diaphanous cloud, with red, evil, glowing eyes that stare straight
+into your soul and feed off of all anger and hatred that you hold in your
+heart.    
+~
+258650 37116 -1000 E
+100 -30 -20 5d100+30000 4d5+50
+100000 0
+8 8 1
+BareHandAttack: 12
+E
+$

@@ -1,0 +1,1425 @@
+#3200
+The Apple Orchard~
+   Several of the trees in the orchard are thriving in a twisted and wild way.
+Others, without the care of the farmer, are slowly dying.  They lift their
+skeletal limbs to the sky and with each shivering wind, drop their speckled
+leaves on the ground.  A thick hedge grows to the south with the top of a roof
+just barely peeping over.  It looks impassible.    
+~
+32 0 2
+D0
+   More apple trees grow to the north.    
+~
+~
+0 0 3201
+E
+counter~
+Displayed on the counter is a painted thimble, a pot about the size of your
+head, and some rags.
+~
+S
+#3201
+The Apple Orchard~
+   The trunks of the oldest apple trees have been bleached a soft silver color
+by the sun.  The younger trees are a darker grey with a little bit of brown.  
+Bees hum about the opening blossoms of the apple trees and waddle across the
+ripe fruits like smug cats.  The orchard may be wild, but it's also somewhat
+magical too.    
+~
+32 0 2
+D0
+   More apple trees grow to the north.    
+~
+~
+0 0 3204
+D2
+   More apple trees grow to the south.  A thick hedge can be seen beyond the
+trees.    
+~
+~
+0 0 3200
+D3
+   More apple trees grow to the west.    
+~
+~
+0 0 3202
+E
+pot stone primitive~
+Grey like granite and probably just as heavy.  You wonder how people managed to
+heat such an awkward thing.    
+~
+S
+#3202
+The Apple Orchard~
+   Thick, green grass thrust up between the gnarly roots of the apple trees.  
+They, in turn, are covered by a light layer of small white petals that shower
+down from the trees whenever the wind blows.  Dead leaves crunch under the feet
+of travelers and skip about to the wind's music.    
+~
+32 0 2
+D0
+   More apple trees and some berry bushes grow to the north.    
+~
+~
+0 0 3205
+D1
+   More apple trees grow to the east.    
+~
+~
+0 0 3201
+D3
+   More apple trees grow to the west.    
+~
+~
+0 0 3203
+E
+pot primitive~
+The pot turns out to have been made from woven plant fibers and covered with
+pitch to waterproof it.  The stones inside of it are smooth and blackened with
+the memories of heat.    
+~
+S
+#3203
+The Apple Orchard~
+   The gnarly grey roots of the oldest apple trees contort themselves across
+the surface before submerging.  They make rather excellent places to sit and
+rest for a bit.  They also delight in playing hide and seek with travelers'
+feet, as evidenced by the scattering of bark bits, shreds of cloth, and scuff
+marks.  A carpet of grass cushions the falls of the unweary.    
+~
+32 0 2
+D0
+   More apple trees and some berry bushes grow to the north.    
+~
+~
+0 0 3206
+D1
+   More apple trees grow to the east.    
+~
+~
+0 0 3202
+S
+#3204
+The Apple Orchard~
+   The smells of various stages of apple life fill the orchard.  The sweet
+beginnings of apple blossoms combat with the full and rich smell of ripe
+apples.  The bitter and tangy smell of rotting apples slips beneath the other
+perfumes.  A slight smell of berry flits beneath the overwhelming apple.  In
+fact, it looks like there are some berry bushes to the west...    
+~
+32 0 2
+D2
+   More apple trees grow to the south.    
+~
+~
+0 0 3201
+D3
+   More apple trees and some berry bushes grow to the west.    
+~
+~
+0 0 3205
+S
+#3205
+The Apple Orchard~
+   Several patches of morning glory writhe about the roots of three apple
+trees.  The pale blue flowers gleam against the grass and their own foliage.  
+The smell of ripe berries make valient attempts to drown out the apples' but
+end up mixing together into a wonderful perfume that any lady would be glad to
+wear.  The berry bushes brush up against the tree trunks.    
+~
+32 0 2
+D1
+   More apple trees grow to the east.    
+~
+~
+0 0 3204
+D2
+   More apple trees grow to the south.    
+~
+~
+0 0 3202
+D3
+   More apple trees and berry bushes grow to the west.    
+~
+~
+0 0 3206
+S
+#3206
+The Apple Orchard~
+   Berry bushes push fussily against the trunks of the apple trees as if they
+are trying to push them out.  Contrarily, the apple trees continue to thrive in
+their orchard with grass and morning glories at their feet and birds and apples
+adorning their branches.  In this orchard, apples are king.    
+~
+32 0 2
+D0
+   More apples grow to the north.  The ground appears rockier.    
+~
+~
+0 0 3208
+D1
+   More apples and berry bushes grow to the east.    
+~
+~
+0 0 3205
+D2
+   More apple trees grow to the south.    
+~
+~
+0 0 3203
+D3
+   More apple trees and berry bushes grow to the west.    
+~
+~
+0 0 3207
+S
+#3207
+The Apple Orchard~
+   A rather large apple tree at the very edge of the orchard has been hit by
+lightning.  Half of its branches are blackened horribly.  A thick, black streak
+runs down the trunk and into the earth.  Miraculously, the tree continues to
+thrive and puts out apples on all its living limbs.  The burn marks appear to
+be rather old, perhaps there was a farmer here to nurse the tree back into
+health so long ago...    
+~
+32 0 2
+D0
+   More apple trees grow to the north.  The ground appears to be rockier.    
+~
+~
+0 0 3209
+D1
+   More apple trees and berry bushes grow to the east.    
+~
+~
+0 0 3206
+E
+garbage can~
+Past the garbage can you can see the counter were business was conducted.
+~
+S
+#3208
+The Apple Orchard~
+   The farther north one goes, the rockier the ground becomes.  Apple trees
+blend into the edge of a forest that, in turn, sends out its bushes amongst the
+apple trees.  Bits of quartz shimmer amongst the grasses along with duller grey
+pebbles.  A fallen apple tree to the north slowly collapses into the earth.  
+~
+32 0 2
+D2
+   More apple trees and some berry bushes grow to the south.    
+~
+~
+0 0 3206
+D3
+   More apple trees grow to the west.  The grass becomes much sparser.    
+~
+~
+0 0 3209
+E
+bugs~
+Most of the bugs are cockroaches but there are plenty of ants and flies
+sticking around.    
+~
+S
+#3209
+The Apple Orchard~
+   The farther north and west one looks, the more the grass gives way to a
+gravel of dark grey pebbles and quartz.  A few tufts of stringy green grasses
+spread outward from a scrap of dirt trail winding through the rocks and
+disappearing into the trees to the northwest.  The apple trees shower their
+petals down on gravel and grass alike.    
+~
+32 0 2
+D1
+   More apple trees grow to the east.  The grass is thicker there.    
+~
+~
+0 0 3208
+D2
+   More apple trees and some berry bushes grow to the south.    
+~
+~
+0 0 3207
+D7
+   A dirt path covered with gravel heads northwest.    
+~
+~
+0 0 3210
+S
+#3210
+A Rocky Path~
+   Scrawny grass grows to either side of the path and pushes through the gravel
+whenever it gets half a chance.  Dark grey rocks and blue limestone surface at
+irregular intervals along the way.  To either side, trees and rocks grow up
+from the ground, reaching towards the sky.  The path heads southeast to a wild
+orchard or northwest.    
+~
+32 0 4
+D7
+   The gravel pathway continues northwest into the forest of rock and trees.  
+
+~
+~
+0 0 3211
+D8
+   A wild orchard grows southeast from here.    
+~
+~
+0 0 3209
+S
+#3211
+A Rocky Path~
+   The branches of the trees swing over the path and dip drooping fingers onto
+travelers' heads.  Anyone of average height would have to duck an aweful lot.
+The trees conveniently hide what is northwest from here from view.  The path
+runs northwest and southeast.    
+~
+32 0 4
+D7
+   The gravel path heads to the northwest.    
+~
+~
+0 0 3212
+D8
+   The smell of apple trees comes from the southeast.    
+~
+~
+0 0 3210
+S
+#3212
+A Rocky Path Surrounded by Bushes~
+   A piece of ancient tapestry about twice your size lies on the ground.  It
+looks as if someone did a tapestry dance on it and with muddy boots too!  What
+little of the tapestry that is not caked with a thick layer of mud protrays a
+line of people passing down the same path you walked not too long before to get
+here!  How UTTERLY STRANGE AND MYSTERIOUS, you wish you KNEW MORE about the
+history of this place.  Perhaps if you investigate more, you will find out what
+this place once was...    
+~
+32 0 4
+D3
+~
+~
+0 0 3213
+D8
+~
+~
+0 0 3211
+S
+#3213
+A Rocky Path Before A Shack~
+   A scrap of tapestry has been swept under here by Malun's broom.  It is only
+slightly dirty (surprising considering the state of the rest of the store) and
+most of that is dust.  You kick at it and a mushroom cloud of dust bursts
+upward like a miniature explosion.  After a coughing fit, you brush the tears
+from your eyes and examine the tapestry more closely.  A woman is bathing her
+face with water from a bucket.  A strange symbol has been carved into the
+side of the bucket.  How odd.
+~
+32 4 2
+D1
+~
+~
+0 0 3212
+D3
+~
+~
+0 0 3214
+E
+symbol bucket~
+It's an odd little staff with wings and a snake.
+~
+S
+#3214
+The Doorway To A Shack~
+   A hole has been carefully cut out of the floor and tracks through the dust
+lead from it out to the aisle.  Someone must be using this as a means to get in
+and out of the store.  Strange, they look like mouse tracks, but they're surely
+too big to be the tracks of a normal mouse.  You hope you do not have a monster
+on your hands because if you do, you're sneezing far to much to be able to
+fight well.  Bless you!    
+~
+32 4 0
+D1
+~
+~
+0 0 3213
+D3
+~
+~
+0 0 3216
+S
+#3215
+The South-Eastern Corner Of The Store~
+   The floor boards in this place are HUGE!  What kind of giant trees could
+they have come from?  Most of them are twice your height across and stretch all
+the way across the floor.  Spectacular!  The transportation cost of such trees
+must have been horrendous.  The counter to the east is of the extremely dirty
+and old kind.    
+~
+32 0 0
+D0
+~
+~
+0 0 3216
+D3
+~
+~
+0 0 3224
+S
+#3216
+Before the Doorway~
+   You can see the bottom of the garbage can from where you're at.  Wow, that
+thing is really crunched.  You wonder who did that to it and you hope that
+they're not around.  Anyone who would bang up a poor, innocent garbage can like
+would certainly not be very merciful with you.  Well, if you head north through
+the crack and past the garbage can, you can get to the aisle again.  
+Otherwise, you can head back south.    
+~
+32 5 0
+D0
+~
+~
+0 0 3217
+D1
+~
+~
+0 0 3214
+D2
+~
+~
+0 0 3215
+D3
+~
+~
+0 0 3223
+E
+crack~
+There's a crack in the northern side of the desk that you can just barely
+squeeze through.  Strange, it looks as if something has been nibbling on it.  
+
+~
+S
+#3217
+By The Eastern Wall of the Store~
+   Crawling around on your hands and knees is hardly a dignified activity.  
+Especially for a persun of your station.  You resent that.  The dust bunnies
+don't seem to mind, the setting.  They playfully bounce around in the shadows.
+In fact, the brave little buggers are playing leap frog with you (not that
+you're doing any leaping).  You resent this also because not only are they
+getting you even more dirty, but their activities are really messing up your
+sinuses.  Bless you!    
+~
+32 5 0
+D0
+~
+0~
+0 0 3218
+D2
+~
+~
+0 0 3216
+D3
+~
+~
+0 0 3222
+S
+#3218
+By The Eastern Wall Of The Store~
+   Crawl, crawl, crawl, inhale dust, sneeze a whole lot, crawl some more is
+pretty much the routine down here.  So you crawl, and inhale dust, and sneeze.
+Bless you!  If you want, you can scuttle to the east and get out from under
+this counter.  Or, you can keep crawling around and sneezing.  You'd hate to
+look at your knees right now.  Ugh, dirt.  And dirt isn't the only thing down
+here...    
+~
+32 5 0
+D0
+~
+~
+0 0 3219
+D2
+~
+~
+0 0 3217
+D3
+~
+~
+0 0 3221
+S
+#3219
+Beneath North-Eastern Shelf~
+   Eww, look at all the garbage behind the counter.  Malun was certainly a big
+pig man!  All around you are old food containers and what the bugs and other
+inhabitants of the shop would not touch.  In a carefully cleared area sits a
+little water/food dish.  Whoever it belonged to must have been very important
+to Malun because it's the only thing in this whole place that's only covered
+with dust.  High above you is another shelf.    
+~
+32 0 0
+D2
+~
+~
+0 0 3218
+D3
+~
+~
+0 0 3220
+D4
+~
+0~
+0 0 3248
+E
+dish water food~
+There's no water in the dish, nor food.  Whoever it belonged to must be gone
+now.    
+~
+S
+#3220
+By The Northern Wall Of The Store~
+   Along with the general dirt and debris that's lying all over the store,
+there's an old boot.  It probably belonged to Malun.  It smells...  A LOT!  
+The laces are long gone to the creatures in the store and the boot leather
+itself has been gnawed on quite a bit.  Blech!  What would want to eat
+something like that boot when it smells so BAD!  Who cares, all you want is to
+be able to forget its stench.    
+~
+32 0 0
+D1
+~
+~
+0 0 3219
+D2
+~
+~
+0 0 3221
+D3
+~
+~
+0 0 3229
+S
+#3221
+The Store's Floor~
+   Water has rushed in through the broken window to the south and soaked deep
+into the floor boards, warping them.  The boards twist and raise up their ends
+like fish on land do.  They flinch away from contact with one another leaving
+little cracks all over the floor.  Better not step on them, your foot might
+slip through and that can lead to broken ankles, not to mention your mother's
+back...    
+~
+32 0 0
+D0
+~
+~
+0 0 3220
+D1
+~
+~
+0 0 3218
+D2
+~
+~
+0 0 3222
+D3
+~
+~
+0 0 3228
+S
+#3222
+Beneath The Center Shelf~
+   Nails jut upwards like pained people desperately trying to escape from hell.
+Their heads are pitted with rust and that flakes away on your fingers when you
+touch them.  The floor boards writhe in warped wetness and the smell of rot
+from places that did not dry off fast enough tickles your nose.  A knot in the
+floor has collected a little pool of water.  The area surrounding the pool is
+overgrown with moss.  Strangely enough, the pool remains clear of the stuff...
+~
+32 0 0
+D0
+~
+~
+0 0 3221
+D1
+~
+~
+0 0 3217
+D2
+~
+~
+0 0 3223
+D3
+~
+~
+0 0 3227
+D4
+~
+~
+0 0 3253
+D5
+~
+~
+0 0 3262
+S
+#3223
+Beneath The Center Shelf~
+   Heaps of leaves are tucked up against the shelf to the north.  Evidently,
+the persistant stuff has blown in through the door.  You sniff the air.  Ah,
+the delicious smell of dry old leaves.  They rustle and crunch beneath your
+feet.  It's a very satisfying sound.  You playfully kick around some leaves for
+a bit, just because.  A scattering of leaves rain down on you from above, and
+you can hear a voice saying, "How can I keep things clean if you keep blowing
+in?  Go away!"
+~
+32 0 0
+D0
+~
+~
+0 0 3222
+D1
+~
+~
+0 0 3216
+D2
+~
+~
+0 0 3224
+D3
+~
+~
+0 0 3226
+D4
+~
+~
+0 0 3254
+S
+#3224
+By The Southern Wall Beneath A Window~
+   One of the giant boards that makes up the floor must have been damaged when
+Malun took over the place.  It has been replaced with several lesser boards,
+and now, one of those boards is missing too!  It leaves a big gap in the floor.
+The darkness of the hole is set off by the lighter colored boards around it.  
+You walk over and take a peek into it...  There are eyes looking back at you,
+unfriendly eyes.  Every instinct in your tiny mortal body screams &rDEADLY
+FORCE!!!  &n Being the rational *cough* person you are, you decide &rNOT&n to
+go down there because &rYOU WANT TO LIVE&n.    
+~
+32 0 0
+D0
+~
+~
+0 0 3223
+D1
+~
+~
+0 0 3215
+D3
+~
+~
+0 0 3225
+S
+#3225
+By The Southern Wall Of The Store~
+   An extremely small (well, compared to rest of the things in this shop) scrap
+of ancient tapestry flops dejectedly on the floor.  You turn it over with your
+foot and give it a look-see.  The craftsmanship is extraordinary.  You can only
+wonder at what a glorious piece of work it would be if it were whole.  
+Basically, it's a stylized drop of water with the sign of health stitched over
+it.  You wonder what the tapestry is trying to tell you.    
+~
+32 0 0
+D0
+~
+~
+0 0 3226
+D1
+~
+~
+0 0 3224
+D3
+~
+~
+0 0 3234
+S
+#3226
+The Store's Floor~
+   The amount of leaves tucked away under here is absolutely amazing...  It's
+almost as if some creature has been piling them in a corner to make a sort of
+nest.  Impossible, of course, no sane creature would want to make its nest in
+such a disgusting place and there must be a crack somewhere because the floor
+is wet and spongy beneath your feet.  The smell of rot fills the enclosed space
+and lays seige to your nostrils.  You'd sneeze if you had it left in you.    
+~
+32 0 0
+D0
+~
+~
+0 0 3227
+D1
+~
+~
+0 0 3223
+D2
+~
+~
+0 0 3225
+D3
+~
+~
+0 0 3233
+S
+#3227
+The Store's Floor~
+   Cute little spiders crawl over your feet and up the legs of your pants and
+wander through your hair and, well, they're everywhere!  A brief inspection
+reveals an egg sack.  They must have just hatched!  The cute little critters
+fall upon one another and eat each other.  Family.  *sniff* It's moments like
+these that remind you of why you left home.  You shake yourself off and head
+somewhere with a smaller spider population.    
+~
+32 0 0
+D0
+~
+~
+0 0 3228
+D1
+~
+~
+0 0 3222
+D2
+~
+~
+0 0 3226
+D3
+~
+~
+0 0 3232
+S
+#3228
+The Store's Floor~
+   The fallen leaves are so thick on the floor that you cannot see the floor
+boards.  You happily wade through them for several moments until you start
+wondering what could be living under these leaves.  Perhaps animals that could
+eat you.  Perhaps just some icky bugs.  Perhaps it's your ex waiting to ambush
+you.  You start poking around you with your weapon.  Die, ex!  Ahem, you just
+hope nothing dangerous (a monster) or icky (the ex or the bugs) jumps you.    
+~
+32 0 0
+D0
+~
+~
+0 0 3229
+D1
+~
+~
+0 0 3221
+D2
+~
+~
+0 0 3227
+D3
+~
+~
+0 0 3231
+S
+#3229
+Beneath The Counter~
+   The window is--hard as it is to believe--unbroken as far as you can see.  
+Malun didn't even bother to board it up!  You look out at a world of uncut lawn
+and wimpy flowers choked out by weeds.  The gravel pathway is overgrown with
+various plants that you can only classify as weeds because you never paid
+attention to the wise old man next door when he tried to explain what they all
+were.  Too bad, some of them might be eatable.  Is that your stomach rumbling?
+No...  The sound came from behind you...    
+~
+32 0 0
+D1
+~
+~
+0 0 3220
+D2
+~
+~
+0 0 3228
+D3
+~
+~
+0 0 3230
+D4
+~
+~
+0 0 3243
+S
+#3230
+Beneath The Counter~
+   The window lies in various glittering pieces all around you.  Apparently,
+someone with a rock, (possibly the one lying at your feet right now), in a fit
+of irresponsibility, broke the window.  That's a darn shame.  Water spots and
+the general rot of wood that's been wet too long are scattered all over the
+surface of the floor.  You'll have to step carefully because not only could you
+step on a piece of glass, but you might fall through the rotting floor.    
+~
+32 0 0
+D0
+~
+~
+0 0 3257
+D1
+~
+~
+0 0 3229
+D2
+~
+~
+0 0 3231
+D4
+~
+~
+0 0 3242
+S
+#3231
+The Store's Floor~
+   North of you, you can see Malun's abandoned shoe.  You can smell it without
+even having to open your eyes.  A draft must be blowing the disgusting odors
+your way, and since this is an extremely closed up space, the odors are more
+concentrated.  You feel like you're going to faint.  Well, you can go up the
+shelf to escape the deadly odors or you can go north to the source.  Really,
+going north wouldn't be very smart since you're trying to get _away_ from the
+smells.    
+~
+32 4194304 0
+D0
+~
+~
+0 0 3230
+D1
+~
+~
+0 0 3228
+D2
+~
+~
+0 0 3232
+S
+#3232
+Beneath The Western Shelf~
+   To the west and down, there's a little business in existance, and the
+shopkeeper is a mouse!  It's too far down for any but the sharpest of eyes to
+see, but it might be a good idea to check it out if you don't know what he's
+selling.  A thick layer of dust covers the shelf's surface.    
+~
+32 0 0
+D0
+~
+~
+0 0 3231
+D1
+~
+~
+0 0 3227
+D2
+~
+~
+0 0 3233
+D4
+~
+<NONE>~
+0 0 3236
+S
+#3233
+Beneath The Western Shelf~
+   A set of badly tarnished silver pots has been tucked back into the shadows.
+You wouldn't mind cooking in them yourself since they are so well-made but they
+are far too big for you to carry away.  Well, if they were smaller...  The
+shelf runs east and west, perhaps there will be other, smaller pots.    
+~
+32 0 0
+D0
+~
+~
+0 0 3232
+D1
+~
+~
+0 0 3226
+D2
+~
+~
+0 0 3234
+D4
+~
+~
+0 0 3237
+E
+pot silver set~
+The smallest pot is as tall as you are and the largest is half again your
+height!  You'd have to be a super being to haul these away!    
+~
+S
+#3234
+Beneath The Western Shelf~
+   Chinks in the walls of the store allow cool air to whistle through whenever
+the wind blows.  The advantage of that being that the air here is not very
+stale.  The disadvantage, of course, is that the weather can get through.  
+Why, the &gfloor&n is just covered with water spots!    
+~
+32 0 0
+D0
+~
+<NONE>~
+0 0 3233
+D1
+~
+~
+0 0 3225
+D2
+~
+~
+0 0 3235
+D4
+~
+~
+0 0 3238
+E
+floor~
+The boards are silvery with age, any polish that might have been used on it
+has long ago been worn away by the elements.  Water stains abound, blending
+into one another to form a strange pattern on the wood.
+~
+S
+#3235
+Mouse's Store~
+   The shabby shelf boards do not really match the rest of the store.  They are
+not near the length of the floor and wall boards and not nearly the quality.  
+They look newer also.  What was the shop before Malun took over?  Was it a
+place of quality and beauty?  And what took that away...    
+~
+32 0 0
+D0
+~
+~
+0 0 3234
+S
+#3236
+The Western Shelf~
+   Sap once oozed down the wall from the shelf above.  Tiny insects and
+particals of dirt are forever trapped in the dried stuff.  Thousands of years
+from now, the sap could be turned to amber and the preserved DNA in the
+mosquitoes used be salvaged and used to clone dinosaurs that will break free
+and eat people.  Isn't that lovely?    
+~
+32 0 0
+D2
+~
+~
+0 0 3237
+D4
+~
+~
+0 0 3239
+D5
+~
+~
+0 0 3232
+S
+#3237
+The Western Shelf~
+   A crust of dried sap covers the shelf board.  The boards must have been a
+little too new when the shelf was put together.  It makes a rather nice
+contrast, the rich tawny color against the silver of the wood.  A little
+&gtarnished pot&n sits right in the middle of the dried sap, saucy little
+thing.    
+~
+32 0 0
+D0
+~
+~
+0 0 3236
+D2
+~
+~
+0 0 3238
+D4
+~
+~
+0 0 3240
+D5
+~
+~
+0 0 3233
+E
+pot tarnished~
+The little copper pot is indeed saucy...  It's the kind of pot chefs use to
+stir a little bit of sauce.  It's even got a little leftover gravey stuck to
+the side.  Mmm, gravey....    
+~
+S
+#3238
+The Western Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3237
+D4
+~
+~
+0 0 3241
+D5
+~
+~
+0 0 3234
+S
+#3239
+Top Of The Western Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3240
+D5
+~
+~
+0 0 3236
+S
+#3240
+Top Of The Western Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3239
+D2
+~
+~
+0 0 3241
+D5
+~
+~
+0 0 3237
+S
+#3241
+Top Of The Western Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3240
+D5
+~
+~
+0 0 3238
+S
+#3242
+Climbing The Counter~
+You are in an unfinished room.
+~
+32 0 0
+D1
+~
+~
+0 0 3243
+D4
+~
+~
+0 0 3245
+D5
+~
+~
+0 0 3230
+S
+#3243
+Climbing The Counter~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3244
+D3
+~
+~
+0 0 3242
+D4
+~
+~
+0 0 3246
+D5
+~
+~
+0 0 3229
+S
+#3244
+Door In The Counter~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3243
+S
+#3245
+Top Of The Counter~
+You are in an unfinished room.
+~
+32 0 0
+D1
+~
+~
+0 0 3246
+D5
+~
+~
+0 0 3242
+S
+#3246
+Top Of The Counter~
+You are in an unfinished room.
+~
+32 0 0
+D1
+~
+~
+0 0 3247
+D3
+~
+~
+0 0 3245
+D5
+~
+~
+0 0 3243
+S
+#3247
+Inside A Trash Can~
+You are in an unfinished room.
+~
+32 0 0
+D4
+~
+~
+0 0 3246
+S
+#3248
+The North-Eastern Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D4
+~
+~
+0 0 3249
+D5
+~
+<NONE>~
+0 0 3219
+S
+#3249
+Top Of The North-Eastern Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D3
+~
+~
+0 0 3250
+D5
+~
+~
+0 0 3248
+S
+#3250
+Mid-Leap~
+You are in an unfinished room.
+~
+32 8388608 0
+D1
+~
+~
+0 0 3249
+D3
+~
+~
+0 0 3251
+D5
+~
+~
+0 0 3220
+S
+#3251
+The Northern Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D1
+~
+~
+0 0 3250
+D3
+~
+~
+0 0 3252
+S
+#3252
+The Northern Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D1
+~
+<NONE>~
+0 0 3251
+S
+#3253
+The Center Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3254
+D4
+~
+~
+0 0 3255
+D5
+~
+<NONE>~
+0 0 3222
+S
+#3254
+The Center Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3253
+D4
+~
+~
+0 0 3256
+D5
+~
+~
+0 0 3223
+S
+#3255
+Top Of The Center Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3256
+D5
+~
+~
+0 0 3253
+S
+#3256
+Top Of The Center Shelf~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3255
+D5
+~
+~
+0 0 3254
+S
+#3257
+The Back Door Of The Store~
+You are in an unfinished room.
+~
+32 0 3
+D2
+~
+~
+0 0 3230
+D3
+~
+~
+0 0 3258
+S
+#3258
+A Tiny, Discarded Yard~
+You are in an unfinished room.
+~
+32 0 2
+D0
+~
+~
+0 0 3259
+D1
+~
+~
+0 0 3257
+S
+#3259
+By An Over-Grown Fountain~
+You are in an unfinished room.
+~
+32 0 3
+D2
+~
+~
+0 0 3258
+D5
+~
+~
+0 0 3260
+S
+#3260
+Inside The Fountain~
+You are in an unfinished room.
+~
+32 256 0
+D4
+~
+~
+0 0 3259
+D5
+~
+~
+0 0 3261
+S
+#3261
+Inside A Pipe~
+You are in an unfinished room.
+~
+32 256 0
+D4
+~
+~
+0 0 3260
+S
+#3262
+A Tunnel Beneath A Hole~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3263
+D4
+~
+~
+0 0 3222
+S
+#3263
+A Narrow, Dirt Tunnel~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3262
+D5
+~
+~
+0 0 3264
+S
+#3264
+A Narrow Tunnel Beneath A Hole~
+You are in an unfinished room.
+~
+32 0 0
+D3
+~
+~
+0 0 3265
+D4
+~
+~
+0 0 3263
+S
+#3265
+A Dirt Tunnel~
+You are in an unfinished room.
+~
+32 0 0
+D0
+~
+~
+0 0 3266
+D1
+~
+~
+0 0 3264
+S
+#3266
+The Mouses' Home~
+You are in an unfinished room.
+~
+32 0 0
+D2
+~
+~
+0 0 3265
+S
+#3297
+A Room That Is NOT Finished~
+   It looks unfinished, but that's because you're a worthless mortal who does
+not deserve to be stuck in a room with a decent desc.  You can just sit on the
+floor...  No wait, there is no floor!  Float then.    
+~
+32 0 0
+S
+#3298
+The Library of New Thalos~
+   Shelves and shelves of rotting books line the walls and arrange themselves
+in moldering stacks on the ground.  The chairs and tables in the room look
+compromised.  Floor boards have broken off or rotted away and the ground can be
+seen far below.  It looks green and inviting.  The only way out is the ladder
+down.    
+~
+32 8284 0
+D0
+~
+~
+0 0 147
+D4
+~
+~
+0 0 3001
+D5
+~
+~
+0 0 3297
+S
+#3299
+Opinions NOT Wanted~
+   The walls are wood (naturally), and the furnishings of the room are highly
+polished wooden chairs tables that have been grown whole from the trees.  
+Elves, it would seem, are better furniture builders than humans.  The
+atmosphere is set for socializing with all those comfy places to sit and
+coasters pointedly set out for drinks to rest.  Perhaps the elves wish people
+to talk out their problems in person instead of posting their verbal blather on
+the social board tucked into a badly lit corner of the room.    
+~
+32 20 0
+D1
+~
+~
+0 0 19007
+S
+$~

@@ -1,0 +1,1393 @@
+#2100
+&gEarth&n~
+   On and on the greenery marches.  On and on you march, even though it seems
+you will never reach the end.  Thin streams of sunlight occasionally trickle
+through the canopy, leaving everything else dark in comparison.  The beaten
+path you travel on is bumpy and you even stumble once in a while.  Suddenly,
+you begin to wonder what it is that might have created this path.  You've seen
+little sign of life other than plants, none of it large enough to make this
+path, little of it even on the ground...    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2109
+D2
+~
+~
+0 0 2079
+S
+#2101
+&gEarth&n~
+   You finally trudge wearily to a little knell that rises slightly higher than
+the rest of the prairie.  From it, you get a magnificent view of endless waving
+grasses.  Off in the distance, you see massive herds of antelope and buffalo.
+However, they are too far distant for you to ever reach, it seems.  Far, far
+off to the north, you see a grey smudge on the horizon.  Could it be an end to
+the endless prairie?  Or should you continue on how you have been going?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2108
+D1
+~
+~
+0 0 2102
+S
+#2102
+&gEarth&n~
+   Once again, you are deep in the plains, surrounded only by infernal grass.
+Carelessly, you don't look where you are going, and you suddenly hear a
+strange, dry rattling sound.  At your feet, a prairie rattler sits coiled,
+waving its tail around in warning.  You slowly back away from the snake until
+it is out of sight.  Phew!  You almost got bitten!  Better be more careful
+where you walk.  Apparently little birds and herd animals aren't the only
+beasts on this plain.    
+~
+21 1310785 3
+D1
+~
+~
+0 0 2103
+D3
+~
+~
+0 0 2101
+S
+#2103
+&gEarth&n~
+   Strangely enough, you wander your way into a wierd, beaten down circle of
+grass.  From one instanct to the next, from being surrounded by neck-high
+foliage, you are now in an almost totally flat clearing.  In fact, the grass
+has been worn down to the earth in strange patterns all over the place.  What
+on earth could have occured here to cause such an odd place?  Who would come to
+the middle of the prairie?    
+~
+21 1310785 3
+D3
+~
+~
+0 0 2102
+S
+#2104
+&gEarth&n~
+   You crunch onward through last years leaves as the forest trees begin to
+tower even more overhead.  A single bird sings a sweet song momentarily, then
+falls silent as the oppresive hush of the woodland overcomes even its merry
+little spirit.  The smell of dead wood and rot begins to pervade your nose.  
+Shall you proceed deeper into the forest to the north, or exit back onto the
+plain to the south?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2105
+D2
+~
+~
+0 0 2075
+S
+#2105
+&gEarth&n~
+   The darkness closes over you as the trees become thicker and grow closer
+together.  Many of them are pines now, and you walk silently through their shed
+needles.  From those crushed rises a fresh scent of pine, which, fortunately
+overcomes the smell of rot.  However, even this pleasant scent doesn't mask the
+oppressiveness of this dark woodland.  You realize that the path splits into
+three: one branch goes south, another north, and the final travels west.    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2134
+D2
+~
+~
+0 0 2104
+D3
+~
+~
+0 0 2106
+S
+#2106
+&gEarth&n~
+   The path seems to slope downwards to the west here.  The silence becomes
+even more accute, and you shiver in the slight chill the darkness creates.  
+The path is starting to turn muddy and the air seems very damp here.  Your
+sense of uneasiness grows as you realize that you can't see the sun at all
+anymore.  You are too far down and deep in the forest to see that cheery
+forebringer of life...    
+~
+21 1310785 3
+D1
+~
+~
+0 0 2105
+D3
+~
+~
+0 0 2107
+S
+#2107
+&gEarth&n~
+   As you walk westward, you find yourself entering a cave.  Dark stalactites
+hang down and damp stalagmites reach upward as dangerous spikes.  Suddenly, a
+strange thought strikes you.  You are in a cave within a cave!  The thought of
+endless worlds and caves within worlds and caves makes your head spin and you
+greatly consider returning to the east and the much more understandable forest.
+~
+21 1310785 3
+D1
+~
+~
+0 0 2106
+S
+#2108
+&gEarth&n~
+   You wander aimlessly through the seemingly endless prairie.  On and on, over
+hill and dell, through grass as high as your shoulders.  Your feet squish
+uncomfortably, still wet from the slough you stumbled into, and barely got out
+of.  The mud is still slowly flaking off of you as it dries.  The little birds
+no longer seem to be greeting you, but rather mocking your weary wandering
+through their territory.    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2131
+D2
+~
+~
+0 0 2101
+S
+#2109
+&gThe Lost Jungle&n~
+   The trees suddenly come together, creating an almost impenatrable wall.  
+Where they happen to give way, vines hang down, creating great curtains of
+green among the brown pillars of wood.  The branches are intertwined so
+tightly, and keep out the sunlight so well, that the gloom that surrounds you
+is almost that of night.  You push and shove your way around, but you have lost
+all sense of direction, and seem to get nowhere.  The trees look so alike, that
+they cannot possibly serve as landmarks.  How will you ever find your way out
+of this accursed jungle?    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2110
+D1
+~
+~
+0 0 2128
+D2
+~
+~
+0 0 2109
+D3
+~
+~
+0 0 2129
+S
+#2110
+&gThe Lost Jungle&n~
+   The trees suddenly come together, creating an almost impenatrable wall.  
+Where they happen to give way, vines hang down, creating great curtains of
+green among the brown pillars of wood.  The branches are intertwined so
+tightly, and keep out the sunlight so well, that the gloom that surrounds you
+is almost that of night.  You push and shove your way around, but you have lost
+all sense of direction, and seem to get nowhere.  The trees looks so alike,
+that they cannot possibly serve as landmarks.  How will you ever find your way
+out of this accursed jungle?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2109
+D1
+~
+~
+0 0 2110
+D2
+~
+~
+0 0 2130
+D3
+~
+~
+0 0 2129
+S
+#2111
+&gEarth's Throne&n~
+   You enter what must be the center of Earth, if only spiritually.  The temple
+of trees surrounds you with majesty and greenery.  A clearing opens up here,
+providing light for the small saplings the line a pathway to the center of the
+clearing.  There lies a massive old tree, twisted into a mighty throne!  Who
+could possibly compare with the mighty god whose throne this must be?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2128
+S
+#2112
+&kThe Elementals&n~
+   You drag yourself onward, the heat becoming almost unbearable.  Sweat drops
+off of you in great drops, and you stagger against the pumice that makes up the
+wall.  However, you draw back quickly, and stare in horror at the blistering
+burns that now cover the palm that touched the wall.  To the west is a red,
+malicious-seeming, burning portal.  The cave continues to the north and south.
+~
+21 1310789 0
+D0
+~
+~
+0 0 2127
+D2
+~
+~
+0 0 2097
+D3
+~
+~
+0 0 2113
+S
+#2113
+&rFire&n~
+   Your first impression is of flames, unending, burning flames!  As you try to
+regain your bearings, you realize that you are right in the middle of a
+terrible prarie fire!  Distant through the flames, you see all manner of
+creatures fleeing for their lives, bounding jackrabbits, slithering snakes,
+pudgy prarie dogs.  All moving as fast as they can AWAY from where you are.  
+You probably ought to follow them if you care for your life.  The flames seem
+less dense to the south, and a red glowing portal lies to the east.    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2112
+D2
+~
+~
+0 0 2096
+S
+#2114
+&rFire&n~
+   You emerge from the flames with a sigh of relief.  However, you begin to
+feel a slight pain in your shoulder, and as you look over, startled, you
+realize that an ember has landed on you and is burning through your clothes!  
+Jumping up and down, you rip your jacket off, and throw it to the ground,
+stamping on the shoulder so as to put out the flames.  When they're gone, you
+look rather sheepishly at the ruined jacket, feeling rather silly.  What was
+once a snazzy, nice-looking coat is now a soot-and-dirt-covered, wrinkled,
+burned mess.  What would your mother say!    
+~
+21 1310785 5
+D0
+~
+~
+0 0 2125
+D2
+~
+~
+0 0 2095
+S
+#2115
+&rFire&n~
+   Impossibly steep walls of a small gully surround you.  What little bit of
+the sky you can see is made nearly invisibly by the steam rising off of the
+bubbling mud pots that surround you.  Foul odors rise to choke you, and
+splashes of hot mud burn your exposed skin.  A small path seems to weave its
+way among the treacherous pools both to the north and to the south.    
+~
+21 1310785 5
+D0
+~
+~
+0 0 2124
+D3
+~
+~
+0 0 2116
+S
+#2116
+&rFire&n~
+   Strange geysers and sulfur smells continue to surround you as you pick your
+way carefully across the hot ground.  Strange mud pots burn and bubble all
+around, and make sucking and popping sounds, as if they would like to eat you
+up as a delicious dinner.  The air is hot and heavy, and makes breathing as you
+climb up the steep foothills difficult.  However, you press on, and on, and on,
+though your legs feel as if they are burning up, and your lungs as if they are
+on fire.    
+~
+21 1310785 5
+D0
+~
+~
+0 0 2123
+D1
+~
+~
+0 0 2115
+D2
+~
+~
+0 0 2093
+S
+#2117
+&rSteam Fields&n~
+   Suddenly, a burst of hot gases surrounds you, and the smell of sulphur
+chokes you.  You're in the middle of a heat vent!  Coughing and choking, you
+stumble to and fro, trying to find your way out.  And in every direction, you
+are confronted by yet more walls of steam and gases, and tripped by more pumice
+and obsidian.  The steaming air sears through your lungs and makes every breath
+a new lesson in agony.  Your eyes water from the overwhelming smell of sulphur,
+and your nose runs from the irritation.  Will you ever be able to find your way
+out?    
+~
+21 1310785 5
+D0
+~
+~
+0 0 2118
+D1
+~
+~
+0 0 2088
+D2
+~
+~
+0 0 2091
+D3
+~
+~
+0 0 2117
+S
+#2118
+&rSteam Fields&n~
+   Suddenly, a burst of hot gases surrounds you, and the smell of sulphur
+chokes you.  You're in the middle of a heat vent!  Coughing and choking, you
+stumble to and fro, trying to find your way out.  And in every direction, you
+are confronted by yet more walls of steam and gases, and tripped by more pumice
+and obsidian.  The steaming air sears through your lungs and makes every breath
+a new lesson in agony.  Your eyes water from the overwhelming smell of sulphur,
+and your nose runs from the irritation.  Will you ever be able to find your way
+out?    
+~
+21 1310785 5
+D0
+~
+~
+0 0 2092
+D1
+~
+~
+0 0 2093
+D2
+~
+~
+0 0 2118
+D3
+~
+~
+0 0 2091
+S
+#2119
+&rFire&n~
+   Strange...  You're in a hall made of solid mirrors.  No flaws to be seen
+anywhere.  You look at a perfect reflection of yourself, and grimace to see all
+the soot and charred marks on your clothing.  This certainly isn't a place
+that's easy on clothing!  Hmmm...  Did you hear something?  You listen closer.
+There's a strange whooshing sound that is getting increasingly louder.  What on
+earth could it be?  Suddenly, a large fireball flies by, bouncing from wall to
+wall, just barely missing you.  EEK!    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2118
+D2
+~
+~
+0 0 2090
+S
+#2120
+&rFire&n~
+   Disoriented, you blink and look around, finding yourself in a strange
+clearing.  Tall, fragrant trees rise around you, filling the air with a scent
+of...  Cinnamon?  You didn't even know that cinnamon came from trees!  These
+seem to have been cultivated, for what strange reason, you cannot guess.  As
+you look at the trees closer, you see scars of where bark has been
+systematically stripped away, leaving only enough for the tree to live.  How
+very odd.  In the center of the grove, a large clearing opens up, and in the
+middle, there is a pile of branches, from many trees as well as the cinnamon
+trees, and bark from the cinnamon trees.  Very, very strange.    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2121
+S
+#2121
+&rFire&n~
+   Triumphantly, you reach the peak of the volcano!  Stupidly, you stand right
+at the very lip of the gaping mouth as it spews forth its gas and soot.  You
+get a bare glimpse of the fiery inferno in the core before getting a
+face-and-lungful of soot, and being forced back from the grotesque site.  Now
+that you've completed your foolish task, where are you to go?  It appears that
+the lava has finally overtaken your precarious path...    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2122
+D3
+~
+~
+0 0 2120
+S
+#2122
+&rFire&n~
+   A single, weaving path seems to open its way before you.  It is a very high,
+steep, rock-bound road, which probably explains why it is about the only place
+not covered or burned by the malevolent ooze of lava that is inching its
+destructive way down the volcano.  Fortunately, the path does seem wide enough
+that the lava from either side won't be able to burn you.  You hope.    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2123
+D3
+~
+~
+0 0 2121
+S
+#2123
+&rFire&n~
+   As you continue your fool-hardy climb, the earth rumbles and shakes as in
+protest.  Soot pours down on you like a filthy rain, covering everything in
+sight, filling your lungs with black dust.  Cracks open up in the ground all
+around you, spitting up oozing lava that burns everthing that comes near it.  
+Do you dare continue this treacherous climb?    
+~
+21 1310785 5
+D2
+~
+~
+0 0 2116
+D3
+~
+~
+0 0 2122
+S
+#2124
+&rThe Padded Cell&n~
+   Strangely enough, you find yourself in an empty hallway.  The only feature
+to it is a small window right in front of you.  As you peer closer at it, you
+can faintly see the outlines of a door around it.  Curious, you go up to the
+window and look inside.  The room the window looks into is windowless, except,
+of course, for the one you're looking through.  The room is rather small, and
+is thickly padded EVERYWHERE inside.  The only furniture is three rickety,
+wooden chairs that look about ready to fall apart at any instant.    
+~
+21 1310800 5
+D2
+~
+~
+0 0 2115
+S
+#2125
+&rFire&n~
+   Strange...  You find yourself in an almost-empty room.  The only furnishing
+is a small, wooden table.  On it is a brightly burning kerosine lamp.  From it
+emits, however, not the nice, bright white light that you'd expect, but a
+sinister, dark red glow.  Curious, you approach the lamp, looking to see if it
+is a lamp shade that is creating the odd color.  As you lean towards the flame,
+an evil face forms in it, and grins wickedly at you.  Startled, you jump back,
+and the flame blinks out.    
+~
+21 1310785 5
+D1
+~
+~
+0 0 2126
+D2
+~
+~
+0 0 2114
+S
+#2126
+&rFire&n~
+   As you step out of the darkness of the room behind you, you are blinded by a
+sudden bright light.  As you blink your watering eyes to clear them, you seem
+to see a bright fountain of red-tinted water bubbling merrily before you.  In
+the center of the large, circular fountain is a small island, made of blood-red
+marble.  Fascinated, you approach to fountain, and reach out to feel the cool
+water, only to jump back in pain and surprise.  The water BURNED you!  
+Actually, you realize, it's not water, it's FIRE-water.  After all, this is the
+element of &rFire&n, not &bWater&n.    
+~
+21 1310785 5
+D3
+~
+~
+0 0 2125
+S
+#2127
+&kThe Elementals&n~
+   The hot pumice and granite walls still surround you, but the heat is
+suddenly lessened by the cool white light streaming from the brilliant portal
+to the north.  Astonished, you wonder what it could lead to, as you have
+already passed portals that obviously led to Air, Water, Earth, and Fire.  
+What else is there to life but those...?    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2137
+D2
+~
+~
+0 0 2112
+S
+#2128
+&gEarth&n~
+   A reverent hush falls over the rain forest as you walk through what almost
+seems to be a living temple.  Massive pillars of trees shoot straight up into
+the heavens.  Majestic branches and vines twine their way into graceful arches
+above you.  Soft humus carpets the path that you tread on.  It is a place of
+sanctity and peace.    
+~
+21 1310785 3
+D1
+~
+~
+0 0 2129
+D2
+~
+~
+0 0 2111
+S
+#2129
+&gThe Lost Jungle&n~
+   The trees suddenly come together, creating an almost impenatrable wall.  
+Where they happen to give way, vines hang down, creating great curtains of
+green among the brown pillars of wood.  The branches are intertwined so
+tightly, and keep out the sunlight so well, that the gloom that surrounds you
+is almost that of night.  You push and shove your way around, but you have lost
+all sense of direction, and seem to get nowhere.  The trees look so alike, that
+they cannot possibly serve as landmarks.  How will you ever find your way out
+of this accursed jungle?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2109
+D1
+~
+~
+0 0 2129
+D2
+~
+~
+0 0 2130
+D3
+~
+~
+0 0 2100
+S
+#2130
+&gThe Lost Jungle&n~
+   The trees suddenly come togther, creating an almost impenatrable wall.  
+Where they happen to give way, vines hang down, creating great curtains of
+green among the brown pillars of wood.  The brances are intertwined so tightly,
+and keep out the sunlight so well, that the gloom that surrounds you is almost
+that of night.  You push and shove your way around, but you have lost all sense
+of direction, and seem to get nowhere.  The trees look so alike, that they
+cannot possibly serve as landmarks.  How will you ever find your way out of
+this accrused jungle?    
+~
+21 1310785 3
+D0
+~
+~
+0 0 2129
+D1
+~
+~
+0 0 2099
+D2
+~
+~
+0 0 2110
+D3
+~
+~
+0 0 2130
+S
+#2131
+&gEarth&n~
+   You find yourself at the border of a deciduous forest and a rolling plain.
+To the east, tall trees rustle their leaves in the wind.  To the south, grasses
+grow as high as your shoulder, and the gently rolling hills quickly block off
+your view.  Here at the border, the grass isn't nearly as high, nor the trees
+as towering, and you can see cute little flowers nestled among the tangled
+roots of both.  Little prairie birds perch and sing on the long stems, and seem
+to welcome you.    
+~
+21 1310785 3
+D1
+~
+~
+0 0 2132
+D2
+~
+~
+0 0 2108
+S
+#2132
+&gEarth&n~
+   Slowly, but surely, the forest begins to clear as you continue to walk down
+the mountain.  As the trees spread out, bushes crowd in, fighting for the sun,
+and gladly blocking your path as well.  You hack and slash your way through
+thorns and leaves.  The work is hard, and persperation trails down your
+forehead and stings your eyes.  Green stains from rubbing up against all
+greenery stain your clothing.  What would your mother think if she saw them!  
+~
+21 1310785 3
+D1
+~
+~
+0 0 2133
+D3
+~
+~
+0 0 2131
+S
+#2133
+&gEarth&n~
+   You are back among the deciduous forest, surrounded by a variety of both
+wildlife and plant life.  Berry bushes surround the path on both sides.  White
+aspens and tall oaks rise above them and you.  In the trees, birds chirp and
+sing, and squirrels quarrel over nuts.  A crashing sound makes you start, and
+you jump as a bear comes crashing across the path.  It settles down, however,
+and starts to gorge itself on berries, ignoring you.    
+~
+21 1310785 0
+D1
+~
+~
+0 0 2134
+D3
+~
+~
+0 0 2132
+S
+#2134
+&gEarth&n~
+   Slowly, you realize that you must be changing altitudes again.  Both pines
+and deciduous trees surround you now.  The path is covered with old, crunchy
+leaves, and cushioned with soft pine needles.  The trail is not clearly
+defined, however, and you find yourself wandering in and out, around and
+around, trying to find it again.  Trees and bushes haphazardly surround you,
+making your task even more difficult.    
+~
+21 1310785 3
+D2
+~
+~
+0 0 2105
+D3
+~
+~
+0 0 2133
+S
+#2135
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2144
+D3
+~
+~
+0 0 2136
+S
+#2136
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D1
+~
+~
+0 0 2135
+S
+#2137
+&wSpirit&n~
+   You stumble, disoriented.  You seem to be in a world of mist.  A world where
+everything fades in and out of reality.  The world of &wSpirit&n.  Without
+spirit, life is but a shell.  Without life, spirit is nothing but a ghost.  
+Without the other, neither is complete.  And so, you guess, the Elementals
+wouldn't be complete without Spirit either.  What strange wonders and horrors
+await you here?  You could go back through the white portal to the south.  Or,
+like the brave adventurer you are supposed to be, you could go north, further
+into Spirit...  And the eccentric mind of the creator who made this crazy cave.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2142
+D2
+~
+~
+0 0 2127
+S
+#2138
+&wSpirit&n~
+   The mist swirls ever closer, ever thicker.  As it does so, it begins to seem
+almost malevelent, as if it wishes to snuff out your pitiable little life like
+a candle.  It closes in around you, creating almost total darkness.  The
+fingers of smoke grasp tightly around your throat, threatening to squeeze all
+breath from you.  And yet, it is only mist.  It's best, or rather, worst
+efforts are wasted on you, a solid being.  Other than breathing in very humid
+air, in darkness, nothing else has affected you.  The mist is far more pitiable
+than you.    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2141
+D3
+~
+~
+0 0 2139
+S
+#2139
+&wSpirit&n~
+   A strange memory begins to form out of the eternal mists of time and
+&wSpirit&n.  Foul odors begin to invade your nostrils, and as your vision
+clears, you see a vast swamp spreading out before you.  In the middle, up to
+her knees in muddy water, is a short, dark-haired woman.  Near her is a great
+being of such power, it radiates, even though it is just a memory.  There they
+stand, talking.  Just talking.  Nothing more.  Occasionally, a pesky fish tries
+to attack the woman, but she annihilates them without even thinking about it.
+So they stand there.  Talking.    
+~
+21 1310785 0
+D1
+~
+~
+0 0 2138
+S
+#2140
+&wSpirit&n~
+   Tired, you decide to rest for a moment from your travails.  Settling back
+wearily, you suddenly startle as you begin to float.  Hopping down onto the
+vapor that serves as the ground, you look at where you were sitting, and see a
+small, smiling cloud looking back at you.  Apparently it was just trying to
+help, and was lending you a hand, err, seat.  Shrugging your shoulders, you
+smile back at the cloud, and return to your seat upon it.    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2149
+D1
+~
+~
+0 0 2141
+S
+#2141
+&wSpirit&n~
+   On and on through the mist you wander, through the eternal haze of spirit.
+Vague shapes form and dissipate in a glance.  Shapes like bodiless souls reach
+out and grab at you, faces contorted in silent agony as you pull away, taking
+something of their substance with you.  Seeing their companions pain, more of
+the souls wrench their matterless, vague faces into horror and anger, and begin
+to advance upon you.  Though they seem unable to do any damage to you, you
+decide that wisdom is the better part of valor, and retreat.    
+~
+21 1310785 0
+D1
+~
+~
+0 0 2142
+D2
+~
+~
+0 0 2138
+D3
+~
+~
+0 0 2140
+S
+#2142
+&wSpirit&n~
+   Uncertainly, you totter forward, not even quite sure where the ground is.  
+All you seem to be surrounded by is mist.  There's no up, no down, no cardinal
+directions.  Just the direction you happen to be floating in at the moment.  
+The thought of nothing above or below or to the sides of you makes you dizzy,
+and you reel around into yet another random direction.  Strange voices whisper
+in your ear, telling you of the oddest things, from flying ears, to seeing-eye
+chickens.    
+~
+21 1310785 0
+D1
+~
+~
+0 0 2143
+D2
+~
+~
+0 0 2137
+D3
+~
+~
+0 0 2141
+S
+#2143
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D1
+~
+~
+0 0 2144
+D3
+~
+~
+0 0 2142
+S
+#2144
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2145
+D2
+~
+~
+0 0 2135
+D3
+~
+~
+0 0 2143
+S
+#2145
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D2
+~
+~
+0 0 2144
+D3
+~
+~
+0 0 2146
+S
+#2146
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2153
+D1
+~
+~
+0 0 2145
+S
+#2147
+&wSpirit&n~
+   As the mists clear, you gasp in shock at the amazing sight before you, then
+try to gulp air as you realize you are at the bottom of a far away sea.  
+Bright corals rise high overhead, creating many caves and niches for rare and
+unique creatures to hide in.  Great kelp anchor themselves to the bedrock and
+reach, high, high, up towards the faint sunlight far above you.  Schools of
+fish dart around you, not even seeming to notice your intrusion.  Trying to
+hold your breath, you finally notice the misty, faded outlines of the area.  
+The reason why you haven't drown is because this, like much of &wSpirit&n, is
+only a memory.  But of whom?    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2152
+S
+#2148
+&wSpirit&n~
+   Suddenly, you are no longer surrounded by mist, but by a green forest
+clearing.  Bright flowers dot the landscape everywhere.  Birds hop and twitter
+from branch to branch in the trees.  A deer grazes in the meadow, totally
+unaware of your prescence.  Squirrels gather nuts, and a wolf silently stalks
+by.  Is this gorgeous place real?  Or is it just another memory.  And if so,
+who's is it?    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2151
+S
+#2149
+&wSpirit&n~
+   Floating onward through this strangest of elements, you suddenly get a
+feeling of deja vu.  Puzzled, you stop momentarily, and out of the mist appears
+your memory.  A beautiful mountain meadow filled with wildflowers sits before
+you.  In it, a happy couple eat a picnic lunch with their small child.  It is
+you as a young child, at a very special, private picnic you had with your
+parents.  It was something that you had consciously forgotten, but in your
+heart and soul, never had.  It was one of the best memories of your life when
+you were young.    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2150
+D2
+~
+~
+0 0 2140
+S
+#2150
+&wSpirit&n~
+   Yet another memory appears before you.  However, this one is not one of your
+own, strangely enough.  No feeling of deja vu this time!  In it, a red-haired,
+green-eyed woman stalks through a thick, deep jungle.  Despite the confusing
+aspect of it, she seems to know exactly where she's going.  Passing a strange,
+three-flowered plant, she heads down a secret path.  Suddenly, she is before an
+ancient building of some sort, guarded by an equally ancient statue!  Though it
+takes her very long, probably due to the fact that she seems to be a mage, she
+finally defeats the statue, and goes down into the depths of the old ruins.  
+~
+21 1310785 0
+D0
+~
+~
+0 0 2159
+D1
+~
+~
+0 0 2151
+D2
+~
+~
+0 0 2149
+S
+#2151
+&wSpirit&n~
+   A desert fades into reality.  A small group of people are bustling around a
+busy campsite, readying things for the day's journey.  One old man teaches a
+small boy how to properly treat the camels, loading them up with great care to
+how the pack balances on its back.  Another one of the nomads is milking a
+second camel.  As you look closer, even the tents seem to be made of camel fur,
+and the food and drink that of camel meat and milk.  These ancient people's
+lives depend on one single animal, which many people find to be dirty and
+disgusting.  As you watch these Boudins, though, you notice the care and love
+they show for their animals.    
+~
+21 1310785 0
+D2
+~
+~
+0 0 2148
+D3
+~
+~
+0 0 2150
+S
+#2152
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2157
+D2
+~
+~
+0 0 2147
+S
+#2153
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D0
+~
+~
+0 0 2156
+D2
+~
+~
+0 0 2146
+S
+#2154
+&wSpirit&n~
+   As you enter the well-hidden offshoot of the tunnel of Spirit, a serene,
+peaceful feeling overcomes your senses.  You breate in the faint scent of holy
+incense, and you realize that you are before an altar.  It is made of the
+finest white marble, and looks quite out of place in the fading mists of the
+strange cave.  Before it lies a white silk cushion, so bright as to resist any
+dirt that might try to mar its perfect surface.    
+~
+21 1310785 0
+D0
+~
+~
+0 0 2155
+S
+#2155
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D2
+~
+~
+0 0 2154
+D3
+~
+~
+0 0 2156
+S
+#2156
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D1
+~
+~
+0 0 2155
+D2
+~
+~
+0 0 2153
+D3
+~
+~
+0 0 2157
+S
+#2157
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D1
+~
+~
+0 0 2156
+D2
+~
+~
+0 0 2152
+D3
+~
+~
+0 0 2158
+S
+#2158
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310729 0
+D1
+~
+~
+0 0 2157
+D3
+~
+~
+0 0 2159
+S
+#2159
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+D1
+~
+~
+0 0 2158
+D2
+~
+~
+0 0 2150
+S
+#2160
+&wSpirit&n~
+You are in an unfinished room.
+~
+21 1310785 0
+S
+#2161
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2162
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2163
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2164
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2165
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2166
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2167
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2168
+the eelementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2169
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2170
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2171
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2172
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2173
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2174
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2175
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2176
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2177
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2178
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2179
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2180
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2181
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2182
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2183
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2184
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2185
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2186
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2187
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2188
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2189
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2190
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2191
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2192
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2193
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2194
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2195
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2196
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2197
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2198
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+#2199
+the elementals~
+You are in an unfinished room.
+~
+21 0 0
+S
+$~

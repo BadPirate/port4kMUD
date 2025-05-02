@@ -1,0 +1,117 @@
+#1200
+innkeeper~
+the Immortal Innkeeper~
+The Immortal Innkeeper is organizing her books here.
+~
+She appears to be having no problem tallying things up.
+~
+11 32768 0 E
+30 0 -10 1d49+901 4d8+5
+0 0
+8 8 2
+E
+#1201
+postmaster master post~
+the Immortal Postmaster~
+The Immortal Postmaster is hard at work here.
+~
+Scary... a postal worker... working?
+~
+11 32768 0 E
+30 0 -10 1d49+901 4d8+5
+0 0
+8 8 2
+E
+#1202
+being amorphous spirit wandering~
+the wandering spirit~
+A strange amorphous being wanders these halls eternally cleaning.
+~
+This spirit, having lived out its days in the mortal world, now
+works off its final sins by doing menial labour in this realm's
+purgatory.  In this case, those chores seem to be cleaning up
+after the immortals of the land.
+~
+65613 295944 0 E
+30 0 -10 1d49+901 4d8+5
+0 0
+8 8 0
+E
+#1207
+dragon silver leoveia~
+Leoveia~
+Leoveia the Silver Dragon stands here.
+~
+Leoveia is a huge dragon.  Her silver scales gleam, partially blinding you as
+you look towards her.  She has a long, spiked tail and a mean, tough
+look in her eyes.  Looks like a formidable beast in any case.
+~
+254106 65788 1000 E
+100 -30 -10 30d40+4000 30d127+50
+0 0
+8 8 2
+BareHandAttack: 4
+E
+#1208
+accident freak~
+a freak accident~
+A freak accident is here.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+10 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+#1209
+noose hanging~
+hanging~
+A robotic noose is here.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+10 20 10 1d1+1000 1d1+0
+0 0
+8 8 0
+E
+#1210
+robot injection lethal~
+lethal injection~
+A robotic cyanide injecting monster is here.  Its potion looks lethal!
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+10 20 10 1d1+1000 1d1+0
+0 0
+8 8 0
+E
+#1211
+guillotine french revolution robot~
+the guillotine~
+A robotic guillotine stand here.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+30 17 10 1d1+1000 10d10+3
+0 0
+8 8 0
+BareHandAttack: 3
+E
+#1299
+nothing~
+Nothing~
+Nothing is here
+~
+This mob seems to be, err... unfinished.
+~
+8 0 -1000 E
+100 19 10 10d10+10 1d1+1
+500 100
+8 8 0
+BareHandAttack: 4
+E
+$

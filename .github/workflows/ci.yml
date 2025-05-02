@@ -1,0 +1,145 @@
+name: Port4kMUD CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test_server:
+    name: Build and Test Server
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x] # Test against Node.js 20.x
+
+    defaults:
+      run:
+        working-directory: ./server
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn' # Cache yarn dependencies
+        cache-dependency-path: './server/yarn.lock'
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Run linters
+      run: yarn lint # Ensure code style and quality
+
+    - name: Build project
+      run: yarn build
+
+    - name: Run tests
+      run: yarn test
+      env:
+        CI: true # Often useful to indicate running in a CI environment
+        
+    # Upload the built server as an artifact
+    - name: Upload server build
+      uses: actions/upload-artifact@v3
+      with:
+        name: server-build
+        path: |
+          ./server/.next
+          ./server/node_modules
+          ./server/package.json
+          ./server/yarn.lock
+          ./server/e2e
+
+  build_mud:
+    name: Build MUD
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./mud
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install build dependencies
+      run: sudo apt-get update && sudo apt-get install -y build-essential
+
+    - name: Configure MUD
+      run: ./configure
+
+    - name: Build MUD
+      run: cd src && make
+
+    - name: Verify build artifacts
+      run: |
+        if [ ! -f "bin/circle" ]; then
+          echo "MUD build failed: bin/circle not found"
+          exit 1
+        fi
+        
+    # Upload the built MUD binary and necessary files as an artifact
+    - name: Upload MUD build
+      uses: actions/upload-artifact@v3
+      with:
+        name: mud-build
+        path: |
+          ./mud/bin/circle
+          ./mud/lib
+
+  e2e_tests:
+    name: End-to-End Tests
+    runs-on: ubuntu-latest
+    needs: [build_and_test_server, build_mud]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    # Download artifacts from previous jobs
+    - name: Download server build
+      uses: actions/download-artifact@v3
+      with:
+        name: server-build
+        path: ./server
+        
+    - name: Download MUD build
+      uses: actions/download-artifact@v3
+      with:
+        name: mud-build
+        path: ./mud
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        
+    - name: Prepare test scripts
+      run: |
+        chmod +x ./server/e2e/test-launch.sh
+        chmod +x ./server/e2e/test-cleanup.sh
+        chmod +x ./mud/bin/circle
+    
+    - name: Install Playwright browsers
+      run: |
+        cd server
+        npx playwright install --with-deps chromium
+    
+    - name: Run end-to-end tests
+      run: |
+        cd server
+        yarn test:e2e
+      
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-results
+        path: server/test-results/
+        retention-days: 7

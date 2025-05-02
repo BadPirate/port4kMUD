@@ -1,0 +1,1831 @@
+#800
+A dusty dirt road~
+   This dirt road is very dusty, and the wind isn't helping.  Every breeze
+blows dirt and dust into the air.  As you try to take a breath you get some
+down your throat and have to stop and cough to get it out.  The road goes east
+to Rome, and continues on west.    
+~
+8 0 2
+D1
+~
+gate iron~
+1 0 12005
+D3
+~
+~
+0 0 801
+S
+#801
+A dusty dirt road~
+   This dirt road is very dusty, and the wind isn't helping.  Every breeze
+blows dirt and dust into the air.  As you try to take a breath you get some
+down your throat and have to stop and cough to get it out.  The road goes east
+and west.  There is also a small path heading off towards a cave to the south.
+~
+8 0 2
+D1
+~
+~
+0 0 800
+D2
+~
+~
+0 0 898
+D3
+~
+~
+0 0 802
+S
+#802
+A dusty dirt road~
+   This dirt road is very dusty, and the wind isn't helping.  Every breeze
+blows dirt and dust into the air.  As you try to take a breath you get some
+down your throat and have to stop and cough to get it out.  The road goes east
+and west.  And to the west is the labyrinth.    
+~
+8 0 2
+D1
+~
+~
+0 0 801
+D3
+~
+~
+0 0 803
+S
+#803
+Before the labyrinth~
+   You stand before the entrance to the labyrinth.  A giant maze with traps and
+illusions of all kinds.  The tall stone walls go on and on, to where as you
+look to the north and south you can't see the ends of them.  You wonder who
+would ever build something like this, and what for.  The gate to the labyrinth
+is never locked, and thus any brave adventurer may enter.  There is a few
+plants growing by the walls, and a dirty murky stone pond in front of the gate.
+   A sign is here giving warning to all who consider entering.
+~
+8 0 0
+D1
+~
+~
+0 0 802
+D3
+~
+gate~
+2 0 804
+E
+sign~
+&G-----------------------=====:::<< &RWARNING &G>>:::=====----------------------------&n
+To all those who think they are brave and know it all...  Dare you enter the
+labyrinth you may not find your way not.  There could be death at any turn.  
+Only those that are truely brave, or stupid, should enter this place.  There
+could be anything at the &WCenter&n. It may be worth it, and it may not.  I doubt
+though they you could make it there to find out anyway.    
+
+&G--------------------------------------------------------------------------------&n
+~
+S
+#804
+A north-south passage~
+   You stand in the begining of the labyrinth.  As you look around all you see
+is one long continuos passage.  The passage runs north and south, and looks
+like it goes on forever.  Should you start walking the passage you may never
+find your way out.  The entrance is still to the east, should you wish to give
+up now.    
+~
+8 524288 0
+D0
+~
+~
+0 0 805
+D1
+~
+gate~
+1 0 803
+D2
+~
+~
+0 0 807
+S
+#805
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.  
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 806
+D2
+~
+~
+0 0 807
+S
+#806
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.  
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 808
+D2
+~
+~
+0 0 805
+S
+#807
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.  
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 805
+D2
+~
+~
+0 0 808
+S
+#808
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.  
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 807
+D2
+~
+~
+0 0 809
+S
+#809
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.  
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 806
+D2
+~
+~
+0 0 897
+S
+#810
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries.    
+~
+8 524288 0
+D0
+~
+~
+0 0 811
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 814
+D3
+~
+~
+0 0 814
+S
+#811
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries.    
+~
+8 786432 0
+D0
+~
+~
+0 0 814
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 812
+D3
+~
+~
+0 0 814
+S
+#812
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries.    
+~
+8 786432 0
+D0
+~
+~
+0 0 813
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 814
+D3
+~
+~
+0 0 814
+S
+#813
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries.    
+~
+8 786432 0
+D0
+~
+~
+0 0 814
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 814
+D3
+~
+~
+0 0 815
+S
+#814
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries.    
+~
+8 786432 0
+D0
+~
+~
+0 0 835
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 835
+D3
+~
+~
+0 0 835
+S
+#815
+West passage~
+   You are now standing in a passage that only continues to the west.  You can
+see no end to the passage westward.  Much like the rest of this place it seems
+to go on and on.  When you look to the east from which you came you see the
+start of the labyrinth.  Whoever built this place obviously wants to try and
+make you leave.  The strange thing about this passage though is that one of the
+walls is brick, while the other is stone.    
+~
+8 786432 0
+D0
+~
+brick~
+1 0 816
+D1
+~
+~
+0 0 803
+D2
+~
+stone~
+1 0 817
+D3
+~
+~
+0 0 815
+S
+#816
+The place of choosing~
+   This room is very bare and empty, except for the two doors.  One on the east
+wall, the other on the west wall.  Both doors are unlocked, you can exit
+whatever way you wish.  The only thing is, that one door leads to certain doom.
+For this is the room of choosing.  There is no way to know which door is which,
+for this is not a game, but a test of fait.  Choose a door, open it and go
+through.  Choose wisely though, or you will die.    
+~
+8 262144 0
+D1
+~
+door~
+1 0 819
+D3
+~
+door~
+1 0 818
+S
+#817
+The place of choosing~
+   This room is very bare and empty, except for the two doors.  One on the east
+wall, the other on the west wall.  Both doors are unlocked, you can exit
+whatever way you wish.  The only thing is, that one door leads to certain doom.
+For this is the room of choosing.  There is no way to know which door is which,
+for this is not a game, but a test of fait.  Choose a door, open it and go
+through.  Choose wisely though, or you will die.    
+~
+8 262144 0
+D1
+~
+door~
+1 0 818
+D3
+~
+door~
+1 0 819
+S
+#818
+Hedge maze~
+   YOU CHOSE INCORECTLY.  A SUDEN RUSH OF PAIN FLOWS THROUGH YOUR BODY AS YOUR
+SOULS IS SUCKED OUT.  THE LAST THING YOU SEE IS THE MASTER OF CHOICE SHAKING
+HIS HEAD AT YOU FROWNING.  THEN YOU ARE DEAD.    
+~
+8 266246 0
+D1
+~
+~
+0 0 881
+D3
+~
+~
+0 0 881
+S
+#819
+Hedge maze~
+   As you look around wondering if you chose the corect door, you see you are
+standing in a maze of tall hedges.  The hedges are a nice green and well kept,
+even the grass bellow your feet has been cut to a nice neat height.  There are
+passages going in all directions through the hedges from here.    
+~
+8 262144 2
+D0
+~
+~
+0 0 823
+D1
+~
+~
+0 0 820
+D2
+~
+~
+0 0 821
+D3
+~
+~
+0 0 822
+S
+#820
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going east and west through the hedges.    
+~
+8 262144 2
+D1
+~
+~
+0 0 824
+D3
+~
+~
+0 0 832
+S
+#821
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going north, east and south through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 832
+D1
+~
+~
+0 0 822
+D2
+~
+~
+0 0 826
+S
+#822
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going east, west, and south through the hedges.    
+~
+8 262144 2
+D1
+~
+~
+0 0 832
+D2
+~
+~
+0 0 828
+D3
+~
+~
+0 0 821
+S
+#823
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going west, south, and east through the hedges.    
+~
+8 262144 2
+D1
+~
+~
+0 0 822
+D2
+~
+~
+0 0 832
+D3
+~
+~
+0 0 827
+S
+#824
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going north, south, and west through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 825
+D2
+~
+~
+0 0 826
+D3
+~
+~
+0 0 820
+S
+#825
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is only a pasage going south through the hedges.    
+~
+8 262148 2
+D2
+~
+~
+0 0 841
+S
+#826
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is only a passage going north through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 822
+S
+#827
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is only a passage going east through the hedges.    
+~
+8 262144 2
+D1
+~
+~
+0 0 823
+S
+#828
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is only a passage north through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 823
+S
+#829
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is passages going north, south, and west through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 825
+D2
+~
+~
+0 0 826
+D3
+~
+~
+0 0 896
+S
+#830
+Mirror Maze~
+   You have somehow found your way through the labyrinth, and now can see if it
+was worth it.  There is a path going off to the west towards whatever lies at
+the center of this place.  Though, if you have changed your mind and do not
+wish to risk it, you can see the entrance to the labyrinth to the east.  This
+is your last chance to leave, so decied now.  Do you go on...  Or flee this
+place?    
+~
+8 262144 2
+D1
+~
+~
+0 0 803
+D3
+~
+~
+0 0 831
+S
+#831
+Path to the center~
+   This small path leads up some steps the center of the Labyrinth.  The stone
+walls on both sides of you stop you from geting off the path.  As you look
+behind you to the east you can still see the entrance to the Labyrinth.  You
+look up the steps and know that have finally reached the point of no return.  
+Be brave, and take the steps up.  Find out what it is that's in the center.  
+~
+8 262208 0
+D1
+~
+~
+0 0 803
+D3
+~
+~
+0 0 833
+S
+#832
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are pasages going north, east, south and west through the hedges.    
+~
+8 262144 2
+D0
+~
+~
+0 0 823
+D1
+~
+~
+0 0 820
+D2
+~
+~
+0 0 821
+D3
+~
+~
+0 0 822
+S
+#833
+Before the labyrinth~
+   You stand before the entrance to the labyrinth.  A giant maze with traps and
+illusions of all kinds.  The tall stone walls go on and on, to where as you
+look to the north and south you can't see the ends of them.  You wonder who
+would ever build something like this, and what for.  The gate to the labyrinth
+is never locked, and thus any brave adventurer may enter.  There is a few
+plants growing by the walls, and a dirty murky stone pond in front of the gate.
+~
+8 0 2
+D1
+~
+~
+0 0 802
+D3
+~
+~
+0 0 804
+S
+#834
+The Center~
+   You did it.  You have solved all the puzzles of the labyrinth and made it to
+the center.  You finally get to see what is here.  So look, know, and be happy
+for few if any have ever found this place before.  As you look around you
+notice that in all directions you can see the begining of the labyrinth.  
+Anyway you go, will take you out of this place.  Back to the normal world.    
+~
+8 262144 0
+D0
+~
+~
+0 0 803
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 803
+D3
+~
+~
+0 0 803
+D4
+~
+~
+0 0 803
+D5
+~
+~
+0 0 803
+D6
+~
+~
+0 0 803
+D7
+~
+~
+0 0 803
+D8
+~
+~
+0 0 803
+D9
+~
+~
+0 0 803
+S
+#835
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries
+~
+8 786432 0
+D0
+~
+~
+0 0 836
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 836
+D3
+~
+~
+0 0 836
+S
+#836
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries
+~
+8 786432 0
+D0
+~
+~
+0 0 837
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 837
+D3
+~
+~
+0 0 837
+S
+#837
+A four way passage~
+   You are standing in a four way passage.  As you look around you see tall
+stone walls going in all directions.  To the west, north and south, the passage
+goes on and on.  To the east you can see the front of the labyrinth.  An exit
+should you wish to leave.  Though you're not sure how it can connect here and
+to the begining.  This place is full of strange mysteries
+~
+8 786432 0
+D0
+~
+~
+0 0 814
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 814
+D3
+~
+~
+0 0 814
+S
+#840
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 805
+D1
+~
+&WCenter&n~
+2 807 834
+D2
+~
+~
+0 0 810
+E
+wall~
+You see a small inscription...that says "&WCenter&n"
+~
+S
+#841
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going east, west, and south through the hedges.    
+~
+8 0 0
+D0
+~
+~
+0 0 825
+D2
+~
+~
+0 0 842
+D3
+~
+~
+0 0 820
+S
+#842
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There is only a pasage going south through the hedges.    
+~
+8 262144 0
+D0
+~
+~
+0 0 829
+S
+#850
+Muddy shaft~
+   The sides of this long shaft are very muddy.  You almost slip and fall but
+are able to find a few places to grab onto.  Looking down you can see the shaft
+continues off into darkness.  Up is the only other exit and it leads out into
+Rome.    
+~
+8 265 0
+D4
+~
+~
+0 0 880
+D5
+~
+~
+0 0 851
+S
+#851
+Muddy shaft~
+   The shaft is even more slippery here, and the lower you go the worse it
+gets.  You can almost see the bottom of the shaft looking down.  As you try not
+to fall to your death you notice this may be your last chance to go back.    
+~
+8 265 0
+D4
+~
+~
+0 0 850
+D5
+~
+~
+0 0 852
+S
+#852
+Muddy room~
+   Standing at the bottom of the muddy shaft you look up and see that there is
+no way to climb back out.  The walls are now way too slippery to try and climb.
+The room is not very big, other than the shaft there are two visible exits.  A
+tunnel leads off to the north.  To the south is a gate, which has some glowing
+symbols on it.  Upon closer inspection you can tell that they are magical wards
+to make sure whatever is inside the gate remains so.    
+~
+8 9 0
+D0
+~
+~
+0 0 853
+D2
+~
+gate~
+1 810 867
+S
+#853
+Dirt tunnel~
+   The dirt tunnel leads off to the north where you can see that it splits into
+two directions.  The is no movement in the air here, no breeze at all.  There
+are torches stuck in the sides of the tunnel, but they have been burnt out for
+years.  To the south is the muddy entrance to this place.    
+~
+8 9 0
+D0
+~
+~
+0 0 854
+D2
+~
+~
+0 0 852
+S
+#854
+Dirt tunnel~
+   The tunnel goes off in three directions here.  To the west you can see the
+tunnel is more finished.  To the east the tunnel continues into darkness.  Off
+to the south goes back to the entrance.    
+~
+8 9 0
+D1
+~
+~
+0 0 859
+D2
+~
+~
+0 0 853
+D3
+~
+~
+0 0 855
+S
+#855
+Dirt tunnel~
+   The tunnel here looks like it had been well used at one time.  To the north
+you can see the tunnel ends.  You're not sure where though cause of the
+darkness.  To the west the tunnel comes to a small building built into it.  
+The entrance is back to the east.    
+~
+8 9 0
+D0
+~
+~
+0 0 862
+D1
+~
+~
+0 0 854
+D3
+~
+~
+0 0 856
+S
+#856
+Dirt tunnel~
+   The tunnel comes to an end here.  Though still nothing but dirt there is a
+small building built into the tunnel to the west.  A wooden door blocks the way
+in.  The only other way to go is back east towards the entrance.    
+~
+8 9 0
+D1
+~
+~
+0 0 855
+D3
+~
+door~
+1 0 857
+S
+#857
+Rest area~
+   You are in what appears to have been the resting area for the workers that
+were building the Catacombs.  The first thing to grab your atention is the
+awful smell from the corpse in the middle of the room.  The layers of dust and
+cobwebs tell you this place hasn't been used in years though.  So why hasn't
+this corpse rotted away?    
+~
+8 9 0
+D1
+~
+door~
+1 0 856
+S
+#858
+Tool storage~
+You are in an unfinished room.
+~
+8 0 0
+D0
+~
+~
+0 0 857
+S
+#859
+Dirt tunnel~
+   The tunnel here is dark as the rest of it is.  It continues off to the east
+into darkness.  To the west is an intersection of the tunnels.  There is not
+much here except dirt and a some burnt out torches.    
+~
+8 9 0
+D1
+~
+~
+0 0 860
+D3
+~
+~
+0 0 854
+S
+#860
+Dirt tunnel~
+   The tunnel continues off to the east and west.  To the west you can't see
+anything but darkness.  Off to the east you can see that the tunnel has caved
+in.  Your light is also reflecting off something by the cave in, but you're not
+sure what.    
+~
+8 9 0
+D1
+~
+~
+0 0 861
+D3
+~
+~
+0 0 859
+S
+#861
+Cavein~
+   The ceiling of the tunnel has fallen in here blocking the way east.  Though
+the cave in is not the thing that really catches your eye.  Instead it is the
+massive spider webs in this part of the tunnel.  You are pretty sure that
+whatever made these webs is not friendly.  Perhaps you should head back, and
+fast.    
+~
+8 9 0
+D3
+~
+~
+0 0 860
+S
+#862
+Paritaly finished tunnel~
+   The tunnel here is partialy finished.  Some of the walls have the brick laid
+into them.  The tunnel stops here, to the north is what looks like one of the
+burrial chambers of the catacombs.  To the south the tunnel continues on.    
+~
+8 9 0
+D0
+~
+~
+0 0 863
+D2
+~
+~
+0 0 855
+S
+#863
+Burial hall~
+   This is the main part of this burial hall.  It is nicely decorated but the
+dirt and mildew from years of being left untouched darken the nice appearance.
+There are three tomb rooms off of this hall.  To the west and east are smaller
+ones for lesser nobles.  To the north is the main tomb of some famous noble
+that is long dead.    
+~
+8 9 0
+D0
+~
+~
+0 0 866
+D1
+~
+~
+0 0 865
+D2
+~
+~
+0 0 862
+D3
+~
+~
+0 0 864
+S
+#864
+Burial chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  East is the only exit, back to the main chamber.    
+~
+8 9 0
+D1
+~
+~
+0 0 863
+S
+#865
+Burial chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  West is the only exit, back to the main chamber.    
+~
+8 9 0
+D3
+~
+~
+0 0 863
+S
+#866
+Main burial chamber~
+   Unlike the smaller burial chambers this one is very nicely decorated.  The
+pictues carved into the stone walls shows the life of the noble burried here.
+From what you can tell he was a warrior, the first that explored these
+catacombs.  It shows pictures of him fighting great evils.  Makes you wonder if
+you wish to continue to go further in.    
+~
+8 9 0
+D2
+~
+~
+0 0 863
+S
+#867
+Forbiden zone~
+   As you cross through the protective field that has been placed on this room
+to keep the evil inside you fet a chill.  Looking around this room doesn't seem
+to be too scary.  It's more like the top of a muddy slide.  The room slopes to
+the south, you're not sure if you went there that you could make it back up.  
+Perhaps you should leave now?    
+~
+8 262149 0
+D0
+~
+gate~
+2 0 852
+D2
+~
+~
+0 0 868
+S
+#868
+Mud Slide~
+   The mud is really wet here from the water dripping off the ceiling.  The
+slope to the south is the only way you can go it seems.  To try and climb back
+up would only be a waste of time and energy.  Though you're not sure where this
+slope ends, so do be careful.
+~
+8 262149 0
+D2
+~
+~
+0 0 869
+S
+#869
+Mud Slide~
+   The slope gets even more steep here, you can barely keep yourself from
+sliding all the way down.  You know there is no way to go back up but from what
+you can see down may not be a good idea either.  The slope a little further
+down comes to and edge, and all you can see is a dropoff into darkness.  With
+no idea what is down there and no way to go back, what will you do?    
+~
+8 262145 0
+D2
+~
+~
+0 0 870
+S
+#870
+Burial Hall~
+   Much like the rest of this place so far, this room is full of mud.  Your
+feet start to sink as you stand still.  All the mud and water coming from the
+large hole high on the north wall make this room hard to walk in.  As you look
+around you notice this is another of the catacombs burial chambers.  To the
+east and west are smaller tombs, and south the hall continues.    
+~
+8 262153 0
+D1
+~
+~
+0 0 871
+D2
+~
+~
+0 0 873
+D3
+~
+~
+0 0 872
+S
+#871
+Burial Chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  West is the only exit, back to the main chamber.    
+~
+8 262153 0
+D3
+~
+~
+0 0 870
+S
+#872
+Burial Chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  East is the only exit, back to the main chamber.    
+~
+8 262153 0
+D1
+~
+~
+0 0 870
+S
+#873
+Burial Hall~
+   The ground starts to dry out a bit here and you notice that this area was
+finished.  There is brick on the walls and stone tiles on the floor.  The water
+and mud must have washed it away in the other parts of the hall.  To the east
+and west are more small tomb rooms.  To the south is some old stone steps
+leading down.  The hall continues to the north.    
+~
+8 262153 0
+D0
+~
+~
+0 0 870
+D1
+~
+~
+0 0 875
+D2
+~
+~
+0 0 876
+D3
+~
+~
+0 0 874
+S
+#874
+Burial Chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  East is the only exit, back to the main chamber.    
+~
+8 262153 0
+D1
+~
+~
+0 0 873
+S
+#875
+Burial Chamber~
+   This small burial chamber is kinda plainly decorated.  In the center of the
+room is a stone coffin.  Obviously for the noble burried here.  Other than that
+there isn't much here.  West is the only exit, back to the main chamber.    
+~
+8 262153 0
+D3
+~
+~
+0 0 873
+S
+#876
+Stone Steps~
+   This stone stairwell seems to wind in a cirle going down into the dark.  
+More dripping water can be heard from down bellow, and you can see what remains
+of long burnt out torches hanging on the walls.  The only other way to go is
+north, back into the barial chamber.    
+~
+8 262153 0
+D0
+~
+~
+0 0 873
+D5
+~
+~
+0 0 877
+S
+#877
+Stone Steps~
+   The stone steps come to a stop here, for they have crumbled away farther
+down.  The rocks that are what was once the stone steps look like you could go
+down them.  The steepness of the steps makes you doubt your ability to come
+back up though.  You wonder how much further down into these catacombs you can
+get stuck, and if there is any way to ever get out.    
+~
+8 262153 0
+D4
+~
+~
+0 0 876
+S
+#878
+The Roman Graveyard~
+   The graveyard is quite large, fill with all the dead soldiers that were
+killed in battle.  The whole area is fenced in.  To keep out all those who
+might dishonor the brave men who died for their country.  To the north is the
+entrance to a Crypt where the most respected of the dead are burried.  To the
+south is the gate out of the graveyard.    
+~
+8 4 0
+D0
+~
+door~
+1 0 879
+D2
+~
+gate~
+1 0 12012
+S
+#879
+The Old Church~
+   This old and long unused church is falling apart.  Ever since they stoped
+puting fresh dead into this graveyard the church was shut up.  Looking around
+you can see old worn out pews where the widows and kids of the dead soldiers
+sat and morned their passing.  You do notice though that there is a small door
+in the back of the church.    
+~
+8 8 0
+D0
+~
+door~
+1 0 880
+D2
+~
+door~
+1 0 878
+S
+#880
+The Entrance to the Catacombs~
+   This small back room was what at one time going to be built as the entrance
+into the Roman Catacombs.  An expansion onto the graveyard to underground to
+make room for more dead.  In the middle of the uncovered ground that is the
+floor for this place is a big hole.  Looking down the hole goes into darkness.
+Beside the hole is a old roting sign that you can barely make out what it says.
+~
+8 0 0
+D2
+~
+door~
+1 0 879
+D5
+~
+~
+0 0 850
+E
+sign~
+BEWARE ALL THEE WHO DARE TO ENTER THIS PLACE!
+There is a great evil under this land and thus
+anyone entering here will meet with death.  
+~
+S
+#881
+Troll trap~
+   This room is just so they can't cheat with scan in the point of choosing.  
+
+~
+8 262144 0
+S
+#887
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 803
+D1
+~
+~
+0 0 803
+D2
+~
+~
+0 0 803
+D3
+~
+~
+0 0 803
+D6
+~
+~
+0 0 803
+D7
+~
+~
+0 0 803
+D8
+~
+~
+0 0 803
+D9
+~
+~
+0 0 803
+S
+#888
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 830
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 887
+D3
+~
+~
+0 0 894
+D6
+~
+~
+0 0 887
+D7
+~
+~
+0 0 887
+D8
+~
+~
+0 0 887
+D9
+~
+~
+0 0 894
+S
+#889
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 894
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 887
+D3
+~
+~
+0 0 894
+D6
+~
+~
+0 0 887
+D7
+~
+~
+0 0 887
+D8
+~
+~
+0 0 888
+D9
+~
+~
+0 0 894
+S
+#890
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 887
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 887
+D3
+~
+~
+0 0 889
+D6
+~
+~
+0 0 894
+D7
+~
+~
+0 0 887
+D8
+~
+~
+0 0 894
+D9
+~
+~
+0 0 894
+S
+#891
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 887
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 894
+D3
+~
+~
+0 0 887
+D6
+~
+~
+0 0 887
+D7
+~
+~
+0 0 894
+D8
+~
+~
+0 0 894
+D9
+~
+~
+0 0 887
+S
+#892
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 887
+D1
+~
+~
+0 0 891
+D2
+~
+~
+0 0 887
+D3
+~
+~
+0 0 887
+D6
+~
+~
+0 0 891
+D7
+~
+~
+0 0 891
+D8
+~
+~
+0 0 887
+D9
+~
+~
+0 0 891
+S
+#893
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 892
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 892
+D3
+~
+~
+0 0 892
+D6
+~
+~
+0 0 887
+D7
+~
+~
+0 0 887
+D8
+~
+~
+0 0 887
+D9
+~
+~
+0 0 887
+S
+#894
+Mirror Maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786432 0
+D0
+~
+~
+0 0 893
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 887
+D3
+~
+~
+0 0 893
+D6
+~
+~
+0 0 887
+D7
+~
+~
+0 0 887
+D8
+~
+~
+0 0 893
+D9
+~
+~
+0 0 887
+S
+#895
+Hedge maze~
+   As you look around the room you see your reflection in every direction.  
+You have no idea which way to go.  Every way looks as though it leads right
+back to where you are.  There has to be a way out though, so pick a direction
+and hope for the best.    
+~
+8 786436 0
+D0
+~
+~
+0 0 894
+D1
+~
+~
+0 0 887
+D2
+~
+~
+0 0 894
+D3
+~
+~
+0 0 887
+D6
+~
+~
+0 0 890
+D7
+~
+~
+0 0 894
+D8
+~
+~
+0 0 894
+D9
+~
+~
+0 0 887
+S
+#896
+Hedge maze~
+   Walking through the tall hedges you look around and see more hedges.  The
+air here is nice and it is a peaceful place.  You must go on though, and try
+and find your way through this maze.  To get to the center of the labyrinth.  
+There are passages going east, north and west through the hedges.
+~
+8 262144 0
+D0
+~
+~
+0 0 895
+D1
+~
+~
+0 0 824
+D3
+~
+~
+0 0 832
+S
+#897
+A north-south passage~
+   This passage seems to go on and on.  The tall stone walls to both sides of
+you never seem to end or curve.  You wonder how this could be called a
+labyrinth.  Doesn't that mean some sort of maze?  Not one continuous passage.
+The passage continues north and south as far as you can see.    
+~
+8 524288 0
+D0
+~
+~
+0 0 840
+D2
+~
+~
+0 0 808
+S
+#898
+By a cave~
+   As you aproach the entrance to the cave you see bats fly out in great
+numbers.  Must be off for to find their meal for the day.  As you look down
+into the cave you can not see much.  It is dark and all you can hear is a lot
+of different squeaking sounds.  Though those are probably from the bats.  The
+path down into the cave is not too steep and you could easily get back out.  
+While trying to decied weither to go in or not you notice there is a burnt
+skeleton lying on the ground by the entrance.  Whatever lives here, doesn't
+seem to like company.  There is a dusty road to the north.    
+~
+8 0 0
+D0
+~
+~
+0 0 801
+D5
+~
+~
+0 0 899
+S
+#899
+The hydra's lair~
+   A light breeze flows over your body giving you the chills.  The over
+powering smell of the tons of guano that covers the cave floor, from all the
+bats in this cave, makes you cover your mouth and try to hold your breath.  
+Piles of ashes lay scatered around the cave, and you can see weapons and pieces
+of armor with them.  A great many adventurer has died here, been burnt to a
+crisp by the caves inhabitant.  The only visible exit is up.    
+~
+8 5 0
+D4
+~
+~
+0 0 898
+S
+$~

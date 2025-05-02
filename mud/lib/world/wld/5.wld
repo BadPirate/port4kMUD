@@ -1,0 +1,2169 @@
+#500
+The Base of a Cliff~
+     You find yourself at the bottom of a steep cliff that rises up
+into the sky.  It has a very smooth surface that would be nearly
+impossible to climb if not for a small rope hanging down from far
+above.  It must be here to help your ascent to this unseen destination
+far above your reach.  To the south lies the choking darkness of the 
+mountains.
+~
+5 0 5
+D2
+~
+~
+0 0 6151
+D4
+~
+~
+0 0 501
+S
+#501
+On the Rope~
+     You are hanging dearly onto this rope, although you are aren't
+very far up, the fall would still be severely detrimental to your
+health.  You can see the foot and hand holds that someone must have
+used long ago to scale this very cliff.  You come to appreciate that
+you have a sturdy rope to use.
+~
+5 324 5
+D4
+~
+~
+0 0 502
+D5
+~
+~
+0 0 501
+S
+#502
+On the Rope~
+     The high winds, make the rope wave back and forth making you
+cling even harder to the rope since a fall from even this height
+would most likely prove fatal.  You begin to see some holy symbols
+carved into the very living rock itself.  How they were carved
+here remains unseen, although your guess is by a god or a man gone
+completely insane.
+~
+5 324 5
+D4
+~
+~
+0 0 503
+D5
+~
+~
+0 0 501
+S
+#503
+On the Rope~
+     You find yourself well above the ground holding onto the rope as
+if your life depended on it...and it does.  The stone here is encrusted
+with ancient holy symbols and pictures.  Just a few body-lengths above
+you the rope snakes over the edge of the cliff and out of sight.  Below
+you the rope waves gently back and forth in the wind.  From this height
+you can now see the dark stains of adventurers that couldn't hold on,
+or maybe they were pushed off...
+~
+5 324 5
+D4
+~
+~
+0 0 504
+D5
+~
+~
+0 0 502
+S
+#504
+At the Top of the Rope~
+     You are only inches away from the cliff's edge, the rope ends
+about 100 feet or so below you.  The ground at the foot of the cliff
+is blurred and no detail can be picked out from this height.  You can
+tell however that falling from here would be a grisly death as the 
+large rocks at the base of the cliff would not help to cushion your fall.
+~
+5 324 5
+D4
+~
+~
+0 0 505
+D5
+~
+~
+0 0 503
+S
+#505
+The Edge of the Cliff~
+     You now stand on the windswept top of a plateau.  An old rope
+snakes off down the cliff to your south, while a large, wooden gate
+set ina stone wall lies just to your east.  Although ancient, the
+walls and gate look very strong and well kept.  Someone must be here
+to take care of things.
+~
+5 0 1
+D1
+~
+~
+0 0 506
+D5
+~
+~
+0 0 504
+S
+#506
+Before the Gate~
+     You stand before a large, double door gate.  It seems to be made
+from strong oak, banded with well wrought iron.  A large iron door
+knocker hangs from the southern door, and looks as though it hasn't
+been used in years.  To the west you can see where the edge of the
+cliff meets the horizon and nothing more.  A tarnished bronze plaque
+is embedded in the door.
+~
+5 0 0
+D1
+~
+door doors oak wooden~
+1 500 507
+D3
+~
+~
+0 0 505
+E
+door doors plaque bronze~
+*-----------------------------------------*
+|              *--<==========--           |
+|          The Monastery of Xander        |
+|              *--<==========--           |
+*-----------------------------------------*
+~
+S
+#507
+Inside the Monastery~
+     You are now in the main hallway of Xander's Monastery.  The
+ceiling is high and vaulted with stained glass panels that let
+colored light into the hall.  The sides of the hall are covered in
+ancient paintings and woodwork that were crafted by masters of 
+their art.  The walls also hold small brass lanterns that provide
+additional light.  The floors are covered in finely woven oriental
+rugs that show many historical scenes and famous heros.  This grand
+hallway continues to the east, while a smaller, darker hall splits
+off to the north.
+~
+5 8 0
+D0
+~
+~
+0 0 512
+D1
+~
+~
+0 0 508
+D3
+~
+door doors oak wooden~
+1 500 506
+S
+#508
+A Grand Hallway~
+     The hallway here is a little different, the floor is made from
+ceramic tile and there is a door leading outside.  There are places 
+where the monks can leave their sandals so they do not track the
+dirt and mud from the gardens inside onto the plush rugs.  To your
+east and west, the hall continues and through a door to your south
+you can catch a glimpse of a garden.
+~
+5 8 0
+D1
+~
+~
+0 0 509
+D2
+~
+~
+0 0 537
+D3
+~
+~
+0 0 507
+S
+#509
+A Grand Hallway~
+     This hallway differs only slightly from the main hall.  The only 
+difference is the hallway goes in three directions, the main hall
+continues to the east and west, and a smaller hallway heads off in the 
+northern direction.  The hall to the north is well lit with candles and
+lanterns.  Towards the end of the northern hallway is a large wooden door
+that has an inverted celtic cross upon it.
+~
+5 8 0
+D0
+~
+~
+0 0 514
+D1
+~
+~
+0 0 510
+D3
+~
+~
+0 0 508
+S
+#510
+A Grand Hallway~
+     The hallway here is similar to the other outside entrance of the
+hallway. It has the same ceramic tiles and also a rack to put your
+sandals.  The only difference being, this room has four exits.  The hall
+continues both east and west, while to the north is another hallway that
+leads to the resident's quarters.  To the south and through the door,
+there is a small well where the monks draw their water from.
+~
+5 8 0
+D0
+~
+~
+0 0 516
+D1
+~
+~
+0 0 511
+D2
+~
+~
+0 0 539
+D3
+~
+~
+0 0 509
+S
+#511
+A Grand Hallway~
+     The hallway comes to an end here in front of an extremely large
+and elegant pair of double doors.  Stained glass surrounds the huge
+doors and offers you a blurred peak of what lies inside.  You can't
+tell much, but it seems like a preaching alter maybe.  To the south 
+is a sturdy wooden door with a sword carved into it.  While to the 
+north is a portrait of one of the High Priests who has long since 
+passed on.
+~
+5 8 0
+D1
+~
+doors~
+1 504 529
+D2
+~
+door~
+2 503 528
+D3
+~
+~
+0 0 510
+E
+portrait~
+It is a fine portrait of the High Priest Cedric Ravenwing, the first
+mortal to worship Xander as a God.
+~
+S
+#512
+A Dark Hall~
+     This hall is much smaller than the Grand Hallway to the south,
+but it is still very exquisite.  The darkness is because the lamps
+are put out so the monks in these rooms can get some sleep.  To the
+south is the Grand Hallway, to the north the dark hall continues, and
+to the west is a small bedchamber used by the monks.
+~
+5 8 0
+D0
+~
+~
+0 0 513
+D2
+~
+~
+0 0 507
+D3
+~
+~
+0 0 519
+S
+#513
+A Dark Hall~
+     The hall here is dark in order to assist the monks in their
+sleeping.  You can see well enough to find a wooden door to the 
+north, and an open doorway to the west.  The doorway to the west
+opens into one of the monk's bedchambers where you can sometimes
+hear the gentle snoring of the monks.  The door on the north is
+etched with the name Darrius Morgan - Head Monk.  To the south 
+the dark hall continues then eventually intersects the Grand 
+Hallway.
+~
+5 8 0
+D0
+~
+door~
+1 0 521
+D2
+~
+~
+0 0 512
+D3
+~
+~
+0 0 520
+S
+#514
+A Bright Hallway~
+     This hall appears brighter than the rest.  The paint on the walls
+is a lighter color which helps to reflect the light from the many lamps
+on the walls.  The decorations in this hallway are all in some way
+holy.  To the south is the Grand Hallway, to the north the bright hall
+continues then dead ends at a large wooden door.  To the west is the
+doorway to the monks' bedchamber although no-one seems to be sleeping
+there at the moment.
+~
+5 8 0
+D0
+~
+~
+0 0 515
+D2
+~
+~
+0 0 509
+D3
+~
+~
+0 0 522
+S
+#515
+A Bright Hallway~
+     This hallway is so bright that it starting to hurt your eyes.  The
+door to the north has an exquisitly carved cross into it, although it
+isnt like most crosses...it is inverted, and seems almost unholy.  To
+the west is another bedchamber just like all the rest, and is currently 
+vacant.  To the south the bright passage continues and then intersects
+with the Grand Hallway.
+~
+5 8 0
+D0
+~
+door~
+2 502 524
+D2
+~
+~
+0 0 514
+D3
+~
+~
+0 0 523
+S
+#516
+A Grand Hallway~
+     You are now in the main hallway of Xander's Monastery.  The
+ceiling is high and vaulted with stained glass panels that let
+color light into the hall.  The sides of the hall are covered in
+ancient paintings and woodwork that were crafted by masters of 
+their art.  The walls also hold small brass lanterns that provide
+additional light.  The floors are covered in finely woven oriental
+rugs that show many historical scenes and famous heros.
+~
+5 8 0
+D0
+~
+~
+0 0 517
+D2
+~
+~
+0 0 510
+S
+#517
+A Grand Hallway~
+     Here, the hall turns east and south.  To the north is a sleeping
+chamber for the monks that appears to be unoccupied at this time.  The
+hall continues southward where it splits east and west.  To the east
+the hall dead ends, but splits into two chambers.
+~
+5 8 0
+D0
+~
+~
+0 0 525
+D1
+~
+~
+0 0 518
+D2
+~
+~
+0 0 516
+S
+#518
+A Grand Hallway~
+     This hall is just like the rest of the grand hall, but it
+seems to stop here.  To the north is a bedchamber that is not 
+being used, and to the south you find the same.  The monks appear
+to take shifts and share jobs equally, what a perfect society.
+~
+5 8 0
+D0
+~
+~
+0 0 526
+D2
+~
+~
+0 0 527
+D3
+~
+~
+0 0 517
+S
+#519
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 8 0
+D1
+~
+~
+0 0 512
+S
+#520
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 0 0
+D1
+~
+~
+0 0 513
+S
+#521
+Head Monk's Room~
+     This is where the Head Monk rests after his many daily duties.
+His accomodations are much more ellegant than the rest, his mattress
+is suspended above the ground on a wooden frame.  The floor is covered
+in plush floor rugs, and the room is lit with a brass lantern hanging
+from the ceiling.  A redwood dresser holds his things while he rests 
+and sleeps.
+~
+5 8 0
+D2
+~
+door~
+1 0 513
+S
+#522
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 8 0
+D1
+~
+~
+0 0 514
+S
+#523
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 0 0
+D1
+~
+~
+0 0 515
+S
+#524
+The High Priest's Living Quarters~
+     You are standing in what is probably the nicest bedroom in the
+entire monastery.  The room smells of cedarwood and incense which 
+tickles your nose as you enter.  He sleeps on a down mattress that 
+is suspended from the ceiling by a hammock type rope system.  The
+wall supports Xander's holy symbol, an inverted celtic cross.  There
+is something written upon it.
+~
+5 8 0
+D0
+~
+cross~
+2 505 548
+D2
+~
+door~
+2 502 515
+E
+cross celtic~
+I come like a comet ablaze, like the sun when the dawn is awaking.
+I come like tumultous tempest, when thunder and lightning are breaking;
+I come like the lava that rushes from the mighty volcanoes in motion;
+I come like the storm from the north that arouses and angers the ocean.
+ 
+I come because tyrants have put up their thrones in place of the nations;
+I come because rulers are foddering peace with their war preparations;
+I come because ties that bound people together are now disconnected;
+I come because fools think that progress will stay in the bounds they
+     erected.
+ 
+I come because out in the wastes made by rulers I arose to existance;
+I come because despots have roused me to anger and armed resistance;
+I come because life is too real to be murdered by foolish endeavor;
+I come because freedom can nowhere be chained and enshackled forever.
+ 
+I led the downtrodden and tyrannized peoples of past generations;
+I helped them to throw off enslavement, and gain their complete
+     liberations;
+I marched with the spirit of progress, and aided its every endeavor;
+And I shall march on with the peoples, until I shall free them forever.
+ 
+You money-bag saints, you crowned cut-throats, anointed with strife and
+     contentions;
+I come to destroy you, your laws, and your lies and your foolish
+     conventions;
+Your hearts that are thirsting for blood, I shall pierce till the life in 
+     them ceases;
+Your crown and your sceptres, your little gold toys I shall break into 
+     pieces.
+ 
+And pluck off your purples and tear them to rags, and then hurl them to
+     damnation
+The baubles which people bow down to like fools with their loud
+     jubilation;
+The glittering pride of your false frozen world I shall melt till it
+     vanish,
+Like snow when the sun breathes upon it, like night that the day comes to
+     banish.
+ 
+And I shall destroy all your spider-web morals, the lies you determine;
+Your priests with their darkness and falsehoods I come to root out like
+     the vermin;
+
+Your heavens and hells, and your saviors and prophets, your gods and your
+     devils,
+I come to destroy them, to free all the earth and air from their evils.
+ 
+So hang me or shoot me, your efforts are futile-- a waste of endeavor;
+I fear neither prisons nor tortures, nor scaffolds nor awe whatsoever.
+Anew I shall rise from the earth, and its surface with weapons shall
+cover.
+~
+S
+#525
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 8 0
+D2
+~
+~
+0 0 517
+S
+#526
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 8 0
+D2
+~
+~
+0 0 518
+S
+#527
+Humble Living Quarters~
+     The living accomodations for the monks are very meager.  This
+tiny room probably houses two or three monks.  They sleep on small
+hay mattresses that lay on the floor and use a small ceramic wash
+tub to wash themselves.  All in all, not the accomodations of your
+dreams, but then again...you dont live here.
+~
+5 8 0
+D0
+~
+~
+0 0 518
+S
+#528
+The Grand Paladin's Room~
+     This is a fine room indead.  It is well furnished since its
+occupant is the sole defender of the monastery.  The Grand Paladin
+is revered because of her solitary, yet important position in the
+monastery.  The walls are decorated with paintings of fearsome holy
+battles, all depicting a warrior in shining armor slaying those
+who oppose the Church of Xander.  That lone warrior is the Grand
+Paladin.
+~
+5 0 0
+D0
+~
+door~
+2 503 511
+S
+#529
+The Temple Aisle~
+     You are now in an aisle that moves between rows of worshipping
+rugs on both sides.  This room is very grand in all possible ways,
+the walls are crafted beautifully from wood, white paint, and gold.
+Windows and stained glass on all sides of this huge room let in 
+multi colored sun beams.  Located at the eastern end of the room is
+what appears to be a sacred altar.
+~
+5 8 0
+D0
+~
+~
+0 0 531
+D1
+~
+~
+0 0 530
+D2
+~
+~
+0 0 533
+D3
+~
+doors~
+1 504 511
+S
+#530
+The Temple Aisle~
+     You are now almost in the middle of this giant room.  Lush red
+carpet on the floor cushions your feet, and the smell of burning
+candles and incense fills your nostrils.  On both sides of you are
+rows of worshipping rugs that the monks kneel on during their daily
+prayers.
+~
+5 8 0
+D0
+~
+~
+0 0 532
+D1
+~
+~
+0 0 535
+D2
+~
+~
+0 0 534
+D3
+~
+~
+0 0 529
+S
+#531
+The Worshipping Area~
+     In this area the floor is covered in ancient prayer rugs that are
+used for ceremonial purposes.  They don't look too comfortable to you,
+it's just a thin piece of decorated carpet that sits on a hardwood floor.
+To think that they just kneel here in prayer for hours on end makes your
+knees start to ache.
+~
+5 8 0
+D1
+~
+~
+0 0 532
+D2
+~
+~
+0 0 529
+S
+#532
+The Worshipping Area~
+     In this area the floor is covered in ancient prayer rugs that are
+used for ceremonial purposes.  They don't look too comfortable to you,
+it's just a thin piece of decorated carpet that sits on a hardwood floor.
+To think that they just kneel here in prayer for hours on end makes your
+knees start to ache.
+~
+5 8 0
+D2
+~
+~
+0 0 530
+D3
+~
+~
+0 0 531
+S
+#533
+The Worshipping Area~
+     In this area the floor is covered in ancient prayer rugs that are
+used for ceremonial purposes.  They don't look too comfortable to you,
+it's just a thin piece of decorated carpet that sits on a hardwood floor.
+To think that they just kneel here in prayer for hours on end makes your
+knees start to ache.
+~
+5 8 0
+D0
+~
+~
+0 0 529
+D1
+~
+~
+0 0 534
+S
+#534
+The Worshipping Area~
+     In this area the floor is covered in ancient prayer rugs that are
+used for ceremonial purposes.  They don't look too comfortable to you,
+it's just a thin piece of decorated carpet that sits on a hardwood floor.
+To think that they just kneel here in prayer for hours on end makes your
+knees start to ache.
+~
+5 0 0
+D0
+~
+~
+0 0 530
+D3
+~
+~
+0 0 533
+S
+#535
+The Altar~
+     This is the magnificent main altar.  The stained glass here was
+masterfully crafted centuries ago and is more detailed than any you
+have ever seen.  Upon the wall is an inverted celtic cross, the symbol
+of the God Xander, as well as a giant visage of the God's avatar, his
+incarnation into the mortal world.  
+     From this point you can look out over the floor of worshippers
+which gives you a feeling of empowerment, the same feeling that the
+High Priest gets when preaching.  A sun beam from one of the windows
+always seems to spotlight the altar at all times of the day.
+~
+5 40 0
+D3
+~
+~
+0 0 530
+S
+#536
+The Garden by the Tree~
+     You are now standing in the northwest corner of the garden, where
+you find a large apple tree.  It seems to be incredibly healthy for 
+it growing at this altitude.  The apples above aren't quite ripe yet, 
+but there might be a ripe one somewhere on the ground.
+~
+5 0 0
+D1
+~
+~
+0 0 537
+D2
+~
+~
+0 0 540
+S
+#537
+The Garden~
+     You stand at the entrance to the garden.  The soil here must have
+been hauled up over the cliff in painstaking workloads.  This is where
+the monks grow all the food they need to feed themselves.  Their diet
+seems to consist of mostly fruits and vegetables although you do see
+an odd chicken running about.  
+~
+5 4 0
+D0
+~
+~
+0 0 508
+D2
+~
+~
+0 0 541
+D3
+~
+~
+0 0 536
+S
+#538
+The Courtyard~
+     You are in a dusty part of the courtyard.  The ground is packed
+hard from years of being walked upon.  The dust spins up off of the
+ground in the small gusts of wind that penetrate the walls, and makes
+you cough and choke.  This seems to be where monks do their daily
+work like making baskets and repairing various items from the monestary.
+~
+5 0 0
+D1
+~
+~
+0 0 539
+D2
+~
+~
+0 0 542
+S
+#539
+The Courtyard~
+     You are in a dusty part of the courtyard.  The ground is packed
+hard from years of being walked upon.  The dust spins up off of the
+ground in the small gusts of wind that penetrate the walls, and makes
+you cough and choke.  This seems to be where monks do their daily
+work like making baskets and repairing various items from the monestary.
+~
+5 4 0
+D0
+~
+~
+0 0 510
+D2
+~
+~
+0 0 543
+D3
+~
+~
+0 0 538
+S
+#540
+The Garden~
+     This section of garden seems devoted mostly to the growing of
+carrots.  You can see all the leafy tops of the carrots and potatoes
+poking through the surface of the rich soil.  To the north you can
+see what seems to be a large apple tree towering over the monastery
+walls.  To the east is a large stone archway that must lead into
+another portion of the courtyard.
+~
+5 0 0
+D0
+~
+~
+0 0 536
+D1
+~
+~
+0 0 541
+D2
+~
+~
+0 0 544
+S
+#541
+The Garden by the Arch~
+     This section of the garden is being replanted after what appears
+to be a failed crop.  The monks must work hard in order to replace the
+food they must have lost.  To the north is the entrance to the monastery
+while to the east, is a large stone arch that allows passage through the
+hedges and into the work area of the courtyard.
+~
+5 0 0
+D0
+~
+~
+0 0 537
+D1
+~
+~
+0 0 542
+D2
+~
+~
+0 0 545
+D3
+~
+~
+0 0 540
+S
+#542
+The Courtyard~
+     You are in a dusty part of the courtyard.  The ground is packed
+hard from years of being walked upon.  The dust spins up off of the
+ground in the small gusts of wind that penetrate the walls, and makes
+you cough and choke.  This seems to be where monks do their daily
+work like making baskets and repairing various items from the monestary.
+~
+5 0 0
+D0
+~
+~
+0 0 538
+D1
+~
+~
+0 0 543
+D2
+~
+~
+0 0 546
+D3
+~
+~
+0 0 541
+S
+#543
+The Courtyard~
+     You are in a dusty part of the courtyard.  The ground is packed
+hard from years of being walked upon.  The dust spins up off of the
+ground in the small gusts of wind that penetrate the walls, and makes
+you cough and choke.  This seems to be where monks do their daily
+work like making baskets and repairing various items from the monestary.
+~
+5 0 0
+D0
+~
+~
+0 0 539
+D2
+~
+~
+0 0 547
+D3
+~
+~
+0 0 542
+S
+#544
+The Garden~
+     The garden here appears to be in the planging process.  Long
+trails have been plowed into the earth, and the soil is damp with
+water.  The monks seem to take great care when planting, placing
+the seeds an equal distance apart, yet dense enough to feed the
+monastary.  To the east is a hedge that stands almost wall height 
+that seperates the garden from the fountain area.
+~
+5 0 0
+D0
+~
+~
+0 0 540
+D1
+~
+~
+0 0 545
+S
+#545
+The Garden~
+     You now stand on a bare patch of ground next to the large wall
+of the monastery and the large hedge.  West of you is a section of 
+garden that is currently being planted while north of you is a section
+that did not produce a crop.  Far to the north you can see a large
+apple tree, and the monastery enterance.
+~
+5 0 0
+D0
+~
+~
+0 0 541
+D3
+~
+~
+0 0 544
+S
+#546
+The Courtyard~
+     You are in a dusty part of the courtyard.  The ground is packed
+hard from years of being walked upon.  The dust spins up off of the
+ground in the small gusts of wind that penetrate the walls, and makes
+you cough and choke.  This seems to be where monks do their daily
+work like making baskets and repairing various items from the monestary.
+~
+5 0 0
+D0
+~
+~
+0 0 542
+D1
+~
+~
+0 0 547
+S
+#547
+The Artisan Well~
+     It is here in this room, that the monks gather their water.  A 
+small natural spring fills the well to its brim then trickles over
+the edge spilling on the ground.  The water on the ground forms a tiny
+stream that weaves its way under the monastery wall, where it cascades
+beautifully over the cliff's edge forming a small waterfall.  It now
+makes you realize just how self-sustaining this place has become.
+~
+5 0 0
+D0
+~
+~
+0 0 543
+D3
+~
+~
+0 0 546
+S
+#548
+The Stairway~
+     This room is made of quarried stone, and contains a stone staircase
+which spirals downward.  The darkness combined with the damp stone makes
+it very cold here, and you pull your clothing a little tighter to try
+and fight off the biting chill in the air.  To your south is the warmth
+of the monastary, down is nothing but darkness.
+~
+5 13 0
+D2
+~
+cross~
+2 505 524
+D5
+~
+~
+0 0 549
+S
+#549
+The Spiral Stair~
+     This stairway seems to go on forever.  Your weary legs are pained
+at every step, exhausting your body beyond anything you have known.  Up
+the stairs you can see a small amount of light peeking through the cracks
+of a door while down, the air become ice cold, and the darkness begins
+to wrap around you.
+~
+5 13 0
+D4
+~
+~
+0 0 548
+D5
+~
+~
+0 0 550
+S
+#550
+The Landing~
+     You stand on a landing at the bottom of the spiral stair.  Debris
+lies about the room, giving it the appearance of clutter.  The biting
+cold is almost unbearable here, the water in your canteen is starting
+to freeze, and your fingers become numb.  Above you, the spiral stair
+ascends into darkness, while the only other possible exit is a rough
+hole in the floor.  You can see nothing down the hole, but it seems to
+be where the icy cold eminates from.
+~
+5 13 0
+D4
+~
+~
+0 0 549
+D5
+~
+~
+0 0 553
+S
+#551
+THE ICE MAZE~
+   This room is different from the rest, you stand upon a stone
+floor, which you deduct is probably the middle of the maze.  You
+can drop things here, and they will not dissapear, but you aren't
+sure that you could find your way here again.
+~
+5 105 0
+D0
+~
+~
+0 0 553
+D1
+~
+~
+0 0 552
+D2
+~
+~
+0 0 564
+D3
+~
+~
+0 0 556
+S
+#552
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 559
+D1
+~
+~
+0 0 558
+D2
+~
+~
+0 0 564
+D3
+~
+~
+0 0 553
+S
+#553
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 559
+D1
+~
+~
+0 0 564
+D2
+~
+~
+0 0 562
+D3
+~
+~
+0 0 561
+S
+#554
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 553
+D1
+~
+~
+0 0 556
+D2
+~
+~
+0 0 559
+D3
+~
+~
+0 0 561
+S
+#555
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 564
+D1
+~
+~
+0 0 562
+D2
+~
+~
+0 0 561
+D3
+~
+~
+0 0 553
+D5
+~
+ice~
+1 0 563
+S
+#556
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 551
+D1
+~
+~
+0 0 562
+D2
+~
+~
+0 0 561
+D3
+~
+~
+0 0 559
+S
+#557
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 564
+D1
+~
+~
+0 0 562
+D2
+~
+~
+0 0 553
+D3
+~
+~
+0 0 554
+S
+#558
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 560
+D1
+~
+~
+0 0 561
+D2
+~
+~
+0 0 551
+D3
+~
+~
+0 0 551
+S
+#559
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 564
+D1
+~
+~
+0 0 553
+D2
+~
+~
+0 0 557
+D3
+~
+~
+0 0 561
+S
+#560
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 562
+D1
+~
+~
+0 0 554
+D2
+~
+~
+0 0 555
+D3
+~
+~
+0 0 564
+S
+#561
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 562
+D1
+~
+~
+0 0 564
+D2
+~
+~
+0 0 553
+D3
+~
+~
+0 0 564
+S
+#562
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 553
+D1
+~
+~
+0 0 561
+D2
+~
+~
+0 0 564
+D3
+~
+~
+0 0 562
+S
+#563
+The Holy Chamber~
+     You stand in a chamber that is very warm inside, and is a great
+relief from the cold above.  This room is lit from an unknown source
+which seems to eminate from the corners of the room.  In the center
+of the room is a large platform that stands about a foot of the ground.
+The walls are carved with ancient runes and symbols of power.  The
+only exit from this room is back up through the ice and into the maze.
+~
+5 262376 0
+D4
+~
+ice~
+1 0 554
+S
+#564
+THE ICE MAZE~
+     All around you is nothing but a vest expanse of ice.  A thick 
+fog and the darkness prevents you from seeing more than a foot in 
+any direction.  The ceiling has dissapeared above your head, making
+escape from here impossible.  You begin to hear sounds from the north,
+no maybe it was the west, the sound reflects off the ice.  You better
+find your way out of here before whatever that is finds you!
+~
+5 524521 0
+D0
+~
+~
+0 0 561
+D1
+~
+~
+0 0 562
+D2
+~
+~
+0 0 561
+D3
+~
+~
+0 0 553
+S
+#565
+The Road to Necropolis~
+     The road beneath your feet is overgrown with grass and brush to
+the point you can barely see the road.  Necropolis is an old city that
+was said to be cursed, and was therefore put off limits to the rest of
+the realm.  The town slowly died off, and has since then become a town
+of the undead.  They do not bother the rest of the realm, but those who
+enter the town do not fair well with its inhabitants.
+~
+5 0 2
+D1
+~
+~
+0 0 6139
+D3
+An overgrown path that leads to Necropolis.
+~
+~
+0 0 568
+S
+#566
+Outside the Walls of Necropolis~
+     Necropolis was surrounded by walls in its prime, and for the
+most part the walls are still standing.  Even though the walls have
+been slowly beaten down by time and the elements, they are still
+tall enought to keep adventurers like you at bay.  The only feasable
+place to enter the city is through the city gates.  You just begin
+to notice how disturbing it seems that the area is shrouded in
+perpetual darkness.
+~
+5 13 1
+D1
+An overgrown path headed towards the hills.
+~
+~
+0 0 568
+D3
+A large gate, which at one time was probably sturdy enough to actually 
+keep people out!
+~
+gate portcullis~
+1 0 567
+S
+#567
+Inside the Walls~
+     You are standing just inside the city walls near the main gate
+to the city.  There is a light drizzle falling from the clouds above,
+and it seems as though nothing here has seen the light of day in years.
+The wooden buildings of the city are half rotting from the constant
+downpour and the lack of daylight.  The stone buildings seem to be
+holding up, but the roofs have all caved in.
+     Running north and south is a road which travels next to the wall
+and around the city.  A rotted sign on the wall proclaims this as Hope
+Street.
+~
+5 9 5
+D0
+~
+~
+0 0 576
+D1
+The gate of Necropolis lies close in this direction.
+~
+gate portcullis~
+1 0 566
+D2
+Hope Street runs southward into the rain and darkness.
+~
+~
+0 0 574
+D3
+Westward on Shamrock Lane...
+~
+~
+0 0 569
+S
+#568
+The Road to Necropolis~
+     You notice that the sky starts to get dark and gloomy, and up
+ahead there is a large wall of darkness.  You can barely see into
+it...it's almost as if it were perpetually night just a few feet
+in front of you.  To your east the sky returns to normal while to
+the west you can barely make out a large structure jutting up into
+the dark skyline.
+~
+5 0 2
+D1
+This overgrown road eventually ends at a path through the hills.
+~
+~
+0 0 565
+D3
+You approach the walls of Necropolis.
+~
+~
+0 0 566
+S
+#569
+Shamrock Lane~
+     A small wooden roadsign lays here fallen to the ground.  You can 
+figure that this road used to be called Shamrock Lane.  Considering 
+the condition of it now, it seems almost wicked in a way, as if trying
+to taunt you.  The ground is no longer made of packed soil, the soil
+has become black mud which sucks greedily at your feet trying to keep
+you from moving.
+     To your east and west are the dark entrances to some well built
+stone buildings.  The one to the west has a picture of two swords
+crossing each other, whilst the building to the east has a picture of
+a bed on it.
+~
+5 9 5
+D0
+~
+~
+0 0 594
+D1
+Eastward on Shamrock Lane...
+~
+~
+0 0 567
+D2
+~
+~
+0 0 595
+D3
+Westward on Shamrock Lane...
+~
+~
+0 0 570
+S
+#570
+Shamrock Lane~
+     The downpour of water has soaked your clothes completely making
+your travel here very uncomfortable.  Earthworms wriggle their way
+through the drenched soil in hopes of finding a dry place before 
+drowning.  Lighting flashes overhead followed closely by a loud clap
+of thunder that shakes the ground.
+     To the south is an old oaken building, which has survived against
+the odds because of its hearty wood.  It has a sign hanging loosely by
+one of its chains that depicts a slab of meat and a loaf of bread.  To
+the north is a larger stone building which is labled plainly "Cerilia
+General Store".  It doesn't seem to have gotten any business in quite
+a while.
+~
+5 9 5
+D0
+~
+~
+0 0 591
+D1
+Eastward on Shamrock Lane, you can barely make out the shape of the 
+city gates from here.
+~
+~
+0 0 569
+D2
+~
+~
+0 0 596
+D3
+Westward on Shamrock Lane towards a large burnt out building.
+~
+~
+0 0 571
+S
+#571
+Shamrock Lane~
+     What a happy name for such a dark, evil looking street.  Lightning
+flashes illuminating the cloud filled sky.  For a moment you believe
+you saw a face in the clouds grinning down at you, but then the sharp
+glow from the lighting subsides and it becomes plain sky again.
+     To your south lies what used to be the towns armory, but now it
+is just a beaten building with a shield shaped sign hanging loosely
+from one corner.  To the north is a building that must have been truly
+magnificent in its day.  Alas, the building has seen better days, and
+the only indication of what it was is a sign with a bag of gold painted
+upon it.
+~
+5 9 5
+D0
+~
+~
+0 0 588
+D1
+Eastward on Shamrock Lane...
+~
+~
+0 0 570
+D2
+~
+~
+0 0 597
+D3
+Westward on Shamrock Lane to where it intersects with Morris Street.
+~
+~
+0 0 572
+S
+#572
+Intersection of Shamrock and Morris~
+   Here is where Shamrock Lane and Morris Street intersect each other.
+Shamrock Lane runs eastwards towards the gate of Necropolis, while to 
+the west you can see the remains of what was once a temple.  Morris
+Street runs nortwards for a while before turning at the city wall.  To
+the south passage is blocked by a fallen tree.
+~
+5 9 5
+D0
+~
+~
+0 0 584
+D1
+Shamrock Lane continues on eastwards.
+~
+~
+0 0 571
+D3
+To the west you see a set of stairs leading up to a ruined temple.
+~
+~
+0 0 573
+S
+#573
+Before the Temple Steps~
+     From here, a set of cold, stone steps leads up wards to what was
+once a temple.  Now, the temple's beautiul stained glass is broken
+and dark, the stone crumbles, and all holy artwork has been torn off.
+This once holy place no longer can serve those who seek religion,
+it is now a place of darkness and sadness where those without souls
+go to meet.  East of here Shamrock Lane intersects Morris street.
+~
+5 8 0
+D1
+The intersection of Shamrock Lane and Morris Street.
+~
+~
+0 0 572
+D4
+Up the stone steps to the ruined temple.
+~
+~
+0 0 585
+S
+#574
+Southern Hope Street~
+     You now stand in the middle of what was once called Hope Street
+by the cities residents.  Now hope street is nothing but a large mud
+puddle that collects all the filth and debris from the city.  What a
+woundrous place this must have been years ago.
+     To the north, Hope Street intersects and crosses Shamrock Lane
+while to the south you will have to pick your way through the debris.
+You can barely see what looks like a large obstruction to the south.
+~
+5 9 5
+D0
+Sharock Lane lies just north of here...
+~
+~
+0 0 567
+D2
+A large obstructions seems to be blocking the road southwards.
+~
+~
+0 0 575
+S
+#575
+The Collapsed Building~
+     Before you, the rain has finally beaten a buliding to the breaking
+point.  The large two story building has collapsed and fallen into the
+street barring any passage past this point.  Large wood and metal shards
+stick out of the stone pile making it too dangerous to climb over, for
+you would surely be impaled.  
+     To the east Hope Street continues on where it intersects with 
+Shamrock Lane.
+~
+5 9 5
+D0
+~
+~
+0 0 574
+S
+#576
+North Hope Street~
+     You are now on Hope Street, just north of Shamrock Lane.  The 
+street here is not in any better condition than that of Shamrock 
+Lane, it only travels in a different direction.  Hope Street leads
+on to the north, or intersects with Shamrock Lane to the south.
+~
+5 8 0
+D0
+~
+~
+0 0 577
+D2
+~
+~
+0 0 567
+S
+#577
+North Hope Street~
+     The swollen rivlets of water stream southwards on the street
+where they will form puddles somewhere below.  You become aware of
+a putrid stench that you hadn't noticed till now.  The sickening
+smell gets stronger to the north, or to the south there is fresher
+air.
+~
+5 8 0
+D0
+~
+~
+0 0 578
+D2
+~
+~
+0 0 576
+S
+#578
+Intersection of Hope and Olympia~
+     This is the intersection of Hope Street and Olympia Avenue.  
+The source of the stench is a fairly fresh corpse near the wall
+corner.  The smell and the look on the corpse's face makes your
+stomach churn, you definatly don't want to spend much time here.
+To the west, is Olympia Avenue, or you can go south on Hope street.
+~
+5 8 0
+D2
+~
+~
+0 0 577
+D3
+~
+~
+0 0 579
+S
+#579
+Olympia Avenue~
+     Olympia Avenue is an east-west traveling street, that offers
+entrance to a number of the cities shops.  It travels just south
+of the city wall, and the shops lie to the south.  To the south
+of here is a broken building that at one time sold clothing, but
+now sells death.  From your east comes a rancid smell, while
+Olympia Avenue continues off to whe west.
+~
+5 8 0
+D1
+~
+~
+0 0 578
+D2
+~
+~
+0 0 593
+D3
+~
+~
+0 0 580
+S
+#580
+Olympia Avenue~
+     The mud from the ground has clumped on your boots making your
+walk even more difficult.  It seems as if the ground itself is alive
+and grasping at your feet, trying to drag you down into its muddy
+self.  To the east and west Olympia Avenue continues, whilst to the
+south is an old shop, a sign outside has a picture of a map on it.
+~
+5 8 0
+D1
+~
+~
+0 0 579
+D2
+~
+~
+0 0 592
+D3
+~
+~
+0 0 581
+S
+#581
+Olympia Avenue~
+     The rotted wood on the ground has turned to a foul smelling mush
+that squishes noisly under your feet.  Lighting flashes in the sky
+overhead, making the rumbling thunder wash over you.  To the south
+is a stone and metal building, that is in great shape.  The stone
+has held up, and the metal seems to have resisted rust and corrosion.
+A sign on the front says, "Azbar the Alchemist- Potions and Wonderment
+Inside".
+~
+5 8 0
+D1
+~
+~
+0 0 580
+D2
+~
+metal door~
+1 0 590
+D3
+~
+~
+0 0 582
+S
+#582
+Intersection of Morris and Olympia~
+     The air is very cold, and your damp close make the cold go straight
+to the bone.  You would like to find a dry place where you could rest
+and maybe even build a fire for the night.  To the east, Olympia Avenue
+wanders off, while to the south Morris street travels off into the
+distance.
+~
+5 8 0
+D1
+~
+~
+0 0 581
+D2
+~
+~
+0 0 583
+S
+#583
+Morris Street~
+     The gusts of wind pick up, and blow your hair across your face
+as well as make your drenched clothes flap loosely.  Morris Street
+intersects with Olympia Avenue to the north, or also continues on
+to the south.
+~
+5 8 0
+D0
+~
+~
+0 0 582
+D2
+~
+~
+0 0 584
+S
+#584
+Morris Street~
+     This street is much like the rest of them, small rivulets of water
+travel downhill to the south where it will most likely puddle up on
+Shamrock Lane.  The relentless downpour shows no signs of slowing...
+ever...probably as much chance of the sun rising as well.  To your
+north Morris Street continues, while southwards it intersects with
+Shamrock Lane.
+~
+5 8 0
+D0
+~
+~
+0 0 583
+D2
+~
+~
+0 0 572
+S
+#585
+The Ruined Temple~
+     Inside the temple is even more a shambles.  The once grand pews
+are knocked over and broken, some are piled up on top of each other or
+halfway out a window.  All the artwork inside is painted over or ripped
+off the wall, much like carpets, they will never see use again.  The 
+cross behind the altar has been turned upside down, and jesus hangs
+at the end of a noose near the ceiling.
+     To the north is a small room that has mostly collapsed, but you
+can still probably enter it safely and to the south is old meeting room.
+West of here a giant hole in the wall gives you a glimpse of a large 
+castle off in the distance illuminated by the lightning.
+~
+5 8 0
+D0
+~
+~
+0 0 586
+D2
+~
+~
+0 0 587
+D5
+Down the temple steps to the street below.
+~
+~
+0 0 573
+S
+#586
+The Old Donations Room~
+     Once, this room was filled with donations from the generous
+citizens of Cerilia.  Now, the roof has all but caved in, and water
+runs like a river through the holes and cracks in the roof.  The
+water fill puddles that contain mouldering bread, and various items
+that are either rotting or rusting.  Nothing in here could possibly
+be salvaged, or even used for scrap!
+~
+5 8 0
+D2
+~
+~
+0 0 585
+S
+#587
+The Meeting Room~
+   This room is in bad shape, the roof is leaking badly, papers
+are laying soaked and pulpy on the floor, and the table is broken
+completely in half.  Chars are broken and scattered about the room 
+like as much forgotten garbage.  An old bulletin board is smashed
+and hanging by one side.
+~
+5 40 0
+D0
+~
+~
+0 0 585
+S
+#588
+A Destroyed Bank~
+     The building has been utterly trashed, the wooden counters are
+broken and splintered, the glass plates and windows are shattered,
+and the floorboards are so rotted they cannot hold your weight.  A
+long time ago, this was probably an amazing building for its time,
+with all the expensive wood and furnishings it couldn't have been
+cheap.  Now all is in a shambles and everything is worthless, even
+the safe door has rusted off, and has long since been looted.
+~
+5 24 0
+D2
+~
+~
+0 0 571
+S
+#589
+The Experiment Room~
+   This is where Azbar does some of his outrageous experiments on
+various unwilling participants.  This cell is kept clean and dry
+from the weather.  The cold stone floor would not be comfoting, but
+neither are the stone walls.
+~
+5 24 0
+D1
+~
+cell~
+1 522 590
+S
+#590
+Azbar's Potions and Wonderment~
+   The first thing that hits you about this place is the smell.  The
+odor of various chemicals fills your nostrils and makes you very dizzy.
+Anyone who spends a lot of time here would probably go insane.  The
+room is in great shape and looks as if it is kept up on a regular basis.
+Someone must still live here.  What sort of madman would live in a town
+full of walking dead?  To the east and west are cages.
+~
+5 12 0
+D0
+~
+metal door~
+1 0 581
+D1
+~
+cell~
+1 522 598
+D3
+~
+cell~
+1 522 589
+S
+#591
+Then General Store~
+   You stand inside what was once the general store of Cerilia, but
+is now just another broken building in Necropolis.  The furniture
+in this room is smashed, and all the equipment that was not looted
+lays broken and decomposing on the floor.
+~
+5 8 0
+D2
+~
+~
+0 0 570
+S
+#592
+The Map Maker~
+   This was once the home of the cities map maker.  His drawing board
+is smashed against the southern wall, and his tools lay broken and
+rusting on the floor.  The floor is covered in a pulpy mush which
+makes the floor slippery to walk on.  Many glass cases are around
+the room most of which are smashed...except one.
+~
+5 8 0
+D0
+~
+~
+0 0 580
+S
+#593
+The Taylor's Shop~
+   This used to be where the taylor sold clothing, and mended those
+that were owned by the citizens already.  Now, the shop is a shambles,
+nothing in here could possible be salvaged, and what is left of the
+clothes is covered in a slimy black mud and whatever the zombies may
+have dropped on the ground...ewwww!
+~
+5 8 0
+D0
+~
+~
+0 0 579
+S
+#594
+The Inn~
+   The plaster on these once magnificent walls has become the same
+consistancy of corn meal mush.  The room's many accompanyments have
+been smashed and broken, and rain streams mercilously through the 
+caved in roof.
+~
+5 8 0
+D2
+~
+~
+0 0 569
+S
+#595
+The Weapon's Shop~
+   The roof of this building collapsed long ago, and blades lay
+hidden beneath the debris of the roof.  Considering the constant
+rain you doubt any of the weapons could be saved anyway.  All the
+other objects in the room were destroyed when the roof colapsed
+smashing them all to little pieces.
+~
+5 12 0
+D0
+~
+~
+0 0 569
+S
+#596
+The Bakery~
+   This place was once filled with the wonderful smells of fresh
+baked bread, but it now smells of rot and death.  Nothing has 
+been baked here in hundreds of years, and the equipment has
+corroded into nothing.  Any food which was left in here has long
+ago been eaten by rats, or rotted away.
+~
+5 8 0
+D0
+~
+~
+0 0 570
+S
+#597
+The Armory~
+   The armory of Necropolis is a cluttered mess.  Broken and rust
+encrusted pieces of armor are strewn about the room.  Leather is
+soggy and worthless.  The ceiling creaks above your head, ready
+to collapse from the streaming water.  You decide it wouldn't be
+a very good idea to stay here long.
+~
+5 8 0
+D0
+~
+~
+0 0 571
+S
+#598
+The Experiment Room~
+   This is where Azbar conducts experiments on differen animals and
+humans.  He gives them potions that will alter them in some wierd
+way.  You begin to wonder if it is him who caused the destruction of
+this town...but then why is it rainy and dark all the time?
+~
+5 8 0
+D3
+~
+~
+0 0 590
+S
+#599
+Necropolis Mob Chute~
+     This room was designed to randomly distribute mobs throughout
+the city of Necropolis.  You now stand in a pool of murky water, 
+which flows down downward tunnels in all directions.  Down, is a 
+straight down water slide, while up is a ladder that leads to
+a much higher slide.  Basically, you don't need to be here...
+~
+5 262152 0
+D0
+~
+~
+0 0 587
+D1
+~
+~
+0 0 586
+D2
+~
+~
+0 0 572
+D3
+~
+~
+0 0 582
+D4
+~
+~
+0 0 580
+D5
+~
+~
+0 0 578
+D6
+~
+~
+0 0 576
+D7
+~
+~
+0 0 575
+D8
+~
+~
+0 0 571
+D9
+~
+~
+0 0 569
+S
+$~

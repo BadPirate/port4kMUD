@@ -1,0 +1,227 @@
+#900
+geezer fisher old man~
+an old fisherman~
+An old man sits on the edge of the dock.
+~
+   The old geezer chews his wrinkled lips with his gums.  He must fish off the
+dock for his dinner.  Wild, grey hair fluffs out from his weathered brown face.
+~
+8334 0 0 E
+24 12 5 30d30+100 3d5+18
+100 0
+8 8 1
+BareHandAttack: 13
+E
+#901
+geezer fisherman old man~
+an old fisherman~
+An old man sits on the edge of the dock.
+~
+   The old geezer chews his wrinkled lips with his gums.  He must fish off the
+dock for his dinner.  Wild, grey hair fluffs out from his weathered brown face.
+~
+8334 0 0 E
+24 12 5 30d30+100 3d5+18
+200 0
+8 8 1
+BareHandAttack: 13
+E
+#902
+rusalka woman spirit~
+the Rusalka~
+A black-haired woman in a long white dress stands in the middle of the pool.
+~
+   Her long black hair is woven with long water plants and strings of pearls.
+Her skin is unnaturally pale and her eyes have a feral look about them.  Her
+image is not reflected in the water.    
+~
+90170 160 -1000 E
+100 -30 -5 30d200+30000 30d50+50
+300000 0
+8 8 2
+BareHandAttack: 8
+E
+#989
+moose calf~
+a moose calf~
+A moose calf stands unsteadily in the shallows.
+~
+   The moose calf looks as gawky as all youngsters do.  It props itself up on
+its four bony legs, eyes peering all around it in wonder.  This calf must be
+pretty young and mama is surely close by.    
+~
+138 32768 500 E
+24 10 0 30d25+200 4d5+19
+400 0
+8 8 0
+BareHandAttack: 7
+E
+#990
+moose cow wandering~
+a wandering moose~
+A moose wades through the river's shallows.
+~
+   Her dark brown hide drips water into the river.  A large head with a broad
+snout bobs lightly with each step she takes.  Her huge feet pick their way
+through the river bed with surprising ease for such a large animal.    
+~
+77912 262208 0 E
+43 -3 -2 30d50+900 9d7+13
+2000 320
+8 8 2
+BareHandAttack: 7
+E
+#991
+moose cow~
+a moose~
+A moose is standing here chewing some greens.
+~
+   Her coat is shaggy and brown.  Brambles have attatched themselves to her
+hide and will doubtless fall off in a nicely empty spot to grow and spread.  
+The moose's ears are large and alert.    
+~
+69658 32768 0 E
+43 -3 -2 30d50+1000 9d7+11
+2000 300
+8 8 2
+BareHandAttack: 7
+E
+#992
+moose bull~
+a bull moose~
+A bull moose wades through the river nearby.
+~
+   The moose is so large that it could look a giant in the eye.  Its broad
+forehead is surmounted by a pair of antlers that sweep out so wide one would
+wonder how the moose manages to get around the forest.  Scars--some newer than
+others--mark the great beast's shoulders and chest.    
+~
+73770 32768 0 E
+52 -10 -3 30d40+2000 10d12+22
+3000 300
+8 8 1
+BareHandAttack: 10
+E
+#993
+turtle swimming~
+a swimming turtle~
+A turtle is swimming in the water nearby.
+~
+   The turtle has an oily brown shell that gleams wetly in the light.  The
+shell is raised in a series of ridges that form strange patterns.  Wasn't there
+a legend about rubbings from a turtle shell containing all the knowledge in the
+world?  Of course, one would have to assemble the rubbings in order for them to
+make sense...  The turtle, completely unaware of the knowledge it carries on
+its back, swims around searching for food.    
+~
+72 294976 0 E
+18 10 0 20d20+310 7d5+8
+500 300
+8 8 0
+BareHandAttack: 4
+E
+#994
+turtle sunning~
+a sunning turtle~
+A large turtle is basking in a patch of sunlight.
+~
+   The turtle has a bright yellow green shell that is splashed with patterns of
+shade and light from above.  Legend says that all of the knowledge in the world
+is contained in the shells of turtles.  Many old wizards would then collect the
+turtle shells (not good for the turtles) and try to decode them.  The only
+problem with this is that one has to get all of the rubbings in the right
+order...  Luckily that time is passed and the turtle populations have recovered
+quite nicely.    
+~
+327690 32832 0 E
+26 8 -3 20d20+450 5d8+20
+5000 30
+5 8 0
+BareHandAttack: 4
+E
+#995
+sargas serpent coil pile snake~
+an evil sargas~
+The coils of a great serpent twist and twine over each other.
+~
+   She is long and black.  Her body is thicker than the trunk of the oldest
+tree in the forest.  A thick mane of feathery black fur encircles her neck.  
+It is stained with blood and other bits of gore.  She is a hunter and not a
+very patient one.  Unlike the male of her species, the female sargas will hunt
+down her prey and eat it alive.  A large jewel embedded in her forehead is said
+to protect her from harm.    
+~
+125048 295136 -1000 E
+80 -10 -10 30d90+17000 20d23+25
+100000 1000
+8 8 2
+BareHandAttack: 6
+E
+#996
+sargas serpent coil pile~
+an evil sargas~
+A large pile of living coils is before you.
+~
+   The large coils of black move slowly over, under, and around each other.  
+Every now and then, a bright wink of eye might peer through.  The Sargas is
+said to have a giant jewel embedded in its forehead.  A jewel that protects the
+monster from all harm.  Surely the legends are exaggerated, surely this giant
+serpent can be defeated...    
+~
+123930 33796 -800 E
+70 5 -10 30d70+15000 20d20+40
+50000 450
+8 8 1
+BareHandAttack: 6
+E
+#997
+mitas rodent~
+a male mitas~
+A fuzzy, little mitas hangs on to several cattails at once.
+~
+   The little male mitas clings to several cattails with its tiny paws and
+long, thin tail.  It is believed that mitas spend their whole lives up in the
+plants and never touch the ground.  Male mitas have the same grey-brown
+coloring as females except for a rich red ring of fur around their little
+necks.  The mitas has a small head with a narrow muzzle and needle sharp teeth.
+~
+14 1024 0 E
+5 15 9 15d7+30 2d3+3
+100 13
+8 8 1
+BareHandAttack: 4
+E
+#998
+mitas rodent~
+a female mitas~
+A little, furry mitas clings to a cattail.
+~
+   The mitas is a small rodent that only lives in the forest near the Shady
+River.  The cattail and small insects are its main source of food.  Female
+mitas like this one have soft, grey-brown fur and large, orange eyes.  They go
+into heat twice a year and bear two or three young each time.  The mitas are
+mostly preyed upon by water snakes and the occasional wolf.    
+~
+142 1024 0 E
+7 18 8 20d5+40 2d4+7
+25 23
+8 8 2
+BareHandAttack: 8
+E
+#999
+snake water stripped~
+a water snake~
+A slim snake with &Yyellow &ystripes on its back swims here.
+~
+   The snake is only two feet long in length.  Its head bears a blunt nose with
+a narrow skull.  The water snake has a light brown body with three
+&Yyellow-brown stripes&n on its back.  The small snake whips its body back and
+forth as it churns a course through the water.    
+~
+328 294980 410 E
+20 8 5 5d20+0 4d4+5
+50 40
+8 8 0
+BareHandAttack: 4
+E
+$

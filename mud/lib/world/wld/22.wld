@@ -1,0 +1,232 @@
+#2200
+The Backroom~
+   The workroom of the tailor's shop is cluttered with bolts of rich cloths,
+spools of delicate threads, and reems of lace.  The floor is a hazard of pins,
+scissors, and measuring tapes.  Several old looms gather dust in the corners
+along with a few dummies and clothes that have been out of style for years.  
+The sandblasted walls of the room bring in plenty of light from outside.  The
+only exit is east to the front of the store.    
+~
+22 262168 0
+D1
+   The front of the store lies to the east.    
+~
+door glass~
+1 -1 2201
+S
+#2201
+The Tailor's Glass Shop~
+   The shop is lit from all sides by the light coming through the walls.  It is
+filled with dresses, shirts, and pants in various states of make.  The
+workmanship is superb.  No two garments in the shop are alike.  Several glass
+chandeliers also hang from the ceiling.  Even the chairs, tables, and counters
+in the store are made of glass!  There are doors to the west and east of the
+shop.    
+~
+22 28 0
+D1
+   The yellow brick road can be seen through the door.    
+~
+~
+0 0 1407
+D3
+   A little glass door peeps out from behind several poofy dresses.    
+~
+door glass~
+1 0 2200
+S
+#2202
+Yolis' Caterers~
+   The room is small and filled with fancily decorated baked goods all around.
+Cakes with three to five tiers cover tables draped with silk cloths.  Tarts and
+chocolates and finger sandwiches made of water chestnuts and olives fill silver
+and gold trays.  This is the place to go for fancy foods.    
+~
+22 24 0
+D3
+   The open door reveals a yellow brick road.    
+~
+~
+0 0 1409
+S
+#2203
+A Jewelry Shop~
+   The stone walls are covered with a velvety fabric the color of cranberries.
+The floor is inlayed with obsidian and pink agate.  Mage globes of varying
+sizes hover in the air around the display cases.  Some of them wear shades to
+help direct their light to the jewels.  Several jewel cutters and metal workers
+are at work behind the counter.  To the west, a large, velvet curtain flaps
+slightly in a breeze coming from outside.    
+~
+22 24 0
+D3
+   A smell of green grass and dusty brick comes from behind the curtain.    
+~
+~
+0 0 1410
+S
+#2204
+River.~
+ You leave the brush to find a river that is filled with life. 
+To the north you hear the great crashing sound of a waterfall.
+The smeels of food also seem to be coming from that direction.
+~
+22 16 2
+D0
+~
+~
+0 0 2205
+D1
+~
+~
+0 0 2203
+S
+#2205
+Path to Waterfall.~
+You are in an unfinished room.
+ You come to the end of the path to see the most magnifacent sight.
+A moutain that seems to stretch up to the gods and a waterfall that 
+seems to be coming from the heavens. you also see what looks 
+like a small resort area.
+~
+22 0 0
+D0
+~
+~
+0 0 2206
+D2
+~
+~
+0 0 2204
+S
+#2206
+An unfinished room~
+You are in an unfinished room.
+~
+22 0 0
+D2
+~
+~
+0 0 2205
+S
+#2293
+The Groom's Room~
+   There's not much here.  A coat rack lies in one corner.  A single mirror
+with a comb hanging from a string lies in another.  Other than that, the only
+furnishings are a few old, beat-up, comfortable chairs.  After all, it will be
+the last time the groom will be allowed to sit in them...    
+~
+22 264796 0
+D1
+~
+~
+0 0 2296
+S
+#2294
+The Bride's Room~
+   A pleasant room waits for the bride to come ready herself for that big day.
+A soft carpet covers the floors, and pleasant tapestries illuminate the walls.
+Several mirrors lie situated so as to give a multi-directional view of the
+finished beautiful bride.  A simple dresser and chair lies to the side, waiting
+to aid the the lovely girl in readying herself for her wedding.    
+~
+22 264924 0
+D3
+~
+~
+0 0 2296
+S
+#2295
+The Chapel~
+   You emerge into a bright, airy room, with ceilings that seem to reach up
+into the heavens.  Beautiful stained glass windows line the walls and send
+shimmering colors in all directions, on the floors, over the guests, even on
+the pulpit.  Padded benches are lined up in rows, waiting to support the guests
+through the ceremony.  Deliciously sented flowers perfume the air and decorate
+the room.  A wonderful place for a wonderful wedding!    
+~
+22 262364 0
+D2
+~
+~
+0 0 2296
+S
+#2296
+The Chapel Hall~
+   You stand deep within the chapel walls here.  Dark mahogany lines the walls,
+giving the hallway a dark, solemn feeling.  You feel properly hushed, as is
+appropriate inside a church.  To the north is the main room where the ceremony
+is taking place, to the south, the exit, and the rooms of the bride and groom
+lie to the west and east, respectively.    
+~
+22 270412 0
+D0
+~
+~
+0 0 2295
+D1
+~
+~
+0 0 2294
+D2
+~
+~
+0 0 2297
+D3
+~
+~
+0 0 2293
+S
+#2297
+Chapel Entrance~
+   A grand church towers here, with high, graceful spires and elegant flying
+buttresses.  A large rose window sits above the door frame, refracting the
+light of the sun in a rainbow of colors.  Relief sculptures line the columnade
+and grace the large oak double doors.  A fitting place for a wedding.    
+~
+22 262336 0
+D0
+~
+~
+0 0 2296
+D2
+   A yellow brick road heads off into the grass.    
+~
+~
+0 0 1402
+S
+#2298
+The Moon~
+   You stand on a cold, lifeless hunk of rock.  As you blink and look around,
+you realize if you look off into the horizon, you see a very brilliant blue and
+white sphere.  What the heck?  You must be on the moon!  However, one feature
+of it that you never guessed at is the crystal palace shining off in the
+distance.    
+~
+22 262208 0
+D0
+~
+~
+0 0 2299
+D5
+A glowing portal.
+~
+portal~
+2 2297 2060
+S
+#2299
+Palace of Darkness~
+   You stand in a diaphanous palace made entirely of pure, brilliant crystal.
+Black crystal.  Evil crystal that seems to absorb all light, no matter what it
+is cast from.  In the center of the room is a dark alter made of pure black,
+cold marble.  It and the floor beneath it are covered in dark brown stains.  
+It is very beautiful, but a dark, evil beauty reminicent of the Tarrasque or
+Tiamat.    
+~
+22 1310921 0
+D5
+~
+~
+0 0 168
+S
+$~

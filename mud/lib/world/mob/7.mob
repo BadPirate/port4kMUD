@@ -1,0 +1,874 @@
+#701
+dameon freak gothic god immortal~
+Dameon~
+A former immortal with a dark, sinister presence glowers before you.
+~
+   A former immortal of the realm of Daggerfall, Dameon has fallen far, and is
+now a member of the freak show.  He looks almost gothic (though he's not) with
+his black spandex shirt, long black trenchcoat, and tophat.  His dark hair
+flows down his back, and the fangs of a vampire show slightly above his dark
+goatee.    
+~
+188506 558250 -1000 E
+100 -10 -10 1d1+10000 8d10+35
+150000 35000
+8 8 1
+BareHandAttack: 4
+E
+#702
+big top ticket taker ticket-taker~
+the &bB&wi&bg &wT&bo&wp&y Ticket-taker&n~
+The &bB&wi&bg &wT&bo&wp&y Ticket-taker guards the entrance to the tent.
+~
+   The &bB&wi&bg &wT&bo&wp&n ticket-taker is a very large, very stout man.  He
+is probably a bit over six feet tall, but seems considerably shorter, due to
+his rather large girth.  He has a gigantic, bristling mustache above his upper
+lip that flaps as he calls for tickets.  He somewhat resembles a large male
+walrus.    
+~
+778315 32768 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#703
+freak show ticket-taker ticket taker~
+the &gF&mr&ge&ma&gk &mS&gh&mo&gw&y Ticket-taker&n~
+A thin, scrawny man takes tickets for entry into the &gF&mr&ge&ma&gk &mS&gh&mo&gw&n.
+~
+   This very thin, very scrawny man looks like a walking scare crow.  His long
+dangling limbs hang limply from worn out, too small clothes.  His hair is thin
+and coarse, and juts out in all directions.  His back is stooped and as he
+walks around taking tickets, you can see that he has a limp.    
+~
+778315 32768 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#704
+world's fattest man~
+the World's Fattest Man~
+A mound of fat quivers...Wait, it's human!
+~
+   Rolls of fat cascade down this enormous man's body.  As he breathes, jiggles
+race up and down his body.  So much fat surrounds his eyes, he can hardly open
+them, making them look small and beady in his shiny, greasy face.    
+~
+65610 32768 0 E
+50 0 0 1d1+1000 7d5+20
+25000 0
+8 8 1
+BareHandAttack: 7
+E
+#705
+wolf boy~
+the Wolf Boy~
+A hairy little boy is chained here.
+~
+   The little boy is covered all over in shaggy fur, like some kind of canine.
+His eyes are a glowing amber color.  He has a thick collar around his neck, and
+he has been chained to the wall.    
+~
+74 33792 0 E
+50 -10 0 1d1+800 7d3+25
+50000 0
+8 8 1
+BareHandAttack: 4
+E
+#706
+ape woman~
+the Ape Woman~
+A very hairy woman sits in a chair.
+~
+   The woman is dressed in a beautiful dress that you would expect to find on
+an elegant lady.  Instead, it is worn by a woman who is covered with the dark
+hair of an ape.  She has a muzzle rather than just a nose.  Her arms are long
+and drape down to the floor.  Her dark hair is caught up in a ponytail.    
+~
+2138 32768 0 E
+50 -5 0 1d1+900 6d8+30
+75000 0
+8 8 2
+E
+#707
+ticket seller vendor~
+the &wTicket Vendor&n~
+The &wTicket Vendor&y frantically tries to get tickets to all his customers.
+~
+   A teenager is squeezed into a small booth, selling tickets to the various
+patrons of the Ethereal Circus.  His face is still a bit chubby from baby fat,
+and large, sore-looking pimples cover his physiognomy.  He's probably working
+for minimum wage.    
+~
+778314 32768 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#708
+tallest pixie~
+the World's Tallest Pixie~
+A very tall, very tearful pixie flaps her wings ineffectually.
+~
+   Compared to a human or elf, this pixie is tall.  Compared to other pixies,
+she is a giant!  She stands six feet tall.  She still maintains the delicate
+features of the fairy folk, but apparently suffers from a form of giganticism.
+She is dressed in a pale, almost transparent gauzy dress, just like that of any
+other pixie.  The problem is, she is a lot larger than normal pixies, and it is
+rather revealing on her.    
+~
+2122 32832 0 E
+50 -5 0 1d1+850 7d4+25
+25000 0
+8 8 2
+E
+#709
+flipper boy~
+the Flipper Boy~
+A sad-looking, flippered boy sits in a wading pool.
+~
+   This small boy is sitting in a strange, hunched over position.  His four
+limbs, rather than being arms and legs, are formed as flippers.  The skin on
+the flippers is smooth and grey, somewhat like that of a seal or sea-lion.  He
+looks miserable.    
+~
+74 32832 0 E
+50 0 0 1d1+850 6d7+20
+20000 0
+8 8 1
+BareHandAttack: 5
+E
+#710
+siamese snake boid~
+the &gSiamese Snake&n~
+Part of the &gSiamese snake&n coils and twists.
+~
+   This half of the Siamese snake is very muscular, even for a snake.  It is
+light green.  Its jaws are rather wide, the better for swallowing its prey.  
+It looks like a boa constrictor.    
+~
+135242 32800 0 E
+50 -5 10 1d1+1000 7d8+20
+25000 0
+8 8 0
+BareHandAttack: 6
+E
+#711
+siamese snake viper~
+the &GSiamese Snake&n~
+One half of the &GSiamese snake&n hisses angrily at your approach.
+~
+   This half of the Siamese snake is very thick and heavyset.  Even if it
+weren't attached to another snake, it would have difficulty moving fast.  It
+has the heat-sensing pits of a viper between its nostril and eye.  The
+exaggerated triangular jaw helps emphasize the fact that this is most likely a
+venomous snake, one not to be messed with casually.    
+~
+135242 32864 0 E
+50 0 0 1d1+1000 7d8+25
+25000 0
+8 8 0
+E
+#712
+bearded girl~
+the Bearded Girl~
+An adorable little girl with a beard sits here.
+~
+   This little girl is so cute!  She has long blonde hair curled into bouncy
+ringlets, and bright blue eyes.  She also has a disgusting, scraggly blonde
+beard.  It appears to be fake though, since it is coming off at the corners.  
+~
+74 32768 0 E
+50 0 0 1d1+750 6d7+20
+15000 0
+8 8 2
+E
+#713
+crocodile man~
+the Crocodile Man~
+A very scaly man sits here, bored.
+~
+   This man is huge and muscular.  Above his rippling muscles are leathery skin
+and bits of bony plates.  He has no outer ears, just holes into his bony,
+hairless skull.  He has evil yellow eyes that seem to laugh at your puny self.
+~
+65610 32832 0 E
+50 -3 0 1d1+1000 7d8+23
+30000 0
+8 8 1
+BareHandAttack: 4
+E
+#714
+two-headed fido~
+the Two-headed Fido~
+A large fido with two heads growls at you.
+~
+   This fido is rather larger than most, coming to the waist of an
+average-sized human male.  He has exceptionally large teeth in both of his
+glaring heads.  Maybe one of the hellhounds of Mist was involved in the
+spawning of this hideous, evil beast.    
+~
+74 32768 -1000 E
+50 -10 0 1d1+1100 8d5+30
+50000 0
+8 8 1
+E
+#715
+strongest gnome~
+the Strongest Gnome~
+A gnome with huge muscles shows off.
+~
+   This is a gnome with phenomonal musculature.  He seems ready to lift
+anything.  However, his physiognomy is, well, gnomish and wrinkled.  He has a
+long brown beard that reaches the floor and tries to trip him occasionally.  
+~
+74 32768 0 E
+50 0 0 1d1+1000 7d9+25
+25000 0
+8 8 1
+E
+#716
+immortal god lan~
+Lan~
+A dark-haired man is paying rapt attention to a flickering box.
+~
+   The man, while not exhibitin huge muscles or overwhelming strenth, seems to
+have glory streaming from him.  He is tall and thing, with waist-length, very
+dark brown hair caught back in a ponytail.  He has a strong jaw, and seems to
+be some resemblance to a certain book character.  This might be a foe that
+you'd want to avoid.    
+~
+190538 32958 1000 E
+100 -15 -10 1d1+10000 8d10+30
+150000 0
+8 8 1
+BareHandAttack: 12
+E
+#717
+dwarfed giant male~
+the Dwarfed Giant~
+A tiny giant glares at you from near the floor.
+~
+   This is a tiny giant, looking just like a regular giant, but in miniature.
+He is wearing skins around his body and wields a club.  He tries to look very
+fierce, but that is difficult when one is only a foot tall.    
+~
+6344 32768 0 E
+40 5 0 1d1+700 6d7+20
+10000 0
+8 8 1
+E
+#718
+dwarfed giantess female~
+the Dwarfed Giantess~
+A tiny giantess screams obscenities in a high pitched voice.
+~
+   The dwarfed giantess looks exactly like a normal giantess, only
+miniaturized.  She has dirty, scraggly hair, and exudes a very distinct odor of
+B.  O.  She shakes a fist angrily at the onlookers and screams unintelligably
+in a high pitched, squeaky voice.    
+~
+4168 32768 0 E
+40 5 10 1d1+700 6d7+20
+10000 0
+8 8 2
+E
+#719
+fortune teller~
+the fortune teller~
+A little old lady looks deeply into her crystal ball.
+~
+   The tiny woman is positively ancient.  Her facial features are hard to make
+out through her wrinkles.  She has a few tufts of white, wispy hair left on her
+head.  As she smiles and cackles, it becomes evident that most of her teeth are
+missing.  However, her eyes are very wise.    
+~
+712778 32768 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#720
+souvenir shopkeeper~
+the souvenir shopkeeper~
+A tired-looking shopkeeper is doing brisk business.
+~
+   She stands behind a counter, rapidly taking money and giving change.  She
+looks very tired, likely because she appears to be the only employee in the
+store to deal with such a huge crowd.    
+~
+778314 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#721
+pixie drink vendor~
+the pixie~
+A pixie hovers tiredly behind the counter.
+~
+   A tired-looking pixie waits to take your money.  Judging by the way she's
+hovering, she's been working a long shift.    
+~
+778250 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#722
+lady elf acrobat~
+the lady elf~
+A lady elf stretch in ways that no humanoid should be able to.
+~
+   The elf woman is long and lithe.  She is easily able to contort herself into
+all kinds of strange positions.    
+~
+4170 32768 0 E
+50 0 0 1d1+900 6d7+20
+25000 0
+8 8 2
+E
+#723
+acrobat hobbit~
+an acrobatic hobbit~
+A small hobbit tries to show off his acrobatic skills.
+~
+   The hobbit is a small humanoid with pointed ears.  He wears a sequin-covered
+spandex suit.    
+~
+4170 32768 0 E
+50 0 0 1d1+950 6d7+20
+15000 0
+8 8 1
+E
+#724
+acrobat pixie~
+the acrobatic pixie~
+A pixie dances into the ring to perform.
+~
+   The pixie is small and delicate.  She is wearing a pink sparkly outfit with
+sequins.    
+~
+4170 32768 0 E
+50 5 0 1d1+700 5d8+20
+15000 0
+8 8 2
+E
+#725
+large giant~
+the large giant~
+A huge giant stands here as impassively as a rock.
+~
+   The giant is huge!  He has large, rippling muscles that makes his width
+nearly as large as his height of ten feet!  He has a shaved head that shines in
+the mage light of the tent.    
+~
+69706 32768 0 E
+50 -10 0 1d1+1000 7d9+25
+25000 0
+8 8 1
+BareHandAttack: 7
+E
+#726
+souvenir vendor~
+the souvenir vendor~
+A vendor waits impatiently to take your money.
+~
+   He stands behind a counter and taps his foot impatiently.  Pay the man,
+already!    
+~
+778314 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#727
+human candy vendor~
+the candy vendor~
+A candy vendor waits to take your money from you.
+~
+   A human girl works frantically behind the counter, taking orders and money.
+She is wearing a gaudy pink and white striped uniform.  Sweat dots her brow
+beneath the ugly hat that is perched crookedly on her head.    
+~
+778314 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#728
+young elf food vendor~
+a young elf~
+A young elf in a greas-spattered uniform awaits your order.
+~
+   A young, tall elf stands here.  He hasn't grown into his height yet, for
+while he is very tall, he is also very thin, even for an elf.  His voice cracks
+with the changes of puberty.    
+~
+778314 32768 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#729
+human female acrobat woman~
+the human acrobat~
+A pretty woman smiles and performs for the crowd.
+~
+   The woman has a pert, cute face, with a big red smile.  She has big blue
+eyes and long blonde hair done in a French twist.  She coordinates with her
+fellows in a blue unitard and skirt.    
+~
+4170 32768 0 E
+50 0 0 1d1+800 6d7+20
+15000 0
+8 8 2
+E
+#730
+acrobatic pixie~
+an acrobatic pixie~
+A pretty little pixie nimbly dances and climbs in her performance.
+~
+   The cute little pixie has big brown eyes and blonde hair.  She wears a pink
+unitard and skirt to coordinate with her fellow pixies.    
+~
+4170 32768 0 E
+50 5 0 1d1+700 6d8+20
+10000 0
+8 8 2
+E
+#731
+elven maiden~
+the elven maiden~
+A lovely elven maiden pats the head of a ferocious beast.
+~
+   The elven girl has auburn hair and soft violet eyes.  She seems very gentle
+and demure.  She wears very practical hose and a tunic, rather than the fancy
+dress that most circus performers affect.    
+~
+4170 32768 0 E
+40 5 0 1d1+600 7d6+15
+15000 0
+8 8 2
+E
+#732
+monster beast catoblepas~
+the Catoblepas~
+A strange scaly beast snorts and paws at the ground.
+~
+   The Catoblepas is very large, very fierce bull-like creature.  It has the
+basic body shape of a bull, but has large, sharp, green scales covering the
+body.  It has a long, whiplike serpentine tail with razorlike edges.  It has
+sharp canine teeth ready to rend flesh.    
+~
+333898 32896 0 E
+60 -10 0 1d1+1200 8d8+25
+25000 0
+8 8 1
+BareHandAttack: 2
+E
+#733
+white horse~
+a white horse~
+A beautiful, pristine white horse gallops around the ring.
+~
+   The beautiful white horse is a prime example of equine flesh.  It is
+proportioned perfectly from muzzle to rump.  Cascading waterfalls of hair form
+a mane and tail.  Soft blue eyes look around inquisitively.  Unfortunately, it
+appears the horse has been gelded, and will never pass on its terrific genes.
+~
+331850 32768 0 E
+50 0 0 1d1+1000 6d8+20
+10000 0
+8 8 0
+BareHandAttack: 6
+E
+#734
+human performer rider~
+the male rider~
+A man gracefully leaps on and off of a white horse.
+~
+   The man is tall and thin, but strong and muscular.  He wears a tight spandex
+suit so that nothing will get in the way of his riding.    
+~
+4170 32768 0 E
+50 5 0 1d1+900 6d7+20
+10000 0
+8 8 1
+E
+#735
+female rider performer~
+the female rider~
+A pretty woman stands on the back of a galloping horse.
+~
+   The woman has short, light brown hair drawn back into a ponytail.  She wears
+a tight spandex suit of red and blue panels that shows off her every curve.  
+~
+4170 32768 0 E
+50 0 0 1d1+800 6d7+15
+10000 0
+8 8 2
+E
+#736
+small gnome~
+the small gnome~
+A small wizened gnome attempts to defend himself with a chair.
+~
+   The gnome is small and wizened, with wrinkles covering his face and visible
+body parts.  He is shorter than most gnomes, being only about two and a half
+feet tall.  His long beard is the perfect length for constant tripping and
+harrasment.    
+~
+74 32768 0 E
+40 5 0 1d1+600 6d6+15
+10000 0
+8 8 1
+E
+#737
+bear~
+the bear~
+A large bear peers around with beady little eyes.
+~
+   The bear is large, reaching about eight feet when standing on his hind
+limbs.  He has thick, shaggy brown fur and a mean disposition.  Poor bear must
+be beset with nematodes.    
+~
+65610 32768 0 E
+60 0 0 1d1+1100 7d9+25
+10000 0
+8 8 1
+BareHandAttack: 9
+E
+#738
+beast tamer~
+the beast tamer~
+A beast tamer cracks his whip threateningly.
+~
+   The beast master is thick and stocky.  He wears the hides of beasts that he
+has mastered.  A thick rope surrounds his middle, holding on the skins and
+providing a good resting place for his long whip.    
+~
+74 32768 0 E
+50 0 0 1d1+950 7d8+15
+15000 0
+8 8 1
+BareHandAttack: 2
+E
+#739
+circus dragon~
+the Dragon~
+A massive dragon hisses and snarls at any intrusion.
+~
+   The dragon large and sinuous.  An extremely long, whiplike tail stretches
+from his powerful haunches.  Massive horns and spikes sprout from his armored
+head.  His scales are diamond-shaped and razor-sharp on the edges.  He is an
+irridescent blue that glitters in the light.  His reptilian eyes are golden,
+matching exactly the shade of the leathery skin that fills out his enormous
+wings.    
+~
+329802 33824 0 E
+80 -10 0 1d1+1500 8d9+20
+50000 0
+8 8 1
+BareHandAttack: 9
+E
+#740
+circus clown~
+the clown~
+A clown runs around frantically, trying to avoid some monkeys.
+~
+   The clown is typical for his type.  He has a big red nose and a
+multi-colored wig that is starting to fall off.  His face is painted white with
+exaggerated red lips.  His clothing is a motley of clashing colors and
+markings.  He has enormous shoes, too big for any two people, let alone one.  
+~
+74 32768 0 E
+50 5 0 1d1+900 6d7+15
+15000 0
+8 8 1
+E
+#741
+evil monkey~
+a monkey~
+A small monkey runs around screaming at the top of its lungs.
+~
+   The little monkey is a bedraggled, scraggly looking specimen.  He has ragged
+fur, with patches falling out, and a rash on one paw.  His face is twisted into
+a mean expression, and fetid breath emerges from the mouth that spawns broken
+and chipped teeth.    
+~
+4170 32768 0 E
+40 10 0 1d1+500 5d6+10
+5000 0
+8 8 1
+BareHandAttack: 4
+E
+#742
+elephant~
+the elephant~
+A large grey elephant scans the surroundings with a wise eye.
+~
+   The elephant is a slow, massive beast.  A long.  Sinuous trunk hangs down
+from its face.  Huge ivory tusks jut out from the mouth.  Very large ears flap
+and drive insects away.  A tiny tail with a ragged tuft of hair at the end
+graces its backside.  It has large brown eyes that seem to have seen all the
+world and its sorrows.    
+~
+331850 32768 0 E
+60 0 0 1d1+1250 7d10+22
+10000 0
+8 8 1
+BareHandAttack: 6
+E
+#743
+elephant trainer~
+the elephant trainer~
+A man calmly orders the elephant about.
+~
+   The man is very non-descript.  He has plain brown hair, plain brown eyes,
+and a plain brown face.  Even his clothes are various shades of neutrality.  
+Amazing that he has power over such a large beast.    
+~
+4170 32768 0 E
+50 5 0 1d1+950 6d8+20
+25000 0
+8 8 1
+E
+#744
+ringmaster man~
+the Ringmaster~
+A man dressed in a flashy tuxedo bellows into a microphone.
+~
+   The rather portly man is dressed in a snazzy black tuxedo with tails and a
+brightly striped blue and red cumberbund.  An elegant tophat graces his head
+and shields his shiny bald head from the mage lights overhead.  A small
+microphone is clutched tightly in his hand.    
+~
+6216 32768 0 E
+50 0 0 1d1+1000 6d8+20
+25000 0
+8 8 1
+E
+#745
+drunk drunken man rags pile~
+the Drunk~
+A pile of dirty rags snores loudly.
+~
+   It's a pile of rags!  No, wait, it's a dirty old drunk dressed in a pile of
+rags!  Drool dribbles down his chin, leaving a streak of somewhat clean skin
+showing through the matted dirt that encrusts his entire body.    
+~
+74 32768 0 E
+50 10 0 1d1+800 6d7+25
+1 0
+4 4 1
+E
+#746
+annoying clown~
+an annoying clown~
+A annoying clown grins and laughs stupidly.
+~
+   The annoying clown's face paint is smeered a bit, his nose is falling off,
+and his wig isn't covering his real hair.  His shoelaces are untied.  He
+doesn't seem to take his job very seriously.    
+~
+72 32768 0 E
+50 5 0 1d1+800 6d7+15
+10000 0
+8 8 1
+E
+#747
+clown~
+a clown~
+A clown tries to trip and fall in an attempt to make people laugh.
+~
+   A generic clown.  He has big floppy shoes, big tent-like pants, and a shirt
+of many clashing colors.  A very fake looking multi-colored wig tops off the
+ensemble, framing a painted face.    
+~
+76 32768 0 E
+50 0 0 1d1+900 6d7+20
+950 0
+8 8 1
+E
+#748
+scary clown~
+a scary clown~
+A clown with an evil, scary scowl on his face prowls the circus.
+~
+   This clown is scary-looking!  His face paint has been done in a leer, with
+sharp eyebrows pointing downward.  His outfit has many sharp edges and coldly
+glittering decorations on it.  His shoes are extra long, the better to trip
+people with.    
+~
+72 32768 -1000 E
+50 0 0 1d1+1000 7d8+20
+25000 0
+8 8 1
+BareHandAttack: 3
+E
+#749
+male spectator~
+a male spectator~
+A male spectator wanders aimlessly around.
+~
+   A generic spectator.  He looks rather bored at the spectacles before him.  
+~
+76 32768 0 E
+50 5 0 1d1+1000 6d8+15
+10000 0
+8 8 1
+E
+#750
+female spectator~
+a female spectator~
+A female spectator glances all around at the various performances.
+~
+   The woman has a semi-interested expression on her face.  Maybe clowns aren't
+very exciting to her.    
+~
+76 32768 0 E
+50 0 0 1d1+1000 6d8+20
+10000 0
+8 8 2
+E
+#751
+child spectator~
+a child spectator~
+A child spectator bounces around excitedly.
+~
+   The child looks very excited to be at the circus.  It points and exclaims at
+everything around.    
+~
+76 32768 0 E
+40 2 0 1d1+800 6d7+18
+8000 0
+8 8 0
+E
+#752
+person crowd line~
+a person standing in line~
+A person stands in line, looking very bored.
+~
+   The person stands in line, sighing, and shifting from foot to foot.  It
+looks very bored.    
+~
+76 32768 0 E
+15 15 5 1d1+150 4d3+8
+1000 0
+8 8 0
+E
+#753
+small child~
+a small child~
+A small child sucks his thumb, looking around with big eyes.
+~
+   The little tyke can't be more than five or six years old.  He is wearing
+cute little overalls and a baseball cap protects his fair head from the sun.  
+He sucks his thumb.    
+~
+72 32768 0 E
+10 15 7 1d1+100 3d5+5
+100 0
+8 8 1
+E
+#754
+small child~
+a small child~
+A small child sucks his thumb, looking around with big eyes.
+~
+   The little tyke can't be more than five or six years old.  He is wearing
+cute little overalls and a baseball cap protects his fair head from the sun.  
+He sucks his thumb.    
+~
+72 32768 0 E
+10 15 7 1d1+100 3d5+5
+100 0
+8 8 1
+E
+#755
+snake's oil salesman cure-all man~
+a salesman~
+A man hidden in the shadows urges you to buy his cure-all.
+~
+   The man has shifty eyes that move to and fro.  He is hunched inside a large,
+dark cloak that hides most of his body from sight.  However, a large knife is
+visible, belted around his waist.    
+~
+778314 33794 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#756
+harrassed mother~
+a harrassed mother~
+A harrassed-looking mother searches for her child.
+~
+   This mom doesn't look very happy!  She is scowling, and standing on tiptoe
+to look over the crowd, perhaps trying to find her own child.  She doesn't
+walk, she stomps angrily.    
+~
+76 32768 0 E
+15 12 5 1d1+125 4d4+7
+2000 0
+8 8 2
+E
+#757
+cute little girl~
+a cute little girl~
+A cute little girl wanders around, chattering excitedly.
+~
+   This little girl looks very excited to be at the circus.  She talks to
+anyone who will listen, and even to those who won't, telling them how happy she
+is to be here.  Her hair has been carefully done in pig-tails, and she wears a
+dress that must have once been clean.  She is very cute.    
+~
+76 32768 0 E
+10 15 7 1d1+100 3d5+5
+150 0
+8 8 2
+E
+#758
+flame-eater flame eater man~
+the Flame-eater~
+A man eats flame for a large crowd of people.
+~
+   The man is very thin, almost skeletal.  He has been shaved very bald, from
+the top of his shiny head down his torso.  He wears a long linen loincloth, and
+nothing else.    
+~
+72 32768 0 E
+20 10 5 1d1+175 5d3+8
+2500 0
+8 8 1
+E
+#759
+knife juggler man~
+the Knife Juggler~
+A man concentrates very hard on juggling several knives
+~
+   The man is very average looking, except for the myriad of long, white scars
+scattered all over the visible bits of his body.  It must have taken him a long
+time to learn how to juggle knives right.    
+~
+72 32768 0 E
+20 10 5 1d1+130 4d5+8
+2500 0
+8 8 1
+E
+#760
+stilt-walker man~
+the Stilt-walker~
+A man awkwardly walks around on a tall pair of stilts.
+~
+   The man is tall and thin.  His legs are strapped to a pair of very long
+wooden stilts.    
+~
+72 32768 0 E
+15 12 6 1d1+120 4d4+10
+2000 0
+8 8 1
+E
+$

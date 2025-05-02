@@ -1,0 +1,16 @@
+#1602
+captain sailor shopkeeper~
+An aged Sailor~
+An old Captain stands here renting out boats.
+~
+   Rugged from age and wear of the sea, this old captain rents out all kinds of
+boats to adventurers and fishermen and tourists alike.  Though he gives a
+warning to everyone about Whirlpools in the southern seas.    
+~
+778330 5184 150 E
+100 5 0 1d1+1499 7d5+12
+0 0
+8 8 1
+BareHandAttack: 3
+E
+$

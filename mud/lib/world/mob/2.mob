@@ -1,0 +1,327 @@
+#201
+bat brown superhero~
+a little brown bat~
+A little brown bat dangles above you.
+~
+   The little brown bat is about the size of a dwarf's fist.  Its ears are
+large and pink inside.  Its snout looks like that of a pig's.  The bat will go
+out at night to eat the nasty mosquitos in Daggerfall.    
+~
+4138 32896 600 E
+12 13 8 7d15+100 3d3+9
+0 0
+8 8 0
+E
+#202
+bat fruit superhero~
+a &mfru&rit&n bat~
+A little fruit bat clings to the ceiling overhead.
+~
+   The fruit bat still has little smears of fruit around its tiny muzzle.  
+Messy creature.  Its ink black wings are wrapped tightly around its body.  The
+fruit bat has large orange eyes.    
+~
+4138 32896 600 E
+17 6 10 20d8+200 4d4+7
+300 0
+8 8 0
+E
+#203
+bat superhero baby~
+a baby bat~
+A baby brown bat clings to the ceiling.
+~
+   The baby brown bat looks to fragile to live.  Its large brown eyes stare out
+from a its tiny face.  It clings to the ceiling of the cave as if its life
+depends on it...  Which it does.    
+~
+4138 32896 600 E
+7 15 9 15d5+50 2d3+5
+300 0
+8 8 0
+E
+#204
+bat superhero black~
+a giant &Wblack bat&n~
+A giant black bat dangles from the ceiling.
+~
+   The giant black bat manages to convey a feeling of moody depression.  It
+does not socialize with the other bats though they converge around it.  
+Instead, it broods over its torid past and never smiles at anyone.  Did I
+mention this bat is HUGE?    
+~
+110602 557186 600 E
+44 -6 -2 30d80+200 8d18+23
+40932 0
+8 8 0
+BareHandAttack: 12
+E
+#205
+spider cave blind~
+a cave spider~
+A pale, white spider poses over the small pool of water.
+~
+   The pale white spider has legs that are three times the length of its body.
+It has pale grey stripes along its backs and a few strips of pale yellow on its
+hairy legs.  The cave spider has spent all its life in darkness and there it
+will die.    
+~
+2062 1024 0 E
+28 2 2 30d50+200 4d5+12
+8000 0
+8 8 0
+BareHandAttack: 4
+E
+#206
+girl chess player~
+a young chess player~
+A young girl sits in the grass examining her chessboard.
+~
+   A small frown of concentration creases her young forehead as she tries to
+decide the opening move of a new game of chest.  A sprinkling of freckles
+covers her nose and the apples of her cheek.  It looks as if she is playing by
+herself.  As if you could challenge her.    
+~
+26 0 800 E
+10 14 10 10d30+0 4d3+8
+0 0
+8 8 2
+E
+#207
+apprentice song shopkeeper sorceress~
+an apprentice song sorceress~
+An apprentice sorceress with a cool expression on her face sits in the grass.
+~
+   Her clothes are clean and simple in both cut and color.  She kneels on the
+ground with her hands settled neatly on her thighs.  Every now and then, she
+glances over her shoulder to the south and furrows her pale brow.    
+~
+778250 40 1000 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 4
+E
+#208
+hummingbird bird tiny~
+a hummingbird~
+A hummingbirds darts around chasing anything that moves.
+~
+   The hummingbird is so tiny it could perch on some of the sturdier grasses
+and not even sway them.  It has a jewel bright chest of green and a purple
+body.  Its little black eyes twinkle merrily as it chases down its own kind and
+whatever travelers will run from it.    
+~
+10 32768 0 E
+6 16 10 10d10+50 2d2+3
+5 0
+8 8 0
+BareHandAttack: 11
+E
+#209
+a lazy construction worker~
+a lazy worker~
+A man sits by the side of the work site chewing on a bit of grass.
+~
+   This man can usually be found sitting in the grass with his legs sticking
+straight out in front of him.  Occasionally, he moves enough to scratch his
+ribs but that is all.  The grass blade in his mouth bobs up and down as he
+moves its end around in his mouth.  Drops of his saliva slide down the stem and
+plop onto his pants.  What a man.    
+~
+138 0 0 E
+14 10 8 10d5+200 4d4+8
+500 0
+8 8 1
+E
+#210
+worker cards player construction~
+a card playing construction worker~
+A construction worker with a handful of cards sits by the side of the work site.
+~
+   This is a man who is dedicated--to the card deck that is.  He has a grip on
+the cards in his hands that will probably not loosen even in death.  His eyes
+flick constantly to their brightly painted surface.  Come on.  Just that one
+card.  Come on...    
+~
+14 0 0 E
+16 6 7 15d5+230 4d5+7
+127 0
+8 8 1
+E
+#211
+worker construction card playing~
+a card playing construction worker~
+A worker who is sitting in the grass stares fixedly at his cards.
+~
+   The only time this man will look away from his cards is when something is
+interrupting the game.  Oh, he could be working on building the road which is
+what he's supposed to be doing, but that would hardly be playing cards, now
+would it?  He picks his nose with one hand while holding the cards with the
+other.  The hand holding the cards is miraculously clean.    
+~
+10 0 0 E
+16 6 8 15d5+200 4d4+9
+1100 0
+8 8 1
+E
+#212
+bob construction worker~
+Bob, the construction worker~
+A construction worker peeps over one of the card player's shoulders.
+~
+   Bob is the annoying kind of man who must not only look over the shoulders of
+people playing cards, but makes it his civic duty to signal to the other
+players what the card holder has.  He has a long, thin face and eyes that shine
+just a little too much.  Bob is your basic greasy slime ball that no one hates
+enough to kill...  Barely.    
+~
+142 0 -400 E
+20 8 8 20d4+100 4d4+10
+2000 0
+8 8 1
+E
+#213
+worker construction~
+a sleeping construction worker~
+A construction worker lays snoring the grass.
+~
+This is how it usually is with this particular worker:
+   A steady line of drool prances across his face and into the grass.  Snores
+issue from his mouth as a loud grating noise.  He has taken off his shirt to
+treat the rest of the world to the sight of his pale white hide and flabby
+chest.  His legs and feet kick restlessly as he sleeps.  Shhhh, he must be
+chasing something.    
+~
+10 0 0 E
+14 11 10 15d5+50 3d4+7
+200 0
+4 4 1
+E
+#214
+worker construction~
+a construction worker~
+A worker stands here doing absolutely nothing.
+~
+   He does what he has always done: stands there and stares blankly at the
+road.  Yes, there is work to be done, but this man can't even comprehend what
+work is let alone figure out how to do it (that being work, you'll note).  
+Doubtless his mommy dresses him up every morning and sends him off with his
+little lunch to stand around not doing work all day.    
+~
+138 0 0 E
+15 13 9 15d5+230 4d4+7
+126 0
+8 8 1
+E
+#215
+worker construction burly~
+a burly construction worker~
+A burly construction worker is setting down stones for the road.
+~
+   He is hard at work, unlike most of the other workers.  But wait!  It is not
+a he, but a she!  Well, that explains things.  Her shirt is rolled up to her
+elbows revealing very muscular arms.  Her dark grey hair is pulled away from
+her face and tucked under a broad brimmed hat.  She looks like the tough and
+hardy creature she is.    
+~
+8218 8 0 E
+43 -5 2 25d8+1000 7d8+20
+8000 0
+8 8 2
+BareHandAttack: 12
+E
+#216
+cat plain's~
+the plain's cat~
+A tawny cat crouches in the shadows on the pink stone of the arch.
+~
+   The cat has a mane of a tawny gold color.  The long fur reaches down the
+spine of its back and traces the back of its front legs before giving way to
+shorter, coarser fur.  Dark brown stripes march down its hind legs and across
+its cheeks.  The plain's cat looks big and very, very mean.    
+~
+100634 524420 100 E
+84 -20 10 30d100+14000 15d17+35
+100000 0
+8 8 0
+BareHandAttack: 8
+E
+#217
+traveler woman Edeline~
+Edeline~
+A red-haired woman walks along the road.
+~
+   Her light red hair is covered with a fine film of grey dust.  The fine lines
+around her mouth and crow's feet at the corner of her eyes do not make her seem
+old.  Instead, the give her a feel of experience.  Although her shoulders sag a
+bit from tiredeness, her eyes sparkle with lively good humor.  She has aged
+well...  For a human.    
+~
+6152 1024 500 E
+32 -3 10 30d5+1300 5d7+16
+8000 0
+8 8 2
+BareHandAttack: 13
+E
+#218
+dwarf traveler Wulgarp~
+Wulgarp~
+A sturdy dwarfs strides along the road.
+~
+   He is about four feet tall.  His nose is large and red from eternal
+allergies.  He sniffles every few seconds.  His clothes are neat, but very worn
+and a little too big in the shoulders.  His bare feet slap rythmically against
+the ground.  He must be a very experienced traveler.    
+~
+135176 1024 -300 E
+26 6 10 30d30+800 6d6+19
+470 2000
+8 8 1
+E
+#219
+traveler generic~
+a generic traveler~
+A non-descript traveler trudges down the road.
+~
+   You are given a vague impression of dust and tiredness, but no more.  The
+generic traveler cannot be detailed and still be the generic traveler, now can
+s/he?    
+~
+8 0 0 E
+22 8 8 3d3+700 4d5+12
+850 20
+8 8 0
+E
+#220
+mercenary woman Rada-ko warrior~
+Rada-ko~
+A scarred and armored woman walks down the road.
+~
+   Her armor is nothing but worn leather with a bit of chain around her joints.
+Her sword is short.  Its sheath is strapped across her back.  Scars in various
+states of faded criss cross her hands.  Another scar slides jaggedly across her
+face pulling her lip down on one side.    
+~
+24 262176 0 E
+38 -5 -3 30d20+1300 7d7+20
+12000 100
+8 8 2
+BareHandAttack: 7
+E
+#221
+drow lost elf wanderer~
+a lost drow~
+A drow elf slips about the shadows of the underground.
+~
+   The lack of light makes it very hard to judge the age of this particular
+elf.  His eyes are bright green gems of malicious intent.  They are slightly
+unfocused.  Perhaps he is mad.  His cloak is a tattered remenant of once-fine
+silk.    
+~
+168 2 -1000 E
+23 0 -2 30d25+230 4d5+20
+10000 0
+8 8 1
+E
+$

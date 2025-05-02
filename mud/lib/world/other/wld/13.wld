@@ -1,0 +1,301 @@
+#1300
+On a peaceful plain~
+The pathway here is broad and beaten down, as if it is a sort of caravan
+route.  It leads confidently off to the north where a forest is barely 
+discernable along the horizon.  A large creek runs swiftly off to the east, 
+but it looks too swift to boat in.  A campsite is off to the east on the bank
+of the creek, and you can leave back south.
+~
+13 4 3
+D0
+On a peaceful plain
+~
+~
+0 0 1302
+D1
+The Strange Campsite
+~
+~
+0 0 1301
+S
+#1301
+A Strange Campsite~
+You have stumbled upon a strange campsite.  Everything here from the tent
+to the campfire seems to have been meticulusly placed, as though there is
+some kind of meaning to the order.  Seated just outside the tent is a wizened
+old man.  He seems to be in a deep meditative trance.  The only apparant exit
+is back to the west, as the creek rushes around you in all other directions.
+~
+13 16 2
+D3
+Back to the Caravan Path.
+~
+~
+0 0 1300
+S
+#1302
+On a peaceful plain~
+   You are still walking along the well-trodden path, but the air seems to be
+less and less at ease, and you sense that what lies ahead of you is not the
+peaceful tranquility that you just left.  The creek blocks your way to the
+east, though you think you may see a bridge in the distance.  Perhaps you
+should proceed with caution.    
+~
+13 4 2
+D0
+The beginning of the Duelist's Path.
+~
+~
+0 0 1303
+D2
+On a peaceful plain
+~
+~
+0 0 1300
+S
+#1303
+On the Dueling Path.~
+   You are surrounded by the sounds of clashing steel and the moans of injured
+fighters.  All around you see duelists of varying abilities honing their skills
+on travellers unfortunate (or foolish enough) to attempt to run the gauntlet.
+You see a sign planted firmly in the ground along the path here, while the
+creek still runs along the eastern edge.  Your instincts tell you that the
+safest exit is, perhaps, to turn back to the south.    
+~
+13 0 2
+D0
+Before the First Duelist.
+~
+~
+0 0 1304
+D2
+Back to a safer place.
+~
+~
+0 0 1302
+E
+sign~
+   &RBe wary, traveller.  &w If you continue on from here, know that the path
+will not be easy.  This path has been claimed by master duelists; do not expect
+that you will be able to move to the next section without first defeating the
+fighter in front of you.  Needless to say, the further you travel down this
+path, the more skilled the duelists bcome.  Tread carefully, and if you fight,
+fight with a righteous heart.    
+~
+S
+#1304
+Before the First Duelist.~
+   This is the first area that seems to have been claimed by any duelist, as
+evidenced by the large ammount of blood that has clearly been shed here and the
+large pile of discarded equipment.  For those that travel this path, clearly
+there are two options...  Victory or death.    
+~
+13 0 2
+D0
+On the Dueling Path.
+~
+~
+0 0 1305
+D2
+On the Dueling Path.
+~
+~
+0 0 1302
+E
+equipment equip eq~
+   A vast majority of the equipment lying here is rusted beyond usable status,
+and the remainder you don't think you'd like to use anyway.  It stands to
+reason, anyway, that the better equipment is being used by the person who has
+discarded all of this.    
+~
+S
+#1305
+On the Dueling Path.~
+   The sighs and moans of the vanquished weigh heavy in your ears as you trod
+along this path of destruction and mutilation.  You advance with trepidation,
+knowing that yours could be among the sighs that catch the ear of the next
+adventurer to try their luck against these duelists.  As there are two
+possibilities, victory and death, there are but two ways you may travel, north
+or south.    
+~
+13 0 2
+D0
+On the Duelists' Path
+~
+~
+0 0 1306
+D2
+On the Dueling Path.
+~
+~
+0 0 1304
+E
+east ea e~
+The way east is blocked by a creek that flows too rapidly to allow wading 
+or even boating.
+~
+E
+west we w~
+An unpenetratable forest.  Perhaps the foliage lightens up at some point?
+~
+S
+#1306
+Before the Second Duelist.~
+   This section of the path looks to have seen its share of duels over time,
+with the earth showing large gashes from would-be fatal blows that somehow went
+awry...  Much to the disdain of the adventurer attempting the blow.  Much like
+other places on the path, there is a large pile of discarded equipment here,
+though again none of it looks useable.  "Victory or death" echos in your head
+over and over as you contemplate your next move.    
+~
+13 0 2
+D0
+On the Duelists' Path
+~
+~
+0 0 1307
+D2
+On the Duelists' Path.
+~
+~
+0 0 1305
+S
+#1307
+On the Duelists' Path~
+   This seems to be another part of the path which has not been claimed by
+anyone in particular, yet you feel strangely uneasy.  Though the creek still
+blocks the way east, you sense danger from that direction.  You see nothing to
+suggest that you are in any danger...  At least immediately, and head along
+your way.    
+~
+13 0 2
+D0
+On the Duelists' path.
+~
+~
+0 0 1308
+D2
+On the Duelists' path
+~
+~
+0 0 1306
+S
+#1308
+On the Duelists' Path~
+   All along this part of the path are sundry religious icons and artifacts.  
+Very near the creek to the east, you see the very preliminary beginnings of
+what you assume to be a religious building of some sort.  Whoever is building
+it seems to be alone, as there is but one set of clothing on a makeshift
+clothes wire here.  Assuming that, it is clear that whoever it is posesses a
+great deal of strength.  Exits still only lead north and south from here.    
+~
+13 0 2
+D0
+Along the Duelists' Path
+~
+~
+0 0 1310
+D2
+On the Duelists' path.
+~
+~
+0 0 1307
+D6
+In the Unfinished Holy Building
+~
+building~
+1 0 1309
+S
+#1309
+In the unfinished Holy Building~
+   There is not much to this building, nor will there be when it's finished,
+from the looks of things.  Along the northern wall, you see a closed and
+covered basket.  Failing to see anything important, however, you decide to turn
+back and return to the path.    
+~
+13 80 0
+D9
+Back on the Duelists' Path.
+~
+building~
+1 0 1308
+S
+#1310
+Along the Duelists' Path~
+   Having vanquished the duelists on the path to this point, you have proven
+yourself to be a worthy adversary and a great fighter.  Now, however, you are
+faced with a choice...  You can forge onward down the path, or to the east,
+across the creek, there is a stone bridge that you can cross...  Though it
+looks a little tenuous.  Either way, you can sense that your fighting skills
+will be tested to the utmost...    
+~
+13 0 2
+D0
+Along the Duelists' Path
+~
+~
+0 0 1311
+D1
+On the Stone Bridge
+~
+~
+0 0 1330
+D2
+~
+~
+0 0 1308
+S
+#1311
+On the Duelists' Path~
+   Perhaps you thought that the only duelists in the world were human??  You
+are reminded otherwise, as you hear sounds that, though you cannot identify
+them, are definitely not human.  Perhaps you should have gone across the stone
+bridge when you had the chance.    
+~
+13 0 0
+D0
+On the Duelists' Path
+~
+~
+0 0 1312
+D2
+Along the Duelists' Path
+~
+~
+0 0 1310
+S
+#1312
+On the Duelists' Path~
+   The carnage in this area is incredible.  The remains of countless warriors,
+many just like yourself, are strewn all over the place.  Whoever...  Or
+whatever...  Is responsible certainly seems to place no value in mercy or
+worldly possesions.  Where before some equipment had been piled and left to
+rust and become unusable, here it is disorganized...  And thoroughly
+annihilated.  There is a sign posted beside the road here...    
+~
+13 0 2
+D1
+On the Duelists' Path
+~
+~
+0 0 1311
+S
+#1330
+On the Stone Bridge~
+   You are crossing the bridge across the bloodied creek that gushes below you.
+Lying ahead of you is a forest...  Or at least you think that you might have
+called it one at one point.  It seems that the entire area has been taken over
+by Death itself.  The trees have no leaves, nor is there grass growing on the
+ground.  You hear no birds, no crickets, frogs...  Nothing even to suggest that
+there was once something living anywhere in front of you, save for the huge
+hulks that were once prosperous trees.  Travel forward, or retreat to an
+uncertain fate!    
+~
+13 4 2
+D3
+On the Duelists' Path
+~
+~
+0 0 1310
+S
+$~

@@ -1,0 +1,1979 @@
+#3000
+The Small Library of DaggerFall~
+   This is a small library with stuffy books on the shelves that appear to be
+in some other language.  People often come here to read the one thing in the
+room that they can read (the board) and just get some peace and quiet.    
+   To the east you see the tiny room that is the Temple of DaggerFall.
+~
+30 156 0
+D1
+You see the Temple of Daggerfall.
+~
+~
+0 -1 3001
+S
+#3001
+The Temple of DaggerFall~
+   You are in the Temple of DaggerFall.  The temple has been constructed from
+large rune stones, holy in appearance, and most of the walls are covered by
+ancient wall paintings picturing Gods, Giants, and peons.  Large steps lead
+down through the grand temple gate, descending the huge mound upon which the
+temple is built and ends on the temple square below.  To the west, you see the
+small library of DaggerFall.  The lost and found is in a small alcove to your
+east.  Above you is the healing area.  To the Northwest you see the &uDuke It
+Out Room&n and to the Northeast is the Bank of Daggerfall.  Also the the
+Southeast you see a decrepit pawn shop.    
+~
+30 156 0
+D0
+   A strange, silvery mist covers the northern side of the temple.    
+~
+~
+0 -1 1400
+D1
+In the east, you see a small alcove with a rickety wooden sign which
+reads "Daggerfall Donation Room."
+~
+~
+0 -1 3063
+D2
+You look down the huge stone steps at the temple square below.
+~
+~
+0 -1 3005
+D3
+You see the Reading Room.
+~
+~
+0 -1 3000
+D4
+~
+~
+0 0 3067
+D5
+~
+~
+0 0 11
+D6
+~
+~
+0 0 3068
+D7
+~
+~
+0 0 111
+D8
+~
+~
+0 0 127
+E
+cussing~
+&vRules for swearing on Daggerfall                                                &n
+ 
+I hoped these wouldn't be needed but I'm afraid that you have all showed me that
+you can't be grown up enough not to watch what you say without a list of words
+that you can and can't say.
+ 
+The following is a list of words that you may not use &gon public channels or
+in a room with people you don't know&n.
+ 
+
+
+
+
+
+
+
+
+
+
+
+&y&vPlease type Q if you do not wish to see the list of bad words&n
+ass (or conjunctions)
+bastard
+basterd
+basturd
+bitch
+cock
+crap
+cum
+cunt
+dick
+fag
+fuck
+fuk
+lick
+orgasm
+penis
+piss
+prick
+pussy
+shit
+suck
+tit
+twat
+whore
+ 
+Or any other version of those words, just watch your mouth,
+  Jaxom
+~
+S
+#3002
+The Clerics' Inner Sanctum~
+   This is the inner sanctum.  A picture of the mighty Thor, is hanging on
+the wall, just above the altar which is set against the western wall.  A well
+in the middle of the floor leads down into darkness.  Vile smells waft from
+the depths.
+~
+30 12 0
+D1
+You see your favorite place, the bar of divination.
+~
+~
+0 -1 3003
+D5
+You can't see what is down there, it is too dark.  Looks like it would be
+impossible to climb back up.
+~
+~
+0 -1 7026
+S
+#3003
+The Bar Of Divination~
+   The bar is one of the finest in the land, lucky it is members only.  Fine
+furniture is set all around the room.  A small sign is hanging on the wall.
+~
+30 140 0
+D2
+You see the entrance.
+~
+~
+0 -1 3004
+D3
+You see the inner sanctum.
+~
+~
+0 -1 3002
+E
+sign~
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each.
+~
+S
+#3004
+The Entrance To The Clerics' Guild~
+   The entrance hall is a small modest room, reflecting the true nature of
+the Clerics.  The exit leads east to the SSC.  A small entrance to
+the bar is in the northern wall.
+~
+30 8 0
+D0
+You see the bar, richly decorated with really stylish furniture.
+~
+~
+0 -1 3003
+D1
+You see the Temple Square.
+~
+~
+0 -1 3005
+S
+#3005
+DaggerFall Square~
+   You are standing in DaggerFall Square, Infront of you, you see a large
+fountain made of gold.  The fountain is filled with clear blue water.  Some say
+that the water in this fountain is holy in a way some can't understand.  The
+fountain has a small statue.  It is of a statue of the great warrior who fought
+with the great mistical dagger.  To the southeast is the entrance to the
+paladin's guild.    
+~
+30 0 1
+D0
+You see the temple.
+~
+~
+0 -1 3001
+D1
+You see the good old Grunting Boar Inn.
+~
+~
+0 -1 3006
+D2
+You see the Market Square.
+~
+~
+0 -1 3014
+D3
+You see the entrance to the Clerics' Guild.
+~
+~
+0 -1 3004
+D8
+~
+~
+0 0 128
+S
+#3006
+The Entrance Hall Of The Grunting Boar Inn~
+   You are standing in the entrance hall of the Grunting Boar Inn.  The hall
+has been wisely decorated with simple, functional furniture.  The heavy smell
+of dust and aging paper drifts in from the Post Office to the north.  A small
+staircase leads up to the reception and the bar is to the east.
+~
+30 8 0
+D0
+You see the Midgaard Post Office.
+~
+~
+0 -1 3062
+D1
+Surprise!  You see the bar.
+~
+~
+0 -1 3007
+D3
+You see the temple square.
+~
+~
+0 -1 3005
+D4
+You see the reception.
+~
+~
+0 -1 3008
+S
+#3007
+The Grunting Boar~
+   You are standing in the bar.  The bar is set against the northern wall, old
+archaic writing, carvings and symbols cover its top.  A fireplace is built into
+the western wall, and through the southeastern windows you can see the temple
+square.  This place makes you feel like home.
+A small sign with big letters is fastened to the bar.
+~
+30 136 0
+D3
+You see the exit to the entrance hall.
+~
+~
+0 -1 3006
+E
+writing carving carvings symbols symbol~
+Although it is very hard to understand, you think it looks a lot like beer,
+poems about beer, and small beer-mugs.
+~
+E
+sign~
+The sign reads:
+Free instructions provided by the Grunting Boar Inn.
+
+   Buy  - Buy something (drinkable) from the bartender.
+   List - The bartender will show you all the different drinks and
+          specialties, and tell the price of each.
+~
+S
+#3008
+The Reception~
+   You are standing in the reception.  The staircase leads down to the
+entrance hall.  An exit to the north leads to the Cryogenic Center.
+There is a small sign on the counter.
+~
+30 2097160 0
+D0
+You see the Cryogenic Center.
+~
+~
+0 -1 3064
+D5
+You see the entrance hall.
+~
+~
+0 -1 3006
+E
+sign~
+Rooms are expensive but good!  You may:
+
+   Offer - get an offer on a room - Time is in real life days.
+   Rent  - Rent a room (saves your stuff, and quits the game),
+           minimum charge is one day.
+
+
+                          MY WAY OR THE HIGHWAY
+                             PAY YOUR RENT!
+                WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
+~
+S
+#3009
+The Bakery~
+   You are standing inside the small bakery.  A sweet scent of Danish and
+fine bread fills the room.  The bread and Danish are arranged in fine order
+on the shelves, and seem to be of the finest quality.
+A small sign is on the counter.
+~
+30 140 0
+D2
+You see the main street.
+~
+~
+0 -1 3013
+E
+sign~
+Free instructions provided by the store:
+
+   Buy  - Will buy you some bread or pastry.
+   List - The baker will kindly tell you the price and sort of the bread in
+          his bakery.
+~
+E
+danish pastry~
+You see that this is truly delicious pastry.  Must be made by a Dane from
+Denmark (which surely is not the capital of Sweden!).  Former ruler of
+Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
+Iceland, Estonia etc.  etc.
+   The sight of those large, wholesome chokoladeboller makes your mouth water
+and your soul sing.
+~
+S
+#3010
+The General Store~
+   You are inside the general store.  All sorts of items are stacked on shelves
+behind the counter, safely out of your reach.
+A small note hangs on the wall.
+~
+30 140 0
+D2
+You see the main street.
+~
+~
+0 -1 3015
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#3011
+The Weapon Shop~
+   You are inside the weapon shop.  There is a small note on the counter.
+~
+30 140 0
+D2
+You see the main street.
+~
+~
+0 -1 3016
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#3012
+Main Street~
+   You are at the end of the main street of DaggerFall.  South of here is the
+entrance to the Guild of Magic Users.  The street continues east towards the
+market square.  The magic shop is to the north and to the west is the city
+gate.    
+~
+30 0 1
+D0
+You see the magic shop.
+~
+~
+0 -1 3033
+D1
+You see the main street.
+~
+~
+0 -1 3013
+D2
+You see the entrance to the Guild of Magic Users.
+~
+~
+0 -1 3017
+D3
+You see the city gate.
+~
+~
+0 -1 3040
+S
+#3013
+Main Street~
+   You are on the main street passing through the City of DaggerFall.  South of
+here is the entrance to the Armory, and the bakery is to the north.  East of
+here is the market square of DaggerFall.    
+~
+30 0 1
+D0
+You see the bakery.
+~
+~
+0 -1 3009
+D1
+You see the market square.
+~
+~
+0 -1 3014
+D2
+You see the armory.
+~
+~
+0 -1 3020
+D3
+You see the main street.
+~
+~
+0 -1 3012
+S
+#3014
+Market Square of DaggerFall~
+   You are standing on the market square, the famous Square of DaggerFall.  
+You see people in such a hurry, they don't even bother to stop and say hello.
+Off in a corner you see a bard singing his tune, a happy tune that you've heard
+often.  People thrown money at him as they walk by.  Roads lead in every
+direction, north to the temple square, south to the common square, east and
+westbound is the main street.    
+~
+30 0 1
+D0
+You see the temple square.
+~
+~
+0 -1 3005
+D1
+You see the main street.
+~
+~
+0 -1 3015
+D2
+You see the common square.
+~
+~
+0 -1 3025
+D3
+You see the main street.
+~
+~
+0 -1 3013
+E
+statue~
+What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
+~
+S
+#3015
+Main Street~
+   You are on the main street crossing through town.  To the north is the
+general store, and the main street continues east.  To the west you see and
+hear the market square, to the south is a small door that leads into the Pet
+Shop.  On the door is a sign that says, "Closed.  "
+~
+30 0 1
+D0
+You see the general store.
+~
+~
+0 -1 3010
+D1
+You see the main street.
+~
+~
+0 -1 3016
+D3
+You see the market square.
+~
+~
+0 -1 3014
+S
+#3016
+Main Street~
+   The main street, to the north is the weapon shop and to the south is the
+Guild of Swordsmen.  To the east you leave town and to the west the street
+leads to the market square.  To the northwest is the entrance to the scouts
+guild.    
+~
+30 0 1
+D0
+You see the weapon shop.
+~
+~
+0 -1 3011
+D1
+You see the city gate.
+~
+~
+0 -1 3041
+D2
+You see the swordsmen's guild.
+~
+~
+0 -1 3021
+D3
+You see the main street leading to the market square.
+~
+~
+0 -1 3015
+D7
+~
+~
+0 0 134
+S
+#3017
+The Entrance To The Mages' Guild~
+   The entrance hall to this guild is a small, poor lighted room.
+~
+30 8 0
+D0
+You see the main street.
+~
+~
+0 -1 3012
+D2
+You see your favorite place, the Mages' Bar.
+~
+~
+0 -1 3018
+S
+#3018
+The Mages' Bar~
+   The bar is one of the weirdest in the land.  Mystical images float around
+the air.  Illusions of fine furniture appear all around the room.
+~
+30 140 0
+D0
+You see the lobby.
+~
+~
+0 -1 3017
+D1
+You see the laboratory.
+~
+~
+0 -1 3019
+S
+#3019
+The Mages' Laboratory~
+   This is the Magical Experiments Laboratory.  Dark smoke-stained stones
+arch over numerous huge oaken tables, most of these cluttered with strange-
+looking pipes and flasks.  The floor is covered with half-erased pentagrams
+and even weirder symbols, and a blackboard in a dark corner has only been
+partially cleaned, some painful-looking letters faintly visible.  A well in
+the middle of the floor leads down into darkness.  Vile smells waft from the
+depths.
+~
+30 12 0
+D3
+You see the bar.
+~
+~
+0 -1 3018
+D5
+You can't see what is down there, it is too dark.  Looks like it would be
+impossible to climb back up.
+~
+~
+0 -1 7017
+S
+#3020
+The Armory~
+   The armory with all kinds of armors on the walls and in the window.  You
+see helmets, shields and chain mails.  To the north is the main street.
+On the wall is a small note.
+~
+30 140 0
+D0
+You see the main street.
+~
+~
+0 -1 3013
+E
+note~
+You can use these commands for trading:
+
+  value <item>     To get the price of an item in your possession.
+  sell <item>      To sell something.
+  buy <item>       To buy something (provided that the shop has it in store).
+  list             Gives you a listing of the shop's inventory.
+
+        WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+                             NO HAGGLING
+~
+S
+#3021
+The Entrance Hall To The Guild Of Swordsmen~
+   The entrance hall to the Guild of Swordsmen.  A place where one has to be
+careful not to say something wrong (or right).  To the east is the bar and to
+the north is the main street.
+~
+30 8 0
+D0
+You see the main street.
+~
+~
+0 -1 3016
+D1
+You see the swordsmen's bar, many noises comes from there.
+~
+~
+0 -1 3022
+S
+#3022
+The Bar Of Swordsmen~
+   The bar of swordsmen, once upon a time beautifully furnished.  But now the
+furniture is all around you in small pieces.  To the south is the yard, and
+to the west is the entrance hall.
+~
+30 140 0
+D2
+You see the practice yard.
+~
+~
+0 -1 3023
+D3
+You see the entrance hall to the warriors' guild.
+~
+~
+0 -1 3021
+S
+#3023
+The Tournament And Practice Yard~
+   This is the practice yard of the fighters.  To the north is the bar.
+A well leads down into darkness.
+~
+30 12 0
+D0
+You see the bar.
+~
+~
+0 -1 3022
+D5
+You can't see what is down there, it is too dark.  Looks like it would be
+impossible to climb back up.
+~
+~
+0 -1 7048
+S
+#3024
+The Eastern End Of Poor Alley~
+   You are at the poor alley.  South of here is the Grubby Inn and to the east
+you see the DSS.  The alley continues further west.    
+~
+30 0 1
+D1
+You see the common square.
+~
+~
+0 -1 3025
+D2
+You see the Inn.
+~
+~
+0 -1 3048
+D3
+You see the poor alley.
+~
+~
+0 -1 3044
+S
+#3025
+DaggerFall Square South (DSS)~
+   The DaggerFall Square South is less used than the others.  People walk
+quickly, chatting quietly.  You don't know if you should stay here to long
+either, the walkers seem to have the right idea.    
+~
+30 0 1
+D0
+You see the market square.
+~
+~
+0 -1 3014
+D1
+You see the dark alley.
+~
+~
+0 -1 3026
+D2
+You see the city dump.
+~
+~
+0 -1 3030
+D3
+You see Poor Alley.
+~
+~
+0 -1 3024
+S
+#3026
+The Dark Alley~
+   This alley is not a place you wanna be on the new moon.  It's creepy enough
+as it is but there are all sorts of mercernaries standing around eyeballing you
+as if to decide if your worth the fight.  To the north is the entrance to the
+bards guild, to the southeast is the vampyre guild.    
+~
+30 0 1
+D0
+~
+~
+0 0 132
+D1
+The alley continues east.
+~
+~
+0 -1 3045
+D2
+You see the entrance to the thieves' guild.
+~
+~
+0 -1 3027
+D3
+You see the common square.
+~
+~
+0 -1 3025
+D8
+~
+~
+0 0 130
+E
+guild~
+It is the thieves' guild, don't enter if you care about your health or money.
+~
+S
+#3027
+The Entrance Hall To The Guild Of Thieves~
+   The entrance hall to the thieves' and assassins' guild.  A place where you
+can lose both your life and your money, if you are not careful.  To the north
+is the dark alley and to the east is the thieves' bar.
+~
+30 8 0
+D0
+You see the alley.
+~
+~
+0 -1 3026
+D1
+You see the thieves bar, where everything disappears.
+~
+~
+0 -1 3028
+S
+#3028
+The Thieves' Bar~
+   The bar of the thieves.  Once upon a time this place was beautifully
+furnished, but now it seems almost empty.  To the south is the yard, and to
+the west is the entrance hall.
+   (Maybe the furniture has been stolen?!)
+~
+30 140 0
+D2
+You see the secret yard.
+~
+~
+0 -1 3029
+D3
+You see the entrance hall to the thieves' guild.
+~
+~
+0 -1 3027
+E
+furniture~
+As you look at the furniture, the chair you sit on disappears.
+~
+S
+#3029
+The Secret Yard~
+   The secret practice yard of thieves and assassins.  To the north is the
+bar.  A well leads down into darkness.
+~
+30 12 0
+D0
+You see the bar.
+~
+~
+0 -1 3028
+D5
+You can't see what is down there, it is too dark.  Looks like it would be
+impossible to climb back up.
+~
+~
+0 -1 7043
+S
+#3030
+The Dump~
+   The dump, where the people from the city drop their garbage.  Through the
+garbage you can see a large junction of pipes, looks like the entrance to the
+sewer system.  To the north, the southern end of Daggerfall Square can be seen.
+~
+30 4 2
+D0
+You see the common square.
+~
+~
+0 -1 3025
+D5
+You see the sewers.
+~
+grate~
+2 3005 7030
+S
+#3031
+The Pet Shop~
+   The Pet Shop is a small crowded store, full of cages and animals of
+various sizes.  There is a sign on the wall.
+~
+30 262300 0
+D0
+~
+~
+0 0 3015
+E
+sign~
+The sign reads:
+
+  Use 'List' to see the available pets.
+  Use 'Buy <pet>' to buy yourself a pet.
+
+  Instructions for having pets:
+
+  You can use 'order <pet> <instructions>' to order your pets around.
+  If you abuse your pet, it will no longer regard you as its master.
+  If you have several pets you may use 'order followers <instructions>'
+
+  You can name the pet you buy with: 'buy <pet> <name>'
+
+ Regards,
+
+ The Shopkeeper
+
+~
+S
+#3032
+Pet Shop Store~
+   This  is the small dark room in which the Pet shop keeps his pets.
+It is vital that this room's virtual number is exactly one larger
+than the Pet Shop number.
+~
+30 1032 0
+S
+#3033
+The Magic Shop~
+   Behind the counter you see various items, neatly placed in racks,
+presumably most of them are magic.
+~
+30 140 0
+D2
+You see the main street.
+~
+~
+0 -1 3012
+S
+#3040
+Inside The West Gate Of DaggerFall~
+   You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  Main Street leads
+east and Wall Road leads south from here.  To the north are the tournament
+grounds.    
+~
+30 0 1
+D1
+You see Main Street.
+~
+~
+0 -1 3012
+D2
+You see the road running along the inner side of the city wall.  You notice
+that it is called Wall Road.
+~
+~
+0 -1 3042
+D3
+The city gate is to the west.
+~
+gate~
+1 3112 3052
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3041
+Inside The East Gate of DaggerFall~
+   You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  Main Street leads
+west from here.  To the south you see the Water Shop.
+~
+30 0 1
+D1
+You see the city gate.
+~
+gate~
+1 3112 3053
+D2
+You see the water shop.
+~
+~
+0 -1 3058
+D3
+You see Main Street.
+~
+~
+0 -1 3016
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3042
+Wall Road~
+   You are walking next to the western city wall.  The road continues further
+south and the city gate is just north of here.
+~
+30 0 1
+D0
+You see the city gate.
+~
+~
+0 -1 3040
+D2
+The road continues further south.
+~
+~
+0 -1 3043
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+S
+#3043
+Wall Road~
+   You are walking next to the western city wall.  Wall Road continues further
+north and south.  A small, poor alley leads east.
+Some letters have been written on the wall here.
+~
+30 0 1
+D0
+The road continues further north.
+~
+~
+0 -1 3042
+D1
+Poor Alley leads east.
+~
+~
+0 -1 3044
+D2
+The road continues further south.
+~
+~
+0 -1 3047
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+wall writing letters~
+It says 'Who watches the watchmen?'
+~
+S
+#3044
+Poor Alley~
+   You are on Poor Alley, which continues further east.  You see the
+city wall to the west.
+~
+30 0 1
+D1
+The alley leads east.
+~
+~
+0 -1 3024
+D3
+The alley leads west.
+~
+~
+0 -1 3043
+S
+#3045
+The Dark Alley At The Levee~
+   You are standing in the alley which continues east and west.  South of
+here you see the levee.
+~
+30 0 1
+D1
+The alley leads east.
+~
+~
+0 -1 3046
+D2
+You see the levee.
+~
+~
+0 -1 3049
+D3
+The alley leads west.
+~
+~
+0 -1 3026
+S
+#3046
+The Eastern End Of The Alley~
+   You are standing at the eastern end of the alley, the city wall is just
+east, blocking any further movement.  A small warehouse is directly south of
+here.
+~
+30 0 1
+D2
+You see the warehouse.
+~
+~
+0 -1 3050
+D3
+You see the alley.
+~
+~
+0 -1 3045
+S
+#3047
+Wall Road~
+   You are standing on the road next to the western city wall, which
+continues north.  South of here is a bridge across the river.
+~
+30 0 1
+D0
+You see the road.
+~
+~
+0 -1 3043
+D2
+You see the bridge.
+~
+~
+0 -1 3051
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+S
+#3048
+Grubby Inn~
+   You are inside the old Grubby Inn.  This place has not been cleaned for
+several decades; vile smells make you dizzy.
+~
+30 140 0
+D0
+You see the alley.
+~
+~
+0 -1 3024
+S
+#3049
+The Levee~
+   You are at the levee.  South of here you see the river gently flowing west.
+The river bank is very low making it possible to enter the river.
+~
+30 132 1
+D0
+You see the alley.
+~
+~
+0 -1 3045
+D2
+~
+~
+0 0 3069
+S
+#3050
+The Deserted Warehouse~
+   You are inside the warehouse.  The room is decorated with various old
+items from ships.
+~
+30 8 0
+D0
+You see the alley.
+~
+~
+0 -1 3046
+S
+#3051
+On The Bridge~
+   You are standing on the stone bridge crosses the river.  The bridge is
+built out from the western city wall and the river flows west through an
+opening in the wall ten feet below the bridge.
+~
+30 0 1
+D0
+You see the road.
+~
+~
+0 -1 3047
+D2
+You see the Concourse.
+~
+~
+0 -1 3100
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+opening~
+You cannot really see it from here as it is somewhere beneath your feet.
+~
+E
+bridge~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar, just like the wall.
+~
+S
+#3052
+Outside the West Gate of Daggerfall~
+   You are by the two little towers that have been built into the city wall.  
+A little footbridge over your head connects the two towers.  The top of the
+wooden gate just brushes to bottom of the footbridge.  Far to the west, and
+across the plain lies a big forest.    
+~
+30 0 1
+D1
+The city gate is to the east.
+~
+gate~
+1 3112 3040
+D3
+The forest edge is to the west.
+~
+~
+0 -1 6092
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3053
+Outside the East Gate of Daggerfall~
+   You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  To the east the
+plains, but as you look closer you notice that they are always in motion and it
+would be in your best interest to stay away from them and their deadly contents
+~
+30 0 1
+D1
+   A dirt road heads off into the Azrothian Plains.    
+~
+~
+0 0 3075
+D3
+You see the city gate.
+~
+gate~
+1 3112 3041
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3054
+Ethreal Entrance~
+   What used to be a temple altar is now destroyed.  It would appear that some
+sort of shread in time-space has caused this area to be a median between
+worlds.  The path that lead north now leads into swirling ethreal gas, should
+you enter?  It would appear as if time space has torn even worse and the rift
+is spreading, if you look up you see that a peice of the sky is dominated by
+the swirling colors of the rift, and it would seem if you stare upwards too
+long you can almost get lost in it.    
+~
+30 8 0
+D0
+~
+~
+0 0 1417
+D2
+You see the southern end of the temple.
+~
+~
+0 -1 3001
+E
+statue odin king god~
+The statue represents the one-eyed Odin sitting on a his throne.  He has
+long, grey hair and beard and a strict look on his face.  On top of the
+throne, just above his shoulders, his two ravens Hugin and Munin are sitting
+and at his feet are his wolves Gere and Freke.
+~
+E
+altar~
+Even though the altar is more than ten feet long it appears to be made from
+a single block of white virgin marble.
+~
+S
+#3055
+Odin's Store~
+   This is the small dark room in which Odin keeps the player items that he
+takes care of.  It is vital that this room's virtual number is exactly one
+larger than the room by the temple altar.
+~
+30 520 0
+S
+#3058
+Ye Olde Water Shoppe~
+   You are standing in the center of a small wooden shop whose walls are
+covered with racks upon racks of water jugs.  Several large barrels with
+spigots are stacked in the corner.
+~
+30 140 0
+D0
+You see the East Gate.
+~
+~
+0 -1 3041
+S
+#3059
+Sunnyside Road~
+   This once cheerful dirt path is now a little more dreary, browns and blacks
+swirl around to the south making you wonder where it leads, You can't see much
+off to the south.  To the west you can see clan street, and The Dragonhelm
+mountains are far off north.    
+~
+30 262144 1
+D0
+You see the lush, green countryside of Midgaard.
+~
+~
+0 -1 3060
+D1
+~
+~
+0 0 103
+D2
+~
+~
+0 0 1418
+D3
+~
+~
+0 0 177
+S
+#3060
+Sunnyside Field~
+   You are walking on a wide dirt path through the lush, green, fresh
+DaggerFall countryside.  You can see to the horizon to the north, east, and
+west; the busy city of DaggerFall lies to the south.  All around you is healthy
+green grass and an occasional large oak tree.  The sun feels wonderful on your
+face and a pleasant wind blows through your hair.  Birds chirp quietly to
+themselves and you can smell the faint scent of flowers and freshly cut grass.
+You feel like you could lie down in the grass and stay here forever, surrounded
+by powerful beauty in all directions.    
+~
+30 262144 1
+D0
+You see more of the path through the Great Field.
+~
+~
+0 -1 3061
+D2
+You see the path which goes back to Midgaard.
+~
+~
+0 -1 3059
+S
+#3061
+Sunnyside Slums~
+   The DaggerFall field here has been trampled and worn.  It is really
+depressing.  You look around and all sorts of junk and trash lie about here and
+there.  Where's Hootie the Owl when you need him?  It must be all the newbies
+that head through here and disregard the countryside, well at least it's just
+here.  To the east you hear the screams of pain and agony coming from the
+newbie zone, and to the west you can see a path that leads nowhere.    
+~
+30 262148 1
+D0
+The path continues northwards bringing you ever closer to the Dragonhelm
+Mountains.
+~
+~
+0 -1 3065
+D1
+~
+~
+0 0 18600
+D2
+You see more of the Field.
+~
+~
+0 -1 3060
+D3
+~
+~
+0 0 3066
+S
+#3062
+The Daggerfall Courier~
+   You are in the Daggerfall Courier's office.  Piles of assorted mail
+ley untouched in the corners, collecting cobwebs.  Several large crates
+have been pried open by curious customs agents, and are now stack along
+the west wall, hiding plenty of 'WANTED' posters.  There is also a sign
+posted on the wall here.
+~
+30 152 1
+D2
+You see the entrance to the Grunting Boar Inn and Tavern.
+~
+~
+0 -1 3006
+E
+WANTED posters poster wall~
+Faces of various known Killers and Thieves can barely be seen behind the
+crates on the west wall.  Some of them look quite familar, sorta like that
+guy who you saw in the Reception a minute ago... but then again, they are
+rather hard to see past the crates.
+~
+E
+crates opened large~
+As you know, it is illegal to send contraband items through the Midgaard
+Mail.  The customs agents use this as a great excuse to seize liquor,
+rare spices, and just about anything they might find useful or profitable.
+~
+E
+cobwebs~
+They seem to cover everything here, even the Postmaster himself.
+~
+E
+letters envelopes assorted~
+Envelopes of all sizes are heaped into hugh piles around the room.  As you
+look closer, you see a letter that you had posted a full week ago, laying
+unnoticed and slightly rat-chewed towards the bottom of the pile.
+~
+E
+sign~
+**********************************************************
+*     							 *
+*    Mail Instructions:                                  *
+*							 *
+*      To send a note to someone:                        *
+*         MAIL <playername>				 *
+*     							 *
+*      To see if you have any mail:                      *
+*         CHECK						 *
+*							 *
+*      To get the Postmaster to give you your mail:      *
+*         RECEIVE					 *
+*							 *
+*         Stamps cost 150 coins per letter               *
+*         Type 'HELP MAIL' for more info                 *
+**********************************************************
+~
+S
+#3063
+The Daggerfall Lost and Found~
+   The name of this room does not fit the purpose.  It is a room that people
+give or donate items to and if they are nice enough and find an item that
+doesn't belong to them they donate that too (see help Donate).  People often
+sit around in here and wait for things to appear but that happens fairly
+rarely.    
+  Off to the west you see the Temple of DaggerFall.
+~
+30 12 1
+D3
+The busy temple is back west.
+~
+~
+0 -1 3001
+S
+#3064
+The Cryogenic Center~
+   You are standing in an impossible white sterile room with cylindrical
+body-length canisters lined up against the walls.  The Reception is to the
+south.
+~
+30 8 1
+D2
+The Reception is to the south.
+~
+~
+0 -1 3008
+S
+#3065
+The Great Field of Daggerfall~
+   You are walking on a wide dirt path through the lush, green, fresh
+DaggerFall countryside.  You can see to the horizon to the north, east, and
+west; the busy city of DaggerFall lies to the south.  All round you is healthy
+green grass and an occasional large oak tree.  The sun feels wonderful on your
+face and a pleasant wind blows through your hair.  Birds chirp quietly to
+themselves and you can smell the faint scent of flowers and freshly cut grass.
+You feel like you could lie down in the grass and stay here forever, surrounded
+by powerful beauty in all directions.  To the Northeast there is a glowing
+portal.    
+~
+30 262144 2
+D0
+~
+~
+0 0 2297
+D2
+The path continues through the field to the south past an odd structure
+on the eastern side of the path.
+~
+~
+0 -1 3061
+D6
+~
+~
+0 0 180
+E
+plot device~
+What more is a plot device than something to block a certain direction
+for reasons beyond your comprehension.
+~
+S
+#3066
+The Dirt Path~
+   You are walking along a narrow dirt path through the lush, green,
+fresh Midgaard countryside.  You can see to the horizon to the north
+and east; the busy city of Midgaard lies to the south.  All around
+you is healthy green grass and an occasional large oak tree.  The sun
+feels wonderful on your face and a pleasant wind blows through your
+hair.  Birds chirp quietly to themselves and you can smell the faint
+scent of flowers and freshly cut grass.  You feel like you could lie
+down in the grass and stay here forever, surrounded by powerful beauty
+in all directions.
+~
+30 262144 2
+D1
+The path meets up with a larger path just to the east.
+~
+~
+0 -1 3061
+S
+#3067
+DaggerFall Healing Room~
+   You are in a small magical room.  It seems that things in here are a little
+slower and cooler.  You see a beautiful woman standing here wearing healer
+garb.  She seems to be a very powerful healer and sitting quite contently
+~
+30 2097180 0
+D5
+~
+~
+0 0 3001
+S
+#3068
+The Bank of Daggerfall~
+     You stand inside a grand building, which is home to the bank
+of Daggerfall.  It is in here in which you can deposit and withdraw
+your wealth.  Bankers are here to aleve you of your money, they seem
+more than happy to take it from you.
+~
+30 8 0
+D9
+~
+~
+0 0 3001
+S
+#3069
+On the River~
+     You find yourself floating on the river as it passes through the
+city of Daggerfall.  Directly north of here is the Levee where travellers
+can dock their boats and venture through the city.  East, the river 
+enters the city through a large iron grate, while to the west the the
+river moves swiftly out of eyeshot.
+~
+30 0 7
+D0
+~
+~
+0 0 3049
+D1
+~
+~
+0 0 3071
+D3
+~
+~
+0 0 3072
+S
+#3070
+On the River~
+   The river flows swiftly through a hole in the eastern wall.  The hole has
+been blocked by several vertically positioned iron bars which are set into the
+wall.  Though the bars were meant to prevent passage in or out of the city,
+there is room enough for a determined person to squeeze through.  To the west,
+the river flows past Daggerfall's levee.    
+~
+30 0 7
+D1
+~
+~
+0 0 3077
+D3
+~
+~
+0 0 3071
+S
+#3071
+On the River~
+   The river here isn't very exciting, the walls are steep and slippery
+with slime, making them impossible to climb.  To the north is a large
+warehouse, while to the east the river travels through the wall of 
+Daggerfall.  Westard, the river flows on past the levee.
+~
+30 0 7
+D1
+~
+~
+0 0 3070
+D3
+~
+~
+0 0 3069
+S
+#3072
+Below the Bridge~
+     Here the river slows down a lot, and meanders slowly under the
+main bridge of Daggerfall.  You are overcome by the stench of the 
+Daggerfall city dump which is just north of here.  To the east you
+can see the levee, while to the west the river begins to pick up 
+speed again.
+~
+30 0 7
+D1
+~
+~
+0 0 3069
+D3
+~
+~
+0 0 3073
+S
+#3073
+On the River~
+     This part of the river is much like the rest, the walls are still
+steep and unclimbable.  To the north are the shabby, downtrodden buildings
+of the Poor Alley, what an eyesore!  To the east the river travels under
+the main bridge of Daggerfall, while to the west is the bridge that
+travels next to the western wall.
+~
+30 0 7
+D1
+~
+~
+0 0 3072
+D3
+~
+~
+0 0 3074
+S
+#3074
+Under the Bridge~
+     The arch under the bridge is covered by seaweed about a foot above
+the surface of the river.  The water gently flows through an opening in the
+lower part of the city wall.
+~
+30 0 7
+D1
+~
+~
+0 0 3073
+D3
+~
+~
+0 0 914
+S
+#3075
+The Lane Before Daggefall~
+   On the edges of the city of Daggerfall, small shacks have been built by
+those who cannot afford to live inside its walls.  The people that live in
+those shacks tend to be the clean poor and bathe in the river once a week.  
+Fidos dart about these buildings, snapping hungry teeth at unwary ankles.  
+Daggerfall's east gate lies to the west.  Road construction can be seen to the
+east.    
+~
+30 8 2
+D1
+   The dirt road pulls away from Daggerall and into the Azrothian Plains.    
+~
+~
+0 0 3076
+D3
+   The gates of Daggerfall lie to the west.    
+~
+<NONE>~
+0 0 3053
+S
+#3076
+The Edge of the Work Site~
+   A few men from the road crew are sitting in the grass by the side of the
+road, scratching their pits.  It's very attractive and masculine...  Really.  
+The road looks like it has seen no work done on it in many years, from the way
+the grass is growing up around the men, that comes as no surprise.  The road
+runs west and east.    
+~
+30 12 2
+D1
+   Road construction is set up for many miles down the road.    
+~
+~
+0 0 249
+D3
+   Daggerfall is only a short ways away and people can be seen moving on the
+streets.    
+~
+~
+0 0 3075
+E
+crew men road~
+   The shirtless road crew sit at the edge of the road talking amongst
+themselves with grunts, snorts, and crude gestures.  It looks like they have
+been sitting there for a long, long time.  They show no signs of wanting to
+move.    
+~
+S
+#3077
+Inside Daggefall's Eastern Wall on the River~
+   There's one thing to be said about being inside a wall, it is rather dark.
+The little light that does manage to exist in here reflects off the water and
+onto the ceiling.  The patterns of light shift and shiver with the river's
+movement.  The soft rush of water pushing against the wall's sides and the roar
+of water escaping to the west are the only things that can be heard.  To the
+east, the river enters the wall.  To the west, the river escapes.    
+~
+30 265 7
+D1
+   The river enters the wall to the east.    
+~
+~
+0 0 3078
+D3
+   The river pushes past a bunch of iron bars that would probably block passage
+westward if they were closer together.    
+~
+~
+0 0 3070
+S
+#3078
+The River of Daggerfall~
+   The river's banks begin to narrow down as they head westward into
+Daggerfall's eastern wall.  The river itself speeds up as its bed narrows down
+and thrusts itself through the wall.  The pale shadows of fish swim through the
+yellow-brown waters.  The river flows south and west.    
+~
+30 0 7
+D2
+   The river's banks widen to the south.    
+~
+~
+0 0 3079
+D3
+   The river disappears into Daggerfall's eastern wall.    
+~
+~
+0 0 3077
+S
+#3079
+The River of Daggerfall~
+   The river's banks slope gently down into the river, like a tentative swimmer
+checking the temperature of the water before diving in.  The fish swim about in
+the swiftly flowing water, occasionally a fish will fling itself out of the
+water to snap a fly right from the air.  The trees grow on either side of the
+river.  Willow, pine, and birch.  The river flows north and south.    
+~
+30 0 0
+D0
+   The river narrows down as it heads north.    
+~
+~
+0 0 3078
+D2
+   The river to the south is hidden by the many trunks of trees.    
+~
+~
+0 0 3080
+S
+#3080
+The River of Daggerfall~
+   The river flows cool and fast between river banks covered with trees.  
+Small bushes with bright red berries grow close to the water as well.  A few
+ducks paddle about in the water on the west bank where the river becomes
+shallow and slow.  It would be easy to move to the west bank and follow the
+little path to where ever it leads.  The river flows.  North and south.    
+~
+30 0 7
+D0
+   The river flows northward and eventually emerges from the small stand of
+trees.    
+~
+~
+0 0 3079
+D2
+   A loud roaring sound can be heard from the south, but there is no indication
+as to what it could be.    
+~
+~
+0 0 3081
+D3
+   A small game trail moves away from the river.    
+~
+~
+0 0 3082
+S
+#3081
+The River of Daggerfall~
+   The stretch of river to the north is a smooth flowing ribbon of water laced
+through a small stand of trees.  The river to the south, however, is a frothing
+pool of water.  The reason for all this froth and boil is the emergence of the
+river of Daggerfall from a rather large concrete statue.  The river boils out
+of its mouth and plunges several dozen yards into the river bed below.  
+Perhaps some ancient pumps are at play deep in the belly of the statue.  The
+river flows northward.    
+~
+30 8 0
+D0
+   The river traces its way north towards Daggerfall.    
+~
+~
+0 0 3080
+S
+#3082
+A Small Game Trail~
+   The leaves of the leafy old trees overhead rattle restlessly with every
+breath of air.  The small game trail is marked only by its lack of the sparse
+grasses that grow here and the rotting leaves that cover every other inch of
+the wood's floor.  The air smells of a combination of moldering leaves and the
+crisp smell of a river.  The game trail runs west and east, but a small space
+between the bushes to the southwest will admit you.    
+~
+30 0 3
+D1
+   The game trail walks up to the river and promptly ends.    
+~
+~
+0 0 3080
+D3
+   The game trail continues to the west.    
+~
+~
+0 0 3083
+D9
+   There is a small space through the bushes a person could squeeze through.  
+
+~
+~
+0 0 3084
+S
+#3083
+A Small Game Trail~
+   The small game trail fades out into the grass and rotting leaves of the
+wood's floor.  Long, leafy vines grow over and around the tree trunks, slowly
+strangling them to death.  The musty smell of rotting and damp leaves tickles
+the nose of any wandering traveler.  The only way to go is back east.    
+~
+30 0 3
+D1
+   The game trail heads eastward towards a river.    
+~
+~
+0 0 3082
+S
+#3084
+A Space Between the Bushes~
+   The prickly bushes close in on either side.  Their thorns were made to catch
+at the clothing of the unweary and haul them back from the clearing to the
+south.  Go back!  Go back!  Whatever exists or used to exist in that clearing
+clearly does not want you there.  A small game trail lies to the northeast.  
+~
+30 68 3
+D2
+A small circular clearing lies to the south.
+~
+~
+0 0 3085
+D6
+   One could pop out of this space between the bushes and onto a neat little
+game trail.    
+~
+~
+0 0 3082
+S
+#3085
+A Small Game Trail~
+   The clearing is a perfect circle edged with bushes that have been neatly cut
+back so that their branches do not protrude into the circle.  A bunch of
+unevenly spaced mushrooms form another circle in the middle of the clearing.  
+The dirt in the clearing is rather scooped out making it into the shape of a
+shallow bowl.  What would happen to someone who steps down into the circle?  
+No matter, it is probably best to squeeze through the bushes to the north and
+get away from here.    
+~
+30 80 2
+D0
+   A person could slip through the bushes and away from this clearing.    
+~
+~
+0 0 3084
+S
+#3086
+A Circular Clearing~
+You are in an unfinished room.
+~
+30 8 0
+S
+#3087
+An unfinished room~
+You are in an unfinished room.
+~
+30 8 0
+S
+#3090
+The Room of Opinions~
+   This is a small room.  Bare walls, no furniture or carpet.  All except for
+on the back wall.  There sits a bulletin board.  The only purpose of this room
+is for you to express your opinion.  Here, you can write all the nonsense you
+want, that doesn't belong on the main bulletin board of the mud.  Here, you can
+right anything, from how you thought a quest wasn't fair to how much you hate a
+certain goddess.  Here, you are safe to express your opinion.  Of course, that
+means everyone else can blast you if you say something stupid, but that's the
+risk you take.    
+~
+30 28 0
+D6
+~
+~
+0 0 3001
+S
+#3094
+OPEN ROOM~
+none
+~
+30 67584 2
+S
+#3095
+OPEN ROOM~
+none
+~
+30 6680 0
+S
+#3096
+OPEN ROOM~
+none
+~
+30 2173 0
+S
+#3098
+The Middle of NoWhere~
+You stand on an indifferential plane of nothingness.  The very materials of
+existance swirl and mingle, both land and sky form and dissipate at random.  
+It seems as if all of existance desires to be somewhere else.    
+~
+30 262220 0
+D2
+~
+~
+0 0 103
+S
+#3099
+Olafs DF Mob Chute~
+This is a mob chute...and nothing more...leave it be.
+~
+30 262224 0
+D0
+~
+~
+0 0 3014
+D1
+~
+~
+0 0 3045
+D2
+~
+~
+0 0 3044
+D3
+~
+~
+0 0 3012
+D5
+~
+~
+0 0 3016
+S
+$~

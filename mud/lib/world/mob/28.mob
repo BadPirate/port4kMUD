@@ -1,0 +1,14 @@
+#2899
+Fisherman man fish~
+A fisherman~
+A fisherman is standing here fishing.
+~
+   He's standing here, trying to reel in some fish.  It looks like he hasn't
+caught any yet, but if he keeps at it he might be able to.    
+~
+190538 1192 350 E
+80 -8 3 1d1+14000 8d9+47
+100000 350000
+8 8 1
+E
+$

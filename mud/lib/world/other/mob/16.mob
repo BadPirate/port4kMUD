@@ -1,0 +1,56 @@
+#1600
+Wil O' the Wisp lights~
+Wil O' the Wisp~
+A group of luminecent, dancing lights.
+~
+   Three spherical luminescent, dancing lights grouped together.  You might
+recognize it as Wil O' the Wisp.    
+~
+237688 819210 -150 E
+43 -7 -5 3d250+0 2d45+20
+3500 7000
+8 8 0
+BareHandAttack: 12
+E
+#1601
+emerald  fairie ~
+the Emerald Fairie~
+You see a little fairie with beutiful wings floating here.
+~
+   A little creature about 2 feet tall, long flowing hair and pearlescent
+wings.  They all seem to be of a green shade.  There eyes sem to peirce right
+through you and you notice they too are a beautiful green.    
+~
+518474 32930 0 E
+50 -8 -7 3d300+5 2d38+29
+5000 8500
+8 8 2
+BareHandAttack: 4
+E
+#1620
+mush mushroom small~
+a small mushroom~
+a mushroom runs around the room gathering soil.
+~
+a mushroom looks rather small. maybe a peon of somesort.
+~
+18508 33868 -500 E
+12 15 10 1d1+148 4d4+3
+1000 1000
+8 8 0
+BareHandAttack: 13
+E
+#1621
+king mush mushroom~
+King Mushroom~
+King Mushroom
+~
+King Mushroom
+~
+26712 32896 -500 E
+15 16 5 1d1+362 4d6+6
+5000 10000
+6 6 1
+BareHandAttack: 10
+E
+$

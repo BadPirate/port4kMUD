@@ -1,0 +1,330 @@
+*** src/util/autowiz.c	Fri Feb 24 08:31:50 1995
+--- oldsrc/util/autowiz.c	Wed Nov  8 20:59:40 1995
+***************
+*** 26,35 ****
+  #define IMM_LMARG "   "
+  #define IMM_NSIZE  16
+  #define LINE_LEN   64
+! #define MIN_LEVEL LEVEL_IMMORT
+  
+  /* max level that should be in columns instead of centered */
+! #define COL_LEVEL LEVEL_IMMORT
+  
+  struct name_rec {
+     char	name[25];
+--- 26,35 ----
+  #define IMM_LMARG "   "
+  #define IMM_NSIZE  16
+  #define LINE_LEN   64
+! #define MIN_LEVEL LVL_IMMORT
+  
+  /* max level that should be in columns instead of centered */
+! #define COL_LEVEL LVL_IMMORT
+  
+  struct name_rec {
+     char	name[25];
+***************
+*** 88,96 ****
+     while (!feof(fl)) {
+        fread(&player, sizeof(struct char_file_u ), 1, fl);
+        if (!feof(fl) && player.level >= MIN_LEVEL && 
+!           !(IS_SET(player.specials2.act, PLR_FROZEN)) && 
+!           !(IS_SET(player.specials2.act, PLR_NOWIZLIST)) && 
+!           !(IS_SET(player.specials2.act, PLR_DELETED)))
+  	 add_name(player.level, player.name);
+     }
+  
+--- 88,96 ----
+     while (!feof(fl)) {
+        fread(&player, sizeof(struct char_file_u ), 1, fl);
+        if (!feof(fl) && player.level >= MIN_LEVEL && 
+!           !(IS_SET(player.char_specials_saved.act, PLR_FROZEN)) && 
+!           !(IS_SET(player.char_specials_saved.act, PLR_NOWIZLIST)) && 
+!           !(IS_SET(player.char_specials_saved.act, PLR_DELETED)))
+  	 add_name(player.level, player.name);
+     }
+  
+***************
+*** 237,243 ****
+     read_file();
+     sort_names();
+     fl = fopen(argv[2], "w");
+!    write_wizlist(fl, wizlevel, LEVEL_IMPL);
+     fclose(fl);
+     fl = fopen(argv[4], "w");
+     write_wizlist(fl, immlevel, wizlevel - 1);
+--- 237,243 ----
+     read_file();
+     sort_names();
+     fl = fopen(argv[2], "w");
+!    write_wizlist(fl, wizlevel, LVL_IMPL);
+     fclose(fl);
+     fl = fopen(argv[4], "w");
+     write_wizlist(fl, immlevel, wizlevel - 1);
+*** src/util/delobjs.c	Fri Feb 24 08:31:50 1995
+--- oldsrc/util/delobjs.c	Wed Nov  8 21:00:37 1995
+***************
+*** 85,91 ****
+        for (ptr  = player.name; *ptr; ptr++)
+  	 *ptr = tolower(*ptr);
+  
+!       if (player.specials2.act & PLR_DELETED)
+  	 okay = 0;
+  
+        if (okay) {
+--- 85,91 ----
+        for (ptr  = player.name; *ptr; ptr++)
+  	 *ptr = tolower(*ptr);
+  
+!       if (player.char_specials_saved.act & PLR_DELETED)
+  	 okay = 0;
+  
+        if (okay) {
+*** src/util/purgeplay.c	Fri Feb 24 08:31:50 1995
+--- oldsrc/util/purgeplay.c	Wed Nov  8 21:05:46 1995
+***************
+*** 8,15 ****
+  #include <stdio.h>
+  #include <ctype.h>
+  #include "../structs.h"
+  
+- 
+  void	purge(char *filename)
+  {
+     FILE * fl;
+--- 8,15 ----
+  #include <stdio.h>
+  #include <ctype.h>
+  #include "../structs.h"
++ #include "../utils.h"
+  
+  void	purge(char *filename)
+  {
+     FILE * fl;
+***************
+*** 50,56 ****
+  	 strcpy(reason, "Never entered game");
+        }
+  
+!       if (player.level < 0 || player.level > LEVEL_IMPL) {
+  	 okay = 0;
+  	 strcpy(reason, "Invalid level");
+        }
+--- 50,56 ----
+  	 strcpy(reason, "Never entered game");
+        }
+  
+!       if (player.level < 0 || player.level > LVL_IMPL) {
+  	 okay = 0;
+  	 strcpy(reason, "Invalid level");
+        }
+***************
+*** 58,75 ****
+        /* now, check for timeouts.  They only apply if the char is not
+         cryo-rented.   Lev 32-34 do not time out.  */
+  
+!       if (okay && player.level <= LEVEL_IMMORT) {
+  
+! 	 if (!(player.specials2.act & PLR_CRYO)) {
+  	    if (player.level == 1)
+  	       timeout = 4;	/* Lev   1 : 4 days */
+  	    else if (player.level <= 4)	
+  	       timeout = 7;	/* Lev 2-4 : 7 days */
+  	    else if (player.level <= 10)	
+  	       timeout = 30;	/* Lev 5-10: 30 days */
+! 	    else if (player.level <= LEVEL_IMMORT - 1) 
+  	       timeout = 60;	/* Lev 11-30: 60 days */
+! 	    else if (player.level <= LEVEL_IMMORT)   
+  	       timeout = 90;	/* Lev 31: 90 days */
+  	 } else
+  	       timeout = 90;
+--- 58,75 ----
+        /* now, check for timeouts.  They only apply if the char is not
+         cryo-rented.   Lev 32-34 do not time out.  */
+  
+!       if (okay && player.level <= LVL_IMMORT) {
+  
+! 	 if (!(player.char_specials_saved.act & PLR_CRYO)) {
+  	    if (player.level == 1)
+  	       timeout = 4;	/* Lev   1 : 4 days */
+  	    else if (player.level <= 4)	
+  	       timeout = 7;	/* Lev 2-4 : 7 days */
+  	    else if (player.level <= 10)	
+  	       timeout = 30;	/* Lev 5-10: 30 days */
+! 	    else if (player.level <= LVL_IMMORT - 1) 
+  	       timeout = 60;	/* Lev 11-30: 60 days */
+! 	    else if (player.level <= LVL_IMMORT)   
+  	       timeout = 90;	/* Lev 31: 90 days */
+  	 } else
+  	       timeout = 90;
+***************
+*** 83,94 ****
+  	 }
+        }
+  
+!       if (player.specials2.act & PLR_DELETED) {
+  	 okay = 0;
+  	 sprintf(reason, "Deleted flag set");
+        }
+  
+!       if (!okay && (player.specials2.act & PLR_NODELETE)) {
+  	 okay = 2;
+  	 strcat(reason, "; NOT deleted.");
+        }
+--- 83,94 ----
+  	 }
+        }
+  
+!       if (player.char_specials_saved.act & PLR_DELETED) {
+  	 okay = 0;
+  	 sprintf(reason, "Deleted flag set");
+        }
+  
+!       if (!okay && (player.char_specials_saved.act & PLR_NODELETE)) {
+  	 okay = 2;
+  	 strcat(reason, "; NOT deleted.");
+        }
+*** src/util/scheck.c	Fri Feb 24 08:31:50 1995
+--- oldsrc/util/scheck.c	Wed Nov  8 21:11:40 1995
+***************
+*** 10,16 ****
+  
+  #define __DB_C__
+  
+! #define log(msg) puts(msg)
+  
+  #include <stdio.h>
+  #include <stdlib.h>
+--- 10,16 ----
+  
+  #define __DB_C__
+  
+! #define logs(msg) puts(msg)
+  
+  #include <stdio.h>
+  #include <stdlib.h>
+***************
+*** 124,150 ****
+  {
+     int	i;
+  
+!    log("Boot db -- BEGIN.");
+  
+!    log("Loading zone table.");
+     index_boot(DB_BOOT_ZON);
+  
+!    log("Loading rooms.");
+     index_boot(DB_BOOT_WLD);
+  
+!    log("Renumbering rooms.");
+     renum_world();
+  
+!    log("Loading mobs and generating index.");
+     index_boot(DB_BOOT_MOB);
+  
+!    log("Loading objs and generating index.");
+     index_boot(DB_BOOT_OBJ);
+  
+!    log("Renumbering zone table.");
+     renum_zone_table();
+  
+!    log("Boot db -- DONE.");
+  }
+  
+  
+--- 124,150 ----
+  {
+     int	i;
+  
+!    logs("Boot db -- BEGIN.");
+  
+!    logs("Loading zone table.");
+     index_boot(DB_BOOT_ZON);
+  
+!    logs("Loading rooms.");
+     index_boot(DB_BOOT_WLD);
+  
+!    logs("Renumbering rooms.");
+     renum_world();
+  
+!    logs("Loading mobs and generating index.");
+     index_boot(DB_BOOT_MOB);
+  
+!    logs("Loading objs and generating index.");
+     index_boot(DB_BOOT_OBJ);
+  
+!    logs("Renumbering zone table.");
+     renum_zone_table();
+  
+!    logs("Boot db -- DONE.");
+  }
+  
+  
+***************
+*** 176,182 ****
+     case DB_BOOT_OBJ	: prefix = OBJ_PREFIX; break;
+     case DB_BOOT_ZON	: prefix = ZON_PREFIX; break;
+     default:
+!       log("SYSERR: Unknown subcommand to index_boot!");
+        exit(1);
+        break;
+     }
+--- 176,182 ----
+     case DB_BOOT_OBJ	: prefix = OBJ_PREFIX; break;
+     case DB_BOOT_ZON	: prefix = ZON_PREFIX; break;
+     default:
+!       logs("SYSERR: Unknown subcommand to index_boot!");
+        exit(1);
+        break;
+     }
+***************
+*** 213,219 ****
+     }
+  
+     if (!rec_count) {
+!       log("SYSERR: boot error - 0 records counted");
+        exit(1);
+     }
+  
+--- 213,219 ----
+     }
+  
+     if (!rec_count) {
+!       logs("SYSERR: boot error - 0 records counted");
+        exit(1);
+     }
+  
+***************
+*** 797,803 ****
+        templength = strlen(tmp);
+  
+        if (length + templength >= MAX_STRING_LENGTH) {
+! 	 log("SYSERR: fread_string: string too large (db.c)");
+  	 exit(1);
+        } else {
+  	 strcat(buf+length, tmp);
+--- 797,803 ----
+        templength = strlen(tmp);
+  
+        if (length + templength >= MAX_STRING_LENGTH) {
+! 	 logs("SYSERR: fread_string: string too large (db.c)");
+  	 exit(1);
+        } else {
+  	 strcat(buf+length, tmp);
+***************
+*** 834,840 ****
+  
+        if (!feof(fl)) {
+  	 if (strlen(buf) + strlen(tmp) + 2 > MAX_STRING_LENGTH) {
+! 	    log("SYSERR: fl->strng: string too big (db.c, file_to_string)");
+  	    *buf = '\0';
+  	    return(-1);
+  	 }
+--- 834,840 ----
+  
+        if (!feof(fl)) {
+  	 if (strlen(buf) + strlen(tmp) + 2 > MAX_STRING_LENGTH) {
+! 	    logs("SYSERR: fl->strng: string too big (db.c, file_to_string)");
+  	    *buf = '\0';
+  	    return(-1);
+  	 }

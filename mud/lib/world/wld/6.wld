@@ -1,0 +1,1919 @@
+#600
+By The Cliffs~
+   The wind passes over your body as you look out over the sea to the north.  
+You can see clear out over the blue water.  No other land is in sight and you
+wonder just how big this sea is.  There might be land out there but can you
+make it?  There are cliffs to the east and west, too steep to climb.  To the
+north is the sea.  The river continues to the south.    
+~
+6 0 7
+D0
+~
+~
+0 0 601
+D2
+~
+~
+0 0 922
+S
+#601
+A ways from shore~
+   You are floating in the salty sea water a ways from the beach.  The breeze
+cools you off while you can hear the waves of the sea.  There are high cliffs
+to your east and west, way too steep to climb.  To the north there is nothing
+you can see but more sea.  To the south you can see the river.    
+~
+6 4 7
+D0
+~
+~
+0 0 602
+D2
+~
+~
+0 0 600
+S
+#602
+Out to Sea~
+   You are now floating out quite a ways from the shore, and are surounded by
+sea.  Nothing but salt water, and a cool breeze.  The only shore you can
+curently see is to the south.    
+~
+6 0 7
+D0
+~
+~
+0 0 607
+D1
+~
+~
+0 0 603
+D2
+~
+~
+0 0 601
+D3
+~
+~
+0 0 605
+D6
+~
+~
+0 0 608
+D7
+~
+~
+0 0 610
+S
+#603
+Along the cliffs~
+   The sound of waves smacking into the cliffs, and the sea gulls squaking is
+all that can be heard.  You are floating alongside steep cliffs to the south.
+In all other directions there is nothing but sea.    
+~
+6 0 7
+D0
+~
+~
+0 0 608
+D1
+~
+~
+0 0 604
+D3
+~
+~
+0 0 602
+D6
+~
+~
+0 0 609
+D7
+~
+~
+0 0 607
+S
+#604
+Along the cliffs~
+   The sound of waves smacking into the cliffs, and the sea gulls squaking is
+all that can be heard.  You are floating alongside steep cliffs to the south.
+In all other directions there is nothing but sea.    
+~
+6 0 7
+D0
+~
+~
+0 0 609
+D1
+~
+~
+0 0 606
+D3
+~
+~
+0 0 603
+D7
+~
+~
+0 0 608
+D8
+~
+~
+0 0 611
+S
+#605
+Along the cliffs~
+   The sound of waves smacking into the cliffs, and the sea gulls squaking is
+all that can be heard.  You are floating alongside steep cliffs to the south.
+In all other directions there is nothing but sea.    
+~
+6 0 7
+D0
+~
+~
+0 0 610
+D1
+~
+~
+0 0 602
+D3
+~
+~
+0 0 606
+D6
+~
+~
+0 0 607
+D7
+~
+~
+0 0 611
+S
+#606
+Along the cliffs~
+   The sound of waves smacking into the cliffs, and the sea gulls squaking is
+all that can be heard.  You are floating alongside steep cliffs to the south.
+In all other directions there is nothing but sea.    
+~
+6 0 7
+D0
+~
+~
+0 0 611
+D1
+~
+~
+0 0 605
+D3
+~
+~
+0 0 604
+D6
+~
+~
+0 0 610
+D7
+~
+~
+0 0 609
+S
+#607
+In the Sea~
+   You are out in the the sea, barely able to see the main land anymore.  
+All around you there is nothing but more and more salty water.  You know you're
+not suposed to drink it, but the hot sun makes you very thirsty.  As you look
+around you can see nothing but water in all directions.    
+~
+6 0 7
+D0
+~
+~
+0 0 611
+D1
+~
+~
+0 0 607
+D2
+~
+~
+0 0 601
+D3
+~
+~
+0 0 609
+D6
+~
+~
+0 0 611
+D7
+~
+~
+0 0 613
+D8
+~
+~
+0 0 603
+D9
+~
+~
+0 0 605
+S
+#608
+In the Sea~
+   You are out in the the sea, barely able to see the main land anymore.  
+All around you there is nothing but more and more salty water.  You know you're
+not suposed to drink it, but the hot sun makes you very thirsty.  As you look
+around you can see nothing but water in all directions.    
+~
+6 0 7
+D0
+~
+~
+0 0 613
+D1
+~
+~
+0 0 609
+D2
+~
+~
+0 0 603
+D3
+~
+~
+0 0 607
+D6
+~
+~
+0 0 612
+D7
+~
+~
+0 0 613
+D8
+~
+~
+0 0 604
+D9
+~
+~
+0 0 602
+S
+#609
+In the Sea~
+   You are out in the the sea, barely able to see the main land anymore.  
+All around you there is nothing but more and more salty water.  You know you're
+not suposed to drink it, but the hot sun makes you very thirsty.  As you look
+around you can see nothing but water in all directions.    
+~
+6 0 7
+D0
+~
+~
+0 0 608
+D1
+~
+~
+0 0 611
+D2
+~
+~
+0 0 604
+D3
+~
+~
+0 0 608
+D6
+~
+~
+0 0 612
+D7
+~
+~
+0 0 613
+D8
+~
+~
+0 0 606
+D9
+~
+~
+0 0 603
+S
+#610
+In the Sea~
+   You are out in the the sea, barely able to see the main land anymore.  
+All around you there is nothing but more and more salty water.  You know you're
+not suposed to drink it, but the hot sun makes you very thirsty.  As you look
+around you can see nothing but water in all directions.    
+~
+6 0 7
+D0
+~
+~
+0 0 613
+D1
+~
+~
+0 0 607
+D2
+~
+~
+0 0 605
+D3
+~
+~
+0 0 611
+D6
+~
+~
+0 0 612
+D7
+~
+~
+0 0 613
+D8
+~
+~
+0 0 602
+D9
+~
+~
+0 0 606
+S
+#611
+In the Sea~
+   You are out in the the sea, barely able to see the main land anymore.  
+All around you there is nothing but more and more salty water.  You know you're
+not suposed to drink it, but the hot sun makes you very thirsty.  As you look
+around you can see nothing but water in all directions.    
+~
+6 0 7
+D0
+~
+~
+0 0 612
+D1
+~
+~
+0 0 610
+D2
+~
+~
+0 0 606
+D3
+~
+~
+0 0 609
+D6
+~
+~
+0 0 612
+D7
+~
+~
+0 0 613
+D8
+~
+~
+0 0 605
+D9
+~
+~
+0 0 604
+S
+#612
+Middle of the Sea~
+   You are now far out in the middle of the sea.  A long ways from the main
+land.  Below you is some of the deepest water you could imagine.  There could
+be anyting in the water just below your boat, waiting to tip it over.  The wind
+out here is a lot stronger than that close to the main land.  As the waves are
+also a lot higher.  To the north though you can see a small tropical island.  
+Everywhere else, there is only water.
+~
+6 0 7
+D0
+~
+~
+0 0 649
+D1
+~
+~
+0 0 613
+D2
+~
+~
+0 0 607
+D3
+~
+~
+0 0 613
+D8
+~
+~
+0 0 608
+D9
+~
+~
+0 0 610
+S
+#613
+Middle of the Sea~
+   You are now far out in the middle of the sea.  A long ways from the main
+land.  Below you is some of the deepest water you could imagine.  There could
+be anyting in the water just below your boat, waiting to tip it over.  The wind
+out here is a lot stronger than that close to the main land.  As the waves are
+also a lot higher.  To the north though you can see a small tropical island.  
+Everywhere else, there is only water.
+~
+6 0 7
+D0
+~
+~
+0 0 649
+D1
+~
+~
+0 0 612
+D2
+~
+~
+0 0 607
+D3
+~
+~
+0 0 612
+D8
+~
+~
+0 0 609
+D9
+~
+~
+0 0 607
+S
+#614
+Island beach~
+   The sand on this beach is golden yellow and your feet sink in it just enough
+to make it soothing to walk on.  The waves from the sea to the south just
+reach you before the water stops and heads back to sea.  There is a few shells
+scatered along the beach here and there, with a few sticks and rocks.  It is a
+perfectly peaceful and secluded island.  All you can see is more beach to the
+east and west.  To the north is the the jungle, from which you can hear
+different noises you're not so sure about.    
+~
+6 0 2
+D0
+~
+~
+0 0 618
+D1
+~
+~
+0 0 615
+D2
+~
+~
+0 0 649
+D3
+~
+~
+0 0 617
+S
+#615
+Island beach~
+   The sand on this beach is golden yellow and your feet sink in it just enough
+to make it soothing to walk on.  The waves from the sea to the south just
+reach you before the water stops and heads back to sea.  There is a few shells
+scatered along the beach here and there, with a few sticks and rocks.  It is a
+perfectly peaceful and secluded island.  All you can see is more beach to the
+east and west.  To the north is the the jungle, from which you can hear
+different noises you're not so sure about.    
+~
+6 0 2
+D0
+~
+~
+0 0 618
+D1
+~
+~
+0 0 616
+D2
+~
+~
+0 0 649
+D3
+~
+~
+0 0 614
+S
+#616
+Island beach~
+   The sand on this beach is golden yellow and your feet sink in it just enough
+to make it soothing to walk on.  The waves from the sea to the south just
+reach you before the water stops and heads back to sea.  There is a few shells
+scatered along the beach here and there, with a few sticks and rocks.  It is a
+perfectly peaceful and secluded island.  All you can see is more beach to the
+east and west.  To the north is the the jungle, from which you can hear
+different noises you're not so sure about.    
+~
+6 0 2
+D0
+~
+~
+0 0 618
+D1
+~
+~
+0 0 617
+D2
+~
+~
+0 0 649
+D3
+~
+~
+0 0 615
+S
+#617
+Island beach~
+   The sand on this beach is golden yellow and your feet sink in it just enough
+to make it soothing to walk on.  The waves from the sea to the south just
+reach you before the water stops and heads back to sea.  There is a few shells
+scatered along the beach here and there, with a few sticks and rocks.  It is a
+perfectly peaceful and secluded island.  All you can see is more beach to the
+east and west.  To the north is the the jungle, from which you can hear
+different noises you're not so sure about.    
+~
+6 0 2
+D0
+~
+~
+0 0 618
+D1
+~
+~
+0 0 614
+D2
+~
+~
+0 0 649
+D3
+~
+~
+0 0 616
+S
+#618
+Jungle entrance~
+   At the entrance to the jungle it is already geting darker, for not much
+light can penetrate the thick jungle canapy.  Sounds of different birds and
+other animals fills the air while you look around.  Though the island looks
+uninhabited, something appears to have made a path through the jungle to the
+east.  To the north and west however, there is nothing but deeper jungle.  Be
+careful, for one could easily get lost in a place like this.  To the south is
+the beach.    
+~
+6 0 3
+D0
+~
+~
+0 0 619
+D1
+~
+~
+0 0 626
+D2
+~
+~
+0 0 615
+D3
+~
+~
+0 0 623
+S
+#619
+Deep in the jungle~
+   Deep in the jungle here light gets through the tops of the trees in only a
+few spots.  The air here smells of strange flowers, mold, and other unknown
+types of vegitation.  You can see a little clearing off to the west, and to the
+south through the trees you can still make out the jungle entrance.  In the
+other directions there is thick, dark jungle.    
+~
+6 0 0
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 624
+D2
+~
+~
+0 0 618
+D3
+~
+~
+0 0 620
+S
+#620
+A little pond~
+   This small clearing in the jungle is strangely very quiet.  Everywhere else
+you've been has been noisy with animals.  In the middle of the clearing there
+is a small pond with murky green water filling it.  Little air bubbles come to
+the top of the pond every once in a while.  It makes you wonder what's in that
+water.  Everywhere except from which you came, there is nothing but dark
+forest.    
+~
+6 68 3
+D0
+~
+~
+0 0 622
+D1
+~
+~
+0 0 619
+D2
+~
+~
+0 0 621
+D3
+~
+~
+0 0 624
+S
+#621
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 624
+D1
+~
+~
+0 0 624
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 622
+S
+#622
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 624
+D2
+~
+~
+0 0 621
+D3
+~
+~
+0 0 624
+S
+#623
+Deep in the jungle~
+   Deep in the jungle here light gets through the tops of the trees in only a
+few spots.  The air here smells of strange flowers, mold, and other unknown
+types of vegitation.  In all directions but to the east there is nothing but
+more thick and noisy jungle.  From the strange animal like sounds all around
+you, you wonder if perhaps you should take the only visable way out.  You can
+see the jungle entrance through the trees to the east.    
+~
+6 0 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 618
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 624
+S
+#624
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 625
+S
+#625
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 654
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 619
+D3
+~
+~
+0 0 624
+S
+#626
+Path in the jungle~
+   This path, though somewhat overgrown with small plants, seems to be well
+used.  Looking closely at the ground you can make out bootprints in the dirt.
+The only type of life that you can hear or see though, is that of the jungle
+animals.  A strange rustling in the trees above you makes you think you should
+continue on.  To the west is the jungle entrance, still visible through the
+trees.  The path continues to the east, and all other directions is thick
+jungle.    
+~
+6 0 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 627
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 618
+S
+#627
+Path in the jungle~
+   The path here is somewhat hard to follow due to all the vegitation.  The
+only really helpful guide are the broken branches and dead steped on plants.  
+You can see a small clearing through the trees to the east.  As you continue to
+stand here you notice your feet are slowly sinking in the mud.  Perhaps you
+should continue on.  The path continues to the east and west, jungle is
+everywhere else.    
+~
+6 0 3
+D0
+~
+~
+0 0 622
+D1
+~
+~
+0 0 628
+D2
+~
+~
+0 0 621
+D3
+~
+~
+0 0 626
+S
+#628
+Jungle clearing~
+   This is a small clearing in the jungle where for some reason there are no
+plants.  The plants though are not what you wonder about once you notice there
+is a human skeleton laying here.  The skeleton is partialy buried in the dirt
+and you can tell by the yellow look of the bones that it has been here a long
+while.  Strangely though it is stretched out so the arms are pointing to the
+north.  All you can see to the north is more jungle though.  To the west is the
+path, and more and more jungle everywhere else.    
+~
+6 0 3
+D0
+~
+~
+0 0 629
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 627
+S
+#629
+Deep in the jungle~
+   Deep in the jungle here light gets through the tops of the trees in only a
+few spots.  The air here smells of strange flowers, mold, and other unknown
+types of vegitation.  Off the path now you are not sure which way to go.  To
+the south you can make out the clearing with the bones in it, but all you can
+see in the other directions is more jungle.  So which way will you go?  Risk
+the jungle or seek the only clear path?    
+~
+6 64 3
+D0
+~
+~
+0 0 630
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 628
+D3
+~
+~
+0 0 622
+S
+#630
+Path in the jungle~
+   The path is now very clear and well used.  It seems whoever is on this
+island comes this way a lot.  You still do not see any life other than that of
+animals, but the well beaten path leads off to the north towards a cliff.  The
+jungle is still around you in other directions, so be careful not to wonder
+off.    
+~
+6 0 3
+D0
+~
+~
+0 0 631
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 629
+D3
+~
+~
+0 0 622
+S
+#631
+Beside a cliff~
+   The path continues until it reaches the cliff to the west.  As you look at
+the cliff you notice a ways up there is a cave.  An old rope ladder hangs down
+from the cave giving you what looks like a safe way to climb up.  You're not
+sure but you think you can hear voices coming from the cave.  Whoever inhabits
+this island is up there.  The path leads back to the south of course.  Except
+for that and the cliff there is only more jungle.    
+~
+6 0 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 622
+D2
+~
+~
+0 0 630
+D4
+~
+~
+0 0 632
+S
+#632
+Cave entrance~
+   You are standing at the top of the cliff just inside the cave.  You can see
+way out over the jungle to the east and have no idea how you made it here.  
+The cave walls consist of a dark grey rock, and you can see where years of
+dripping water has made small pools in various areas.  Stalactites line the
+roof of the cave looking like they are about to break off and fall on you.  
+Aside from the sound of dripping water, you can make voices to the west.    
+~
+6 0 0
+D3
+~
+~
+0 0 633
+D5
+~
+~
+0 0 631
+S
+#633
+Pirate Hideout~
+   A little ways into the cave you stand at the entrance to a pirate hideout.
+These must be the inhabitants of the island that you saw signs of in the
+jungle.  You can now clearly hear loud voices coming from the hideout to the
+north.  Of pirates singing badly off key, and fighting amoungst themselves.  
+This could be a ruthless place to enter, for who knows what the pirates might
+do to uninvited guests.    
+~
+6 4 0
+D0
+~
+Door of rotting wood.~
+1 0 634
+D1
+~
+~
+0 0 632
+S
+#634
+Corridor~
+   Walking down the main hall in the hideout, you don't see much.  The hallway
+is pretty simple and except for the metal torch holders on the walls is empty.
+You think that these pirates must have bad tastes, for even the torch holders
+are tacky and don't go well with the rock.  To the east is the pirates den,
+from which you can hear some noise.  Perhaps a nice game of chop poker is being
+played in there?  The hall continues to the north and the hideout's exit is to
+the south.    
+~
+6 0 0
+D0
+~
+~
+0 0 635
+D1
+~
+~
+0 0 636
+D2
+~
+Door of rotting wood.~
+1 0 633
+S
+#635
+Corridor~
+   Walking down the main hall in the hideout, you don't see much.  The hallway
+is pretty simple and except for the metal torch holders on the walls is empty.
+You can hear some very loud snoring coming from the room to the east.  As you
+look towards the room from which this annoying sound is coming from, you see
+the pirates sleeping chamber.  You don't understand how any of them could sleep
+together when they snore that loud.  To the west looks to be a small storage
+room, probably for the stuff these guys have stolen.  The hallway continunes to
+the north and to the south.    
+~
+6 0 0
+D0
+~
+~
+0 0 641
+D1
+~
+~
+0 0 637
+D2
+~
+~
+0 0 634
+D3
+~
+~
+0 0 640
+S
+#636
+Pirate's den~
+   This room is a bit more decorated than the hall.  There are some tapistries
+along the walls, but none of them go together.  Some are of the history of
+different familes, others show great battles, and some are of a religious
+nature.  In the middle of the room there is a round wooden table with chairs
+surrounding it.  This looks to be the room where the pirates go to relax or
+play games.  The floor here is covered with a big green rug with holes all over
+it.  Again you wonder about these pirates tastes.    
+~
+6 0 0
+D3
+~
+~
+0 0 634
+S
+#637
+Sleeping area for the pirate's~
+   All around this room there are different types of beds.  A few hamocks hang
+in one corner, a wooden bunk in another.  These pirates don't seem to care much
+about matching furniture, they just use whatever they steal.  There is a few
+burnt out torches stuck in the walls and clothes lay in piles around the floor.
+This room looks like it never gets cleaned, the dirty clothes smell of sweat,
+and some have mold growing on them.  The only thing that saves your nose from
+this disgusting stinch is the light smell of some kind of stew coming from the
+east.    
+~
+6 0 0
+D1
+~
+~
+0 0 638
+D3
+~
+~
+0 0 635
+S
+#638
+Pirate's Mess~
+   The sweet smell of fresh monkey brains, frog legs, and crab meat fills the
+air.  You can tell that the main source of this wonderful scent is to the
+south.  This room is decorated much like the others.  Tapistries that don't
+mach, rusty old lanterns, and a few broken tables missing half their chairs.  
+All this room seems to be used for is a place to eat whatever food they can get
+their hands on.  To the south, from which the smell that is making your mouth
+water comes, is the food prep area.  A door to the east leads somewhere, though
+from the look of it, you're not sure you want to find out.    
+~
+6 0 0
+D1
+~
+Door~
+1 0 648
+D2
+~
+~
+0 0 639
+D3
+~
+~
+0 0 637
+S
+#639
+Food prep area~
+   This small room is filled with all different kinds of dead animals.  You can
+only figure out what a few of them are.  A monkey here, a toad there, and a few
+others.  They all seem to be used in the stew that is cooking in a big black
+pot in the center of the room.  The pot sets over a pit filled with burning
+wood to keep it worm.  The smoke seems to escape through a natural vent in the
+ceiling.  The rest of the room is covered in the blood from the slaughtering
+and cleaning of the animals.  The smell is almost too much for you as you
+consider taking the only exit out of here to the north.    
+~
+6 0 0
+D0
+~
+~
+0 0 638
+S
+#640
+Pirate Storage~
+   This small room is filled with big wooden crates, shelves containing all
+kinds of junk, and a few chests with who knows what in them.  Most of the junk
+on the shelves is either broken or chipped.  The crates and chests are covered
+in dust from siting here so long.  It doesn't look like the pirates bother with
+this room much, at least not anymore.  Even the floor of this room has peices
+of broken glass, old torn up books, and various other usless stuff scatterd
+around it.  The only exit from this room is hallway back to the east.    
+~
+6 0 0
+D1
+~
+~
+0 0 635
+S
+#641
+Corridor~
+   Walking down the main hall in the hideout, you don't see much.  The hallway
+is pretty simple and except for the metal torch holders on the walls is empty.
+You can hear dripping water to the east, and the sunlight also penetrates the
+hideout from that direction.  To the south you can make out the sound of
+snoring, and considering how well you can make it out, it must be loud.  The
+only other exit is to the north, which looks to be the dungeon.    
+~
+6 0 0
+D0
+~
+~
+0 0 645
+D1
+~
+~
+0 0 642
+D2
+~
+~
+0 0 635
+S
+#642
+Water room~
+   Water drips from the ceiling of this room in many places making an almost
+musical sound.  All the water ends up in a big pool in the center of the room.
+As you look closer at the pool you can see all the way to the bottom.  The
+water is fresh and clean, probably the only thing the pirate's have that is.  
+This room is empty except for the pool, and the only light comes in from an
+opening to the east.  The only other exit is west, to the hideout.    
+~
+6 0 0
+D1
+~
+~
+0 0 647
+D3
+~
+~
+0 0 641
+S
+#643
+Rope bridge~
+   This bridge sways as you walk on it, and the boards creek with every step.
+Below you there is a good fourty foot drop, and you wonder if the bridge will
+hold.  As you run your hands along the rope you notice it's very old and has
+mold on it in some places.  As the wind blows the bridge begins to sway even
+more, and your only thought is to hurry and get off it.  So which way to go,
+back west to the hideout, or east to the dock.    
+~
+6 260 1
+D1
+~
+~
+0 0 644
+D3
+~
+~
+0 0 647
+S
+#644
+The Dock~
+   Standing on the dock you can smell the salty sea water, and listen to the
+pirate's ship knocking against it with each set of waves.  There are a lot of
+wooden crates siting around, more stolen goods you're sure.  You can hear
+singing coming from the ship to the east, badly off key of course.  To the west
+is the rope bridge leading back up to the hideout.  All other directions lead
+to the thick jungle.    
+~
+6 4 1
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 657
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 643
+S
+#645
+Dungeon~
+   The air is cold here, and there is a lot os moisture around the room.  This
+is a very empty room, much like the corridor, but in one corner there is a
+wooden chair.  Prolly for the dungeon guard to sit on.  This dungeon isn't even
+that big, there is but one cell to the east.  The pirates must not care for
+keeping prisoners much.  The only other exit is to the south, back to the
+hallway.    
+~
+6 0 0
+D1
+~
+cell~
+1 610 646
+D2
+~
+~
+0 0 641
+S
+#646
+Dungeon cell~
+   Much like the rest of the dungeon, this room is very cold and damp.  Water
+trikles down the corners of the walls.  This room is completley bare of any
+furniture or even a light.  There is not even a pile of hay for the prisoners
+to lay on.  The only exit is back the to dongeon west.  Perhaps you should go
+before you get locked in.    
+~
+6 0 0
+D3
+~
+cell~
+1 610 645
+S
+#647
+Ledge~
+   You are standing out on a ledge, which when you look down is a ways up.  A
+fall from this height would probably break a few bones if not kill you.  There
+is a nice cool breeze up here and you can smell the ocean.  To the west is the
+pirate hideout, but to the east there is a rope bridge.  The bridge goes down
+to a dock that you couldn't see from the other side of the island.  There is a
+big ship anchord there, and from the black flag with a skull and crossbones,
+you can tell it must be the pirate's.    
+~
+6 0 0
+D1
+~
+~
+0 0 643
+D3
+~
+~
+0 0 642
+S
+#648
+The business room~
+   As you enter this room you leave behind the great smell of stew and you are
+overcome with a new odor.  This time it is really nasty, and you almost lose
+the contents of your stomach.  You look around trying to find out what could
+posibly be this bad when you realize this is the toilet.  A small hole in the
+center of the room, that goes way down beyond your site, and a pile of leaves
+next to it is all that's here.  Perhaps going back from the way you came is a
+good idea.    
+~
+6 0 0
+D3
+~
+Door~
+1 0 638
+S
+#649
+Near the island beach~
+   The beautiful tropical island is just to the north.  It is covered by a
+thick green jungle, and you can already see the colorful birds flying around
+it.  As far as you can tell this island is uninhabited.  The look of the bright
+golden beach and all the green vegitation just makes you want to stay here and
+relax forever.  To the south is the vast sea with no other land in sight.  
+~
+6 68 7
+D0
+~
+~
+0 0 615
+D2
+~
+~
+0 0 612
+S
+#651
+Secret grove~
+   You have stumbled accross a secret gove somehwere in the middle of the
+jungle.  This area seems very peacful, and you get a feeling of happiness just
+from being here.  Even the water in the stream is pure and crystal clear.  The
+smell of the air is pure, but not over scented.  All around is thick jungle,
+should you leave this place of harmony you most likely would not find your way
+back.  Though there does also seem to be a small path leading down under the
+grove.    
+~
+6 0 0
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 621
+D3
+~
+~
+0 0 621
+D5
+~
+~
+0 0 652
+S
+#652
+Under the grove~
+   The path takes you under some thick trees with low overhanging branches, and
+down into a small ravine you hadn't seen before.  Your boots get a little muddy
+from steping in wet spots.  Everytime to push past a branch or bush it snaps
+back covering your path.  Though this area has obviously not been found by
+anyone in ages you can still make out the small overgrown path leading south
+through some more thick trees.    
+~
+6 0 0
+D2
+~
+~
+0 0 653
+D4
+~
+~
+0 0 651
+S
+#653
+Ancient shrine~
+   You come out of some thick trees and now stand before a very old shrine.  
+This shrine is not very big and the vegitation has grown through and around it.
+Upon closer inspection though you can make out four symbols, perhaps the name
+of the god this shrine was built for.  The first symbol is a kinda of round
+circle shape.  The second one is a long vertical line.  The third is a smaller
+circle shape with a curved line coming off one side.  The last is like the
+second but has two more lines coming off it to the right.  Such strange symbols
+these are, and you wonder who built this place.  Whoever it was must have died
+hundreds of years ago.    
+~
+6 128 0
+D0
+~
+~
+0 0 652
+D5
+~
+stone tile~
+2 621 667
+S
+#654
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 621
+D1
+~
+~
+0 0 622
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 680
+S
+#657
+Main Deck~
+   Standing on the main deck of the pirate ship you wonder how this thing
+floats.  Every board you step on seems to bend and creek, making your presence
+very obvious.  The pirates on the ship seem a lot stronger looking and more
+agresive then those in the hideout.  Must be only the tough ones get to go on
+the raids.  I'd be careful if I were you, they don't seem to like your being
+here.  To the north is the bow of the ship, east be the plank, dare you walk
+it?  The ships cabin is to the south and the dock is west.    
+~
+6 0 0
+D0
+~
+~
+0 0 658
+D1
+~
+~
+0 0 659
+D2
+~
+~
+0 0 661
+D3
+~
+~
+0 0 644
+S
+#658
+Ship's bow~
+   As you stand at the bow of the ship you can look out over the sea.  The
+clear blue horrizon, it makes you wish you were a pirate.  To sale on the open
+sea, but then you'd also have to pillage and plunder to be a pirate.  You can
+feel the boat gentley rocking back and forth under you.  As you stand around a
+while you start to feel a bit uneasy.  Perhaps you should get off the ship
+before you get sick.    
+~
+6 0 0
+D2
+~
+~
+0 0 657
+S
+#659
+The Plank~
+   You be standing on the pirate's plank.  Bellow you is the sea water, and
+you can see the sharks fins circling.  All the pirates on the ship stare at
+you, some with big smiles.  They must be wondering why anyone would actually
+step out on the blank of their own free will.  Be you smart you would head back
+west to the deck.  Be you a crazy nut who thinks they can take on all those
+sharks in the water, go east and jump in and &RDIE&n.    
+~
+6 4 0
+D1
+~
+~
+0 0 660
+D3
+~
+~
+0 0 657
+S
+#660
+Shark Food~
+   SO YEE THOUGHT YEE COULD TAKE ON ALL DA SHARKS EH?  GUESS YEE WAS WRONG.  
+AS YOU ARE QUICKLY TORN APART BY THE SHARKS, ALL YOU NOTICE IS PAIN ALL OVER
+YOUR BODY, AND LAUGHTER FROM THE SHIP.  AT LEAST YOUR DEATH ENTERTAINED THE
+PIRATES.    
+~
+6 4099 0
+D3
+~
+~
+0 0 659
+S
+#661
+Ships Cabin~
+   As you look around you notice that the inside or the ship is a lot nicer
+than the hideout.  The floor is covered with a beautiful red carpet, and the
+walls have extreamly detailed paintings.  Though the paintings be of pillage
+and death, but they are still very nicely done.  Golden lanterns line the hall
+making the cabin bright with light.  A door to the west has the word Captain
+carved into it.  To the south is a room of bunks for the pirates, and the cabin
+boys room is to the east.    
+~
+6 0 0
+D0
+~
+~
+0 0 657
+D1
+~
+~
+0 0 662
+D2
+~
+~
+0 0 663
+D3
+~
+Door~
+2 612 664
+S
+#662
+Cabin Boy's Cabin~
+   This small room doesn't contain much.  Just a small bunk in oner corner, a
+table with a chair in the other.  The cabin boy must not get many of the goods
+that the pirates steal.  Either that or he stores them elsewhere.  The only
+light in this room that you can see comes from a porthole on the east wall.  
+As you look around for a way out of this dull room, you notice the only way out
+is west, from which yee came.    
+~
+6 0 0
+D3
+~
+~
+0 0 661
+S
+#663
+Ship bunkroom~
+   This room is filled with bunks for the pirates to sleep in.  They line the
+walls and even the middle of the room.  You can feel the ship gentley rocking
+back and forth here.  Probably why the bunks are in this room, the rocking
+would be good to help the pirates sleep.  Other than the bonks there is but a
+few lanterns to light the room.  The only exit is to the north, back to the
+cabin hall.    
+~
+6 0 0
+D0
+~
+~
+0 0 661
+S
+#664
+Captain's room~
+   This big room is very nicely decorated.  The whole floor is carpeted, and
+the walls have beautiful paintings and tapistries.  Golden latners, silver
+candlesticks, and all kinds of other riches.  This can be no one other than the
+captains room.  For it seem everything the pirates have that is worth anything
+is here.  The gold and silver alone in this room mush be worth a furtune.  The
+eixts are east to the cabin and a door to the south.    
+~
+6 0 0
+D1
+~
+Door~
+2 612 661
+D2
+~
+Door~
+2 616 665
+S
+#665
+Booty room~
+   This a small room, nothing here but shelves and shelves of treasure.  
+Everywhere around this room there is gold, silver, diamonds, emeralds...  You
+name it, it's prolly here.  This obviously where the pirates store all their
+goodies.  Just think what this stuff is worth?  As that thought goes through
+your mind your eyes show your suden greed.  Well, you got here so it's yours
+for the taking!    
+~
+6 262144 0
+D0
+~
+Door~
+2 616 664
+S
+#666
+The Cave of the Tarassque~
+   This is a huge cavern deep in the earth.  In the center, filling most of the
+room, is a giant creature.  The Tarassque.  The terror that lies in everyones
+knightmares, even if they do not know it.  The most feared, and dreaded
+creature know to exist.  Though most believe it a myth.  The Tarrasque spends
+nearly all it's life in hibernation, so will not attack you.  But dare you
+attack it, it will only result in your death.  So flee from this place, and
+never return.  Then again, if you woke it when you came in to the cave, it will
+attack.    
+~
+6 1048777 0
+D4
+~
+boulder~
+1 0 6022
+S
+#667
+Ancient temple entrance~
+   You are standing in the entrance to a very ancient underground temple.  As
+you look around you notice it is very dark and wet in here.  This place seems
+to have been abandond many centuries ago.  There are a lot of weeds and mold
+growing through the cracks in the stone walls.  Other than that though this
+place seems to have stay quite nicely intact for being so old.  The walls are
+covered with some type of symbols, probably an anciet language used by those
+who worshiped here.    
+~
+6 13 0
+D1
+~
+~
+0 0 672
+D2
+~
+~
+0 0 676
+D3
+~
+~
+0 0 668
+D4
+~
+stone tile~
+1 621 653
+S
+#668
+Temple hall~
+   Walking down the hall of the ancient temple you almost slip and fall with
+every step.  The stone floor is wet with some type of slippery slime.  It is
+very dark in here so you can not see well, but you could swear you saw
+something move further down the hall to the west.  The entrance to the temple
+is to the east, should you not be willing to risk whatever that is that's
+moving
+~
+6 9 0
+D1
+~
+~
+0 0 667
+D3
+~
+~
+0 0 669
+S
+#669
+Temple hall~
+   You can barely stay standing in this part of the hall.  The slime that coats
+the floor and the walls is geting on your stuff.  You really wish your light
+would show more, but in this temple it is dark no matter what it seems.  The
+hall continues to the west and east to the entrance.    
+~
+6 9 0
+D1
+~
+~
+0 0 668
+D3
+~
+~
+0 0 670
+S
+#670
+Temple hall~
+   This long hall of the temple cones to and end at an open stone arch.  The
+area here is still slimy and hard to stand.  When you finaly get your balance
+you look at the symbols around the arch.  They are all of skeletons, skulls,
+and other forms of death.  This makes you not so sure about entering through
+this arch.  As you hold up your light to try and see what's there, you can not
+penetrate the darkness.  You feel certain that entering the room to the west
+means &RDEATH&n, so you should head back down the hall to the east.    
+~
+6 9 0
+D1
+~
+~
+0 0 669
+D3
+~
+~
+0 0 671
+S
+#671
+Death~
+   AS YOU STEP INTO THE DARKNESS YOUR BODY IS FILLED WITH SUDEN AND
+UNIMAGINABLE PAIN.  YOU TRY TO OPEN YOUR MOUTH TO SCREAM BUT IT IS TOO LATE.  
+BEFORE YOU CAN EVEN BLINK YOU ARE DEAD.    
+~
+6 4103 0
+D1
+~
+~
+0 0 670
+S
+#672
+Temple hall~
+   The hall is very dark, even with your light you can hardly see whats ahead.
+The stone floor under your feet feels like it's sloping a bit downward.  You
+can hear dripping water farther down the hall to the east.  As you listen
+closely you think you can hear the sound of runing water too.  The temple
+entrance is to the west, east is darkness.    
+~
+6 9 0
+D1
+~
+~
+0 0 673
+D3
+~
+~
+0 0 667
+S
+#673
+Temple hall~
+   The floor really starts to slope downward here, and with some type of slime
+coating the walls and floor you find it hard to remina standing.  Farther down
+the hall to the east you can see only the it starts to slope even more.  The
+rest is darkness.  The sound of the runing water is easy to hear here.  West
+will take you back to the temple entrance.    
+~
+6 9 0
+D1
+~
+~
+0 0 674
+D3
+~
+~
+0 0 672
+S
+#674
+Temple hall~
+   The slime on the floor of this nearly steep hall almost makes you fall and
+slide into the room to the east.  Lucky you are able to grab onto the sides of
+the stone arch doorway to the room.  Once you regain your abalace, you look
+closer at the doorway.  Carved into the arch are different pictures of new born
+babies, seeds, and other things representing life.  As you hold up your lantern
+to see what is in this room you slip and almost fall again.  You can either go
+in and risk it, or climb back west to the temple entrance.    
+~
+6 9 0
+D1
+~
+~
+0 0 675
+D3
+~
+~
+0 0 673
+S
+#675
+Life~
+   This large chamber is filled with light coming from holes in the ceiling.  
+The air here is sweet and fresh.  The purest air you have ever breathed.  As
+you look around you see beautiful plants growing all around this room.  You
+feel at peace and harmony here, like all that is wrong with the world is no
+more.  The only exit is back west, but why leave?  You are in paradise.  There
+is even a river flowing through the room.    
+~
+6 12 0
+D3
+~
+~
+0 0 674
+S
+#676
+Ancient temple chamber~
+   Water drips down on your head from the high ceiling of this chamber.  The
+air is cold and does not circulate at all in here.  There is mold and other
+types of fungus growing in the cracks of the floor and walls.  Except for the
+dripping water there is no sound here.  Against the west wall there is a tall
+dark statue, and against the east wall there is a tall bright statue, which
+lights the room.  The temple entrance is noth, and there is small hall leading
+to the south.    
+~
+6 8 0
+D0
+~
+~
+0 0 667
+D2
+~
+~
+0 0 677
+S
+#677
+Ancient temple hall~
+   This hall is not very high and you have to duck just so you don't hit your
+head.  The stone walls are very cold to the touch and they feel almost moist.
+It is dark in here for there is no torches or lanterns on the walls.  Even if
+there were they would have burned out many years ago.  To the south you can see
+the hall opens into a small chamber, and to the north is the main chamber of
+the temple.    
+~
+6 9 0
+D0
+~
+~
+0 0 676
+D2
+~
+~
+0 0 678
+S
+#678
+Ancient temple chamber~
+   As you step out of the hall to the north you straighten back up.  Theis
+chamber is not very big but there is at least room to stand.  The look of this
+chamber is much like the look of the rest of the temple.  Stone floor and walls
+with unknown types of mold growing here.  The air is cold and has a stale smell
+to it.  The only thing in this chamber is a statue of the ancient god that this
+temple was built for.  The thing you really notice about the statue is what it
+is holding.  A large sphere rests in it's hands.  The sphere is dark on one
+side and bright full of light on the other.  The dark and the light seem to
+come together in the middle to make what is neither dark nor light.  You never
+thought this posible and could never explain the sight to anyone.  You have to
+see it to believe it.  It's as if in the middle there was nothing, but yet
+there is.    
+~
+6 9 0
+D0
+~
+~
+0 0 677
+S
+#679
+Leviathans Cave~
+You are in an unfinished room.
+~
+6 0 0
+S
+#680
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 3
+D0
+~
+~
+0 0 681
+D1
+~
+~
+0 0 621
+D2
+~
+~
+0 0 621
+D3
+~
+~
+0 0 621
+S
+#681
+Lost in the jungle~
+   All around you can see nothing but more and more trees.  For you are lost
+somewhere in the middle of the jungle.  The air is full of the sounds of all
+kinds of wild animals.  In the trees around you you can hear the leeves
+rustling, but there is little wind this deep in.  Everywhere you look there is
+trees, so thick here you can hardly see where any direction might lead.  You
+probably should not have ventured this far in, but hopefully, you will find
+your way out.  Soon you hope, before something else finds you.    
+~
+6 64 0
+D0
+~
+~
+0 0 622
+D1
+~
+~
+0 0 651
+D2
+~
+~
+0 0 622
+D3
+~
+~
+0 0 622
+S
+#690
+River cave~
+This small cave is somewhat murky, but is the only exit from Rome where you
+won't get lost in the desert.  An old blocked up path used to lead down to an
+underground lake, Perhaps you can purchase a boat from the old captain, he
+looks as if he needs the money.    
+~
+6 0 0
+D2
+~
+~
+0 0 12029
+S
+#698
+Olaf's Pit of Despair~
+   Stone walls line this pit all around.  The floor appears to be made up of a
+hard clay that you can barely dig into.  Water, dripping from an unseen source
+above, every once in a while pelts you on the head.  Looking up you see no end
+to this pit.  As though there is no exit.  The only thing left for you to do is
+sit and wait for insanity to overcome you.    
+~
+6 1310969 0
+S
+#699
+Olaf's thinking room~
+   A small room with nothing but plain rock walls.  Except for the small couch
+and a plain wooden table with one chair there is nothing much in here.  The
+light that dimly fills the room even comes from an unknown source.  All around
+you there is nothing but rock, as if this room is inside a mountain somewhere
+with no exit.  You got here somehow, so unless you want to sit and think, you
+can find your way out.    
+~
+6 8 0
+S
+$~

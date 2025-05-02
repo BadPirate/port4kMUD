@@ -1,0 +1,659 @@
+#12000
+ring pewter~
+a pewter ring~
+There is a pewter ring lying here.~
+~
+11 96 3
+0 0 0 0
+5 15000 2500
+A
+13 10
+A
+2 1
+#12001
+belt bronze~
+a bronze belt~
+There is a bronze belt on the ground here.~
+~
+9 32 2049
+4 0 0 0
+5 10000 500
+A
+1 -2
+A
+18 1
+#12002
+helmet roman combat~
+a Roman combat helmet~
+A Roman combat helmet has been left here.~
+~
+9 1 17
+8 0 0 0
+25 12000 8000
+A
+2 -2
+A
+18 1
+#12003
+whistle coach~
+a coach's whistle~
+A coach's whistle has been left here.~
+~
+8 128 5
+0 0 0 0
+1 1000 200
+#12004
+stethoscope object~
+a stethoscope~
+There is an odd object laying on the ground here.~
+~
+11 256 5
+0 0 0 0
+1 15000 2000
+A
+18 4
+A
+19 -3
+#12005
+hairpin~
+a hairpin~
+A woman's hairpin is lying here.~
+~
+11 256 17
+0 0 0 0
+1 3000 500
+A
+1 -1
+A
+3 1
+#12006
+apple~
+an apple~
+A delicious looking apple has been left here.~
+~
+19 0 1
+5 0 0 0
+1 5 5
+#12007
+orange~
+an orange~
+A sun-ripened orange has been left here.~
+~
+19 0 1
+6 0 0 0
+1 6 6
+#12008
+sandals leather~
+a pair of leather sandals~
+A pair of leather sandals has been dropped here.~
+~
+9 0 65
+2 0 0 0
+2 250 41
+#12010
+hotdog frank dog~
+a hotdog~
+A hotdog loaded with chili and onions has been left here.~
+~
+19 0 1
+18 0 0 0
+1 11 11
+#12011
+bracelet silver gold~
+a silver and gold bracelet~
+A bracelet, made from silver and gold, has been carelessly left here.~
+~
+11 130 4097
+0 0 0 0
+14 10000 8000
+A
+12 25
+A
+19 -3
+#12012
+ring sapphire~
+a sapphire ring~
+A sapphire ring has been left here.~
+~
+11 0 3
+0 0 0 0
+20 35000 5500
+A
+18 2
+A
+17 -10
+#12013
+pendant jade~
+a jade pendant~
+A beautiful jade pendant has been left here.~
+~
+11 0 5
+0 0 0 0
+30 16500 6000
+A
+3 1
+A
+4 2
+#12014
+robe froboz~
+Froboz' robe~
+Froboz' robe has been dropped here.~
+~
+11 0 1025
+0 0 0 0
+5 15000 2500
+A
+17 -6
+A
+24 -4
+#12015
+sword tempered~
+a tempered sword~
+A nasty looking tempered sword is lying here.~
+~
+5 12290 8193
+0 3 8 3
+16 15000 5000
+A
+18 -2
+#12016
+sword quenched~
+a quenched sword~
+A very bloody, but quenched, sword has been left here.~
+~
+5 12320 24577
+0 3 5 3
+14 10000 4000
+#12017
+bracers moorish~
+a pair of Moorish bracers~
+A pair of Moorish bracers has been dropped here.~
+~
+9 1 257
+8 0 0 0
+15 25000 10000
+A
+2 -2
+A
+19 2
+#12018
+plate breast roman combat~
+a Roman combat breast plate~
+A piece of military combat plate has been left here.~
+~
+9 1 9
+8 0 0 0
+135 50000 9500
+A
+2 1
+A
+18 -2
+#12019
+boots combat~
+a pair of Roman combat boots~
+A pair of combat boots have been left here.~
+~
+9 1 65
+8 0 0 0
+45 8750 9000
+A
+1 2
+A
+19 -1
+#12020
+thunderbolt jupiter~
+Jupiter's Thunderbolt~
+Jupiter's Thunderbolt has been left here.~
+~
+5 13378 8193
+0 4 6 6
+22 100000 25000
+A
+18 3
+A
+19 3
+#12021
+loincloth red mars~
+a &rred &nloincloth~
+Mars' &rred &nloincloth is resting here.~
+~
+9 1026 2049
+15 0 0 0
+30 100000 20000
+A
+1 2
+A
+2 2
+#12022
+necklace crystal venus~
+a crystal necklace~
+Someone has left the crystal necklace of knowledge here.~
+~
+11 2 5
+0 0 0 0
+35 50000 12000
+A
+3 3
+A
+4 2
+#12023
+sandals winged mercury~
+a pair of winged sandals~
+Mercury's winged sandals have been left here.~
+~
+9 2049 65
+8 0 0 0
+14 75000 13000
+A
+2 2
+A
+14 100
+#12024
+scroll dark grey~
+a dark grey scroll~
+A scroll has been carelessly left here.~
+~
+2 32800 16385
+20 4 15 1
+2 5000 2000
+#12025
+scroll ornate~
+an ornate scroll~
+An ornate scroll has been left here.~
+~
+2 32768 16385
+18 10 10 0
+2 7000 3000
+#12026
+scroll plain~
+a plain scroll~
+A plain scroll is lying on the ground.~
+~
+2 32768 16385
+15 7 15 1
+2 8000 2200
+#12027
+bag herbs~
+a bag of herbs~
+There is a small, sweet-smelling bag here on the ground.~
+~
+3 2 16385
+30 4 4 43
+5 15000 2000
+#12028
+staff kodarta~
+a Kodarta staff~
+A Kodarta staff has been carelessly left here.~
+~
+4 0 16385
+17 3 3 15
+6 0 4000
+#12029
+wand prototype~
+a prototype wand~
+There is a prototype of a new magical wand lying here.~
+~
+3 672 16385
+30 4 3 26
+26 20000 13000
+A
+18 -3
+A
+24 8
+#12030
+flask potion blaze orange~
+a flask~
+There is a flask, containing a blaze orange potion, resting here.~
+~
+10 0 1
+9 4 17 33
+8 1000 100
+#12031
+mace executioner~
+an executioner's mace~
+An executioner's mace is lying here.~
+~
+5 20608 8193
+0 5 1 7
+13 3000 18
+A
+2 -2
+A
+1 -2
+#12032
+beer mug~
+a mug~
+A frosty mug has been left on the ground here.~
+~
+17 0 1
+3 3 1 0
+3 10 5
+#12033
+key rusted~
+a rusted key~
+There is a rusted key here.~
+~
+18 4 1
+12033 0 0 0
+1 0 0
+#12034
+key double~
+a double sided key~
+A double sided key has been left here.~
+~
+18 4 1
+12034 0 0 0
+10 0 0
+#12035
+key diamond~
+a diamond studded key~
+A diamond studded key is sitting on the ground.~
+~
+18 4 1
+12035 0 0 0
+30 0 0
+#12036
+key pearl~
+a key with a pearl handle~
+A key with a pearl handle is sitting on the ground.~
+~
+18 4 1
+12036 0 0 0
+10 0 0
+#12037
+key aquamarine~
+an aquamarine key~
+There is an aquamarine colored key here.~
+~
+18 4 1
+12037 0 0 0
+10 0 0
+#12038
+key opal~
+an opal key~
+An opal key has been left here.~
+~
+18 4 1
+12038 0 0 0
+20 0 0
+#12039
+key steel~
+a steel key~
+A steel key is lying on the ground.~
+~
+18 4 1
+12039 0 0 0
+1 0 0
+#12040
+key rome city~
+the Key to the City of Rome~
+The Key to the City of Rome is lying on the ground here.~
+~
+18 0 1
+0 0 0 0
+5 0 0
+#12041
+backpack skin goat pack~
+a goat skin backpack~
+A small pile of goat skin is lying on the ground here.~
+~
+15 0 1025
+800 0 -1 0
+5 1000 0
+A
+14 20
+#12042
+potion herbal blue~
+a smelly &bblue herbal&n potion~
+A small bottle of some type of &bblue&n potion is siting in the dirt here.~
+~
+10 0 1
+100 28 0 0
+6 5000 0
+#12043
+scroll paper defence~
+a scroll of defence~
+A neatly rolled scroll is lying on the ground waiting to be picked up.~
+~
+2 64 1
+100 1 3 36
+1 15000 0
+#12044
+leggings roman ~
+a pair of Roman combat leggings~
+A set of Roman leggings are lying in the dirt here.~
+~
+9 8192 33
+10 0 0 0
+12 5000 0
+A
+14 40
+#12045
+vambraces roman ~
+a pair of Roman combat vambraces~
+A set of Roman vambraces are lying in the dirt here.~
+~
+9 0 257
+10 0 0 0
+10 7000 0
+A
+1 1
+#12046
+gauntlets roman~
+Roman combat gauntlets~
+A pair of Roman combat gauntlets are lying in the dirt here.~
+~
+9 0 129
+10 0 0 0
+10 5000 0
+#12047
+map Rome post~
+a map of Rome~
+A small wooden post with a map of Rome is stuck in the ground here.~
+~
+0 0 0
+0 0 0 0
+0 0 0
+E
+map rome post~
+&G---=&R<&B{&CBasic Map Of Rome&B}&R>&G=---&n
+&rA&n:Armour
+&gB&n:Bank            &wD&n &YH&n             &RG&n
+&yBK&n:Bakery          \|             |
+&bC&n:Clay Avenue    &mCM&n-&rT&n>DOWN>&gTS&n  &yBK&n-&MN&n-&rA&n
+&mCM&n:Commons         /|             |
+&cCO&n:Courier       &CNP&n &gB&n             &MN&n  &cCO&n&GGS&n
+&wD&n:Donations                       |  | | 
+&RG&n:Gate                       &rT&n<UP<&gTS&n-&bC&n-&bC&n-&RG&n
+&GGS&n:General Store                  |
+&YH&n:Healer                  &RG&n-&yR&n-&yR&n-&yR&n-&MN&n
+&BM&n:Magic Shop              |       |
+&MN&n:Nero Drive              &bW&n       &MN&n
+&CNP&n:Newbie Portal                  |
+&WP&n:Pawn Shop                     &WP&n-&RG&n-&BM&n
+&yR&n:Road
+&rT&n:Temple
+&gTS&n:Town Square
+&bW&n:Weapon Shop
+~
+#12072
+unfinished object~
+an unfinished object~
+An unfinished object is lying here.~
+~
+2 0 1
+100 1 3 36
+1 10000 0
+#12078
+statue~
+a statue of Galaxie~
+&w&nA statue of the &g-<&wSTALKER&g>-&n clan member Galaxie is in the hall here.~
+~
+8 0 0
+0 0 0 0
+0 0 0
+#12079
+scroll recall~
+&w&nA &g-<&wSTALKER&g>-&n Scroll of Recall&n~
+A funny looking scroll is on the ground here.~
+~
+2 0 1
+100 42 0 0
+4 2001 0
+#12080
+scroll invisable~
+a &g-<&wSTALKER&g>-&n scroll of detect invis~
+A small scroll lays on the ground here.~
+~
+2 0 1
+100 19 0 0
+1 5000 0
+#12081
+potion strength~
+&na &g-<&nSTALKER&g>-&n potion of strength~
+A small potion sits on the ground here.~
+~
+10 0 1
+100 39 0 0
+1 1500 0
+#12082
+axe shadowave stalker~
+&wShadowave the &g-<&wSTALKER&g>-&w clan axe&n~
+A large axe with the word "Shadowave" on it is lying here.~
+~
+5 65608 8193
+0 8 5 6
+16 1000000 0
+A
+17 -20
+A
+18 4
+A
+19 4
+#12083
+scroll defence~
+a &g-<&wSTALKER&g>-&w scroll of defence~
+A small scroll lies on the ground here.~
+~
+2 0 1
+100 1 3 36
+1 15000 0
+#12085
+skiff boat~
+a small skiff~
+A small skiff is here.~
+~
+22 0 1
+0 0 0 0
+24 2000 0
+E
+skiff boat~
+   The small skiff is made of a light but sturdy wood.    
+~
+A
+19 5
+A
+13 50
+#12086
+steak catfish fish~
+a catfish steak~
+A catfish steak lies on the ground collecting dirt.~
+~
+19 0 1
+24 0 0 0
+5 30 0
+E
+catfish steak fish~
+   The steak is white with a faint blue tinge.  It is raw, but surely the fish
+it came from lives in a clean enough river that it is safe to eat...    
+~
+#12087
+statue~
+a statue of Iria~
+&w&nA statue of the &g-<&wSTALKER&g>-&n clan leader Iria is in the hall here.~
+~
+8 0 0
+0 0 0 0
+0 0 0
+#12088
+scroll all seeing~
+&w&nA &g-<&wSTALKER&g>-&n Scroll of All-Seeing~
+A tiny scroll lies on the ground here.~
+~
+2 64 16385
+100 18 20 19
+2 10000 0
+#12089
+board~
+&RT&Bournament &RB&Board&n~
+On the wall here hangs the &RT&Bournament &RB&Board&n~
+~
+12 0 0
+0 0 0 0
+0 0 0
+#12090
+box heirloom xiannah~
+the Xiannah family heirloom box~
+The Xiannah's family heirloom box sits in the middle of the room here.~
+~
+15 0 0
+10000 0 -1 0
+0 0 0
+#12094
+potion healing triumvirate~
+a &CTriumvirate&n potion of great healing.~
+A small potion lays on the ground here.~
+~
+10 0 1
+100 28 28 28
+10 22000 0
+#12095
+wand trium charming~
+&MClan &CTrium &MWand Of Charming&n~
+A small wand lies on the ground here.~
+~
+3 8388672 1
+100 5 5 7
+4 4500 0
+#12096
+bath marble~
+a marble bath~
+A large marble bath fills the room as it bubbles wiht hot relaxing water.~
+~
+23 0 0
+9000 9000 15 0
+9005 0 0
+#12097
+keg beer~
+a huge keg of beer~
+A huge wooden keg sits in the middle of the room filled with beer.~
+~
+23 0 1
+90000 90000 1 0
+90005 0 0
+#12098
+box donation stalker~
+&g-<&wSTALKER&g>- &nClan Donation Box~
+A huge donation box sits in the middle of the room, filled with stuff.~
+~
+15 0 0
+100000 1 -1 0
+0 0 0
+#12099
+certificate roman~
+a certificate of Roman citizenship~
+There is a certificate laying on the ground here.~
+~
+8 72 1
+0 0 0 0
+1 0 0
+E
+certificate~
+This herby certifies you as a loyal citizen of Rome.  Which entitles you to all
+rights of any roman citizen under the roman law.  Congradulations and welcome
+to our wonderful city.    
+
+The builder of Rome,
+Olaf
+~
+$~

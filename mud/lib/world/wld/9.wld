@@ -1,0 +1,884 @@
+#900
+Under the Phoenix Bridge~
+   The current is faster here as the water has to push its way through the
+smaller spaces under the bridge.  The long stone bridge above you looks rather
+old and weak.  Was that a stone that jsut fell off into the water over there?
+Perhaps it's strong enough and won't collapse on you.  You hope.    
+~
+9 256 7
+D1
+~
+~
+0 0 902
+D9
+~
+~
+0 0 901
+S
+#901
+West of the Phoenix Bridge~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  To the east you see the river flowing under the
+Phoenix Bridge.  Westward, the river slithers off into the plains before
+disappearing into the woods.    
+~
+9 0 7
+D3
+~
+~
+0 0 905
+D6
+~
+~
+0 0 900
+S
+#902
+East of the Phoenix Bridge~
+   The river is starting to flow a little faster on this side of the bridge.  
+Perhaps if one measured the water's depth, that would explain its speed.  You
+can see the river continues flowing westward as it exits from under the bridge.
+To the northeast, a small dock rots patiently.    
+~
+9 0 7
+D0
+~
+~
+0 0 924
+D3
+~
+~
+0 0 900
+D6
+~
+~
+0 0 903
+S
+#903
+A Small Dock~
+   This small wooden dock looks to be where all the local fishermen keep thier
+boats.  Tied to most places along the dock are small wooden boats.  A few of
+them have old fishing nets in them and a set of oars but most are empty.  
+Looking in a couple you notice they are slowly leaking water and figure that is
+probably the reason no ones using them.  If you have your own boat you can get
+on to the river Vertigo to the west.  There is a path going up that leads to
+the road.    
+~
+9 4 1
+D2
+   A small path heads up to the bridge arching across the River Vertigo.    
+~
+~
+0 0 923
+D9
+~
+~
+0 0 902
+S
+#905
+On the River Vertigo~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  Far to the west, the river is swallowed by the
+woods.  The river makes a quick change of direction to the north and flows
+smoothly onward to the east.    
+~
+9 0 0
+D1
+~
+~
+0 0 901
+D6
+~
+~
+0 0 906
+S
+#906
+A Fork In The River~
+   The Azrothian Plains surround the Vertigo.  Grass moves in slowly rolling
+waves outward from the river's banks.  The fish appear to be moving just below
+the surface of the water, but any good fisherman would tell you that they are
+swimming much deeper.  The river flows west and southwest.    
+~
+9 0 7
+D3
+~
+~
+0 0 907
+D9
+~
+~
+0 0 905
+S
+#907
+On The River Vertigo~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  Off to the west you can see the Haon-Dor Forest.
+You can see many types of birds flying around the tall dark trees.  The river
+continues northwest and east.    
+~
+9 0 7
+D1
+~
+~
+0 0 906
+D7
+~
+~
+0 0 908
+S
+#908
+On The River Vertigo~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  Off to the west you can see the Haon-Dor Forest.
+You can see many types of birds flying around the tall dark trees.  The river
+continues northwest and southeast
+~
+9 0 7
+D7
+~
+~
+0 0 909
+D8
+~
+~
+0 0 907
+S
+#909
+River Vertigo and Shady River Meet~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fishes swimming along.  Trees festooned with birds
+grow to either side of the river.  The Shady River emerges from the forest to
+the west and pours into Vertigo.  The river flows northwest and southeast.    
+~
+9 0 7
+D3
+~
+~
+0 0 989
+D7
+~
+~
+0 0 910
+D8
+~
+~
+0 0 908
+S
+#910
+On The River Vertigo~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  Off to the west you can see the Haon-Dor Forest.
+The further north on the river you are the more sparce the trees of the forest.
+The river continues north and southeast.
+~
+9 0 7
+D0
+~
+~
+0 0 911
+D3
+~
+~
+0 0 276
+D8
+~
+~
+0 0 909
+S
+#911
+On The River Vertigo~
+   The river flows steady and calm here.  The water is even clear enough to
+where you can make out the fish swimming along.  You feel almost at peace in
+this calm part of the river.  Off to the west you can see the Haon-Dor Forest.
+The further north on the river you are the more sparce the trees of the forest.
+The river continues north and south.    
+~
+9 0 7
+D0
+~
+~
+0 0 912
+D2
+~
+~
+0 0 910
+S
+#912
+A Fork In The River~
+   The river almost stops here as the Daggerfall river flows steadily into it
+from the east.  The force of the water coming directly from the east makes the
+river here flow in circles before continuing south.  The affect of the curent
+is either hipnotic or sickening.  You can't really decied what that feeling is.
+The river Vertigo continues north and south.  Off to the east is the Daggerfall
+river.    
+~
+9 0 7
+D0
+~
+~
+0 0 915
+D1
+~
+~
+0 0 913
+D2
+~
+~
+0 0 911
+S
+#913
+On the Daggerfall River~
+   The river speeds up a bit here as it heads down a hill and dumps into the
+Vertigo river.  You can hardly see any of Daggerfall from this point.  All that
+remains in sight is a small section of the western wall of Daggerfall.  
+Looking to the west you can see the Vertigo river flowing and a big forest on
+the other side of it.    
+~
+9 0 7
+D1
+~
+~
+0 0 914
+D3
+~
+~
+0 0 912
+S
+#914
+On The River Outside Daggerfall~
+   You are on the Daggerfall river right outside the west part of the city.  
+The river starts to flow faster to the west as it heads down a hill.  To the
+east is the western wall of the big city of Daggerfall.  There is a small hole
+in the wall where the river flows out of the city.  Lucky for you the hole is
+big enough for you to fit through should you wish to enter Daggerfall.    
+~
+9 0 7
+D1
+~
+~
+0 0 3074
+D3
+~
+~
+0 0 913
+S
+#915
+River Vertigo &CBeneath The Bridge&n~
+   The river slips beneath a small wooden bridge.  The water foams up around
+its supports.  You can actually hear it vibrating and creaking with the strain.
+The river runs north and south.  A small beach to the west gives you a place to
+pull up your boat.    
+~
+9 0 7
+D0
+~
+~
+0 0 916
+D2
+~
+~
+0 0 912
+D3
+~
+~
+0 0 919
+S
+#916
+On The River Vertigo~
+   The river flows fast here, the curent trying to pull you south.  There are
+quite a few sharp rocks sticking up out of the water on this part of the river.
+You got to be careful so as not to crash into any of the rocks.  The further
+north on the river you are the more sparce the trees of the forest.  The river
+continues north and south.    
+~
+9 0 0
+D0
+~
+~
+0 0 917
+D2
+~
+~
+0 0 915
+S
+#917
+On The River Vertigo~
+   The river flows fast here, the current pulls you steadily northward.  There
+are quite a few sharp rocks sticking up out of the water on this part of the
+river.  Far to the south, a bridge can be seen.  A few deer and slip out by the
+river banks to drink.  The river continues north and south.    
+~
+9 0 7
+D0
+~
+~
+0 0 918
+D2
+~
+~
+0 0 916
+S
+#918
+On the River Vertigo~
+   Several large bushes with candle-shaped flowers grow to either side of the
+river's banks.  The branches that dip down into the water are covered by moss.
+The water rushes past them, shaking the bushes with its enthusiastic motion.  
+The river runs north and south.    
+~
+9 0 7
+D0
+~
+~
+0 0 920
+D2
+~
+~
+0 0 917
+S
+#919
+A Small Beach~
+   This is a very small beach, if you can even call it that.  There is no real
+sand here, just a lot of dirt and rocks.  You can tell that this is a place
+used by many people to keep thier boats when they are not using them.  Lots of
+big rocks with rope tied around them to tie to your boats.  You also notice a
+small path leading northeast to the road.  The river is accesable to the
+northwest.    
+~
+9 0 2
+D1
+~
+~
+0 0 915
+D6
+~
+~
+0 0 6092
+S
+#920
+North Of A Bridge~
+   The river flows fast here, the curent trying to pull you south.  There are
+quite a few sharp rocks sticking up out of the water on this part of the river.
+You can see a small wooden bridge close by to the south.  Perhaps there is a
+way to get off the river by it?  The river continues both northeast and south.
+~
+9 0 7
+D2
+~
+~
+0 0 918
+D6
+~
+~
+0 0 921
+S
+#921
+River Vertigo Meets Roman River~
+   The waters of the river pound northward between large, granite boulders that
+hunker on either shore.  The stones rear up higher and higher the farther north
+the river goes.  To the east, the Roman River pours out from its rocky bed into
+the Vertigo.  The river flows southwest and north.    
+~
+9 0 7
+D0
+~
+~
+0 0 922
+D1
+~
+~
+0 0 12095
+D9
+~
+~
+0 0 920
+S
+#922
+On the River Vertigo~
+   Cliffs surge upwards on either side of the narrow, but deep river.  The
+water seems barely to move, but the speed with which little leaves and twigs go
+by tells the truth of its currents.  The air and water bear the sweet tang of
+salt.  The river flows northward into the sea.    
+~
+9 0 7
+D0
+~
+~
+0 0 600
+D2
+~
+~
+0 0 921
+S
+#923
+The Path to the Dock~
+   The dirt of the path is tightly packed down from years of use.  The grass
+has not even attempted to take over the path.  The grass itself is amazingly
+high, some of it a meter or more in height!  The world is an ocean of green
+grass.  A small, rotting dock can be seen through the grass to the north.  The
+path meets up with a real road to the southeast.    
+~
+9 0 0
+D0
+   A small dock coming off the River Vertigo lies to the north.    
+~
+~
+0 0 903
+D2
+   The path comes to an end when it reaches Ember Road.    
+~
+~
+0 0 229
+S
+#924
+On the River Vertigo~
+   Trickles of water slip through the long grasses of the plain and swell the
+river's size.  Silvery grass lines either side of the bank.  Fine-grained,
+yellow sand cups the grasses' roots and sinks beneath the Vertigo River.  The
+river flows from the north to the south.    
+~
+9 0 7
+D0
+~
+~
+0 0 925
+D2
+~
+~
+0 0 902
+S
+#925
+On the River Vertigo~
+   Silvery grass and yellow sand make up the banks of the river.  An occasional
+burst of bright red flowers peeps out amongst the silver.  A low mist curls
+about the stems of plants and licks at the surface of the river.  The river
+flows from the north to the south.    
+~
+9 0 0
+D0
+~
+~
+0 0 926
+D2
+~
+~
+0 0 924
+S
+#926
+The Rusalka's Spring~
+   The silvery grass flickers and rustles all around a deep crystaline pool.  
+Mist rises up from the water and drifts up and out, obscuring the spring from
+view.  The land around the spring rises up in gentle green waves.  The waters
+of the spring flow off to the south.    
+~
+9 0 0
+D2
+~
+~
+0 0 925
+S
+#981
+Behind the Waterfall~
+   The walls of the cave are damp and dripping with bright green moss.  The
+floor of the cave is covered with several inches of water.  Trickles of water
+wend their way among moss and boulder on their way out of the cave and into
+Shady River.  A ring of golden runes circle the cave mouth.  Are they there to
+keep something in or keep people out?  The only exit from the cave is to the
+east.    
+~
+9 1311040 0
+D1
+   A waterfall thunders down just beyond the cave mouth.    
+~
+waterfall~
+1 0 997
+S
+#982
+A Rocky Island~
+   On all sides the island of lava rock is surrounded by the flowing Shady
+River.  Its ice cold waters leap up and spray the mossy stones with droplets of
+clear, sweet water.  The island itself is rather bare of any large plant life.
+A few small plants and flowers grow in the small patches of dirt available and
+that is all.  A colony of insects have made their home here.  They march back
+and forth collecting food from the plants.  The only way to go is back down to
+the river.    
+~
+9 2097220 5
+D5
+   The Shady River flows by the island.    
+~
+~
+0 0 991
+S
+#983
+A Path in the Deep, Dark Forest~
+   Willow trees give way to great pine trees with grey-colored needles.  Far to
+the south, a river glimmers through waving branches of willow.  Small bushes
+covered with bitter red berries grow around and next to the trees.  Small
+speckle-breasted birds nip from bush to bush eating like, well, birds.  The
+path runs north and southeast.    
+~
+9 0 0
+D0
+   Three paths meet up with each other deep inside the forest.    
+~
+~
+0 0 6123
+D8
+   A glimmer of something shiny can be seen to the southeast.  It looks like
+it's moving.    
+~
+~
+0 0 985
+S
+#984
+A Path Following the Shady River~
+   The sound of a river can be heard from the pathway, but the trees muffle and
+disperse the sound.  Only one used to the ways of the forest would be able to
+tell from which direction the sound came.  Luckily, there is a path beneath
+your feet and it only heads west.  Hopefully, it will lead to the river.    
+~
+9 0 3
+D3
+   The path strides beside the river as it heads west.    
+~
+~
+0 0 985
+S
+#985
+A Path by the Shady River~
+   Willow trees grow to either side of the path.  Their leaves just barely
+brush the ground and the thick layer of rotting leaves that covers it.  To the
+south, the Shady River flows on its peaceful way to the Vertigo River.  To the
+east and northwest lie more forest and more paths to follow.    
+~
+9 4 3
+D1
+   The path continues to follow the river's bank as it heads east.    
+~
+~
+0 0 984
+D2
+   To the south, the Shady River flows slowly by.    
+~
+~
+0 0 996
+D7
+   The path plunges deep into the pine forest and out of sight.    
+~
+~
+0 0 983
+S
+#986
+A Path Before the Shady River~
+   Willow trees bend over the river's bank and plunge the shore into deep green
+shade.  A few cattails have managed to survive in the shade, but they are all
+rather stunted.  A small path winds off from the grassy bank and into the
+forest of grey pine.  To the north, the river flows eastward to its
+destination, whatever that may be.    
+~
+9 4 3
+D0
+~
+~
+0 0 994
+S
+#987
+A Small Path in the Deep Forest~
+   Stacks of mushrooms form ladders up the sides of the great grey pines of the
+forest.  Bushes covered with bright red and grey-green berries pop up where
+ever a tree has cleared the way for a bit of sunlight.  Eventually, these
+bushes will disappear as the trees take back their forest and the birds will
+have to find another bush to eat from.  The path runs north and southeast.    
+~
+9 0 3
+D0
+~
+~
+0 0 6021
+D8
+~
+~
+0 0 988
+S
+#988
+A Small Path Near the Shady River~
+   Several large trees have recently flung themselves across the path and are
+in various states of rot.  The largest fallen tree lies over two others,
+perhaps it knocked them down when it toppled.  Mushrooms and beetles take
+advantage of their helpless state and break them down in the name of nature.  
+The path runs northwest and south to the river.    
+~
+9 4 3
+D2
+~
+~
+0 0 991
+D7
+~
+~
+0 0 987
+S
+#989
+Shady River &bBefore River Vertigo&n~
+   The great willow trees that grow by the shady river war with the less
+graceful cottenwood of the river vertigo.  The River Vertigo itself can be seen
+to the east as it plunges towards the ocean.  The Shady River flows peacefully
+into the other river and its cold, clear waters are swallowed whole.  Mud from
+the Vertigo swirls in the mouth of the Shady River.  The river flows north and
+east.    
+~
+9 0 7
+D0
+   The river makes a slow turn to the north.    
+~
+~
+0 0 990
+D1
+   To the east, the river can be seen encountering the Vertigo River and being
+swallowed whole.    
+~
+~
+0 0 909
+S
+#990
+Shady River~
+   Swaths of cattails grow to either side of Shady River.  They flap back and
+forth with every breath of air that pushes its way through the trees.  Another
+long-stemmed plant grows right among the cattails, the brilliant yellow monk.
+The river meanders slowly past the giant willow trees and off to the south.  
+~
+9 0 7
+D2
+   The river makes a slow turn to the south.    
+~
+~
+0 0 989
+D9
+   To the southwest, a large island pulls up into the middle of the river.    
+~
+~
+0 0 991
+S
+#991
+Shady River~
+   The river splits for several hundred feet and flows around a large island of
+volcanic rock.  The &gplants&n that grow on the island are few, but beautiful.
+This is one section of the river where the trees are far enough away to ensure
+plenty of daylight.  Huge turtles have hauled themselves up on the bank and
+bask in the warm sunlight.  The river flows southeast and northeast.  A small
+path darts off into the forest to the north.    
+~
+9 0 7
+D0
+   A small path can barely be seen through the bushes that grow along the banks
+of the river.    
+~
+~
+0 0 988
+D4
+   The rocky island is a good place to rest protected from that which walks on
+the main land.    
+~
+~
+0 0 982
+D6
+   The river makes a slow turn to the northeast.    
+~
+~
+0 0 990
+D8
+   The river makes a slow turn to the southeast.    
+~
+~
+0 0 992
+E
+plants~
+   Small round &rred flowers&n, a &Rrust-red grass&n, and small balls of
+&Wpuffy white &wfluff&n are the dominant plants on the island.    
+~
+S
+#992
+Shady River~
+   Willow trees dominate the banks of the river, but a few cottenwood, oak, and
+birch manage to gain a foothold beside such a plentiful source of water.  
+Large bushes with flowers like candles grow by the water as well.  They lean
+over the river as if admiring their own beauty in its clear waters.  The river
+flows west and northwest.    
+~
+9 0 7
+D3
+   On a clear day, one can see for miles down the fairly straight stretch of
+river to the west.    
+~
+~
+0 0 993
+D7
+   The river makes a slow turn to the northwest.    
+~
+~
+0 0 991
+S
+#993
+Shady River~
+   The river's bed flattens out to nearly wading level.  It is possible that
+one could swim in it, but the temperature of the water argues otherwise.  
+Crater Lake is fed by the snow melts high in the western mountains and no sun
+ever touches the river long enough to warm it.  Perhaps that is why the turtles
+spend so much time sunning in what areas leak the light.  The river flows west
+and east.    
+~
+9 0 7
+D1
+   The wide, shallow river continues to flow eastward a few miles before slowly
+turning to the north.    
+~
+~
+0 0 992
+D3
+   The river maintains a steady course for a little distance to the west before
+turning in a northerly direction.    
+~
+~
+0 0 994
+S
+#994
+Shady River~
+   Tall trees tower over the small river filtering the sunlight into a green
+glow.  The river is cast in this constant shadow for most of the day.  Only in
+a few spots where, perhaps a tree has succumed to old age and toppled over does
+true sunlight touch the water of the river.  The river flows northwest and
+east.  A little dirt path to the south wanders away from the bank into the
+forest.    
+~
+9 0 7
+D1
+   The river manages to maintain a fairly straight course as it heads east.  
+~
+~
+0 0 993
+D2
+   A footpath heaves up from the river bank and wanders off into the forest.  
+~
+~
+0 0 986
+D7
+   The river pops out from behind a willow tree and flows towards you.    
+~
+~
+0 0 995
+S
+#995
+Shady River~
+   The Shady River winds back and forth through the trees and small islands of
+dark grey rock.  The river moves slowly near the banks and speeds up to a tidy
+pace in its middle (though often the middle is interrupted by the islands).  
+Birds have made nests on the larger of the islands where the chicks will be
+safe from predators who cannot swim.  The water of the river is so clear, one
+can see straight to its bottom.  The river flows northeast and southeast.    
+~
+9 0 7
+D6
+   The river emerges from behind some willow trees and flows towards you.    
+~
+~
+0 0 996
+D8
+   The river twists around a willow tree that is growing right in the river's
+bed and out of sight.    
+~
+~
+0 0 994
+S
+#996
+Shady River~
+   A giant willow tree has tumbled into the river not long ago.  Its trunk is
+thick with moss and beginning to rot.  Turtles have crept up out of the water
+to sun on the willow's decaying trunk.  The sun shimmers off their yellow-green
+shells.  The water of the river flows slowly down from the west and turns back
+southwest.  Aside from the fallen willow tree, the bank to the north has little
+covering it but the footprints of various thirsty animals and mud.    
+~
+9 0 7
+D0
+   A little game trail heads northwards into the woods.    
+~
+~
+0 0 985
+D3
+   The thundering of a great waterfall can be heard coming from the west.    
+~
+~
+0 0 997
+D9
+   The river sweeps southwest behind the willow trees.    
+~
+~
+0 0 995
+S
+#997
+On Shady River &bBeneath the Waterfall&n~
+   The water hurtles down from above and churns up the water at the base of the
+cliff.  The pool beneath the waterfall is deep and clear where the water does
+not burst upward.  The river's bed is made of a dark, porous rock.  Brilliant
+orange and yellow fishes dart among the &gplants&n.  To either side of the
+river's bed, willow trees weep green leaves down into the water.  Snowy white
+storks wade in the shallows, half-hidden by the willows.  Shady River flows
+eastward for aways before ducking out of sight.    
+~
+9 0 7
+D1
+   A fallen willow tree blocks half of the river to the east.    
+~
+~
+0 0 996
+D3
+   There seems to be something beyond the waterfall.    
+~
+waterfall~
+1 0 981
+E
+plants~
+   The plants that grow in this river are two things: long, and flexible.  The
+colors range from green to an orange as bright as the fish.    
+~
+S
+#998
+On the Waterfall~
+   Water thunders down from above to bounce off the large, moss draped
+projections of the cliff.  Sprays of water spring out like a handful of rice at
+a wedding before tumbling down into the froth below.  Waves of mist rise up
+from the water and float in the air to bead on hair and lips and eyelashes.  
+The air caresses like a cool fingered lover.  It would be very easy to forget
+that you're falling several hundered feet into the river below.    
+~
+9 2097152 5
+D5
+   The waterfall plunges down into a deep pool of water before continuing
+eastward as the Shady River.    
+~
+~
+0 0 997
+S
+#999
+Crater Lake &bBefore the Waterfall&n~
+   The rumble of the waterfall to the east disturbs the otherwise peaceful
+atmosphere of Crater Lake.  Around the lakes borders, where the water is more
+shallow, great herons and storks stalk gracefully through the water.  Farther
+into the lake, ducks paddle about and duck their heads underwater.  Mist from
+the waterfall fills the air and the lungs of anything breathing.  It is so
+fresh here.    
+~
+9 4 7
+D5
+   The water roars and leaps out from the rocks it smashes against like a
+raging bull foaming at the mouth.  It's a loooong way down if anyone should go
+over it.    
+~
+~
+0 0 998
+S
+$~

@@ -1,0 +1,67 @@
+#2150
+fido dog~
+a beastly fido~
+A beastly fido is here, looking for food.
+~
+The beastly fido is a large dog that has a foul smell and pieces of
+rotting meat hanging from its mouth.
+~
+8 0 0 E
+1 -30 -20 1d1+30000 3d3+50
+0 0
+8 8 1
+E
+#2195
+boogey man evil~
+the &revil&m Boogey Man&n~
+A very &revil&m Boogey Man&n is drooling on you.
+~
+   It looks very &revil&n and &mboogeyish&n.  He is drooling a lot, gross!    
+~
+65694 1216 -1000 E
+50 0 10 1d1+5000 15d15+20
+100000 0
+8 8 1
+E
+#2196
+wandering peddler~
+the Wandering Peddler~
+A man who looks to have traveled many miles wearily stands here.
+~
+A man with patched clothing and a sweaty brow.
+~
+524296 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#2197
+evil mickey mouse~
+Mickey Mouse~
+A large rat, er, mouse stands here, an evil glint in his large, cartoonish eyes.
+~
+   Ack!  It's Mickey Mouse!  At the crazed look on the cartoon's face, you
+wonder why you always wanted to go to Disneyland as a child...    
+~
+239626 1152 -100 E
+100 -10 -5 1d1+10000 9d10+30
+500000 0
+8 8 1
+E
+#2199
+evil possessed fido~
+the &WP&wo&Ws&ws&We&ws&Ws&we&Wd&n Fido~
+A strange looking fido stands here...
+~
+   A beastly fido growls at you, but such a change has come over it!  Rather
+than the timid little beast that most are, its eyes light up in savage joy at
+the sight of the sweet, juicy flesh covering your body, and leaps to the
+attack!    
+~
+188458 32768 -1000 E
+32 11 -4 1d1+1100 4d6+13
+150000 0
+8 8 1
+BareHandAttack: 4
+E
+$

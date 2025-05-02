@@ -1,0 +1,752 @@
+#400
+d t delicate tiara~
+a delicate tiara~
+A delicate tiara is lying here.~
+~
+9 1 17
+3 0 0 0
+3 10000 0
+E
+tiara t ~
+A beautiful, but delicate-seeming tiara is here.  It seems so thin that the
+slightest touch would break it, however, when you try to bend it, it is
+unyielding.
+~
+A
+3 1
+A
+12 5
+#401
+feathered wings~
+a pair of feathered wings~
+A beautiful pair of white, feathered wings...~
+~
+9 4064328 1025
+25 0 0 0
+1 1000000 0
+E
+feathered wings~
+   This pair of white wings is covered in delightful, soft, white feathers.  
+Okay, who's cut off Firebyrd's wings?  She's not going to like that very much.
+  
+~
+A
+2 5
+#402
+base monument b m~
+the base of an ancient monument.~
+The worn base of an ancient monument is resting here.  There is some writing on it.~
+~
+12 16 0
+0 0 0 0
+120 0 0
+E
+monument base writing b m w~
+The writing is worn, and almost gone, but is still readable.  Surprisingly,
+it is in your language!  It says...
+'The World is Square!'
+~
+#403
+bunch violets flowers~
+a bunch of &Mviolets&n~
+A bunch of &Mviolets&n grow here, where the sun hits the hummock.~
+~
+10 64 16385
+5 36 43 0
+1 6000 0
+E
+violets potion~
+   A large bunch of violets have grown closely together.  A sweet fragrance
+drifts up from the small blossoms.  Some are white, and some are the violet
+color that gives them their name.  Soft green round leaves surround the
+flowers, setting them off nicely.    
+~
+#404
+large scale l s~
+a large scale~
+A large scale is lying here...~
+~
+13 9 1
+0 0 0 0
+2 0 0
+E
+scale~
+The scale is large, but lightweight.  It somewhat resembles that of a snake,
+if there were any snakes big enough to fit it!
+~
+#405
+scaly belt s b~
+a scaly belt ~
+A scaly belt lies here.~
+~
+9 512 2049
+2 0 0 0
+5 10000 0
+E
+scaly belt~
+   This belt is made of some tanned hide of a very large, very scaled creature.
+Tough skin makes up the back of the belt, while large hard scales make up the
+front.  A shiny brass buckle hooks the two ends together.    
+~
+A
+13 10
+#406
+cushioned chest c~
+a cushioned chest~
+A cushioned chest is lying here.~
+~
+15 0 0
+1000000 1 -1 0
+0 0 0
+#407
+dragon sword~
+the &BD&Rr&Ba&Rg&Bo&Rn &BS&Rw&Bo&Rr&Bd&n~
+The &BD&Rr&Ba&Rg&Bo&Rn &BS&Rw&Bo&Rr&Bd&n is lying here~
+The &BS&Rw&Bo&Rr&Bd&n is surprisingly light and elegant.  However, 
+the folding marks on the blue steel blade belie its strength.
+~
+5 62972992 24577
+30 100 20 3
+10 1000000 0
+E
+dragon sword~
+   The &BD&Rr&Ba&Rg&Bo&Rn &BS&Rw&Bo&Rr&Bd&n is surprisingly light and elegant.
+However, the folding marks on the blue steel blade belie its strength.    
+~
+A
+2 10
+A
+19 10
+A
+17 -50
+A
+6 10
+#408
+caller's crown~
+the &yCaller's Crown&n~
+The &yCaller's Crown&n~
+~
+9 47498241 17
+6 0 0 0
+3 10000 0
+E
+caller's crown~
+   This crown is made out of intricately woven golden wire.  Many loops and
+curlicues shape this tiara made especially for callers.    
+~
+A
+3 2
+A
+4 3
+#409
+hole h portal p zone z twilight t black b~
+a black portal~
+A black portal to the Twilight Zone hangs here.~
+The portal seems ready to suck you into the unknown depths of....
+The Twilight Zone!
+~
+15 24 0
+2147483647 0 -1 0
+0 1000000 0
+#410
+cushion c blue b~
+a &bblue cushion&n~
+A soft &bblue cushion&n is lying here.~
+A comfy looking &bblue cushion&n.
+~
+12 16 0
+0 0 0 0
+1 0 0
+#411
+cushion c green g~
+a plush &ggreen cushion&n~
+A plush &ggreen cushion&n invites you to sit on it...~
+The &ggreen cushion&n invites you to sit on it...
+~
+12 0 0
+0 0 0 0
+1 0 0
+#412
+marble polished key k m p~
+a polished marble key~
+A polished marble key is lying here.~
+~
+18 168 16385
+0 0 0 0
+5 1 0
+E
+marble polished key~
+   This heavy key is made out of shiny, polished marble.  The marble is grey
+streaked with white, or maybe white streaked with grey.  It catches any bit of
+light and shines from it.    
+~
+#413
+sign~
+a battered sign~
+A battered street sign rests here.~
+   The ancient street sign is battered and worn from the wind and rain of the
+ages.  There seems to be some faint writing still discernable on it...    
+~
+16 16 0
+0 0 0 0
+0 0 0
+E
+writing~
+   You can faintly make out the words, "Marble Avenue.  "
+~
+E
+battered sign~
+   The ancient street sign is battered and worn from the wind and rain of the
+ages.  There seems to be some faint writing still discernable on it...    
+~
+#414
+splintered street sign s~
+a splintered street sign~
+A splintered street sign hangs down from a tall pole.~
+   The old street sign has been broken off of the pole it was attatched to, and
+is now attatched only by a lone rusty nail that looks ready to break.  There is
+some faint writing on it.    
+~
+16 16 0
+0 0 0 0
+0 0 0
+E
+writing~
+   The sign reads, "Granite Boulevard.  "
+~
+E
+splintered street sign~
+   The old street sign has been broken off of the pole it was attatched to, and
+is now attatched only by a lone rusty nail that looks ready to break.  There is
+some faint writing on it.    
+~
+#415
+hollow log h l~
+a hollow log~
+A hollow log floats here.~
+~
+15 16 0
+2 1 -1 0
+50 0 0
+E
+hollow log~
+   This log is very old and battered.  Most of its bark has splintered off,
+leaving the grey surface beneath bare.  The heart has been excised by rampaging
+insects and fungus.  It looks like it could float pretty well.    
+~
+#416
+slimy toad frog ~
+a slimy toad~
+A slimy toad tries to hide here.~
+~
+19 65664 1
+0 0 0 5
+2 0 0
+E
+slimy toad~
+   The toad is slippery and slimy from the toxic secretions the pores on its
+back release.  It is green and warty.  Bulging yellow eyes stare at you.    
+~
+#417
+firebreather~
+a firebreather~
+A firebreather is lying here.~
+~
+17 65672 1
+8 8 7 0
+13 0 0
+#418
+table t~
+a splintered table~
+A splintered table is lying limply on the floor here.~
+~
+13 0 0
+0 0 0 0
+10 0 0
+#419
+rags bunch~
+a bunch of rags~
+A bunch of rags are lying here.~
+~
+13 0 1025
+0 0 0 0
+15 0 0
+A
+13 -4
+#420
+desk~
+an upturned desk~
+An upturned desk cowers here.~
+~
+15 16 0
+20 11 -1 0
+50 0 0
+#421
+junk bunch~
+a bunch of junk~
+A bunch of junk is lying here.~
+   Hidden deep within the trash is a small key.    
+~
+18 0 16385
+0 0 0 0
+5 0 0
+#422
+crumpled paper~
+a crumpled paper~
+A crumpled paper is lying here.~
+   The crumpled note has some writing on it.    
+~
+16 0 1
+0 0 0 0
+1 0 0
+E
+writing~
+   The note says, "There are reports of many citizens being found dead,
+mutilated cruely by the killer.  An investigation has been initiated.    
+~
+#423
+note paper~
+a note~
+A note is lying here.~
+   The note has some writing on it.    
+~
+16 0 1
+0 0 0 0
+1 0 0
+E
+writing~
+The note reads: "Follow-up Report on Unexplained Citizen Attacks
+   Many police and hunters have been searching for clues on this seemingly
+pointless attacks on our citizens.  Always, the victims have been literally
+ripped to shreds, and often large claw marks have been found near the bodies,
+even imbedded in stone.  When further investigations were made, only one 
+scout returned, in critical condition.  All he was able to tell us before he
+died was that an ancient wrong was being righted.  No further investigation
+is being made."
+~
+#424
+sign~
+a weathered sign~
+A weathered sign limply hangs here.~
+There is some faint writing on the sign.
+~
+16 0 0
+0 0 0 0
+10 0 0
+E
+writing~
+The faint writing reads "Slate Street"
+~
+#425
+bottle wood alcohol~
+a bottle of wood alcohol~
+A bottle of wood alcohol rests here.~
+~
+17 136 1
+8 8 8 10
+13 0 0
+#426
+bent broken sword~
+a bent sword~
+A bent sword twists in agony here.~
+   The sword, once well-cared for and used, now lies helplessly in its owners
+blood.    
+~
+5 0 8193
+-1 1 1 0
+25 0 0
+#427
+dislodged anvil~
+a dislodged anvil~
+An anvil indignantly pouts here.~
+~
+13 0 1
+0 0 0 0
+100 0 0
+A
+2 -1
+#428
+sign~
+a shiny sign~
+A shiny sign proudly directs here.~
+It has some writing on it.
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+writing~
+It reads "Temple Road."
+~
+#429
+pot of flowers~
+a pot of flowers~
+A broken pot of flowers has been shattered here.~
+~
+15 0 0
+10 0 -1 0
+0 0 0
+#430
+ragged doll~
+a ragged doll~
+A ragged doll is resting here.~
+~
+12 0 16385
+0 0 0 0
+3 100 0
+A
+13 5
+#431
+dagger lacquer wood~
+a lacquer dagger~
+A beautiful black and maroon lacquer dagger lies here.~
+~
+5 1145086080 8193
+0 3 3 11
+5 8000 0
+E
+dagger lacquer wood~
+   The dagger is small and sharp.  It has been painted with several hundred
+layers of lacquer.  The black colored lacquer was carved away to reveal a deep
+maroon lacquer.  The designs made by the carving are strange and curling.    
+~
+A
+18 2
+A
+19 2
+#450
+statue air~
+null item~
+Nothing~
+~
+8 2 1
+0 0 0 0
+1 0 0
+#451
+statue earth~
+null item~
+Nothing~
+~
+8 0 1
+0 0 0 0
+1 0 0
+#452
+statue water~
+null item~
+Nothing~
+~
+8 0 1
+0 0 0 0
+1 0 0
+#453
+statue light~
+null tiem~
+Nothing~
+~
+8 0 1
+0 0 0 0
+1 0 0
+#455
+null item~
+null item~
+Nothing~
+~
+9 1 3
+3 0 0 0
+1 0 0
+A
+18 2
+A
+19 2
+#456
+wind boots~
+the &yWind Boots&n~
+A pair of boots float gently just above the ground.~
+~
+22 1 65
+0 0 0 0
+3 0 0
+A
+19 2
+A
+1 2
+#457
+null item~
+null item~
+Nothing~
+~
+9 1 1025
+15 0 0 0
+10 0 0
+A
+5 2
+A
+18 1
+A
+19 1
+#458
+null item~
+null item~
+Nothing~
+~
+9 1 257
+6 0 0 0
+5 0 0
+A
+19 2
+A
+13 25
+#475
+null item~
+null item~
+Nothing~
+~
+16 0 1
+0 0 0 0
+1 0 0
+E
+quest note~
+a bottle
+a hairpin
+a big zither
+a quenched sword
+a crystal necklace
+dwarven plate mail
+a commoner's longsword
+a hunting bow
+a yellow banana
+a Millenium Flute
+a long, grey branch
+a strange, white skull
+an embroidered robe
+the Palace key of New Thalos
+a bunch of rags
+~
+#476
+null item~
+null item~
+Nothing~
+~
+5 68864 24577
+1 2 4 3
+10 0 0
+A
+19 2
+A
+18 1
+#477
+null item~
+null item~
+Nothing~
+~
+11 66561 16389
+0 0 0 0
+2 0 0
+A
+17 6
+A
+18 2
+A
+19 1
+#478
+t-shirt tee-shirt survived chimpanzee king shirt~
+a "I survived the Chimpanzee King!" shirt~
+A shirt with bold lettering across it lies crumpled on the ground.~
+~
+9 0 16393
+2 0 0 0
+2 10000 0
+A
+18 2
+#479
+book world guide cephalopods~
+a copy of Cephalopods: A World Guide~
+A small, hardback book lies on the ground here.  ~
+~
+0 0 1
+0 0 0 0
+0 0 0
+E
+book world guide cephalopods~
+   It is a small, hardback book.  However, it is filled with tons of
+information and pictures about cephalopods.  Colorful pictures, some the only
+known pictures of the living specimens, fill every page.  Also included is
+brief descriptions of synapomorphies that seperate the species from each other.
+A beautiful, fascinating book, worth every penny you paid for it!    
+~
+#485
+quest pebble~
+a pebble~
+A small, shiny pebble lies on the ground, begging to be picked up.~
+~
+12 2097156 16385
+0 0 0 0
+1 0 0
+#486
+shoe box money hundreds bills~
+a shoe box full of hundreds~
+A shoe box has been abandoned here.  What could be inside?~
+~
+8 0 16385
+0 0 0 0
+2 0 0
+E
+shoe box full hundreds money bills~
+   The shoe box is a rectangular box with a lid that fits snugly over the top.
+When opened, it becomes apparent that it is filled to the brim with rectangular
+pieces of green paper, with a face on one side and a building on the other.  
+In large numbers in all of the corners is written "100.  "
+~
+#487
+beaver's pelt~
+a beaver's pelt~
+A thick, warm, luxurious fur waits to be claimed.~
+~
+11 0 1025
+0 0 0 0
+1 0 0
+#488
+laurel leaf~
+a laurel leaf~
+A single small laurel leaf is here.~
+~
+12 0 16385
+0 0 0 0
+1 0 0
+E
+laurel leaf~
+   The laurel leaf is a soft green.  It has jagged edges.    
+~
+#489
+monkey banana crown~
+the &yBanana Crown&n of the Monkey King~
+A crown made entirely out of bananas rots here.~
+~
+11 704512 16401
+0 0 0 0
+1 0 0
+E
+banana crown~
+   The &yBanana Crown&n is made entirely of bananas!  Stems wrap around each
+other to hold the crown together.  Peels stick up all over the place.  It is
+made from everything from bright yellow fresh peels to rotting brown and black
+wizened peels.    
+~
+A
+17 -5
+A
+18 3
+A
+19 2
+#490
+monkey  quest letter~
+a letter from the Monkey King~
+A letter addressed to the Cockatryce is lying here.  Better give it back to her!~
+~
+16 0 16385
+0 0 0 0
+1 0 0
+E
+monkey king quest letter~
+My Lady Cockatryce,
+Something evil is afoot in my kingdom!  Knowing your propensity
+for helping the helpless, I am turning to you for help.  The
+annual Festival of the Banana is coming up in my kingdom.  My 
+gardeners and harvesters have worked very hard to grow me a bunch
+of bananas that are bigger and tastier than any others for the
+highlight of the festival.  Unfortunately, today, on the eve of
+the festival, they have been stolen!  Please find the perpetrator,
+bring him to justice, and return to my bananas to me!  I'm sure it
+is my rival, the rogue Chimpanzee King.  Thank you.
+
+Kindest regards,
+The Monkey King
+~
+#491
+holy sacred bananas~
+the &ySacred Bananas&n of the Monkey King~
+A large bunch of particularly plump, juicy bananas sits here.~
+~
+19 1 16385
+24 0 0 0
+2 0 0
+E
+holy sacred bananas~
+   This is a very large bunch of bananas, numbering an even dozen.  Each one is
+well over a foot long, with a graceful curve like a crescent moon.  The bright
+yellow coloring is reminiscent of a harvest moon as well.    
+~
+#492
+for sale sign~
+a "For Sale" sign~
+A sign has been stuck crookedly into the ground.~
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+for sale sign~
+The wooden sign is old and faded.  It reads:
+     "For Sale"
+~
+#493
+beanie propeller cap~
+the Beanie Propeller Cap~
+One of those beanie caps with the propellers on top looks ready to take off.~
+~
+11 65672 17
+0 0 0 0
+2 0 0
+#494
+get-out-of-being-killed-for-being-a-moron card~
+a &cget-out-of-being-killed-for-being-a-moron card&n~
+A &cget-out-of-being-killed-for-being-a-moron&n card, just for Sixclaw, is lying here.~
+~
+8 0 1
+0 0 0 0
+0 0 0
+A
+4 4
+#495
+super hero's cape~
+the &ySuper Hero's Cape&n~
+A special Super Hero's Cape sparkles, urging you to pick it up and become stronger!~
+~
+9 65627 1025
+1 0 0 0
+1 0 0
+A
+1 5
+A
+3 -5
+A
+4 -5
+#496
+dragon's tooth~
+a dragon's &wtooth&n~
+A sharp dragon's &wtooth&y gleams in the light.~
+~
+12 2162701 1
+0 0 0 0
+1 0 0
+#498
+sign stupid~
+the "I am stupid!" sign~
+A sign that says "I am stupid!" is lying here.~
+~
+16 136 5
+0 0 0 0
+1 0 0
+A
+3 -10
+A
+1 -10
+#499
+chocolate kiss~
+the chocolate kiss~
+A chocolate kiss from the &rFirebyrd&n melts in the hot, hot sun.~
+~
+19 0 1
+100 0 0 0
+1 1 0
+$~

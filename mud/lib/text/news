@@ -1,0 +1,114 @@
+[ 06/04/00 ] Made quest Improve, and quest hit/mana/move less powerful
+[ 06/04/00 ] Readded the gamble master, have fun you addicts
+[ 06/04/00 ] Clerics now get cure_light at level 1
+[ 06/06/00 ] Added new zone to the east of Daggerfall, and reconnected kings
+             Castle and Rome.  Have fun exploring.
+[ 06/07/00 ] Got players working again!  Totally, looks great, no problems.
+[ 06/08/00 ] New zones are being connected. keep an eye out for them.
+[ 06/13/00 ] Fixed some minor bugs with players
+[ 06/13/00 ] Added new default prompts to the display command check em out!
+[ 06/13/00 ] Multiplay is now forcibly set at 3.
+[ 06/14/00 ] Go to the gamblemaster for a complete list of what tokens can do!
+[ 06/14/00 ] Full affects of the arena are now displayed in the arena entrance
+[ 06/14/00 ] Made the display command look less cluttered
+&c[ 06/04/00 ] *Gad* Completed renaming all the zones from Jaxoms a fag :-)
+[ 06/04/00 ] Made show zones page string, no more overflow&n
+[ 06/17/00 ] New guys in town, gonna make corpse retrieval a little more fun!
+[ 06/27/00 ] For all you cheesers out there multiplay is now not in arena
+[ 06/29/00 ] Fixed bug where corpses don't decay
+[ 06/29/00 ] made practice cool, so it says all the skills you get and lvl
+[ 06/29/00 ] Fixed 2 nads in corpse room crash bug.
+&c[ 06/04/00 ] *Gad* Completed renaming all the zones from Jaxoms a fag :-)
+[ 06/04/00 ] Made show zones page string, no more overflow
+[ 06/04/00 ] *Gad* Rid the world of old clan rooms replacing with OPEN ROOM&n
+[ 06/30/00 ] Recent crashes due to a problem with bad ram, but have been fixed
+[ 07/02/00 ] Made it so that when the leader of a group recalls, so do all his
+             followers (including mobs and excluding people from different city)
+&c[ 06/04/00 ] *Gad* Rid the world of old clan rooms replacing with OPEN ROOM
+[ 06/05/00 ] Re-wrote credits, news, help, info, background, policies and
+             and handbook, it is suggested that you read all of these :-P&n
+&c[ 06/07/00 ] Fixed immortal start room problems.&n
+[ 07/02/00 ] Made the < and > official clan signs, no one else can use now :-0
+[ 07/02/00 ] Monkey's have been fixed, watch out pirate goers.
+[ 07/02/00 ] Auctioning send you and seller to seperate room to avoid abuse
+[ 07/04/00 ] the clan say or | command can now be done while asleep
+&c[ 06/13/00 ] Fixed arena so its a little more bug free, try just typing arena
+[ 06/13/00 ] The set command is now logged, to discourage cheating
+[ 06/14/00 ] All token values and abilities are now listed in gambling area
+[ 06/14/00 ] For certain information, I've put up info in my room, just read&n
+[ 07/04/00 ] the group command now only lists 1 head of group :-)
+[ 07/04/00 ] wimp now lists what your wimp is correctly
+[ 07/04/00 ] you can't flee when your not fighting, to avoid multiple flee's
+[ 07/04/00 ] clerics now start with a mace and not a useless sword
+[ 07/04/00 ] sacrifice command junks all corpses in a room 10 gold a peice
+&c[ 06/14/00 ] It is now not allowed to play mort and immort at same time to
+             discourage cheating.&n
+[ 07/05/00 ] Thor Help has been updated to include correct lvl info for spells
+[ 07/14/00 ] save now saves entire mud, no more duping items
+[ 07/14/00 ] Quest master now only improves weapons
+&c[ 06/16/00 ] mort/immort play not forced anymore, just logged :-)
+[ 06/26/00 ] Made a new zone for arena's! starts at 1026, check it out!
+[ 06/27/00 ] Rebuilt haden, he should work better now
+[ 07/02/00 ] Auction sends auctioners to seperate room to avoid abuse <thx olaf>&n
+[ 07/14/00 ] Fixed bug where recalling with mixed group would crash
+[ 07/26/00 ] Fixed problem with matrix.centerpartners.com and multiplay
+[ 07/26/00 ] No more problems with hunger killing you in DT pawnshop
+[ 07/27/00 ] The monkey's were having problems again so they no longer monkey
+&c[ 07/04/00 ] pclean function for getting rid of 2 month laggers.. imp only
+[ 07/05/00 ] all immortals are required to read the handbook
+[ 07/14/00 ] Fixed medit new!! Whoopie!! (could have ram problems)
+[ 07/26/00 ] Prompt different when you switch into a mob&n
+[ 07/27/00 ] Your prompt now changes when you write on boards (to nothing)
+[ 07/27/00 ] AFK now includes a free messaging service, try tell and afk
+[ 08/09/00 ] Took out players/wizlist function due to memory leak. <pukes>
+[ 08/09/00 ] Made consider work better, no longer just levels.. TRY IT!
+[ 08/09/00 ] Be careful about fighting big mobs as they no longer have a dam cap
+[ 08/09/00 ] Clan info now page strings, so no problems with scrolling
+[ 08/09/00 ] Changed the players maxdam cap to 250 good luck hitting it.
+[ 08/10/00 ] Fixed the lag and the ram leak.. hopefully
+[ 08/10/00 ] Removed immlist, another lag and ram leak.
+[ 08/10/00 ] No more accidental charges for using wrong city in start command
+[ 08/12/00 ] arcane portal and arcane word are here!  Spells for mages/bards
+&c[ 07/26/00 ] Switch now available to gods
+[ 07/26/00 ] Your invis level now shows up in your prompt
+[ 07/26/00 ] fixed olc.h so that you have access to all the mob & obj flags&n
+&c[ 07/27/00 ] When you quit the game it no longer tells the rest of the world
+[ 07/27/00 ] New AFK command in, relays messages you got while afk to you&n
+[ 08/14/00 ] read the note in the gambling area about clan sword/armor prices
+[ 08/15/00 ] Fixed a bug where everyone was charged to switch start city
+[ 08/16/00 ] Fixed another bug that caused lag and ram leaks.. hopefully last
+[ 08/16/00 ] !RECALL rooms are now also !QUIT and !AUCTION
+[ 08/16/00 ] The locate spell page strings, no more scrolling needed!
+[ 08/16/00 ] Ninja's and masters now get arcane portal/word
+[ 08/19/00 ] Changed the exits from the temple around a bit, newbies go North
+[ 08/19/00 ] immlist, wizlist, and players commands are all back! enjoy!
+[ 08/19/00 ] Webpage completed! Check it out at http://daggerfall.circlemud.net!
+[ 08/19/00 ] Make daggerfall bigger, post a review!  Please help, post it at:
+             http://www.mudconnector.com/mud-bin/prev/submit.cgi?mud=Daggerfall
+&c[ 08/06/00 ] SUPER IMPORTANT THAT YOU Read Immortal Builder board before 8/13/00
+[ 08/08/00 ] Read the builders board, we now have a builders port READ IT!!&n
+&n[ 08/19/00 ] In the gamble house there are now ways of exchanging tokens again
+[ 08/19/00 ] Made all the healing rooms 2x regen rate, faster healing thx Chucky
+[ 08/20/00 ] Please read policies if you have a house, for info on hoarding
+[ 08/21/00 ] Got the CGI chatroom working on webpage, go there if mud goes down
+[ 08/26/00 ] For all you weekend warriors out there, there will be sat/sun quest
+             days, so read the mortal board for who's holding them!
+[ 08/27/00 ] Remort works differently, read the mort board for details
+[ 08/28/00 ] Got remort working beautifully who now shows how many times
+             you've remorted (based on level) and score shows you what you
+             have been.  Current Ninja's will just remort to master when they do
+[ 08/28/00 ] Added a section to the webpage under Mud, to handle mud funds
+[ 09/05/00 ] PLEASE If you use zmud shut off autologin, it spams the logs!  If
+             I catch people doing it I will freeze characters - Jax
+&c[ 08/09/00 ] players/wizlist removed due to ram problems
+[ 08/09/00 ] Mobs don't have a damage cap, please change their damrolls to fix&n
+[ 12/21/00 ] Disabled item #2 on the menu, as it was used to crash the mud
+[ 12/31/00 ] Another important announcement from the big cheese on mort board
+[ 01/19/01 ] Moved DF to the new Harddrive, little bigger, little faster and
+             a little quieter, course you'd have to be in my room for that..
+[ 01/19/01 ] Discovered that if you hit level 181, bad things happen...
+[ 02/08/01 ] For all of you that haven't noticed, the world has changed
+[ 02/10/01 ] You guys should like this, I set the cost of gossip down to 5mv!
+[ 02/28/01 ] Player wipe. :(
+[ 04/13/01 ] When you use the sacrifice command now it gives you 10mana
+[ 03/28/17 ] Brought mud back.  Renamed Port 4000.  port4k.com:4000

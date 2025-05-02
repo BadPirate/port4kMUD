@@ -1,0 +1,41 @@
+#2400
+rekai shopkeeper geisha crane~
+Rekai~
+Rekai the &cCrane&y Clan shopkeeper stands here.
+~
+   She appears very beatiful, but watches you a little too closely.  It would
+seem that not much would escape her, off in another room you hear information
+about clan gatherings, and Rekai seems to be listenting intentley to them.    
+~
+581658 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#2401
+clan healer~
+the clan healer~
+The Clan Healer sits here, chanting spells.
+~
+He's very pale as he has never stepped foot outside the clan house, poor guy.
+  
+~
+581659 32 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#2497
+cluck rubber chicken shopkeeper~
+&yCluck&n, the Rubber Chicken~
+A large rubber chicken hangs on the wall.  It's &yCluck&n!!!
+~
+   It's, well, a rubber chicken.  It's &yCluck&n!!!  MSKing must have retired
+him when she immorted.  Well, this seems to be as good a job as any for him.  
+~
+581642 32768 1 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+$

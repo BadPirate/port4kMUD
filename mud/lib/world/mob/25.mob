@@ -1,0 +1,40 @@
+#2501
+duergar dark dwarf head clreic~
+Head Duergar Cleric~
+The head Duergar Cleric chants something uninterpretable
+~
+It looks, err, unfinished.
+~
+65114 9644 -650 E
+80 -5 -4 30d100+2000 6d6+12
+150000 65000
+8 8 1
+BareHandAttack: 5
+E
+#2502
+duergar dark dwarf cleric~
+a Duergar Cleric~
+A Duergar cleric prays to his evil god at the altar
+~
+It looks, err, unfinished.
+~
+63050 8620 -480 E
+60 5 -2 30d50+1500 4d5+10
+25000 38654
+8 8 1
+BareHandAttack: 5
+E
+#2503
+duergar dark dwarf healtyh cleric~
+A healthy Duergar Cleric~
+A healthy Duergar Cleric heals the wounded here.
+~
+It looks, err, unfinished.
+~
+258138 42428 -500 E
+40 10 -10 10d100+25000 6d4+10
+50000 25000
+8 8 1
+BareHandAttack: 6
+E
+$

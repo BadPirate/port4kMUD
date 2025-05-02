@@ -1,0 +1,699 @@
+#600
+banana yellow~
+&Ya yellow banana&n~
+A &Yyellow banana&n is lying on the ground here looking tasty.~
+~
+19 65536 1
+5 0 0 0
+1 0 0
+#601
+fungus mold green~
+some &ggreen&n fungus~
+A strange &ggreen&n fungus is growing on the side of a rock here.~
+~
+19 65548 1
+-3 0 0 1
+0 0 0
+#602
+talisman green murky pond~
+&gthe talisman of the pond&n~
+A &gmurky green talisman&n is lying on the ground here.~
+~
+9 33 5
+6 0 0 0
+2 13500 12
+A
+3 2
+A
+12 25
+#603
+sabre pirate rusty~
+a rusty old pirate sabre~
+There is an old rusty sabre stuck in the ground here.~
+~
+5 65536 8193
+0 3 4 3
+3 0 20
+#604
+patch eye black~
+a small black eye patch~
+A small black eye patch, like that used by pirates, is lying here.~
+~
+9 0 17
+4 0 0 0
+1 0 5
+A
+19 1
+#605
+cleaver blood stained~
+a &rblood &nstained cleaver~
+A cleaver with &rblood &nstains all along the blade is lying here.~
+~
+5 8704 8193
+0 5 3 10
+16 3560 100
+#606
+peg leg wooden~
+&ra wooden peg leg&n~
+Someones &rwooden peg leg&n is lying on the ground here.~
+~
+9 2 33
+11 0 0 0
+6 4600 70
+A
+14 -20
+A
+18 2
+A
+2 -1
+#607
+flag skull crossbones black~
+a pirate flag~
+A black flag with a skull and crossbones on it is lying here.~
+~
+9 8841 16385
+0 0 0 0
+3 13000 0
+A
+5 2
+A
+19 2
+A
+17 10
+#608
+pot black big stew~
+a huge pot of pirate stew~
+A huge black pot sits here nearly boiling over with pirate stew.~
+~
+15 0 0
+4 0 -1 0
+900 0 0
+E
+pot stew~
+In this pot boils the thick pirate stew.  It smells very tasty but as you see the animal body parts that are floating in it, you want to puke.
+~
+#609
+bowl stew~
+a bowl of pirate stew~
+A bowl full of some tasty smelling stew rest on the ground here.~
+~
+19 0 1
+24 0 0 0
+4 15 5
+#610
+key large rusty old~
+a large rusty old key~
+A large rusty old key is laying here on the ground.~
+~
+18 65548 1
+0 0 0 0
+4 0 0
+#611
+hook pirate's large~
+a pirate's hook~
+Someone has left a large hook laying on the ground here.~
+~
+9 12800 129
+6 0 0 0
+5 2500 35
+A
+9 10
+A
+19 1
+#612
+key skull black~
+a black skull key~
+A black skull shaped key is lying on the ground here.~
+~
+18 65548 1
+0 0 0 0
+2 0 0
+#613
+belt black skull~
+a black skull belt~
+A black skull belt is lying on the ground here looking evil.~
+~
+9 14882 2049
+15 0 0 0
+9 53000 250
+A
+1 1
+A
+13 15
+A
+24 10
+#614
+hat captain pirate~
+the pirate captains hat~
+A big black hat ,with a skull and crossbones on it, lies here.~
+~
+9 14945 17
+10 0 0 0
+5 43000 0
+A
+13 20
+A
+18 2
+A
+19 2
+#615
+boots dark black~
+a pair of Dark Black Boots~
+A pair of dark black boots are lying on the ground here.~
+~
+9 14945 65
+15 0 0 0
+9 50000 180
+A
+13 25
+A
+19 2
+#616
+key skeleton golden~
+a golden skeleton key~
+A golden skeleton key is lying on the ground here.~
+~
+18 65544 1
+0 0 0 0
+0 0 0
+#617
+booty gold~
+the pirates booty~
+A huge pile of gold sits here, it must be part of the pirate booty.~
+~
+20 0 1
+500000 0 0 0
+0 0 0
+#618
+diamond treasure~
+a huge diamond~
+A huge diamond is lying on the ground here.~
+~
+8 0 1
+0 0 0 0
+0 100000 0
+#619
+mirror silver treasure~
+a silver mirror~
+A beautiful silver framed mirror is lying on the ground here.~
+~
+8 0 16385
+0 0 0 0
+1 150000 0
+#620
+axe guardians~
+the &RG&Buardians&n &RA&Bxe&n~
+A very large axe lies here, it looks to be made of some kind of stone.~
+~
+5 79432 8193
+0 7 5 6
+16 1000000 0
+A
+17 -20
+A
+18 3
+A
+19 3
+#621
+key temple symbol ancient~
+the sacred temple key~
+An ancient symbol engraved key lies on the gound here, waiting to be used.~
+~
+18 65580 1
+0 0 0 0
+1 0 0
+#622
+seed life~
+a &Gseed of life&n~
+A large bright &Ggreen seed&n is lying in the center of the room.~
+~
+1 85313 1
+0 0 -1 0
+5 0 0
+A
+23 3
+A
+13 50
+A
+12 30
+#623
+sphere neutrality~
+the sphere of Neutrality~
+A sphere of dark and light combining to make true neutral lies on the ground.~
+~
+9 37848584 16385
+17 0 0 0
+5 0 0
+A
+18 5
+A
+19 4
+A
+9 15
+#624
+ward evil symbol~
+a ward against evil~
+A small symbol is on a chain that lies here on the ground.~
+~
+9 1088 5
+4 0 0 0
+3 34000 0
+A
+19 5
+#625
+shell crab~
+a crabs shell~
+A shell it lying on the ground here waiting to be picked up.~
+~
+8 0 1
+0 0 0 0
+0 5 0
+#626
+ward evil symbol~
+a ward against evil  *~
+A small symbol is on a chain that lies here on the ground.~
+~
+9 1088 5
+4 0 0 0
+3 34000 0
+A
+18 2
+A
+19 7
+#627
+sphere neutrality~
+the sphere of Neutrality  *~
+A sphere of dark and light combining to make true neutral lies on the ground.~
+~
+9 67080 16385
+25 0 0 0
+5 0 0
+A
+18 7
+A
+19 7
+A
+9 15
+#628
+boots masters first~
+the First Master's Boots    *~
+A pair of really nice boots are laying on the ground here.~
+~
+9 12865 65
+15 0 0 0
+9 50000 0
+A
+13 25
+A
+18 1
+A
+19 3
+#629
+sword master magic~
+&CM&RA&BS&MT&GE&YR&w's &RS&rw&Ro&rr&Rd&n~
+&W{&BMAGIC&W}&w's &CM&RA&BS&MT&GE&YR&w's &RS&rw&Ro&rr&Rd&n~
+~
+5 65608 8193
+0 8 5 3
+16 1500000 0
+A
+17 -20
+A
+18 5
+A
+19 5
+#630
+boots dark black *~
+a pair of Dark Black Boots~
+A pair of dark black boots are lying on the ground here.~
+~
+9 12897 65
+15 0 0 0
+9 80000 200
+A
+13 25
+A
+19 2
+#648
+teddy~
+&RA bright red silk teddy&n~
+A teddy lies here on the ground.~
+~
+0 0 9
+0 0 0 0
+0 0 0
+#649
+bed portable~
+&RA portable bed&n~
+&RA portable bed sits on the floor here&n~
+~
+0 0 1
+0 0 0 0
+0 0 0
+#650
+sign important mortal~
+a VERY IMPORTANT SIGN~
+A VERY important-looking sign is here.  &rRead it, mortal!&n~
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+sign important mortal~
+   It is known that you love this mud and wish to play on it, but this is a
+builder's port.  If you're not here to ask about a position for building then,
+frankly, you do not belong here.  When we are done with the remodeling of the
+zones and the running of this mud it will be brought back up on the 4000 port.
+Until then, be patient and let us builders do our work in peace.    
+~
+#651
+logik~
+Clue 4 (logik)~
+Clue 4 (logik)~
+~
+0 0 1
+0 0 0 0
+0 0 0
+#652
+triforce of Power~
+the &yTriforce of Power&n~
+The Triforce of Power glimmers here.~
+~
+12 2 16385
+0 0 0 0
+1 0 0
+A
+1 2
+A
+18 5
+A
+19 5
+A
+12 50
+#655
+silver bow~
+the &WSilver Bow&n~
+A bow made out of pure silver glitters here.~
+~
+5 65 8193
+5 10 5 12
+3 0 0
+A
+19 6
+A
+4 5
+#656
+Master Sword~
+the Master Sword~
+The ultimate sword of good, the Master Sword gleams here.~
+~
+5 3137 8193
+5 10 6 3
+5 0 0
+A
+5 2
+A
+13 50
+A
+19 5
+#657
+the Eighth piece of the Triforce~
+the Eighth piece of the &yTriforce&n~
+The final piece of the Triforce awaits you here!~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#658
+the Seventh piece of the Triforce~
+the Seventh piece of the &yTriforce&n~
+The seventh piece of the Triforce glitters here.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#659
+the Sixth piece of the Triforce~
+the Sixth piece of the &yTriforce&n~
+The sixth piece of the Triforce glows here.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#660
+the First piece of the Triforce~
+the First piece of the &yTriforce&n~
+The First piece of the Triforce lies on the ground here glowing.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+A
+19 100
+#661
+the Second piece of the Triforce~
+the Second piece of the &yTriforce&n~
+The Second piece of the Triforce lies on the ground here.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#662
+the Third piece of the Triforce~
+the Third piece of the &yTriforce&n~
+The third piece of the triforce lays on the ground here glowing.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#663
+the Fourth piece of the Triforce~
+the Fourth piece of the &yTriforce&n~
+The fourth piece of the triforce is here glowing.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#664
+the Fifth piece of the Triforce~
+the Fifth piece of the &yTriforce&n~
+The fifth piece of the triforce is here glowing.~
+~
+8 0 1
+0 0 0 0
+11 0 0
+#665
+roses flowers~
+&b&nA vase of fresh cut &rroses&n~
+&b&nA vase full of fresh cut &rroses&n sits next to the cushions.~
+~
+8 0 1
+0 0 0 0
+0 0 0
+E
+roses note~
+Just thought the place could use a little bit of red :)
+-Olaf
+~
+#666
+tarrasque hide ~
+&RThe blood stained hide of the Tarrasque&n~
+A mighty hide of some large beast lies on the floor here.~
+~
+9 584 1025
+20 0 0 0
+10 0 0
+#667
+rose red~
+a sweet smeeling &rred rose  @&g>-,---&n~
+A rose is growing here.~
+~
+9 0 16385
+0 0 0 0
+0 0 0
+#668
+amulet olaf~
+&WThe Most Holy and Powerful Amulet of Olaf&n~
+Here lies an item of ultimate holly power.~
+~
+9 13641 5
+6 0 0 0
+0 0 0
+A
+24 -2
+A
+2 2
+A
+18 2
+A
+19 2
+#686
+tsr~
+&f&YONE OF OLAFS SECRET QUEST TOKENS (To get take: tsr)&n~
+Undefined~
+~
+11 32 5
+0 0 0 0
+0 0 0
+#687
+axe ~
+&rA massive two-headed axe&n~
+A massive, blood stained, two-headed axe is stuck in the ground here.~
+~
+5 1 8193
+0 20 8 6
+400 0 0
+A
+18 3
+#688
+bearskin miniskirt~
+&y&nThe &yBearskin&n Miniskirt~
+Here lies a bearskin miniskirt, it belongs to Arrhae.~
+~
+9 1026 2049
+15 0 0 0
+30 0 0
+A
+1 2
+A
+2 2
+A
+19 5
+A
+18 5
+#689
+head pig~
+&MTHE PIGS HEAD&n~
+A pig head is laying on the ground here.~
+~
+13 0 17
+0 0 0 0
+0 0 0
+#690
+head richard simmons~
+The Head of the Tarrasque~
+A giant beasts head is laying on the ground here.~
+~
+8 8 1
+0 0 0 0
+10 0 0
+A
+13 -50
+A
+18 1
+A
+17 -1
+#691
+bottle flask~
+a flask of green slimy stuff~
+A small green flask sits on the ground here.~
+~
+17 0 1
+10 10 9 0
+15 10 0
+A
+18 3
+A
+19 3
+#692
+bottle healing potion~
+a small bottle of potent healing potion~
+A little bottle with some thick dark liquid in it lies on the ground here.~
+~
+10 76 1
+100 28 28 28
+2 150000 0
+#693
+warpstone stone green~
+a &GGlowing Green Chunk of Warpstone&n~
+A large piece of some sort of &Gglowing green stone&n is lying here.~
+~
+1 2163019 16385
+0 0 -1 0
+19 0 0
+A
+13 100
+A
+18 5
+A
+19 5
+A
+17 30
+#694
+sign~
+a sign~
+&RA big sign sits here with the words "Closed, for good" written on it.&n~
+~
+5 5696 0
+0 10 20 11
+22 40000 40000
+A
+17 15
+A
+19 5
+#695
+couch~
+a couch~
+&mA big comfy looking couch sits here, so dust off a spot and sit down.&n~
+~
+8 0 0
+0 0 0 0
+0 0 0
+#696
+bottle whiskey~
+a bottle of whiskey~
+A bottle siting on the ground here.~
+~
+17 0 1
+10 10 5 0
+15 0 0
+#697
+bible~
+&WTHE BIBLE&n~
+The most holy and sacred of all books lies on the ground here.~
+~
+15 256 1
+3 5 -1 0
+0 0 0
+A
+6 5
+#698
+band ring~
+&bthe Band of &BA&bn&Bn&bi&Bh&bi&Bl&ba&Bt&bi&Bo&bn&n   *~
+A huge platinum ring is here, it has ancient runes inscribed upon it.~
+~
+9 77832 3
+3 0 0 0
+1 0 0
+E
+card~
+These are to try and make you smile.  
+You're a good friend and I hate to see
+you unhappy.  So PLEASE!  Smile for me?
+:)  Your happiness means a lot.
+Your most loving friend, 
+Olaf
+~
+A
+18 5
+A
+19 5
+#699
+crown olaf holy~
+&WThe Most Holy and Powerful Crown of Olaf&n~
+This crown is most beautiful thing you have ever seen.  It is so bright and powerful looking you dare not stare at it any further for fear of going blind.~
+~
+9 68872 17
+30 0 0 0
+10 0 0
+A
+18 5
+A
+19 5
+A
+13 100
+A
+12 100
+A
+14 100
+$~

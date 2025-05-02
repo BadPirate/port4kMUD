@@ -1,0 +1,651 @@
+#100
+ruth white dragon~
+Ruth the White Dragon~
+A corrupted Ruth is protecting the path north viciously.
+~
+He seems to be protecting the way west very well...
+~
+272394 65708 -100 E
+100 -30 -20 1d1000+30000 2d100+50
+0 0
+8 8 1
+BareHandAttack: 9
+E
+#101
+Sheila healer cleric~
+Sheila~
+Sheila is sitting here.
+~
+   She sits, exsisting in many places at once, her body flickering in and out
+of exsistance.  It's rumored that she made a vow to say nothing but spells.  
+
+~
+532507 32 0 E
+50 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#102
+door guard arena club~
+the arena club guard~
+The &rArena Club&y door guard stands here preventing passage south to guests.
+~
+   Hmm, he looks big, muscular and not one to mess with, but you can see an
+arena club invitation sticking out of his pocket, if you could kill him you
+would become an esteemed member.  The thought has promise.    
+~
+10267 1192 0 E
+100 -30 -10 1d1+29999 20d20+50
+0 0
+8 8 1
+BareHandAttack: 3
+E
+#103
+bartender barkeep shopkeeper~
+the bartender~
+A bartender (who has some special items for a price) is mixing drinks here.
+~
+   He looks like he is ready to keep the peace in this tiny little club, and if
+needs be he looks fairly strong and robust.    
+~
+194590 8 0 E
+55 5 0 30d50+0 3d8+15
+3000 50000
+8 8 1
+BareHandAttack: 13
+E
+#104
+pawns shopkeeper~
+the Pawn Shopkeeper~
+The Pawn Shop Shopkeeper stands here haggling with the man next to him.
+~
+   He looks like a shrewd man, and if it weren't for his willingness to buy you
+don't think you'd be doing buisness with him.    
+~
+778250 0 0 E
+0 20 10 1d1+0 1d1+0
+10000000 0
+8 8 1
+E
+#105
+knight paladin~
+the guard paladin~
+A large paladin in shining plate mail stands here guarding the holy entrance.
+~
+This man is quite possibly the larges man you have seen....ever!  The 
+plate mail that he wears was made extra large just so he could fit it
+over his gigantic muscles.  Behind his glimmering visor you can see
+yes straw colored hair and his deep blue eyes staring at you.  If you
+believe you are holy enough, you may enter.  Otherwise he will send you
+on your way.
+~
+253963 1184 1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+BareHandAttack: 9
+E
+#106
+paladin guildmaster~
+the Grand Paladin Guildmaster~
+Before you stands the Grandest of all Paladins, he will teach you the holy way.
+~
+Although he appears fairly old, that means only that he has the power
+that most men only dream of.  Even though his body is get more and 
+more frail, his spirit thrives and grows with each day.  It is for that
+reason that his body will hold up against anything a mortal can throw
+at him.
+~
+256267 5292 1000 E
+100 -30 -10 1d1+29999 3d125+50
+0 500000
+8 8 1
+BareHandAttack: 3
+E
+#107
+vampyre guard~
+the vampyre guard~
+A young vampyre is here veiled in dark clothes turning away the unholy.
+~
+Although young, it is impossible to tell exactly how old this vampyre
+is.  He will stay looking youthful until he dies, that is if he ever
+does.  He remains veiled in his dark black clothing in case any sunlight
+dares to show inside.
+~
+253963 1184 -1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+BareHandAttack: 4
+E
+#108
+vampyre guildmaster~
+the ancient vampyre~
+A female vampyre is here, teaching the young bloods what to do.
+~
+This female vampyre is very old, some would say ancient.  She has very
+old blood, some say she decended from Vladimir himself who was the first
+known vampyre.  She is powerful beyond her appears, she could slay you 
+with a glance.
+~
+253963 1184 -1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 2
+BareHandAttack: 4
+E
+#109
+man bard guard~
+Bard guild guard~
+A very fat man is here, keeping you from entering this merry place.
+~
+   This man has probably not missed out on a meal in quite a while, and has not
+taken a shower in quite a while.  This man has no need for exercise to sweat,
+he sweats just standing around waiting for his next meal.  You definatly dont
+want to get any closer to him!    
+~
+254027 1184 1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+BareHandAttack: 7
+E
+#110
+guildmaster man old bard~
+the bard guildmaster~
+An old bard is siting here telling tales to all who will listen.
+~
+   This old man look likes his been everywhere.  He seems to never stop telling
+stories about his and other peoples adventures.  He tells about everything
+that's ever happened and been recorded.  You wonder how old this guy really is.
+His long white beard and wrinkled skin make you think he must be the oldest man
+that's alive.  Or at least the oldest bard.  He is very friendly though, and
+will tell you a tale about whatever you want to hear about.    
+~
+254042 1184 0 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+E
+#112
+an elven scout~
+a guildguard~
+There is a beautiful elven scout here, guarding the door to her guild.
+~
+She is a very beautiful elf, and probably wouldn't be interested in the
+likes of you.  Her looks are deceiveing though, since her strength
+surpasses many warriors of her age.  She makes sure that no outsiders
+can learn the secrets of the scout class.
+~
+253963 1184 0 E
+100 -30 10 1d1+9999 10d10+50
+0 0
+8 8 2
+BareHandAttack: 2
+E
+#113
+scout master ~
+the Scout Master~
+The scout master is barely visible in his camo as he directs the training.
+~
+   After taking a minute to actualy find this guy who is nearly hiden in the
+fake forest, you see that he is busy training all the scouts.  Giving
+directions on how to properly hide your tracks, or become invisible in your
+suroundings.  As busy as he is it takes him a minute to notice you.  When he
+does finally notice you though, he looks you over then signals you to join the
+training.    
+~
+254043 1184 1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+E
+#114
+elf guard~
+an elven defender~
+A gigantic elf towering over you, only allowing certain people in.
+~
+You always thought that elves were smaller than humans, but this elf
+must not have read the same book.  He towers over you and could easily
+beat you into a pulp.  You think it is probably not best to mess with
+him for it would be a fatal mistake, or at best and embarassing one.
+~
+253963 1184 1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+BareHandAttack: 6
+E
+#115
+old elf master guildmaster~
+an old elf~
+An old elf is here wise beyond his years, and stronger than most.
+~
+This elf has been around a long time, and was battling dragons when 
+you were just a glimmer in someones mind.  Being elven, magic is in
+his nature, so he managed to pick up spells here and there, making
+him a good teacher for all the classes.  So pick up a book, sword,
+or what have you, and learn!
+~
+253963 1184 1000 E
+100 -30 -10 1d1+9999 10d10+50
+0 0
+8 8 1
+E
+#116
+giant guard~
+a rather large giant~
+A giant is standing here, allowing and denying entrance to guilds.
+~
+undefined~
+11 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#117
+fire salamander~
+the fire salamander~
+A fire salamander is here sun-bathing on the pumice.
+~
+   It looks like a vicious animal, but relativly harmless if left alone
+~
+6172 0 -5 E
+3 20 5 5d10+5 1d8+2
+4 70
+8 8 0
+BareHandAttack: 12
+E
+#118
+gatekeeper keeper ~
+the &GGatekeeper&n~
+The mystical &GG&gatekeeper&n hovers over the ground here protecting the portals.
+~
+   As you try to see what the Gatekeeper looks like you fail.  He is wraped
+complety in a cloth cloak.  His apearance reminds you of death, but instead of
+black he is covered in a glowing green.    
+~
+778315 1064 0 E
+100 -30 -10 1d1+5999 5d5+10
+0 0
+8 8 0
+BareHandAttack: 12
+E
+#122
+shop dragon shopkeeper keeper~
+the dragon~
+A dragon has managed to squeeze himself into this cramped shop.
+~
+   The giant red dragon has a low, mean brow over squitny black eyes like tiny
+grapes.  They shine with dim malice.  You can bet your bottom dollar that this
+nasty old thing will cheat you if he can.  Smoke trails out of his wide red
+nostriles.    
+~
+188442 40 0 E
+100 -30 -10 1d1+30000 30d100+50
+0 0
+8 8 1
+E
+#138
+guard guild~
+the guildguard~
+The Guildguard stands here, guarding all the new guilds from trespassers.
+~
+   He looks strong, and fairly smart.  He prevents non-guildmembers from
+entering a guild that they don't belong too.    
+~
+11 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#140
+mips rabbit bunny brown~
+Mips~
+A large rabbit without arms peers at you with sad eyes.
+~
+   Before you a golden brown rabbit stands on his two hind paws.  His large
+ears shake and wobble above his head.  He has no front paws.  He looks at you
+with a hint of curiosity in his large, golden eyes.    
+~
+1040538 33892 0 E
+20 11 6 1d1+150 1d10+9
+0 0
+8 8 1
+BareHandAttack: 4
+E
+#141
+Toast clone doppelganger~
+Toast~
+Toast is standing here.
+~
+undefined~
+40970 33832 0 E
+55 2 10 1d1+723 0d0+0
+0 0
+8 8 1
+BareHandAttack: 12
+E
+#142
+flamewing flame wing wyrm~
+&rFlamewing&n~
+A towering wyrm burns before you.
+~
+   &nThis ginormous, flaming serpent is the mighty &rFlamewing&n!  ...  Wait,
+you've never heard of a wyrm Flamewing, let alone a dragon, but once upon a
+time you heard of a -drake- named Flamewing.  Could it be that same drake has
+found an incredible boost of power and shed his wings?    
+~
+254010 44 0 E
+100 -25 -6 1d30+15000 10d14+45
+35000 1000000
+8 8 1
+BareHandAttack: 4
+E
+#143
+unskilled kobold laborer~
+the unskilled kobold laborer~
+An unskilled kobold laborer is here doing small tasks.
+~
+It looks tired, but whiped, most kobolds have spunk, there is no more here.
+~
+140 0 -10 E
+3 20 5 1d5+30 1d12+0
+2 0
+8 8 1
+E
+#144
+elf laborer~
+the elf laborer~
+An elf laborer is working away here.
+~
+   It doesn't look very skilled, but it looks a lot smarter and works harder
+than the kobolds.    
+~
+28 0 100 E
+6 19 2 1d10+90 1d12+1
+20 0
+8 8 1
+E
+#145
+ogre guard~
+the ogre guard~
+An ogre guard stands here, wiping the slaves into submission.
+~
+He looks big, and mean.
+~
+8 0 -400 E
+20 17 -1 1d50+350 2d12+4
+100 0
+8 8 1
+E
+#146
+goblin junk lady~
+the junk lady~
+The Junk Lady is walking around collecting things.
+~
+   She is a wrinkly old lady with a mound of junk on her back that's bigger
+than she is.  You see all kinds of things poking out of that heap, and some of
+them could be awfully useful.  Maybe you could convince her to part with them,
+for the right price.    
+~
+77 32 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#147
+shopkeeper clan~
+a clan shopkeeper~
+A clan shopkeeper is here displaying privledged wares.
+~
+It looks, err, like a shopkeeper, And well a clan shopkeeper too...    
+~
+778250 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#148
+super guild guard guildguard~
+the super guild guard~
+The really really super guildguard stands here.
+~
+He looks, Really Really Really SUPER!
+~
+11 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#149
+super guild master guildmaster~
+the super guildmaster~
+A REALLY REALLY REALLY SUPER!!! Guildmaster exists here.
+~
+He looks REALLY REALLY REALLY!! SUPER!!!!!!!!!!
+~
+11 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#150
+questmaster master token~
+the questmaster~
+The Token Questmaster wanders around here.  (&rList&y)
+~
+Type list for a list of things you can do with quest tokens here.
+~
+762073 12456 0 E
+100 -30 -20 30d1000+0 30d127+50
+0 0
+8 8 1
+BareHandAttack: 10
+E
+#151
+zombie halloween~
+the halloween zombie~
+A halloween zombie stands here flesh dripping off his bones.
+~
+He looks very, halloweeney
+~
+12296 1024 -50 E
+10 10 2 1d25+200 2d6+2
+3000 0
+8 8 1
+BareHandAttack: 4
+E
+#152
+trickertreater mythical~
+the mythical trickertreater~
+A Mythical beast known as the Trickertreater stands here.
+~
+It holds out a bag of pills and potions and says "trickertreat"!!?!!?
+~
+32776 32 50 E
+20 8 -4 1d100+400 5d6+6
+10000 0
+8 8 2
+E
+#153
+zombie master~
+the zombie master~
+A zombie master stands here commanding his minions on the assualt.
+~
+He looks powerful
+~
+256008 160 -500 E
+100 0 -10 1d1000+4000 6d20+10
+500000 0
+8 8 1
+E
+#154
+arena bouncer watcher~
+an arena bouncer~
+An arena bouncer stands here denying access to the arena during battles.
+~
+He looks muscular, and kind of slow :-)
+~
+712715 1064 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#155
+Antibouncer anti bouncer~
+the antibouncer~
+An anti-bouncer stands here keeping people in the arena during battles
+~
+She looks weak, yet her mind must be strong.
+~
+712715 1064 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#156
+turkey thanksgiving gobbler~
+the turkey~
+A turkey walks around here gobbling its fowl head off.
+~
+It looks, delicious!
+~
+266376 128 0 E
+0 -30 -20 1d1+1026 1d1+0
+0 0
+8 8 1
+BareHandAttack: 14
+E
+#157
+pilgrim~
+the pilgrim~
+An old fashioned pilgrim is standing here in BLACK & WHITE!!
+~
+He looks, err, Amish.
+~
+24 0 50 E
+20 5 -15 2d100+700 5d7+15
+1 0
+8 8 1
+E
+#158
+demon retrieval corpse haden~
+Haden~
+Haden and his band of corpse retrieval demons are here to assist.
+~
+   They look like mean hombres.  Well as demons go.  Rough and ready to get
+your corpse back from whatever danger you may have left it in.  But all for a
+fee.    
+~
+253979 128 0 E
+100 -30 -17 1d1000+3000 15d15+50
+100000 0
+8 8 1
+BareHandAttack: 10
+E
+#159
+wyvern shopkeeper~
+the wyvern~
+A small wyvern has items for sale.
+~
+Type &rLIST&n to view items for sale.
+~
+524363 40 0 E
+25 20 10 1d1+5 1d1+0
+0 5
+8 8 1
+E
+#160
+tarrasque husband~
+the tarrasque's husband~
+The tarrasque's husband stands here, very proud of his wife.
+~
+Looks happy with his reconsolidated marrige
+~
+10 0 -100 E
+100 -30 -20 30d30+30000 30d127+50
+0 0
+8 8 1
+E
+#161
+demon shopkeeper keeper deathtrap trap~
+the Demon shopkeeper~
+&yA &rDemon &yshopkeeper stands here, ready to profit from your loss.
+~
+   He drives a hard bargain, seeing as you have absolutely nothing to threaten
+him with.  He see's idiots like you every day.    
+~
+778266 0 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#162
+samurai town guard protector~
+the town guard~
+A samurai stands here, looking tall and proud, protecting his village.
+~
+   This guard of the town looks very proud to be doing what he is doing,
+because it is a very honorable position in society.  He looks on you with
+scrutiney, determining if you are a threat or not, and whether or not to keep
+his eye on you.    
+~
+39194 4132 300 E
+30 8 -2 1d30+300 2d10+10
+150 1200
+8 8 1
+BareHandAttack: 3
+E
+#163
+class shopkeeper~
+the class shopkeeper~
+The class shopkeeper stands here pawning his goods.
+~
+He looks like a wirey man who doesn't get much sleep, kind of like YOU!
+~
+712730 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#164
+gambling gamble master~
+the gamble master~
+The Gamble Master stands here, holding his lucky dice. &blook gamble&y
+~
+   A seedy little man, the Gamble Master is constantly moving, his beady,
+rat-like eyes taking in everything that goes on around him.  As he surveys the
+territory, his right hand constantly flips a gold coin, and catches it, only to
+flip it again.  It might be dangerous to bet against him...    
+~
+10 0 0 E
+0 20 10 1d1+0 1d2+0
+0 0
+8 8 1
+E
+#165
+mob unfinished~
+the unfinished mob~
+An unfinished mob stands here.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#166
+jailer gnome~
+the jailer gnome~
+A mindless gnome is here senslessly whipping you with a wet noodle.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+0 20 -10 30d30+1000 1d1+0
+0 0
+8 8 1
+E
+$

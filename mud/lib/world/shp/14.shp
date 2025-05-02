@@ -1,0 +1,193 @@
+CircleMUD v3.0 Shop File~
+#1407~
+124
+127
+128
+-1
+1.07
+0.50
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+1402
+0
+1407
+-1
+0
+24
+0
+0
+#1408~
+116
+117
+119
+120
+-1
+1.15
+0.50
+-1
+%s Sorry, I don't stock that item.~
+%s You dpn't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+1401
+0
+1408
+-1
+8
+26
+0
+0
+#1409~
+2212
+2213
+2214
+2219
+-1
+1.10
+0.70
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+2203
+64
+1409
+-1
+0
+28
+0
+0
+#1460~
+-1
+2.00
+0.00
+-1
+%s You didn't have that.~
+%s You don't have that.~
+%s I don't buy things stupid, why would I need them.~
+%s I have no need (or the money) for such things.~
+%s AHAHAHAHA, Not enough money! hehe.~
+%s Gimme %d coins! oh, here it is.~
+%s Here's %d coins for that~
+0
+0
+161
+0
+1460
+-1
+0
+28
+0
+0
+#1472~
+1499
+1498
+1496
+1495
+1494
+1493
+1492
+1491
+1490
+1489
+1488
+3050
+-1
+1.00
+0.50
+9
+5
+10
+-1
+%s Why do you think I have that?~
+%s You don't have that, foolish mortal!~
+%s I don't have anything like that.~
+%s I'm only a poor blighted Soul, not a banker!~
+%s You're only a poor mortal, too destitute to buy THAT!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+1401
+0
+1472
+-1
+0
+28
+0
+0
+#1495~
+145
+1480
+1481
+1482
+-1
+1.50
+0.50
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+1495
+0
+1495
+-1
+0
+28
+0
+0
+#1496~
+146
+147
+148
+149
+150
+151
+152
+-1
+2.00
+0.50
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+163
+0
+1496
+-1
+0
+28
+0
+0
+$~
