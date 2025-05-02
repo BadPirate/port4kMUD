@@ -43,20 +43,24 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/badpirate/port4kMUD.git
    cd port4kMUD/server
    ```
 
 2. Install dependencies:
+
    ```bash
    yarn install
    ```
 
 3. Set up environment variables:
+
    ```bash
    cp .env.example .env.local
    ```
+
    Edit `.env.local` to configure your environment.
 
 4. Make sure the MUD server is running:
@@ -74,6 +78,7 @@ yarn dev
 ```
 
 This will:
+
 1. Check if the MUD server is running
 2. Start the Next.js development server
 3. Set up Socket.IO for WebSocket connections

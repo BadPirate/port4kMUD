@@ -43,6 +43,18 @@ jobs:
       run: yarn test
       env:
         CI: true # Often useful to indicate running in a CI environment
+        
+    # Upload the built server as an artifact
+    - name: Upload server build
+      uses: actions/upload-artifact@v3
+      with:
+        name: server-build
+        path: |
+          ./server/.next
+          ./server/node_modules
+          ./server/package.json
+          ./server/yarn.lock
+          ./server/e2e
 
   build_mud:
     name: Build MUD
@@ -71,3 +83,63 @@ jobs:
           echo "MUD build failed: bin/circle not found"
           exit 1
         fi
+        
+    # Upload the built MUD binary and necessary files as an artifact
+    - name: Upload MUD build
+      uses: actions/upload-artifact@v3
+      with:
+        name: mud-build
+        path: |
+          ./mud/bin/circle
+          ./mud/lib
+
+  e2e_tests:
+    name: End-to-End Tests
+    runs-on: ubuntu-latest
+    needs: [build_and_test_server, build_mud]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    # Download artifacts from previous jobs
+    - name: Download server build
+      uses: actions/download-artifact@v3
+      with:
+        name: server-build
+        path: ./server
+        
+    - name: Download MUD build
+      uses: actions/download-artifact@v3
+      with:
+        name: mud-build
+        path: ./mud
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        
+    - name: Prepare test scripts
+      run: |
+        chmod +x ./server/e2e/test-launch.sh
+        chmod +x ./server/e2e/test-cleanup.sh
+        chmod +x ./mud/bin/circle
+    
+    - name: Install Playwright browsers
+      run: |
+        cd server
+        npx playwright install --with-deps chromium
+    
+    - name: Run end-to-end tests
+      run: |
+        cd server
+        yarn test:e2e
+      
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-results
+        path: server/test-results/
+        retention-days: 7

@@ -1,11 +1,13 @@
-import Page from '../src/components/Page'
-import WelcomeCard from '../src/cards/WelcomeCard'
-import config from '../src/utils/config'
+import Head from 'next/head'
+import MudClient from '@/src/components/MudClient'
 
 const Index = () => (
-  <Page title={`Welcome to ${config.NEXT_PUBLIC_APP_NAME}`}>
-    <WelcomeCard />
-  </Page>
+  <div style={{ height: '100vh', width: '100vw', padding: '2em' }}>
+    <Head>
+      <title>Welcome to Port 4k!</title>
+    </Head>
+    <MudClient />
+  </div>
 )
 
 export default Index

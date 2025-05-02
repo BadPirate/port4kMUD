@@ -1,4 +1,10 @@
-import { type ITerminalAddon, type ITerminalInitOnlyOptions, type ITerminalOptions, Terminal } from '@xterm/xterm'
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import {
+  type ITerminalAddon,
+  type ITerminalInitOnlyOptions,
+  type ITerminalOptions,
+  Terminal,
+} from '@xterm/xterm'
 import '@xterm/xterm/css/xterm.css'
 import { useEffect, useRef, useState, type ComponentPropsWithoutRef } from 'react'
 
@@ -26,7 +32,7 @@ export function useXTerm({ options, addons, listeners }: UseXTermProps = {}) {
   const optionsRef = useRef<UseXTermProps['options']>(options)
   const addonsRef = useRef<ITerminalAddon[] | undefined>(addons)
   const [terminalInstance, setTerminalInstance] = useState<Terminal | null>(null)
-  
+
   // Create a stable reference to the terminal instance
   const stableTerminalRef = useRef<Terminal | null>(null)
 
@@ -88,9 +94,11 @@ export function useXTerm({ options, addons, listeners }: UseXTermProps = {}) {
   }
 }
 
-export interface XTermProps extends Omit<ComponentPropsWithoutRef<'div'>, 'onResize' | 'onScroll'>, UseXTermProps {}
+export interface XTermProps
+  extends Omit<ComponentPropsWithoutRef<'div'>, 'onResize' | 'onScroll'>,
+    UseXTermProps {}
 
-export function XTerm({ className = '', options, addons, listeners, ...props }: XTermProps) {
+export const XTerm = ({ className = '', options, addons, listeners, ...props }: XTermProps) => {
   const { ref, terminalRef } = useXTerm({
     options,
     addons,
