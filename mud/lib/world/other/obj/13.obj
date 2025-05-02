@@ -1,0 +1,81 @@
+#1300
+Tao Te Ching~
+the Tao Te Ching~
+A dusty book lies here.  It emits a curious glow.~
+~
+11 0 16385
+0 0 0 0
+2 15000 500
+A
+4 2
+#1301
+Duelist Duel Sword Duelist's~
+the Duelist's sword~
+A thin, fragile looking sword has been left here.~
+~
+5 65536 8193
+2 3 5 3
+5 10000 500
+#1302
+Azure az blade blad bl~
+the Azure Blade~
+A beautiful, sturdy looking blue sword has been forgotten here by someone.~
+~
+5 32 8193
+0 3 6 3
+10 25000 400
+A
+1 1
+A
+13 50
+#1303
+Hammer Ham Tiresias Tires Tir~
+the Hammer of Tiresias~
+A very large, heavy looking warhammer has been carelessly left here.~
+~
+5 8441097 8193
+0 4 6 7
+15 25000 25000
+A
+13 -25
+A
+18 1
+A
+19 1
+#1304
+basket bask ba~
+the covered basket~
+A beautiful wicker basket lies here, partially covered by a blanket.~
+~
+15 0 0
+20 0 -1 0
+100 100 100
+E
+basket bask wicker~
+   This basket seems to be sturdy and beautifully crafted.  It appears that at
+one point in time, it may have been used to carry something of great value.  
+
+~
+#1305
+gauntlets gaunt gau Tiresias Tires Tir~
+Gauntlets of Tiresias~
+A pair of beautifully crafted gauntlets lie here awaiting a person of faith.~
+~
+9 44092704 129
+7 0 0 0
+12 25000 25000
+A
+24 3
+#1399
+creek cree cr~
+the creek~
+The Creek rushes by here at a dangerous looking speed.~
+~
+23 0 0
+9999 9999 13 1
+10000 0 0
+E
+Creek cree cr~
+The creek seems to have an unusual reddish tint to it...
+~
+$~

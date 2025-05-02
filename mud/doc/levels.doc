@@ -1,0 +1,193 @@
+This is a first draft copy. Corrections please mail direct to mrunix@ic.net.
+-----------------------------------------------------------------------------
+
+                    ADDING LEVELS TO YOUR MUD
+
+INTRODUCTION:
+
+You will find a *ton* of reference material available from Circle directly
+at: ftp://ftp.circlemud.org/pub/CircleMUD. Another good source comes with
+the Circle code in the docs directory. My very favorite Web site for Circle
+references is: http://www.circlemud.org/~jelson/circle/cdp/cxref.
+
+Circle 3.0 bpl11 is by far the easiest version to modify so the efforts you
+put into research will have huge pay-offs when you go to actually change code.
+
+Finally, you will be doing yourself a favor if you have the extra disk space.
+Make a copy of the source code and tar/gzip or zip it away somewhere safe.
+Then, with each version of code that works, make a copy of it too. This gives
+you the opportunity to go back to the last working version if something goes
+wrong with a patch or a modification that you made.
+
+READ AND HEED:
+
+Assumptions: * you are using stock Circle 3.0 bpl11
+
+             * these instructions are not guarenteed to work on
+               previously modified Circle 3.0 bpl11 code
+
+             * you have an understanding of coding concepts & C
+
+             * the concept of an array structure doesn't keep you up nights
+
+             * you have a suitable editor that you are familiar with
+
+             * <circle path> = a writeable directory structure where
+                               docs, Circle objects and code reside
+
+             * you have identified the following files in your installation:
+
+                   <circle path>/src/structs.h
+                   <circle path>/src/class.c
+                   <circle path>/src/fight.c
+                   <circle path>/lib/etc/players
+                   <circle path>/lib/plrobjs/A[..]ZZZ
+
+             * a complete playerfile wipe is not necessarily needed...
+
+STEP ONE:
+
+Congrats! You have about half the information you need to add levels.
+The parts that you need to consider now are:
+
+   * how many additional mortal levels
+   * how many additional immortal levels
+   * how many additional god levels
+   * how many additional mob levels (for balancing your Mobs -vs- PCs later on)
+
+   * descriptions for all of the above [ not necessaraly required ]
+
+   * all the above multiplied by the total number of classes in your mud
+     (stock Circle has four classes)
+
+STEP TWO:
+
+What the heck is THAC0... ? (from building.doc):
+
+THAC0
+
+"To Hit Armor Class 0" -- a measure of the ability of the monster to
+penetrate armor and cause damage, ranging from 0 to 20.  Lower numbers mean
+the monster is more likely to penetrate armor.  The formal definition of
+THAC0 is the minimum roll required on a 20-sided die required to hit an
+opponent of equivalent Armor Class 0.
+
+Armor Class
+
+The ability of the monster to avoid damage.  Range is from -10 to 10,
+with lower values indicating better armor.  Roughly, the scale is:
+     AC  10    Naked person
+     AC   0    Very heavily armored person (full plate mail)
+     AC -10    Armored Battle Tank (hopefully impossible for players)
+
+Note on THAC0 and Armor Class (AC): When an attacker is trying to hit a
+victim, the attacker's THAC0 and the victim's AC, plus a random roll of the
+dice, determines whether or not the attacker can hit the victim.  (If a hit
+occurs, a different formula determines how much damage is done.)  An
+attacker with a low THAC0 is theoretically just as likely to hit a victim
+with a low AC as an attacker with a high THAC0 is to hit a victim with a
+high AC.  Lower attacker THAC0's and higher victim AC's favor the attacker;
+higher attacker THAC0's and lower victim AC's favor the victim.
+
+STEP THREE:
+
+Modify the THAC0 array which has the following specification:
+
+const int thaco[NUM_CLASSES][LVL_IMPL + 1] = {
+                               {100, 20,.......... 1}, /* <class 1> */
+                                 |    |            |
+                           level 0    1  LVL_IMPL +1
+
+                               {100, 20,...1},         /* <class 2> */
+                               {100, 20,...1}};        /* <class n> */
+
+The below code segment is based on Circle 3.0 bpl11 class.c:
+
+/* LEVEL 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14 */
+/* LEVEL 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 */
+/* LEVEL 30, 31, 32, 33, 34, [LVL_IMPL + 1] */
+
+const int thaco[NUM_CLASSES][LVL_IMPL + 1] = {
+       {100, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 09, 08, 07,
+         06, 05, 04, 03, 02, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
+         01, 01, 01, 01, 01, 01}};
+
+Stock circle comes with 34 levels. In the above example the thaco
+array values represent a generic distribution. Note that level 0
+has a value of 100. This is because level zero is the initialization
+level and all characters get promoted to level 1 upon entry into the
+game. Level 0 doesn't hit or get hit.
+
+To add 6 more levels to this generic THAC0 the array delaration would
+be:
+
+/* LEVEL 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14 */
+/* LEVEL 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 */
+/* LEVEL 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, [LVL_IMPL + 1] */
+
+const int thaco[NUM_CLASSES][LVL_IMPL + 1] = {
+       {100, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 09, 08, 07,
+         06, 05, 04, 03, 02, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
+         01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01}};
+
+You will not have any problems by continuing with the same THAC0 number
+for level 34 (THAC0 value 01) through to level n. Then later on you can
+adjust them as appropriate:
+
+For example - in stock Circle (class.c)  - you would use the THAC0 value
+of 1 for additional levels in the Cleric class.
+
+STEP FOUR:
+
+In class.c around line 452 you'll start to see SPELLS and SKILLS.
+
+Before you changed your mud from 34 levels to n-levels there was a pretty
+good balance between what spells and skills were available per level.
+Now, with your n-levels you'll have to do a whole load of things in this
+area and in a few others. These specifics are beyond the scope of this
+document and will be covered in other forthcoming documents.
+
+STEP FIVE:
+
+Just like the THACO array there is a corresponding data structure TITLES
+which holds the male and female gender names and experience points for each
+level and class. If you change your THAC0 array by adding or deleting
+levels you must do the very same thing to the TITLES array.
+
+TITLES has the following specification:
+
+const struct title_type titles[NUM_CLASSES][LVL_IMPL + 1] = {
+/* levels 0-LVL_IMPL+1 */
+    {{"male gender name", "female gender name", experience points}};
+}
+
+
+STEP SIX:
+
+Modify file structs.h around line 415. There you must identify what level
+the gods are going to be and even possibly add a few god levels in the process.
+Keep in mind if you perform the latter then you will possibly need to modify
+more of struct.h as needed. Changing anything other than the implementor and 
+existing god levels is all that is needed.
+
+
+STEP SEVEN:
+
+You have two choices here, either you can delete the file "players" from 
+<circle path>/lib/etc then delete all *.objs from
+<circle path>/lib/plrobjs/A-[.Z] & ZZZ directories, or you can choose to
+create some sort of command specially for when you upgrade that allows
+you to advance your imp character up to the maximum level.  Once you do
+this, you should advance all of your immortal characters once again to
+attain the same situation as before you added more levels.  You should
+also note that balancing the mob files and obj files will probably be 
+necessary at this point to ensure that everything is balanced, as before.
+
+STEP EIGHT:
+
+Compile your mud and *voila*.
+
+Good luck, if it works pass it on.
+
+credit where due please
+mrunix@ic.net (Mike Levine)

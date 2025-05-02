@@ -1,0 +1,299 @@
+#6000
+john lumberjack~
+John the Lumberjack~
+John the Lumberjack is here, looking for some trees to chop down.
+~
+He is six feet tall and looks quite strong, muscles bulging under his heavy,
+chequered shirt.  His features are worn with hard work and his expression is
+one of a peaceful man leading a simple life.
+~
+6222 32 370 E
+5 15 6 1d12+60 1d4+3
+100 1050
+8 8 1
+E
+#6001
+rabbit small~
+the rabbit~
+A small rabbit is foraging in the bushes here.
+~
+It is a small, furry creature with long ears and big feet.
+~
+72 0 0 E
+0 20 6 1d4+1 1d4+0
+0 60
+8 8 0
+E
+#6002
+bear brown~
+the brown bear~
+A big, brown, angry-looking bear is here.
+~
+The bear is a big, brown, furry animal with very large claws and very sharp
+teeth.  It doesn't resemble those cute little dolls from toy shops at all.
+~
+1128 0 -50 E
+8 13 3 1d12+98 2d6+2
+0 4000
+4 8 0
+E
+#6003
+rabbit ferocious~
+the ferocious rabbit~
+A ferocious rabbit is here, glaring hungrily at you.
+~
+This small, furry creature with long ears and big feet has been attacked
+by the dreaded rabbit rabies, a horrible disease that turns helpless and
+innocent rabbits into ferocious and bloodthirsty monsters.
+~
+104 0 -150 E
+3 17 6 1d4+26 1d8+0
+0 350
+4 8 0
+E
+#6004
+deer fallow~
+the fallow deer~
+A fallow deer is grazing peacefully here.
+~
+She is a graceful creature on long, slender legs, and with large, brown eyes
+looking back at you with an air of watchful interest.
+~
+262344 8 350 E
+2 19 5 2d8+8 1d6+0
+0 230
+8 8 2
+E
+#6005
+fox brown~
+the brown fox~
+A brown fox is stalking rabbits through the underbrush here.
+~
+It is a large fox with beautiful, red-brown fur and a long, thick bushy tail.
+~
+72 0 -50 E
+2 18 6 1d4+18 1d6+0
+0 225
+8 8 0
+E
+#6006
+bird large~
+the bird~
+A large bird with a broken wing has been cornered here.
+~
+The bird isn't going to live much longer, by the looks of it.
+~
+10 0 0 E
+0 17 10 2d3+1 1d2+1
+0 25
+8 8 0
+E
+#6007
+bobcat cat~
+the bobcat~
+A medium sized bobcat is stalking a bird here.
+~
+The bobcat has sharp claws and teeth, and will probably eat you instead of
+the bird if you give it the chance.
+~
+42 1032 -150 E
+5 15 5 1d12+60 2d4+3
+0 1100
+8 8 0
+E
+#6008
+sparrow~
+the sparrow~
+A sparrow is flapping around by the ground.
+~
+The sparrow looks like it is enjoying life.
+~
+72 0 200 E
+0 20 9 3d3+1 1d4+0
+0 25
+8 8 0
+E
+#6009
+robin~
+the robin~
+A robin is hopping around looking for bugs to eat.
+~
+The robin looks quite intent on finding a bug or worm to eat.
+~
+72 0 200 E
+0 20 9 3d3+1 1d4+0
+0 25
+8 8 0
+E
+#6010
+squirrel~
+the squirrel~
+A squirrel is here seeking refuge in its nest.
+~
+It peers out of its nest at you anxiously, seeming to plead silently with
+you to leave it alone.
+~
+10 786432 200 E
+1 20 8 1d7+9 1d5+0
+0 120
+8 8 0
+E
+#6011
+badger~
+the sleepy badger~
+A furry brown badger is curled up under a log here.
+~
+The badger is slowly awakening and peering up at you from its burrow. You
+know that it won't be moving this slow for long.  Its sharp claws and teeth
+catch your attention when you consider killing it.
+~
+10 524288 50 E
+4 17 5 1d5+48 2d3+2
+0 650
+8 8 0
+E
+#6012
+grey squirrel~
+the grey squirrel~
+A grey squirrel with a bushy tail is foraging for nuts here.
+~
+This happy creature seems to pay you no heed as it goes about its search for
+nuts among the leaves and twigs on the ground here.
+~
+72 262144 150 E
+2 19 8 1d12+22 1d6+0
+0 200
+8 8 0
+E
+#6013
+chipmunk~
+the small chipmunk~
+A small brown-red chipmunk dashes from tree to tree here.
+~
+The absolute zenith of hyperactivity, this small rodent seems to never tire
+of running up, down, and around the trees in this area.  If you could ever
+catch it, you imagine it would make an easy meal.
+~
+72 262144 170 E
+0 20 5 2d5+3 1d4+0
+0 40
+8 8 0
+E
+#6014
+crow black bird~
+the large black crow~
+A large black bird flits about here, picking at bits of carrion.
+~
+The bird eyes you warily, but continues with its meal.
+~
+142 0 -20 E
+2 19 8 1d12+22 1d5+1
+3 200
+8 8 0
+E
+#6015
+grotesque vulture~
+the grotesque vulture~
+A grotesque vulture covered in blood and gore is here feeding madly.
+~
+It sickens you to even look at this foul bird.  Bits of dried gore stick to
+its beak, and unidentifiable organs hang from its talons and feathers.  
+It sees you and attacks, protecting its horrible feast!
+~
+46 1160 -700 E
+6 15 4 1d12+68 2d3+2
+14 1750
+8 8 0
+E
+#6016
+buck deer~
+the young buck~
+A young 5-point buck is drinking from the lake here.
+~
+This young male deer is drinking from the edge of the lake and watching you
+warily.  His antlers are not full size yet, and will no doubt be quite 
+impressive in a few years.
+~
+74 8 350 E
+4 17 4 1d12+48 1d5+3
+0 750
+8 8 1
+E
+#6017
+fish~
+the fish~
+A fish is swimming about here.
+~
+The fish looks about the right size for a meal.
+~
+10 64 100 E
+0 20 10 2d5+0 1d3+0
+0 30
+8 8 0
+E
+#6018
+duckling~
+the duckling~
+A duckling is swimming around in the pond.
+~
+The duckling is adorable, it looks most of all like a tiny furball.
+~
+10 0 1000 E
+0 20 10 1d1+0 1d1+0
+0 1
+8 8 0
+E
+#6019
+duck~
+the duck~
+A duck is here, quacking happily.
+~
+The duck is quite fat.  It looks like it is enjoying life.
+~
+72 0 1000 E
+1 20 10 2d6+5 1d4+0
+0 75
+8 8 0
+E
+#6020
+thief gem~
+the gem thief~
+A thief hides in the room looking at his treasure.
+~
+   This man is a typical thief, except by the looks of it he steals rare gems.
+His pockets are filled with them, all looking like they are worth little.  He
+has an evil grin as he stares at you, and then your prized gems.    
+~
+125470 270508 -300 E
+75 -15 -10 1d1+3000 8d8+35
+100000 30000
+8 8 1
+E
+#6021
+man gem thief~
+the gem thief~
+A thief hides in the room looking at his last steal.
+~
+This man is a typical thief, except by the looks of it he steals rare gems.
+His pockets are filled with them, all looking like they are worth little.  He
+has an evil grin as he stares at you, and then your prized gems.
+~
+125018 32936 -300 E
+80 -15 -10 1d1+4999 8d8+35
+150000 35000
+8 8 1
+E
+#6022
+bunny~
+&WA Little White Bunny&n~
+&WA little white bunny is here...my he has huge fangs...&n
+~
+Strange...you remember seeing a bunny like this once...in a small cave...
+~
+59468 32 -1000 E
+100 -30 0 1d1+30000 30d127+50
+0 0
+8 8 0
+BareHandAttack: 4
+E
+$

@@ -1,0 +1,561 @@
+#1700
+unfinished mob~
+unfinished mob~
+unfinished mob
+~
+unifinshed
+~
+194650 0 0 E
+1 20 0 0d0+0 0d0+0
+0 0
+8 8 1
+E
+#1701
+cerberus hellhound chief~
+Cerberus~
+Cerberus, the Chief Hound, is working here.
+~
+   While you never expected the legendary hound to be female, never-the-less,
+Cerberus instills a feeling of terror in your heart.  Unlike the other
+hellhounds, Cerberus is graced with three large heads, all of which glare
+balefully at you for disturbing her work.  However, like the other hellhounds,
+Cerberus has a mouthful of large, sharp teeth on each of her heads.  Only the
+very strong would safely challenge this guardian of Mist.    
+~
+522330 8380 -250 E
+75 0 -9 5d5+2000 5d3+25
+10000 10000
+8 8 2
+BareHandAttack: 9
+E
+#1702
+pack rat shopkeeper packrat~
+the giant pack rat~
+A giant pack rat scrounges around here.
+~
+A giant pack rat.  If it wasn't so big, it would probably be very cute.
+~
+780362 0 0 E
+10 10 5 2d2+250 2d3+5
+5000000 1000
+8 8 1
+BareHandAttack: 4
+E
+#1703
+beregard demon shopkeeper~
+Beuregard the demon~
+Beuregard the demon stands here, polishing his spectacles.
+~
+Beuregard is a very unusual demon.  His horns are just tufts, his tail 
+doesn't have spikes, he even wears glasses!  Very unusual.
+~
+780378 0 0 E
+50 0 0 5d5+1000 3d5+20
+2000000 100000
+8 8 1
+BareHandAttack: 8
+E
+#1705
+barkeeper innkeeper gargoyle shopkeeper~
+the gargoyle~
+The Gargoyle barkeeper stands here, surveying his domain...
+~
+   The Gargoyle is huge, standing an easy 7'6".  His chest ripples with muscles
+powerful enough for flight as he moves around the room, chatting with some,
+serving others.  He has batlike wings that fold neatly to his back just enough
+to have clearance between the tables.    
+~
+784474 0 0 E
+20 10 7 1d3+250 2d3+12
+1000000 0
+8 8 1
+BareHandAttack: 8
+E
+#1706
+witch baker shopkeeper~
+the grandmotherly witch~
+A grandmotherly witch is baking here.
+~
+   Though a witch, she is very kindly looking.  She is pleasantly plump, with
+her white hair done up in a cute little bun.  However, would you be inclined to
+trust someone who runs the &rHanzel and Gretel&n bakery?    
+~
+784474 36880 -1000 E
+10 10 5 2d1+300 2d2+12
+1000000 0
+8 8 2
+E
+#1707
+unicorn shopkeeper~
+the Unicorn~
+The Unicorn stands here, calmly looking at you with her big, brown eyes.
+~
+   The Unicorn is gorgeous.  From her dainty, deerlike ears to her delicate,
+cloven hooves, she is the epitamy of grace and beauty.  Her long, spiral horn
+glistens in the dim light with a pearly sheen.  Her hide is of the purest
+white, her mane and tail of silver.  The tuft at the end of her lion's tail and
+the beard hanging down from her chin only enhance her appearance, not detract
+from it.    
+~
+1046602 8340 1000 E
+5 0 0 3d3+1000 3d3+20
+1000000 10000
+8 8 2
+BareHandAttack: 11
+E
+#1708
+imp~
+the mischevious imp~
+A mischevious imp bounces around here.
+~
+   The imp somewhat resembles the much larger gargoyle, in that it has batlike
+wings and a similar body type, but is very different otherwise.  His green skin
+is startling to the eyes, and he has a mischevious, almost evil look in his
+eyes.    
+~
+47176 32828 -1000 E
+25 0 5 3d3+500 2d3+0
+100 10000
+8 8 1
+BareHandAttack: 8
+E
+#1709
+sphinx guildmaster~
+the Sphinx Guildmaster~
+The Sphinx Guildmaster contemplates the world here.
+~
+   A classic sphinx, she has the upper body of a mature woman and the lower
+body of a lion.  Also, great eagle's wings sprout from her back, giving her the
+ability of flight.  She must be an old, wise sphinx, to guess from her position
+here, but she still looks like a lovely young woman.    
+~
+256090 32956 0 E
+75 -10 0 5d5+1000 3d3+35
+1000 0
+8 8 2
+BareHandAttack: 6
+E
+#1710
+guildguard orc~
+the orc guildguard~
+An orc Guildguard alertly stands here.
+~
+   Despite the reputation orcs have for being stupid, apparently they make good
+guards.  This one looks alert and ready to harm any who do not belong in the
+room beyond.    
+~
+194650 32780 0 E
+50 -5 0 3d3+750 2d3+30
+100 0
+8 8 1
+E
+#1711
+hellhound dog~
+the hellhound~
+A hellhound stares around suspiciously here.
+~
+   He is very fiercesome, with the two heads common to the breed.  Hellhounds
+are known for their loyalty and devotedness to their jobs.  This one appears to
+be no exception, obviously guarding Mist well.    
+~
+194648 16572 -1000 E
+50 -5 0 2d3+1000 3d3+30
+100 0
+8 8 1
+BareHandAttack: 9
+E
+#1712
+sylph barmaid barkeeper innkeeper shopkeeper~
+the Sylph~
+The Sylphan barmaid watches for an empty glass among the patrons of the bar.
+~
+   The Sylph lives up to all pre-disposed expectations you might have for her.
+She is lithe and graceful, with an inhuman beauty to her.  Soft wings decorate
+her back like a graceful robe ready to be flung off at any time.  Her ears are
+lobeless, and point up slightly in the elven fashion.  While she isn't the
+typical tavern owner, you figure it takes all kinds, especially when they're as
+beautiful as this one.    
+~
+780366 32864 250 E
+30 5 0 3d3+1000 2d3+10
+1000000 0
+8 8 2
+E
+#1713
+frog pawnshop owner prince shopkeeper~
+the Frog Prince~
+An enchanted Frog Prince hops about, organizing his shop.
+~
+The Frog Prince is a beautiful, healthy green, spattered with darker green
+spots.  His eyes, though rather watery and bulbous, look around with 
+obvious intelligence.  Perched right behind these distinctive eyes is a 
+small, golden crown, denoting his Princely status.
+~
+778330 32864 0 E
+10 -10 0 2d3+3000 2d1+30
+10000000 0
+8 8 1
+BareHandAttack: 4
+E
+#1714
+kirin magic shopkeeper~
+the Kirin~
+A magical beast, the Kirin, keeps shop here.
+~
+The Kirin is an oriental unicorn.  She looks almost like a kind of deer,
+except for her flawless white fur and single horn.
+~
+784458 32800 1000 E
+50 -10 0 4d4+3000 3d3+30
+1000000 0
+8 8 2
+BareHandAttack: 11
+E
+#1715
+chocobo shopkeeper~
+the Chocobo~
+A Chocobo browses among the many greens here.
+~
+Bright yellow and adorable, the Chocobo looks quite out of place in a mud.
+He looks more like something out of a cute game.  He has a bright crest
+which raises in interest at the sight of you and a bright tail that he
+flicks in greeting.
+~
+1040458 160 0 E
+50 0 0 2d3+3000 2d2+30
+1000000 0
+8 8 1
+BareHandAttack: 8
+E
+#1716
+draconian butcher shopkeeper~
+the Draconian butcher~
+A Draconian handily chops up a cow here.
+~
+   The Draconian looks like a dragon that was twisted and deformed by magic,
+which is precisely what he is.  He is covered with scales, and has a pair of
+vestigial wings that add to his alien appearance.    
+~
+784458 0 -1000 E
+50 -20 0 2d3+3000 2d3+30
+1000000 0
+8 8 1
+BareHandAttack: 8
+E
+#1717
+minotaur shopkeeper~
+the Minotaur~
+The Minotaur sharpens a sword here.
+~
+   The Minotaur is a very fierce-some looking member of his species.  His head
+is topped with sharp horns that look ready to pierce the unwary opponent.  His
+bovine mouth is full of very unbovine-like sharp teeth.  His cloven hooves have
+been sharpened to points.  His body ripples with muscles.  All in all, a very
+scary monster.    
+~
+778314 0 0 E
+75 -20 0 2d2+3000 2d1+40
+1000000 0
+8 8 1
+BareHandAttack: 9
+E
+#1718
+quel shopkeeper~
+the Quel~
+A Quel is working here.
+~
+   An armadillo.  An armadillo taller than a man, and standing upright.  It was
+well protected by the thick outer skin and a pair of arms that ended in sharp,
+finger-length claws.  Dusky brown, it was oddly tailless, a contrast to its
+otherwise similar appearance to the animal.    
+~
+1040474 32768 -1000 E
+50 -5 -10 2d3+3000 2d3+30
+1000000 0
+8 8 1
+BareHandAttack: 5
+E
+#1719
+hellhound dog alpha male~
+the Alpha Male~
+The Alpha Male of the hellhound pack is shuffling through papers here.
+~
+   While he greatly resembles the other hellhounds, the Alpha Male is
+considerably larger, and somehow manages to be even more fiercesome looking.  
+His two heads alertly regard you with a high degree of intelligence, and
+caution.  Though he is well able to defend himself, you should count yourself
+lucky that he isn't agressive...    
+~
+63578 0 -500 E
+70 -10 0 3d3+1500 3d2+30
+7500 0
+8 8 1
+BareHandAttack: 9
+E
+#1720
+chocobo black teioh~
+Teioh~
+A black chocobo named Teioh stands here.
+~
+A jet black chocobo stands here.  It has at least 25% more speed and 25% more
+stamina than your best chocobo.  Dang.  Now how do you beat it?
+~
+41178 65640 0 E
+100 -30 -20 30d30+4000 1d1+50
+0 0
+8 8 1
+BareHandAttack: 14
+E
+#1721
+wizard~
+the Wizard~
+A wizard wanders around mumbling spells to himself.
+~
+   The Wizard obviously is more concerned with his research rather than his
+appearance.  His robe is old, worn, and tattered, with numerous stains and
+burns on it.  His hat is flobby brown, the tip refusing to stand.  He has
+mistmatching socks, one black, one bright purple.  In fact, he seems to have
+misplaced his staff somewhere...    
+~
+10440 24 0 E
+30 15 5 1d1+750 3d3+10
+5000 0
+8 8 1
+E
+#1722
+paladin~
+the Paladin~
+A stately-looking Paladin troops around, fighting evil.
+~
+   The Paladin is a tall, muscular man, iwth long, flowing black hair caught
+back in a tail.  His armor gleams in the sun, despite a few dents and
+scratches.  His huge, two-handed broad sword is strapped to his back, waiting
+to be drawn at any second.  All in all, a formidable foe.    
+~
+76104 8324 1000 E
+30 10 0 1d1+1000 3d4+7
+10000 0
+8 8 1
+BareHandAttack: 3
+E
+#1723
+witch~
+the Witch~
+A portly-looking Witch minces along.
+~
+   This Witch has obviously been tasting her potions a bit too much.  Her dress
+looks like it was made from a huge curtain.  It drapes down around her, giving
+more the impression of a house-wife's large mumu, rather than an exotic witch's
+robe.    
+~
+8328 24 -250 E
+27 13 3 1d1+790 3d3+7
+7000 0
+8 8 2
+BareHandAttack: 5
+E
+#1724
+vampyre vampire~
+the Vampyre~
+A Vampyre slinks through the shadows.
+~
+   The Vampyre looks like little more than a shadow.  Though you squint and
+stare, only a few features become clear: the red-rimmed eyes and the shining
+sharp teeth.    
+~
+41032 786602 -1000 E
+30 10 1 1d1+900 3d3+7
+15000 0
+8 8 1
+BareHandAttack: 4
+E
+#1725
+cleric~
+the Cleric~
+A holy-looking Cleric searches for the truth.
+~
+   Though travel-stained and care-worn, the Cleric is a beautiful girl, with
+the light of truth shining on her face.  However, she barely gives you a glance
+and a mumbled blessing, for she is communing with her god.  Obviously she
+doesn't want to be disturbed.    
+~
+10248 188 1000 E
+25 13 5 1d1+700 3d3+6
+4000 0
+8 8 2
+BareHandAttack: 7
+E
+#1726
+demon~
+the Demon~
+A Hulking Demon snarls at you.
+~
+   The Demon is obviously an agent of evil, with horns, glowing eyes, and a
+spiked tail.  Don't you wish you could be like him?    
+~
+141896 1024 1000 E
+30 10 0 1d1+950 3d6+5
+15000 0
+8 8 1
+BareHandAttack: 8
+E
+#1727
+manticore~
+the Manticore~
+A great, old Manticore creeps along, joints creaking.
+~
+   The Manticore is a strange creature.  It has the body of a lion, the wings
+of a bat, the tail of a scorpion, but the face of a man.  He has three
+different rows of teeth, giving his voice a strange, whistling quality.  This
+Manticore is obviously old by the grey hairs all over his body and the wrinkled
+face.    
+~
+200 16 0 E
+25 15 5 1d1+700 3d3+5
+5000 0
+8 8 1
+BareHandAttack: 1
+E
+#1728
+winged horse~
+the Winged Horse~
+A Winged Horse paws the ground.
+~
+   The Winged Horse is the beautiful relative of the legendary Pegasus.  He is
+white, with wings like a swan, theh swiftness of a deer.  He is equally
+powerful on both land and in the air.  Unfortunately, a mere mortal like you
+has no chance of harnessing this beautiful wild creature.    
+~
+288840 32960 1000 E
+30 10 5 1d1+900 3d5+7
+5000 0
+8 8 1
+BareHandAttack: 7
+E
+#1729
+harpy~
+the Harpy~
+A dirty old Harpy screams obscenities at you.
+~
+   What an ugly old thing the Harpy is!  She is a crossbreed between a human
+and a vulture, and somehow managed to get the worst traits of both.  Her head
+and front are that of an old, ugly human woman, the rest of her that of an old,
+mite-ridden vulture.  But what a mouth she has!  Your mother wouldn't want you
+to hear language like this!    
+~
+10316 32872 -500 E
+26 12 5 1d1+750 3d3+7
+5000 0
+8 8 2
+BareHandAttack: 8
+E
+#1730
+lamia~
+the Lamia~
+A gorgeous Lamia slithers along.
+~
+   The Lamia is a gorgeous woman!  She has long, flowing honey-colored hair
+that comes half-way down her back.  Deep violet eyes stare deeply into your
+soul.  Ruby red, pouting lips look ready for kissing.  Of course, there is that
+little detail that from the waist down, she is a snake, but, heck, who cares?
+~
+10312 1024 0 E
+30 11 0 1d1+800 3d4+6
+15000 0
+8 8 2
+BareHandAttack: 2
+E
+#1731
+kid~
+the Kid~
+A little Kid plays in the dirt.
+~
+   Just a little human boy.  He looks like he's been playing in the dirt for
+quite some time now.  His motherh probably won't be too happy when he gets
+home!    
+~
+204 0 0 E
+10 15 10 1d1+250 2d2+1
+10 0
+8 8 1
+E
+#1732
+waif shopkeeper~
+the Waif~
+A little street Waif looks up at you with big, solemn eyes.
+~
+   The Waif is a little monster of an unknown type.  Nonetheless, with her big
+eyes, she is very cute.  She seems to be urging you to buy something.  Maybe
+you ought to help this poor, defenseless creature.    
+~
+778264 0 0 E
+100 20 10 1d1+100 1d1+0
+0 0
+8 8 2
+E
+#1733
+devil shopkeeper~
+the Devil Shopkeeper~
+A small, wizened devil-like creature stocks his shop.
+~
+   The Devil is small, being only about four feet tall, and very wrinkly and
+old looking.  His vestigial, bat-like wings droop limply from his back.  His
+long, spiked tail is crooked and appears to have been broken at some time.  
+However, despite his infirmities, he does know his crafts, and can help you
+make all kinds of things.    
+~
+778250 1056 -1000 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#1734
+baby zeke zekie cat~
+Baby Zeke~
+A black and white cat stares with big yellow eyes.
+~
+   Baby Zeke is a large, beautiful cat.  He has long, silky fur.  Most of his
+back and tail are black, except for a white color around his neck and a strip
+of white up his left hind leg.  A white blaze runs down his nose, and from
+there on down, the rest of his face is white.  His legs and belly are white as
+well.  He has a cute, pale pink nose.  His eyes are bright yellow, and can look
+either fierce or loving.  A wonderful, loving cat.    
+~
+778266 33980 1000 E
+100 -30 -20 30d100+30000 30d100+50
+0 0
+8 8 1
+BareHandAttack: 8
+E
+#1796
+drake green~
+the Drake~
+A small green drake carefully examines a sword here...
+~
+   The Drake is a deep, rich green that almost seems to light the room with its
+vibrancy.  He appears to be a small, intelligent dragon.  Though his wings are
+small, even in comparison with his body size, it appears, from the way he
+handles them, that they are not vestigial.  Overall, he is a cute little
+creature, though maybe not your ideal choice for a clan shopkeeper...    
+~
+551002 0 0 E
+100 -30 -10 1d1+5000 1d1+50
+110000000 0
+8 8 1
+BareHandAttack: 4
+E
+#1799
+Gad the Cow~
+Gad the Cow~
+Gad the Cow grazes here...funny, since he LOOKS human.  MOOOOO!
+~
+   Gad the Cow is a little kooky.  He looks like a "normal" human being,
+however, he sits here grazing like a fat old cow.  When he sees you, he looks
+up with his dumb, bovine eyes and MOOOOS at you.    
+~
+254090 32896 -1000 E
+100 -30 10 3d5+19000 3d10+50
+0 0
+8 8 0
+E
+$

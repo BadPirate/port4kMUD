@@ -1,0 +1,352 @@
+#19001
+Elf Guardian Elven~
+the Elven guardian~
+An Elven Guardian is standing here guarding the portal.
+~
+This is a robust built elf in his best years and as far as you can tell.
+~
+74 8 1000 E
+19 2 -1 3d6+240 3d5+6
+1000 35000
+8 8 1
+E
+#19002
+Elf Soldier guard elven~
+the Elven soldier~
+An Elven Soldier is standing here guarding the path.
+~
+This is an elf in his youth, sent by the chief of the village guards, 
+to guard the path from any intruder not wanted here.
+~
+74 8 1000 E
+10 10 2 1d12+123 1d8+3
+654 9000
+8 8 1
+E
+#19003
+elf guard elven ~
+the Elven guard~
+An Elven Guard is walking around, protecting the villagers.
+~
+This is an elf in her youth, sent by the chief of the village guards, 
+to guard the village from unwanted intruders.
+~
+72 8 1000 E
+10 10 2 1d12+123 1d8+3
+654 9000
+8 8 2
+E
+#19004
+elf weaponsmith smith elven shopkeeper~
+the Elven weaponsmith~
+A Large Elven weaponsmith is walking behind the counter.
+~
+You notice a tired look on his face.
+~
+778314 0 900 E
+23 2 2 6d10+390 1d8+12
+10000 80000
+8 8 1
+E
+#19005
+Elf armoursmith smith elven~
+the Elven armoursmith~
+A Large Elven armoursmith is walking around behind the counter.
+~
+You notice a tired look on his face.
+~
+778314 0 900 E
+23 2 2 6d10+390 1d8+12
+10000 80000
+8 8 1
+E
+#19006
+elf mage elven shopkeeper~
+the Elven mage~
+A Tiny Elven mage is floating behind the counter.
+~
+You notice a tired look on his face.
+~
+778314 0 900 E
+23 2 2 6d10+390 1d8+12
+10000 80000
+8 8 1
+E
+#19007
+elf quintor grocer shopkeeper~
+the Elf named Quintor~
+An Elf named Quintor is here counting money behind the counter.
+~
+You notice a tired look on his face.
+~
+778314 0 900 E
+23 2 2 6d10+390 1d8+12
+10000 80000
+8 8 1
+E
+#19008
+elf bartender elven shopkeeper~
+the Elven bartender~
+A fat Elf is standing behind the bar taking orders.
+~
+You notice a tired look on his face.
+~
+778314 0 900 E
+23 2 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#19009
+elf receptionist elven~
+the Elven receptionist~
+A nice-looking Elf is standing in the reception.
+~
+You notice a tired look on her face.
+~
+75 0 900 E
+23 2 2 6d10+390 1d8+12
+2000 80000
+8 8 2
+E
+#19010
+elf chief elven guard~
+the Chief of the elven guard.~
+A lazy-looking Elf lies on his bed snoring loudly.
+~
+This elf looks somehow more experienced than any guard in the village guard.
+By the look of the uniform he is probably the chief of the village guard.
+You notice some scars on the hands and one on the neck of the elf. He has
+obviously been in battle in his days.
+~
+73 136 1000 E
+25 0 -4 1d50+500 4d6+8
+500 130000
+4 4 1
+E
+#19011
+Elf Soldier guard elven~
+the Elven guard~
+An Elven Guard is playing cards at the table.
+~
+This is an elf in his youth, sent by the chief of the village guards, 
+to guard the path from any intruder not wanted here.
+~
+74 8 1000 E
+10 10 2 1d12+123 1d8+3
+654 9000
+6 6 1
+E
+#19012
+old druid~
+the old druid~
+A very old, decrepid druid is here bent over looking through the telescope.
+~
+This druid has definatly seen better days, he seemes a little distrought
+about his position as druid being taken over...
+~
+74 32 500 E
+9 10 10 1d1+99 1d8+3
+0 10000
+8 8 1
+E
+#19013
+fire elemental~
+the fire elemental~
+&rA small fire elemental is here, attempting to burn down the library!&n
+~
+The fire elemental is...well...made of fire...
+~
+106 1024 -500 E
+10 10 10 1d1+199 2d5+7
+2000 15000
+8 8 0
+BareHandAttack: 12
+E
+#19014
+elf elven champion king~
+the Elven Champion~
+The elven champion is here, guarding his kingdom.
+~
+The elven champion appears to be a very strong, intelligent, and proud
+man who looks very capable of defending his village.
+~
+192858 33952 1000 E
+50 -10 -10 1d1+1499 6d5+20
+25000 200000
+8 8 1
+BareHandAttack: 7
+E
+#19015
+royal guard elf~
+the Royal Guard~
+The royal guard is here protecting the life of his king.
+~
+Looking at the expression on this kids face, you realize that there
+is absolutely nothing he would not do for the king.  He watches every
+movement you make so he may strike you down before you can attack.
+~
+4170 8 1000 E
+19 2 10 1d1+249 3d5+6
+1000 35000
+8 8 1
+E
+#19016
+elf elven king~
+the Elven King~
+The elven king sits here upon the throne pondering your presence.
+~
+The elven king is truly magnificen looking.  He doesn't seem to mind
+flaunting what he has, and he actually seems to enjoy it quite a bit.
+~
+63514 160 1000 E
+60 0 10 1d1+599 6d5+15
+0 80000
+6 6 0
+BareHandAttack: 13
+E
+#19017
+elf elven citizen~
+the elven citizen~
+The elven citizen wanders the street enjoying the fresh air.
+~
+This is a fairly normal looking elf, he appears as if he has a cushy
+job and doens't do much hard labor.
+~
+4172 8 0 E
+1 20 9 1d1+14 1d6+0
+50 150
+8 8 1
+BareHandAttack: 13
+E
+#19018
+guard man male elf elven~
+a male guard~
+An off duty guard is here chasing a hooker with his breeches around his ankles.
+~
+This is most pathetic thing you have seen in a long time.  The excited
+elf is stumbling around barely able to walk, and trying to chase down
+a hooker.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#19019
+elf giggling hooker whore~
+the giggling elven hooker~
+An elven hooker is running around the room giggling escaping the guard.
+~
+She is...well...beautiful.  Her naked elven body is astonishing
+better than most human ones you have seen.  She has long straw
+colored hair that scantily clads her bossom.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#19020
+female hooker elf~
+the sultry hooker~
+A female elf is here helping her male counterpart undress.
+~
+One word...GORGEOUS!
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#19021
+guard elf male~
+the male guard~
+An elven guard is eagerly trying to get his clothes off.
+~
+This man is completely frantic in trying to get his clothing off,
+but then again taking a look at her you would probably be doing 
+the same if you were him.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#19022
+female elf hooker~
+the sleeping hooker~
+A female elf is here snuggled up next to her mate and sleeping quietly.
+~
+Although she is a hooker, she looks so peaceful and innocent sleeping 
+here.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+4 4 2
+E
+#19023
+elf citizen male~
+the elven citizen~
+An elven citizen is snoring and holding the hooker in his arms.
+~
+This man looks truely happy...
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#19024
+dom dominatrix elf female hooker~
+a dominatrix elf hooker~
+The elven hooker is stradling the roman senator and moaning.
+~
+Surprise surprise, she seems to actually be enjoying herself..
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#19025
+sub submissive roman senator~
+the roman senator~
+A roman senator is laying on the bed with his limbs tied to the bed posts.
+~
+He is definatly restrained, and he is definatly enjoying it.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#19026
+woman bartender shopkeeper norse barmaid~
+the K.o.F. barmaid~
+Before you is a norse woman serving drinks, food and other curiosities.
+~
+The only adjective that fits her is HUGE.  She is more muscular than
+most of the men you see around you.  She looks in your direction and
+asks if you want to arm wrestle.
+~
+253978 33952 1000 E
+100 -30 -10 1d1+2999 15d15+50
+0 0
+8 8 2
+BareHandAttack: 7
+E
+#19027
+shopkeeper Deirdre ~
+Deirdre~
+Deirdre the Do'Urden weapons and armor supply elf stands here.
+~
+Her cute smile makes you want to just reach out and <censored> her.  
+(unless you are also a female in which case you are jealous)
+~
+258138 32808 0 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+$

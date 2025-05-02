@@ -1,0 +1,461 @@
+#500
+bird mother~
+a mother bird~
+A mother bird is here ready to fight fiercly to protect her eggs.
+~
+This is a magnificent looking bird.  It has bright plumage, and fierce
+eyes. you have no doubt she will do everything in her power to keep
+you away from her nest.
+~
+110 0 50 E
+3 20 8 20d1+0 1d8+0
+0 400
+8 8 2
+BareHandAttack: 8
+E
+#501
+mouse church churchmouse~
+a tiny churchmouse~
+A tiny little churchmouse is here trying to hide from the kitten.
+~
+It still amazes you how something so tiny could survive in this cruel
+world, but yet this furry, brown mouse is living proof.  That is unless
+that naughty kitten finds it.
+~
+200 0 0 E
+3 20 1 10d1+0 1d1+0
+0 30
+8 8 0
+BareHandAttack: 4
+E
+#502
+kitten cat grey~
+a small, grey kitten~
+A grey colored kitten is here trying to track down a mouse.
+~
+Although it's fur is matted down and covered in grass, you can tell that
+this kitten is probably quite cute when cleaned up.  He smells the ground
+and pounces into shadows trying to stalk a helpless little churchmouse.
+~
+72 294944 -50 E
+4 17 4 1d1+51 2d3+1
+150 3000
+8 8 1
+BareHandAttack: 8
+E
+#503
+coconut swallow~
+a coconut swallow~
+A swallow is here, it is gripping a coconut by the husk.
+~
+Here's something you never expected to see, this tiny little bird
+is holding a gigantic coconut by the husk.  Although its air speed
+velocity isn't enough to keep itself and the coconut above the ground,
+it seems to be doing it with ease.
+~
+74 0 0 E
+1 20 10 1d1+0 1d1+0
+1 1
+8 8 2
+BareHandAttack: 4
+E
+#504
+monk~
+a tired monk~
+A very tired and exhausted monk is here trying to get some rest.
+~
+These monks do an amazing amount of work, you have never seen such a 
+devoted group of people.  He looks tired from workin outside all day
+and probably wouldn't be in the best of moods if you wake him up!
+~
+72 0 200 E
+5 18 6 1d1+69 2d4+1
+250 500
+4 4 1
+E
+#505
+monk robed~
+a robed monk~
+A monk is here padding slowly about the room wearing nicely embroidered robes.
+~
+The monks here have shaved heads, all bearing the holy symbol of Xander
+tattoed upon their heads.  They wear amazing silken robes that go all
+the way to their sandal covered feet.  Although they look frail and
+weak, they have been trained in various forms of martial arts, and are
+masters of their art.
+~
+4168 263168 250 E
+5 18 2 1d1+99 2d4+1
+250 500
+8 8 1
+E
+#506
+monk worker~
+the working monk~
+A monk is here going about his daily outdoor chores.
+~
+This monk looks similar to the rest, although he has been laboring
+outside all day.  Even when coolness of the dark overcomes the land,
+the beads of sweat still well up on the monk's body.  This seems to
+be very tiresome work.
+~
+4168 0 150 E
+5 15 4 1d1+129 2d4+2
+250 500
+8 8 1
+E
+#507
+monk warrior~
+a monk warrior~
+A young monk is here, with a fierce, determined look on his weathered face.
+~
+This is one of the younger and stronger monks, sent to guard the
+monastery from those who wish to harm its inhabitants.  These young
+ones are special in another way, for they can detect the traces of
+evil in one's system and will not hesitate to kill one who endangers
+the monastery.
+~
+6426 5280 0 E
+12 15 0 1d1+149 4d2+3
+1500 4500
+8 8 1
+E
+#508
+grand paladin~
+the Grand Paladin~
+Before you stands the tall form of the Grand Paladin, wow is she a looker.
+~
+The beauty of this woman cannot be put into words, she seems to have
+been made to perfection by a god.  Don't let her pretty appearance
+fool you though, she is strong and willing to fight for her cause.
+~
+260378 5280 1000 E
+40 -10 10 1d1+999 6d6+30
+10000 120000
+8 8 2
+BareHandAttack: 10
+E
+#509
+head monk~
+the Head Monk~
+A fat monk is here dressed in flowing white robes.
+~
+   It seems as though this monk has never missed a meal in his stay at the
+monastery.  He is much larger than the rest of the monks, and doesn't seem to
+do work, he just watches over the rest of the monks.    
+~
+65608 0 100 E
+20 1 4 1d1+499 2d6+14
+2000 50000
+8 8 1
+BareHandAttack: 7
+E
+#510
+high priest~
+the High Priest of Xander~
+The High Priest of the church of Xander is here in all his glory.
+~
+This priest is adorned in flowing white and gold robes, and a priest's
+pontiff hat rests on his balding head.  He walks around seemingly
+without a worry in his mind, or a doubt about the future.  He is charged
+with an unseen power, and would prove to be a fearsome enemy.
+~
+260442 1184 750 E
+20 0 0 1d1+699 4d5+10
+20000 80000
+8 8 1
+E
+#511
+nightmare night mare~
+the Nightmare~
+The Nightmare is here, roaming the maze and weeding out the weak and unworthy.
+~
+The Nightmare has not one form.  It takes on the form of your greatest
+fears making it a near impossible enemy to face.  It will attack you 
+without hesiatation, for its job is to prevent the weak from obtaining
+access to the most holy chamber.
+~
+16504 33952 0 E
+75 -15 -5 1d1+2500 8d8+35
+50000 200000
+8 8 0
+BareHandAttack: 8
+E
+#512
+worshipper~
+the worshipper~
+A worshipper is here kneeling in prayer.
+~
+This man is completely dedicated to his religion.  He kneels here for
+hours on end cushioned only by a thin rug.  
+~
+2314 1152 0 E
+10 10 -4 1d1+199 3d3+7
+1000 20000
+6 6 1
+E
+#513
+watcher statue~
+the WATCHER~
+Standing here on the large platform is a statue, its eyes follow you.
+~
+The statue is constantly changing form, becoming anything and everything
+you can imagine.  The only thing that stays in every form are its glowing
+eyes that follow you around the room....watching...waiting...
+~
+260186 33960 1000 E
+99 -22 -20 1d1+30000 10d10+50
+100000 5000000
+8 8 0
+BareHandAttack: 10
+E
+#514
+usher~
+the friendly usher~
+A very helpful usher is here showing people to their seats.
+~
+This man is very old, and this job must be very tiring for him yet he
+looks very content with his job.  His balding head is only one of many
+signs of his age.
+~
+8 0 250 E
+10 13 5 1d1+149 3d4+12
+250 3000
+8 8 1
+E
+#515
+zombie~
+a rotting zombie~
+A zombie is shambling around, dropping gobbets of rotting flesh on the ground.
+~
+Once alive, this creature is now one of the living dead.  What flesh
+it has is grey and hangs losely on its decrepid bones.  It's putrid
+skin falls off in small chunks, but it never seems to lose any of
+its skin mass.  The eyesockets of this creature are deep and empty,
+letting you see the shriveled remains of its brain.  Saliva constantly
+pours from this beasts gaping maw sometimes taking a tooth or two
+with it.
+~
+40 1024 -100 E
+30 0 -5 1d1+999 6d8+10
+5000 45000
+8 8 0
+BareHandAttack: 8
+E
+#516
+ghoul~
+the slavering ghoul~
+A slavering ghoul is here searching for a corpse to munch on.
+~
+Almost as nasty looking as a zombie, the ghoul has a very foul smell
+about him, it probably comes from his habit of eating corpses.  Rancid
+meat hangs from his chisled teeth as he moves haphazardly about this
+place searching for a nice rotten corpse.
+~
+12 128 -100 E
+30 0 -2 1d1+424 3d6+10
+5000 45000
+8 8 0
+BareHandAttack: 4
+E
+#517
+lich form~
+the lich~
+The strange humanoid form of the lich sees you and attacks!!!
+~
+The lich generally takes the form of a non corpereal human.  It looks
+fairly harmless, but its rage makes it a terror.
+~
+122 525472 -500 E
+50 -10 -8 1d1+999 6d7+20
+20000 100000
+8 8 0
+BareHandAttack: 10
+E
+#518
+death knight skeleton~
+the Death Knight~
+A skeletal death knight is here guarding the gates to Necropolis.
+~
+This corpse has been dead for a long time, all everything but the
+bones has decomposed long ago.  Now, the black bones have nothing
+but dirt and grass hanging off of them.  They wear armor, and 
+their empty eyesocks glow with an eerie red ligth as if containing
+a pair of hot red coals.
+~
+4138 1184 0 E
+20 5 7 1d1+499 5d6+10
+5000 40000
+8 8 0
+BareHandAttack: 3
+E
+#519
+skeletal horse skeleton~
+the skeletal horse~
+A skeletal horse is wandering around here.
+~
+It looks scarey :-S
+~
+8 1024 0 E
+30 0 10 1d1+799 7d7+15
+300 85000
+8 8 0
+BareHandAttack: 9
+E
+#520
+ghoul~
+the eating ghoul~
+A ghoul is here, ravenously devouring a corpse.
+~
+This ghoul tears chuck after chunk of flesh off of the corpse, trying 
+to eat as much as he can before another shows up.
+~
+14 128 0 E
+30 0 -2 1d1+424 3d6+10
+5000 45000
+8 8 0
+BareHandAttack: 4
+E
+#521
+shopekeeper undead~
+the undead shopkeeper~
+The headless form of an undead shopkeeper shambles your way.
+~
+It appears this shopkeeper didn't die well.  He wanders around without
+a head, yet can sense the life inside of you.
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 1
+BareHandAttack: 8
+E
+#522
+werewolf lycanthrope map maker~
+the vicious werewolf~
+The large form of a creature half man half wolf is towering over you.
+~
+This poor man must never see his human form, for the moon is always
+full and it is always dark.  You guess he probably doesn't get much
+trouble from the undead.
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 1
+BareHandAttack: 9
+E
+#523
+foul blob undead~
+the foul blob~
+A strange blob-like mass is here, your guess is it was once the taylor.
+~
+It looks much like a black pudding.  Its form moves and undulates in
+strange rythmic patterns but is both intelligent and fast!
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 0
+BareHandAttack: 1
+E
+#524
+vampyre receptionist~
+the vampyric receptionist~
+The receptionist opens her mouth as she approches you showing you her teeth!
+~
+What an attractive vampyre she is.  You would actually consider lettin
+her bite you if it wasn't for that whole death thing.
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 2
+BareHandAttack: 4
+E
+#525
+bank president skeleton undead~
+the president's skeleton~
+The skeleton of the bank president is here, except it's standing!
+~
+Although unusually large for a human, it is definatly a human skeleton
+that has been animated by some foul evil.
+~
+8 0 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 1
+BareHandAttack: 13
+E
+#526
+baker undead~
+the undead baker~
+The undead baker moves slowly towards you in an unfriendly manner.
+~
+His rotting skin hangs loosely on his brittle bones.  One of his arms
+seems to have been severed.
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 1
+BareHandAttack: 4
+E
+#527
+armorsmith shop keeper shopkeeper undead~
+the undead armorsmith~
+The armorsmith is here, but he has now become one of the walking dead!
+~
+His skin has turned a sickening grey color, and his neck is bent crookedly
+off to his side.
+~
+42 1184 0 E
+40 -5 -4 1d1+749 5d6+12
+7500 60000
+8 8 1
+BareHandAttack: 4
+E
+#528
+azbar alchemist man~
+Azbar the Alchemist~
+A crazed man is here cackling gleefully, this MUST be Azbar.
+~
+Hair sticks out in odd places all over this man's mostly bald head,
+and he has spectacles clinging onto his nose.  Being around all these
+chemicals must have driven him mad, but then again he was probably
+crazy before the chemicals too.
+~
+42 1184 -500 E
+50 -10 -5 1d1+999 6d6+20
+10000 100000
+8 8 1
+BareHandAttack: 13
+E
+#529
+girl maiden~
+the frightened girl~
+This girl is very frightened, and can barely speak.  She seems to mumbles something, better lean closer.
+~
+This is a very attractive young woman, and it's a shame that she is 
+probably permenantly out of her mind.  She mumbles something over and
+over. You lean closer and listen.  She seems to say, 'color...bright
+red color....impor..tant...RED RED RED COLOR...must be...BRIGHT RED!'.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+E
+#599
+dunc~
+Duncan Leoric~
+An unfinished mob stands here.
+~
+It looks, err, unfinished.
+~
+8 0 0 E
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+$

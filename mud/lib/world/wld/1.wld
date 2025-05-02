@@ -1,0 +1,2143 @@
+#101
+The Realm of the Dead~
+     You are standing on what looks like the plains of hell.  But don't worry
+because it's all just a game you can return to the real world by meerly going 
+up.
+~
+1 0 0
+D4
+~
+~
+0 0 11
+S
+#102
+The Realm of the Dead~
+     You slowly feel your soul being sucked out of your tired corpse.  The
+demons poke at your eyes and maggots fill your brain.  You can't image a more
+pleasant feeling.  To bad.  You have died.......
+~
+1 2 0
+D4
+~
+~
+0 0 101
+S
+#103
+Residential district- Block A~
+   You are walking along a nicely paved road with well trimmed shrubs to either
+side.  This is the residential district.  To the north seems to be a big hole
+in space an time.  And to the west you see sunnyside road.  The path continues
+to the east.  Armitage and Connavars abode is to the south.    
+~
+1 270336 0
+D0
+~
+~
+0 0 3098
+D1
+~
+~
+0 0 174
+D2
+~
+~
+0 0 1499
+D3
+~
+~
+0 0 3059
+S
+#104
+Ruatha's main gates~
+     You have entered Ruatha holds main gates, to enter you must have been
+allowed to enter by Lord Jaxom himself.  But if you disagree there are
+some dragons that are roosting on the ring, and I'm sure you can discuss it
+with them.
+     North goes into Ruatha Hold.  South returns you to the residential block.
+~
+1 0 0
+D0
+~
+~
+0 0 105
+D2
+~
+~
+0 0 103
+S
+#105
+Ruatha's entry hall~
+Empty~
+1 262144 0
+D0
+~
+~
+0 0 1485
+D2
+~
+~
+0 0 104
+S
+#106
+Jaxom's Tactical Warroom~
+   As you look around you see maps hanging from all the walls, some with wierd
+lights that go on and off every now and again You see a few screens that drop
+down from the ceiling displaying systems logs for something, but it is in a
+language that you can't decipher.  In the center is the captains chair, from
+which Jaxom apparantly rules his mud.  Levers and buttons come from all sides
+and you fear touching the chair because it looks rigged for just Jaxom's shape.
+Some of the posters include
+- &blisting&n; A listing of all the zones, and their exits
+- &bboards&n;  A listing of all the unused bulletin boards
+- &babuild&n;  Information on how to correctly build an arena
+- &barena&n;   Current arena's available for &barena zone&n command
+~
+1 264712 0
+D1
+~
+~
+0 0 1210
+D5
+~
+~
+0 0 3001
+E
+arena~
+1000 - Strikers arena.. A bloody mess of one.
+111  - The old fashioned arena.
+1026 - MY arena, a very fine one I might add.
+~
+E
+abuild~
+Okay, building and holding arena's is simple.  There are a few key rooms and
+features one must build to make a correct arena.  They are as follows:
+
+&bPEACEFUL !MAGIC? (No exits)&n
+1.  Your &rstarting room&n, Should be &gPeaceful&n (so people don't screw up) light
+    and your choice of !MAGIC or not (you want people sanc'ing early or not?)
+    This room is where the players go while waiting for all the other players
+    to join in.  Another important thing is don't make any exits from this room
+    and make it !RECALL, so that once in the only way out is death.
+ 
+&bARENA !RECALL&n
+2.  The arena &rentry room&n, this is the &grnum right after your starting room&n, aka
+    if your starting room is 1205 then your entry room should be 1206, This is
+    the room that players go into after the arena begin command is initiated,
+    either automatically, or manually.  This room &gshould have all the same
+    characteristics of arena rooms (see below)&n.
+ 
+&bARENA !RECALL&n
+3.  &rArena rooms&n, you may make as many of these as you want, and even have them
+    weave through non-arena rooms (as long as they remain connected)  The key
+    is that your players can't be able to leave arena, except by death. The code
+    is set up already so that when an arena is going a person can't enter or
+    leave an arena flagged room, so walking out isn't an option, the only other
+    thing they could do is recall, so make sure all your rooms are !RECALL
+
+Jaxom
+~
+E
+boards~
+Board         Current use
+1411          Chaos board
+1412          none
+1413          none
+1414          none
+1415          none
+1782          Magic Board  
+2403          Crane board
+12089         -Stalker- board
+19097         Do'Urden board
+19098         K.o.F. board
+
+Let me know if you ned a board for something.
+~
+E
+listing~
+&gMonk Monastary/Ice Maze&n
+500 (south) The Narrow Trail
+ 
+&gZone 6 Olaf's pirate zone&n
+600 (south) - On the River Vertigo
+690 (south) - The Great North Gate
+ 
+&gThe Labyrinth&n
+800 (east) - The Gate to the Labyrinth
+The River Vertigo
+914 (east) - Under the Bridge
+919 (northeast) - A Road Through the Plains
+922 (north) - By the Cliffs
+ 
+&gGods' Treehouse&n
+1205 (down) - Jaxom's Sitting Room
+ 
+&gMist&n
+1700 (south) - Approaching the Cave
+1711 (north) - Entrance to the Elementals
+1736 (north) - Entrance to Ethereal Street
+1739 (south) - Elementals
+ 
+&gElementals&n
+2000 (south) - Outskirts of Mist
+2060 (up) - The Moon
+2066 (east) - Edge of Tsim Egalliv
+2067 (north) - Approaching Tsim Egalliv
+2068 (west) - Arch-Mage Avenue
+2082 (south) - The Edge of Tsim Egalliv
+ 
+&gWedding Chapel&n
+2297 (south) - The Great Field of DaggerFall
+2298 (down) - Life
+2299 (down) - Climbing the Volcano
+ 
+&gDaggerfall&n
+3001 (north) - Entrance to Ethreal Street
+3002 (down) - A Junction
+3005 (southeast) - The Paladin's Guild Entry Room
+3016 (northwest) - Entrance to Scout's Guild
+3019 (down) - Sewer Junction
+3023 (down) - The Sewers
+3026 (southeast) - Entrance to the Vampyre's Guild
+3029 (down) - The Sewer Entrance
+3030 (south) - The Promenade, 3030 (down) - The Quadruple Junction Under the Dump
+3040 (north) - {behind locked gate} Arena,I think
+3051 (south) - The Northwest End of the Concourse
+3052 (west) - A Road Through the Plains
+3054 (north) -  Ethreal Square
+3059 (east) - Residential District Block A, 3059 (north) - Entrance to Ethreal Street, 
+3059 (west) - Clan Street
+3061 (east) - Entrance to the Goblin Castle
+3065 (north) - Chapel Entrance, 3065 (northeast) - Gatekeeper's Realm
+3066 (west) - The Great Chessboard of Midgaard
+3074 (west) - On the River Outside DaggerFall
+ 
+&gSouthern Midgaard&n
+3100 (north) - On the Bridge
+3102 (north) - The Dump
+Chessboard of Midgaard
+3600 (east) - The Dirt Path
+ 
+&gEast of Midgaard&n
+4077 (east) - A Mountain Trail
+4078 (east) - A Mountain Trail
+ 
+&gGreat Pyramid&n
+5318 (up) - The Void
+ 
+&gHaon-Dor Light&n
+6004 (west) - A Narrow Trail Through the Deep, Dark Forest
+6022 (down) - The Cave of the Tarassque
+6064 (south) - A Narrow Trail Through the Deep, Dark Forest
+6071 (north) - The Beginning of the Swamp
+6074 (north) - The Beginning of the Swamp
+6078 (north) - The Beginning of the Swamp
+6092 (east) - Outside the West Gate of DaggerFall, 6092 (southwest) - A Small Beach
+ 
+Haon-Dor Dark&n
+6100 (north) - A Shadowy Path Through the Dense Forest, 6100 (east) - A Trail Th
+rough the Dense Forest
+6110 (north) - Before the Millenium Tree
+6132 (north) - The Webbed Entrance
+6151 (north) - The Base of a Cliff
+ 
+&gArachnos&n
+6301 (south) - Up in the Tree
+6346 (down) - Up in the Tree
+Rand's Tower
+6400 (west) - In the Hidden Valley
+The Sewer, First Level
+7030 (up) - The Dump
+ 
+&gRome&n
+12005 (west) - A Dusty Dirt Road
+12012 (north) - The Roman Graveyard
+12039 (north) - River Cave
+12032 (west) - Dameon's House, 12032 (up) - New Roman Temple of the Gods
+12035 (west) - New Roman Pawn Shop
+12046 (south) - Entrance to the Master Guild
+12069 (up) - A Place of Healing
+12072 (down) - Entrance to Goblin Castle, 12072 (northeast) - New Roman Temple of the Gods
+12086 (west) - The Crane Diplomatic Relations Room
+12096 (down) - Diviner Drive
+ 
+&gKing Welmar's Castle&n
+15000 (east) - The Work Site
+ 
+&gNewbie Zone&n
+18600 (west) - Sunnyside Slums
+18608 (north) - Sunnyside Slums
+18629 (down) - Sunnyside Slums
+  
+&gElven City&n
+19029 (west) - The Elven Guildroom Entrance
+19034 (south) - A Narrow Trail Through the Deep, Dark Forest
+19041 (down) - Entrance to Ethreal Street
+19048 (north) - On The King's Road Outside A Castle
+~
+S
+#107
+Jaxom's wifes room~
+     This room is as of yet unclaimed.  Jaxom is sad and lonely...
+But you have to admit its a very nice room.  In it is the worlds
+smallest violinest playing the worlds saddest song on the worlds
+smallest violin just for Jaxom, and his lonliness (you notice he seems
+to have something brown on his nose).  If your a female and wish mud
+happiness, please send some mud mail, to the ever lonely jaxom.  Hanging
+on a wall is a picture of the darkly handsome Jaxom (oh and did I mention,
+single, good looking, smart, clever, sexy, good in bed, strong, and that
+he wrote this particular description of himself).
+~
+1 0 0
+D5
+~
+~
+0 0 3001
+S
+#108
+Shop of Magic~
+   As you walk from the main room, you walk through two more sets of
+rune-encrusted pillars, but these seem to be...  Words.  They say "Shop" in
+glowing blue letters.  You walk into the room, and your eyes set themselves
+upon cases of glowing magical swords and other magic equipment.  There is a
+cloaked man, obviously the shopkeeper, pacing about behind the counter
+muttering something about not having some spellbook or something.    
+~
+1 262152 0
+D2
+~
+~
+0 0 179
+S
+#109
+Gambling Center for the Habitually Challenged~
+   You enter this room, and its not the flashing lights or the beautiful elven
+barmaids that first catch your eye; its the old people.  They're everywhere,
+slowly mumbling to themselves as they pull the handle on the slot machine one
+more time; thinking that the next pull will be their lucky break at the win.  
+You just hope that you don't ever get that bad, as you sit down at the gamblers
+chair and begin to mumble and pull.    
+&rYou see a large sign here listing what tokens do&b read sign&n
+~
+1 28 0
+D1
+~
+~
+0 0 1406
+E
+sign~
+&rIt costs 15 million to start a clan!!&n
+
+Here are the things that each token can do!
+Arena Token-
+------------
+
+Can be gambled for a 1/6 shot at a &rred token&n.  You may recieve them in arena's
+that the gods can hold.  1/person that you kill.  Other than that, they don't 
+hold much value.
+
+&rRed Token-&n
+------------
+
+-  May be used at the Quest Master to do various things, see quest master for
+   what they are good for.
+-  May be gambled using the &bgamble item&n function, for a 1/2 shot at a &cCyan
+   Token&n.
+
+&gClan/House usages
+-  May be used to purchase a shopkeeper (required if you want to be able to sell
+   items at your house)
+-  May be used to add the arena flag to one of the rooms in your house/clan
+-  May be used to add a fountain to your clan room (extra for renaming)
+-  May be used to add a janitor to clean up crap in your house
+
+&cCyan Token-&n
+-------------
+
+-  May be used at the Quest Master to do various things
+-  May be gambled using the &bgamble item&n function for a 1/2 shot at a &bBlue
+   Token&n
+-  May be used to Rename an item, to personalize equipment (no bonuses)
+
+&gClan/House usages
+-  May be used to add an item to your clans shop, must be an item in a shop
+   somewhere else, or be your clan's sword or armor.
+-  May be used to rename an item into being your clans sword or armor.  Each 
+   clan may only have one clan sword, and one peice of clan armor.
+-  May be used to purchase another (or your first) room for your clan or house.
+-  May be used to purchase a clan board
+-  May be used to add the HIREGEN flag to a room
+
+&bBlue Token&n
+------------
+
+-  May be used at the Quest Master to do various things
+-  May be gambled using the &bgamble item&n function for a 1/2 shot at PLATINUM
+   TOKEN
+
+&gClan/House usages
+-  May be used to add a healer (like sheila) to your clan or house&n
+
+PLATINUM TOKEN
+---------------
+
+Ask.  These should be rare :-)
+~
+S
+#110
+Bot Jail~
+   ? It's too dark to tell where you are exactly, all you can be sure of is
+that you are hanging rather uncomfortably upside down from whatever the ceiling
+is, by your toenails.    
+~
+1 1048593 0
+S
+#111
+Old Arena Ready room~
+   The arena ready room.  This is the ready room you get in before getting in
+the Older arena.  Enjoy!    
+~
+1 2424840 0
+D8
+~
+~
+0 0 3001
+S
+#112
+Entrance to the &rArena&n~
+&b&vIN ARENA&w
+   You are at the entrance to the Arena.  All around you can hear the sounds of
+clashing steel and screams of death.  This room is not sheltered and death is
+an all too common thing.  Prehaps it would be better if you didn't stand around
+and die.  But it's up to you.
+~
+1 1114252 0
+D1
+~
+~
+0 0 113
+D2
+~
+~
+0 0 116
+D5
+~
+~
+0 0 1471
+D8
+~
+~
+0 0 117
+S
+#113
+The &bArachnid&n~
+&b&vIN ARENA&w
+   The arachnid is a large spinning wheel with many spokes sticking out in
+haphazard directions.  Each spoke has razor sharp edges on but the gladiators
+fighting here seem to be nimbly dodging it.  You think with a little bit of
+practice you can get it to, but it's harder than it looks.    
+~
+1 1114252 0
+D1
+~
+~
+0 0 114
+D2
+~
+~
+0 0 117
+D3
+~
+~
+0 0 112
+S
+#114
+&rRubber\c00 dining room~
+&b&vIN ARENA&w
+   You're probably thinking, now why would anyone put a dining room in the
+middle of a warzone?  We'll warriors have to eat sometime too, and even though
+all the furniture in here may look expensive, it is really made out of a
+magical material that can mold bounce and be manipulated without breaking.    
+~
+1 1114252 0
+D1
+~
+~
+0 0 115
+D2
+~
+~
+0 0 119
+D3
+~
+~
+0 0 113
+D8
+~
+~
+0 0 118
+S
+#115
+Sharp Turn~
+&b&vIN ARENA&w
+   You are standing on a sharp corner of the arena.  Spikes poke out of the
+walls making it very slow going to get around the corner.    
+~
+1 1114252 0
+D2
+~
+~
+0 0 118
+D3
+~
+~
+0 0 114
+S
+#116
+The Gauntlet~
+   You are in what is one of the favorite places to fight in the whole arena,
+mainly becuase lying around is a vast array of usable weaponry.  Some people
+like to try their hand at many various different torcher devices.  But some
+prefer the simpleness of a sword, all of these items are here, and for the
+gladiators disposal.    
+&r&vNOT IN ARENA, YOU WILL BE P-FLAGGED FOR KILLING PLAYERS, AND YOU CAN LOSE EXP.&w
+~
+1 1048732 0
+D0
+~
+~
+0 0 112
+D2
+~
+~
+0 0 121
+S
+#117
+The Funnel~
+&b&vIN ARENA&w
+   You are in some form of magical funnel, though you would like to stay in
+here it would seem that your not gonna get much fighting done here, due to the
+fact that if anyone else tried to come in here they would get stuck.  This is a
+good place to come up with a plan, but remember, your enemies may be resting as
+we speak.    
+~
+1 1114421 0
+D0
+~
+~
+0 0 113
+D1
+~
+~
+0 0 116
+D2
+~
+~
+0 0 120
+D7
+~
+~
+0 0 112
+S
+#118
+The &rMagic\c00 room~
+&b&vIN ARENA&w
+   This room sparks with magical energy.  And unlike the other rooms in the
+arena magic can be cast here.  If your a mage this would probably be a good
+place to wait and ambush the stronger warriors.    
+~
+1 1114124 0
+D0
+~
+~
+0 0 115
+D2
+~
+~
+0 0 122
+D7
+~
+~
+0 0 114
+S
+#119
+Hallway~
+&b&vIN ARENA&w
+   You are in the hallway at the far end of the rubber dining room.  Its fairly
+unexciting compared to what the arena looks like everywhere else.    
+~
+1 1114252 0
+D0
+~
+~
+0 0 114
+D1
+~
+~
+0 0 122
+D3
+~
+~
+0 0 120
+S
+#120
+Dead man's blind~
+&b&vIN ARENA&w
+   You have know idea why they call it that, because you can't see anything
+abnormal about the room, which is just a turn, but you suppose someone could be
+waiting to backstab you from the shadows at any moment so you best keep your
+eyes open.    
+~
+1 1114252 0
+D0
+~
+~
+0 0 117
+D1
+~
+~
+0 0 119
+S
+#121
+The &rArena &wClub&n~
+&b&vIN ARENA&w
+   You are standing in the hippest joint in the arena.  You have to be a
+privledged member of the arena club to be in here, so the society is a little
+bit higher.  There is still some killing that goes on in here, but that's to be
+expected.  Alcohol flows easily and the bartender looks up and asks you if you
+want something to drink.    
+~
+1 1114136 0
+D0
+~
+~
+0 0 116
+S
+#122
+Base of the ladder~
+&b&vIN ARENA&w
+   You are at the base of the ladder.  From here you can climb up to the top of
+the jumping pole which will let you jump to many common places in the arena.  
+Just watch your step.    
+~
+1 1114252 0
+D0
+~
+~
+0 0 118
+D3
+~
+~
+0 0 119
+D4
+~
+~
+0 0 123
+S
+#123
+The jumping pole~
+&b&vIN ARENA&w
+   You are at the top of the Jumping pole, you can see in all directions and
+you only wish you could once you came down.  You can jump into most rooms in
+the arena from here.    
+~
+1 1114253 0
+D0
+~
+~
+0 0 118
+D2
+~
+~
+0 0 120
+D5
+~
+~
+0 0 122
+D7
+~
+~
+0 0 113
+S
+#124
+River~
+   You are floating along the river.    
+~
+1 0 0
+S
+#125
+River~
+You are floating along the river
+~
+1 0 0
+S
+#126
+River~
+   You are floating along the river
+~
+1 0 0
+S
+#127
+The Pawn Shop~
+   You are in the DaggerFall PawnShop.  Lots of misc.  Parts and items lie
+about on the ground and you can see a few items that tickle your fancy.  The
+Pawn Shop will buy anything, and sell you anything that they've got, but they
+only have what other people sell them.  You think the prices are a bit
+overrated.    
+~
+1 128 0
+D7
+~
+~
+0 0 3001
+S
+#128
+The Paladins guild entry room~
+   You must be standing in the entrance to the Paladin's guild.  What other
+place would be so peaceful and have so much white.  Tall marble pillers line
+the white marble floor.  Rays of light shine into this room in different colors
+through the tall stained glass windows.  This whole place looks and feels like
+holy ground.  A white rug lead to the east into the Paladin's guildmaster room.
+North west takes you back to Daggerfall square.    
+~
+1 28 0
+D1
+~
+~
+0 0 129
+D7
+~
+~
+0 0 3005
+S
+#129
+Paladins Guildmaster room~
+   Much like the entrance to the guild this room is overly done in the color
+white.  At the front of the room, standing behind a marble alter is the
+guildmaster.  He waits here for all paladins to come and train.  If you are
+worthy and have earned your right to be a servent of God, then step forward.  
+And become one of the holy.  When you are done learning, go back west, and
+teach others.    
+~
+1 3407948 0
+D3
+~
+~
+0 0 128
+S
+#130
+Entrance to the Vampyre's Guild~
+     The entrance to the Vampyre's Guild would be frightening to those
+who are not Vampyres.  The carved stone walls have little gargoyles
+mounted near the ceiling peering down on all those who enter this
+unholy place.  It is very dark in here, lit only by a few candles and
+torches.  
+    A small doorway to your northwest leads out into the streets of
+Daggerfall.  There is also a stone spiral stair that leads down into
+complete darkness.  This is where the Vampyres go to learn and hone
+their dark abilities.
+~
+1 28 0
+D5
+~
+~
+0 0 131
+D7
+~
+~
+0 0 3026
+S
+#131
+Training Room for the Unholy~
+     Now at the bottom of a spiral stair, the room is almost totally
+dark.  The only light eminates from a pair of oil lamps hanging loosely
+from the ceiling.  The northern wall of this room is lined with large
+coffins so the Vampyres can rest without worry of sunlight.  The ground
+is darkly stained with blood, and there is broken furniture and dummies
+littering the center of the room.
+     The only exits you can see appear to be the way you came in...up
+the twisting stairs to the City of Daggerfall.
+~
+1 28 0
+D4
+~
+~
+0 0 130
+S
+#132
+Bard Guild Entrance~
+   As you enter the Bard's guild you are overcome with the sound of music and
+people dancing.  This place looks more like a tavern than it does a guild.  
+There is even a bar and tables full of people eating and drinking.  There is
+always someone here willing to tell you a tale, for all bards have many of
+them.  As you stand around looking at everyone you are grabed by one of the
+bards and forced to dance and enjoy yourself.  You wonder how anyone could ever
+learn anything in a place like this.  All they seem to do is eat, drink, and be
+merry.  There is some wooden steps leading up to the second floor.  The
+guildmasters room, but most here like to call it the place of tales of new and
+old.  Back south is the streets of Daggerfall, should you wish to leave the
+fun.    
+~
+1 28 0
+D2
+~
+~
+0 0 3026
+D4
+~
+~
+0 0 133
+S
+#133
+Bard Guildmaster room~
+   This room is not nearly as loud and full of people, though you can still
+hear the noise from downstairs.  The walls of this room are completley covered
+with scrolls, on which are scribed many tales of new and old.  Siting at the
+front of the room is the guildmaster of the bards.  As he sees you enter he
+motions for you to come and sit by him.  He starts to tell you a tale of some
+time long past, for he is old and has many stories to tell.  So sit down and
+rest, and listen to him well.  For it is the tales and stories that make a
+bard.    
+~
+1 28 0
+D5
+~
+~
+0 0 132
+S
+#134
+Entrance to the Scout's Guild~
+     The entrance to the Scout's Guild is a nice looking part of this
+building.  The walls are made of fine oak and stained a velvet tan 
+color.  There are portraits on the wall of some of the finest scouts
+that the realm has seen.  To the southeast, a doorway leads out into 
+the streets of Daggerfall, whilst to the north is the training room 
+for the scouts of the realm.
+~
+1 28 0
+D0
+~
+~
+0 0 135
+D8
+~
+~
+0 0 3016
+S
+#135
+The Mock Wilderness~
+     This room is utterly amazing, it is a gigantic room and has been
+made to look like the wilderness.  There is a field, the edge of a 
+forest, and a fake river.  All about you see scouts practicing their
+various skills, some are climbing trees while others are practicing
+their camaflage techniques.  To your south you can leave the Scouts
+guild and go back to the streets of Daggerfall, that is, if you can
+actually find the door again...
+~
+1 28 0
+D2
+~
+~
+0 0 134
+S
+#136
+The Elven Guildroom Entrance~
+     This is the entrance to the guildroom of the elven kind.  Here
+they can teach you all that you want to know, as long as you are 
+worthy of learning it.  Be you a warrior, mage, or anything else
+they can teach your kind.  So begin your training and increase your
+efficiency the elven way.
+~
+1 28 0
+D0
+~
+~
+0 0 137
+D1
+~
+~
+0 0 19029
+S
+#137
+The Elven Guild~
+     This room is littered with books, weapons, and all sorts of
+strange looking things.  It is here that ALL classes may train
+with the masters of elvenkind.  To train all you need to do is
+talk to the elven guildmaster and he will point you in the right
+direction and help you with whatever you need.  All the resources
+are here for you and you may use them at your disposal.
+~
+1 28 0
+D2
+~
+~
+0 0 136
+S
+#138
+Under the Tavern~
+     You are in a small room, just below the New Thalos tavern.  Water
+drips down by your feet and is soaked up by the dirt floor.  It smells
+ligtly of mildew in here, and the air is humid.  From above you comes
+the sounds of merryment from the tavern patrons.
+    To the north the &uVampyre's Guild&n can be found, to the east is
+the &uScout's Guild&n, while to the south is the &uBard's Guild&n that
+you have heard about in many tales.  Finally, to the west is the purest
+guild of them all, the &uPaladin's Guild&n.
+~
+1 28 0
+D0
+~
+~
+0 0 139
+D1
+~
+~
+0 0 140
+D2
+~
+~
+0 0 141
+D3
+~
+~
+0 0 142
+S
+#139
+The Guild of Vampyres~
+     The thick stone walls of this room help to keep it cool, and 
+prevent any sunlight from leaking through the tavern floor.  It
+is almost completely dark in here with the only lighting coming
+from a small candle in the middle of the room.  The candle dies its
+slow death on a small desk next to a giant tome.  This tome must
+be where the guildmaster hides the secrets of the long line of
+Vampyres.
+~
+1 28 0
+D2
+~
+~
+0 0 138
+S
+#140
+The Training Room of the Scouts~
+     This is a very plain looking room, it is well kept and mostly 
+bare.  The only things occupying this room are shelves of books
+which outline the various camoflage/hiding techniques, tutorials
+on tracking and footprints, as well as many other skills learned
+by the Scout.  There are also various tools utilized by the Scout
+hanging on the walls such as telescopes, shoes that leave animal
+tracks, and various camoflage equipment.
+~
+1 28 0
+D3
+~
+~
+0 0 138
+S
+#141
+Bard Guildmaster room~
+   This is room is filled with scrolls, books, and other types of text.  All of
+them containing tales of adventures.  Some of them are of great battles and
+death, others of romance and love.  At the far end of the room there sits the
+guildmaster.  He looks to be busy sorting through the endless pages of stories.
+Even though his work is far from done, he stops when he sees you.  A smile
+comes over his face as he gladly welcomes you to come and read with him.  To
+learn the tales of other bards, so you can better write ones of your own.    
+~
+1 28 0
+D0
+~
+~
+0 0 138
+S
+#142
+Paladin Guildmaster Room~
+   As you step into this room a feeling of peacefulness flows through your
+body.  For you can tell that you have set foot on holy groud.  This room is
+clean and pure, unlike the murky room from which you came.  There are many
+lanterns and candles throughout the room filling it with light.  At the head of
+the room there stands a great paladin.  He is reading the holy text, and
+praying to God.  Only when he is done praying does he notice you.  If you are a
+worthy servent of God, then step forward, and the guildmaster will teach you.
+~
+1 28 0
+D1
+~
+~
+0 0 138
+S
+#143
+The Master Guild~
+     This room is rather plain looking and made from quarried stone.
+It is the room in which those of all guilds may practice, it is a
+master guild.  Bookshelves in this room are filled with books, tomes,
+scrolls, and many other forms of media.  These sources contain many
+different things such as guild information, skill books, and tome
+after tome of spells.  They are all organized in accordance to your
+guild.
+~
+1 28 0
+D0
+~
+~
+0 0 144
+S
+#144
+Entrance to the Master Guild~
+     This is the entrance to the Master Guild of Rome.  It is here 
+in which all classes may learn and master their technique.  It seems
+to be a very unique idea although you cannot imagine how spellcasters
+and warriors could practice in the same room.  To the north is the 
+main street of Rome, while to the south is the Guildmaster's room.
+~
+1 28 0
+D0
+~
+~
+0 0 12046
+D2
+~
+~
+0 0 143
+S
+#145
+New Roman Temple of the Gods~
+   The walls are lined with statues of all the roman gods.  From Mars, the god
+of war, to Venus, the goddess of love.  The statues are all carved from a
+beautiful marble, thought the temple itself is built of fine wood.  In the
+center of the room there is a fountain from which the purest of water flows.  
+Large golden lanterns hang in the corners of the temple illuminating the room
+with bright light.  Steps lead down out of the temple to the town square.  
+North is the healing room, south is the New Roman bank, and west is the
+commons.  Northwest of here is the Roman donation room, where generous citizens
+donate various items of usefulness.  Southwest is the nebie portal, a fast way
+for all Roman newbies to get to the newbie zone.    
+~
+1 156 0
+D0
+~
+~
+0 0 147
+D2
+~
+~
+0 0 146
+D3
+~
+~
+0 0 148
+D5
+~
+~
+0 0 12032
+D7
+~
+~
+0 0 151
+D9
+~
+~
+0 0 12072
+S
+#146
+The New Roman Bank~
+     This newly furnished building is truly magnificent.  All the 
+counters are made from dark, polished mohagany which shines like
+water in the light.  A set of four large, oil lamps light the room
+during all hours of the day and night.  The ceiling is high, and 
+vaulted with large wooded crossbeams to disect the open space.  You
+feel very welcome here, and there are many people to help you.
+~
+1 156 0
+D0
+The New Roman Temple.
+~
+~
+0 0 145
+S
+#147
+A place of healing~
+     This is the room where citizens of Rome come to heal their
+wounds.  Most people just come here to treat blisters and small
+cuts, but once in a while a badly hurt adventurer wanders in
+seeking help.  There are many healers that wander about the room,
+and the phrase, "You are HEALED my child!" can be heard from all
+around.  However you notice a young woman who is just sitting here
+calmly who seems to know much more than the rest of these so called
+"healers".  To the south is the Temple of Rome.
+~
+1 2097180 0
+D2
+The New Roman Temple.
+~
+~
+0 0 145
+D5
+~
+~
+0 0 12069
+S
+#148
+The Roman Commons~
+     This room matches the style of the temple, and is very elegant
+in itself.  It is the place where the citizens of Rome gather to
+make decisions and post their concerns.  A large table is here
+made from mohagany, and is surrounded by chairs in its likeness.
+Meetings are commonly held here and posts are discussed.  The only
+other feature of the room is a large bulletin board where people
+post their messages.
+~
+1 28 0
+D1
+The New Roman Temple.
+~
+~
+0 0 145
+D3
+~
+~
+0 0 0
+S
+#149
+Elven healing room~
+   You are in a small alcove to the north of the Elven Temple.  This
+is a peaceful little room, where adventurers and citizens alike come
+to rest up and heal their daily wounds.  Sheila sits here in the
+center of the room providing her unique services upon all who enter
+here.
+~
+1 2097180 0
+D2
+~
+~
+0 0 19005
+S
+#150
+The Elven Donations~
+   This is a small alcove off to the side of the temple, where the
+tree has provided a place for a donations portal.  The portal is
+located in the ceiling of this room, and is where all the donations
+come from.  The temple can be found back to the west.
+~
+1 40 0
+D3
+~
+~
+0 0 19005
+S
+#151
+New Roman Donations~
+     This area is just as magnificent as the rest of the temple.  The
+walls are a dazzling cream color, with dark wooden crossbeams and trim
+made from carved mohagany.  The floor is a smooth cobblestone surface
+that patched together with a dark grey mortar.  A large glowing portal
+in the ceiling is where items that are donated fall to the ground where
+they lay to rest until someone finds a home for them.
+~
+1 12 0
+D8
+~
+~
+0 0 145
+S
+#152
+New Thalos Donations~
+     This room is much licke the Dancing Daemon Inn.  You can hear
+all the noise of the bar to your east, meanwhile you can also hear
+the humming of the portal overhead.  This is the place where New
+Thalos citizens donate the equipment that they no longer need.
+~
+1 44 0
+S
+#153
+The New Thalos Pawn Shop~
+     Now inside the New Thalos pawn shop, you begin to second guess
+this place.  The old wooden walls needed replacment years prior to
+this date, and the floor is in the same condition.  All around you
+lies all the junk that people sell, and in turn is for sale to you
+(at a much higher price of course).  You decide to make your decisions
+quickly so you can get out of here!
+~
+1 156 0
+S
+#154
+The New Roman Pawn Shop~
+     This pawn shop was built very recently, as the wood and mortar
+walls are in excellent condition.  Neat wooden shelves line the walls
+showing off all the merchandise for sale, as well as weapon racks
+lined with the weapons they have for sale.  The shopkeeper urges you to
+look around, and try out whatever you like.
+~
+1 156 0
+D1
+~
+~
+0 0 12035
+S
+#155
+The Pawn Shop of Elven Kind~
+   The elven pawn shop is a fine place, the tree has formed itself
+to make the walls and ceiling of this shop.  Natural shelves are
+are made by the tree as well as pegs for the shopkeepers weapons.
+There is a sign hanging on the wall that says, "Shoplifters will
+be EXECUTED!".  It seems as though the shopkeeper is able and
+willing to enforce that law!
+~
+1 156 0
+D3
+~
+~
+0 0 19018
+S
+#156
+Start of a pumice path~
+   This is a fairly worn path among the black rock, which you recall is called
+pumice.  The pumice was launched out as molten lava destroying part of Old
+Thalos when it erupted.  Many people believe that there are many riches buried
+below the hard rock.    
+~
+1 4 2
+D1
+The path continues to the east.
+~
+~
+0 0 157
+S
+#157
+In the middle of a pumice path~
+   The pumice path continues here, you can sometimes see large fire lizards
+bathing on the rocks, and all sorts of creatures are lying about and hiding
+behind the porous rocks.  The path is quite worn, and it leads to the top of
+the now inactive volcano.    
+~
+1 0 2
+D1
+The beginning of the path that climbs the volcano.
+~
+~
+0 0 158
+D3
+Back to the beginning of the path.
+~
+~
+0 0 156
+S
+#158
+End of the Pumice path~
+   Here the Pumice path ends and another path less worn starts up the hill.  
+You can see why the path was so warn, because there is a large natural spring
+here and you suspect that lots of the creatures come here to bathe and play.  
+~
+1 0 2
+D2
+~
+~
+0 0 159
+D3
+~
+~
+0 0 157
+S
+#159
+Along the base of the volcano~
+   You are walking along the base of the volcano, the going is hard due to lots
+of rocks lying about, and I'd keep my eyes peeled for creatures.    
+~
+1 0 5
+D0
+~
+~
+0 0 158
+D1
+~
+~
+0 0 160
+D2
+~
+~
+0 0 171
+S
+#160
+The Northern edge of the Volcano~
+   This is the Northern edge of the volcano, you can look off to the north, and
+you can see why most of New thalos wasn't hurt, there is a large valley
+blocking both travel, and lava in that direction.    
+~
+1 0 5
+D1
+~
+~
+0 0 161
+D2
+~
+~
+0 0 168
+D3
+~
+~
+0 0 159
+D9
+~
+~
+0 0 167
+S
+#161
+Along the Northern edge of the Volcano~
+   You are still walking along the base of the volcano, to the east is a small
+river of lava, still left flowing from one of the vents in the volcano, but
+luckily there is a bridge made of pumice that goes over it.    
+~
+1 0 5
+D1
+~
+~
+0 0 173
+D2
+~
+~
+0 0 166
+D3
+~
+~
+0 0 160
+D9
+~
+~
+0 0 167
+S
+#162
+The Northeastern corner of the Volcano~
+   Back to the west is the pumice bridge that goes over the lava river.  Your
+standing at the corner of the mountain.    
+~
+1 0 0
+D2
+~
+~
+0 0 163
+D3
+~
+~
+0 0 173
+S
+#163
+The Eastern edge of the Volcano~
+   You are walking along the eastern edge of the volcano, the view from here is
+simply stunning, you can see a long river of glowing lava coming from a vent in
+the side of the mountain that goes all the way down into the valley below.    
+~
+1 0 5
+D0
+~
+~
+0 0 162
+D2
+~
+~
+0 0 164
+D3
+~
+~
+0 0 166
+S
+#164
+The Southeastern corner of the volcano~
+   From this angle along the bottom of the volcano,  you can't see much, but
+some black smoke rising towards the horizon.
+~
+1 0 5
+D0
+~
+~
+0 0 163
+D3
+~
+~
+0 0 165
+S
+#165
+Along the Southern end of the volcano~
+   Walking along the Southern edge of the volcano you can see a path that winds
+up the volcano to the Northwest.    
+~
+1 0 5
+D0
+~
+~
+0 0 166
+D1
+~
+~
+0 0 164
+D3
+~
+~
+0 0 169
+D7
+~
+~
+0 0 167
+S
+#166
+Climbing the Volcano~
+   One of the largest streams of water down the volcano converges with the
+large stream of lava here, it's an amazing sight, steam is everywhere making
+things hard to see even in broad daylight and almost impossible at night.  All
+around you there are signs of regrowth and life.  Large ferns sprout out of
+rock openings and moss grows everywhere.  This is probably due to the large
+amount of water that's in the air.    
+~
+1 0 0
+D0
+~
+~
+0 0 161
+D1
+~
+~
+0 0 163
+D2
+~
+~
+0 0 165
+D3
+~
+~
+0 0 167
+S
+#167
+The cone of the volcano~
+   Now this is something that surprises you, the cone is not abandoned, there
+is a large flight of steps that winds downward INTO the volcano, this is highly
+irregular, and probably demands exploring.  The steps are well maintained and
+you begin to wonder why they were made.  And more importantly, WHO made them.
+~
+1 0 0
+D0
+~
+~
+0 0 168
+D1
+~
+~
+0 0 166
+D6
+~
+~
+0 0 160
+D7
+~
+~
+0 0 161
+D8
+~
+~
+0 0 169
+S
+#168
+Climbing the Volcano~
+   You are hiking up the volcano, I would not recommend tripping because the
+rock doesn't look very forgiving.  The lizards are less frequent through here,
+they like the warmer base rock a lot better.  But still there are some that go
+away just to avoid the crowd.  It's been quite a while since this volcano has
+been active, you can tell this because large pools of water have carved out
+small streams down the volcano.    
+~
+1 0 0
+D0
+~
+~
+0 0 160
+D2
+~
+~
+0 0 167
+D4
+~
+~
+0 0 2299
+S
+#169
+Along the south end of the Volcano~
+   Here the path along the bottom of the mountain goes under a large boulder
+blocking out the sun and making it impossible to travel north.
+~
+1 1 0
+D1
+~
+~
+0 0 165
+D3
+~
+~
+0 0 170
+D7
+~
+~
+0 0 167
+S
+#170
+The Southwestern base of the volcano~
+    You are at the Southeastern corner of the Volcano.  You have to go elsewhere
+if you want to climb the mountain.  But there appears to be a nice spot to eat
+here and the monsters aren't quite as thick.
+~
+1 16 0
+D0
+~
+~
+0 0 171
+D1
+~
+~
+0 0 169
+S
+#171
+Along the Eastern Base of the Volcano~
+   As you continue walking you realize you have become kind of used to the
+horrible sulferous smell that seems to be everywhere.  But you only notice this
+because a small breeze has picked up and seems to be blowing away a bit of the
+smell, the fresh air is a nice change.  You manage to take one last deep breath
+before the air changes again.    
+~
+1 0 0
+D0
+~
+~
+0 0 159
+D2
+~
+~
+0 0 170
+S
+#172
+Upper volcano drop chute~
+   This is the place that the mobs for the top of the volcano are dropped, for
+random and even spreading.
+~
+1 327680 0
+D0
+~
+~
+0 0 160
+D1
+~
+~
+0 0 161
+D2
+~
+~
+0 0 162
+D3
+~
+~
+0 0 163
+D4
+~
+~
+0 0 164
+D5
+~
+~
+0 0 165
+D6
+~
+~
+0 0 166
+D7
+~
+~
+0 0 167
+D8
+~
+~
+0 0 168
+D9
+~
+~
+0 0 169
+S
+#173
+The bridge~
+   There is a solid rock and steel bridge that crosses the lava flow right
+here, it would appear that it has been made by a dwarf or troll of some sort,
+but as you are thinking of this, out pops a Half-troll from under the bridge,
+and he looks ready to fight you for the scrap metal that you are wearing.  He
+must have been the one who made the bridge.    
+~
+1 0 0
+D1
+~
+~
+0 0 162
+D3
+~
+~
+0 0 161
+S
+#174
+Residential block B~
+   This path continues on, and it is sparsly developed now.  To the north you
+can see what looks like a Japanese Dojo.    
+~
+1 270336 0
+D0
+~
+~
+0 0 8300
+D1
+~
+~
+0 0 1480
+D3
+~
+~
+0 0 103
+S
+#175
+The Auctioning Block~
+   You are yanked by your suspenders and thrown into this small room to
+complete your transaction.  Sitting in the middle of this room is the crazy
+auction mage who is in charge of handling the exchange of items for money here
+in the world of daggerfall.  He oversee's your particual trade, smiles crazily
+and tells you both to &brecall&n to make room for others.    
+~
+1 262296 0
+D3
+~
+~
+0 0 1406
+S
+#176
+The to be donated room~
+Anything dropped here is donated. :-)
+~
+1 655368 0
+D2
+~
+~
+0 0 106
+S
+#177
+Clan Street~
+   You are walking down clan street, birds tweeting and singing merrily and all
+the sudden the music stops, and you hear a calling, as if from heaven...  In
+fact you can see the God's clan house above you.  You listen carefully to this
+glowing house in the sky and you hear shouting, but not of joy, it would seem
+that there is a heated debate going on above, you try to make out words, "But I
+created it, the treehouse should be mine", says a whiney voice.  "Oh that took
+nothing, I created this darn MUD you hear me?  The tree house is mine", "Well
+I've got more money then you".  You hear a poofing sound, "Now I have more"
+This continues and you lose interest and continue walking.  To get to Stalker
+clan house or Hunter clan house you now must be a member of the clan and use
+the &bclan recall&n command.    
+~
+1 270336 0
+D1
+~
+~
+0 0 3059
+D4
+~
+~
+0 0 178
+S
+#178
+The God's Treehouse~
+   You are in a very small and badly built treehouse, with a long rope ladder
+leading down.  It would seem that the gods are too busy to make a better clan
+house or they prefer the simplicity of this little thing.  In the corner there
+is a telescope for viewing the land, and next to it positioned in one of the
+windows is a water balloon launcher, for splatting mortals in the head.  There
+is a stairway that climbs up to the heavens in the middle of the room.
+~
+1 264712 0
+S
+#179
+&bTantra Clan Hall&n~
+   As you walk up to the entrance of the Tantra clan hall, you notice two
+pillars in front of the door, used as an archway, with many ancient runes on
+them that seem to be glowing.  The entire structure appears to you as really
+ancient, but seems to be very sturdy to walk into.  As you walk into it, a
+pile of dust surrounds your face.  As you shrug away the dust, you see that
+the whole room is rather large.  There are many bookcases lining the walls
+that seem to look like spellbooks.  Many people pass you, reciting ancient
+incantations.    
+~
+1 262152 0
+D0
+~
+~
+0 0 108
+S
+#180
+The Gatekeepers Realm~
+   You now stand in the mystical realm of the Gatekeeper.  Here you must have a
+pass to the portals, which can only be found in the arena club.  The portals
+lead to the begining of different places, and are not for the weak.  Some of
+these portal will take you to where there are hostile creatures, you are
+warned.
+&GEast: &WOld Thalos&n
+&GSouth: &WThe Great Pyramid&n
+&GWest: &WRands Tower&n
+&GSouth West: &WBack to the Great field of daggerfall&n
+&GNorth East: &WMore portals&n
+&GUp: &WNecropolis&n
+&GDown: &WDrow City&n
+&GNorth West:&n More Portals
+&f&RWARNING: Learn the way by land, for these gates will be gone once all
+zones are connected.&n
+~
+1 262212 5
+D1
+~
+~
+0 0 5200
+D2
+~
+~
+0 0 5301
+D3
+~
+~
+0 0 6407
+D4
+~
+~
+0 0 565
+D5
+~
+~
+0 0 5100
+D6
+~
+~
+0 0 1419
+D7
+~
+~
+0 0 1470
+D9
+~
+~
+0 0 3065
+S
+#181
+Downward spiral~
+   You are walking down a well carved stair case, that seems to be made for
+someone of a short stature.  All along the wall is intriquite carvings of
+dragons and knights with shining armor, and you notice that the armor is
+actually made of mettal upon closer examination you notice that it looks like
+mithril.  Odd, you thought that was only made by elves.    
+~
+1 4 0
+D4
+~
+~
+0 0 167
+D5
+~
+~
+0 0 182
+S
+#182
+Deeper and darker~
+   You continue walking down the tunnel, the daylight is no long shining down
+this deep, and it is getting quite warm in the tunnel.  It would seem that
+hells little creatures have come out to play, and appear to be hiding just
+about everywhere.    
+~
+1 1 0
+D4
+~
+~
+0 0 181
+D5
+~
+~
+0 0 183
+S
+#183
+End of stairway~
+   The stairway ends here, and it does seem that the further down you go the
+hotter it gets, the heat is now almost quite intolerable.  You find yourself
+unbuttoning your tunic.  The room you are in is round and has exquisite
+carvings of all sorts of creatures on the walls.  There is a ladder carved in
+the wall that seems to lead into an abandoned cavern below.    
+~
+1 1 0
+D4
+~
+~
+0 0 182
+D5
+~
+~
+0 0 187
+S
+#184
+A wall in the cavern~
+   You are really getting sick of this cavern, there is nothing to disconcern
+one area from another, if only you could find your way back to the ladder.    
+~
+1 524289 0
+D1
+~
+~
+0 0 188
+D2
+~
+~
+0 0 187
+D3
+~
+~
+0 0 185
+D8
+~
+~
+0 0 189
+D9
+~
+~
+0 0 186
+S
+#185
+A corner in the cavern~
+   Things are very dark here, and even with a light, it's hard to find your way
+around, the cavern is so large that you only know where you are when you run
+into a wall.  Your lucky that it isn't much bigger or you would really get
+lost.    
+~
+1 524417 0
+D1
+~
+~
+0 0 184
+D2
+~
+~
+0 0 186
+D8
+~
+~
+0 0 187
+S
+#186
+A wall in the cavern~
+   You are really getting sick of this cavern, there is nothing to disconcern
+one area from another, if only you could find your way back to the ladder.
+~
+1 524289 0
+D0
+~
+~
+0 0 185
+D1
+~
+~
+0 0 187
+D2
+~
+~
+0 0 190
+D6
+~
+~
+0 0 184
+D8
+~
+~
+0 0 191
+S
+#187
+Abandoned cavern~
+   The volcano bulges here, and it would seem that someone has taken advantage
+of that and removed all of the dirt, metal and rock from the inside here.  
+Large supports made of rock support the ceiling and walls, you see many
+footprints long gone left in the dust here some small and lightfooted, others
+heavy, and covered by hard metal boots.    
+~
+1 524293 0
+D0
+~
+~
+0 0 184
+D1
+~
+~
+0 0 189
+D2
+~
+~
+0 0 191
+D3
+~
+~
+0 0 186
+D4
+~
+~
+0 0 183
+D5
+~
+~
+0 0 1403
+D6
+~
+~
+0 0 188
+D7
+~
+~
+0 0 185
+D9
+~
+~
+0 0 190
+S
+#188
+A corner in the cavern~
+   Things are very dark here, and even with a light, it's hard to find your way
+around, the cavern is so large that you only know where you are when you run
+into a wall.  Your lucky that it isn't much bigger or you would really get
+lost.
+~
+1 524289 0
+D2
+~
+~
+0 0 189
+D3
+~
+~
+0 0 184
+D9
+~
+~
+0 0 187
+S
+#189
+A wall in the cavern~
+   You are really getting sick of this cavern, there is nothing to disconcern
+one area from another, if only you could find your way back to the ladder.  
+There appears to be something wierd about the rock to the south.    
+~
+1 524289 0
+D0
+~
+~
+0 0 188
+D2
+~
+rock~
+1 100 192
+D3
+~
+~
+0 0 187
+D7
+~
+~
+0 0 184
+D9
+~
+~
+0 0 191
+E
+rock~
+   It appears to be able to be opened, you even manage to find the place where
+a key could go.    
+~
+S
+#190
+A corner in the cavern~
+   Things are very dark here, and even with a light, it's hard to find your way
+around, the cavern is so large that you only know where you are when you run
+into a wall.  Your lucky that it isn't much bigger or you would really get
+lost.
+~
+1 524289 0
+D0
+~
+~
+0 0 186
+D1
+~
+~
+0 0 191
+D6
+~
+~
+0 0 187
+S
+#191
+A wall in the cavern~
+   You are really getting sick of this cavern, there is nothing to disconcern
+one area from another, if only you could find your way back to the ladder.
+~
+1 524289 0
+D0
+~
+~
+0 0 187
+D3
+~
+~
+0 0 190
+D6
+~
+~
+0 0 189
+D7
+~
+~
+0 0 186
+S
+#192
+Storeroom~
+   It would appear that guards use this room to store backup weaponry and other
+such items in case of an attack.  The quality of these items looks very good.
+~
+1 262144 0
+D0
+~
+rock~
+1 100 189
+S
+#193
+The Ant'eles passage~
+   This is the start of the Ant'eles passage, it would appear to be the first
+passage up and down this corridor, like almost all the other corridors you see
+slaves working, the Ant'eles passage appears to be more of a mining passage,
+with people on the left and right picking away at the walls in a steady but
+slow fashion.    
+~
+1 0 0
+D1
+~
+~
+0 0 194
+D2
+~
+~
+0 0 197
+S
+#194
+Along the Ant'eles Passage~
+   Along this passage you see more of the same, elves, gnomes, and dwarves
+being forced to dig away at the rock walls, for whatever metals they can find
+by large ogres.  It would appear that here, there are more elves, who are good
+at finding the right kind of metals in the rock.  Yet a large number of the
+workforce is made up of kobolds, who are hard working if their hide is at stake
+~
+1 0 0
+D1
+~
+~
+0 0 195
+D3
+~
+~
+0 0 193
+S
+#195
+Along the Ant'eles Passage~
+   Along this passage you see more of the same, elves, gnomes, and dwarves
+being forced to dig away at the rock walls, for whatever metals they can find
+by large ogres.  It would appear that here, there are more elves, who are good
+at finding the right kind of metals in the rock.  Yet a large number of the
+workforce is made up of kobolds, who are hard working if their hide is at stake
+~
+1 0 0
+D1
+~
+~
+0 0 196
+D3
+~
+~
+0 0 194
+S
+#196
+End of the Ant'eles Passage~
+   The passage comes to an end here, but to the south you can see the ends of
+and openings to a lot more passages.    
+~
+1 0 0
+D2
+~
+~
+0 0 1401
+D3
+~
+~
+0 0 195
+S
+#197
+The Hall of Bell'hem-outh~
+   You are standing at the entrance to the Hall of Bell'hem-outh.  This appears
+to be the hall where all the workers take what solid rock is brought in from
+the Ant'eles passage, there appears to be less unskilled workers like kobolds
+here and more dwarves and a few small ogres who have violated some rule and are
+now being forced into slavery like the others.  There are large furnaces here
+that melt the metal into pans below, which is then packaged into solid blocks
+and passed on to the Cai'lan workshop.    
+~
+1 0 0
+D0
+~
+~
+0 0 193
+D1
+~
+~
+0 0 198
+D2
+~
+~
+0 0 1402
+S
+#198
+Hall of Bell'hem-outh~
+   This appears to be the hall where all the workers take what solid rock is
+brought in from the Ant'eles passage, there appears to be less unskilled
+workers like kobolds here and more dwarves and a few small ogres who have
+violated some rule and are now being forced into slavery like the others.  
+There are large furnaces here that melt the metal into pans below, which is
+then packaged into solid blocks and passed on to the Cai'lan workshop.    
+~
+1 0 0
+D1
+~
+~
+0 0 199
+D3
+~
+~
+0 0 197
+S
+#199
+Jaxom's Tactical Warroom~
+   As you look around you see maps hanging from all the walls, some with wierd
+lights that go on and off every now and again You see a few screens that drop
+down from the ceiling displaying systems logs for something, but it is in a
+language that you can't decipher.  In the center is the captains chair, from
+which Jaxom apparantly rules his mud.  Levers and buttons come from all sides
+and you fear touching the chair because it looks rigged for just Jaxom's shape.
+Some of the posters include
+- &blisting&n; A listing of all the zones, and their exits
+- &bboards&n;  A listing of all the unused bulletin boards
+- &babuild&n;  Information on how to correctly build an arena
+- &barena&n;   Current arena's available for &barena zone&n command
+~
+1 264712 0
+D1
+~
+~
+0 0 1401
+D3
+~
+~
+0 0 198
+S
+$~

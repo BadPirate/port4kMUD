@@ -1,0 +1,17 @@
+18 Jul 99 10AM :
+  (G) fixed remort code - remove all items before hacking character.
+05 Sep 99 10PM :
+  (G) Added oppressive/heal rooms that make regen 0 or higher depending
+     on which flags are set.
+05 Sep 99 11PM :
+  (G) Removed some race restrictions (HUMAN/ELF) and changed them to
+     class restrictions (MASTER/NINJA).  Hope is to balance some stuff.
+05 Sep 99 11PM :
+  (G) Changed midevil to medieval ... how is this supposed to be spelled?
+12 Sep 99 08PM :
+  (G) No more gact spam with shutoff gossip
+  (G) muted people cant gact
+  (G) Mobs can't gact.
+18 Sep 99 11AM:
+  (G) FIXED CRASH BUG
+  (G) Fixed WIZLIST to be 4x faster (approx)

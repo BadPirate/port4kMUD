@@ -1,0 +1,191 @@
+#800
+fungus~
+the many eyed fungus~
+A fungus is growing here, it stares at you with its many eyes.
+~
+It looks, err, unfinished.
+~
+90 0 190 E
+15 15 3 1d1+199 2d4+2
+0 8000
+8 8 0
+BareHandAttack: 2
+E
+#801
+master choice~
+the master of choice~
+The Master of Choice stands here, waiting for you to decied your fait.
+~
+   This almost-statue looking guy just stands here watching you.  Waiting to
+see which way you will choose to go.  Whether you choose correctly and live or
+incorrectly and die.    
+~
+18506 32928 0 E
+60 -10 -5 1d1+4999 5d6+25
+80000 110000
+8 8 0
+BareHandAttack: 7
+E
+#802
+troll hedge green~
+a hedge troll~
+A green furred troll is here drooling as he sees your fresh flesh.
+~
+This troll is as ugly as all trolls are, but it has a dark green fur covering
+its body.  It seems to like the way you look...  Tasty...    
+~
+108 33824 -680 E
+40 0 -2 1d1+1499 5d4+15
+15000 60000
+8 8 0
+BareHandAttack: 4
+E
+#803
+enigma puzzle~
+the Enigma~
+The enigma is here twisting and changing and confusing you in different ways.
+~
+This has got to be the strangest creature you have ever seen.  If it is a
+creature.  It appears to be some sort of living puzzle.  Constantly chaning
+it's for to harder and more confusing shapes.  The shapes are of mazes and
+other types of puzzles.  It must be that which has built the labyrinth and what
+controls the maze.    
+~
+16458 32770 0 E
+80 -15 0 1d1+5999 6d8+15
+70000 200000
+8 8 0
+BareHandAttack: 9
+E
+#804
+head hydra~
+the first head of the hydra~
+The first head of the hydra is raised staring at you.
+~
+It is the first head of the hydra, and it is glaring down at you.  Almost as though it is decieding wether to eat you or let one of the other heads have you.
+~
+62026 0 -500 E
+33 0 -5 1d1+10000 5d4+10
+0 40000
+8 8 0
+BareHandAttack: 4
+E
+#805
+head hydra~
+the second head of the hydra~
+The second head of the hydra rests here barely even noticing you.
+~
+The second head of the hydra just seems to rest on the cave floor, not noticing 
+your presence.
+~
+61770 0 500 E
+33 -5 -5 1d1+10000 5d4+10
+0 40000
+8 8 0
+BareHandAttack: 4
+E
+#806
+head hydra~
+the third head of the hydra~
+The third head of the hydra seems to be eating something.
+~
+The third head seems to be eating something in the corner.  Probably the last aventurer to come in to the cave.
+~
+62026 0 -500 E
+33 -5 -5 1d1+10000 5d4+10
+0 40000
+8 8 0
+BareHandAttack: 4
+E
+#807
+head hydra~
+the fourth head of the hydra~
+The fourth head of the hydra is cleaning it's part of the body.
+~
+The fourth head doesn't pay any atention to you as it licks its part of the body clean.
+~
+61770 0 500 E
+33 -5 -5 1d1+10000 5d4+10
+0 40000
+8 8 0
+BareHandAttack: 4
+E
+#808
+head hydra~
+the fifth head of the hydra~
+The fifth head of the hydra is resting on the ground staring beyond you.
+~
+The fifth head of the hydra just seems to be lost in it's own thoughts.  It stares at the space beyond you.
+~
+61514 0 0 E
+33 -5 -5 1d1+25000 5d4+10
+0 40000
+8 8 0
+BareHandAttack: 4
+E
+#809
+keeper labyrinth gate~
+the gate keeper~
+The labyrinth's gate keeper is sleeping here, waiting for someone to enter.
+~
+An ugly little dwarf guy with rags for clothes.  There is no reason why you'd think he'd be tending the gate to the labyrinth.  Then again, everything about the labyrnith is a mistery.  Why shouldn't the gate keeper be one too?
+~
+2126 0 0 E
+33 0 1 1d1+699 4d4+10
+8000 20000
+4 4 1
+E
+#810
+spider silvery metallic~
+a silvery spider~
+A metallic spider is here, gazing at you with all it's eyes.
+~
+This somewhat big spider looks at you almost with a smile.  Though you question the look since it seems to be geting ready to attack.
+~
+8318 1064 -120 E
+20 4 -3 1d1+249 4d4+8
+600 6000
+8 8 0
+BareHandAttack: 4
+E
+#811
+rat giant~
+a giant rat~
+A giant rat is running around here looking for something to eat.
+~
+Just your typical over sized rat looking for food.
+~
+140 263168 0 E
+10 14 3 1d1+79 3d3+2
+100 2000
+8 8 0
+BareHandAttack: 4
+E
+#812
+zombie roman nobleman~
+a zombie of a nobleman~
+A zombie is here falling to pieces, he seems to be what was once a Roman.
+~
+   This poor looking devil.  All decrepid and falling apart.  Was once a Roman
+noble, but after being burried in this magic place has changed.  He has been
+raised from the dead and come back as a zombie.    
+~
+168040 5120 -300 E
+35 0 4 1d1+299 5d3+10
+1030 5000
+8 8 1
+E
+#899
+minister~
+the minister man~
+A man looking very formal, in a nice tux stands here, ready to do a wedding.
+~
+   He looks formal, but if you look closer you notice that he has a hawian
+tee shirt on for the party later, underneath his tux
+~
+256010 32956 0 E
+100 -30 10 30d100+30000 30d127+50
+0 0
+8 8 1
+E
+$

@@ -1,56 +1,81 @@
-# Port 4k MUD
+# Port4kMUD Project
 
-Some time in 1997 a MUD (Multi User Dungeon) was launched under the name “AAA Stockmud”. It was launched by then 15 year old Kevin Lohman using the source code from [Circlemud](http://circlemud.org) beta patch 11 by Jeremy Ellison. It grew a lot from there, eventually being put on a *VERY* extended hiatus when Kevin joined the Navy back in 2002. The source was made public at that time. And it was lost for a while. In 2016 Jaxom found it again, got it working, and then promptly got busy with work, life and a couple of wonderful children. If it's 2025 now, then Port4k may get another renaissance thanks to AI, and Badpirate Garage (the new moniker  and Indy software development that Jaxom is now using). 
+[![Port4kMUD CI](https://github.com/badpirate/port4kMUD/actions/workflows/ci.yml/badge.svg)](https://github.com/badpirate/port4kMUD/actions/workflows/ci.yml)
 
-**Port 4000 MUD is** A highly modified derivative of Circlemud which is in itself a derivative of Dikumud. (See the [LICENSE.txt](LICENSE.txt) file).
+> Experience a classic MUD through a modern web interface.
 
-## Build Instructions
+Port4kMUD is a project that modernizes the classic text-based multi-user dungeon (MUD) experience by combining a traditional CircleMUD server with a modern web interface. It provides retro gaming without requiring telnet clients, allowing players to enjoy the MUD from the comfort of their browser.
 
-1.  **Configure:** Run the configuration script from the root directory:
-    ```bash
-    ./configure
-    ```
-    This script will attempt to guess system settings, create the necessary Makefiles, and automatically apply flags needed for compatibility with modern compilers (like `-std=gnu89`).
+## Project Structure
 
-2.  **Compile:** Change into the `src` directory and run make:
-    ```bash
-    cd src
-    make
-    ```
-    This will compile the main MUD executable (`circle`) and place it in the `bin/` directory.
+This project consists of two main components:
 
-3.  **(Optional) Build Utilities:** If you need the utility programs, run `make utils` in the `src` directory:
-    ```bash
-    make utils
-    ```
-    This builds utilities like `autowiz`, `delobjs`, `listrent`, etc., and places them in the `bin/` directory.
+### 1. `mud/` - The MUD Server
 
-4.  **Troubleshooting:** This is older C code. You may still encounter compilation issues on modern systems, especially related to missing includes. 
-    *   **Missing Includes:** If `make` fails with errors about undeclared functions like `strlen` or `strcpy` (often in `color.c`), you'll need to add the missing header file. For example, edit `src/color.c` and add `#include <string.h>` near the top.
-    *   Address any other errors as they appear. The `src/Makefile.in` and `configure` script might need further adjustments depending on your compiler and system libraries.
+The MUD server is based on CircleMUD 3.0 bpl 11, extensively modified over the years since its original creation in 1997 as "AAA Stockmud". It provides the core game mechanics, world, and gameplay experience that players interact with.
 
-## Running the MUD
+- Written in C
+- Runs on port 4000 by default
+- Includes an extensive feature set beyond the base CircleMUD
 
-1.  **Build:** Ensure you have successfully built the MUD (see Build Instructions above).
+See the [MUD README](mud/README.md) for detailed information about the MUD server, its features, and how to build and run it.
 
-2.  **Direct Execution:** You can try running the MUD directly from the root directory:
-    ```bash
-    bin/circle
-    ```
-    By default, it will attempt to run on port 4000. You can specify a different port: `bin/circle <port_number>`. See `doc/running.doc` for other command-line flags (like `-q` for quiet mode used in the autorun script).
+### 2. `server/` - The Web Interface
 
-3.  **Using Autorun Script:** For continuous operation (automatic reboot on crash), use the provided autorun script. It's recommended to run it in the background using `nohup`:
-    ```bash
-    nohup ./autorun &
-    ```
-    This script handles logging and restarting the MUD process. Check the `autorun` script itself and the `syslog` file for details.
+The web interface provides a modern browser-based client for accessing the MUD. It eliminates the need for telnet clients by creating a bridge between web technologies and the traditional MUD server.
 
-4.  **Connect:** Once the MUD is running, connect to it using a Telnet client:
-    ```bash
-    telnet localhost 4000
-    ```
-    (Replace `localhost` with the server's IP/hostname if running remotely, and `4000` if you used a different port).
+- Built with Next.js, React, and TypeScript
+- Uses Socket.IO for real-time communication
+- Provides terminal emulation through xterm.js
+- Includes user authentication and account management
 
-## Documentation
+See the [Server README](server/README.md) for detailed information about the web interface, its features, and how to set it up.
 
-Most of the documentation can be found in the `doc/` directory. Please note that some of it might be outdated relative to the current state of the code.
+## Quick Start
+
+To get the full Port4kMUD experience running locally:
+
+1. **Start the MUD server:**
+   ```bash
+   cd mud
+   ./configure
+   cd src && make
+   cd ..
+   ./bin/circle
+   ```
+
+2. **Start the web interface:**
+   ```bash
+   cd server
+   yarn install
+   yarn dev
+   ```
+
+3. **Access the MUD:**
+   Open your browser and navigate to http://localhost:3000
+
+## Features
+
+- **Browser-based MUD Client**: Play directly in your web browser without telnet
+- **Classic MUD Experience**: Enjoy the rich text-based game world of Port4kMUD
+- **Responsive Design**: Access from desktop or mobile devices
+- **Single Host Setup**: Run both components on a single machine
+- **Persistent Connections**: Reliable connection management between web clients and MUD server
+
+## Development
+
+This project is organized to allow development of either component independently:
+
+- MUD Server: Standard C development workflow with make-based build system
+- Web Interface: Modern JavaScript development with Node.js and Yarn
+
+See the respective READMEs in each directory for detailed development instructions.
+
+## License
+
+- MUD Server: Licensed under CircleMUD license (see [LICENSE.txt](mud/LICENSE.txt))
+- Web Interface: MIT License (see [LICENSE](server/LICENSE))
+
+## Credits
+
+Port4kMUD was originally created by Kevin Lohman in 1997 and has been maintained and enhanced over the years. The web interface is a modern addition that brings this classic gaming experience to contemporary platforms.

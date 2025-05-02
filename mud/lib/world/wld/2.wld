@@ -1,0 +1,2116 @@
+#200
+Landing~
+   Your bubbles hits the ground and bounces a few times before emitting a
+little "pop" and dying.  You are now standing beneath the city at a three-way
+intersection.  To the west, you can see a river rushing along in its bed, and
+to the far east, you see large, purple-tinted mountains rearing up against the
+sky.  Right here and now, however, you are faced with the Plains of Azroth that
+stretch out in all directions.    
+~
+2 0 4
+D0
+The Azrothian Highway heads north to Azrothian Peak.
+~
+~
+0 0 202
+D3
+~
+~
+0 0 225
+S
+#201
+The Three-way Intersection~
+   You are now standing beneath the Isle at a three-way intersection.  To the
+west, you can see a river rushing along its bed, and to the east, you can see
+large, purple-tinted mountains rearing up against the sky.  Right here and now,
+however, you are faced with the Plains of Azroth that stretch out in all
+directions.  The roads, however, run only north, west, and east.
+~
+2 32768 1
+D0
+The Azrothian Highway heads north to the Azrothian Peak.
+~
+~
+0 0 202
+D1
+   The road called Balun's March winds off towards the Mountains of Moria.  It
+is made of pale mountain stone.    
+~
+~
+0 0 250
+D3
+~
+~
+0 0 225
+S
+#202
+The Azrothian Highway~
+   The road is unbearably old but has taken old age very gracefully.  The pale
+grey mountain stone is worn but not cracked.  Potholes have neatly been filled
+in with sand and gravel.  The road has been kept in good repair although grass
+has begun to grow beneath the stones.  The road falls straight back to the
+south or north and eastward.    
+~
+2 32768 2
+D1
+   The road makes a slow turn the east as it heads north.    
+~
+~
+0 0 203
+D2
+Three roads meet to the south, the Azrothian Highway, the King's Road, and a
+dirt road.    
+~
+~
+0 0 201
+S
+#203
+The Azrothian Highway~
+   The Azrothian highway is neatly formed, though old.  The cobblestones fit so
+tightly together that grass has only begun to sprout between them in the last
+century or so.  The plain stretches out in all directions.  An endless ocean of
+waving grass with few trees to break the monotony.  The road runs north and
+curves slightly westward as it heads south.    
+~
+2 32768 2
+D0
+The Azrothian Highway trudges northward to Azrothian Peak.
+~
+~
+0 0 204
+D3
+   The road curves gently westward as it continues south.    
+~
+~
+0 0 202
+S
+#204
+The Azrothian Highway~
+   Although the vast majority of the grasses are green (or dry and yellow), up
+close, many of them are differenct colors.  There's a patch of red grasses
+growing right next to the road.  It looks like the kind you see in fancy
+gardens.  The red grass is about waist height with tufted tops where the seeds
+are formed.  The road runs north and south.
+~
+2 32768 2
+D0
+The Azrothian Highway bounds off to the north and Azrothian Peak.
+~
+~
+0 0 205
+D2
+The road heads south on the plains.
+~
+~
+0 0 203
+S
+#205
+The Azrothian Highway~
+   A mixture of tiny white flowers--Terin Stars you think, named after that
+famous bard--and nasty-looking &gspikey things&n that are the color of rust
+mingle with the basic green of the Plains of Azroth.  A little herd of grazing
+herbivores take alarm (for reasons only their tiny brains know) and bound away
+to the east.  The road itself runs north and south.
+~
+2 32768 4
+D0
+A tree has been planted by the road ahead for travelers to take shelter under.
+  
+~
+~
+0 0 206
+D2
+The road dwindles off into the horizon.
+~
+~
+0 0 204
+E
+spikey things~
+These strange little plants are called &rBloody Feet&n because of their bright
+red roots.  Despite the cruel sounding name and the less-than-pleasant
+appearance, this herb is used to bring down fever.    
+~
+S
+#206
+The Azrothian Highway~
+   A herd of deer with thin white stripes on their legs bound across the road a
+few miles ahead of you.  Most likely heading for a watering hole of some sort.
+Unless...  No, the legends say that the great cats who used to hunt in these
+plains were killed long ago.  The deer wouldn't be running from them now...  
+The road runs north and south.
+~
+2 32768 2
+D0
+The Peak of Azroth takes up the entire sky to the north.
+~
+~
+0 0 207
+D2
+The highway disappears into a horizon of grass.
+~
+~
+0 0 205
+S
+#207
+The Azrothian Highway~
+   The Azrothian Peak is only a few miles away from this stretch of road.  It
+is the largest rock formation on the whole plain!  The stone it is made up of
+pink, red, and black in coloring, yet there is no stone of that color anywhere
+else in the plains.  The mountains far to the east are not made of such stone
+either.  The road of pale mountain stone runs north and south.    
+~
+2 32768 2
+D0
+The road heads right towards the peak before turning and curving around its
+base to the east.    
+~
+~
+0 0 208
+D2
+The highway flows off to the south, a river of stone...
+~
+~
+0 0 206
+S
+#208
+The Azrothian Highway~
+   The Azrothian Highway nudges right up against the base of the Azrothian Peak
+before turning east and curving around it.  The peak rears upwards like the
+defiant finger the class wimp raises to the class bully.  The peak casts deep
+shadows on the surrounding land and the road running south and east.
+~
+2 32768 2
+D1
+The road curves away to the east, following the base of the peak.
+~
+~
+0 0 209
+D2
+The road slips off away from the peak and its memories.
+~
+~
+0 0 207
+S
+#209
+The Azrothian Highway~
+   The road here has pulled away from the base of the peak, falling back into
+lush plains.  Purple grasses sprout along both sides of the road running north
+and south for some ways before dwindling back to green.  Perhaps there's
+something in the soil here that favors their growth.  The road runs north and
+west.    
+~
+2 32768 5
+D0
+The road does not change its course, but the peak sends out a shoulder to bump
+against it.    
+~
+~
+0 0 210
+D3
+The road begins curving back to the peak as it heads west.
+~
+~
+0 0 208
+S
+#210
+The Azrothian Highway~
+   The road clings tightly to the sheer side of the Azrothian Peak.  As tight
+as Uria the Fair once clung to Azroth the Mage as they lay trapped in the
+dungeons of their enemy.  Waited to die.  Yet they escaped to here, the Plains
+of Azroth, which surely went by another name at the time...  The road runs east
+and south.    
+~
+2 32768 1
+D1
+The road continues to curve around the peak.
+~
+~
+0 0 211
+D2
+The road falls away from the peak as it heads south.
+~
+~
+0 0 209
+S
+#211
+The Azrothian Highway~
+   The highway tightly hugs the curve of the peak.  Shouldn't there be some
+avalanche warnings posted around here?  The road being so close to the peak and
+all...  But there are no signs and there are no signs that an avalanche has
+occured anywhere around the peak.  In fact, the stone looks as clean cut as it
+might have all those centuries ago when Azroth and his enemy had their final
+showdown...  The road runs north and west.
+~
+2 32768 5
+D0
+The road remains close to peak and...  Hello!  What is this?  One of the rare
+trees that grows on the plain...    
+~
+~
+0 0 212
+D3
+The road remains close to the peak as it heads west.
+~
+~
+0 0 210
+S
+#212
+The Azrothian Highway~
+   The road has been shoved up a little around here.  The roots of the great
+oak tree to the east humped up beneath it and unsettled rather large sections
+of road.  It is only further proof that nature will always prevail over the
+work of mortlas.  That is, if mortals built this road in the first place...  
+The road runs east and south around the peak.    
+~
+2 32768 1
+D0
+The road follows the base of the peak as it heads north.
+~
+~
+0 0 214
+D1
+You can rest beneath the branches of a nicely leafed tree if you head east.
+~
+~
+0 0 213
+D2
+The road contines to follow the base of the peak as it heads south.
+~
+~
+0 0 211
+S
+#213
+Beneath a Leafy Tree by the Highway~
+   The tree's trunk has been twisted about by the great winds that sweep across
+the plains every night as the sun goes down.  Branches spring out from the
+trunk and curve around, up, and out.  Leaves, deep green with age or the
+brilliant emerald color of new life, whisper softly to each other.  The peace
+that can be felt here by any receptive spirit is magnificant.  The tree's trunk
+has grown a series of small ridges that continue up in its green depths.    
+~
+2 2129944 0
+D3
+The road and your journey await you back west.
+~
+~
+0 0 212
+D4
+   The strange ladder of living tree heads up the tree.  Its goal is obscured
+by the many leaves.    
+~
+~
+0 0 299
+S
+#214
+The Azrothian Highway~
+   The road to the south is pale with stones from the mountains.  The road to
+the north is dark with stones from the forest quarries.  Here.  Here is where
+the two types of stones meet and blend together to form the road.  The stones
+were cleverly placed to form a &gdesign&n on the road.  Perhaps a symbol of the
+peace and harmony between the elves of the forest and the dwarves of the
+mountains.  The road runs north and south.    
+~
+2 32768 1
+D0
+A beautiful arch was carved from the red rock ahead and the road slips right
+underneath it!    
+~
+~
+0 0 215
+D2
+A tree to the south provides shade to weary travelers.
+~
+~
+0 0 212
+E
+design~
+   The design is mainly swirls of the dark and pale stones twining around each
+other.  It is not exactly something you'd expect out of a road: beauty.    
+~
+S
+#215
+Below the Arch on the Azrothian Highway~
+   The &garch&n is directly above you.  Worn out of the stone of the cliff by
+the wind...  Or maybe not.  The legend did say-- But surely this has been here
+for as long as the peak has been here for it looks no more worn down by time
+than the peak.  Regardless of its history, it would now make the perfect place
+for an ambush which is not a very soothing thought.  The road runs north and
+south, but an agile person could probably scramble up the arch...    
+~
+2 4227080 1
+D0
+The road slips out into open air and shifts away from the peak as it heads
+north.    
+~
+~
+0 0 217
+D2
+To the south, the dark stones of the forest meet up with the light stones of
+the mountain and form a lovely design on the road.    
+~
+~
+0 0 214
+D4
+It would be quite a scramble to get up there...  If someone is setting up an
+ambush...  That would be the perfect place to hide.  They'd get the advantage
+of higher ground too...    
+~
+~
+0 0 216
+E
+arch~
+   It is made of the same red stone as the peak...  Maybe a little darker.  It
+is large compared to you, but still is only a few miles high and a couple
+hundered feet wide.  You could probably climb to the top, but who knows what
+could be up there...    
+~
+S
+#216
+The Arch above the Azrothian Highway~
+   From this perch atop the arch, a person can see for miles around.  The
+Azrothian Peak surges up to the east, but everywhere else is the plain.  
+Somewhere far to the north and again to the west lie two cities.  The road most
+likely will take one to both.  The ground here is covered with pebbles and
+patches of &gred sand&n.    
+~
+2 32768 5
+D5
+Down is the only place you can go, back to the road...
+~
+~
+0 0 215
+E
+sand red~
+   The &rbright red sand&n is as fine as you have ever seen.  It sifts through
+your fingers and leaves a fine dusting of red on your hands.  Funny, you'd
+think that the winds that blow across the plains at night would sweep the sand
+off this arch...    
+~
+S
+#217
+The Azrothian Highway~
+   The road is made up of dark stones that most likely came from the quarries
+in the forests that lie far north and west from here.  The stone has been worn
+smooth with the passing of thousands of footsteps from dusty travelers and rich
+merchants.  Not that the rich merchants would be caught dead actually walking
+from one place to another.  The road runs south and west.
+~
+2 32768 1
+D2
+A lovely red arch has been carved out of the peak.  The road passes right
+beneath it!    
+~
+~
+0 0 215
+D3
+The road closesly hugs the peak's base as it heads west.
+~
+~
+0 0 218
+S
+#218
+The Azrothian Highway~
+   The peak's base is made of a lighter shade of pink than the actual peak.  
+If a person stepped off the highway for a bit of a climb on those rocks, one
+would find pockets of very fine, pink sand.  No plants grow on the peak and
+there are no animals to be seen, not even lizards!  The plain itself, however,
+teams with life as herds of deer and horses graze on lush grasses.  The road
+runs north and east.    
+~
+2 32768 1
+D0
+The road follows the base of the peak for several miles before turning into a
+fairly straight line heading north.    
+~
+~
+0 0 219
+D1
+The road is tucked up right against the base of the peak.
+~
+~
+0 0 217
+S
+#219
+The Azrothian Highway~
+   A tiny &gplant&n of olive complexion and tiny white blossoms has forced its
+roots down into the base of the peak.  It is the only plant you have ever seen
+that managed to do so.  What a hardy creature it must be...  Hmmm...  Uria had
+olive-colored skin and white hair.  The road runs west and south.
+~
+2 32768 5
+D2
+The road curves around the eastern side of the peak.
+~
+~
+0 0 218
+D3
+To the west, the road finally turns and breaks away from the peak.
+~
+~
+0 0 220
+E
+plant~
+The plant is called the Uria's Pride.  It has been blooming here ever since the
+peak appeared on the plain.  People say that it has never grown an inch and the
+same amount of blossoms appear each year...    
+~
+S
+#220
+The Azrothian Highway~
+   The peak proudly surges upwards from the plain's floor.  It may not be as
+high as the mountains to the east, but it is big and looks even bigger because
+everything around it is so flat.  Nothing grows on the peak and no animals call
+it home.  Even the big eagles that sour overhead will not land on it to rest.
+What about it repels the animals and plants to?  The road runs north and east.
+~
+2 32768 1
+D0
+The road disappears into the northern horizon.
+~
+~
+0 0 221
+D1
+The road curves around the eastern side of the peak.
+~
+~
+0 0 219
+S
+#221
+The Azrothian Highway~
+   The grey stone of the road looks very hard and unpleasant to stand on.  
+However, if you tried to walk on the grass, you would have to fight that
+instead.  And then there's a spikey little plant that doesn't look very
+pleasant to brush against.  No, the road is probably the best path and at least
+you won't get lost on it.  The road runs north and south.
+~
+2 32768 1
+D0
+The road continues to the north, perhaps it will eventually turn to the forest
+that lies west of you.    
+~
+~
+0 0 222
+D2
+The road to the south leads to Azrothian Peak.
+~
+~
+0 0 220
+S
+#222
+The Azrothian Highway~
+   It looks as if some lazy farmer has torn up a part of the road's
+cobblestones to build a fence or perhaps his house.  Large sections of the road
+have been converted to hard packed dirt and grass.  It's a pity because it was
+such a nicely built road too.  Doesn't the farmer understand how important fast
+travel is?  The mangled road runs north and south.
+~
+2 32768 5
+D0
+Far off in the distance, you can see a city wall...
+~
+~
+0 0 223
+D2
+The road heads directly for a peak that errupts upwards in the middle of the
+plain.    
+~
+~
+0 0 221
+S
+#223
+The Azrothian Highway~
+   You can clearly see some city walls several miles north and west of you.  
+Little trails of smoke drift over the section of sky above the city.  The road
+of dark grey stone heads north and south.  North seems more civilied if only
+because there is a city in view.  The road runs south and north.
+~
+2 32768 5
+D0
+The road heads northward a ways more before swinging to the east.
+~
+~
+0 0 224
+D2
+Far off in the distance, you can see the very top of Azrothian Peak poking up
+amongst the green, green grass.    
+~
+~
+0 0 222
+S
+#224
+The Azrothian Highway~
+   You are close only a few miles from the city now.  It looks like a rather
+quaint place, with its little walls and towers defiantely trying to protect its
+citizens from both man, beast, and element.  The fields around the city are
+full of domesticated animals and little people going about the business of
+living.  The road runs north and west.  Off to the side of the road a tall,
+wooden &rsign&n indicates what lies to the north and west.    
+~
+2 32768 5
+D2
+The road disappears into the southern horizon.
+~
+~
+0 0 223
+D3
+~
+~
+0 0 12068
+E
+road sign ~
+                         &mAzroth&n
+                           **
+                          ****
+                         ******
+                        ********
+                          ****
+                          ****
+                          ****
+                          ****
+            *             ****
+           **             ****
+          ********************
+&mRome&n     *********************
+          ********************
+           **
+            *
+~
+S
+#225
+Ember Road~
+   The road is made of a combination of the dark grey stone from the forest and
+the pale stone of the mountains.  The wheel ruts cut into the road by passing
+wagons are not as deep as they are on the Azorthian Highway.  Either there
+isn't much of interest over here or the road is newer.  One would have to
+explore along the road to find out.  The Azrothian Plains moves like a great
+green ocean all around you.  The road runs east and west.    
+~
+2 32768 1
+D1
+   The three-way intersection of the Azrothian Highway, Ember Road, and Balun's
+March lies to the east.    
+~
+~
+0 0 201
+D3
+Ember road continues winding its way west.
+~
+~
+0 0 226
+S
+#226
+Ember Road~
+   A patch of sunflowers thrust upwards from the long, green grass of the
+plain.  They dot the surface of the green ocean with their cheerful &yyellow&n
+faces.  Birds take advantage of the plentiful food the flowers provide.  They
+squabble with each other over who gets which sunflower head.  What a din!  The
+road runs east and west.    
+~
+2 32768 1
+D1
+Several miles away, you can see that Ember Road meets up with two other roads.
+~
+~
+0 0 225
+D3
+The road continues in a westerly direction.
+~
+~
+0 0 227
+S
+#227
+Ember Road~
+   The dull thunder of the Vertigo River is beginning to encroach on the
+everyday sounds of the plains.  Far to the north and west, the plains began to
+give way to hills and evergreen trees.  The plains roll onwards in all
+directions.  The road runs west and east.    
+~
+2 32768 1
+D1
+The road slithers to the east and deeper into the Azrothian Plains.
+~
+~
+0 0 226
+D3
+You cannot see the river yet, but you can certainly hear it!
+~
+~
+0 0 228
+S
+#228
+Ember Road~
+   The sounds of the river thundering against its bed covers all of the normal
+sounds of the life in the plains.  You can just barely see the churning waters
+when you look west.  The area around this patch of road is thickly populated
+with &ysunflowers&n and a smaller flower of woody stem and tiny &yyellow&n
+blossom.  The road runs north and east.    
+~
+2 32768 1
+D0
+The road trundles on north where a tiny sliver of water crosses the road.
+~
+~
+0 0 229
+D1
+The speckled road disappears into the eastern horizon.
+~
+~
+0 0 227
+E
+woody stem yellow blossom~
+   The little yellow flower is called Mugwit.  The blossoms boiled for ten
+hours with the sap from the Yadee Fir will sooth an ill stomach.  The leaves
+induce vomiting when swallowed.    
+~
+S
+#229
+Ember Road~
+   The pounding of the river oppresses all sound and demolishes all hope of
+intelligable conversation.  The grass to the west is too high for one to see
+the river from here, but it is very close by from the sound of things.  A
+little dribble of water sneaks out from the grasses by the side of the road and
+slithers its silver presence across the road.  A bridge crossing the river is
+northwest of here or a person could head south down the road.  Another small
+trail heads northward down to the River Vertigo.    
+~
+2 32800 1
+D0
+   A small path heads down towards the waters of the River Vertigo.    
+~
+~
+0 0 923
+D2
+The noise of the river would probably be less if you headed south.
+~
+~
+0 0 228
+D7
+The Phoenix Bridge arches over Vertigo River.
+~
+~
+0 0 230
+S
+#230
+Phoenix Bridge~
+   The stones of the bridge vibrate ever so slightly with the force of the
+water pushing against its supports.  The water flings itself past the bridge
+and further down the river as fast as it can.  A few leaves and twigs swirl
+along in the current.  Leaves also have tucked themselves in the crannies of
+the bridge, most likely blown here by the winds that come every evening.    
+The road runs southeast and west.
+~
+2 32768 1
+D3
+Far in the distance you can see a thin little line descending from the clouds
+to the road.    
+~
+~
+0 0 234
+D8
+The thick grass of the plain blocks your view to the southeast.
+~
+~
+0 0 229
+S
+#231
+Ember Road~
+   The grasses here are coarse and are only a foot tall at most.  The tufted
+heads of the yellowgreen grasses are orange and ripe with seeds.  The mice have
+noticed this and their rustling could be heard if only the river to the east
+wasn't making so much noise.  The road that runs west is made entirely of the
+dark stone of the forest quarries.  There is a bridge to the east that crosses
+the river Vertigo.    
+~
+2 0 1
+D1
+The Phoenix Bridge arches above River Vertigo.
+~
+~
+0 0 230
+D3
+The dark road worms its way westward towards the forest.
+~
+~
+0 0 232
+S
+#232
+Ember Road~
+   The strange dark stones of the forest quarries glitter ever so slightly with
+flecks of quartz.  A few of the stones have wandered away in the callused hands
+of farmers and other peasants.  A strange line runs down from the clouds to the
+road to the west.  Eastward is more of the Ember Road with the river Vertigo to
+boot.    
+~
+2 0 1
+D1
+The Phoenix Bridge is several miles east of here.
+~
+~
+0 0 231
+D3
+There is a line hanging down from the clouds that touches the road to the west.
+~
+~
+0 0 233
+S
+#233
+Ember Road~
+   A rather large chain hangs down from the clouds and idly taps the road as
+the wind shifts it about a little.  It looks very heavy and the clouds
+certainly shouldn't be able to support such a thing, but there it is.  The
+forest has creeped forward across the Azrothian Plains and lies only a few
+miles north of the road.  The road runs west and east.    
+~
+2 0 1
+D1
+The distant thunder of a river comes from the east.
+~
+~
+0 0 232
+D3
+The forest brushes right against the road to the west.
+~
+~
+0 0 234
+S
+#234
+Ember Road~
+   Many stones have been tugged from the road and hauled away.  This sort of
+vandalism shouldn't be allowed, but under the rule of a weak king, such things
+happen.  Fast travel would now be impossible with the road in the condition it
+is in.  It's a pity, for the Ember Road was well-constructed.  The road runs
+north and east.    
+~
+2 32768 2
+D0
+The road heads right into the forest!
+~
+~
+0 0 235
+D1
+A great big chain touches the road to the east.
+~
+~
+0 0 230
+S
+#235
+Ember Road~
+   Thick clusters of &gSegonya&n grow where the old cobblestones used to be.  
+Not only have the farmers stolen the rocks, but they have failed to maintain
+the roads.  Of course, that's not their job, so it is understandable.  Trees
+surround the road, kicking up the remaining stones with their thick, knotty
+roots.  The road runs south and west.    
+~
+2 32768 2
+D2
+The moves south for a while before curving back to the east.
+~
+~
+0 0 234
+D3
+You can see that road turns west a bit before curving back south again.  Why
+can't they just go straight west?  Now you have to walk farther.  It's so
+illogical.    
+~
+~
+0 0 236
+E
+Segonya blossoms~
+   The blossoms are tiny, about the size of a sunflower seed and the petals are
+shaped like little hearts.  They cluster together in bundles of twenty to
+thirty little bursts of white.  Segonya blossoms are given to mothers and
+sisters during the Festival of the Sun.    
+~
+S
+#236
+Ember Road~
+   The twisty road can't seem to straighten itself out.  Bushes and long grass
+combat for space all around the road.  The two dark colors of the road's stone
+and the bushes' leaves blend together.  A low hill rising up in the north bears
+a small dirt trail.  The road runs east and south.    
+~
+2 32768 2
+D0
+   The little trail putters up and over the hill to the north.    
+~
+~
+0 0 237
+D1
+The road curves around to the east and south.
+~
+~
+0 0 235
+D2
+The ravished road heads off to the south, overrun by bush and plagued by lazy
+thieving farmers.
+~
+~
+0 0 242
+S
+#237
+Road to the Farm~
+   What looks to be a game trail if one approaches from the south has turned
+into a little dirt road leading to what, at some point in time, was probably a
+farm house.  It's mostly scrap wood and rusty nails now, but the sounds coming
+from it are of happy mice.  The little road heads off north to what looks to be
+an orchard of some sort.    
+~
+2 32768 2
+D0
+The trees look to be full of some sort of ripe fruit.
+~
+~
+0 0 238
+D2
+You'll have to shove your way past the bushes to reach what looks to be Ember
+Road.    
+~
+~
+0 0 236
+D6
+   The door of the farm house hangs by a thread from its hinges.  Most of the
+roof's thatching is gone as well.    
+~
+door~
+1 0 290
+S
+#238
+The &rApple&n Orchard~
+   To the south, you can see the pitiful remains of a building.  Perhaps it was
+some sort of farmer's house.  The base of it is made with the dark stones from
+the forest quarries, so it is probably a farmer's.  The apple trees around you
+are full of life and the buzz of industrious bees.  Ripe, red apples glow
+against a backdrop of green.  The smell of the over-ripe apples lying on the
+ground summon memories of hot, spiced cider and a roaring fire.    
+~
+2 32768 0
+D0
+The apple orchard continues to the north.
+~
+~
+0 0 239
+D2
+What passes for a mangled hut crouches by the road to the south.
+~
+~
+0 0 237
+D3
+The apple orchard continues to the east.
+~
+~
+0 0 241
+S
+#239
+The &gApple&n Orchard~
+   The trees are as wild as the rest of the forest.  The orchard has been
+abandoned for a long, long time.  The apples however, look good enough to eat.
+They are in all stages of ripness from flower to windfallen.  Mm, cider.  
+Birds hop from branch to branch pecking at the sweet fruit in their greedy
+manner.  Off to the east the hills start rolling into mountains.    
+~
+2 32768 2
+D2
+The orchard continues to the south.
+~
+~
+0 0 238
+D3
+The apple orchard continues to the west.
+~
+~
+0 0 240
+S
+#240
+The &rA&gp&rp&gl&re&n Orchard~
+   The apple trees over here bear strangely striped fruit.  Oh, but they
+undoubtably taste as delicious as all the other apples in the orchard.  The red
+and green stripes cheerfully glow against the leaves of the trees and the smell
+of the area is divine.    
+~
+2 32768 2
+D1
+The apple orchard continues to the east.
+~
+~
+0 0 239
+D2
+The apple orchard continues to the south.
+~
+~
+0 0 241
+S
+#241
+The &yApple&n Orchard~
+   The bright green and yellow-stripped apples bend the apple trees' branches
+closer to the ground.  They look like the tart, sweet apples that are used for
+just eating.  Not the kind mother makes those delicious apple pies with or that
+one pasty vendor in...  Oh, but you want one of those apples, even if it turns
+out to be a bit wormy.    
+~
+2 32768 2
+D0
+The apple orchard continues to the north.
+~
+~
+0 0 240
+D1
+The apple orchard continues to the east.
+~
+~
+0 0 238
+S
+#242
+Ember Road~
+   A good half of the stones that should have made up Ember road are missing.
+The large gaps have been filled with nature.  Bushes and grass exploding
+upwards from the dirt.  A wagon might have made it if the road was clear of the
+bushes and grasses, but with them, the wagons would be risking it.  
+Northwards, the twists and doubles back on itself; southwards, the road is even
+worse than here.    
+~
+2 32768 2
+D0
+The road to the north looks to be more passable then the one to the south.
+~
+~
+0 0 236
+D2
+The road to the south begins to give way to dirt.    
+~
+~
+0 0 243
+S
+#243
+Ember Road~
+   The road falls away from the hills rising in the north.  However, if one
+were to head west, the hills would draw nearer once more.  Strangely enough,
+the road acts like a boundary between the hills and the plains.  No gentle
+swells can be seen to the south of the road.  A little dirt path winds off to
+the south.  The road itself ends here.  What stones there might have been have
+been ripped up and stolen away by peasants.  If you're not going north, you're
+walking on dirt.    
+~
+2 32768 2
+D0
+If you can call the patches of cobblestones to the north a road...  Well, it
+will probably get better as you continue down the road.    
+~
+~
+0 0 242
+D2
+The little dirt footpath winds off to the south and into the deep grasses of
+the plain.    
+~
+~
+0 0 244
+D3
+   A dirt road runs westward towards the city of Daggerfall.    
+~
+~
+0 0 248
+S
+#244
+A Dirt Footpath~
+   Tucked beneath the meter high grasses of a rich green hue is a very bright
+orange variety of grass.  It attracts the humming birds which zip back and
+forth along the path chirping with their high little voices.  The path is worn
+and dusty, but small in width.  Two people small people could perhaps walk
+side-by-side down this path.    
+~
+2 33280 2
+D0
+The start of a paved road can be seen to the north.
+~
+~
+0 0 243
+D2
+The little footpath continues south before being lost amongst the grasses.
+~
+~
+0 0 245
+S
+#245
+A Dirt Footpath~
+   The dry yellow-brown soil of the little footpath looks a little golden when
+set against the rich greens of the plain's grass.  The grass is generally about
+a meter in height which doesn't seem quite right.  Then again, if the Azrothian
+Plains are as magic as people say, it would stand to reason that the animals
+cannot keep the grass down to reasonable levels.  The footpath runs north and
+east.  Hidden amongst the green grass to the west are a bright &gorange&n grass.
+~
+2 33280 2
+D0
+The footpath slips off into the grass.
+~
+~
+0 0 244
+D1
+The footpath turns east a ways before twisting back south once more.
+~
+~
+0 0 246
+S
+#246
+A Dirt Footpath~
+   The farther south the path goes, the more overgrown it becomes.  There's no
+way two people could walk side-by-side now for the grass is to thick on either
+side.  Despite the seeming disuse of the path by its unworn condition, the dirt
+has been rearranged by everything from bootprints to hoofprints.  The path runs
+south and west.    
+~
+2 33024 2
+D2
+The smell of water comes from the south.
+~
+~
+0 0 247
+D3
+The path becomes a tad wider as it heads west.
+~
+~
+0 0 245
+S
+#247
+The Well~
+   A perfect, circular section has been cut out of the grass.  It is about 10
+meters in circumference and at its center a little well can be found.  Ivy,
+though no ivy grows anywhere else in the plains, twines around the base of the
+well in a remarkably pituresque manner.  The smell of water filters into your
+nostriles and reminds you just how thristy you are...    
+~
+2 32784 2
+D0
+A tiny footpath trails off to the north.
+~
+~
+0 0 246
+S
+#248
+The Work Site~
+   Various road working tools, however primitive they may be, are scattered all
+about.  Apparently, no one is worried that someone will decide to walk off with
+one, two three or any dozen of them.  A few men are lazing about (and look like
+they have been doing so for days), chewing on grass, sleeping, or scratching
+themselves.  They must be the work crew.  The stretch of road they are
+supposedly repairing runs off to the west.  Ember Road lies to the east.    
+~
+2 32768 2
+D1
+The ravaged end of Ember Road lies to the east.
+~
+~
+0 0 243
+D3
+The work site runs west a few miles.
+~
+~
+0 0 249
+S
+#249
+The Work Site~
+   The grass has been half-heartedly hacked away from where the road should and
+a miraculous three cobblestones have already been laid out!  Of course, then
+one notices that the grass is starting to grow back in places and the
+miraculous three cobblestones are really only one cobblestone and two unfit
+stones that need to be removed from the road.  It would seem the road crews are
+not quite so diligent as they at first seem.    
+~
+2 32768 2
+D1
+More work site and lazy work crew lying about.
+~
+~
+0 0 248
+D3
+   The edge of the work site is close by to the west.    
+~
+~
+0 0 3076
+S
+#250
+Balun's March &CBefore the Crossroads&n~
+   The road was carefully crafted from pale mountain stone.  The stones
+themselves are arranged in careful patterns, perhaps meaningful patterns.  The
+patterns end a few steps to the west at the crossroads, but they stretch out
+for as far as one can see the road to the east.  Tall plains grasses grow to
+either side of the east and west running road.    
+~
+2 32768 1
+D1
+   The strange patterns in the road continue all the way to the foothills of
+Moria and possibly beyond.    
+~
+~
+0 0 251
+D3
+   The patterns in the road abruptly end at the crossroad.    
+~
+~
+0 0 201
+E
+pattern stones~
+   The red, pink, and black stones are even of different shades.  Surely there
+is a reason behind all this painstaking work.    
+~
+S
+#251
+Balun's March~
+   The mountains are tinted a bluish-purple color from the distance.  A glance
+to the the west would show the giant stone formation jutting up out of the
+middle of the Azrothian Plains called Azrothian Peak.  It is a dark silhouette
+against the sky at any time of day or night.  The patterns in the road undulate
+like waves which are repeated in the gently swaying grass of the plain.  The
+road continues east and west.    
+~
+2 32768 1
+D1
+   The road east heads towards the Mountains of Moria.    
+~
+~
+0 0 252
+D3
+   The road to the west heads deeper into the Azrothian Plains.  In the
+distance, Balun's March meets up with two other roads.    
+~
+~
+0 0 250
+S
+#252
+Balun's March~
+   The emerald green grass is a meter tall, but its shorter bethern, the bright
+&gorange grass&n is about half its size.  From a distance, one would never know
+the grass is there.  The humming birds, however, see it quite clearly.  They
+zip back and forth chirping cheerfully.  The road of pale mountain stone
+continues west and east.    
+~
+2 32768 1
+D0
+   The bright orange grass surely marks something...    
+~
+grass~
+1 0 282
+D1
+   The road flows eastward towards the foothills.    
+~
+~
+0 0 253
+D3
+   The fancily patterned road continues westward into the plain.    
+~
+~
+0 0 251
+E
+orange grass~
+   The bright orange grass is thickest in the north.  Maybe someone is using it
+as a marker for...  Something.    
+~
+S
+#253
+Balun's March~
+   The stones of the road form beautiful patterns although they are colorless.
+The plains grasses combat for space with the shorter, less silky, grass of the
+hills that rise to the east.  Trees are more common here than the plains to the
+west.  The road runs west and east.    
+~
+2 32768 1
+D1
+   The foothills of Moria are only a few miles away.    
+~
+~
+0 0 254
+D3
+   The road to the west creeps deeper into the plain.    
+~
+~
+0 0 252
+S
+#254
+Balun's March &CBefore the Hills&n~
+   The road is just starting to curve up under the beginnings of the hills.  
+The long plains grass is very obviously loosing the battle for space with the
+hills grass.  Patches of long green grass with their tufted pink and pale
+yellow tops keep to the area by the trees where they are protected from harsh
+winds.  A person with keen eyesight would be able to pick out individuals trees
+in the closer mountains to the east.  The road continues east and west.    
+~
+2 32768 1
+D1
+   The road to the east winds around and over the foothills of Moria.    
+~
+~
+0 0 255
+D3
+   The Azrothian Plains and its oceans of waving grass lie to the west.    
+~
+~
+0 0 253
+S
+#255
+Balun's March &Cin the Hills&n~
+   The feathery bushes that call the hills their home grow in abundance all
+around the road.  Another common plant in the hills is the tiny &rred flower&n
+that is growing in a small patch right next to the side of the road.  The hills
+gently slope ever upward towards the mountain.  The road continues west and
+southeast.    
+~
+2 32768 4
+D3
+   The road descends from the hills and off into the Azrothian Plains.    
+~
+~
+0 0 254
+D8
+   The road continues to wind around and among the hills on its way to the
+Mountains of Moria.    
+~
+~
+0 0 256
+E
+red flower brinsar~
+   The plant is called brinsar.  Its thin green stems when made into a paste
+and mixed with the bark of a Hufar Fir are good for soothing burns.    
+~
+S
+#256
+Balun's March &Cthe Foothills of Moria&n~
+   The trees that grow on the hills are turned by the elements.  Branches spin
+out from the trunks like a top.  Twisted, gnarled, tortured, their lives are
+hardly easy, and the winds blow on.  The hills themselves are changing from
+gentle domes to jagged rocks surrounded by crumbling dirt.  The road continues
+northwest and east.    
+~
+2 32768 4
+D1
+   The hills block the view to the west, but over them, the tips of mountains
+can be seen.    
+~
+~
+0 0 257
+D7
+   The road curves around the gentle hills of the west.    
+~
+~
+0 0 255
+S
+#257
+Balun's March &Cthe Foothills of Moria&n~
+   The rocks of the hills out number the dirt.  Trees cling, as much to soil as
+the bare rock.  Purple and orange lichens slowly break down the boulders that
+tower over the road.  The short hill grass grows where ever the least amount of
+soil exists.  To some, these hills are mountains already.  The road heads west
+and north.  A small trail heads down south.    
+~
+2 32768 4
+D0
+   The road rises up into the mountains as it heads north.    
+~
+~
+0 0 258
+D2
+   A little trail breaks off of Balun's March and heads south.    
+~
+~
+0 0 273
+D3
+   The road turns around a hill which blocks any further view to the west.    
+~
+~
+0 0 256
+S
+#258
+Balun's March &Cthe Mountains of Moria&n~
+   The road is steep and saps the air out of man and beast alike.  It is made
+of the same stone as the mountain, a pale grey.  Room for the road has been
+carved out of the mountainside itself, yet despite all the work it must have
+been, the road is about the same width as the road curving amongst the hills
+below.  The road heads south and west.    
+~
+2 32768 5
+D2
+   The road descends into the foothills.    
+~
+~
+0 0 257
+D3
+   The road ascends into the mountains.    
+~
+~
+0 0 259
+S
+#259
+Balun's March &Cthe Mountains of Moria&n~
+   The road is sandwiched between two juts of grey rock speckled with
+&wquartz&n.  The rocks are high enough that it is impossible to see down the
+mountain from the road.  A &Wpile of rocks&n stand by the side of the road.  A
+gnarled tree desperately grasps the rock above traveler's heads.  The road runs
+east and northeast.
+~
+2 32768 5
+D1
+   The road darts around a rock outcropping and out of sight.    
+~
+~
+0 0 258
+D6
+   The road pulls upwards and behind the mountain.    
+~
+~
+0 0 260
+E
+quartz~
+   The speckles of quartz shimmer whitely in the shade of the mountain.    
+~
+E
+pile rocks~
+   The pile of rocks could be covering something important, but they look to
+heavy to move.    
+~
+S
+#260
+Balun's March &Cthe Mountains of Moria&n~
+   The air of a mountain is clear and fresh.  It encourages deep breathes, and
+not just because the air is thinner the higher you go.  From here, a traveler
+can see for miles.  The Azrothian Plains tumble and surge around the base of
+the Azrothian Peak.  Deer bound across the hills at the mountain range's base.
+From here, the world is beautiful, even the cities.  The road runs east and
+southwest.    
+~
+2 32768 5
+D1
+   The road slopes gently upwards into the mountains.    
+~
+~
+0 0 261
+D9
+   The road dips down between two slabs of the mountain.    
+~
+~
+0 0 259
+S
+#261
+Balun's March &CBefore the Tunnel&n~
+   The tunnel's dark mouth is easily twice the size of the average giant.  It
+looks as if it has been cut into the mountain itself and not naturally formed.
+The road unhesitantly heads north into that darkness.  A &gtree&n clings to the
+rock above the tunnel mouth.  The road heads north into the tunnel and west
+around the curve of the mountain.    
+~
+2 32772 5
+D0
+   The tunnel will swallow a traveler whole.  The question is, will it spit the
+traveler back out again..    
+~
+~
+0 0 262
+D3
+   The road falls back down the mountain to the west.    
+~
+~
+0 0 260
+E
+tree~
+   The tree is marked with deep claw marks.    
+~
+S
+#262
+Balun's March &CInside the Mountain&n~
+   The tunnel walls are smooth as glass, such is the workmanship of whoever
+built this road.  The steady drip drip of water falling from a great distance
+into a pool can be heard.  Empty scones are bolted to the wall on either side
+of the road.  Perhaps travelers were once more welcome in these tunnels.  The
+tunnel continues east.  Daylight can be seen to the south.    
+~
+2 33025 4
+D1
+   Light glances off the ground strangely in the darkness of the tunnel to the
+east.    
+~
+~
+0 0 263
+D2
+   The exit to the tunnel lies to the south.    
+~
+~
+0 0 261
+S
+#263
+Balun's March &CInside the Mountain&n~
+   Water drips from the ceiling of the tunnel and into the shimmering pool of
+dark water that covers the entire road for several yards.  The light scones
+bolted to the wall are rusty, crumbling, and very empty.  A traveler must bring
+his or her own light into the heart of the mountain.  The tunnel heads north
+and west.    
+~
+2 33033 2
+D0
+   The tunnel slithers deeper in the mountain to the north.    
+~
+~
+0 0 264
+D3
+   A small amount of daylight can be seen to the west.    
+~
+~
+0 0 262
+S
+#264
+Balun's March &CInside the Mountain&n~
+   The air in the tunnel is damp and musty.  It is enough to tickle the nose of
+any sensitive individual.  A cool current of air brushes past a traveler's
+cheek and slides south and away.  The walls of the tunnel are damp with
+moisture.  The moisture collects to form a small &gsliver&n of &gwater&n that crosses
+the road and disappears into a &gcrack&n on the other side.  Such is the making of
+waterfalls.  The tunnel continues west or steeply down into the mountain.    
+~
+2 33033 5
+D2
+   The air currents flow steadily south.    
+~
+~
+0 0 263
+D5
+   The tunnel takes a steep dive into the mountain.    
+~
+~
+0 0 265
+E
+crack sliver water~
+   The small trickle of water is too small to drink from, but you can bet that
+it with join with another trickle and another until a river is born.    
+~
+S
+#265
+Balun's March &CInside the Mountain&n~
+   Three tunnels intersect here.  The tunnel to the east and the tunnel heading
+sharply upwards both have abandoned light scones bolted to their sides.  The
+third tunnel, however, the tunnel heading down, has no wall scones.  The sides
+of the tunnel heading down look rough.  The rustle of bats can be heard though
+there is no further sign of them.    
+~
+2 33033 5
+D0
+   The light reveals a deep crack that even a giant could squeeze through.    
+~
+crack~
+1 -1 266
+D1
+   The tunnel to the east seems a little lighter than the other two tunnels.  
+
+~
+~
+0 0 267
+D4
+   The tunnel heading up is lined with wall scones.    
+~
+~
+0 0 264
+D5
+~
+~
+0 0 269
+S
+#266
+&MThe Bat Cave&n~
+   Besides the crack to the south, the cave is sports another rather large
+crack in its ceiling.  Here is where the bats get in and out each night.  The
+walls are made of rough, uncarven stone.  The floor is covered with bat guano
+and the bugs that live where bats live.  Tiny baby bat skeletons lay on the
+ground, a sad testiment to the nature of all things.    
+~
+2 72 5
+D2
+   A deep crack in the wall of the cave provides an exit.    
+~
+crack~
+1 -1 265
+S
+#267
+Balun's March &CInside the Mountain&n~
+   The light shining through the eastern end of the tunnel barely reaches this
+section of Balun's March.  The smell of fires and people also drift by on
+currents of air.  Civilization!  Hopefully sans fleas.  The wall scones bolted
+to the tunnel walls are polished and well-maintained though empty.    
+~
+2 33033 2
+D1
+   The tunnel gets lighter and lighter as it heads east.    
+~
+~
+0 0 268
+D3
+   The tunnel to the west sinks further into the darkness and the mountain.  
+
+~
+~
+0 0 265
+S
+#268
+Balun's March &CInside the Mountain&n~
+   Here at the tunnel mouth, one can see the entire small valley of the
+dwarves.  Most of their dwellings and activities are carried out underground,
+but a few can be seen moving around on the surface.  The tunnel falls back into
+the mountain and the mountain's darkness.  A path down leads towards the
+dwarven village.    
+~
+2 32768 5
+D3
+   The tunnel moves back into the mountain.    
+~
+~
+0 0 267
+D5
+   The path trundles downwards into the dwarven settlement.    
+~
+~
+0 0 6500
+S
+#269
+Tunnel in the Mountain~
+   Small, blind fish live out their lives in complete darkness.  The little
+pond where they exist is only six feet wide and three inches deep.  Some spend
+their time nibbling on the bottom of the pool and others scour the surface for
+hapless, equally blind bugs.  Not one fish is larger than an inch.  The tunnel
+heads north and up.    
+~
+2 329 5
+D0
+   The tunnel north plunges deeper into the mountain.    
+~
+~
+0 0 270
+D4
+   It may be your cultural background, but up looks much better than down here.
+  
+~
+~
+0 0 265
+S
+#270
+Inside the Mountain~
+   Water flows along the tunnel floor and down a hole to the south.  Anyone
+walking would get their boots all wet.  The tunnel is narrow and getting
+narrower as it goes northeast.  Another, slightly larger tunnel peels off to
+the west.  The sound of the flowing water is all that can be heard down here,
+deep in the mountain's belly.  Another tunnel has been chisled out of the rock
+to the north.    
+~
+2 329 6
+D0
+   A tunnel has been chisled out of the pale mountain stone.  The roaring sound
+seems to be coming from this tunnel.    
+~
+~
+0 0 287
+D2
+   The tunnel climbs steeply upward, hopefully into kinder tunnels.    
+~
+~
+0 0 269
+D3
+   A large tunnel splits off to the west.    
+~
+~
+0 0 272
+D6
+   The roughly shaped tunnel hurtles northeast off into the darkness.    
+~
+~
+0 0 271
+S
+#271
+Tunnel in the Mountain~
+   Spikey juts of rock stick out from the walls and ceiling.  How...  
+Hospitable.  Some of the rocks have had candles placed on them, the wax gleams
+in the waxy glow of the flourescent moss.  The floor, at least, is not covered
+in spikes.  It's only very irregular and ready to trip the unwary.  The tunnel
+runs southwest and steeply downward.    
+~
+2 332 5
+D5
+   The tunnel plunges downward into darkness.  Surely nothing could be down
+there.    
+~
+~
+0 0 5100
+D9
+   The tunnel slips off southwest.  The sounds of water can be heard.    
+~
+~
+0 0 270
+S
+#272
+A Dead End~
+   The tunnel comes to a crashing hault, literally.  The tunnel runs east and
+west, but on the west side, rubble has filled it entirely.  A closer
+examination reveals burn marks on the rubble and walls.  Water flows in from
+the east and gathers in a small pool by the rubble.  It must be getting out
+somehow.  The tunnels only exit is to the east.    
+~
+2 329 6
+D1
+   The tunnel narrows down to the east, but its the only way to go.    
+~
+~
+0 0 270
+S
+#273
+Path in the Foothills of Moria~
+   The path trundles down a hill and around the curve of another as it makes
+its own way to the mountains of Moria.  &MFeathery bushes&n grow right up
+against the road in all their purplish splendor.  A small forest of trees
+blankets the hill to the south.  The path runs north and southeast.    
+~
+2 32768 2
+D0
+   The little dirt path connects to a large road made of stone from the
+mountain.    
+~
+~
+0 0 257
+D8
+   The path curves into a hill covered with evergreen trees.    
+~
+~
+0 0 274
+E
+feathery bushes~
+   These beautiful bushes are called Egas.  Their leaves when taken young make
+an excellent tea that sooths the nerves.    
+~
+S
+#274
+Path in the Foothills of Moria~
+   The evergreen trees' smell make the whole wood smell like a clean floor.  
+Several of the trees have strange &yorange plants&n growing on them.  The
+sounds of birds, deer, and squirrels fill the wood.  Assuredly, if rabbits made
+sounds as well a traveler would be able to hear them.  The path runs northwest
+and east.  Another, even fainter path, splits off to the west.    
+~
+2 32768 3
+D1
+   The dirt path leaves the trees behind as it heads east.    
+~
+~
+0 0 275
+D3
+   An even smaller and more decrepit path splits off to the west.    
+~
+~
+0 0 277
+D7
+   The little path climbs up a hill and out of sight.    
+~
+~
+0 0 273
+E
+orange plants~
+   The plants form orange humps on the branches of several of the evergreen
+trees.  It does not appear as if the trees are harmed by them.  The orange
+plants' leaves are formed into needles like the trees they live upon.    
+~
+S
+#275
+Path in the Foothills of Moria~
+   The trees on this stretch of path are thinning out.  The orange growths that
+grow on several of the evergreens are a little more yellow then those further
+west.  The path changes from dirt to gravel to dirt again.  A few large
+boulders of pale grey color sit around the patch of wood.  The path runs west
+and south.    
+~
+2 32768 3
+D2
+   The path trundles south towards a mountain.    
+~
+~
+0 0 4000
+D3
+~
+~
+0 0 274
+S
+#276
+On a Path off the Shore~
+   The sandy shore of the river vertigo continues north and south.  Westward, a
+large road leads to a tall gate.  The river lies to the east, and it looks to
+be easily traveled on by boat.  The road is muddy and slippery, but it leads
+somewhere.  Shrubs and bushes line the road on each side.    
+~
+2 64 2
+D1
+~
+~
+0 0 916
+D3
+~
+Gate~
+1 0 5200
+S
+#277
+A Faint Trail~
+   The trail is very faint.  Supposedly, people aren't using it very much.  
+Short plains grass pokes up around and on the connected patches of gritty dirt.
+Most of a small stand of trees is left to the east, but a few are still
+following the path westward.  Rich orange growths festoon the branches of these
+trees.  Perhaps the open air agrees with them.  The path follows a south and
+east course through the hills.    
+~
+2 4227072 4
+D1
+   The path gains more definition as it heads east into a small stand of trees.
+  
+~
+~
+0 0 274
+D2
+   The faint path ducks behind a hill to the south and out of sight.    
+~
+~
+0 0 278
+S
+#278
+A Faint Trail~
+   Pale grey stones stick out from the sides of the hills like crooked teeth.
+Feathery bushes grow right beside the road and fill the air with a tangy smell.
+The tops of a stand of pine trees peek over the hill to the north and east.  
+The path splits off in three directions: north, northeast, and west.    
+~
+2 32768 4
+D0
+   The trail disappears behind the bulk of the hill to the north.    
+~
+~
+0 0 277
+D3
+   The path gains strength as it heads west over the top of a hill.    
+~
+~
+0 0 279
+D6
+   The faint trail disappears behind a spur in the hill to the north.    
+~
+~
+0 0 281
+S
+#279
+A Trail Through the Hills~
+   Large feathery bushes march up one side of the hill and down another.  Some
+of them are over six feet tall in height!  The path has been sprinkled with
+gravel to reduce the amount of dust produced with each step and provide extra
+traction.  Birds sing and dart from bush branch to bush branch.  The path heads
+east down the hill and northwest down the hill.    
+~
+2 32768 4
+D1
+   The path gets fainter as it heads down the hill.    
+~
+~
+0 0 277
+D7
+   The path heads down the hill and slips behind a giant egas bush.    
+~
+~
+0 0 280
+S
+#280
+A Dead-End~
+   The large egas bush hides the path's ending from anyone standing on the hill
+to the south.  The path walks up to a small pile of carefully arranged gravel.
+There is a small hole at the top.  It almost looks like an ant hill, but there
+are no workers moving around in the ground near your feet.  The pile of gravel
+is about four feet high and six feet wide.  The path slips around the bush and
+heads southeast.    
+~
+2 32768 4
+D8
+   The path gains strength as it heads up a hill.    
+~
+~
+0 0 279
+S
+#281
+A Faint Trail~
+   The trail comes to an end in a little pocket in the side of the hill.  The
+area is surrounded on three sides by the steep walls of dirt and rock.  The
+trail leads right up to a large, flat-topped boulder and stops.  The boulder is
+liberally smeared with blood, both old and new.  A path leads off southwest.  
+~
+2 32768 4
+D9
+   The path ducks out of sight as it heads southwest.    
+~
+~
+0 0 278
+S
+#282
+&WThe Stepping Stones&n~
+   The path is formed of circular-shaped blocks of &Wstone&n.  Plains grass
+does not grow between the stones.  Instead, a soft velvety moss, barely a
+half-inch in height grows in the spaces.  A &mredish-purple grass&n marches
+along either side before losing itself in the green plains grass.  To the
+south, the path disappears into a wall of orange grass.  The stepping stones
+head north.    
+~
+2 262224 2
+D0
+   The circular stones head north, deeper into the plain.    
+~
+~
+0 0 283
+D2
+   The bright orange grass mingles with the green, but it is thin enough for
+anyone to push through.    
+~
+grass~
+1 0 252
+E
+redish purple grass~
+   The redish-purple grass has thick leaves that carry their color at the tips
+and darken as they get closer to the stem of the plant.  It is called Techula
+or Fire Tip.  Dried and treated properly, Fire Tip will cause a small explosion
+when flung into a fire.    
+~
+E
+stone blocks circular~
+   The stones are absolutely perfect in shape.  The color is a constant pale
+grey that is unstained by the elements.  The velvety green moss never quite
+touches the stones themselves.  It's almost...  Magical.    
+~
+S
+#283
+&WThe Stepping Stones&n~
+   A low, throaty hum thrums through the air.  It gently vibrates the bones of
+anyone standing on a stepping stone.  Humming birds dart and play among the
+grass.  The rapid movement of their wings forms a counterpoint to the deeper
+melodies of the stones.  The grass all around sways gently to the music.  
+Could it be dancing?  Is the plain alive in ways no one ever dreamed?  The
+stones head south and northwest.    
+~
+2 262224 2
+D2
+~
+~
+0 0 282
+D7
+   The stepping stones flow deeper into the grass.    
+~
+~
+0 0 284
+S
+#284
+&WThe &BS&Wtepping Stones&n~
+   The stones visibly vibrate in their niches.  The air is full of a strange,
+keening song, much like a chant.  The stones sing a song for several minutes
+and then repeat it with slight variations.  The grass wirthes and rolls to the
+sounds.  The wind is simply not moving in that many directions at once.  The
+stepping stones head southeast and northeast.    
+~
+2 262224 2
+D6
+   The grass' writhing increases as it heads northeast.    
+~
+~
+0 0 285
+D8
+   The stepping stones drop down to a hum as they head southeast.    
+~
+~
+0 0 283
+S
+#285
+&WThe &BS&Wtepping &BS&Wtones&n~
+   The writhing green grass gives way to a strange grey-green grass with a
+tufted pink top.  This new grass curls and uncurls its leaves and bobs its head
+towards a small white pedestal to the east of the stones.  The pedestal is made
+of the finest marble and carven over with grapevines and a strange circle rune
+that is snuck into its making whenever possible.  The stones' singing fills the
+whole world and everywhere the grass dances.  The stepping stones head
+southwest and south.    
+~
+2 262224 2
+D2
+   There is no sound of music to the south.    
+~
+~
+0 0 286
+D9
+   The music loses its volume as one travels down the southwestern path.    
+~
+~
+0 0 284
+S
+#286
+A Trampled Circle~
+   The grass has been trampled down into a perfect circle that has a twenty
+foot diameter.  The pink tufted grass smashed on the green grass smashed on a
+redish-purple grass.  The sky above is a clear, deep blue.  A series of
+stepping stones begins at the northern end of the circle and disappears into
+the grass.  Music can be heard from that direction as well.    
+~
+2 1310800 0
+D0
+   A beautiful and strange music can be heard coming from the north.    
+~
+~
+0 0 285
+S
+#287
+Deep in the Mountain's Belly~
+   The usual pale mountain stone gives way to a similarly pale grey stone with
+flecks of quartz and black rock.  Chisel marks can clearly be seen all over the
+walls, ceiling, and floor.  Such amazing patience, to carve a nicely wide
+tunnel out of living stone, the makers of this tunnel surely must have cared
+about something a great deal.  A thundering sound vibrates the entire tunnel.
+The tunnel continues to south and north.  A ledge runs along the western side
+of the tunnel.    
+~
+2 0 0
+D0
+~
+~
+0 0 288
+D2
+   Several different tunnels meet up to the south.    
+~
+~
+0 0 270
+S
+#288
+A Large Hole in the Ground~
+   The walls of the tunnel are slick and wet.  The air is so full of moisture
+that anyone here would instantly become wet.  Ever breath taken is full of as
+much mist as it is air.  The sheer wetness of it all can be explained by the
+huge waterfall to the north.  It shoots past the tunnel mouth from above.  The
+very fact that a good part of it is mist by the time it gets down this far is
+only a small indication of how big it is for it looks like the water has a long
+way to go still.  Walking into that flow of water would spell &RCERTAIN
+DEATH&n.  A small ledge covers the west side of the tunnel that also heads
+south.    
+~
+2 2097224 0
+D0
+   Simply put, heading north would be like jumping in front of a train: you'll
+travel for a ways, but you'll be dead when you get there.    
+~
+~
+0 0 289
+D2
+   The tunnel to the south is less damp.    
+~
+~
+0 0 287
+D3
+   The ledge to the west is broad enough to walk along and thick enough to take
+anyone's weight.    
+~
+~
+0 0 5366
+S
+#289
+The Deadly Waterfall~
+   The water catches hold of you and hurls you downwards.  The walls of the
+vertical tunnel zip by until your body slams into a small ledge.  You tumble
+off with the rest of the water and hurtle downwards a few more yards before
+encountering another friendly ledge.  Ribs snap.  You can no longer feel your
+legs and your arm is at a funny angle.  You're still alive when the waterfall
+slams into a pool of water.  The force of the impact knocks all of the air out
+of your lungs and then it's futile thrashing as the waterfall pushes your head
+under over and over again.  You are dead.  And very, very stupid.    
+~
+2 32778 6
+D0
+   The rush of water slows down and you can see Daggerfall's levee ahead of
+you.    
+~
+~
+0 0 3049
+S
+#290
+A Doomed Farm House~
+   Moldering thatching from the roof litters the floor of the old farm house.
+The smell of ripe apples fills the room, perhaps there is an orchard nearby.  
+The house is only one room large with a loft that covers half of the ceiling.
+A broken ladder leads up to the loft.  A door to the southwest leads out of the
+house, not that you couldn't just crawl out the window.    
+~
+2 0 0
+D0
+   The window has been covered with a plank of wood.    
+~
+plank~
+1 0 292
+D4
+   The ladder looks like it might be able to take your weight...  Might.    
+~
+~
+0 0 291
+D9
+   The walls are rotting where they stand.    
+~
+door~
+1 0 237
+S
+#291
+The Loft of the Farm House~
+   Motes of dust turn into gold as they drift through the sunlight that leaks
+through the holes in the ceiling.  A small &gpallet&n of moldy straw lies in
+the northern corner.  An explorer should step lightly across these boards for
+they look very moldy and it is quite a fall to the floor.  The only way down is
+by the ladder.    
+~
+0 512 0
+D5
+   A rickety old ladder leads down to the farm house's floor.    
+~
+~
+0 0 290
+E
+pallet straw bed~
+   The pallet of straw has been covered with a raggedy old wool blanket.  It
+looks like someone is living here...    
+~
+S
+#292
+Behind the Farm House~
+   The back of the house is surrounded by thick prickly bushes that no one
+would want to force their way through.  The branches of the bushes are twined
+tightly with each other.  It is hard to tell where one beings and another ends.
+A soft film of grass covers the small patch of ground close to the house.  A
+few vegetables grow in the garden and a little table with a chess game set up
+on it sits in the northern corner of the backyard.  The window provides a quick
+exit.    
+~
+0 16 2
+D2
+   One can climb through the window and back into the farmhouse.    
+~
+window~
+1 0 290
+D5
+   The chess board grows closer the longer you look at it.  It's almost as if
+you could go down onto it.    
+~
+~
+0 0 3600
+S
+#299
+The Library on the Oak~
+   Shelves and shelves of rotting books line the walls and arrange themselves
+in moldering stacks on the ground.  The chairs and tables in the room look
+badly compromised.  Floor boards have broken off or rotted away and the ground
+can be seen far below.  It looks green and inviting.  The whole room shakes and
+creaks whenever the wind blows hard.  The only way out is the ladder down.    
+~
+2 2359388 0
+D5
+   The ladder down was not nailed to the tree, but grows naturally out of it.
+  
+~
+~
+0 0 213
+E
+tables chairs~
+   The tables and chairs have been nibbled upon by bugs.  If someone of any
+weight sat down on them, they'd probably collapse.    
+~
+S
+$~

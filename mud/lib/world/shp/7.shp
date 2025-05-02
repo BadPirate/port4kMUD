@@ -1,0 +1,227 @@
+CircleMUD v3.0 Shop File~
+#707~
+702
+703
+-1
+1.00
+1.00
+12
+-1
+%s Sorry, I just sell tickets.~
+%s You don't seem to have that.~
+%s Sorry, I just sell tickets.~
+%s I can't afford that!~
+%s You're too poor, get a job, you bum.~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+707
+0
+707
+-1
+8
+28
+0
+0
+#718~
+767
+-1
+2.00
+1.00
+-1
+%s I don't have that, but would you like a bottle of Magnifico's Cure-All?~
+%s You don't seem to have that.~
+%s I don't need that, but would you like a bottle of Magnifico's Cure-All?~
+%s I'm too poor to afford something as grand as that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+755
+0
+718
+-1
+0
+28
+0
+0
+#719~
+746
+747
+748
+749
+750
+751
+752
+-1
+2.00
+1.00
+-1
+%s Would you like a fortune, dearie?~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s I'm sorry, dear, I need payment first.~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+719
+0
+719
+-1
+3
+8
+12
+28
+#720~
+732
+733
+734
+735
+736
+737
+738
+739
+-1
+2.00
+1.00
+-1
+%s Sorry, we don't sell that.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s Please come back with correct change.~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+719
+0
+720
+-1
+12
+28
+0
+0
+#721~
+706
+707
+708
+709
+710
+711
+712
+-1
+2.00
+1.00
+-1
+%s Sorry, we don't have that.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You don't have that kind of money!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+721
+0
+721
+-1
+8
+28
+0
+0
+#726~
+740
+741
+742
+743
+744
+745
+-1
+2.00
+1.00
+-1
+%s I don't have uhat, stupid!~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s Come back when you have some money!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+726
+0
+726
+-1
+12
+28
+0
+0
+#727~
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+-1
+2.00
+1.00
+-1
+%s Sorry, we just do candy here.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s Please come back when you have some money.~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+726
+0
+727
+-1
+8
+28
+0
+0
+#728~
+713
+714
+716
+718
+719
+720
+721
+-1
+2.00
+1.00
+-1
+%s Sorry, we don't make that.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You gotta have money to eat!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+0
+728
+0
+728
+-1
+8
+28
+0
+0
+$~

@@ -1,0 +1,6 @@
+cd zon; ls -X *.zon | cat | sort -g > index; echo "$" >> index
+cd ../wld; ls -X *.wld | cat | sort -g > index; echo "$" >> index
+cd ../shp; ls -X *.shp | cat | sort -g > index; echo "$" >> index
+cd ../mob; ls -X *.mob | cat | sort -g > index; echo "$" >> index
+cd ../obj; ls -X *.obj | cat | sort -g > index; echo "$" >> index
+

@@ -1,0 +1,573 @@
+#8300
+The House of &bDark&n~
+   Upon entering this room you realize that there are no doors, only shadows.
+The flickering and crackling of the torches acts as music for the shadows to
+dance in some sort of beastly ritual.  Though there are many torches lit, this
+room is still quite dim, as though some sort of screen was placed over your
+eyes.  The shadows seem to mock your every move as you make your way for what
+you think is an exit.  Perhaps you have found another room or perhaps not?    
+~
+83 297496 0
+D5
+~
+~
+0 0 8301
+S
+#8301
+&rSangrea&n~
+&v&rIN ARENA&n
+   This room has no very defined features to it, the walls seem to be shifting
+and morphing all the time, the only thing constant is the blood red color of
+the walls and a big swirling hole ready to drop you back to the real world.  
+This room has seen many vicious clan battles as it's the only gateway from the
+offworld site where the clans reside to the regular world.    
+~
+83 368652 0
+D0
+~
+~
+0 0 8335
+D1
+~
+~
+0 0 8304
+D4
+~
+~
+0 0 8300
+D5
+~
+~
+0 0 1400
+S
+#8302
+Behind the shop~
+   The area here is very well hidden from the regular bright world that
+surrounds the brick road.  Tree's on 3 sides and the shop on the other.  It's
+very dark do to the presence of a very strange portal about 6 feet above the
+ground.  It's a swirling portal about 8 feet in diameter that appears to be a
+blood red mouth or diaphragm, it appears that if you would jump and put your
+hand up it would suck you right in.    
+~
+83 32784 0
+D4
+~
+~
+0 0 8301
+S
+#8303
+A Dimly Lit Bar~
+   This bar seems to be the place where the assassins gather to heal their
+souls between missions by drowning out their sorrows in whiskey and
+firebreather.  Following that train of thought, the bartender would be one of
+the healers present, serving up relief for a weary heart in bottles and shot
+glasses.  The other healer would be the strange woman sitting at the corner
+table providing a rare dose of white magic to those kind enough to sit with her
+or buy her a drink.    
+~
+83 2359320 0
+D2
+~
+~
+0 0 8301
+S
+#8304
+&CG&cuardian's &CO&cutpost&n~
+This room needs a better descriptions..
+Give Xuric one to fix it.
+~
+83 295440 0
+D3
+~
+~
+0 0 8301
+S
+#8310
+Entrance Hall~
+   A feeling of awe fills you as you enter the &rBlood&n Clanhouse.  Statues of
+plaster heros line the stone hall, each a powerful personification of a
+&rBlood&n Warrioror.  To the east lie the weapon racks of the Clan Armoury
+while to the west is the Clan Shrine.    
+~
+83 262168 0
+D1
+~
+~
+0 0 8311
+D3
+~
+~
+0 0 8312
+S
+#8311
+The Armoury~
+   Here the walls are lined with a multitude of weapons; Ebony swords, crystal
+throwing knives and great double-headed axes.  In the middle of the hall stands
+a figure dressed in black robes wearing a crimson tear suspended from a chain
+around his neck, a brother of the order awaiting your request.    
+~
+83 262168 0
+D3
+~
+~
+0 0 8310
+S
+#8312
+The Shrine~
+   This is a place of meditation and calm we the Warriors of Blood come to find
+sanctuary from the dangers of life.  Here wounds are healed while the mind
+turns to the perfectionion of ability demanded by the Order of Blood.    
+~
+83 2359324 0
+D1
+~
+~
+0 0 8310
+S
+#8320
+Hall of the &rDragons&n~
+   You stand in the entrance hall to the Dragons.  There are ancient
+inscriptions and carvings in the tree of Dragon rulers.  You look closer at
+them and finally give up trying to decipher them, for it is an ancient, but
+never-spoken language.  The room is well lit by the sun which pours in through
+small window-like holes.  You sense power in the air, run, if you do not belong
+here, and never return.    
+~
+83 272920 0
+D0
+~
+~
+0 0 8327
+D1
+~
+~
+0 0 8322
+D2
+~
+~
+0 0 8328
+D3
+~
+~
+0 0 8321
+D4
+~
+~
+0 0 8323
+D5
+~
+~
+0 0 6096
+S
+#8321
+Shop of the Dragons~
+   This small cubby in the side of the tree doesn't allow alot of room to move.
+You figure the dragons never had to use anything but their head to move around
+the clan anyway so why should it be big?  You can tell by the looks that the
+shopkeeper isn't a nice guy.  Too many years in a cramped hole of the tree.  
+~
+83 262168 0
+D1
+~
+~
+0 0 8320
+S
+#8322
+A Small Tree Sanctuary~
+   This room was carved into the tree by the dragons many generations ago.  It
+is a small and bright room that the dragon kind use as a safe spot to heal
+their combat wounds.  This is a safe room from which no one can watch you or
+make you feel unsafe.    
+~
+83 2359320 0
+D3
+~
+~
+0 0 8320
+S
+#8323
+Hall of the &rWyrms&n~
+   Streaks of blood lie scattered about the marble walls of this hall of Wyrms.
+A large statue of a wyrm stands tall in the center of the room.  Below you is a
+large staircase, leading down to the Dragon hall.  To the east lies a small
+tree sanctuary.  Through an archway in the west wall is the shop of the Wyrms.
+The top of a waterfall can be seen off to the north.  A similar staircase to
+the one below you leads up into the hall of the Lords.    
+~
+83 264728 0
+D0
+~
+~
+0 0 8325
+D1
+~
+~
+0 0 8326
+D3
+~
+~
+0 0 8324
+D5
+~
+~
+0 0 8320
+S
+#8324
+The Shop of &rWyrms&n~
+   This room has been carved into the side of the tree by the former residents
+of the redwood: a powerful race of dragons.  You can see bark lining the walls
+of this room, and a huge knot stains the floor.  The shopkeeper doesn't look
+too happy about being shut up in this tree for a long period of time...    
+~
+83 262168 0
+D1
+~
+~
+0 0 8323
+S
+#8325
+Top of the &bWaterfall&n~
+   This is where the enormous waterfall cascades into the tree.  Runoff rain
+flows through a hole above you, but the water keeps flowing and flowing...  
+The dragons must have installed some magical recycling method to take water
+from the bottom of the pool below and transport it into the hole.  Brilliant,
+you think, for that keeps the water there, and rains add to the supply.    
+~
+83 262168 0
+D2
+~
+~
+0 0 8323
+S
+#8326
+A Small Tree Sanctuary~
+   This room was carved into the tree by the dragons many generations ago.  It
+is a small and bright room that the wyrm kind use as a safe spot to heal their
+combat wounds.  This is a safe room from which no one can watch you or make you
+feel unsafe.    
+~
+83 262168 0
+D3
+~
+~
+0 0 8323
+S
+#8327
+Behind the &bWaterfall&n~
+   The huge waterfall cascades down before you.  You are standing in a cave
+behind the enormous, crashing might of the waterfall.  The waterfall's source
+seems to be above you, and it forms a large pool below you.  Should you cup
+your hands and put them out, you can catch water to drink -- but beware, lest
+the waterfall drag you out and down to your death.    
+~
+83 262160 0
+D2
+~
+~
+0 0 8320
+S
+#8328
+Branch Quarters~
+   You are in a tunnel hollowed out from the heartwood of this branch.  This
+gigantic branch is so large that it can fit rooms in all directions.  The
+branch is hollowed out in a north-south path.  You are beginning to realize why
+dragonkind chose this tree for shelter, as the towering redwood spirals
+hundreds of feet above the ground, accessible only by magic or flight.  The sap
+running through the heartwood sticks to your feet as you trudge through the
+heartwood tunnel.    
+~
+83 262168 0
+D0
+~
+~
+0 0 8320
+D2
+~
+~
+0 0 8331
+S
+#8329
+The Basement~
+   &nThe "basement" of the &rApocalypse&n clan hall is little more than a dome
+within the earth that has been hollowed out from the base of the tree.  Roots
+twist and turn above you, forming the ceiling of the room.  In the center of
+the room, you can see some of the great tree's heartwood.  The room itself is
+very damp and smells like rich loam...  Which is not surprising, since that's
+what the walls of this room are made of.    
+~
+83 262160 0
+D0
+~
+~
+0 0 8330
+D1
+   A room full of spikes lies to the east.    
+~
+~
+0 0 8333
+D4
+~
+~
+0 0 6096
+S
+#8330
+Branch Quarters~
+   You are in a tunnel hollowed out from the heartwood of this branch.  This
+gigantic branch is so large that it can fit rooms in all directions.  The
+branch is hollowed out in a north-south path.  You are beginning to realize why
+dragonkind chose this tree for shelter, as the towering redwood spirals
+hundreds of feet above the ground, accessible only by magic or flight.  The sap
+running through the heartwood sticks to your feet as you trudge through the
+heartwood tunnel.    
+~
+83 262168 0
+D2
+~
+~
+0 0 8329
+S
+#8331
+Branch Quarters~
+   The giant branch of a redwood tree has been hollowed out to form this tunnel
+of wood.  The walls, ceiling, and floor have been lovingly sanded and polished.
+The sharp smell of wood sap and the oil used to polish the tunnel tap sharply
+against the inside of any sensitive nose.  The branch of this tree is large
+enough that there is room for adjoining rooms.  The tunnel continues to the
+north.  There appears to be a room above your head.    
+~
+83 270360 0
+D0
+~
+~
+0 0 8328
+D4
+~
+ceiling~
+1 0 8332
+S
+#8332
+Micken and Obi's Jedi Praxeum~
+   The walls inside this ancient pyramid consist completely of some strange
+rock held together by the many weeds and vines growing throughout.  No
+furniture of any kind can be seen on the smooth ground.  What little light that
+lurks in this room comes from a small skylight high at the top of the pyramid.
+The room is better known as the Sacred Jedi Temple.  It is flooded with the
+currents of the force, binding this temple and the universe together.    
+~
+83 264712 0
+D5
+~
+floor~
+1 0 8331
+S
+#8333
+The Spikey UnSanctuary~
+   The floor, walls, and ceiling of the room are liberaly splashed with blood.
+Either the people that come here never clean up or they bleed so much that it's
+hard to maintain a clean state.  The room is actually an area hollowed out
+between the roots of a great tree.  Large iron spikes have been attached to the
+roots and buried in the walls.  It's all rather barbaric.  The only exit to the
+room is west of here.
+~
+83 327688 0
+D3
+~
+~
+0 0 8329
+S
+#8335
+The Middle of NoWhere~
+You stand on an indifferential plane of nothingness.  The very materials of
+existance swirl and mingle, both land and sky form and dissipate at random.  
+It seems as if all of existance desires to be somewhere else.    
+~
+83 264796 0
+D2
+~
+~
+0 0 8301
+S
+#8340
+The Darkroom~
+   As you step into the room and look around you notice the walls and floor are
+made of pure gold.  It has to be the most beautiful room you have ever seen,
+but as you look in awe a chill goes down your spine as you realize something is
+wrong, very wrong.  Out of the corner of your eye you catch a glimpse of
+something moving, when you turn and look it is gone.    
+~
+83 262168 0
+D0
+~
+~
+0 0 8342
+D1
+~
+~
+0 0 8341
+S
+#8341
+Dark Shopkeep~
+   As you enter this room, the light fades.  The walls seem to melt in front of
+you and your light begins to flicker.  You have a hard time seeing anything in
+here, and can barely see the room you came from.    
+~
+83 262168 0
+D3
+~
+~
+0 0 8340
+S
+#8342
+Dark's Dyslexic Healing Room~
+elttil a era ereh ni sgniht taht smees tI  .moor lacigam llams a ni era ouY
+relaeh gniraew ereh gnidnats namow lufituaeb a ees uoY  .relooc dna rewols
+yltnetnoc etiuq gnittis dna relaeh lufrewop yrev a eb ot smees ehS  brag.
+~
+83 2359320 0
+D2
+~
+~
+0 0 8340
+S
+#8350
+Smoke's Shop~
+mudmail a desc later..
+~
+83 262296 0
+D5
+~
+~
+0 0 8506
+S
+#8351
+The eternal 4:20~
+In this place is where the Smoke members partake of the holiday "4:20".  All-day, every day.
+~
+83 24 0
+D2
+~
+~
+0 0 8506
+S
+#8370
+&bTantra's Healer's Hole&n~
+   The room is lit by what appears to be daylight shining in through the
+&gstained glass windows&n.  The shelves and racks that line the wall are filled
+with herbs in various states of dryness and jars of salves and lotions.  The
+air has a slightly dusty herbal smell.  It is all very pleasant and soothing.
+An assortment of fluffy cushions and chairs are available for patients to sit
+in.  A door to the west is the room's only exit.    
+~
+83 2359320 0
+D3
+   An old oak door leads into Tantra Clan Hall.    
+~
+~
+1 0 179
+E
+stained glass windows~
+   The windows are in bright colors and are well-made.  The colored lights that
+shine into the room are cheering and beautiful.  The glass has been arranged to
+form magic symbols of healing and well-being.    
+~
+S
+#8380
+Kami's Lookout~
+   This holy place located miles above the world seems to be the only suitable
+place for combining Dragonballs.  Since only the brave venture here, there is
+no one to stop anyone from attacking you here.  And the only real way out seems
+to be by having your body and soul &brecall&ned to your home town.    
+~
+83 65568 0
+S
+#8397
+&gJade Monkey&n Mobile Chute~
+You are in an unfinished room.
+~
+83 262144 0
+D0
+~
+~
+0 0 624
+D1
+~
+~
+0 0 420
+D2
+~
+~
+0 0 6021
+D3
+~
+~
+0 0 241
+D4
+~
+~
+0 0 7070
+D5
+~
+~
+0 0 5110
+D6
+~
+~
+0 0 1505
+D7
+~
+~
+0 0 12048
+D8
+~
+~
+0 0 6308
+D9
+~
+~
+0 0 6517
+S
+#8398
+Julisa's Paradise~
+   Your lying on a towel in the middle of a sandy beach, completely deserted.
+Some where near you hear the pleasant calls of native birds, as you look around
+you see ocean, beach and jungle.  But 50 feet or so off is just a pleasant
+haze.  You could go explore beyond the haze, but your much too comfortable
+where you are.  A short quaint little waiter comes walking across the
+pleasantly hot sand easily balancing an exotic drink on his tray.  As he hands
+the drink to you and waddles off across the sand you wonder how you got here,
+or where your going, but much like the beach, only here and now is clear, too
+far away either direction is just a pleasant haze.  You like it here.    
+~
+83 264732 0
+D5
+~
+~
+0 0 8399
+S
+#8399
+Lillith's little shop of horrors~
+   Standing in this room sends a shiver down your spine (one of horror or
+pleasure depending on your choice of fetishes) hanging from hooks all around
+the room are any number of sharp or round devices that tickle the brain when
+you try to decide their uses.  The Centerpeice of the room is a large black
+velvet covered bench, with several leather straps to hold any poor and helpless
+victim to it.  On the side there is an area for lillith herself to stand, you
+can tell by it's nearness to a tray with items too twisted or painful looking
+to mention or even look at.  But the trash can full of dead bodies suggests
+that this room isn't just for pleasure, there is a row of jars with all
+varietys of creatures squirming in them, from the repugnant to the deceptivly
+cute, hiding rows of sharp teeth.  And to top it all of is a shape that begins
+forming into what looks like your twisted face, mangled almost beyond
+recognition.  The face begins to laugh.
+~
+83 277016 0
+D0
+~
+~
+0 0 174
+D4
+~
+~
+0 0 8398
+S
+$~

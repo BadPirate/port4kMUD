@@ -1,0 +1,146 @@
+#2501
+Dwarven Full plate mail~
+&yDwarven&n Full Plate~
+A full plate armor made of &wmithral&n shines here~
+~
+9 2098221072 9
+30 0 0 0
+25 10500 0
+A
+2 -2
+A
+18 -1
+A
+13 50
+A
+14 -30
+#2502
+mithral chain shirt~
+&wMithral&n Chain Shirt~
+A chain shirt shining of &wMithral&n is slumped here~
+~
+9 2080378944 9
+15 0 0 0
+10 1100 0
+A
+2 2
+A
+14 50
+A
+18 1
+A
+13 15
+#2503
+caster shield~
+&CCaster&n's Shield~
+A shield glowing of magic has been tossed aside.~
+~
+9 168345921 513
+5 0 0 0
+5 3153 0
+A
+3 2
+A
+4 1
+A
+12 75
+A
+18 -1
+#2504
+adamantine battleaxe~
+&mAdamantine&n Battleaxe~
+A large battleaxe is propped up here, glinting of &mAdamantine&n~
+~
+5 268455936 8193
+0 6 7 3
+17 9310 0
+A
+18 4
+A
+19 3
+A
+13 50
+#2505
+Shadow helm helmet~
+Shadow Helm~
+A very small dark helmet sits here~
+~
+9 1610613248 17
+8 0 0 0
+3 1500 0
+A
+4 1
+A
+5 2
+A
+19 1
+A
+18 3
+#2506
+gnome pick axe~
+Gnomish Pickaxe~
+A small pick axe that seems used for digging is here.~
+~
+5 2 8193
+0 5 4 14
+8 850 0
+A
+1 -1
+A
+18 1
+A
+19 1
+#2507
+blurry boots~
+&rBlurry&n boots~
+Something really blurry is here, appearing like some boots.~
+~
+9 2097297 65
+5 0 0 0
+2 5000 0
+E
+boots~
+As you place these upon your feet, you feel a bit dizzy for a minute, but then
+dissapears.  You feel much quicker on your feet.    
+~
+A
+14 100
+A
+6 -1
+A
+18 -1
+A
+19 -1
+#2596
+mobspell_heal~
+.~
+An unfinished object is lying here.~
+~
+26 4 0
+1 1 28 0
+0 0 0
+#2597
+Mobspell_groupheal~
+You can't see anything.~
+An unfinished object is lying here.~
+~
+26 4 0
+1 1 48 0
+0 0 0
+#2598
+mobspell_earthquake~
+You can't see anything.~
+undefined~
+~
+26 4 0
+3 1 23 0
+0 0 0
+#2599
+mobspell_harm~
+You don't see anything.~
+.~
+~
+26 4 0
+3 1 27 0
+0 0 0
+$~

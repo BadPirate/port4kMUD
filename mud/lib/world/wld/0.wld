@@ -1,0 +1,151 @@
+#0
+The Void~
+   You don't think that you are not floating in nothing.  You can see
+a strange portal located above you.
+~
+0 8 1
+D4
+The Temple of Midgaard floats above you.
+~
+~
+0 -1 3001
+S
+#1
+Limbo~
+   You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+0 8 1
+S
+#3
+A Totally Empty Room~
+   The walls are completely bare... nothing at all in the room.
+How... utterly bizarre and completely weird.  There is a strange
+portal just above you, and it almost looks as if there is some
+sort of room above you.
+~
+0 520 0
+D4
+You notice that the portal above you looks almost like glass,
+albeit very dirty glass.
+~
+~
+0 -1 3048
+S
+#11
+The Corpse Room~
+     You are in a room that smells badly of rotting corpses.  If your in here 
+you're probably looking for yours.  There are a lot of slots in the walls with
+various names on them when you enter a little demon rushes into the room
+opening one with your name on it.
+&rFor info on corpse retrieval type &bread info&r or &bhelp&n
+~
+0 188 0
+D4
+~
+~
+0 0 3001
+E
+info~
+Haden was added to prevent people from being able to steal other player corpses.
+However he does come at a price.  And the price goes by the following equation:
+price = (&gYour level-10&n) * 1000
+ 
+So, its free for the first 10 levels, and it costs you 1000 gold for each level
+afterwards.
+ 
+So then what if you cant afford it?  Then do a &bcorpse return&n and go get your
+own, back where you died.
+~
+S
+#14
+An unfinished room~
+You are in an unfinished room.
+~
+0 0 0
+S
+#15
+The Portal Room~
+   The walls swirl and distort around you, and portals open and close
+in a heartbeat.  There are three dominant portals in this room that
+appear to be very stable, and are probably the only safe ones.  To the
+north is a swirling gray mass, to the east is a bright white mass, and
+to the west is nothing but a pulsing, black portal.
+~
+0 524532 0
+S
+#16
+Entrance to the Hall of Neutrality~
+   The walls here are covered in a thin grey film, which protects the
+wall from the wear of time.  Windows on either side of the hallway
+give you an excellent view of the vast wasteland outside.  Looking out
+the window is the strangest landscape you have ever seen.  Chairs, 
+animals, trees and countless other oddities float in random directions
+through the air.  The landscape itself is fairly normal, with trees,
+mountains, rivers and such, except their colors are all mixed up and
+rearranged.
+~
+0 8 0
+S
+#17
+Entrance to the Hall of Chaos~
+   A black soot chokes the light from the walls of the entrance.  A
+window on either side gives a view of a dark and desolate landscape.
+You can hear the ghastly howls of tortured souls and dying animals,
+that almost drown out the far away thunder.  Malformed creatures
+stalk the wastelands outside, paying the penalties for their actions
+during life.  
+~
+0 8 0
+S
+#18
+Entrance to the Hall of Order~
+   The light in this room is almost blinding as it reflects off the 
+clean white walls.  Windows on both sides give you a view of a bed
+of clouds on which happy souls rest and enjoy themselves.  The clouds
+are imbued with a great magical entity which allows them to support
+the worthy souls above the chaos below.
+~
+0 8 0
+S
+#99
+The Realm Of The Dead~
+   You are standing on an immense, grey stone floor that stretches as far
+as you can see in all directions.  Rough winds plunging from the dark,
+starless sky tear savagely at your fragile body.
+~
+0 520 0
+D0
+The hard floor seems to go on forever.
+~
+~
+0 -1 99
+D1
+The hard floor seems to go on forever.
+~
+~
+0 -1 99
+D2
+The hard floor seems to go on forever.
+~
+~
+0 -1 99
+D3
+The hard floor seems to go on forever.
+~
+~
+0 -1 99
+E
+sky wind winds~
+Cold winds plunge ceaselessly at you from the dark, cloudless sky.
+~
+E
+floor~
+The stone floor is the same shade of grey as the sky and is completely plain
+and unscratched.  It is probably too hard for anything to leave as much as a
+scratch on it.
+~
+S
+$~

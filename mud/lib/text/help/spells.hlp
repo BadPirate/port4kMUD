@@ -1,0 +1,816 @@
+ARMOR
+
+Usage       : cast 'armor' <victim>
+Level       : Cleric - 1, Mage - 3, Bard - 44, Paladin - 87
+
+The Armor spell will improve your AC by 20.
+
+See also: AC
+#
+BLESS
+
+Usage       : cast 'bless' <victim | object>
+Duration    : 6 hours, permanent for objects.
+Level       : Cleric - 16, Paladin - 34
+
+Bless on a victim will improve the victims saving throw versus spells
+by 1, and furthermore improve the hitroll by 2.
+
+Bless on an item currently has no defined action.  It is only possible
+to bless non-evil items, and the object blessed may weigh no more
+than five pounds per level of caster. 
+#
+BLINDNESS
+
+Usage       : cast 'blindness' <victim>
+Level       : Cleric - 23, Vampyre - 48, Mage - 56
+
+Blindness will blind a victim failing its saving throw.
+A blinded person will have -4 penalty to both hitroll and AC.
+
+See also: AC
+#
+BURNING HANDS
+
+Usage       : cast 'burning hands' <victim>
+Level       : Mage - 18
+
+Mage focuses his energy into the tip of their hands thus turning them
+into fire.  They can burn the creature they are fighting with their
+hands.
+
+See also: CHILL TOUCH
+#
+CALL LIGHTNING
+
+Usage       : cast 'call lightning' <victim>
+Level       : Cleric - 62
+
+This spell will use the "force of nature" to make a lightning
+strike the victim.  It is therefore only possible to call lightning
+outside, and it has to be raining (or worse).
+
+See also: CONTROL WEATHER
+#
+CAST
+
+Usage: cast '<spell name>' <target>
+
+For "magical" people.  If you want to throw a spell at someone or
+something.
+
+Example:
+
+  > cast 'burning hands' <player>
+  Note that the name of the spell must be enclosed by "'"s.
+
+See also: help on each individual spell:
+
+Examples:
+
+  > help cure light
+  > help harm
+  > help energy drain
+#
+CHARM PERSON
+
+Usage       : cast 'charm person' <victim>
+Level       : Mage - 32, Bard - 38, Vampyre - 77
+
+Is is not possible to charm anyone that is already charmed, if
+you're charmed yourself, or if the person is higher level than
+yourself.  The person will get a saving throw versus "paralysation".
+
+A charmed person will follow you, and not be able to attack you, you
+can order the charmed person using the order command.
+#
+CHILL TOUCH
+
+Usage       : cast 'chill touch' <victim>
+Level       : Mage - 9
+
+This spell is more powerful than the magic missile spell.
+A victim failing its saving throw will get its strength
+reduced by one.
+
+See also: MAGIC MISSILE
+#
+COLORSPRAY COLOR SPRAY
+
+Usage       : cast 'color spray' <victim>
+Level       : Mage - 74
+
+This spell is more powerful than the lightning bolt spell.
+
+See also: LIGHTNING BOLT
+
+For help on actual color, see:  ANSI
+#
+CONTROL WEATHER
+
+Usage       : cast 'control weather' <'better' | 'worse'>
+Level       : Bard - 26, Cleric - 68
+
+This spell will change the "course" of the current weather.
+
+Example:
+
+  > cast 'control weather' worse
+#
+CREATE FOOD
+
+Usage       : cast 'create food'
+Level       : Cleric - 3
+
+This spell instantly creates a fresh waybread.  The waybread will be
+filling for the next (5+level) hours, up to a maximum of 24 hours.
+
+See also: CREATE WATER
+#
+CREATE WATER
+
+Usage       : cast 'create water' <drink container>
+Level       : Cleric - 5
+
+Expect disastrous results if cast upon a drink container which contains
+another liquid than water.  Empty or water containers will be filled
+depending on the level of the caster.
+
+Double amount of water will be created if it is raining (or worse).
+
+See also: CREATE FOOD
+#
+CURE BLIND
+
+Usage       : cast 'cure blind' <victim>
+Level       : Cleric - 12
+
+This spell will cure a person blinded by the "blindness" spell, it
+can not remove blindness caused by for example cursed items.
+#
+CURE CRITIC
+
+Usage       : cast 'cure critic' <victim>
+Level       : Cleric - 35
+
+This spell cures 3d8+3 hitpoints of damage.
+#
+CURE LIGHT
+
+Usage       : cast 'cure light' <victim>
+Level       : Cleric & Paladin - 1
+
+Cures minor wounds and scratches.
+#
+CURSE
+
+Usage       : cast 'curse' <victim | object>
+Duration    : 7 Days, permanent on objects.
+Level       : Mage - 82
+
+Curse cast on a person that fails the saving throw, will reduce their
+hitroll and damage roll both by one.  It will also reduce the saving
+throw versus paralysation by one. 
+
+When cast upon an object, the object will become undropable.
+#
+DETECT ALIGNMENT
+
+Usage       : cast 'detect alignment'
+Duration    : 12 hours + level
+Level       : Cleric & Paladin - 9
+
+Allows the caster to detect the alignment of those around them.
+Evil will show as a red aura, good in a blue aura.
+
+See also: DETECT INVISIBILITY
+#
+DETECT INVISIBILITY
+
+Usage       : cast 'detect invisibility' [self]
+Duration    : 12 hours + level/4
+Level       : Vampyre - 3, Cleric - 9, Bard - 62
+
+This spell enables you to see invisible items and players.
+#
+DETECT MAGIC
+
+Usage       : cast 'detect magic' [self]
+Duration    : 12 hours + level
+Level       : Mage - 5
+
+This spell will let you see the magical aura surrounding magical
+objects.
+#
+DETECT POISON
+
+Usage       : cast 'detect poison' <victim | food | drink>
+Level       :  Cleric - 7, Bard - 20, Mage - 52, Vampyre - 63
+
+Cast on food or drinks (drink containers) you will be able to
+sense if it is poisoned.
+
+Cast on a person you will be able to see if that person is
+poisoned.
+#
+DISPEL EVIL
+
+Usage       : cast 'dispel evil' <victim>
+Level       : Paladin - 44, Cleric - 53
+
+This spell will only affect evil creatures.  An evil person of level
+equal or less than caster will suffer 100 damage points.
+
+If the victim is higher level than caster, the spell will inflict
+(caster_level)d4 damage points, saving throw versus half damage.
+
+See also: DISPEL GOOD
+#
+DISPEL GOOD
+
+Usage       : cast 'dispel good' <victim>
+Level       : Cleric - 56
+
+This spell will only affect good creatures.  A good person of level
+equal or less than caster will suffer 100 damage points.
+
+If the victim is higher level than caster, the spell will inflict
+(caster_level)d4 damage points, saving throw versus half damage.
+
+See also: DISPEL EVIL
+#
+EARTHQUAKE
+
+Usage       : cast 'earthquake'
+Level       : Cleric - 50
+
+This spell will damage everybody except the caster by 1d8+level of
+caster hitpoints.
+#
+ENCHANT WEAPON
+
+Usage       : cast 'enchant weapon' <weapon>
+Duration    : Permanent
+Level       : Mage - 38
+
+This spell will enchant non-magical (non-modifying) weapons only.  By
+non-modifying weapons we refer to weapons that might alter any ability
+such as for example damage.  The only way to know if a weapon is 
+suitable for enchantment is to fully identify it.
+
+The enchantment will modify the weapon as:
+
+    Level    Hit Roll    Damage
+
+     0..17     +1         +1
+    18..19     +2         +1
+    20..20+    +2         +2
+#
+ENERGY DRAIN
+
+Usage       : cast 'energy drain' <victim>
+Level       : Vampyre - 34, Mage - 80
+
+This spell does not give much damage, but victims failing their saving
+throws will loose up to 40,000 XP points.  You will gain a quarter of
+this XP.
+
+Beware that this spell is evil.
+#
+FIREBALL
+
+Usage       : cast 'fireball' <victim>
+Level       : Mage - 86
+
+The mage can conjure up a ball of fire to strike at their target with. 
+This is the second most powerful spell a mage can use.
+
+See also: "COLOR SPRAY"
+#
+HARM
+
+Usage       : cast 'harm' <victim>
+Level       : Paladin - 51, Cleric - 71
+
+This spell removes all but 1d4 hitpoints from the victim.  The maximum
+number of damage points are 100.  It is not possible to kill using this
+spell.
+#
+HEAL
+
+Usage       : cast 'heal' <victim>
+Level       : Cleric - 65
+
+Player can now use magical powers to heal themselves or allies in
+combat.  Maximum 100 points can be healed.  A victim who is blinded will
+also be cured by the heal spell.
+
+See also: "CURE BLINDNESS"
+#
+INFRAVISION
+
+Usage       : cast 'infravision'
+Duration    : 12 hours + level
+Level       : Mage - 7, Bard & Vampyre - 9, Cleric - 26, Paladin - 27
+
+Allows the caster to detect the heat given off by objects giving them
+the ability to have much better vision in dark conditions.
+
+See also: DETECT INVISIBILITY
+#
+INVISIBILITY
+
+Usage       : cast 'invisibility' <victim | object>
+Duration    : 24 hours, permanent on objects.
+Level       : Mage - 15, Vampyre - 20
+
+Makes the target of the spell invisible to everyone except those who
+have the "detect invisibility" spell.  Attacking while invisible will
+immediately break the spell.
+
+See also: DETECT INVISIBILITY
+#
+LIGHTNING BOLT
+
+Usage       : cast 'lightning bolt' <victim>
+Level       : Mage - 68
+
+A lightning bolt from the sky will strike down onto the mages victim. 
+This spell is more powerful than the shocking grasp spell.
+
+See also: SHOCKING GRASP
+#
+LOCATE OBJECT
+
+Usage       : cast 'locate object' <object>
+Level       : Mage - 20, Vampyre - 41
+
+If possible you will know exactly where an object is, or the name of the
+person using it.  The maximum number of objects you can simultaneously
+locate is your level divided by 2.
+#
+MAGIC MISSILE
+
+Usage       : cast 'magic missile' <victim>
+Level       : Mage, Bard, Vampyre - 1
+
+Causes a bolt of magical energy to be thrown from the casters hands at
+the victim.
+#
+PROTECTION FROM EVIL
+
+Usage       : cast 'protection from evil' [self]
+Duration    : 24 hours
+Level       : Cleric - 29, Paladin - 66
+
+This spell will protect the target from evil creatures, lowering damage
+taken from an evil creature.
+#
+REMOVE CURSE
+
+Usage       : cast 'remove curse' <victim | object>
+Level       : Cleric - 77
+
+Will remove a curse on carried objects or any persons in the room.
+#
+REMOVE POISON
+
+Usage       : cast 'remove poison' <victim | food | drink> 
+Level       : Cleric - 41
+
+Will remove the affects of poison from a victim or an object.
+
+See also: POISON
+#
+SANCTUARY
+
+Usage       : cast 'sanctuary' [self]
+Duration    : 4 hours
+Level       : Cleric - 59, Bard - 90, Paladin - 94
+
+When protected by sanctuary you will only receive 1/2 the normal damage
+caused by a particular blow.
+
+See also: ARMOR, BLESS
+#
+SHOCKING GRASP
+
+Usage       : cast 'shocking grasp' <victim>
+Level       : Mage - 50
+
+This spell is more powerful than the burning hands spell.
+
+See also: BURNING HANDS
+#
+STRENGTH
+
+Usage       : cast 'strength' <victim>
+Duration    : Level/2 + 4
+Level       : Mage - 11
+
+A person will gain 1 strength point per spell (2 points if level of
+caster is greater than 18).  Maximum strength is 18/100.
+#
+SUMMON
+
+Usage       : cast 'summon' <victim>
+Level       : Cleric - 38,  Paladin - 98
+
+Will summon a person of the name spoken.  It is not possible to summon
+someone of three or more levels above yourself.  If you attempt to
+summon a monster, it will get a saving throw.
+
+See also: NOSUMMON
+#
+WORD OF RECALL
+
+Usage       : cast 'word of recall' 
+Level       : Cleric - 47
+
+The caster will be transferred back to his hometown sanctuary.
+#
+SNEAK
+
+Usage       : sneak
+Level       : Thief, Scout - 1
+
+The person can now move without being seen by other players.  This is a
+good tactic to use when running by agro creatures.
+#
+PICK LOCK
+
+Usage       : pick <door>
+Level       : Thief - 3
+
+A skilled thief can now pick locks rather than slaying creatures for
+keys.  Keep in mind though that not all doors can be picked by even the
+most skilled of thieves.
+#
+BACKSTAB
+
+Usage       : backstab <victim>
+Level       : Thief - 9, Scout - 20
+
+A person can now innitiate battle by backstabing their target.  The
+backstab will deal more damage than a normal hit and will net more
+experience.  You cannot backstab during battle.
+#
+TAME
+
+Usage       : tame <cvictim>
+Duration    : 25 hours
+Level       : Warrior - 3, Thief - 12, Scout - 70
+
+Taming a mob will make it easier to be mounted upon.
+#
+STEAL
+
+Usage       : steal <item> <victim>
+Level       : Thief - 20
+
+The thief can now steal objects and or gold from MOBs.
+#
+HIDE
+
+Usage       : hide
+Level       :Scout - 9, Vampyre - 12, Thief - 40
+
+The player can attempt to mask himself by hiding.  The player cannot be
+seen by other players unless they can see through your mask of
+deception.  Player will remain hidden until action is taken that will
+reveal him.
+#
+TRACK
+
+Usage       : track <target>
+Level       : Warrior - 9, Scout - 12, Thief - 55, Paladin - 73
+              Bard - 74
+
+Player can now track down a person or monster using this skill.  This
+can help find someone in hiding or a mob.
+#
+SECOND ATTACK
+
+Usage       : Automatic
+Level       : Warrior - 20, Scout - 50, Bard - 56, Paladin - 58
+              Thief - 65, Vampyre - 84, Cleric - 90, Mage - 98
+
+Player can now strike 2 times per combat round.
+#
+THIRD ATTACK
+
+Usage       : Automatic
+Level       : Warrior - 60, Paladin - 80, Thief & Scout - 85, Bard - 86
+              Vampyre - 98
+
+Player can now strike 3 times per combat round.
+#
+BASH
+
+Usage       : bash <victim>
+Level       : Warrior - 45
+
+Warrior can attempt to send their opponent to the ground with a powerful
+bash, rendering them unable to strike them or cast spells.
+#
+RESCUE
+
+Usage       : rescue <target>
+Level       : Bard - 80, Warrior - 85
+
+Player can now rescue a person in combat directing them out of harms
+way and tanks against the creature.
+#
+METEOR SWARM
+
+Usage       : c meteor swarm <victim>
+Level       : Mage - 92
+
+Player can call upon the heavens to bring down the wrath of a meteor
+swarm to fall onto their enemy.
+#
+CLASS
+
+Port 4000 offers 8 different classes to choose from.  They fall into 3
+main categories:  Spellcaster, Fighter, and Nomad.
+
+Fighter:                 Spellcaster:               Nomad:          
+  Warrior                  Cleric                     Bard
+  Paladin                  Mage                       Scout
+                           Vampyre                    Thief
+
+Remort classes:
+  Ninja
+  Master
+
+See also:  WARRIOR, PALADIN, CLERIC, MAGE, VAMPYRE, BARD, SCOUT, THIEF,
+SCOUT
+#
+RACE
+
+Here is a list of the different races offered by Port 4000 and their
+bonuses.
+  1) Human      No Modifiers
+  2) Dwarf      +2 Con +1 Str -2 Cha -1 Dex
+  3) Elf        +2 Int +2 Cha +1 Dex -3 Con -2 Str
+  4) Hobbit     +1 Dex -1 Str
+  5) Wolf      +1 Dex +1 Cha -1 Con -1 Str
+  6) Giant     +3 Str -2 Int -1 Wis
+  7) Gnome     +2 Int -1 Wis -1 Dex
+  8) Pixie     +2 Dex -2 Str
+  9) Gargoyle  +2 Con +1 Str -2 Int -1 Cha
+  A) Brownie   +1 Int +1 Dex -2 Cha
+  B) Troll     +2 Str -2 Cha
+#
+WSKILLS
+A list of Warrior skills.
+Skill:                    Level:
+KICK 		          1
+TAME 		          3
+TRACK 		          9
+SECOND_ATTACK 	          20
+BASH 		          45
+THIRD_ATTACK 	          60
+RESCUE 		          85
+#
+PSKILLS
+A list of Paladin skills.
+Skill:                    Level:
+CURE_LIGHT 	          1
+CREATE_FOOD 	          3
+DETECT_ALIGN 	          9
+KICK 		          12
+TAME 		          20
+INFRAVISION 	          27
+BLESS 		          34
+DISPEL_EVIL 	          44
+HARM 		          51
+SECOND_ATTACK 	          58
+PROTECTION_FROM_EVIL      66
+TRACK		          73
+THIRD_ATTACK 	          80
+GROUP_ARMOR 	          87
+SANCTUARY 		  94
+SUMMON 		          98
+#
+CSKILLS
+A list of Cleric skills.
+Skills:                   Level:  
+ARMOR		          1
+CURE_LIGHT                1
+CREATE_FOOD               3
+CREATE_WATER	          5
+DETECT_POISON	          7
+DETECT_ALIGN 	          9
+CURE_BLIND	          12
+BLESS 		          16
+DETECT_INVIS 	          20
+BLINDNESS 		  23
+INFRAVISION 	          26
+PROTECTION_FROM_EVIL      29
+GROUP_ARMOR		  32
+CURE_CRITIC 	          35
+SUMMON	                  38
+REMOVE_POISON	          41
+TAME		          44
+WORD_OF_RECALL 	          47
+EARTHQUAKE 		  50
+DISPEL_EVIL 	          53
+DISPEL_GOOD 	          56
+SANCTUARY 		  59
+CALL_LIGHTNING 	          62
+HEAL 		          65
+CONTROL_WEATHER 	  68
+HARM 		          71
+GROUP_HEAL 		  74
+REMOVE_CURSE 	          77
+SECOND_ATTACK	          90
+#
+MSKILLS
+A list of Mage skills.
+Skill:                    Level:
+MAGIC_MISSILE             1
+ARMOR		          3
+DETECT_MAGIC	          5
+INFRAVISION	          7
+CHILL_TOUCH	          9
+STRENGTH	          11
+INVISIBLE 	          15
+BURNING_HANDS 	          18
+LOCATE_OBJECT 	          20
+TAME 		          26
+CHARM 		          32
+ENCHANT_WEAPON 	          38
+SLEEP 		          44
+SHOCKING_GRASP 	          50
+BLINDNESS 	          56
+DETECT_POISON 	          62
+LIGHTNING_BOLT 	          68
+COLOR_SPRAY 	          74
+ENERGY_DRAIN 	          80
+CURSE		          82
+FIREBALL 	          86
+METEOR_SWARM              92
+SECOND_ATTACK	          98
+#
+VSKILLS
+A list of Vampyre skills.
+Skills:                   Level:
+
+MAGIC_MISSILE 	          1
+DETECT_INVIS 	          3
+INFRAVISION 	          9
+HIDE 		          12
+INVISIBLE 		  20
+TAME 		          27
+ENERGY_DRAIN 	          34
+LOCATE_OBJECT	          41
+BLINDNESS 		  48
+SLEEP 		          56
+DETECT_POISON 	          63
+SNEAK		          70
+CHARM 		          77
+SECOND_ATTACK 	          84
+BACKSTAB 		  91
+THIRD_ATTACK	          98
+#
+BSKILLS
+A list of Bard skills.
+Skills:                   Level:
+
+MAGIC_MISSILE 		  1
+CREATE_FOOD		  3
+INFRAVISION 		  9
+STEAL 			  12
+DETECT_POISON		  20
+CONTROL_WEATHER 	  26
+TAME 			  32
+CHARM		          38
+ARMOR 			  44
+SLEEP			  50
+SECOND_ATTACK		  56
+DETECT_INVIS 		  62
+PICK_LOCK		  68
+TRACK		          74
+RESCUE		          80
+THIRD_ATTACK		  86
+SANCTUARY		  90
+#
+SSKILLS
+A list of Scout skills.
+Skills:                   Level:
+
+SNEAK 		          1
+KICK			  3
+HIDE 			  9
+TRACK 		          12
+BACKSTAB 		  20
+SECOND_ATTACK 	          50
+TAME			  70
+THIRD_ATTACK 		  85
+#
+TSKILLS
+A list of Thief skills.
+Skills:                   Level:
+
+SNEAK 		          1
+PICK_LOCK		  3
+BACKSTAB 		  9
+TAME			  12
+STEAL 		          20
+HIDE 			  40
+TRACK 		          55
+SECOND_ATTACK 	          65
+THIRD_ATTACK 		  85
+#
+NOSUMMON
+
+Typing NOSUMMON will prevent other players from summoning you.  To turn
+it off simply type NOSUMMON again.
+
+See also:  SUMMON
+#
+GROUP ARMOR
+
+Usage       : cast 'group armor'
+Level       : Cleric - 32, Paladin - 87
+
+The group armor spell will improve your groups AC by 20.
+#
+WARRIOR
+
+The Fighter is the basic Man-at-Arms. This does not mean, however, that
+they are weak. The fighter is the most versatile warrior of the world,
+able to wield nearly any weapon found or wear any armor. In addition,
+the fighter learns more and more martial skills as he/she increases in
+level.
+
+See also:  CLASS, WSKILLS
+#
+PALADIN
+
+Paladins are holy avengers, those who fight for truth and the church. 
+THey are the warriors of the church, strong fighters who are given the
+sacred power to know the truth, heal the sick and wounded, and protect
+against evil.
+
+See also:  CLASS, PSKILLS
+#
+BARD
+
+Bards are a jack of all trades, but a master of none.  As a bard you get
+skills from every other class, but you are also not able to do many of
+the things other classes can.  They rely mostly on using their varied
+talents instead of focusing on one area.
+
+See also:  CLASS, BSKILLS
+#
+VAMPYRE
+
+Vampyres are dark, mystical creatures who have exposed themselves to
+mortal sin.  They are a practicioner of the mystical arts, and are also
+very adept at trickery and thievery.  Never turn your back on a Vampyre.
+
+See also:  CLASS, VSKILLS
+#
+MAGE
+
+Mages are mystics whose magic comes from their own indomitable will.
+They can create fantastic magics simply by commanding them to happen. As
+the mage increases in power, his or her willpower increases
+respectively, enabling stronger and more devastating magics to be
+unleashed upon the Mage's foes.
+
+See also:  CLASS, MSKILLS
+#
+CLERIC
+
+The clerics are the religious sect of the world.  Members of the cleric
+guilds are given the wisdom of peace, blessing, and healing, as well as
+certain spells used to wreak havoc on the unrighteous.  Clerics are more
+skilled in combat than all save the warriors, but can only wield whips
+and/or blunt and bludgeoning weapons.
+
+See also:  CLASS, CSKILLS
+#
+THIEF
+
+The thieves of the world are those who rely on guile and trickery
+to gain their end, rather than brute force or magical might.  To
+that end, thieves have a wide range of unusual skills to suit their
+needs, and are well suited for exploring areas that others cannot reach.
+
+See also:  CLASS, TSKILLS
+#
+SCOUT
+
+Scouts fill a variety of roles.  Some scouts are rugged wilderness
+adventurers who seek out uncharted lands, and are idealy suited to
+handly many different situations.  Others chose to infiltrate enemy
+castles and fortresses for spying purposes.  Scouts are well suited for
+either task, and are also usually very good fighters if they are forced
+to.
+
+See also:  CLASS, SSKILLS
+#
+$

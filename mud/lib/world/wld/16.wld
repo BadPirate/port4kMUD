@@ -1,0 +1,229 @@
+#1600
+The Begining~
+Not much here.
+~
+16 0 0
+S
+#1601
+Daggerfall Docks~
+You are in an unfinished room.
+~
+0 262228 1
+D0
+~
+~
+0 0 3128
+D1
+~
+~
+0 0 1602
+D2
+~
+~
+0 0 1607
+S
+#1602
+Daggerfall Docks~
+   You walk off of the concourse and onto Daggerfall Docks.  The docks are
+quite lively.  People walking by with crates of fish and shrimp, trading their
+wares and all sorts of other items.  Closer to the ocean you see a shop larger
+than others.  Judging by the sign next to it and the hardy sailor who appears
+to be the shopkeeper, this would be the boat shop.  You see boats ranging from
+small fishing boats to larger yachts.  South leads to the Aryth Ocean.    
+~
+0 262228 1
+D0
+~
+~
+0 0 3129
+D2
+~
+~
+0 0 1608
+D3
+~
+~
+0 0 1601
+S
+#1603
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1604
+D3
+~
+~
+0 0 1611
+S
+#1604
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1605
+D3
+~
+~
+0 0 1603
+S
+#1605
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1606
+D3
+~
+~
+0 0 1604
+S
+#1606
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1607
+D3
+~
+~
+0 0 1605
+S
+#1607
+Daggerfall Shores~
+   Walking down the docks, you look off to the west at the shores, hoping to
+see a nice beach.  Much to your disdain, all you see are rocks and water.  Not
+a very sightly beach.  The rocks jut up all the way up to the city walls, and
+look somewhat difficult to maneuver on.  Nonetheless, there is a stairway down
+onto the rocks just beside you.  Forward leads out over the water a touch.    
+~
+0 262212 2
+D0
+~
+~
+0 0 1601
+D1
+~
+~
+0 0 1608
+D3
+~
+~
+0 0 1606
+S
+#1608
+Daggerfall Shores~
+   Walking down the docks, you look off to the east at the shores, hoping to
+see a nice beach.  Much to your disdain, all you see are rocks and water.  Not
+a very sightly beach.  The rocks jut up all the way up to the city walls, and
+look somewhat difficult to maneuver on.  Nonetheless, there is a stairway down
+onto the rocks just beside you.  Forward leads out over the water a touch.    
+~
+0 262212 2
+D0
+~
+~
+0 0 1602
+D1
+~
+~
+0 0 1609
+D3
+~
+~
+0 0 1607
+S
+#1609
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1610
+D3
+~
+~
+0 0 1608
+S
+#1610
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1611
+D3
+~
+~
+0 0 1609
+S
+#1611
+Daggerfall Shores~
+   The shores of the Aryth Ocean are quite rough.  Instead of the usual beach
+with sand and lots of tourists, it's replaced with rough rocks and terrain.  
+The waters of the Aryth seem to be calm at the moment, but they're known to be
+real rough waters, full of dangerous fish and mammals.  It's also known that
+Whirlpools appear farther out in the ocean rather frequently.    
+~
+0 262212 2
+D1
+~
+~
+0 0 1603
+D3
+~
+~
+0 0 1610
+S
+#1668
+A swirling whirlpool~
+   As you near the disturbed waters, you see a large burst of mist rise as the
+water starts to slowly swirl.  Unfortunately as you attempt to leave the area,
+it is too late.  You are already stuck in it's centripetal waters, and swirl
+around and around towards the large forming whirlpool.  You are too far away
+from the mainland for any form of help by now, so all your flailing and
+screaming assist you none and you drown.    
+~
+0 1310822 7
+S
+$~

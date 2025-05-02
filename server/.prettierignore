@@ -1,0 +1,11 @@
+node_modules/
+.next/
+schema.dump
+schema.sqlite.sql
+scripts/
+public/
+attached_assets/
+**/*.min.js
+*.lock
+yarn.lock
+styles/*.min.css

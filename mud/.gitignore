@@ -1,0 +1,35 @@
+# Build artifacts
+*.o
+/bin/
+/src/Makefile
+/src/config.h
+/src/make.log
+
+# Config and logs
+syslog*
+config.cache
+config.log
+config.status
+Makefile
+.killscript
+nohup.out
+
+# MUD runtime files
+badsites
+lib/etc/board.*
+pcount
+DELETED
+lib/house/*.house
+misc/bugs
+misc/ideas
+misc/typos
+log/*
+lib/etc/*
+
+# Potentially generated world index
+lib/world/index
+
+# Potential runtime status file
+status
+lib/text/clan/normal.clan
+lib/etc/players

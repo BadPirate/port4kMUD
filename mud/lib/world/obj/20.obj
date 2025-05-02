@@ -1,0 +1,278 @@
+#2001
+phoenix feather~
+the &rPhoenix's&n feather~
+The &rPhoenix's&y feather shines brightly through the darkness.~
+~
+1 268536841 16385
+0 0 -1 0
+2 100000 0
+A
+3 3
+A
+4 4
+A
+12 75
+A
+13 25
+A
+18 4
+#2002
+unicorn's horn~
+the &wUnicorn's&n horn~
+The &wUnicorn's&y horn glows with a soft white light.~
+~
+5 33606920 1
+2 5 7 11
+25 40000 0
+A
+2 1
+#2003
+three-elemental key~
+the &rt&br&yi&r-&be&yl&re&bm&ye&rn&bt&ya&rl&y key&n~
+A &rt&bh&yr&re&be&y-&re&bl&ye&rm&be&yn&rt&ba&yl&y key, of &rfire&y, &bice&y, and air, glows here.~
+~
+18 0 1
+0 0 0 0
+5 0 0
+#2005
+demon sword~
+the &BDemon Sword&n~
+The &BDemon Sword&n glints viciously in the light.~
+~
+5 33669128 1
+3 8 5 3
+10 1000000 0
+A
+19 3
+A
+17 -25
+#2006
+scaled key~
+a &gscaled&n key~
+A &gscaled&y key seems to coil here.~
+~
+18 0 1
+0 0 0 0
+3 0 0
+#2007
+staff of lightning~
+the &MStaff of Lightning&n~
+The &MStaff of Lightning&y lies here.~
+~
+4 33604609 16385
+100 5 5 6
+8 30000 0
+#2009
+watery key water shimmering~
+the &bwatery&y key&n~
+A shimmering pool of &bwater&y flows in the shape of a &bkey&y.~
+~
+18 0 1
+0 0 0 0
+3 0 0
+#2011
+helm truth~
+the &wHelm of Truth&y~
+The &wHelm of Truth&y glistens whitely.~
+~
+9 33604609 17
+10 0 0 0
+5 50000 0
+A
+6 2
+A
+12 20
+#2012
+ice shield~
+the &bIce Shield&n~
+The &bIce Shield&y glimmers coldly.~
+~
+9 1088 513
+10 0 0 0
+10 10000 0
+#2020
+lightning key~
+the &Mlightning&y key&n~
+A key shaped like &Mlightning&y sparkles here.~
+~
+18 0 1
+0 0 0 0
+10 0 0
+#2080
+xander's head~
+Xander's head~
+Xander's head drips blood grotesquely.~
+~
+13 0 16385
+0 0 0 0
+0 0 0
+#2081
+tooth dragon's~
+a dragon's tooth~
+A dragon's tooth gleams.~
+~
+13 0 5
+0 0 0 0
+10 0 0
+#2082
+list~
+list~
+A quest list lies here~
+You need to find the following and bring it to me:
+a piece of chalk
+a kitten
+an herbal
+a silk jacket
+a papyrus  note
+and a dragon's tooth
+~
+16 0 1
+0 0 0 0
+0 0 0
+#2083
+christmas stocking~
+a christmas stocking~
+A Christmas stocking merrily greets you.~
+~
+15 0 1
+1000 0 -1 0
+1 0 0
+#2084
+Burning Blade Dyrnwyn sword *~
+the &rBurning Blade&w Dyrnwyn&n *~
+The &rBurning Blade&w Dyrnwyn&n * is a smooth, obsidian blade surrounded by scorching flames.  I wouldn't suggest touching it...~
+~
+5 65608 8193
+4 8 5 3
+16 1000000 0
+A
+19 4
+A
+17 -20
+A
+18 3
+A
+19 3
+A
+18 4
+#2089
+turkey feather thanksgiving headdress~
+the Turkey Feather Headdress~
+A headdress made of long, colorful feathers is lying in the dust.~
+~
+9 65536 16401
+9 0 0 0
+3 5 0
+E
+turkey feather thanksgiving headdress~
+   This fancy headdress is made of turkey feathers and leather.  A leather
+headband is made to surround the head (it's even adjustable!  ).  In the back,
+numerous brightly-colored turkey feathers stick out in all directions, forming
+a circle.  A beautiful, if slightly strange, piece of armor.    
+~
+A
+18 3
+A
+19 1
+A
+24 1
+#2090
+closed repairs sign elementals~
+a "Closed for Repairs" sign~
+A sign hangs on a gate across the cave entrance.~
+~
+16 0 0
+0 0 0 0
+10000 0 0
+E
+sign~
+The sign reads in big letters, "Closed for Repairs."
+~
+#2091
+firebreather~
+the firebreather~
+A firebreather rests here.~
+~
+17 0 1
+10 10 7 100
+15 0 0
+#2092
+a humongous pile of gold~
+a humongous pile of &ygold&n~
+A humongous pile of &ygold&n lies here.~
+~
+20 0 1
+500000 0 0 0
+10 0 0
+#2093
+statue chorea zolom~
+the statue of the Chorea Zolom~
+A statue of the horrible Chorea Zolom rests here.~
+The statue creaks open slowly...
+~
+15 1 0
+5000 1 -1 0
+0 0 0
+#2094
+scale small~
+a small scale~
+A small polished scale rests here.~
+   I guard the &vChorea Swamp&n from all invaders...    
+~
+16 0 0
+0 0 0 0
+0 0 0
+#2095
+golden crown~
+a small golden crown~
+A small golden crown glows here.~
+   I am the &ymajestic ruler&n of all my scaled relatives.    
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+crown golden~
+   I am the &ymajestic ruler&n of all my scaled relatives...    
+~
+#2096
+champion's belt~
+the champion's belt~
+A strange belt is lying here...it looks very powerful.~
+   I am very strong, intelligent, and proud, quite capable of defending my
+&gcity in the trees&n
+~
+16 0 0
+0 0 0 0
+0 0 0
+#2097
+small chesspiece~
+the small chesspiece~
+A small chesspiece is lying here.~
+I can move anywhere I want to prevent &wCHECKMATE&n
+~
+16 0 0
+0 0 0 0
+0 0 0
+#2098
+toad~
+the hopping toad~
+A toad hops excitedly here.~
+Do you like mushrooms, because I'm a &GFUNGI&n!
+~
+16 0 0
+0 0 0 0
+0 0 0
+#2099
+invisible ring~
+the invisible ring~
+An invisible ring~
+~
+9 32 3
+-200 0 0 0
+0 0 0
+A
+18 60
+A
+19 60
+$~

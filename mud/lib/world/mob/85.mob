@@ -1,0 +1,105 @@
+#8500
+troll shopkeeper fraud~
+an ugly, dirty troll~
+A troll stands in the shadows darting nervous glances around him.
+~
+   His ears are long and pointed with hair growing out of them.  The hair is
+flaked with ear wax and dead flies.  His skin is an olive green color and
+covered with acne and warts.  It's lucky for him troll women are attracted to
+ugly.  His pungent smell surely keeps them coming back for more.  He is dressed
+in several layers of rags that are practically decaying off his body.    
+~
+778264 32 700 E
+100 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+E
+#8501
+backstreet boy number 1~
+&rBackstreet Boy Number 1&n~
+&rBackstreet Boy Number 1&n is trying to deafen you.
+~
+Ack!  It's a BACKSTREET BOY!  Kill it!
+~
+172170 128 -1000 E
+40 14 -6 1d1+5000 30d8+20
+30000 0
+8 8 1
+E
+#8502
+backstreet boy number 2~
+&bBackstreet Boy Number 2&n~
+&bBackstreet Boy Number 2&n attacks you with a foul noise.
+~
+ACK!  It's a BACKSTREET BOY!  Kill it!
+~
+172170 128 -1000 E
+40 14 -6 1d1+5000 5d8+20
+3000 0
+8 8 1
+E
+#8503
+backstreet boy number 3~
+&cBackstreet Boy Number 3&n~
+&cBackstreet Boy Number 3&n is the gay one.
+~
+ACK!  It's a BACKSTREET BOY!  Kill it!
+~
+172170 128 -1000 E
+40 14 -6 1d1+5000 5d8+20
+30000 0
+8 8 1
+E
+#8504
+backstreet boy number 4~
+&gBackstreet Boy Number 4&n~
+&gBackstreet Boy Number 4&n is screeching like a harpy into a microphone.
+~
+ACK!  It's a BACKSTREET BOY!  Kill it!
+~
+172170 128 -1000 E
+40 14 -6 1d1+5000 5d8+20
+30000 0
+8 8 1
+E
+#8505
+backstreet boy number 5~
+&mBackstreet Boy Number 5&n~
+&mBackstreet Boy Number 5&n is trying to kill you by his guitar playing.
+~
+ACK!  It's a BACKSTREET BOY!  Kill it!
+~
+172170 128 -1000 E
+40 14 -6 1d1+5000 5d8+20
+30000 0
+8 8 1
+E
+#8506
+Gilgamesh man tall perfect~
+Gilgamesh~
+A tall man with perfect features stands here, radiating power.
+~
+Here stands Gilgamesh, the godling.  Bred two-thirds human, one-third God, he
+is truly the perfect man.  His presence bolsters your confidence, and you feel
+yourself awed in his gaze.  Feel lucky that he is on the side of Good, as are
+you.....  Aren't you?    
+~
+258312 4228 999 E
+99 0 -10 1d1+29999 30d20+35
+1000000 5000000
+8 8 1
+E
+#8510
+lan's germ~
+Lan's germ~
+Oh no!  It's the germ that DARED to attack an Immortal!  Kill the wretch!
+~
+A mass of cytoplasm and organelles, this bacteria looks ready to rumble.
+~
+174218 128 0 E
+75 10 -10 1d1+10000 6d4+20
+50000 0
+8 8 0
+BareHandAttack: 7
+E
+$

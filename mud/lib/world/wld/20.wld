@@ -1,0 +1,1960 @@
+#2000
+Entrance to the Elementals~
+   Right in front of you is a large entrance to a cave.  Wiffs of damp earth
+and strange, unearthly sounds float out of it on an errant breeze.  Could this
+be the famous cave of the Elementals?  The only place in the world where the
+four elements of life seperate into their individual forms: Earth, Air, Fire,
+and Water...    
+~
+20 1310789 4
+D0
+~
+~
+0 0 2008
+D2
+~
+~
+0 0 1711
+S
+#2001
+&MAir&n~
+   At last!  Water!!!  A pool of crystal clear water glitters like a jewel in
+the desert.  A most precious jewel, worth more than anything else you can think
+of.  There is even green about the pool, as plants battle against the desert
+sun and heat to live, and even conquer, the barren land about the pool.  
+However, it is strangely silent here, and no animals are about.  How strange...
+~
+20 1310785 2
+D0
+~
+~
+0 0 2030
+S
+#2002
+&MAir&n~
+   As you wander through the endless sands, you begin to seriously wonder if
+you will ever make it home.  After you had gotten lost at first, you had
+repeatedly tried the magical "Recall" command, your version of "There's no
+place like home...  ," but to no avail.  Some magical force holds you back.  
+Well, you can go north or east...  But neither way seems to lead out of the
+desert...    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2029
+D1
+~
+~
+0 0 2003
+S
+#2003
+&MAir&n~
+   As you stagger onwards through the shifting sands, your eyes water from the
+glare, and you wonder why you didn't stay at home and become a cooper as your
+mother always wanted you to be.  Just think...  You could be in the forest,
+selecting prime woods to use, cool as a cucumber.  Or you could be in your
+workshop, making fine barrels for the wealthiest customers.  No, you HAD to
+become an adventurer, and now you're stuck in this awful desert...    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2004
+D3
+~
+~
+0 0 2002
+S
+#2004
+&MThe Sandstorm&n~
+   Suddenly, you are surrounded by a swirling wind, and visibility disappears
+completely.  The flying sand stings your eyes and any exposed skin, gets into
+your mouth, making that awful gritty feeling, and slips into the most awkward
+crevasses in your clothes.  You stumble onward, hoping to find your way out of
+the storm, but when you can't see where you're going...    
+~
+20 1441857 2
+D0
+~
+~
+0 0 2028
+D1
+~
+~
+0 0 2003
+D2
+~
+~
+0 0 2027
+D3
+~
+~
+0 0 2005
+S
+#2005
+&MAir&n~
+   You suddenly find yourself in a dead end canyon.  The sandstone cliffs rise
+high above your head, providing shelter from the raging sandstorm, but also
+preventing you from escaping.  As you try to decide whether to stay here or
+venture back out into the storm, you notice there is a strange outline on the
+wall to the north...    
+~
+20 1310785 2
+D0
+~
+stone boulder~
+2 2020 2026
+D3
+~
+~
+0 0 2004
+S
+#2006
+&MAir&n~
+   Panting, you trudge onward through the slippery sand, seeming to make more
+progress backwards than forwards.  The sun, growing hotter by the second,
+creates shimmering heat waves that reflect back from the sand, washing over you
+with a second wave of heat.  Can you continue through this lifeless wasteland?
+~
+20 1310785 2
+D0
+~
+~
+0 0 2025
+D1
+~
+~
+0 0 2007
+S
+#2007
+&MAir&n~
+   A vast desert lies before you, the unending sand broken only by high
+sandstone cliffs that tower above you, marking the path.  A yellow sun glares
+balefully down on the world, quickly sucking all moisture away from you.  You
+do not feel welcome at all, in fact, are quite tempted to return to the
+shimmering yellow portal to your east.    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2008
+D3
+~
+~
+0 0 2006
+S
+#2008
+&kThe Elementals&n~
+   You have ventured deep into the cave, far from the pale light of day.  The
+darkness here overwhelms all, even your strong light, making it possible to see
+only a few feet ahead.  The walls are smooth here, with ancient symbols and
+runes the only things marring the glass-smooth surface.  To the north, the
+tunnel continues.  However, to the west, a shining barrier covers the entrance
+of the off-shoot of the cave...    
+~
+20 1310789 0
+D0
+~
+~
+0 0 2023
+D2
+~
+~
+0 0 2000
+D3
+~
+~
+0 0 2007
+S
+#2009
+&bWater&n~
+   As you idly watch the schools of fish swim by, you notice how avidly they
+try to avoid a strange, tentacled plant that floats gently in the motion caused
+by the current.  You watch, and discover you were wrong.  One tiny orange-and-
+white striped fish darts contentedly between and among the tentacles.  How
+strange that only one fish would take advantage of what looks to be a
+comfortable home!  Then, as one vicious fish begins to stock the little,
+clownish fish, it begins to dawn on you why most fish avoid the plant.  The
+anemone quickly stuns the predator, and both it and the clown fish feast...  
+~
+20 1310785 7
+D0
+~
+~
+0 0 2022
+D1
+~
+~
+0 0 2010
+S
+#2010
+&bWater&n~
+   As you continue to observe the life under the waves, you begin to realize
+how barren, how joyless life above is.  Below, camoflauge is being more
+brightly colored than everyone else, living is being in pleasant surroundings
+and good company, and purpose is to simply eat and love.  Below you, a group of
+squid make all of this clear in a dazzling mating display of bright,
+ever-changing colors as the males make their interest known to the females.  
+How can life above compare to that?    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2021
+D1
+~
+~
+0 0 2011
+D3
+~
+~
+0 0 2009
+S
+#2011
+&bWater&n~
+   You gaze further into the clear water.  It is so crystalline as to make it
+possible to see the floor of the ocean, deep below.  You squint, thinking that
+you see some kind of glint against the sand.  As you continue looking at the
+suspicious area, you begin to make out the shine of wave-washed, ancient coins,
+of gold and silver.  A treasure for the taking...  If only you could get down
+there....    
+~
+20 1310785 7
+D1
+~
+~
+0 0 2012
+D3
+~
+~
+0 0 2010
+S
+#2012
+&bWater Spout&n~
+   Suddenly, you find yourself swirling around in a maelstrom of wind and
+water.  You're in the middle of a water spout!  A tornado over water!  You
+swirl around and around, becoming more disoriented and dizzy by the second.  
+You paddle furiously, trying to go somewhere, anywhere, just to get out of this
+madhouse of spray and breeze and insensibility!  You can go in any direction,
+but which leads out?    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2014
+D1
+~
+~
+0 0 2011
+D2
+~
+~
+0 0 2017
+D3
+~
+~
+0 0 2019
+S
+#2013
+&bWater Spout&n~
+   Suddenly, you find yourself swirling around in a maelstrom of wind and
+water.  You're in the midle of a water spout!  A tornado over water!  You swirl
+around and around, becoming more disoriented and dizzy by the second.  You
+paddle furiously, trying to go somewhere, anywhere, just to get out of this
+madhouse of spray and breeze and insensibility!  You can go in any direction,
+but which one leads out?    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2017
+D1
+~
+~
+0 0 2013
+D2
+~
+~
+0 0 2017
+D3
+~
+~
+0 0 2012
+S
+#2014
+&bWater Spout&n~
+   Suddenly, you find yourself swirling around in a maelstrom of wind and
+water.  You're in the middle of a water spout!  A tornado over water!  You
+swirl around and around, becoming more disoriented and dizzy by the second.  
+You paddle furiously, trying to go somewhere, anywhere, just to get out of this
+madhouse of spray and breeze and insensibility!  You can go in any direction,
+but which one leads out?    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2013
+D1
+~
+~
+0 0 2044
+D2
+~
+~
+0 0 2014
+D3
+~
+~
+0 0 2017
+S
+#2015
+&bWater&n~
+   Amazingly, the channel suddenly closes off in a chamber walled by flowing
+water.  You are able to step out of your vessel and onto a platform made out of
+a slab of chilling ice.  A platform, made out of a bubble of translucent water,
+dominates the small room.  On it, a cyan blue throne made out of dead coral
+presides.  The room is surprisingly chilly after the warmth of the tropical
+afternoon...    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2016
+S
+#2016
+&bWater&n~
+   The current carries you onward, continually farther away from any hope of
+reaching land.  However, you feel no regrets at this.  You have seen many
+strange and beautiful sights down in the ocean.  For example, right below you a
+graceful manta ray majestically glides through the water as if it were air.  
+Deeper, a puffer fish darts around, mouthing with its parrot-like beak at
+everything resembling food.  Yet, when a small shark nudges up to it, it blows
+itself up, becoming an underwater pincushion, discouraging all predators.  The
+channel opens to the north and south.    
+~
+20 1310785 7
+D0
+~
+waterfall~
+2 2003 2045
+D2
+~
+~
+0 0 2015
+S
+#2017
+&bWater&n~
+   Suddenly, you find yourself swirling around in a maelstrom of wind and
+water.  You're in the middle of a water spout!  A tornado over water!  You
+swirl around and around, becoming more disoriented and dizzy by the second.  
+You paddle furiously, trying to go somewhere, anywhere, just to get out of this
+madhouse of spray and breeze and insensibility!  You can go in any direction,
+but which one leads out?    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2014
+D1
+~
+~
+0 0 2017
+D2
+~
+~
+0 0 2013
+D3
+~
+~
+0 0 2012
+S
+#2018
+&bWater&n~
+   You have come upon a small outcropping of rock that forms a shapely grotto
+down beneath.  Out of a myriad of holes in the rock, snake-like figures rock
+gently with the motion of the waves.  You begin to admire the scene, until you
+realize what those figures are.  Deadly, irritable, moray eels.  Not the
+pleasant scene it first appeared to be.  There is a channel to the nth.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2043
+S
+#2019
+&bWater&n~
+   A maelstrom of water surrounds you.  Your vessel swirls round and round
+helplessly.  You seem to be without hope, when you somehow _hit the bottom of
+the ocean_.  A clear strip of sand lies beneath your feet and walls of waves
+surround you completely.  A smooth, gray rock rests in the center of the sand
+strip, as if some kind of platform for something to rest upon...    
+~
+20 1310785 7
+D2
+~
+~
+0 0 2012
+S
+#2020
+&bWater&n~
+   The colorful reefs continue, providing a pleasant-looking, insurmountable
+barrier.  However, their presence insures that there is no boredom to the
+scene, providing a home for a myriad of creature under the sea.  The water is
+so crisp, so clear, that it is quite easy to see down into the depths, to see
+the brightly colored fish dart in and out of the coral, and the not-so-brightly
+colored predators that hunt them.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2041
+D3
+~
+~
+0 0 2021
+S
+#2021
+&bWater&n~
+   Speckles and stripes, spots and solid, the fish below you have examples of
+all colors and patterns.  They play out their lives in blissful unawareness,
+alerted to your presence only momentarily as your shadow briefly passes
+overhead.  You observe their lives in momentary envy, until a dark shadow
+suddenly darts out.  A shark, playing out its life, eating its fellows.  You
+shudder in awareness that all is not bliss in the waves below...    
+~
+20 1310789 7
+D1
+~
+~
+0 0 2020
+D2
+~
+~
+0 0 2010
+S
+#2022
+&bWater&n~
+   The floor of the reef begins to slope upward, making room for more shallows-
+prefering creatures.  A bed of clams lies right below you, numerous shells
+gaping open, sifting for food through the water.  A bright flash of color
+catches your eye, and all the clams snap shut suddenly.  A starfish slowly
+creeps along, feeling for food.  As it comes to a good-sized clam, it anchors
+itself and slowly, slowly, begins to pry it open...    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2039
+D2
+~
+~
+0 0 2009
+S
+#2023
+&kThe Elementals&n~
+   The smooth walls continue here, the only difference being that moisture
+gathers on them, eventually condensing and dripping to the floor, slowly
+carving channels into the wall, eventually obliterating the runes.  Something
+has been bothering you about this cave, and you finally realize what-there are
+no stalactites or stalagmites!  How odd...    
+~
+20 1310789 0
+D0
+~
+~
+0 0 2038
+D2
+~
+~
+0 0 2008
+D3
+~
+~
+0 0 2024
+S
+#2024
+&MAir&n~
+   The cave suddenly changes as you pass through a shimmering barrier and
+emerge into...a desert!  In the middle of a cave?  Strange as it is, a hot
+yellow sun gazes balefully down onto a dry expanse of cracked dirt and red
+sandstone cliffs that block your way everywhere but back the way you came...  
+~
+20 1310785 2
+D1
+~
+~
+0 0 2023
+S
+#2025
+&MAir&n~
+   The dunes begin to rise here, higher and higher.  However, far from
+providing relief from the heat, it only seems to increase it.  You remember,
+too late it seems, that heat rises, and the element Air seems to characterize
+that.  Your vision begins to take on a red tinge as the heat overcomes you...
+~
+20 1310785 2
+D0
+~
+~
+0 0 2036
+D2
+~
+~
+0 0 2006
+S
+#2026
+&MSlyph's Cavern&n~
+   You entered the room expecting a cave, possibly a way out of this endless
+desert, but instead, you have found a place of light and air.  A pleasant sun,
+not the monstrous demon from the desert outside, smiles benignly down on a
+cool, water-filled valley.  The walls of sandstone still rise above you, but no
+longer do they seem like a prison.    
+~
+20 1310785 2
+D2
+~
+~
+0 0 2005
+S
+#2027
+&MThe Sandstorm&n~
+   Suddenly, you are surrounded by a swirling wind, and visibility disappears
+completely.  The flying sand stings your eyes and any exposed skin, gets into
+your mouth, making that awful gritty feeling, and slips into the most awkward
+crevasses in your clotes.  You stumble onward, hoping to f crevasses in your
+clothes.  You stumble onward, hoping to find your way out of the storm, but
+when you can't see where you're going...    
+~
+20 1441857 2
+D0
+~
+~
+0 0 2028
+D1
+~
+~
+0 0 2034
+D2
+~
+~
+0 0 2027
+D3
+~
+~
+0 0 2004
+S
+#2028
+&MThe Sandstorm&n~
+   Suddenly, you are surrounded by a swirling wind, and visibility disappears
+completely.  The flying sand stings your eyes and any exposed skin, gets into
+your mouth, making that awful gritty feeling, and slips into the most awkward
+crevasses in your clothes.  You stumble onward, hoping to find your way out of
+the storm, but when you can't see where you're going...    
+~
+20 1441857 2
+D0
+~
+~
+0 0 2034
+D1
+~
+~
+0 0 2028
+D2
+~
+~
+0 0 2028
+D3
+~
+~
+0 0 2027
+S
+#2029
+&MAir&n~
+   It takes all of your will power to continue shuffling through the gritty
+sand, instead of falling to the ground and just dieing.  The grotesque sun
+sneers evilly down at you, sucking not only your body, but also your will dry.
+It's becoming far too much effort to continue the stuggle for life.  Air,
+though being one of the four elements necessary for life to exist, isn't a very
+hospitable one.    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2032
+D2
+~
+~
+0 0 2002
+S
+#2030
+&MAir&n~
+   The desert continues to bloom here, becoming more and more beautiful by the
+moment.  No longer does the hot sun above seem oppressive, or the sandstone
+cliffs like prison walls.  Instead, the sun is a giver of light, of life, the
+cliffs shelter from the storms of life.  The plant and animal life continue to
+increase.  In fact, you almost step on a rattlesnake.  The long trek in the
+lifeless desert has made you careless.    
+~
+20 1310785 2
+D0
+~
+iron gate~
+2 2003 2031
+D2
+~
+~
+0 0 2001
+S
+#2031
+&MAir&n~
+   The desert begins to make a drastic change for the better here, despite the
+uneasy feelings you felt in the area to the north.  A few rocks are scattered
+here and there, providing shade and shelter for a few small animals.  And to
+your left, is a small, withered cactus!  A plant!  That must mean that there is
+water and relief somewhere near!  Doesn't it?  The uneasiness in your heart
+grows as you contemplate the southern direction.    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2059
+D2
+~
+iron gate~
+2 2003 2030
+S
+#2032
+&MAir&n~
+   The sands seem to conspire against you, constantly slipping out from right
+under your feet, causing you to slip, and occasionally fall.  They jump into
+your clothes, you boots, you mouth and hair, making all movements a new
+experience in agony as the grains grind into your sunburned skin.  The
+sandstone cliffs hover aloofly, indifferent to your plight.  You can go east
+or south.    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2033
+D2
+~
+~
+0 0 2029
+S
+#2033
+&MAir&n~
+   The sandstone cliffs begin to change slightly here, becoming embedded with
+pieces of quartz and granite.  The fragments sparkle brightly in the sun,
+attempting to blind you, causing your vision to redden in all directions.  The
+harsh glare begins to give you a sun headache, causing all coherent thought
+except "I have to get out of here now!  " to flee from your head.    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2057
+D3
+~
+~
+0 0 2032
+S
+#2034
+&MThe Sandstorm&n~
+   Suddenly, you are surronded by a swirling wind, and visibility disappears
+completely.  The flying sand stings your eyes and any exposed skin, gets into
+your mouth, making that awful gritty feeling, and slips into the most awkward
+crevasses in your clothing.  You stumble onward, hoping to find your way out of
+the storm, but when you can't see where you're going...    
+~
+20 1441857 2
+D0
+~
+~
+0 0 2004
+D1
+~
+~
+0 0 2028
+D2
+~
+~
+0 0 2027
+D3
+~
+~
+0 0 2035
+S
+#2035
+&MAir&n~
+   Your skin begins to crack and turn red as the sun eagerly sucks all moisture
+from you.  You stagger across the shifting sands, searching for a way out of
+this maze of gritty sand and sandstone cliffs.  There seems to be the
+figurative "light at the end of the tunnel" to the north, or you can go to the
+east and west.    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2055
+D1
+~
+~
+0 0 2036
+D3
+~
+~
+0 0 2034
+S
+#2036
+&MAir&n~
+   You have risen far above much of the desert, and for a moment come up with
+the seemingly brilliant idea that you can map out the path out of this maze.  
+However, as you look off into the distance with the intention of finding the
+way, the image suddenly fogs over, as if someone, or something, is unwilling to
+let go...    
+~
+20 1310785 2
+D0
+~
+~
+0 0 2054
+D1
+~
+~
+0 0 2037
+D2
+~
+~
+0 0 2025
+D3
+~
+~
+0 0 2035
+S
+#2037
+&MIndra's Throne&n~
+   Finally, you have managed to reach the top of one of the sandstone cliffs.
+Of course, since the dune to the west was almost as high as the cliff, it
+wasn't as difficult as you thought.  Here is a barren plateau that shapes
+itself into the shape of a large throne...    
+~
+20 1310785 2
+D3
+~
+~
+0 0 2036
+S
+#2038
+&kThe Elementals&n~
+   The dripping of the water is becoming more incessant as the moisture in the
+air increases.  Here, the runes are worn away enough as to be almost illegible,
+even if you don't know the language anyway.  Pools of mineral-laden water
+collect at your feet as the small drops continue to slowly dissolve away the
+walls surrounding you.  The cave continues to the north and south.    
+~
+20 1310785 0
+D0
+~
+~
+0 0 2067
+D2
+~
+~
+0 0 2023
+S
+#2039
+&bWater&n~
+   You gently massage your temples, hoping for relief for the sharp headache
+that has suddenly come upon you.  The glare of the sun reflecting off of the
+water blinds you, and begins to redden your skin.  The continual spray as the
+waves hit the reefs and your boat has encrusted you with salt, and you absently
+begin to scratch in many places.  You head seems to pound with the word: water.
+Your tongue swells up, and the only coherent thought that you can come up with
+is "Water, water everywhere, and not a drop to drink...  "
+~
+20 1310785 7
+D1
+~
+~
+0 0 2040
+D2
+~
+~
+0 0 2022
+S
+#2040
+&bThe Sandbar&n~
+   The sloping floor has raised itself above water, leaving a strip of sand and
+sea grass that is too small to be called an island, too large to be called a
+sandbar.  Surprisingly, the sea grass isn't the tough, sharp weed that you
+normally come upon, but a soft, sea-green carpet that urges you to lie down in
+its softness.  The sand descends below water to the west.    
+~
+20 1310785 7
+D3
+~
+~
+0 0 2039
+S
+#2041
+&bWater&n~
+   Here, the river meets with the ocean in an almost indiscernable meld.  You
+have entered a region full of coral reefs and tropical marine life.  The reefs
+lay out a distinct pathway, preventing passage with their prescence, and the
+various marine life below prevents swimming.  After all, who would like to have
+a moray eel attached to their arm...    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2052
+D1
+~
+~
+0 0 2042
+D2
+~
+~
+0 0 2020
+S
+#2042
+&bWater&n~
+   The denizens of the deep proceed with their lives innocently as you watch
+them as you would a play.  A monstrous lion fish stalks its prey here.  
+Strange that they would name a fish after that fiercesome beast when the only
+mane it has is one of sharp, poisoned spikes.  However, it is almost as fierce
+a predator as a lion...    
+~
+20 1310785 7
+D1
+~
+~
+0 0 2043
+D3
+~
+~
+0 0 2041
+S
+#2043
+&bWater&n~
+   The gentle lapping of the waves as you smoothly move along the coral-defined
+passage soothes your troubled nerves.  As you continue watching the soap opera
+that makes up the lives of the citizens of the sea, you begin to believe more
+in their reality than yours.  After all, what is life without water?  The coral
+breaks away to the north, south, and west.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2048
+D2
+~
+~
+0 0 2018
+D3
+~
+~
+0 0 2042
+S
+#2044
+&bWater&n~
+   The gently flowing water ripples with the ebb and flow of the tides,
+creating spotted shadows on the ocean floor beneath.  Among the playing
+shadows, a monstrous hulk of a ship lies in its final resting place.  A massive
+chunck of hull has been torn out of it, and the items of its belly are spilled
+across the sand.  Fish dart in and out of the wreck, making it seem a lie that
+such a ship was once above water, like you.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2047
+D2
+~
+~
+0 0 2017
+S
+#2045
+&bWater&n~
+   A flash of movement catches your eye, and you watch as a shark circles a
+wounded fish.  The blood catches the attention of more and more, and soon, many
+of the huge fish are circling the injured one.  One by one, they dart in
+tearing flesh, ripping cartilage, and crunching bone.  Soon, red tinges the
+water and it becomes impossible to see the end of the poor fish's life.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2046
+D2
+~
+waterfall~
+2 2003 2016
+S
+#2046
+&bWater&n~
+   Strangely enough, the water becomes calm and smooth here.  The surface looks
+like glass, or ice, not the wave-ridden sea that you have been traveling on.  
+When you reach down to touch it, it feels like regular water, and a few ripples
+flow outward, but they are quickly quelled, and the water returns to glass.  
+It seems to be a scene frozen in time, in space, not part of this world...    
+~
+20 1310785 7
+D2
+~
+~
+0 0 2045
+D3
+~
+waterfall~
+1 2003 2047
+S
+#2047
+&bWater&n~
+   Suddenly, your vessel begins to rock violently as a disturbance from below
+attempts to overturn you.  As you struggle to stay afloat, hot water splashes
+over you, and bubbles of gas pop around you.  As you regain control, you look
+down, down, down through the waves to the ocean floor.  A distinct glow shines,
+red, gray.  It appears to be a heat vent, part of the reason this ocean is so
+warm.    
+~
+20 1310785 7
+D1
+~
+waterfall~
+1 2003 2046
+D2
+~
+~
+0 0 2044
+S
+#2048
+&bWater&n~
+   The graceful coral reefs that define the channel brightly try to distract
+from the equally-brilliant colored fish that swim beneath and among them.  So
+many species and kind of fish flit in and out of the shadow-speckled waters
+that it is impossible to say how many there are.  The reef opens up to the
+south and the west.    
+~
+20 1310785 7
+D2
+~
+~
+0 0 2043
+D3
+~
+~
+0 0 2049
+S
+#2049
+&bWater&n~
+   A shimmering blue portal glimmers and hums to the north, leading to yet
+another mystery.  In all other directions, a warm ocean filled with myriads of
+marine life spreads.  Brightly colored coral reefs make the region into a
+innocent seeming maze that still has the ability to confuse.    
+~
+20 1310785 7
+D0
+~
+~
+0 0 2071
+D1
+~
+~
+0 0 2048
+S
+#2050
+&bWater&n~
+   You have left the lake and entered a river that winds its way through a deep
+canyon, affording no way out.  You begin to smell salt on the breeze, and the
+water takes on a deep, azure blue as it begins to meld with the ocean to the
+south.  To the west is the marshy lake, and, perhaps, a way out of Water...  
+~
+20 1310785 7
+D2
+~
+~
+0 0 2041
+D3
+~
+~
+0 0 2051
+S
+#2051
+&bWater&n~
+   The waves lap gently at the sides of your boat, occasionally splashing up
+slightly, just enough to get you damp.  You have are deep in the middle of the
+lake, but off to the east, there is a faint haze on the horizon, perhaps
+heralding the arrival of land.  The lake is to the west.    
+~
+20 1310785 7
+D1
+~
+~
+0 0 2050
+D3
+~
+~
+0 0 2052
+S
+#2052
+&bWater&n~
+   You are through the blue barrier, which now lies to the west, cutting off
+all view of the cave you just left.  Now, however, you are in a vast, marshy
+lake, with no land in sight.  While rocks and weeds mark out your path, the
+water is far too deep to wade, or even swim in.  What lies beneath these
+endless waves, this deep, dark mystery....?    
+~
+20 1310785 7
+D1
+~
+~
+0 0 2051
+D3
+~
+~
+0 0 2067
+S
+#2053
+&MAir&n~
+   This is the edge of a seemingly endless desert.  Sand spreads itself out
+before you, mocking you.  It seems to taunt you to enter it, that it can and
+will destroy you.  To the east is a shimmering yellow barrier leading to the
+cave.  Will you answer the desert's mocking call?    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2067
+D3
+~
+~
+0 0 2054
+S
+#2054
+&MAir&n~
+   You are at the foot of a large sand dune that seems to reach the sky.  It
+seems like it would be almost impossible to reach the top of such a huge hill.
+Do you have the courage to try?  Of course, you could always take the coward's
+way out and take the easy route to the east...    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2053
+D2
+~
+~
+0 0 2036
+S
+#2055
+&MAir&n~
+   Thankfully, you are at the edge of the desert.  Its vastness astounds and
+overcomes you.  The heat from the flaming sun above you radiates off of the
+reflective white sand to boil you in your own blood.  The shimmering heat waves
+dance in front of your eyes in an effort to make you dizzy.  To the north, a
+shimmering barrier leads back to the blessed coolness of the cave.    
+~
+20 1310789 2
+D0
+~
+~
+0 0 2064
+D2
+~
+~
+0 0 2035
+S
+#2056
+&MAir&n~
+   A dead-end.  How...  Thoughtful of whoever made this oh-so-wonderful desert.
+You are beginning to think that if you ever meet the god who created this
+horror-ridden zone, you will give them a piece of your mind, even if it costs
+you your life.  How could they stick you with a dead-end, when all you need is
+a drink of water!?    
+~
+20 1310785 2
+D3
+~
+~
+0 0 2057
+S
+#2057
+&MAir&n~
+   You stagger onward, willing yourself forward with every ounce of strength
+you have left.  Suddenly, hope blossoms in your heart.  Is that a pool of water
+ahead of you!  For a moment, you just watch in awe as the sun ripples off the
+little wavelets.  However, the wait makes your thirst even stronger.  
+Laughing, you race towards the heaven-sent pool, throwing yourself in, to find
+yourself bathing in-sand!    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2056
+D2
+~
+~
+0 0 2033
+D3
+~
+~
+0 0 2058
+S
+#2058
+&MAir&n~
+   You stumble onward, rather disgusted with your own weakness.  Suddenly, you
+realize that the desert changes here.  The sand is slowly melting into
+rock-hard, cracked soil instead.  Piles of sand fill the crevasses, but, still,
+it is something of an improvement to be able to walk normally instead of
+slipping through the sand.  You can go east, but the cliff to the west seems
+somewhat suspicious...    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2057
+D3
+~
+~
+0 0 2059
+S
+#2059
+&MAir&n~
+   The concrete earth is scorched and blackened here, as if some huge
+explosion, or a monstrous bonfire had burned here.  Strangely enough, the black
+marks steadily ascend the cliffs.  What could cause a fire on vertical cliffs
+that are about 50 feet high?  You begin to feel uneasy, as if something has
+drastically changed for the worst in the desert.  You can go east, or venture
+south.    
+~
+20 1310785 2
+D1
+~
+~
+0 0 2058
+D2
+~
+~
+0 0 2031
+S
+#2060
+&gL&Mi&rf&be&n~
+   Life...  The combination of the four elements.  The balance and opposition
+of conflicting elements.  &MAir&n, the breathe of life or death, opposed to
+steadfast rock of &gEarth&n, which can either support life, or destroy it.  
+&rFire&n, the fuel and the destroyer, balanced by &bWater&n, the drink of Life,
+or the unopposable wave sweeping it away.  To the north, through a red portal,
+lies the unpredictable region of &rFire&n.    
+~
+20 1310789 0
+D0
+~
+~
+0 0 2089
+S
+#2061
+&gL&Mi&rf&be&n~
+   The tunnel ends abruptly in a circular chamber.  The air cools, almost to a
+bitter winter wind, and the heat of the fire crackling in the center of the
+room is quite welcome.  The combination of the cool air and the warmth of the
+fire make the necessity of both Air and Fire a more welcome prospect.  After
+all, didn't your teacher once tell you "That extremes are always bad.  It is in
+the middle that things become welcome.    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2062
+S
+#2062
+&gL&Mi&rf&be&n~
+   The heat becomes ever more intense as you continue through Life.  The walls
+seem about to melt and return to lava, ready to engulf you in the agony of
+burning to death.  The wind seems to laugh at you, quite content to make your
+life ever more uncomfortable with the stinging of sand and the hot breath of
+air in your lungs.  Yet, without Fire and Air, life would be impossible...    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2063
+D3
+~
+~
+0 0 2061
+S
+#2063
+&gL&Mi&rf&be&n~
+   The black walls glow a fierce red through the pores in the rock, emitting a
+violent heat.  Wind whistles between the cracks, blowing sand and dust up into
+your eyes from the floor beneath your feet.  It has become obvious why the
+runes are so faint here.  The wind and sand and heat constantly wear away at
+them, ruining them.  Life continues to both the east and west.    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2064
+D3
+~
+~
+0 0 2062
+S
+#2064
+&gL&Mi&rf&be&n~
+   The four elements: Earth, Air, Fire, and Water.  Without them, life is
+impossible.  Earth to support, Air to give the breath of life, Fire to fuel it,
+and Water to nourish.  While they combine and cooperate to create life, they
+also oppose each other.  Earth blocks Air, Air blows away Earth, Water douses
+Fire, and Fire steams away Water.  What miracle caused such opposites to come
+together to create life...?    
+~
+20 1310789 0
+D1
+~
+~
+0 0 2065
+D2
+~
+~
+0 0 2055
+D3
+~
+~
+0 0 2063
+S
+#2065
+&gL&Mi&rf&be&n~
+   The convulated tunnel winds its way onward, twisting in strange
+configurations.  The runes become more and more faint, from what you cannot
+tell.  The black rock surrounding you glows a faint red, causing you to realize
+that you are not just uncomfortable from the temperature, but you are sweating
+as well.  In the distance to the east, a violet glow shimmers.  To the west,
+Life continues.    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2066
+D3
+~
+~
+0 0 2064
+S
+#2066
+&gL&Mi&rf&be&n~
+   The tunnel of Life begins here.  To the east, a purple portal gleams,
+leading where?  To the west, Life continues, in all its strange and various
+forms.  The walls of the tunnel are made of porous igneous rock, through which
+a dry, hot wind rushes, causing you some slight discomfort at the temperature.
+Crude runes are chopped into the surrounding rock, in some unknown language.  
+~
+20 1310785 0
+D1
+~
+~
+0 0 1756
+D3
+~
+~
+0 0 2065
+S
+#2067
+&kThe Elementals&n~
+   Suddenly, the darkness gives up its absolute rule as a soft glow coming from
+three shimmering barriers pervades the area.  One, with a purple sort of shine,
+leads to the north.  Another, with an overall blue glow, leads to the east.  
+The other, with a yellow gleam, leads to the west.  All are completely opague,
+giving no clue as to what lies ahead...  Of course, you could be conservative,
+and run to the south with your tail between your legs.  But you wouldn't do
+that, would you...    
+~
+20 1310789 0
+D0
+~
+~
+0 0 1739
+D1
+~
+~
+0 0 2052
+D2
+~
+~
+0 0 2038
+D3
+~
+~
+0 0 2053
+S
+#2068
+&gL&Mi&rf&be&n~
+   Life-made up of four main elements.  Earth, Fire, Air, and Water.  All
+interact and blend to make unique combinations called people.  Here is one
+passage of life.  The walls have a deep green undertone to them and are covered
+with moisture.  To the west is a glowing violet portal.  To the east, Life goes
+on.    
+~
+20 1310789 0
+D1
+~
+~
+0 0 2069
+D3
+~
+~
+0 0 1743
+S
+#2069
+&gL&Mi&rf&be&n~
+   Life continues here.  The walls seems to become a brighter, more obvious
+green, that is beginning to overpower the dull, lifeless grey that once
+dominated.  You hear many echoes from dripping water.  It becomes impossible to
+tell the orignal sound from the reflections, there are so many.  The passage of
+Life continues to the east and west, and to the north is a mysterious green
+portal.    
+~
+20 1310789 0
+D0
+~
+~
+0 0 2080
+D1
+~
+~
+0 0 2070
+D3
+~
+~
+0 0 2068
+S
+#2070
+&gL&Mi&rf&be&n~
+   The tunnel of Life continues to meander it's way between the wet granite
+walls.  The soft dripping sound created by the drops of water oozing their way
+down the walls creates a soothing background to your stroll.  The pools formed
+by these drops are shallow, warm mirrors made to reflect your great image back
+to you.  As you gaze deeply into the eyes that are your own, yet are not, you
+begin to further realize what a wonderful creation Life is.    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2071
+D3
+~
+~
+0 0 2069
+S
+#2071
+&gL&Mi&rf&be&n~
+   The pleasant drip-drop of the water slithering down the walls follows you
+throughout the vast tunnel.  As you gaze around, you realize that the increased
+moisture has also increased the erosion.  The once deeply-cut runes are now
+shallow and worn, indecipherable, even to one who knows the language.  This
+brings to home the lesson that an old sage taught you once.  "While Life is a
+beginning, a creation, it is also a destroyer.  You cannot have one without the
+other....  "
+~
+20 1310789 0
+D1
+~
+~
+0 0 2072
+D2
+~
+~
+0 0 2049
+D3
+~
+~
+0 0 2070
+S
+#2072
+&gL&Mi&rf&be&n~
+   As you venture deeper into Life, the dripping begins to change.  It becomes
+more regular, more musical.  You look around wonderingly, for you realize that
+there are now the buds of stalactites and stalagmites forming everywhere.  
+Suddenly, you stumble as you come into a vast cavern that dwarfs anything you
+have ever seen before.  Bracing it are large 'tites and 'mites, the relatives
+of the smaller ones you saw back in the tunnel.  Some are so huge, so anchient,
+that they have grown together into a single graceful pillar.    
+~
+20 1310785 0
+D1
+~
+~
+0 0 2073
+D3
+~
+~
+0 0 2071
+S
+#2073
+&gL&Mi&rf&be&n~
+   You wander aimlessly through the gigantic recess of Life, gazing with
+awestruck bewilderment at the myriad of formations and stones that fill the
+cavern.  Crystals twinkle mysteriously in the faint glow of your light.  
+Ribbons line the walls and high ceilings.  Stalagmites grow in gorgeous and
+grotesque forms, from fairy castles to hideos beasts.  Far to the east, a small
+opening leads out of the cavern, or to the west you can go deeper into it...  
+~
+20 1310785 0
+D1
+~
+~
+0 0 2074
+D3
+~
+~
+0 0 2072
+S
+#2074
+&gL&Mi&rf&be&n~
+   As you enter the well-hidden offshoot of the tunnel of Life, a bright light
+blinds you.  When your vision clears, you find yourself standing in a monstrous
+cavern, so big as to dwarf any living creature.  Far, far above, a small
+opening lets in the sun.  The brightness is caused, however, by the myriad of
+crystal that almost totally makes up the walls of the place, reflecting and
+refracting the sun's light.  Faint rainbows shimmer everywhere.  However, there
+is no viable exit to be seen.    
+~
+20 1310785 0
+D3
+~
+~
+0 0 2073
+S
+#2075
+&gEarth&n~
+   The deciduous forest is rife with the sounds of animal life.  Birds sing
+sweetly in the trees.  You scare up a deer, which quickly bounds away.  You
+bask in the sense of life the forest exudes as you crunch your way through last
+year's leaves.  The path continues to the west towards the plain, or to the
+north, deeper into the forest.    
+~
+20 1310785 3
+D0
+~
+~
+0 0 2104
+D3
+~
+~
+0 0 2076
+S
+#2076
+&gEarth&n~
+   As you continue through the plain, you realize that it is nestled between
+two very different forests.  To the west is a great jungle, complete with
+canopy- dwelling creatures and vines.  To the east, however, is a deciduous
+forest, with common wood-land creatures.  How can such drastically different
+environments be so close together?    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2075
+D3
+~
+~
+0 0 2077
+S
+#2077
+&gEarth&n~
+   You have reached the edge of the forest jungle, which spreads out far into
+the distance to the west.  To the east, however, a wide grassland ripples in
+the slight breeze.  Far off, you can see huge herds of buffalo and antelope
+grazing peacefully.  A very pleasant scene, but does it hide anything...?    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2076
+D3
+~
+~
+0 0 2078
+S
+#2078
+&gEarth&n~
+   The eerie jungle seems to be lightning a bit here.  You can even see the
+occasional bits of sunlight striking the ground through the trees!  The strange
+silence and the heaviness it brings to your sould begins to lift, and you feel
+like laughing in delight!  The path continues farther to east, or you can go
+west.    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2077
+D3
+~
+~
+0 0 2079
+S
+#2079
+&gEarth&n~
+   The vast jungle continues, with only a small dirt path showing where to go.
+It leads to the north, east, or west.  Otherwise, thick vines and branches
+block the path off into the forest.  Occasionally, you can hear sounds from the
+wildlife living above, but mostly all you can hear is the sound of silence...
+~
+20 1310785 3
+D0
+~
+~
+0 0 2100
+D1
+~
+~
+0 0 2078
+D3
+~
+~
+0 0 2080
+S
+#2080
+&gEarth&n~
+   You are surronded by a plethora of flora and fauna as you find yourself deep
+withing Earth.  It is a literal jungle.  Vines hang down from impossibly tall
+trees that shield the earth from the harsh glare of the sun.  Screeches and
+sudden silences show where the realities of life are evident.  To the south is
+a glowing green portal, and Earth continues to the east and west.    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2079
+D2
+~
+~
+0 0 2069
+D3
+~
+~
+0 0 2081
+S
+#2081
+&gEarth&n~
+   The jungle continues here until it runs smack into a granite cliff.  The
+vines attempt to wrap around and hide the cliff, but to no avail.  The
+twittering and squacking from the within the trees seems to mock your
+stupidity.  The only visible path is to the east.    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2080
+S
+#2082
+&kThe Elementals&n~
+   The rock wall has changed here, becoming a combination of volcanic rock and
+ashes with chunks of granite embedded within.  The runes become cruder, almost
+illegible, as time breaks chunks away from the wall in strangely shaped chunks.
+A purple portal glows to the south, and the cavern continues to the north.    
+~
+20 1310785 3
+D0
+~
+~
+0 0 2097
+D2
+~
+~
+0 0 1749
+S
+#2083
+&rFire&n~
+   Gasping, you emerge from the flames into a burned area.  Blackened grass
+turns to charcoal under your feet.  The acrid smell of smoke overwhelms all.  
+Charred bones of animals that were too slow to get away poke grotesquely into
+the air.  In the distance, the flames continue to roar as they consume all in
+their path.  You are safe, for now, but you can't stay here forever!    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2096
+D3
+~
+~
+0 0 2084
+S
+#2084
+&rFire&n~
+   Suddenly, you find yourself surrounded by the raging flames of a fantastic
+praire fire.  Smoke fills your lungs, causing you to cough.  Your foot begins
+to burn, and you realize that you are standing on a coal.  Without meaning to,
+you begin to hop up and down in an effort to cool your foot, managing to look
+quite ridiculous.  You realize that you need to get out of here as quickly as
+possible if you care for your insignificant life.    
+~
+20 1310785 5
+D1
+~
+~
+0 0 2083
+D3
+~
+~
+0 0 2085
+S
+#2085
+&rFire&n~
+   You frantically rush from the deadly flames, only to find yourself in the
+heart of a burning building!  Charred boards collapse around you, and the
+structure creaks ominously.  Smoke collects around the ceilings, but as the air
+gets more and more filled, the smoke sinks down around you as a malevolent
+cloud.  Coughing, you crouch down near the floor, anything to try to get some
+breathable air in your lungs.  Blinking your watering eyes, you see possible
+exits from the blaze to the north, east, and west.    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2094
+D1
+~
+~
+0 0 2084
+D3
+~
+~
+0 0 2086
+S
+#2086
+&rFire&n~
+   You find yourself in the middle of a roaring kitchen fire.  The air is
+filled with the stench of melting plastic and burning wood.  Smoke billows
+everywhere, making it hard to see anything.  At first, you wonder what could
+have caused such a conflageration, but then you spot a pan on the stove.  From
+it is pouring the worst of the smoke.  The remains of something that was once
+edible, and the sizzling matter that surrounds it testify that this is a grease
+fire.    
+~
+20 1310785 5
+D1
+~
+~
+0 0 2085
+D3
+~
+~
+0 0 2087
+S
+#2087
+&rFire&n~
+   Suddenly, you scream in utter agony.  Dancing up and down on burning feet,
+you realize that you are standing right in the middle of a very large bed of
+coals.  You know your dad always wanted you to become one of those mystical
+coal walkers.  Now's your opportunity.  After all, all you see, to the east and
+to the west, is seemingly endless, bright, glowing, red coals.  Now, which way
+are you going to hop to?    
+~
+20 1310785 5
+D1
+~
+~
+0 0 2086
+D3
+~
+~
+0 0 2088
+S
+#2088
+&rFire&n~
+   Phew!  For once, it seems, you aren't being burned in one way or another!  
+You stand on firm, unburnt ground, covered with dried weeds.  Only the
+potential for a fire, not the actualy thing!  Far off in the distance, you see
+a towering mountain.  Strangely enough, a dark, ominous cloud hovers right
+above its summit.  Oh, no!  It can't be a volcano!  Can it?    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2091
+D1
+~
+~
+0 0 2087
+S
+#2089
+&rFire&n~
+   The hall of mirrors comes to an abrupt, and rather strange stop.  The
+mirrors go, go, go, until they come to a glimmering red portal, and then they
+disappear into nothing.  Sitting directly in front of the portal is a stone
+statue.  It appears to be of a cartoony-looking dragon, almost a cross between
+a turtle and a dragon.  And evil grin crosses its open mouth, and even as you
+watch, a fireball emits from its mouth and goes bouncing down the hallway.    
+~
+20 1310785 3
+D0
+~
+~
+0 0 2090
+D2
+~
+~
+0 0 2060
+E
+statue dragon~
+   It looks like a turtle-dragon.  Wait!  There's an inscription on the base of
+the pedestool which reads, "All hail the great king Bowser, ruler of the
+Koopas!  "
+~
+S
+#2090
+&rFire&n~
+   On and on the hall of mirrors continues.  Your image reflects back and forth
+countless times.  It's hard to even tell where you really are.  Suddenly,
+swoosh!  There goes another fireball past you, bouncing off of the walls.  And
+another!  You quickly duck the unexpected fireball that would have gladly made
+you into toast.    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2119
+D2
+~
+~
+0 0 2089
+S
+#2091
+&rSteam Fields&n~
+   Suddenly, a burst of hot gases surrounds you, and the smell of sulphur
+chokes you.  You're in the middle of a heat vent!  Coughing and choking, you
+stumble to and fro, trying to find your way out.  And in every direction, you
+are confronted by yet more walls of steam and gases, and tripped by more pumice
+and obsidian.  The steaming air sears through your lungs and makes every breath
+a new lesson in agony.  Your eyes water from the overwhelming smell of sulphur,
+and your nose runs from the irritation.  Will you ever be able to find your way
+out?    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2092
+D1
+~
+~
+0 0 2091
+D2
+~
+~
+0 0 2093
+D3
+~
+~
+0 0 2117
+S
+#2092
+&rSteam Fields&n~
+   Suddenly, a burst of hot gases surrounds you, and the smell of sulphur
+chokes you.  You're in the middle of a heat vent!  Coughing and choking, you
+stumble to and fro, trying to find your way out.  And in every direction, you
+are confronted by yet more walls of steam and gases, and tripped my more pumice
+and obsidian.  The steaming air sears through your lungs and makes every breath
+a new lesson in agony.  Your eyes water from the overwhelming smell of sulphur,
+and your nose runs from the irritation.  Will you ever be able to find your way
+out?    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2091
+D1
+~
+~
+0 0 2117
+D2
+~
+~
+0 0 2117
+D3
+~
+~
+0 0 2119
+S
+#2093
+&rFire&n~
+   A strange, twisted world lies ahead.  Vents open all around, belching hot
+gases and steam from far beneath the surface of the earth.  The earth rumbles
+uneasily, fortelling trouble to come.  A massive mountain dominates the distant
+horizon.  Strange, dark clouds gather close to it like chicks to a hen.  It
+seem rather sinister somehow.  As if some great destructive force lies within
+it.    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2116
+D3
+~
+~
+0 0 2092
+S
+#2094
+&rFire&n~
+   Fire!  Fire!  You find yourself in the midst of a giant forest fire.  The
+heat sears your lungs as you gasp for breathe.  Limbs come crashing down about
+your head.  Far above you, a great cloud of smoke blocks the sky and all light,
+making it seem as though it were night.  Blazing bushes block you at every
+turn, clutching at you desperately as they are subsumed in a fiery death.  You
+trip over charred branches, and cough as you breathe in clouds of soot.    
+~
+20 1310785 5
+D1
+~
+~
+0 0 2095
+D2
+~
+~
+0 0 2085
+S
+#2095
+&rFire&n~
+   On and on through the blazing brush you crash, only to find yourself still
+in' the midst of a raging forest fire.  Panicked animals stumble through the
+woods all around you, eyes rolling around frantically with the whites showing.
+A deer almost runs right into you, but you manage to dodge it.  The screams of
+creatures dying a burning death cry out above the roaring of the flames, and
+your heart cries out with the tortured animals.  What could be worse than a
+flaming death?    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2114
+D3
+~
+~
+0 0 2094
+S
+#2096
+&rFire&n~
+   Despite all your efforts, you are STILL in the midst of a raging fire that's
+sweeping a vast plain.  You can feel your skin grow hotter and hotter, raising
+in painful blisters, even blackening and flaking away.  Your armor, rather than
+providing more protection, is trapping the heat, burning your skin wherever
+they touch.  Frantically, you search for escape, but the only hope given you is
+that the flames lessen both to the north and the south.    
+~
+20 1310785 5
+D0
+~
+~
+0 0 2113
+D2
+~
+~
+0 0 2083
+S
+#2097
+&kThe Elementals&n~
+   As the pumice and lava rock continue to enclose you, the dry heat of the
+tunnel encroaches and you begin to sweat.  It seems that the source of the
+volcanic rock is still in existence, and fairly close at that.  What could have
+caused a structure like this cave?  A portal glimmers greenly from the east,
+and the cave continues north and south.    
+~
+20 1310789 0
+D0
+~
+~
+0 0 2112
+D1
+~
+~
+0 0 2098
+D2
+~
+~
+0 0 2082
+S
+#2098
+&gEarth&n~
+   You find yourself deep in a tropical forest.  Parrots screech overhead as
+they fight for a prime piece of fruit.  Monkeys chase each other through the
+canopy far above.  Vines stretch down towards the ground even as they suck t
+life from their host trees.  The smell of life pervades your senses as you
+drink in this vibrant green sight.  A glowing green portal is to the west, and
+the forest continues to the east.    
+~
+20 1310785 3
+D1
+~
+~
+0 0 2099
+D3
+~
+~
+0 0 2097
+S
+#2099
+&gEarth&n~
+   The heat and humidity of the vast rain forest press down on you, making
+progress difficult.  The sounds of the fauna in the treetops begins to seem
+mocking, as if your obvious difficulty is amusing to them.  Angered, you try to
+chop down one of the trees, but the hard wood resists your best efforts.  
+Exhausted, you give it up as a lost cause, and decide to continue onwards.    
+~
+20 1310785 3
+D0
+~
+~
+0 0 2110
+D3
+~
+~
+0 0 2098
+S
+$~

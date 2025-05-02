@@ -1,0 +1,46 @@
+#3201
+goat Maddie~
+a goat~
+A goat is standing here.
+~
+   The little goat wears a collar of twisted grass.  A small bit of tarnished
+metal hangs from the collar.  The word "Maddie" has been engraved on it.  The
+little white goat is a big brown spot on her right hip.    
+~
+266312 0 0 E
+20 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 10
+E
+#3202
+goat delphi~
+at goat~
+A little brown goat nibbles on whatever's nearby.
+~
+   The little brown goat wears a collar of twisted grass.  The name tag hanging
+from the collar says "Delphi.  " The goat has a darker brown spot over her left
+eye.    
+~
+262216 0 0 E
+14 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+BareHandAttack: 10
+E
+#3203
+goat kid~
+a kid~
+A baby goat stands here on trembling legs.
+~
+   The little baby goat is white with many brown spots all over its back and
+legs.  He wears a little collar of woven grass.  A small bell hangs from the
+collar, but it makes no sound as he moves around.    
+~
+24 0 0 E
+9 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+BareHandAttack: 10
+E
+$

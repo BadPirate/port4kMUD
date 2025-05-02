@@ -1,0 +1,203 @@
+#900
+boat leaky old~
+a leaky old boat~
+A decrepit looking boat is here.  It doesn't look like it will float.~
+~
+22 0 1
+0 0 0 0
+80 70 0
+E
+boat leaky old decrepit~
+   Its boards are badly warped and peeling away from the frame.  An attempt has
+been made to fill the gaps with pitch, but the boat will probably leak all over
+the place.  Only the very desperate would use such an unworthy craft.    
+~
+#901
+spindle glass blue~
+a glass spindle~
+A spindle made of blue glass sits here collecting dust.~
+~
+25 65537 1
+0 0 0 0
+17 34058 0
+E
+spindle glass magic~
+   The spindle is made from a clear, blue glass.  It shows no sign of wear.  
+No scratches marr its perfect surface save the runes cut into its rim.  The
+spindel glows with a soft, magic light.    
+~
+#989
+flower grass yellow monk herb~
+a &yyellow &Ymonk&n~
+A plant with a brilliant yellow flower grows here.~
+~
+12 4 1
+0 0 0 0
+3 300 0
+E
+grass monk yellow flower~
+   The flower's petals grow in such a way that it looks like a man dressed in
+robes, praying.  Perhaps this that is why this plant is known as the &yyellow
+&Ymonk&n.  Herbalists once believed yellow monk to be the cure for swamp fever,
+but no one catches the fever now and so this cannot be proven.    
+~
+#990
+jewel dark smoky~
+a dark jewel~
+A dark, smoky jewel lies here.~
+~
+9 35766848 17
+20 0 0 0
+13 200000 0
+E
+jewel dark smoky~
+   The dark jewel has been carefully cut to reflect the most light possible.  
+It's more smoky than black.  Very similar to obsidian, yet it is far too
+brilliant to be mere glass.  There's something menacing about this rock.  It's
+as if it hates you.    
+~
+A
+12 30
+A
+24 3
+A
+19 2
+A
+18 2
+#991
+jewel dark smoky~
+a dark jewel~
+A dark, smoky jewel lies here.~
+~
+9 31537664 16385
+10 0 0 0
+15 0 0
+E
+dark jewel smoky~
+   The dark jewel has been carefully cut to reflect the most light possible.  
+It's more smoky than black.  Very similar to obsidian, yet it is far too
+brilliant to be mere glass.  There's something menacing about this rock.  It's
+as if it hates you.    
+~
+A
+18 1
+A
+1 1
+A
+19 2
+#992
+steak moose meat~
+a moose steak~
+A huge, bloody piece of meat lies here.~
+~
+19 0 1
+24 0 0 0
+10 100 0
+E
+steak meat bloody moose~
+   It's a thick, bloody slab of meat that has been cruely ripped from a poor
+moose's body.  It is so raw, it could practically walk away from you.    
+~
+#993
+bush candle flower~
+a candle bush~
+A bush with flowers that look a lot like candles is growing here.~
+~
+12 0 0
+0 0 0 0
+50 0 0
+E
+bush candle flower~
+   The candle bush blooms at night.  During the day, its long, pale flowers are
+closed tightly, but at night their sweet scent fills the air.  The long, pale
+yellow stamen of the candle bush's flower looks like a candle wick.  Candle
+bushes have the sweetest smelling blossoms in the forest.  Unfortunately, the
+blossoms do not last long if they are picked.    
+~
+#994
+cattail root~
+a cattail root~
+A slightly dirty root is lying here.~
+~
+19 0 1
+12 0 0 0
+3 30 0
+E
+cattail root dirty~
+   The root is long, thick, and white.  It's a little dirty too.  No doubt it
+will taste starchy and boring in its raw state, but it will be filling.    
+~
+#995
+flower baron red herb~
+some &rred baron&n~
+A bright red flower blossoms in its nest of wide green leaves.~
+~
+12 4 1
+0 0 0 0
+3 20 0
+E
+flower red baron herb~
+   According to the legend of the &rRed Baron&n, this plant bore no blossoms up
+until the day of his death at the Battle of Black Forest.  The last drop of
+blood from the Baron's heart turned into a flower and it has been called &rred
+baron&n ever since.  The flower's petals overlap to form a perfect circular
+shape around the flower's red center.    
+~
+#996
+grass bloody feet herb spikey~
+some &Rbloody feet&n~
+A &Rspikey-leafed &ggrass is growing here.~
+~
+12 4 1
+0 0 0 0
+5 6000 0
+E
+grass bloody feet herb spikey~
+   The &Rrust red&n leaves have the bare hint of stripes running along the
+length of the ridged leaves.  The tall grass grows in thick clumps of thirty or
+more stalks each.  It is tall enough to reach the waist of a giant.    
+~
+#997
+shrub puff fluffy herb rism~
+a &Wpuff shrub&n~
+A shrub with fluffy white puffs on it is here.~
+~
+25 4 1
+997 2231 2232 0
+7 1000 0
+E
+shrub puff fluffy white~
+   Puff shrub has a dark green leaf and a woody stem.  Puff shrub is usually
+the first flower to bloom in spring.  Its pale blue blossoms can be seen in the
+forest clear into the summer.  Puff shrub seeds are protected by a fluffy white
+covering that can be woven into a fine, sheer cloth called rism.    
+~
+#998
+mushroom stripe grey~
+a grey-stripe mushroom~
+A mushroom with a stripped grey stem is growing here.~
+~
+19 0 1
+6 0 0 0
+4 10 0
+E
+mushroom grey stripped~
+   The grey-stripped mushroom is a pale grey color.  Small, light brown spots
+fleck the cap, but it is the dark grey stipes on its stem that gives the
+mushroom its name.  Grey-strippes have a very bland flavor and an unpleasant
+texture but are filling and eatable.    
+~
+#999
+mushroom cap white~
+a white cap mushroom~
+A mushroom with a round, white cap grows here.~
+~
+19 0 1
+7 0 0 0
+2 5 0
+E
+mushroom white cap~
+   The blindingly white mushroom has a round, fat cap.  The white cap mushroom
+is said to have a pleasant nutty flavor and is often used in soups and stews.
+~
+$~

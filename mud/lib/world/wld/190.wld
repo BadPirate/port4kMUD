@@ -1,0 +1,1017 @@
+#19000
+Entrance to the Elven City~
+   You stand at the entrance ot the grand Elven city.  The Millenium
+tree has formed its branches into large, strong platforms for the
+elves to build their buildings on.  The Millenium tree also provides
+protection from the elements from the higher up branches.  To your
+north an opening in the trunk of the tree allows entrance into the
+very heart of the Millenium tree.  To the east and west is a road
+that is suspended above the ground by the tree, or you can climb
+down a ladder below you.
+~
+190 0 0
+D0
+~
+~
+0 0 19001
+D1
+~
+~
+0 0 19031
+D3
+~
+~
+0 0 19008
+D5
+~
+~
+0 0 19032
+S
+#19001
+Before the Opening~
+   You now stand in between the Tavern of Hope, and the Elven 
+Courier.  To the north of here the tree has formed an opening 
+in its trunk allowing peole entrance to the heart of the tree.
+Southwards, you may exit back out onto the suspended streets
+of the Elven City.
+~
+190 0 1
+D0
+~
+~
+0 0 19002
+D2
+~
+~
+0 0 19000
+S
+#19002
+Inside the Tree~
+   You are inside the tree standing in a hallway that was formed
+by the tree itself.  The walls are old and ancient ringed countless
+times for this tree is aeons old.  To the south you may exit the
+tree, and to the north is the Elven temple.
+~
+190 28 0
+D0
+~
+~
+0 0 19005
+D2
+~
+~
+0 0 19001
+S
+#19003
+The Elven Jail~
+   Crime is very low in the city of the elves, but just in case
+they do have a single jail cell to the west.  Most of the time
+this is just the place where the elven guards chose to hang out
+and waste time.  The chief of the elven guard has an office to 
+the east.
+~
+190 8 0
+D0
+~
+~
+0 0 19022
+D1
+~
+~
+0 -1 19004
+D3
+~
+cell~
+2 19024 19023
+S
+#19004
+The Chief's Office~
+   This is where the cheif occasionally has work to do.  Usually
+he just sits here in his chair sleeping for most of the day.  Of
+course with the low crime rate you can hardly blame him as his job
+must be really boring.
+~
+190 8 0
+D3
+~
+~
+0 -1 19003
+S
+#19005
+The Elven Temple~
+   You are now in the very heart of the tree, you can feel the
+rythem of its life coursing through your veins.  The ceiling is
+far above the surface you stand on, and the walls thrive with 
+the pure energy of nature.  In the center of the temple is a
+pool of water that the tree provides so that the elves may drink.
+To the east can be found the Elven Donation Room, to the north
+is the Healing Room, and to the west is the Elven Commons.
+~
+190 524296 0
+D0
+~
+~
+0 0 149
+D1
+~
+~
+0 0 150
+D2
+~
+~
+0 0 19002
+D3
+~
+~
+0 0 19007
+D5
+~
+~
+0 0 19042
+D7
+~
+~
+0 0 19041
+S
+#19006
+The Druid's Room~
+   This is the place where the old druid lives.  He really loves
+nature, and the ceiling of his room is open.  In fact the trees
+seem to have parted so that he may gaze at the stars above.  The
+tree seems to really care about its inhabitants.
+~
+190 4 0
+D1
+~
+~
+0 0 19026
+S
+#19007
+The Elven Common Room~
+   This room is where the elves and tourists come to see about
+events and happenings around the realm.  There are comfotable
+places to sit all around the room, and a large bulliten board
+on the north wall.  To the east the Elven Temple can be found.
+~
+190 40 0
+D1
+~
+~
+0 0 19005
+D3
+~
+~
+0 0 3299
+S
+#19008
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  To the north is the
+Tavern of Hope.
+~
+190 0 1
+D0
+~
+~
+0 0 19016
+D1
+~
+~
+0 0 19000
+D7
+~
+~
+0 0 19009
+E
+runes obelisk stone~
+If you had been an old elven sage you might have known what the 
+runes told, but you are not, so this means nothing to you....
+~
+S
+#19009
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  Northeast of here
+is Quintor's General Store.
+~
+190 0 1
+D6
+~
+~
+0 0 19013
+D7
+~
+~
+0 0 19012
+D8
+~
+~
+0 0 19008
+S
+#19010
+The Eleven Armory~
+   Fine elven crafted armor is all around the room, there are all
+different types of armor for sale.  It is hard to decide what to
+buy, and the prices here aren't exactly cheap.  Make your decision
+wisely and quickly.
+~
+190 28 0
+D8
+~
+~
+0 0 19030
+S
+#19011
+The Elven Weaponsmith~
+   The weaponsmith definatly keeps himself busy making all these
+weapons.  They line the walls on ornate metal racks that are held
+in place by the walls themselves.  All the variety of swords makes
+you dizzy, and unable to make a decision.
+~
+190 28 0
+D6
+~
+~
+0 0 19025
+S
+#19012
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  To the east of here
+is the Elven Bank.
+~
+190 0 1
+D0
+~
+~
+0 0 19015
+D1
+~
+~
+0 0 19028
+D8
+~
+~
+0 0 19009
+S
+#19013
+Quintor's General Store~
+   This is Quintor's General Store, where he sells many items of
+varying usefulness.  The room is kept neat and clean, and you can't 
+find a spec of dust in the room.  His merchandise is genuine and
+real, and he sells at a fair price.
+~
+190 28 0
+D9
+~
+~
+0 0 19009
+S
+#19014
+The Magic Shop~
+   As you enter this store you feel a sensation in your stomach.
+Is there something wrong here or is it just the powers of all the
+magic in use?  All around this room you see objects of varying
+shapes and sizes.
+~
+190 28 0
+D7
+~
+~
+0 0 19020
+S
+#19015
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  Just to the east you
+can see that all the elven champions trophies are on display.
+~
+190 0 1
+D0
+~
+~
+0 0 19018
+D1
+~
+~
+0 0 19019
+D2
+~
+~
+0 0 19012
+S
+#19016
+The Tavern of Hope~
+   You are standing in the bar of the Tavern.  The bar is set against
+the northern wall, old elven writings, carvings and symbols cover its
+top.  A fireplace is built into the eastern wall, and through the door
+in the southern wall you can see the suspended path.  A roll and rock
+band is playing at the moment filling the tavern with music.  From 
+above you a lot of screaming can be heard, maybe someone is in trouble!
+~
+190 24 0
+D2
+~
+~
+0 0 19008
+D4
+~
+~
+0 0 19036
+S
+#19017
+Inside the fine house.~
+You stand in a large foaye whith large stairs leading up and doors 
+to the east and west.
+~
+190 8 0
+D1
+~
+~
+0 -1 19019
+D2
+~
+~
+0 -1 19015
+D3
+~
+~
+0 -1 19018
+D4
+~
+~
+0 -1 19020
+S
+#19018
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  East of here is the
+Elven Pawn shop where you may sell anything!
+~
+190 8 1
+D1
+~
+~
+0 0 155
+D2
+~
+~
+0 0 19015
+D6
+~
+~
+0 0 19020
+S
+#19019
+The Elven Champion's Trophy Room~
+   This is the grand trophy room of the elven champion.  On the
+walls of this room are various hunting trophies, as well as gifts
+that visitors have left for him.  He must truly be a great warrior
+to recieve all this attention from around the realm.  A grand stair
+winds through the ceiling to the throne room above.
+~
+190 8 0
+D3
+~
+~
+0 -1 19015
+D4
+~
+~
+0 0 1541
+S
+#19020
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  To the southeast is
+the magic shop of the elven city.
+~
+190 8 1
+D6
+~
+~
+0 0 19021
+D8
+~
+~
+0 0 19014
+D9
+~
+~
+0 0 19018
+S
+#19021
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.
+~
+190 0 1
+D1
+~
+~
+0 0 19022
+D9
+~
+~
+0 0 19020
+S
+#19022
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  South of here the
+elven guardhouse and jail may be found.
+~
+190 0 1
+D1
+~
+~
+0 0 19024
+D2
+~
+~
+0 0 19003
+D3
+~
+~
+0 0 19021
+S
+#19023
+The Cell~
+   This cell is made from stone, so the captor may not harm the tree
+in any way.  It can hold many different creatures from around the
+realm but usually sits here unused.  The guard room is just east
+of here through the bars.
+~
+190 8 0
+D1
+~
+cell~
+2 19024 19003
+S
+#19024
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.
+~
+190 0 1
+D3
+~
+~
+0 0 19022
+D8
+~
+~
+0 0 19025
+S
+#19025
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  You may gain entrance
+to the weaponsmith's shop just southwest of here.
+~
+190 0 1
+D7
+~
+~
+0 0 19024
+D8
+~
+~
+0 0 19026
+D9
+~
+~
+0 0 19011
+S
+#19026
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  Just west of here is
+the home of an old druid who has lived here for a long time.
+~
+190 0 1
+D2
+~
+~
+0 0 19027
+D3
+~
+~
+0 0 19006
+D7
+~
+~
+0 0 19025
+S
+#19027
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.
+   To the west of you the tree has formed branches into a stair
+case that leads into the upper reaches of the Millenium Tree.
+~
+190 8 1
+D0
+~
+~
+0 0 19026
+D2
+~
+~
+0 0 19029
+D3
+~
+~
+0 0 19044
+S
+#19028
+The Elven Bank~
+   You stand in the elven bank.  The walls are painted white and
+are accented with dark wood, and a natural wood ceiling.  All around
+you the air is permeated with the wonderful smell of MONEY.  The
+elven folk must be loaded!
+~
+190 28 0
+D3
+~
+~
+0 0 19012
+S
+#19029
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  West of where you stand
+is the Elven Master Guild, where anyone may practice and hone their
+skills.
+~
+190 0 1
+D0
+~
+~
+0 0 19027
+D3
+~
+~
+0 0 136
+D9
+~
+~
+0 0 19030
+S
+#19030
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  Northwest of here
+the armorsmith can be found with all of his magnificent wares.
+~
+190 0 1
+D6
+~
+~
+0 0 19029
+D7
+~
+~
+0 0 19010
+D9
+~
+~
+0 0 19031
+S
+#19031
+Branches of the Millenium Tree~
+   The branches beneath your feet are very strong, and after seeing
+the strength of the ladder, you come to trust the branches you walk 
+upon.  The branches twine together and form a tall railing at the
+edge of the branches to prevent the elves, and their tourists from
+falling over the edge to their sudden deaths.  To the north is the
+Elven Courier, where you may deliver messages to other citizens of
+the realm.
+~
+190 0 1
+D0
+~
+~
+0 0 19090
+D3
+~
+~
+0 0 19000
+D6
+~
+~
+0 0 19030
+S
+#19032
+High on the Ladder~
+   You are now very high above the ground, the small trees all blur
+together from this height.  Only a few feet above you is a round
+hole in the branches, easily big enough for you to climb through.
+What lay at the top is up to your imagination, but you can hear
+the sounds of creatures above you.
+~
+190 20 0
+D4
+~
+~
+0 0 19000
+D5
+~
+~
+0 0 19033
+S
+#19033
+On the Ladder~
+   This ladder is truely amazing, it is made from fibers of the
+Millenium leaves and is stronger than any steel you have seen. 
+Although it appears to be hanging rope, it is actually capable
+of holding your weight.  Above you the ladder continues, or you
+can easily climb down to the ground below.
+~
+190 20 0
+D4
+~
+~
+0 0 19032
+D5
+~
+~
+0 0 19034
+S
+#19034
+Before the Millenium Tree~
+   You stand in a large clearing as if all the trees have parted
+to recognize the magnificent Millenium Tree.  This tree towers
+above all others, and its tip reaches above the tallest clouds.
+A rope ladder hangs down from the lower branches of the Millenium
+Tree, but you cannot tell what lies at the top of the ladder.
+~
+190 20 2
+D2
+~
+~
+0 0 6110
+D4
+~
+~
+0 0 19033
+S
+#19035
+The Elven King's Throne Room~
+   This room is home to the Elven King, the ruler of this fine
+city.  This is where he spends most of his time, sitting here
+in his magnificent throne making decisions about all matters in
+his city.
+~
+190 12 0
+D5
+~
+~
+0 0 19019
+S
+#19036
+Atop the Stairs~
+   You now stand at the top of the stairs inside the elven tavern.
+Below you is the hustle and bustle of tavern life, while to the
+north of here is a large, iron door.  There is a slit in the door
+so that whoever is inside may look out, however it also gives you
+the opportunity to look in!
+~
+190 12 0
+D1
+~
+iron door~
+1 19031 19037
+D5
+~
+~
+0 0 19016
+E
+in slit door iron e ea eas east~
+Through the tiny slit in the door, you can see a very tacky room.
+~
+S
+#19037
+The Red Rose~
+   This is the place called the Red Rose, the elves attempt to hide
+its existance, but they still visit it often.  It is in fact a place
+where people can "buy" favors from elven women.  The room is very
+tacky, and you can understand why the elven people chose to hide it
+way up here.  The floor is covered in sheepskin that has been dyed
+an annoying red color.  There appear to be doors in all four cardinal
+directions.
+~
+190 262168 0
+D0
+~
+door~
+1 0 19038
+D1
+~
+door~
+1 19029 19040
+D2
+~
+door~
+1 0 19039
+D3
+~
+iron door~
+1 19031 19036
+S
+#19038
+A Bedroom~
+   This is one of the bedrooms in the whore house, where the elven
+maids take their customers.  The accomodations are simple, but very
+comfortable, and much can be said for the apparent cleanliness of
+this room.
+~
+190 262168 0
+D2
+~
+door~
+1 0 19037
+S
+#19039
+A Bedroom~
+   This is one of the bedrooms in the whore house, where the elven
+maids take their customers.  The accomodations are simple, but very
+comfortable, and much can be said for the apparent cleanliness of
+this room.
+~
+190 262168 0
+D0
+~
+door~
+1 0 19037
+S
+#19040
+The Master Bedroom~
+   This is where the harem mother, or a specified girl takes the
+towns "special" visitors.  This is a very plush and tasteful room,
+and offers a spectacular view of the realm.  You can see the city
+of Daggerfall a ways off to the west, and no one could possible see
+in.
+~
+190 1310744 0
+D3
+~
+door~
+1 19029 19037
+S
+#19041
+The Portal Room~
+   This is the place where the elven newbies can get to far away
+places that are hard for newbies to reach.  To the southeast is the
+Elven Temple.
+~
+190 0 0
+D5
+~
+~
+0 0 1400
+D8
+~
+~
+0 0 19005
+S
+#19042
+The Corpse Room~
+     You are in a room that smells badly of rotting corpses.  If your in
+here you're probably looking for yours.  There are a lot of slots in the 
+walls with various names on them when you enter a little demon rushes into
+the room opening one with your name on it.
+&rFor info on how corpse retrieval works type &bread info&r or &bhelp&n
+~
+190 156 0
+D4
+~
+~
+0 0 19005
+E
+info~
+Haden was added to prevent people from being able to steal other player corpses.
+However he does come at a price.  And the price goes by the following equation:
+price = (&gYour level&n-10) * 1000
+
+So, its free for the first 10 levels, and it costs you 1000 gold for each level
+afterwards.
+
+So then what if you cant afford it?  Then do a &bcorpse return&n and go get your
+own, back where you died.
+~
+S
+#19043
+The Realm of the Dead~
+     You are standing on what looks like the plains of hell.  But don't
+worry because it's all just a game you can return to the real world by
+meerly going up.
+~
+190 0 0
+D4
+~
+~
+0 0 19042
+S
+#19044
+Up the Millenium Stair~
+   You stand upon the sturdy branches of the millenium tree far above
+the Elven Kingdom.  Just above you is an opening leading inside the
+Millenium Tree.  Carvings in the wood are of many ancient Norse ruins
+of power and guidance.
+~
+190 28 0
+D1
+~
+~
+0 0 19027
+S
+#19045
+OPEN ROOM~
+Empty~
+190 8216 0
+S
+#19046
+OPEN ROOM~
+Empty~
+190 330380 0
+S
+#19047
+OPEN ROOM~
+Empty~
+190 270360 0
+S
+#19048
+OPEN ROOM~
+Empty~
+190 264716 0
+S
+#19049
+OPEN ROOM~
+Empty~
+190 264728 0
+S
+#19050
+OPEN ROOM~
+Empty~
+190 327688 0
+S
+#19051
+OPEN ROOM~
+Empty~
+190 262184 0
+S
+#19052
+OPEN ROOM~
+Empty~
+190 270336 0
+S
+#19053
+OPEN ROOM~
+Empty~
+190 264712 0
+S
+#19054
+OPEN ROOM~
+Empty~
+190 262300 0
+S
+#19068
+OPEN ROOM~
+Empty~
+190 2560 0
+S
+#19069
+OPEN ROOM~
+Empty~
+190 0 0
+S
+#19070
+OPEN ROOM~
+Empty~
+190 2572 0
+S
+#19090
+The Elven Courier~
+   This is a place where visitors and citizens alike come to 
+take care of their postal needs.  You can send a letter to
+any citizen of the realm from here.
+~
+190 28 0
+D2
+~
+~
+0 0 19031
+E
+sign~
+Rooms are expensive but good!  You may:
+
+   Offer - get an offer on a room - Time is in real life days.
+   Rent  - Rent a room (saves your stuff, and quits the game),
+           minimum charge is one day.
+
+
+                          MY WAY OR THE HIGHWAY
+                             PAY YOUR RENT!
+                WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
+~
+S
+#19091
+The General Store~
+   You stand inside what was once the general store of Cerilia, but
+is now just another broken building in Necropolis.  The furniture
+in this room is smashed, and all the equipment that was not looted
+lays broken and decomposing on the floor.
+~
+190 8 0
+S
+#19099
+Elven City Mob Chute~
+   This room is where Elven Mob's load when they get killed.  You should not be
+here mortal, leave at once, if your caught here you will be frozen!    
+~
+190 262144 0
+D0
+~
+~
+0 0 19008
+D1
+~
+~
+0 0 19012
+D2
+~
+~
+0 0 19015
+D3
+~
+~
+0 0 19018
+D4
+~
+~
+0 0 19021
+D5
+~
+~
+0 0 19024
+D6
+~
+~
+0 0 19026
+D7
+~
+~
+0 0 19027
+D8
+~
+~
+0 0 19029
+D9
+~
+~
+0 0 19031
+S
+$~

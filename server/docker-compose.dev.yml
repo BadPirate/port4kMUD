@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: nextstrap_dev_db
+    restart: unless-stopped
+    # Expose default Postgres port for host connectivity
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nextstrap_dev
+    volumes:
+      - nextstrap_dev_db:/var/lib/postgresql/data
+
+  mailhog:
+    container_name: nextstrap_mailhog
+    image: mailhog/mailhog:latest
+    platform: linux/amd64
+    restart: unless-stopped
+    # Expose SMTP and HTTP ports
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+
+  # Example app service with SMTP_URL configuration
+  app:
+    image: node:20-bullseye
+    container_name: nextstrap_dev_app
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      # Simplified email configuration with single SMTP_URL
+      SMTP_URL: smtp://localhost:1025
+      EMAIL_FROM: dev@example.com
+      NODE_ENV: development
+    depends_on:
+      - db
+      - mailhog
+  
+volumes:
+  nextstrap_dev_db:

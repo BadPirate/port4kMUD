@@ -1,0 +1,577 @@
+#500
+key~
+an old tarnished key~
+A rusty old key is resting here, slowly fading away.~
+This key has definatly seen better days.  After years of being outside,
+the rust has weakened the key making it very brittle.  Be careful not to
+break it.
+~
+18 12 1
+0 0 0 0
+1 0 0
+#501
+nest~
+a bird's nest~
+A long, twisting branch is sticking out of the rock, supporting the weight of a small bird's nest.~
+~
+15 0 0
+1 0 -1 0
+0 0 0
+#502
+key~
+a shiny brass key~
+A small door key made of shiny brass is here.~
+~
+18 12 1
+0 0 0 0
+0 0 0
+#503
+key~
+a tiny silver key~
+A very small silver key is here collecting dust.~
+~
+18 12 1
+0 0 0 0
+0 0 0
+#504
+key collar~
+a kitten's collar~
+There is a small collar here, it has something attached to it...~
+~
+18 8 1
+0 0 0 0
+0 0 0
+E
+key collar~
+This seems like a normal collar that you would put on a small kitten
+except it has a small key attached to it.
+~
+#505
+key~
+a large, iron key~
+A large iron key is here...wonder what it unlocks?~
+~
+18 12 1
+0 0 0 0
+0 0 0
+#506
+apple tree~
+an apple tree~
+A large apple tree has grown here, its trunk is strong, and it is anchored by gigantic roots.~
+All and all, this is a very ordinary apple tree.  The only thing that
+seems different is that it seems to be in better health than most you
+have seen.
+~
+12 0 0
+0 0 0 0
+10000 0 0
+#507
+quarterstaff quarter staff wooden~
+a Hardened Wood Quarterstaff~
+A sturdy, wooden quarterstaff is here on the ground, it has leather hand grips.~
+~
+5 50184 8193
+0 3 4 5
+3 17500 0
+A
+18 1
+A
+19 1
+#508
+tree bark armor~
+a suit of Darkened Tree Bark Armor~
+A suit of armor made from the bark of a tree is here, it looks strong!~
+~
+9 1032 9
+5 0 0 0
+10 15000 0
+A
+5 1
+A
+12 -15
+#509
+robe red silk~
+an elegant red silk robe~
+A long silken robe is here, it is dark maroon color.~
+~
+11 0 1033
+0 0 0 0
+1 1000 0
+A
+14 20
+A
+10 -10
+A
+24 10
+#510
+rosary beads necklace~
+a string of rosary beads~
+A small strand of holy beads is laying here on the floor.~
+~
+11 53504 5
+0 0 0 0
+1 2000 0
+A
+12 25
+A
+13 -5
+A
+18 -1
+#511
+small wooden cross~
+an Inverted Celtic Cross~
+A small celtic cross is here, it looks like it is used during holy ceremonies.~
+~
+1 288 16385
+0 0 -1 0
+2 10000 0
+A
+12 25
+#512
+priest pontiff hat~
+a Priest's Pontiff Hat~
+A funny looking hat is here, it looks kind of like a squid's head.~
+~
+11 53504 17
+0 0 0 0
+3 10000 0
+A
+12 25
+#513
+winged helm helmet~
+a Winged Helm~
+A magnificent helm is here with startling white wings on the temples.~
+~
+9 8224 17
+8 0 0 0
+7 50000 0
+A
+18 2
+A
+19 2
+#514
+sign~
+an ancient sign~
+An ancient sign is here by the hole, better read it!~
+~
+12 0 0
+0 0 0 0
+0 0 0
+E
+sign~
+     "BEWARE!  Below lies the icy maze, it is a dangerous place and
+      and should not be navigated by those who are weak of will and
+      unsure of themselves.  For the maze is a vast land of ice and
+      is guarded by the creature of your nightmares.  You have been
+      WARNED!"
+  
+                                                   -Sedrik J. Arlin
+~
+#515
+band ring~
+&bthe Band of &BA&bn&Bn&bi&Bh&bi&Bl&ba&Bt&bi&Bo&bn&n~
+A huge platinum ring is here, it has ancient runes inscribed upon it.~
+~
+9 77832 3
+2 0 0 0
+1 0 0
+A
+18 3
+A
+19 3
+#516
+sign~
+a sturdy sign~
+A sturdy sign is here, it appears to be well maintained.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+E
+sign sturdy~
+*-----------------------------------------------------------------------*
+*    Before you on this path lies the city of Necropolis.  There is     *
+*    a hex upon this city, and those who inhabit it are no longer       *
+*    human.  The town has become predominatly undead for unseen         *
+*    reasons, and will remain that way till the end of time.  BEWARE,   *
+*    for entering the city is certain death, and there are unknown      *
+*    forces involved here.                                              *
+*                                                                       *
+*                         YOU HAVE BEEN WARNED!!!                       * 
+*-----------------------------------------------------------------------*
+~
+#517
+artisan well fountain~
+the artisan well~
+An artisan well is merrily bubbling over its sides.~
+~
+23 0 0
+100000000 100000000 15 0
+100000005 0 0
+#518
+fountain blood~
+a cursed fountain~
+A grey stone fountain was cursed long ago, and now pours blood not water.~
+~
+23 0 0
+100000000 100000000 13 0
+100000005 0 0
+#519
+book tome necronomicon~
+&Kthe Necronomicon&n~
+The book of the dead is here, resting peacefully.~
+~
+11 124928 16385
+0 0 0 0
+5 0 0
+A
+12 50
+A
+18 5
+A
+19 5
+A
+9 10
+#520
+fresh corpse~
+a fresh corpse~
+A freshly killed corpse is here, it has been ripped up by the ghouls.~
+~
+15 0 0
+1 0 -1 0
+0 0 0
+#521
+bloody scrap paper~
+a bloody scrap of paper~
+A blood stained pice of paper here, it has something scrawled upon it.~
+~
+12 0 1
+0 0 0 0
+1 0 0
+E
+bloody scrap paper~
+Beware my friend, I am writing this note with the last of my strength
+for the vile creatures here have wounded me beyond healing.  So I leave
+you with what knowledge I have gained.  I hate to leave you a riddle,
+but it is the only way to ensure that it will not fall into the wrong
+hands.
+
+     "Color is both a key and an answer to the riddle..."
+     "Youth holds the knowledge that you seek..."
+
+Signed,
+Duncan Leoric
+~
+#522
+key~
+the cell key~
+A small key is here, it looks like it may be the key to a cell.~
+~
+18 4 1
+0 0 0 0
+0 0 0
+#523
+potion black~
+a Dark, Black Potion~
+A potion is here, it is darker than pitch.~
+~
+10 0 1
+50 28 52 0
+5 0 0
+#524
+corpse~
+the adventurer's corpse~
+The corpse of a lost adventurer is here, preserved by the cold.~
+~
+15 0 0
+10 0 0 0
+0 0 0
+E
+corpse~
+It is unknown by anyone how long he has been here, his corpse is
+still in miraculous condition.  Frost hangs off of his bristly
+beard and his finger is frozen pointing eastwards.
+~
+#525
+chain chains reason~
+the Chains of Reason~
+A set of elegant chains is here, they glow softly.~
+~
+9 3329 5
+7 0 0 0
+5 0 0
+A
+12 50
+#553
+redwood dresser~
+a small redwood dresser~
+A small redwood dresser is well carved and polished to a shine.~
+~
+15 0 0
+10 5 -1 0
+0 0 0
+#554
+stand~
+the preaching stand~
+A tall wooden stand is where the priest reads to the monks daily.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+E
+stand wood~
+Unlike many of the other things here, the stand is relatively plain
+and very uninteresting.  It is made with wood and fastened togethere
+with wooden pegs. 
+~
+#555
+sword blade apocalypse~
+&Rthe Bla&rde of Apo&Kcalypse&n~
+Laying here is a wicked looking sword that was made to slay creatures of evil.~
+Guarded for centuries the blade has laid hidden far below the surface
+waiting for the right hero to come and reclaim it.  The sparkling jeweled
+hilt is wrapped in a tight silken rope which stops at the platinum cross-
+guard.  The blade is made of black adamantite, and is virtually incapable
+of being destroyed.  The jagged flame-shaped blade is razor sharp, and
+the light gleams on its surface.
+~
+5 60847176 8193
+0 7 7 3
+16 1500000 0
+A
+17 -10
+A
+18 4
+A
+19 4
+#556
+elwood~
+a small note (elwood)~
+A small note is here, keyword is elwood.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note elwood~
+What a boring life for a sailor, all I seem to do is just sit here
+in this warehouse all day.  I dont even have anything to sell! *sigh*
+~
+#557
+teeth~
+a small note (teeth)~
+A small note is here, the keyword is teeth.~
+~
+16 0 1
+0 0 0 0
+0 1 0
+E
+note teeth~
+Oh woe is me, here i sit in the dungeon of this castle all alone.  Well,
+I guess thats what i get for murder.
+~
+#558
+relic~
+a small note (relic)~
+A small not is here, the keyword is relic.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note relic~
+What a lazy creature he is.  That fat old elf just sleeps all day
+long instead of training his soldiers...the nerve of some people.
+~
+#559
+smurf~
+a small note (smurf)~
+A small note is here, the keyword is smurf.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note smurf~
+What an odd creature, it looks as if it were part of a castle wall
+yet comes alive when attacked.
+~
+#560
+oboe~
+a small note (oboe)~
+A small not is here, the keyword is oboe.~
+~
+16 0 1
+0 0 0 0
+0 0 0
+E
+note oboe~
+Even though those guard dwarves look really serious, they spend a lot
+of time looking at nudie magazines.
+~
+#561
+xander quest token xqt (xqt)~
+(XQT)~
+A small platinum token is here, it has the letters XQT inscribed.~
+~
+13 2097152 1
+0 0 0 0
+0 0 0
+#562
+firebyrd magic breast plate~
+&RFirebyrd's &nMagic Breast Plate *~
+On the ground is a very special piece of eq that belongs only to Firebyrd.~
+~
+9 122889 9
+9 0 0 0
+10 0 0
+A
+12 30
+#563
+shirt~
+an "I survived Xander's stupid quest." t-shirt~
+A crappy t-shirt is here on the ground.~
+~
+9 94272 9
+9 0 0 0
+28 4000 1000
+A
+12 10
+A
+13 10
+#564
+blob living armor~
+a blob of living armor~
+A strange metallic blob is resting here peacefully, it pulses gently.~
+~
+9 68192 9
+10 0 0 0
+10 0 0
+A
+18 2
+A
+19 2
+A
+6 -2
+A
+5 -1
+#588
+swift kick ass~
+a swift kick in the ass~
+That's odd, a "Swift Kick In The Ass" is laying on the ground.~
+~
+0 4 1
+0 0 0 0
+0 0 0
+#589
+cocktail martini~
+a Martini (shaken, not stirred)~
+An elegant glass filled with vile liquid is here on the ground.~
+~
+17 0 16385
+9999 9999 8 0
+10004 0 0
+#590
+xander whip molestation~
+Xander's Whip of Molestation~
+A kinky looking leather whip is here.~
+~
+5 2 8193
+0 20 4 2
+0 0 0
+#591
+dynamite stick~
+a stick of dynamite~
+A strange stick is here with a fuse on it.~
+~
+1 0 16385
+0 0 0 0
+0 0 0
+#592
+slippers bunny pink~
+&Ma pair of pink bunny slippers&n~
+A pair of fuzzy bunny's are here, they look like they could be worn on your feet.~
+~
+11 0 65
+0 0 0 0
+0 0 0
+#593
+ng-e12 heavy plasma ejector~
+NG-E12 Heavy Plasma Ejector~
+A strange item is here on the ground.~
+~
+5 0 8193
+0 500 20 12
+0 0 0
+#594
+tome book 3~
+Xander's Tome 3 - A Guide to EasyColor~
+A dusty tome is here, instructing those in the use of EasyColor.~
+~
+12 0 1
+0 0 0 0
+1 0 0
+E
+tome book 3~
+These are the color codes used by EasyColor for adding color to anything.
+At the end of your color you must always use &&n to set the color back
+to normal or else the color will bleed through to the rest of the mud.
+
+Normal       Bold       Highlites       Effect
+  &r&&r&n          &R&&R&n           &1&&1&n             &f&&f&n
+  &g&&g&n          &G&&G&n           &2&&2&n             &u&&u&n
+  &y&&y&n          &Y&&Y&n           &3&&3&n
+  &b&&b&n          &B&&B&n           &4&&4&n
+  &m&&m&n          &M&&M&n           &5&&5&n
+  &c&&c&n          &C&&C&n           &6&&6&n
+  &w&&w&n          &W&&W&n           &7&&7&n
+  &k&&k&n          &K&&K&n
+
+NOTE:  In order to type the && you must type it twice.
+
+                                                     Tome Scribed by,
+                                                       &bXander&n
+~
+#595
+ne-c20 camouflage variable armor~
+NE-C20 Camouflage Variable Armor~
+A suit of armor is here strangely fading in and out of existance.~
+~
+11 0 9
+0 0 0 0
+1 0 0
+#596
+shelf library book~
+Xander's library shelf~
+A large bookshelf is here, it is clearly labeled Xander's Building Tomes.~
+~
+15 0 0
+300 0 -1 0
+0 0 0
+#597
+crack pipe~
+a crack pipe~
+A small metal pipe is here, it reaks of crack!~
+~
+1 1 16385
+0 0 0 0
+1 0 0
+#598
+gram meth crystal~
+a gram of crystal meth~
+A small translucent pill is here.  QUAFF ME!~
+$n ingests an entire gram of crystal meth and goes NUCKING FUTS.  $n 
+bounces off the walls and runs across the ceiling.  COOL!
+~
+10 0 1
+34 1 36 28
+0 0 0
+#599
+barge~
+Xander's War Barge~
+A HUGE boat is here, it is christened the "Deathstroke".~
+~
+22 0 1
+0 0 0 0
+0 0 0
+$~

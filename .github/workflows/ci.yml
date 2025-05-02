@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Port4kMUD CI
 
 on:
   push:
@@ -7,12 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
-  build_and_test:
+  build_and_test_server:
+    name: Build and Test Server
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [20.x] # Test against Node.js 20.x
+
+    defaults:
+      run:
+        working-directory: ./server
 
     steps:
     - name: Checkout repository
@@ -23,6 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn' # Cache yarn dependencies
+        cache-dependency-path: './server/yarn.lock'
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
@@ -30,18 +36,38 @@ jobs:
     - name: Run linters
       run: yarn lint # Ensure code style and quality
 
-    # Prisma schemas should be generated during the build or test setup if needed
-    # The setup-test-db.js script checks for generated schemas
-    # Ensure build:prisma-schemas is run if schemas aren't checked in
-    # - name: Build Prisma Schemas if necessary
-    #   run: yarn build:prisma-schemas
-
     - name: Build project
       run: yarn build
 
     - name: Run tests
       run: yarn test
       env:
-        # DATABASE_URL is set by the jest globalSetup script (setup-test-db.js)
-        # Add any other necessary env vars here if required by tests
         CI: true # Often useful to indicate running in a CI environment
+
+  build_mud:
+    name: Build MUD
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./mud
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install build dependencies
+      run: sudo apt-get update && sudo apt-get install -y build-essential
+
+    - name: Configure MUD
+      run: ./configure
+
+    - name: Build MUD
+      run: cd src && make
+
+    - name: Verify build artifacts
+      run: |
+        if [ ! -f "bin/circle" ]; then
+          echo "MUD build failed: bin/circle not found"
+          exit 1
+        fi

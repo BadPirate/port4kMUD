@@ -1,0 +1,369 @@
+#800
+eye glowing~
+a &Yglowing&n eye~
+A small &Yglowing&n eye lies on the ground roting away.~
+~
+1 65536 1
+0 0 100 0
+1 0 0
+A
+18 1
+#801
+helmet knowledge glowing~
+the helmet of knowledge~
+A brightly glowing helmet is siting on the ground here for someone to get.~
+~
+9 53249 17
+10 0 0 0
+0 28000 0
+A
+4 2
+#803
+chest~
+a chest~
+A small chest is siting here, with a lock that looks like a puzzle piece.~
+~
+15 32 0
+10 15 804 0
+10 0 0
+#804
+puzzle~
+a puzzle~
+A very confusing puzzle is here on the ground waiting to be solved.~
+~
+18 65710 16385
+0 0 0 0
+5 0 0
+A
+9 30
+A
+4 1
+A
+3 1
+A
+14 80
+#805
+flag victory~
+the &RFlag &Wof &BVictory&n  (look at it)~
+A puzzle shaped flag lies on the ground here.~
+~
+16 0 1
+0 0 0 0
+1 0 0
+E
+flag victory~
+   Somehow you have beat the labyrinth, got the key, and found the chest with
+the flag.  Feel honorned for it was not an easy task.  To claim your prize,
+take this flag to Olaf.    
+~
+#806
+potion smelly green~
+a smelly green potion~
+A small clear bottle, with some nasty looking green fluid in it, sits here.~
+~
+10 64 1
+50 28 36 33
+1 1000 0
+#807
+wand wooden rock~
+a wooden wand~
+A small wooden wand, with a rock tied to it, lies on the ground here.~
+~
+3 64 1
+100 5 5 7
+4 4500 0
+#808
+hide hydra~
+the hide of the hydra~
+A smooth grey colored pile of skin lies on the ground here.~
+~
+9 64 1025
+15 0 0 0
+10 15000 300
+A
+5 1
+A
+18 1
+A
+19 2
+#809
+corpse~
+a rotting corpse~
+A rotting corpse of a long dead roman worker lies on the ground here.~
+~
+15 0 0
+5 0 -1 0
+0 0 0
+E
+corpse~
+   This old corpse has been down here for a long time.  You'd think it'd be
+nothing but bone by now, but somehow it's still got flesh on it.  The corpse is
+so long gone though, that you can't even tell if it was male or female.    
+~
+#810
+ward key ~
+a ward of opening~
+A strange key in the shape of some sort of symbol lies on the ground here.~
+~
+18 12 1
+0 0 0 0
+1 0 0
+#811
+coffin stone ~
+a large and nicely decorated stone coffin~
+A large and nicely decorated stone coffin sits in the center of the room.~
+~
+15 256 0
+1000 5 -1 0
+0 0 0
+#812
+body corpse ~
+the corpse of a long dead Roman emperor~
+A very old mumified corpse lies on the ground here.~
+~
+15 65548 1
+20 0 -1 0
+20 0 0
+#813
+amulet necklace~
+an old and strange looking amulet~
+A very ancient and strange looking amulet lies on the ground here.~
+~
+18 65549 5
+0 0 0 0
+2 0 0
+E
+amulet~
+   This amulet is made from a very strange piece of stone.  The stone is
+perfectly smooth.  It's a dark green with a light glow to it, though it doesn't
+seem magical.    
+~
+#814
+coffin~
+an old coffin~
+An old and cracked stone coffin sits in the middle of the room.~
+~
+15 0 0
+200 5 -1 0
+0 0 0
+#815
+corpse~
+a corpse of a long dead Roman noble~
+A corpse of a long dead Roman noble lies on the ground here.~
+~
+13 12 1
+0 0 0 0
+5 0 0
+#820
+crystal eye dragon~
+a large black crystal containing a &rdragon's eye&n~
+A large crystal is laying on the ground here.~
+It's a large black crystal containing a dragon's eye.
+~
+9 67080 16385
+20 0 0 0
+5 0 0
+A
+18 6
+A
+19 6
+A
+2 1
+#830
+post note~
+a note about the DF Tournament fair~
+&G---{&RT&Bhe &RD&Baggerfall &RT&Bournament &RO&Bf &RC&Bhampions&G}---&n (look note)~
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+note~
+&G---{&RT&Bhe &RD&Baggerfall &RT&Bournament &RO&Bf &RC&Bhampions&G}---&n
+
+&MPresenting the Daggerfall tournament of champions!  A festival to 
+determine who truely is the best and most worthy of the land!
+There will be many fun events for all levels and ages.
+Possible events include:&n
+&YJousting 
+&YAll Out Brawl
+Archery Contest
+One on One Fights
+Tests of Knowledge
+Hunts 
+And much much more!
+&MEveryone throughout the land is invited to attend! There will be refreshments
+a band, a jester and more!  Come one come all!  
+And whoever the winners are shall recieve knighthood!
+&RAll furhter info will be posted on the tournament board, which
+is located south then east.
+You must also post a message saying you will be participating in order 
+to take part in the tourmant.
+&G--------------------------------------------------------------------&n
+~
+#850
+orb barbaria olga~
+&r&nthe &BOrb&n of &RBarbaria&n~
+Olga's Orb is laying here..please return it to her.~
+~
+9 67080 16385
+25 0 0 0
+5 0 0
+A
+18 6
+A
+19 6
+A
+9 15
+#851
+cluck~
+&YCluck, the Rubber Chicken.&n~
+Cluck is laying here..please return it to MSKing.~
+~
+5 65536 8193
+4 10 6 11
+16 0 0
+A
+17 -40
+A
+18 10
+A
+19 10
+#852
+bag holding~
+a bag of holding~
+A small sack lays on the ground here.~
+~
+15 0 16385
+9999999 0 -1 0
+1 0 0
+#853
+sphere neutrality msking *~
+the sphere of Neutrality~
+A sphere of dark and light combining to make true neutral lies on the ground.~
+~
+9 67080 16385
+25 0 0 0
+5 0 0
+E
+sphere~
+You see a swirly gray sphere.
+It has "MSKing" engraved on it.
+~
+A
+18 10
+A
+19 10
+A
+9 15
+#867
+cleaver rusty rusted~
+an old rusted cleaver~
+A rusty old cleaver is laying on the ground gathering dust here.~
+~
+5 65536 8193
+0 10 8 10
+3 0 0
+E
+cleaver~
+This is a secret weapon by Olaf.  Be well with it and enjoy.
+~
+A
+17 -10
+#890
+sword holy avenger~
+&WThe Holy Avenger&n~
+The most holy of swords lies on the ground here, waiting for one who is worthy.~
+~
+5 1202322753 8193
+0 5 11 3
+10 0 0
+A
+18 5
+A
+19 5
+A
+13 100
+#891
+long dark trenchcoat coat mafia~
+a long, dark trenchcoat with the word "Mafia" on it~
+Something ~
+~
+11 0 1033
+0 0 0 0
+0 0 0
+#894
+grail holy~
+&WA HOLY GRAIL&n~
+A small cup lays on the ground here.~
+~
+0 0 1
+0 0 0 0
+0 0 0
+#895
+ring moses holy~
+&WThe holy ring of Moses&n~
+A glowing white ring lies on the ground here.~
+~
+22 1149256961 3
+0 0 0 0
+1 45000 0
+A
+9 10
+A
+14 20
+A
+12 20
+A
+13 20
+#896
+note~
+a note~
+A note is hanging on the Labyrinth gate here (look note)~
+~
+16 0 0
+0 0 0 0
+0 0 0
+E
+note~
+&G-=&RThe Labyrinth is temporarily closed for remodeling&G=-&n
+~
+#897
+quest flag~
+&G-=&RA Quest flag!&G=-&n~
+&G-=&RA quest flag is stuck in the ground here&G=-&n~
+~
+8 2162692 1
+0 0 0 0
+0 -10 1000000
+#898
+sandals white~
+&WA pair of holy white Jesus boots&n~
+&WA pair of holy white sandals lie here, only to be worn by a Paladin.&n~
+~
+9 58848577 65
+15 0 0 0
+5 0 0
+A
+4 2
+A
+14 100
+A
+24 -50
+#899
+robes paladin~
+&WThe long white robes of a Paladin&n~
+&WSome long white robes lie here, only to be worn by a Paladin.&n~
+~
+9 58848577 9
+30 0 0 0
+10 0 0
+A
+4 2
+A
+12 50
+A
+18 2
+A
+19 2
+$~

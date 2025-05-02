@@ -1,0 +1,158 @@
+#18601
+sword goblin~
+a rusty goblin sword~
+A rusty goblin-sized sword is lying here.  Anyone want it?~
+~
+5 64 24577
+0 1 5 3
+4 20 0
+A
+19 1
+#18602
+vest goblin~
+a patched goblin vest~
+A goblin vest made of wierd patches is lying here wanting a home.~
+~
+9 0 9
+4 0 0 0
+4 15 0
+#18603
+helm helmet goblin~
+a dented goblin helmet~
+A goblin helmet with a big dent in it is looking for a head to cover.~
+~
+9 64 17
+3 0 0 0
+4 20 0
+A
+5 1
+#18604
+cloak dirty goblin~
+a dirty goblin cloak~
+A dirty old goblin cloak is lying here hoping to protect you from the weather.~
+~
+9 64 1025
+0 0 0 0
+2 100 0
+A
+17 -3
+A
+4 1
+#18605
+ring signet goblin~
+a goblin signet ring~
+A signet ring is lying here, waiting to prove you're a goblin.~
+~
+9 64 3
+3 0 0 0
+1 500 0
+#18606
+dagger goblin tin foil~
+a tinfoil goblin dagger~
+A goblin dagger made of tinfoil is lying here, wanting to be wanted.~
+~
+5 65 24577
+0 1 4 11
+1 15 0
+A
+19 1
+#18607
+collar dragon~
+a pet dragon collar~
+Someone's pet dragon has escaped and left his collar here.~
+~
+9 64 5
+0 0 0 0
+1 20 0
+A
+18 1
+A
+17 -1
+#18608
+key goblin~
+a wee little key~
+A key with a goblin's face on it is here.~
+~
+18 4 1
+1 0 0 0
+1 0 0
+#18609
+light jar~
+a brightly glowing jar~
+A jar of glowing fluid wants to brighten your day.~
+~
+1 65 1
+0 0 -1 0
+2 30 0
+A
+24 -1
+#18610
+horns horn troll bully~
+the Horns of the Troll Bully~
+The horns of the big ugly troll bully lie here.~
+~
+9 8192 17
+2 0 0 0
+8 100 0
+A
+1 1
+#18611
+hide skin troll bully~
+the smelly hide of the Troll Bully~
+The hide of the big ugly troll bully is lying here collecting flies.~
+~
+11 8192 1033
+0 0 0 0
+6 100 0
+A
+17 -6
+A
+13 15
+#18612
+leggings goblin~
+some worn goblin leggings~
+A pair of leggings with holes in the knees are here.~
+~
+9 0 33
+4 0 0 0
+4 200 0
+#18613
+sleeves goblin~
+some old goblin sleeves~
+A pair of sleeves with patched elbows are abandoned here.~
+~
+9 0 257
+4 0 0 0
+3 400 0
+A
+3 1
+#18614
+mace goblin~
+a broken goblin mace~
+A goblin mace with broken spikes is waiting here to be used again.~
+~
+5 65 8193
+0 2 6 7
+8 300 0
+A
+17 -2
+#18615
+A green squirrel~
+a cute green squirrel~
+A cute green squirrel (special god-item) is lying here.~
+it squeeks.
+~
+11 0 9
+0 0 0 0
+0 0 0
+A
+13 10
+#18616
+drum stick drumstick chicken food~
+a chicken drumstick~
+A yummy looking fried chicken drumstick is here to be eaten.~
+~
+19 0 1
+12 0 0 0
+0 0 0
+$~

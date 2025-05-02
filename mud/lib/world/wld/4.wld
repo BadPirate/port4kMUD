@@ -1,0 +1,1762 @@
+#400
+The Beginning of the Swamp~
+   The ground is muddy here and reeds and cattails are abundunt.  To the south
+is a trail through the woods.  To the north lies the Midgar Swamp.  A name with
+unpleasant connotations.  Strangely enough, the area is silent.  No birds sing,
+no hidden animal life distrubs the bushes.  Just stark silence...    
+~
+4 68 6
+D0
+~
+~
+0 0 401
+D2
+~
+~
+0 0 6071
+S
+#401
+The Swamp Proper~
+     This is the Midgar Swamp proper.  It consists of channels and
+hummocks.  It almost looks as if the hummocks could be moved around
+in an ever-changing maze.  Not a pleasant thought...
+~
+4 0 7
+D0
+~
+~
+0 0 414
+D1
+~
+~
+0 0 402
+D2
+~
+~
+0 0 400
+D3
+~
+~
+0 0 407
+S
+#402
+Midgar Swamp Southeast~
+     You are now deep in the swamp.  You can almost see the noxious stench
+rising from the rotting vegetative and animal material that is everywhere.
+You try holding your breath, hoping it gets better...
+~
+4 0 7
+D1
+~
+~
+0 0 403
+D3
+~
+~
+0 0 401
+S
+#403
+Midgar Swamp Southeast~
+     You continue through the maze-like swamp.  Huge hummocks surround you. 
+Only a small channel is passable.  Everywhere else, thick weeds and rotting 
+slime bar your path.
+~
+4 0 7
+D2
+~
+~
+0 0 404
+D3
+~
+~
+0 0 402
+S
+#404
+Midgar Swamp Southeast~
+     The swamp almost seems shallower here.  Is this a good thing?  More and 
+more cattails and reeds surround you, tangling you.  It is all you can do to
+force your way through the barely distinguishable channel.
+~
+4 0 7
+D0
+~
+~
+0 0 403
+D1
+~
+~
+0 0 405
+D3
+~
+~
+0 0 406
+S
+#405
+A Deadend~
+     Another dead end.  This swamp really seems to be a maze.  Will you ever 
+find your way out?  Back to sloshing through the weeds, the muck, the slimy
+dirty water.  Not much fun, is it?
+~
+4 0 7
+D3
+~
+~
+0 0 404
+S
+#406
+A Deadend~
+     You are at a dead end.  You cannot force your way through the mud and 
+muck any farther.  You will have to turn around and go back the way you came.
+That is, if you can manage to get back through the weeds...
+~
+4 0 7
+D1
+~
+~
+0 0 404
+S
+#407
+Midgar Swamp Southwest~
+     Swamp, swamp, and more swamp.  All you can see around you is swamp.  
+However, the stench seems to be clearing up a little.  Or is that just 
+wishful thinking...
+~
+4 0 7
+D1
+~
+~
+0 0 401
+D3
+~
+~
+0 0 408
+S
+#408
+Midgar Swamp Southwest~
+     You continue your way through the deadly swamp.  The water is clear here,
+but unexplained ripples issue forth on the crystal liquid, suggesting things
+unseen in the depths...
+~
+4 0 7
+D0
+~
+~
+0 0 409
+D1
+~
+~
+0 0 407
+D2
+~
+~
+0 0 411
+S
+#409
+The Trees Retreat...~
+     This is a strange area in the swamp.  Suddenly, all the huge trees and
+hummocks have retreated from the channel and you have a clear view of the
+sky.  Off to the west, you see smoke rising, as if from a house...
+~
+4 0 7
+D1
+~
+~
+0 0 410
+D2
+~
+~
+0 0 408
+S
+#410
+The Clearing~
+     This area is clear, up until the point the channel runs into a huge 
+boulder.  There is no going any farther this way.  You can still see the
+smoke cloud rising up in the west.
+~
+4 0 7
+D3
+~
+~
+0 0 409
+S
+#411
+The Swampy Ruins~
+     You see a bunch of huge stones in the water before you.  They are worn
+and eroded by the wind and water here in the swamp.  Is this all that remains
+of a vast civilization?  Is this what will happen to all things built by
+sentient beings?
+~
+4 0 7
+D0
+~
+~
+0 0 408
+D1
+~
+~
+0 0 412
+D2
+~
+~
+0 0 437
+D3
+~
+~
+0 0 413
+S
+#412
+The Swampy Ruins~
+     You have come upon some crumbled ruins of some ancient city.  All that
+is left of what must have once been a great empire is a few stone foundations
+peaking up from the reeds and water of the swamp.  
+~
+4 0 7
+D3
+~
+~
+0 0 411
+S
+#413
+The Swampy Ruins~
+     More ruins lie here.  They seem to be slightly more intact than those
+encountered previosly.  The once-square blocks are scattered about in a 
+random manner.  What could have caused such destruction?  Is it merely
+the ravages of time?
+~
+4 0 7
+D1
+~
+~
+0 0 411
+S
+#414
+Deep in the Swamp~
+     You are very deep in the swamp.  While you haven't lost your bearings as
+of yet, it would be very easy to.  The hummocks and trees all look almost
+exactly alike.  You'd better be very careful proceeding farther...
+~
+4 0 7
+D0
+~
+~
+0 0 415
+D2
+~
+~
+0 0 401
+S
+#415
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They seem different
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 415
+D1
+~
+~
+0 0 416
+D2
+~
+~
+0 0 414
+D3
+~
+~
+0 0 421
+S
+#416
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They seem...different
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 416
+D1
+~
+~
+0 0 417
+D2
+~
+~
+0 0 425
+D3
+~
+~
+0 0 415
+S
+#417
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They are...different 
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it 
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 417
+D1
+~
+~
+0 0 418
+D2
+~
+~
+0 0 417
+D3
+~
+~
+0 0 416
+S
+#418
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to 
+do?  The weeds seem to encroach upon your craft.  They seem...different 
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 418
+D1
+~
+~
+0 0 419
+D2
+~
+~
+0 0 418
+D3
+~
+~
+0 0 417
+S
+#419
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They are...different 
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 419
+D1
+~
+~
+0 0 420
+D2
+~
+~
+0 0 422
+D3
+~
+~
+0 0 418
+S
+#420
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They are...different 
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it
+be-poison?  Better not cut yourself...
+~
+4 68 7
+D0
+~
+~
+0 0 430
+D1
+~
+~
+0 0 421
+D2
+~
+~
+0 0 420
+D3
+~
+~
+0 0 419
+S
+#421
+Lost in the Swamp~
+     You are definitely lost in this horrendous swamp.  Where to go?  What to
+do?  The weeds seem to encroach upon your craft.  They seem...different
+somehow.  Sharper.  Deadlier.  What is that peculier sheen on them?  Could it 
+be-poison?  Better not cut yourself...
+~
+4 0 7
+D0
+~
+~
+0 0 421
+D1
+~
+~
+0 0 415
+D2
+~
+~
+0 0 421
+D3
+~
+~
+0 0 420
+S
+#422
+Midgar Swamp Northwest~
+     The swamp seems to be clearing up a little bit here.  The horrible smell
+of decay is no longer overpowering you as it was before.  There are even a 
+few wildflowers off to the side of the channel.  These bright yellow flowers
+lift your spirits.
+~
+4 0 7
+D0
+~
+~
+0 0 419
+D2
+~
+~
+0 0 423
+S
+#423
+Near a hut...~
+     You have stepped out of the channel onto an island isolated in the middle
+of the swamp.  You are standing on the edge of a meadow filled with beautiful
+wildflowers and butterflies.  To your south is a small hut.
+~
+4 0 2
+D0
+~
+~
+0 0 422
+D2
+~
+~
+0 0 424
+S
+#424
+Witch's Hut~
+     You have entered the hut.  It is a cheery place, with bright curtains
+and wall hangings everywhere.  Who would live in such a beautiful place in 
+the middle of such an awful one?   
+~
+4 0 0
+D0
+~
+~
+0 0 423
+S
+#425
+Midgar Swamp Northeast~
+     Here, the swamp is beginning to change.  It is no longer an oppressive,
+dying place, but a place of life.  You begin to hear sounds from various 
+birds and animals from all around you.
+~
+4 0 7
+D0
+~
+~
+0 0 416
+D1
+~
+~
+0 0 426
+S
+#426
+Midgar Swamp Northeast~
+     The swamp closes in around you, but not in an oppressive manner.  The
+trees, hung with Spanish moss, that before seemed so horrifying, now seem
+welcoming, like an old grandmother with long, tangled hair.  This is a very
+welcoming place, far different from most of the swamp.
+~
+4 0 7
+D1
+~
+~
+0 0 427
+D3
+~
+~
+0 0 425
+S
+#427
+Midgar Swamp Northeast~
+     Here is another area of the swamp that is warm and welcoming.  It seems
+a place of life.  You can hear the insect life all around you, crickets
+chirping, cicadas humming, and mosquitos buzzing.  Well, the mosquito part
+isn't warm and welcoming, but to get away from the rest of the swamp, it's
+worth the bites.
+~
+4 0 7
+D2
+~
+~
+0 0 428
+D3
+~
+~
+0 0 426
+S
+#428
+The Sunlit Clearing~
+     Here, the channel ends once again.  It is a beautiful spot.  The trees,
+with their clothes of vines and moss, stand as an elegant guard.  One streak
+of sunlight hovers down through the branches to rest on the edge of a 
+hummock, illuminating it...
+~
+4 0 7
+D0
+~
+~
+0 0 427
+S
+#429
+Midgar Canyon~
+     Here the channel ends at a high-walled, narrow-sided canyon.  The 
+channel widens as if something huge turns around here.  Very little light
+shines down through the top of the canyon.  It is very creepy here.
+~
+4 0 7
+D1
+~
+~
+0 0 430
+S
+#430
+Midgar Swamp~
+     Here, the channel changes.  It is bigger and smoother, as if something
+big continually travels here.  The weeds no longer choke the channel, but
+only hover at it's sides, as if trying to hide from something.
+~
+4 0 7
+D1
+~
+~
+0 0 431
+D2
+~
+~
+0 0 420
+D3
+~
+~
+0 0 429
+S
+#431
+Midgar Swamp~
+     The channel continues, clear and easy to pass through.  The water is
+growing muddier, and you can no longer see the bottom.  The weeds cower 
+back even farther than before, giving you an uneasy feeling.
+~
+4 0 7
+D1
+~
+~
+0 0 432
+D3
+~
+~
+0 0 430
+S
+#432
+Midgar Swamp~
+     The channel continues, clear and easy to pass through.  The water is
+growing muddier, and you can no longer see the bottom.  The weeds cower
+back even farther than before, giving you an uneasy feeling.
+~
+4 0 7
+D1
+~
+~
+0 0 433
+D3
+~
+~
+0 0 431
+S
+#433
+Midgar Swamp~
+     The ground begins to grow higher here.  While it is still very muddy, a
+boat is no longer needed to travel.  Where the channel would be, the ground
+is worn down to the bedrock, smooth as silk.  Something has obviously passed
+through here many times...
+~
+4 0 2
+D0
+~
+~
+0 0 436
+D1
+~
+~
+0 0 434
+D3
+~
+~
+0 0 432
+S
+#434
+Midgar Swamp~
+     The channel continues, clear and easy to pass through.  The water is
+growing muddier, and you can no longer see the bottom.  The weeds cower back
+even farther than before, giving you an uneasy feeling.
+~
+4 0 7
+D1
+~
+~
+0 0 435
+D3
+~
+~
+0 0 433
+S
+#435
+Sickly Clearing~
+     Here the channel ends abruptly in a mass of trees and vines.  These 
+trees are gnarled and twisted, with many of the limbs having been, it looks
+like, literally torn off.  The vines are an unhealthy, yellow color, as if
+they are not getting enough nourishment.  What an eerie place!
+~
+4 0 7
+D3
+~
+~
+0 0 434
+S
+#436
+Approching the cave~
+   The swamp has ended.  You breath in the fresh new fragrance of the clear
+meadow, grateful that you have something other than decay to smell.  To your
+north is a very large cave mouth.  Where does it lead?
+~
+4 68 2
+D0
+~
+~
+0 0 1700
+D2
+~
+~
+0 0 433
+S
+#437
+Ruins~
+   You have stepped out of the swamp and further into the stone ruins.  To the
+north, you see the swamp begin again.  To the south, you can see a massive city
+rising above the trees.  Strangely enough, however, you cannot hear anything
+but the local wildlife...    
+~
+4 68 2
+D0
+~
+~
+0 0 411
+D2
+~
+~
+0 0 438
+S
+#438
+Marble Avenue~
+   You are in the city proper.  That is, if you could call it that anymore.  
+The once-great city is in ruins.  Stones from buildings and walls litter the
+uneven cobble-stone streets.  The archway to the north is no longer filled with
+a gate, but with rotting splinters.  To the south the destruction continues,
+and you can enter one of the few standing buildings to the west.    
+~
+4 0 1
+D0
+~
+~
+0 0 437
+D2
+~
+~
+0 0 439
+D3
+~
+~
+0 0 458
+S
+#439
+Marble Avenue~
+   Here, the destruction continues.  Huge pieces of marble have been chipped
+out of the towering wall to the east.  You can barely make your way through the
+street because of the trash and refuse.  To the north is the beginning of
+Marble Avenue, and it continues to the south.    
+~
+4 0 1
+D0
+~
+~
+0 0 438
+D2
+~
+~
+0 0 440
+S
+#440
+Marble Avenue~
+   Here, the chaos has lessened.  Standing here, you can imagine how great and
+beautiful this now-nameless city once was.  You can imagine the walls scrubbed
+white and sparkling in the sunlight.  You can almost hear the babble of the
+people going to market.  But it is all gone now...    
+~
+4 0 1
+D0
+~
+~
+0 0 439
+D2
+~
+~
+0 0 441
+S
+#441
+Marble Avenue~
+   The brief respite from the horror of this city's end lies to the north.  
+Here, however, is evidence that perhaps it was not a natural occurence that
+caused the city's fall.  Great claw marks rend the walls to the east and the
+cobblestones beneath you.  The lintel stone of the building to the west has
+been pulled down, and only a small opening remains of the door.    
+~
+4 0 1
+D0
+~
+~
+0 0 440
+D2
+~
+~
+0 0 442
+D3
+~
+~
+0 0 461
+S
+#442
+Intersection of Marble and Granite~
+   Marble Avenue comes to an abrupt halt here.  Instead, a new road runs to the
+east.  However, the change of street names doesn't seem to have affected the
+destroyed city.  What you can see of it seems to be as bad as what you've
+already passed through.  A wall rises above you to the west and a smelly alley
+lies to the south.    
+~
+4 0 1
+D0
+~
+~
+0 0 441
+D1
+~
+~
+0 0 443
+D2
+~
+~
+0 0 464
+S
+#443
+Granite Boulevard~
+   Granite Boulevard doesn't seem to be in any better a shape than Marble
+Avenue.  Huge boulders have fallen from the huge wall, that is now to the
+north, and created pits and cracks in the worn cobblestones that cover the
+road.  The city seems to be beyond repair.    
+~
+4 0 1
+D1
+~
+~
+0 0 444
+D3
+~
+~
+0 0 442
+S
+#444
+Granite Boulevard~
+   Granite Boulevard runs straight both east and west, unwavering despite the
+horror that it has somehow survived.  To the south is an unmarked building,
+with huge chunks ripped from it as if some beast had been disturbed by its very
+existence...    
+~
+4 0 1
+D1
+~
+~
+0 0 445
+D2
+~
+~
+0 0 466
+D3
+~
+~
+0 0 443
+S
+#445
+Granite Boulevard~
+   Granite Boulevard continues its lone journey to the east here.  Far to the
+west, you can see where it meets with Marble Avenue.  Your footfalls echo
+loudly and hollowly through the empty streets.  Once many people lived here,
+but now you are the only person here...    
+~
+4 0 1
+D1
+~
+~
+0 0 446
+D3
+~
+~
+0 0 444
+S
+#446
+Granite Boulevard~
+   The destruction is continued here without a break.  Great gouges have been
+clawed out of the worn cobblestones beneath your feet.  The roof of the
+building to your south has been torn off in places and thrown to the ground
+around you.  The great wall to the north looks as if it has been attacked with
+a battering ram, with many of the huge boulders loosened from their mortar and
+pushed precariously out of position.  Granite Boulevard creeps its way east and
+west of here.    
+~
+4 0 1
+D1
+~
+~
+0 0 447
+D2
+~
+~
+0 0 468
+D3
+~
+~
+0 0 445
+S
+#447
+Granite Boulevard~
+   The wreckage almost blocks the road completely here, reminiscent of a
+barricade.  Great stones from the wall to the north create the foundation and
+rubble from the surrounding buildings top off the structure.  Granite Boulevard
+continues to the east and west.    
+~
+4 0 1
+D1
+~
+~
+0 0 448
+D3
+~
+~
+0 0 446
+S
+#448
+Intersection of Granite and Slate~
+   This is another intersection of the rubble-filled streets.  Granite
+Boulevard runs off to the west and Slate Street makes its way placidly to the
+north.  A small alley lies to the south, waiting to swallow yet more victims in
+its squalor...    
+~
+4 0 1
+D0
+~
+~
+0 0 449
+D2
+~
+~
+0 0 470
+D3
+~
+~
+0 0 447
+S
+#449
+Slate Street~
+   Here you are on Slate Street.  A very descriptive name, for here, the
+cobblestones are made of slices of worn slate.  To the south is the
+intersection of Slate and Granite, to the north, Slate Street continues, and to
+the east are the remains of a demolished building.    
+~
+4 0 1
+D0
+~
+~
+0 0 450
+D1
+~
+~
+0 0 473
+D2
+~
+~
+0 0 448
+S
+#450
+Slate Street~
+   The slabs of stone have been ripped from the earth here, creating a jagged
+pathway to the north.  It looks almost like an earthquake, except for the great
+gouges that were obviously caused by the same...source as those found on
+earlier ruins.  You can go farther south or north on Slate Street.
+~
+4 0 1
+D0
+~
+~
+0 0 451
+D2
+~
+~
+0 0 449
+S
+#451
+Slate Street~
+   Slate Street begins to narrow here, the huge walls to the west towering over
+you more than ever.  The worn cobblestones are cracked and pitted from the
+boulders torn out of the surrounding buldings, and, apparantly, thrown at the
+helpless citizens of this city.  You guess this from the leg you see under one
+of the huge stones.    
+~
+4 0 1
+D0
+~
+~
+0 0 452
+D1
+~
+~
+0 0 475
+D2
+~
+~
+0 0 450
+S
+#452
+Intersection of Slate and Temple~
+   Here Slate Street opens up again just in time to joins with a wide, marble
+avenue leading to the west.  The stench from the alley to your north makes you
+eager to contine your journey, whether it be to go on the road to the west, or
+on Slate Street to the south.    
+~
+4 0 1
+D0
+~
+~
+0 0 478
+D2
+~
+~
+0 0 451
+D3
+~
+~
+0 0 453
+S
+#453
+Temple Road~
+   You are in the middle of a wide road.  The cobblestones have been done in
+smooth, spotless white marble that shines coldly in the light.  The street,
+which continues to the west and meets Slate Street to the east, seems to be
+ascending a steep hill...    
+~
+4 0 4
+D1
+~
+~
+0 0 452
+D3
+~
+~
+0 0 454
+S
+#454
+Temple Road~
+   You have trudged your way partly up the hill, wondering where it leads.  
+The road is still continuing to the crest of the hill to the west, and leads
+downwards to the east.    
+~
+4 0 4
+D1
+~
+~
+0 0 453
+D3
+~
+~
+0 0 455
+S
+#455
+Temple Road~
+   This hill seems to continue indefinitely.  Its ascent grows steeper to the
+west, or you can descend in a gentler slope to the east.    
+~
+4 0 4
+D1
+~
+~
+0 0 454
+D3
+~
+~
+0 0 456
+S
+#456
+Temple Road~
+   Panting, you glance around.  The crest of the hill seems to be a short ways
+to the west.  Slate Street is a long ways to the east.  And to your south, is
+the wall...    
+~
+4 0 1
+D1
+~
+~
+0 0 455
+D3
+~
+~
+0 0 457
+S
+#457
+Temple Road~
+   You have reached the crest of the steep hill.  What a climb!  But-it was
+worth it for the sight you are now priviledged to see.  To the south you see a
+majestic temple peeking gracefully over the edge of the wall.  Its white marble
+spires and towers gleam brilliantly in the sunshine.  However, there seems to
+be no way to enter this sacred place...    
+~
+4 0 1
+D1
+~
+~
+0 0 456
+S
+#458
+Inside a House~
+   Here you seem to be in the ruins of a once-beautiful house.  A table with
+only three legs is lying upside down on the floor.  Broken porcelain dishes lay
+scattered around.  Torn rags lie in the corners.  What disaster precipitated
+this destruction?
+~
+4 1 0
+D1
+~
+~
+0 0 438
+D2
+~
+~
+0 0 459
+E
+dishes~
+   The fine dishes have been smashed into fine bits of dust.  It's certainly
+not feasible to eat off of them any more...    
+~
+S
+#459
+A Bedroom~
+   This was once a palatial bedroom.  A feather mattress has been thrown to the
+floor and slashed.  Dirty, listless feathers are spread all over the room.  
+The expensive silkent sheets and woolen comforter have been smeared with dirt
+and thrown on the ground.  It is a depressing sight.    
+~
+4 1 0
+D0
+~
+~
+0 0 458
+S
+#460
+The Inn's Hallway~
+   Here is where the inn's myriad guests proceeded up to the inn's second floor
+and to their rooms.  Now the rickety stairway seems to barely hold itself up,
+and would likely be unable to hold your weight as well.  To the south is the
+ruins of the common room.    
+~
+4 17 0
+D2
+~
+door~
+2 2199 461
+D4
+~
+~
+0 0 496
+S
+#461
+The Inn's Common Room~
+   You are in what was once the common room of an inn.  Smashed tables and
+splintered chairs are tossed in every direction.  A small platform where bards
+must have performed has been caved in.  The chimney has collapsed, and no fire
+will ever again warm its hearth.    
+~
+4 1 0
+D0
+~
+door~
+2 2199 460
+D1
+~
+~
+0 0 441
+D2
+~
+~
+0 0 462
+S
+#462
+The Kitchen~
+   This is where cooks once presided over boiling pots and pans and serving
+girls scurried about with orders.  This was once the inn's kitchen.  Now,
+however, the larder has been opened and its contents smeared around the room in
+an orgy of destruction.  What is this though?  The food isn't old and
+petrified, but fairly fresh, not even decomposing yet...
+~
+4 1 0
+D0
+~
+~
+0 0 461
+S
+#463
+Inside the Slums~
+   Trash and refuse abound in this small lean-to that is supported by the
+still-strong city walls.  Surprisingly, this seems to be the only place that
+you've found so far that is untouched.  Whoever or whatever had a grudge
+against this town didn't think the slums were even worth the effort...    
+~
+4 1 0
+D1
+~
+~
+0 0 464
+S
+#464
+The Alley~
+   Unfortunately, this city had its slums, just like any other.  You are now
+standing in the middle of one of them.  Trash and rags are scattered in the
+dark, smellly corners.  To the north is the intersection of Marble Avenue and
+Granite Boulevard.  To the west are the remains of a small house.    
+~
+4 256 1
+D0
+~
+~
+0 0 442
+D3
+~
+~
+0 0 463
+S
+#465
+Inside the Ruins~
+   Here the destruction is not quite as complete.  A desk is overturned in the
+corner.  Papers litter the surrounding area, many of them with stamps and
+foreign addresses.  Was the once the Post Office, perhaps?  Or was it merely a
+merchant's business office?  You will never know.    
+~
+4 1 0
+D1
+~
+~
+0 0 466
+S
+#466
+Inside the Ruins~
+   You are in a room that is in utter chaos.  Shredded cloth is scattered every
+which way.  Ragged claw marks are impressed upon the once-stalwart stone walls.
+It is impossible to tell what this room was once used for...    
+~
+4 1 0
+D0
+~
+~
+0 0 444
+D3
+~
+~
+0 0 465
+S
+#467
+The Armour Shop~
+   This is the inner room of the armour shop.  From the remains of the
+contents, it must have been the living quarters and workshop of the armourer.
+Half-finished pieces of equipment lay scattered and a small cot is tipped over
+in the corner, the frame smashed beyond repair.  Broken tools hide in the
+shadows on the floor, waiting to trip and hamper you in your search for some
+sign of life.    
+~
+4 1 0
+D1
+~
+~
+0 0 468
+S
+#468
+The Armour Shop~
+   To guess from the pieces of items that have been tossed about like a child's
+toys, this was once an armour shop.  Many hooks and nails jut out from the
+wall, waiting for helms and gauntlets to hang on them once more.  Dismembered
+dummies lay convulsed in the pain of their losses, no longer able to display
+chain and plate mail.  The entrance is to the north and a door is to the west.
+  
+~
+4 1 0
+D0
+~
+~
+0 0 447
+D3
+~
+~
+0 0 467
+S
+#469
+Inside the Slums~
+   From the looks of it, this was a bar manned and patronized by the poor of
+this city.  Broken down tables and benches line the walls, and a wet bar is
+situated on the far western wall.  The smell of wood alcohol pervades the
+scene, making you wonder how many of the patrons were killed by the attack, and
+how many were poisoned...    
+~
+4 1 0
+D1
+~
+~
+0 0 470
+S
+#470
+The Alley~
+   This alley obviously deserves its title of a slum.  Garbage rests
+everywhere, enfolding you in the odor of rotten fruit and rancid meat.  You are
+standing in something slimy, but you are afraid to see what it is.  In the
+midst of this filth are two miniscule dwellings that crouch among the shadows
+cast by their bigger and better siblings.
+~
+4 256 1
+D0
+~
+~
+0 0 448
+D1
+~
+~
+0 0 471
+D3
+~
+~
+0 0 469
+S
+#471
+Inside the Slums~
+   This small hut seems to have been the dwelling place of many people.  You
+guess this because of the many mats and cots lined and stacked up against the
+walls.  Now, however, the only inhabitent is a small, worn doll with one button
+eye missing and the other hanging only by a thread...    
+~
+4 1 0
+D3
+~
+~
+0 0 470
+S
+#472
+Inside the House~
+   Here are the remains of a what appears to be a sitting room.  The arms and
+legs of chairs have been flung carelessly around.  Shreds of tapestry dangle
+sadly from bent nails in the walls.  And...there are brown streaks smeared on
+the wall that look suspiciously like...blood!
+~
+4 1 0
+D0
+~
+~
+0 0 473
+S
+#473
+Inside the House~
+   You are in the entry room of what was a large, fine house.  Once elegant
+furnishings litter the floor in pieces.  Broken glass from the expensive
+lanterns crunch under your feet.  There are more rooms to the north and south,
+or you can exit the wreckage to the west.    
+~
+4 1 0
+D0
+~
+~
+0 0 474
+D2
+~
+~
+0 0 472
+D3
+~
+~
+0 0 449
+S
+#474
+Inside the House~
+   You have entered what was once a bedroom, but is now a chaotic room ridden
+with claw marks and blood.  Shreds of ravaged quilts and comforters helplessly
+drape the splintered remains of a huge bed.  A bent sword gives testimony that
+this house's inhabitents didn't die without a fight...    
+~
+4 1 0
+D2
+~
+~
+0 0 473
+S
+#475
+The Smithy~
+   Here are the remains of a once-successful smithy.  Racks, which once held
+onto the walls in order to display their wares, now decorate the floor with
+boards and splinters.  A glass case that apparently once held knives adds to
+the wreckage its shattered glass.  Apparently, weapons were an insufficient
+defence for the townspeople...    
+~
+4 1 0
+D0
+~
+~
+0 0 476
+D3
+~
+~
+0 0 451
+S
+#476
+The Smithy~
+   This seems to be a combined living quarters and workshop for the now-dead
+smith.  A padded mat lies in the corner while scraps of half-finished weapons
+litter the aisle between the mat and a worktable.  The destructor didn't even
+bother to further the devastation in this bare room.    
+~
+4 1 0
+D0
+A worn door leads to the forge of the smith.
+~
+door~
+1 0 477
+D2
+~
+~
+0 0 475
+S
+#477
+The Smithy~
+   This was the smith's forge.  The roof only covers a part of this room,
+giving it a courtyard-ish atmosphere.  The bellows have been shredded and flung
+about.  The huge hammers have been dislodged from their sturdy handles.  The
+anvil lies in a hole of its own making, waiting for
+someone to place it again in its proper place.  It almost seems indignant, as
+if insulted that someone would throw it about the room.    
+~
+4 1 0
+D2
+A battered door leads to the smith's shop.
+~
+door~
+1 0 476
+S
+#478
+The Alley~
+   The source of the foul odor that pervades the air here is obvious.  Garbage
+is piled almost to the eaves of the buildings that lean towards each other
+here, almost as if they are whispering about the intruder.  A small door leads
+to the west, almost as an afterthought.  The intersection of Slate and Temple
+is to the south.    
+~
+4 256 1
+D2
+~
+~
+0 0 452
+D3
+~
+~
+0 0 479
+S
+#479
+Inside the House~
+   You are in a plain, yet clean and well cared for room.  The havoc that fills
+the rest of the city has not entered here.  Is it just that the door is too
+small for the destructor, or is this a somehow untouchable place?  A worn mat
+rests near the doorway, inviting you to clean your feet of the filth from your
+travels.    
+~
+4 1 0
+D1
+~
+~
+0 0 478
+D3
+~
+~
+0 0 480
+S
+#480
+Inside the House~
+   Here a mass of cots line the walls.  Clean bedding is neatly folded around
+each.  A small footlocker rests at the foot of the cots.  What kind of place
+did this used to be?  A boardhouse?  A monastary?  An orphanage?    
+~
+4 1 0
+D1
+~
+~
+0 0 479
+D3
+~
+~
+0 0 481
+S
+#481
+Inside the House~
+   Here is the room of the master of the house.  A large bed, as neatly made as
+the cots, fills it.  A chest of drawers is on the opposite wall as the bed.  A
+wardrobe, carefully closed, is on the west wall.  Everything is austere, but
+well-cared for and kept clean and organized.    
+~
+4 1 0
+D1
+~
+~
+0 0 480
+D3
+Here stands a majestic oaken wardrobe...
+~
+wardrobe door~
+2 412 482
+S
+#482
+Inside the Secret Room~
+   You are inside the secret room of the house.  To the east is the wardrobe
+leading to the master bedroom.  There is a door to the west.  Strangely enough,
+there has been enough traffic through here to wear a path in the wooden
+floor...    
+~
+4 1 0
+D1
+A wooden door leading out of the wardrobe blocks your path...
+~
+wardrobe door~
+2 412 481
+D3
+~
+~
+0 0 483
+S
+#483
+Inside the Secret Room~
+   You suppress your feeling of excitement.  You seem to be getting closer to
+solving the secret of the city, maybe even finding out what happened to it.  
+You don't know why you think this.  Maybe it's just the set of very worn steps
+leading down, down, into the depths of the city...    
+~
+4 1 0
+D1
+~
+~
+0 0 482
+D5
+~
+~
+0 0 493
+S
+#484
+Inside the Temple Walls~
+   You have emerged into bright, warm sunlight.  Surprisingly, you are _inside_
+the temple walls.  They tower high above you.  Even craning your neck, you have
+trouble seeing their tops.  The temple entrance is to your south and the secret
+tunnel is down.    
+~
+4 0 1
+D1
+~
+~
+0 0 485
+D2
+~
+~
+0 0 487
+D5
+~
+~
+0 0 495
+S
+#485
+Inside the Temple Walls~
+   You are inside the gigantic temple walls, in a little nook between the wall
+and the gleaming temple.  A gracefully carved stone bench has been smashed in
+two, and long pots of flowers have been uprooted.  Apparently, even the temple
+was unable to escape the chaos...    
+~
+4 0 1
+D3
+~
+~
+0 0 484
+S
+#486
+Inside the Temple~
+   You are in a small side chamber beside the main temple dome.  It seems to be
+a place for private worship, containing a sculpted marble bench and a small
+white altar.  The destruction evident in most of the city is non-existent in
+this holy place...    
+~
+4 188 0
+D2
+~
+~
+0 0 489
+S
+#487
+The Temple Entrance~
+   You have found the entrance to the majestic palace of the gods of this city.
+Statues of grand paladins and heros guard the massive oaken doors that creak
+outward to enfold those who come here to worship.  They have been balanced
+perfectly, so that, despite their size, you are easily able to move them.  The
+tunnel entrance is to the north, and the temple is to the east.    
+~
+4 0 1
+D0
+~
+~
+0 0 484
+D1
+~
+~
+0 0 488
+S
+#488
+Inside the Temple~
+   You are in the great entry hall of the beautiful temple.  Great spiralling
+columns support the massive ceiling.  Niches are set back into the walls
+between the columns, filled with statues of this city's pantheon.  To the west
+is the temple entrance, and to the east, the ceiling opens up into a huge dome
+in the main altar room.    
+~
+4 188 0
+D1
+~
+~
+0 0 489
+D3
+~
+~
+0 0 487
+S
+#489
+The Temple Sanctuary~
+   You have reached what is the center, not only of the temple, but of the city
+as well.  The opulence and majesty of this peaceful palace is only heightened by
+its ruined state.  Fluted columns spiral gracefully above you to support the
+majestic dome that tops the temple.  Sunlight glows through crystal skylights
+to highlight the center of the temple in a circle of radiant glory, which rests
+directly in front of you.  Soaking up the sunshine, a monument to a
+civilization now gone rests before you.    
+~
+4 168 0
+D0
+~
+~
+0 0 486
+D1
+~
+~
+0 0 490
+D2
+~
+~
+0 0 492
+D3
+~
+~
+0 0 488
+S
+#490
+The Back Door~
+   You are in a small hall in the back of the temple.  It leads to a passageway
+that follows the great surrounding wall.  Unlike the rest of the area, this
+passage seems to have an uncomfortable, unearthly chill to it...    
+~
+4 188 0
+D1
+~
+~
+0 0 491
+D3
+~
+~
+0 0 489
+S
+#491
+The Sinister Passage~
+   This passageway follows the towering wall that surrounds the temple.  It has
+an almost...sinister feeling to it.  To the west is the back door of the
+temple.  There is a dark, deep pool to your north.  Just looking at it seems to
+suck the LIFE right out of you.  YOU THINK THAT IT MIGHT BE BETTER TO STAY
+HERE...
+~
+4 0 1
+D0
+~
+~
+0 0 497
+D3
+~
+~
+0 0 490
+S
+#492
+Inside the Temple~
+   Here seems to be a meeting place for the temple staff, or perhaps for
+worship services.  Rows of hard stone benches are lined up before a low dais,
+on which a matching stone podium sits.  Despite the chill of the coldly
+gleaming white marble, a feeling of peace is contained in this room.    
+~
+4 188 0
+D0
+~
+~
+0 0 489
+S
+#493
+The Secret Tunnel~
+   You find yourself in a secret tunnel deep beneath the devastated city.  
+Slime oozes down the walls, and you can hear the faint echo of dripping water.
+The stonework here is rough and unfinshed, and it appears to be difficult to
+make your way through the tunnel.  To the south is a corridor, and up is the
+rickety ladder you just ventured down.    
+~
+4 262217 1
+D2
+~
+~
+0 0 494
+D4
+~
+~
+0 0 483
+S
+#494
+The Secret Tunnel~
+   You are in the middle of the long tunnel that travels underneath the city
+to-where?  Despite the high quality of your light, it is very dark here, and
+shadows dance at your every movement.  You can return to the north, or continue
+to the south.    
+~
+4 262217 0
+D0
+~
+~
+0 0 493
+D2
+~
+~
+0 0 495
+S
+#495
+The Secret Tunnel~
+   This is the end of the secret tunnel.  The slimy walls open up into a wide
+set of white marble steps that lead upwards.  A single beam of light streams
+down, illuminating motes of dancing dust.  The tunnel leads back to the north.
+  
+~
+4 262217 0
+D0
+~
+~
+0 0 494
+D4
+~
+~
+0 0 484
+S
+#496
+The Reception Room ~
+   This is where the inn's guests checked in and out.  The desk where the
+receptionist once sat has been splintered into pieces too small even for
+firewood.  The hallway leading to the various rooms is blocked off by huge
+pieces of the roof that have caved in.  Bright sunlight filters in through the
+holes, a strange contrast to the depressing destruction within the walls.    
+~
+4 262336 0
+D5
+~
+~
+0 0 460
+S
+#497
+The Dark Pool~
+   As you reach out towards the dark pool, it seems to leap out and grab you,
+pulling you down, down, down into its deepest depths.  The cold, sticky pool
+sucks the very life out of you.  You are dead.    
+~
+4 262146 0
+D2
+~
+~
+0 0 491
+S
+#498
+&bGrotto Entrance&n~
+   Dim sunlight wades its way through the water to sparkle in waves on the soft
+sand that carpets the ocean floor here.  Beds of seaweed sway in the gentle
+movement of the water.  Bits of pottery dot the landscape here and there,
+barricaded by haphazard walls of rocks.  From these fragile defenses peer
+various small octopods.  A cuttlefish paddles by, actively searching for a nice
+meal.  In the distance, you can see squid lazily squirt around, occasionally
+sending out tentacles in a quick flash after fish.  Seems there are no sharks
+around to snack on these tasty cephalopods.    
+~
+4 2374232 0
+D1
+~
+~
+0 0 499
+D4
+~
+~
+0 0 2015
+S
+#499
+&rFirebyrd's &bGrotto&n~
+   The walls of this large grotto sweep up gracefully into a high arch, making
+a large room with a vaulted ceiling.  Many of the walls are draped tastefully
+with different color seaweed, providing a rainbow background for the various
+shelves and cubbyholes that fill the empty spaces on the walls.  In these
+niches hide beautiful shells and other treasures from the sea.  The room is
+furnished with mismatched, barnacle-covered chairs.  Carefully cultivated coral
+form delicate tables in strategic places.  A strange, yet elegant room.    
+A floating sign hangs here saying, 'Hey &RFirebyrd&n! Miss ya! Come back soon!!'
+~
+4 2370392 0
+D3
+~
+~
+0 0 498
+S
+$~

@@ -1,0 +1,961 @@
+#2500
+&mCavern &nMob Chute~
+   Hey hey, you found your way to the Mob Chute for the Underground Cavern.  
+Congratulations!  Now get the hell out!    
+~
+25 1310964 0
+D0
+~
+~
+0 0 2572
+D1
+~
+~
+0 0 2506
+D2
+~
+~
+0 0 2513
+D3
+~
+~
+0 0 2528
+D4
+~
+~
+0 0 2533
+D5
+~
+~
+0 0 2545
+D6
+~
+~
+0 0 2554
+D7
+~
+~
+0 0 2562
+D8
+~
+~
+0 0 2580
+D9
+~
+~
+0 0 2587
+S
+#2501
+&mCavern &nEntrance~
+   Geologists have recently discovered the entrance to a cave that was hidden
+off in the Azrothian Plains.  The Workers from the site found what appeared to
+be a blocked hole in the ground just south of their worksite, and hired a group
+of miners to open it up.  This is the opened entrance into what they found.  
+So far the teams of mercenaries they have sent into the cave have not returned
+with any form of information on what is in the cave or through the cave, if
+there even is another side.  Perhaps it's blocked also?    
+~
+25 84 2
+D5
+~
+~
+0 0 2504
+S
+#2502
+&mCavern&n~
+Nothing has yet to be determined.
+~
+25 0 0
+D2
+~
+~
+0 0 2519
+D3
+~
+~
+0 0 2503
+S
+#2503
+&mCavern&n~
+Nothing has yet to be determined.
+~
+25 0 0
+D1
+~
+~
+0 0 2502
+D3
+~
+~
+0 0 2504
+S
+#2504
+&mCavern &nOpening~
+Nothing has yet to be determined.
+~
+25 0 0
+D1
+~
+~
+0 0 2503
+D2
+~
+~
+0 0 2517
+D3
+~
+~
+0 0 2505
+D4
+~
+~
+0 0 2502
+S
+#2505
+&mCavern&n~
+Nothing has yet to be determined.
+~
+25 0 0
+D1
+~
+~
+0 0 2504
+D3
+~
+~
+0 0 2506
+S
+#2506
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2505
+D2
+~
+~
+0 0 2515
+S
+#2507
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D2
+~
+~
+0 0 2514
+D3
+~
+~
+0 0 2508
+S
+#2508
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2507
+D3
+~
+~
+0 0 2509
+S
+#2509
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2508
+D3
+~
+~
+0 0 2510
+S
+#2510
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2509
+D2
+~
+~
+0 0 2511
+S
+#2511
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2510
+D2
+~
+~
+0 0 2528
+S
+#2512
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2513
+D2
+~
+~
+0 0 2529
+S
+#2513
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2514
+D3
+~
+~
+0 0 2512
+S
+#2514
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2507
+D3
+~
+~
+0 0 2513
+S
+#2515
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2506
+D1
+~
+~
+0 0 2516
+S
+#2516
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D2
+~
+~
+0 0 2523
+D3
+~
+~
+0 0 2515
+S
+#2517
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2504
+D2
+~
+~
+0 0 2522
+S
+#2518
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2519
+D2
+~
+~
+0 0 2521
+S
+#2519
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2502
+D2
+~
+~
+0 0 2520
+D3
+~
+~
+0 0 2518
+S
+#2520
+&mCavern&n~
+   As you venture into this well decorated room, you see many pews.  You
+venture to this being the priests area.  Then the dark dwarfs at the head of
+the room snap to your attention.  Clad in dark robes, their eyes glow towards
+you.  They look rather upset, as you must have interrupted their usual chant to
+some evil god or other.  Some of them start chanting strange words, and you
+feel you are going to be in big trouble.    
+~
+25 262245 0
+D0
+~
+~
+0 0 2519
+S
+#2521
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2518
+D3
+~
+~
+0 0 2522
+S
+#2522
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2517
+D1
+~
+~
+0 0 2521
+S
+#2523
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2516
+D3
+~
+~
+0 0 2524
+S
+#2524
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2523
+D3
+~
+~
+0 0 2525
+S
+#2525
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2524
+D3
+~
+~
+0 0 2526
+S
+#2526
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2525
+D3
+~
+~
+0 0 2527
+S
+#2527
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2512
+D1
+~
+~
+0 0 2526
+D2
+~
+wall cave door secret~
+1 0 2530
+S
+#2528
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2511
+D2
+~
+~
+0 0 2529
+S
+#2529
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+~
+0 0 2528
+D1
+~
+~
+0 0 2530
+S
+#2530
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D0
+~
+wall cave secret door~
+1 0 2527
+D2
+~
+~
+0 0 2545
+D3
+~
+~
+0 0 2529
+S
+#2531
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2532
+D2
+~
+~
+0 0 2544
+S
+#2532
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2533
+D3
+~
+~
+0 0 2531
+S
+#2533
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2534
+D3
+~
+~
+0 0 2532
+S
+#2534
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2535
+D3
+~
+~
+0 0 2533
+S
+#2535
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2536
+D3
+~
+~
+0 0 2534
+S
+#2536
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D1
+~
+~
+0 0 2537
+D3
+~
+~
+0 0 2535
+S
+#2537
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+D2
+~
+~
+0 0 2538
+D3
+~
+~
+0 0 2536
+S
+#2538
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2539
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2540
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2541
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2542
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2543
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2544
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2545
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2546
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2547
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2548
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2549
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2550
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2551
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2552
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2553
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2554
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2555
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2556
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2557
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2558
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2559
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2560
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2561
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2562
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2563
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2564
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2565
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2566
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2567
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2568
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2569
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2570
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2571
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2572
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2573
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2574
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2575
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2576
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2577
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2578
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2579
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2580
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2581
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2582
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2583
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2584
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2585
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2586
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2587
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2588
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2589
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2590
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2591
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2592
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2593
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2594
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2595
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2596
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2597
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2598
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+#2599
+&mCavern&n~
+You are in an unfinished room.
+~
+25 0 0
+S
+$~
