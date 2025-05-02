@@ -50,7 +50,6 @@ tsconfig.tsbuildinfo
 syslog*
 config.cache
 config.log
-Makefile
 config.status
 *.o
 badsites
@@ -71,7 +70,6 @@ nohup.out
 /bin/
 
 # Generated files in src
-/src/Makefile
 /src/config.h
 /src/make.log
 

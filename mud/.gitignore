@@ -9,7 +9,6 @@ syslog*
 config.cache
 config.log
 config.status
-Makefile
 .killscript
 nohup.out
 
