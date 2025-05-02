@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     make \
     gcc \
     g++ \
-    libcrypt-dev \ 
+    libcrypt-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -19,10 +19,12 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Configure and build the MUD server in advance
+# Configure and build the MUD server with explicit crypt library linking
 RUN cd mud && \
-    ./configure LDFLAGS="-lcrypt" && \ 
+    ./configure && \
     cd src && \
+    # Modify the Makefile to add -lcrypt to LIBS
+    sed -i 's/^LIBS = \(.*\)/LIBS = \1 -lcrypt/' Makefile && \
     make
 
 # Install and build the web application
@@ -30,11 +32,10 @@ RUN cd server && \
     yarn install && \
     yarn build
 
-# Dokku default, but this is just a hint, will use PORT env var for www
-EXPOSE 3000
-
 # Expose ports for the MUD server (telnet) and web interface (HTTP)
 EXPOSE 4000
+# Dokku default, but this is just a hint, will use PORT env var for www
+EXPOSE 3000
 
 # Set the launch script as the entrypoint
 ENTRYPOINT ["./launch.sh"]
