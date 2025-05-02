@@ -64,9 +64,6 @@ Set necessary environment variables for your application:
 # Set Node environment to production
 dokku config:set port4kmud NODE_ENV=production
 
-# Set port for the web interface (Dokku will map this to port 80/443)
-dokku config:set port4kmud PORT=5000
-
 # If using authentication or other services, add those variables here
 # dokku config:set port4kmud AUTH_SECRET=your_auth_secret
 # dokku config:set port4kmud DATABASE_URL=your_database_url
@@ -232,6 +229,36 @@ dokku resource:limit --memory 1G port4kmud
 # Set CPU limit (e.g., 2 CPUs)
 dokku resource:limit --cpu 2 port4kmud
 ```
+
+### Enabling Direct Telnet Access
+
+By default, players can access the MUD through the web interface. However, many seasoned MUD players prefer connecting directly via a telnet client. To enable direct telnet access:
+
+```bash
+# Expose the MUD's telnet port (4000) to the outside world
+dokku ports:add port4kmud tcp:4000:4000
+```
+
+After running this command, players can connect directly to your MUD using any telnet client:
+
+```
+telnet your-dokku-server.com 4000
+```
+
+For better security, you can also choose to use a different external port:
+
+```bash
+# Map external port 14000 to container's port 4000
+dokku ports:add port4kmud tcp:14000:4000
+```
+
+Then players would connect using:
+
+```
+telnet your-dokku-server.com 14000
+```
+
+Note: The CircleMUD is hardcoded to use port 4000 internally, but Dokku's port mapping allows you to expose it on any external port.
 
 ### Scaled Deployment (Not Recommended for MUD)
 
