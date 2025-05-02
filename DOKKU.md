@@ -21,7 +21,19 @@ ssh dokku@your-dokku-server.com
 dokku apps:create port4kmud
 ```
 
-## 2. Set Up Persistent Storage
+## 2. Configure Dockerfile Deployment
+
+Port4kMUD contains both C code (for the MUD server) and Node.js code (for the web interface), so we need to use a Dockerfile for deployment instead of relying on auto-detected buildpacks:
+
+```bash
+# Configure the app to use Docker deployment
+dokku config:set port4kmud DOKKU_BUILDER_TYPE=dockerfile
+
+# Force the builder to rebuild
+dokku builder:set port4kmud selected dockerfile
+```
+
+## 3. Set Up Persistent Storage
 
 The MUD server requires persistent storage for player data, world state, logs, and other runtime files. You'll need to create directories on your Dokku host and mount them into the container.
 
@@ -56,7 +68,7 @@ The mounted directories will store important MUD files:
   - And other essential game data
 - `/mud/log/` - MUD logs and system messages
 
-## 3. Configure Environment Variables
+## 4. Configure Environment Variables
 
 Set necessary environment variables for your application:
 
@@ -69,7 +81,7 @@ dokku config:set port4kmud NODE_ENV=production
 # dokku config:set port4kmud DATABASE_URL=your_database_url
 ```
 
-## 4. Configure Domain (Optional)
+## 5. Configure Domain (Optional)
 
 If you want to use a custom domain:
 
@@ -78,7 +90,7 @@ If you want to use a custom domain:
 dokku domains:add port4kmud your-mud-domain.com
 ```
 
-## 5. Enable HTTPS (Optional but Recommended)
+## 6. Enable HTTPS (Optional but Recommended)
 
 To secure your MUD web interface with HTTPS:
 
@@ -96,7 +108,7 @@ dokku letsencrypt:enable port4kmud
 dokku letsencrypt:cron-job --add
 ```
 
-## 6. Deploy the Application
+## 7. Deploy the Application
 
 On your local machine, add the Dokku remote to your repository:
 
@@ -108,11 +120,13 @@ git remote add dokku dokku@your-dokku-server.com:port4kmud
 git push dokku main
 ```
 
-The deployment will use the `Procfile` at the root of the project, which runs the `launch.sh` script to:
-1. Build and start the MUD server in the background
-2. Build and start the Next.js web interface
+The deployment will use:
+1. The `Dockerfile` to build the environment with both C and Node.js support
+2. The `launch.sh` script to:
+   - Build and start the MUD server in the background
+   - Build and start the Next.js web interface
 
-## 7. Prepare Initial MUD Data (First Deployment Only)
+## 8. Prepare Initial MUD Data (First Deployment Only)
 
 After the first deployment, you need to initialize the MUD data files. This step is critical because the persistent directory might be empty on first launch:
 
@@ -127,7 +141,7 @@ cp -rn lib/* /app/mud/lib/  # Copy recursively without overwriting existing file
 
 Make sure the initial lib directory is properly set up before players connect to your MUD.
 
-## 8. Monitoring and Maintenance
+## 9. Monitoring and Maintenance
 
 ### View Logs
 
@@ -153,7 +167,7 @@ dokku ps:restart port4kmud
 dokku ps:report port4kmud
 ```
 
-## 9. Updating the Application
+## 10. Updating the Application
 
 To update your MUD after making changes:
 
@@ -162,7 +176,7 @@ To update your MUD after making changes:
 git push dokku main
 ```
 
-## 10. Backing Up MUD Data
+## 11. Backing Up MUD Data
 
 It's crucial to regularly back up your MUD data:
 
@@ -174,6 +188,18 @@ tar -czf port4kmud-backup-$(date +%Y%m%d).tar.gz /var/lib/dokku/data/storage/por
 Consider setting up a cron job for regular backups.
 
 ## Troubleshooting
+
+### Build Failures
+
+If deployment fails with buildpack errors:
+
+```bash
+# Check if Docker deployment is properly configured
+dokku builder:report port4kmud
+
+# Verify Docker is being used
+dokku config:get port4kmud DOKKU_BUILDER_TYPE
+```
 
 ### MUD Server Not Starting
 
