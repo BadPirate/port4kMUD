@@ -19,12 +19,12 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Configure and build the MUD server
+# Configure and build the MUD server with explicit linking to crypt
 RUN cd mud && \
     ./configure && \
     cd src && \
-    # Directly modify the Makefile to add -lcrypt to LIBFILES
-    sed -i 's/^LIBFILES=.*$/LIBFILES=-lcrypt/' Makefile && \
+    # Modify the compile command for ../bin/circle directly
+    sed -i 's/\(^\t\$(CC).*\$(OBJFILES)\)/\1 -lcrypt/' Makefile && \
     make
 
 # Install and build the web application
