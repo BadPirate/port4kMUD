@@ -19,12 +19,8 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Configure and build the MUD server with explicit crypt library linking
-RUN cd mud && \
-    ./configure && \
-    cd src && \
-    # Modify the Makefile to add -lcrypt to LIBS
-    sed -i 's/^LIBS = \(.*\)/LIBS = \1 -lcrypt/' Makefile && \
+# Build the MUD server without running configure (use committed config)
+RUN cd mud/src && \
     make
 
 # Install and build the web application
