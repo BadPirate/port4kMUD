@@ -1,7 +1,6 @@
 # Build artifacts
 *.o
 /bin/
-/src/Makefile
 /src/config.h
 /src/make.log
 
