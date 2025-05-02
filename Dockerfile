@@ -37,10 +37,12 @@ RUN cd server && \
     yarn install && \
     yarn build
 
+# Install and build the web application, expose before 4000 to avoid conflicts
+EXPOSE 80
+
 # Expose ports for the MUD server (telnet) and web interface (HTTP)
 EXPOSE 4000
 # Use a placeholder - the actual port will be set by Dokku via PORT env variable
-EXPOSE 80
 
 # Set the launch script as the entrypoint
 ENTRYPOINT ["./launch.sh"]
