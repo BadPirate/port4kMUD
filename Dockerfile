@@ -27,6 +27,10 @@ RUN cd mud && \
     cd src && \
     make
 
+# Create a lib-dist directory with essential MUD files
+RUN mkdir -p mud/lib-dist && \
+    cp -r mud/lib/* mud/lib-dist/ || true
+
 # Install and build the web application
 RUN cd server && \
     yarn install && \
