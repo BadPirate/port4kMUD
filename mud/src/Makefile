@@ -6,8 +6,8 @@ CC = gcc
 
 # Any special flags you want to pass to the compiler
 # Following two lines will enable glibc2 compiles
-# GLIBC=-Drandom=random -Dhtonl=htonl -Dntohl=ntohl
-# LIBFILES=-lcrypt
+GLIBC=
+LIBFILES=
 MYFLAGS = -Wall $(GLIBC)
 
 #flags for profiling (see hacker.doc for more information)
@@ -17,7 +17,7 @@ PROFILE =
 # Do Not Modify Anything Below This Line (unless you know what you're doing) #
 ##############################################################################
 
-CFLAGS = -g -O $(MYFLAGS) $(PROFILE)
+CFLAGS = -g -O2 -std=gnu89 $(MYFLAGS) $(PROFILE)
 
 OBJFILES = comm.o act.comm.o act.informative.o act.movement.o act.item.o \
 	act.offensive.o act.other.o act.social.o act.wizard.o ban.o boards.o \

@@ -1,4 +1,4 @@
-/* src/conf.h.  Generated automatically by configure.  */
+/* src/conf.h.  Generated from conf.h.in by configure.  */
 /* src/conf.h.  Generated automatically by configure.  */
 /* src/conf.h.in.  Generated automatically from configure.in by autoheader.  */
 

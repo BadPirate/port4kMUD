@@ -20,7 +20,8 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Regenerate the configure script and build the MUD server
+# Run autoconf to generate configure script from configure.in
+# Then run configure and make to build the MUD server
 RUN cd mud && \
     autoconf && \
     ./configure && \
