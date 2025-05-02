@@ -96,3 +96,5 @@ lib/etc/players
 
 # Log files
 logfile
+mud/autom4te.cache
+mud/configure~

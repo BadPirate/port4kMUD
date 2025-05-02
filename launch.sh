@@ -34,9 +34,5 @@ sleep 5
 echo "===== Starting Web Interface ====="
 # Start the web app, which will be the primary process
 cd server
-# Force web server to use port 3000 regardless of what Dokku sets
-# This ensures no conflict with the MUD server running on port 4000
-unset PORT
-export PORT=3000
 echo "Starting web interface on port $PORT"
 exec yarn start
