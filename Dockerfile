@@ -19,8 +19,12 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Build the MUD server without running configure (use committed config)
-RUN cd mud/src && \
+# Configure and build the MUD server
+RUN cd mud && \
+    ./configure && \
+    cd src && \
+    # Directly modify the Makefile to add -lcrypt to LIBFILES
+    sed -i 's/^LIBFILES=.*$/LIBFILES=-lcrypt/' Makefile && \
     make
 
 # Install and build the web application
@@ -30,8 +34,9 @@ RUN cd server && \
 
 # Expose ports for the MUD server (telnet) and web interface (HTTP)
 EXPOSE 4000
-# Dokku default, but this is just a hint, will use PORT env var for www
-EXPOSE 3000
+# Use a placeholder - the actual port will be set by Dokku via PORT env variable
+# This is just documentation that the container serves web content
+EXPOSE 80
 
 # Set the launch script as the entrypoint
 ENTRYPOINT ["./launch.sh"]
