@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     make \
     gcc \
     g++ \
+    libcrypt-dev \  # Add libcrypt-dev for the crypt() function
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -18,9 +19,9 @@ COPY . .
 # Set executable permissions on the launch script
 RUN chmod +x launch.sh
 
-# Build the MUD server in advance
+# Configure and build the MUD server in advance
 RUN cd mud && \
-    ./configure && \
+    ./configure LDFLAGS="-lcrypt" && \ 
     cd src && \
     make
 
