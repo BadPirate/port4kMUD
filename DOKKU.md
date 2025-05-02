@@ -262,7 +262,7 @@ By default, players can access the MUD through the web interface. However, many 
 
 ```bash
 # Expose the MUD's telnet port (4000) to the outside world
-dokku ports:add port4kmud tcp:4000:4000
+dokku proxy:ports-add port4kmud tcp:4000:4000
 ```
 
 After running this command, players can connect directly to your MUD using any telnet client:
@@ -275,7 +275,7 @@ For better security, you can also choose to use a different external port:
 
 ```bash
 # Map external port 14000 to container's port 4000
-dokku ports:add port4kmud tcp:14000:4000
+dokku proxy:ports-add port4kmud tcp:14000:4000
 ```
 
 Then players would connect using:

@@ -2421,6 +2421,9 @@ void init_char(struct char_data * ch)
   
   GET_IDNUM(ch) = max_num();
 
+  /* Set default color to "complete" - both color flags enabled */
+  SET_BIT(PRF_FLAGS(ch), PRF_COLOR_1 | PRF_COLOR_2);
+  
   for (i = 1; i <= MAX_SKILLS; i++) {
     if (GET_LEVEL(ch) < LVL_IMPL)
       SET_SKILL(ch, i, 0)
