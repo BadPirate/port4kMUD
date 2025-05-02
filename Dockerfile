@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     make \
     gcc \
     g++ \
-    libcrypt-dev \  # Add libcrypt-dev for the crypt() function
+    libcrypt-dev \ 
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
