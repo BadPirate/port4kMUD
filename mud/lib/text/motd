@@ -1,5 +1,6 @@
-[ 05 JUN 2025 ] Thanks to Vibe Coding, Jaxom (BadPirate) now has time to run
-  this mud properly again.  
+[ 02 JUN 2025 ] Thanks to Vibe Coding, Jaxom (BadPirate) now has time to run
+  this mud properly again. Port4k domain expired, so I'm hosting at
+  https://mud.badpirate.net using a next js bridge.
 
 
 &r	     /\  _`\            /\ \__    /\ \\ \    /'__`\  /'__`\  /'__`\   
@@ -10,4 +11,9 @@
 	         \/_/\/___/  \/_/   \/__/       \/_/   \/___/  \/___/  \/___/ 
 &n
 	    
-	     Visit the github, and the web login at http://mud.port4k.com
+	     Visit the github, and the web login at https://mud.badpirate.net
+
+[ 02 JUN 2025 ] BadPirate - Vibe Coding Bug fixes
+  - AI Fixed all the warnings (and regressed who knows what?)
+  - Sacrifice now works on items in inventory, has error messages and does
+    not puke if you pass it arguments.

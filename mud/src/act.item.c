@@ -116,22 +116,78 @@ ACMD(do_combine)
 
 ACMD(do_sacrifice)
 {
-  struct obj_data *i, *j;
+  struct obj_data *i;
+  int found = 0;
+  int mana_gained = 0;
+  int was_full = (GET_MANA(ch) >= GET_MAX_MANA(ch));
 
-    for (i = world[ch->in_room].contents; i;)
+  // First check the room for corpses
+  for (i = world[ch->in_room].contents; i;)
+  {
     if(GET_OBJ_TYPE(i) == ITEM_CONTAINER && GET_OBJ_VAL(i,3))
     {
-      j = i;
-      i = i->next_content;
-      extract_obj(j);
-      act("$n makes a sacrifice.",FALSE,ch,0,0,TO_ROOM);
-      if(GET_CLASS(ch)!=CLASS_WARRIOR || GET_CLASS(ch)!=CLASS_SCOUT)
-        GET_MANA(ch)=MIN((GET_MANA(ch)+10),GET_MAX_MANA(ch)); 
+      struct obj_data *next_obj = i->next_content;
+      found = 1;
+      extract_obj(i);
+      
+      if(GET_CLASS(ch)!=CLASS_WARRIOR && GET_CLASS(ch)!=CLASS_SCOUT)
+      {
+        int old_mana = GET_MANA(ch);
+        GET_MANA(ch)=MIN((GET_MANA(ch)+10),GET_MAX_MANA(ch));
+        mana_gained += (GET_MANA(ch) - old_mana);
+      }
+      
       GET_GOLD(ch) += 10;
-      send_to_char("You are rewarded for your sacrifice\r\n",ch);
+      i = next_obj;
     }
     else
       i = i->next_content;
+  }
+  
+  // Then check player's inventory for corpses
+  for (i = ch->carrying; i;)
+  {
+    if(GET_OBJ_TYPE(i) == ITEM_CONTAINER && GET_OBJ_VAL(i,3))
+    {
+      struct obj_data *next_obj = i->next_content;
+      found = 1;
+      
+      if(GET_CLASS(ch)!=CLASS_WARRIOR && GET_CLASS(ch)!=CLASS_SCOUT)
+      {
+        int old_mana = GET_MANA(ch);
+        GET_MANA(ch)=MIN((GET_MANA(ch)+10),GET_MAX_MANA(ch));
+        mana_gained += (GET_MANA(ch) - old_mana);
+      }
+      
+      GET_GOLD(ch) += 10;
+      
+      obj_from_char(i);
+      extract_obj(i);
+      i = next_obj;
+    }
+    else
+      i = i->next_content;
+  }
+  
+  if (found) {
+    // Global emote for the sacrifice
+    sprintf(buf, "$n begins dancing around and the corpses near $m go up in smoke!");
+    act(buf, TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("You begin dancing around and the corpses near you go up in smoke!\r\n", ch);
+    
+    // Only show mana message if they gained mana and aren't a warrior/scout
+    if (mana_gained > 0 && GET_CLASS(ch)!=CLASS_WARRIOR && GET_CLASS(ch)!=CLASS_SCOUT) {
+      sprintf(buf, "Divine energy flows into your body, restoring %d mana points.\r\n", mana_gained);
+      send_to_char(buf, ch);
+    } else if (was_full && GET_CLASS(ch)!=CLASS_WARRIOR && GET_CLASS(ch)!=CLASS_SCOUT) {
+      send_to_char("You feel the divine energy, but your mana is already full.\r\n", ch);
+    }
+    
+    // Everyone gets some gold
+    send_to_char("You are rewarded with some gold coins for your sacrifice.\r\n", ch);
+  } else {
+    send_to_char("Nothing to sacrifice? The gods are not impressed.\r\n", ch);
+  }
 }
 
 ACMD(do_put)
