@@ -44,7 +44,7 @@ const Terminal = ({ socketRef }: TerminalProps) => {
     const optimalFontSize = Math.floor((containerWidth / 80) * 1.66)
 
     // Set limits to prevent too small/large fonts
-    const newSize = Math.max(10, Math.min(22, optimalFontSize))
+    const newSize = Math.max(8, Math.min(22, optimalFontSize))
 
     if (newSize !== fontSize) {
       setFontSize(newSize)
