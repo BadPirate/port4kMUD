@@ -113,6 +113,12 @@ ACMD(do_clan)
   /* Update clan cross reference */
   update_clan_cross_reference();
 
+  /* Make sure commandline is ok */
+  if (!*arg) {
+    send_to_char("What clan do you wish to join?\r\n", ch);
+    return;
+  }
+
   if (strcasecmp(subbcmd, "debug") == 0)
   {
 
@@ -269,12 +275,11 @@ ACMD(do_clan)
 
       /* Update number of members in clan */
       if (CLANRANK(ch) > CLAN_APPLY)
-        CLANPLAYERS(clan_index[players_clannum]) = CLANPLAYERS(clan_index[players_clannum]) --;  
+        CLANPLAYERS(clan_index[players_clannum])--;  /* Fixed from -- operator after variable */
     }
     
     PLAYERCLAN(ch) = 0;
-    
-CLANRANK(ch) = 0;
+    CLANRANK(ch) = 0;
     
     send_to_char("You have resigned from your clan.\r\n", ch);
 
@@ -1153,7 +1158,7 @@ void clan_save(int system, struct char_data *ch, int fix)
         if (!get_line(fl, line))
         {
           log("FUNCTION(clan_save): Format error encountered");
-          if (system == NO);
+          if (system == NO)
           {
   	    sprintf(buf, "ClanSave: Format error after clan #%d (ERROR)\r\n", i);
             send_to_char(buf, ch);
@@ -2118,4 +2123,5 @@ void remove_m(char *thestring)
       y--;
   }
 }
-/* (FIDO) End */
+
+void c_write_clan_data();

@@ -1073,15 +1073,13 @@ char *prompt_str(struct char_data *ch) {
   static char pbuf[MAX_STRING_LENGTH];  
   char *str = GET_PROMPT(ch);
   struct char_data *tank;
-  int perc, color;  
+  int perc;  
   char *cp, *tmp;
   char i[256];
   
   if (!str || !*str)
     str = "&nDaggerfall: &mSet your prompt '&bhelp prompt&m' or '&bDisplay&n'> ";
 
-  color = (PRF_FLAGGED(ch, PRF_COLOR_1 | PRF_COLOR_2) ? 1 : 0);
-    
   if (!strchr(str, '%'))
     return (str);
   
@@ -1363,7 +1361,7 @@ int new_descriptor(int s) {
   socket_t desc;
   int sockets_connected = 0;
   unsigned long addr;
-  int i;
+  socklen_t i;
   struct descriptor_data *newd;
   struct sockaddr_in peer;
   struct hostent *from;
@@ -1729,7 +1727,6 @@ void close_socket(struct descriptor_data *d)
 {
   char buf[128];
   struct descriptor_data *temp;
-  long target_idnum = -1;
 
   CLOSE_SOCKET(d->descriptor);
   flush_queues(d);
@@ -1760,7 +1757,6 @@ void close_socket(struct descriptor_data *d)
   }
 
   if (d->character) {
-    target_idnum = GET_IDNUM(d->character);
     if (d->connected == CON_PLAYING) {
       save_char(d->character, NOWHERE);
 /*    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM); */

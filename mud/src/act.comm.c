@@ -194,15 +194,13 @@ ACMD(do_reply)
 ACMD(do_spec_comm)
 {
   struct char_data *vict;
-  char *action_sing, *action_plur, *action_others;
+  char *action_sing, *action_others;
 
   if (subcmd == SCMD_WHISPER) {
     action_sing = "whisper to";
-    action_plur = "whispers to";
     action_others = "$n whispers something to $N.";
   } else {
     action_sing = "ask";
-    action_plur = "asks";
     action_others = "$n asks $N a question.";
   }
 
@@ -482,10 +480,9 @@ ACMD(do_gen_comm)
     send_to_char(buf1, ch);
     return;
   }
-  if ((subcmd == SCMD_HOLLER || subcmd == SCMD_GOSSIP || subcmd
-== SCMD_GRATZ || subcmd == SCMD_OUCH || subcmd == SCMD_MUSIC ||
-SCMD_AUCTION) && GET_LEVEL(ch) < LVL_IMMORT)
-{
+  if ((subcmd == SCMD_HOLLER || subcmd == SCMD_GOSSIP || subcmd == SCMD_GRATZ || 
+       subcmd == SCMD_OUCH || subcmd == SCMD_MUSIC || subcmd == SCMD_AUCTION) && 
+      GET_LEVEL(ch) < LVL_IMMORT) {
     if (GET_MOVE(ch) < holler_move_cost) {
       send_to_char("You're too exhausted to speak so loud.\r\n", ch);
       return;

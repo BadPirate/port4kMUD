@@ -480,7 +480,7 @@ int find_door(struct char_data *ch, char *type, char *dir, char *cmdname)
 {
   int door;
 
-  if (*dir) {			/* a direction was specified */
+  if (*type == '\0') {			/* a direction was specified */
     if ((door = search_block(dir, dirs, FALSE)) == -1) {	/* Partial Match */
       send_to_char("That's not a direction.\r\n", ch);
       return -1;
@@ -500,7 +500,7 @@ int find_door(struct char_data *ch, char *type, char *dir, char *cmdname)
       return -1;
     }
   } else {			/* try to locate the keyword */
-    if (!*type) {
+    if (*type == '\0') {
       sprintf(buf2, "What is it you want to %s?\r\n", cmdname);
       send_to_char(buf2, ch);
       return -1;
@@ -886,38 +886,39 @@ ACMD(do_sleep)
 ACMD(do_wake)
 {
   struct char_data *vict;
-  int self = 0;
 
   one_argument(argument, arg);
-  if (*arg) {
+  if (!*arg) {
     if (GET_POS(ch) == POS_SLEEPING)
       send_to_char("Maybe you should wake yourself up first.\r\n", ch);
-    else if ((vict = get_char_room_vis(ch, arg)) == NULL)
+    else
       send_to_char(NOPERSON, ch);
-    else if (vict == ch)
-      self = 1;
-    else if (GET_POS(vict) > POS_SLEEPING)
-      act("$E is already awake.", FALSE, ch, 0, vict, TO_CHAR);
-    else if (IS_AFFECTED(vict, AFF_SLEEP))
-      act("You can't wake $M up!", FALSE, ch, 0, vict, TO_CHAR);
-    else if (GET_POS(vict) < POS_SLEEPING)
-      act("$E's in pretty bad shape!", FALSE, ch, 0, vict, TO_CHAR);
-    else {
-      act("You wake $M up.", FALSE, ch, 0, vict, TO_CHAR);
-      act("You are awakened by $n.", FALSE, ch, 0, vict, TO_VICT | TO_SLEEP);
-      GET_POS(vict) = POS_SITTING;
-    }
-    if (!self)
-      return;
+    return;
   }
-  if (IS_AFFECTED(ch, AFF_SLEEP))
-    send_to_char("You can't wake up!\r\n", ch);
-  else if (GET_POS(ch) > POS_SLEEPING)
-    send_to_char("You are already awake...\r\n", ch);
+  
+  if ((vict = get_char_room_vis(ch, arg)) == NULL)
+    send_to_char(NOPERSON, ch);
+  else if (vict == ch) {
+    if (IS_AFFECTED(ch, AFF_SLEEP))
+      send_to_char("You can't wake up!\r\n", ch);
+    else if (GET_POS(ch) > POS_SLEEPING)
+      send_to_char("You are already awake...\r\n", ch);
+    else {
+      send_to_char("You awaken, and sit up.\r\n", ch);
+      act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
+      GET_POS(ch) = POS_SITTING;
+    }
+  }
+  else if (GET_POS(vict) > POS_SLEEPING)
+    act("$E is already awake.", FALSE, ch, 0, vict, TO_CHAR);
+  else if (IS_AFFECTED(vict, AFF_SLEEP))
+    act("You can't wake $M up!", FALSE, ch, 0, vict, TO_CHAR);
+  else if (GET_POS(vict) < POS_SLEEPING)
+    act("$E's in pretty bad shape!", FALSE, ch, 0, vict, TO_CHAR);
   else {
-    send_to_char("You awaken, and sit up.\r\n", ch);
-    act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
-    GET_POS(ch) = POS_SITTING;
+    act("You wake $M up.", FALSE, ch, 0, vict, TO_CHAR);
+    act("You are awakened by $n.", FALSE, ch, 0, vict, TO_VICT | TO_SLEEP);
+    GET_POS(vict) = POS_SITTING;
   }
 }
 
@@ -975,7 +976,7 @@ ACMD(do_mount) {
   
   one_argument(argument, arg);
   
-  if (!arg || !*arg) {
+  if (!*arg) {
     send_to_char("Mount who?\r\n", ch);
     return;
   } else if (!(vict = get_char_room_vis(ch, arg))) {
@@ -1067,7 +1068,7 @@ ACMD(do_tame) {
   
   one_argument(argument, arg);
   
-  if (!arg || !*arg) {
+  if (!*arg) {
     send_to_char("Tame who?\r\n", ch);
     return;
   } else if (!(vict = get_char_room_vis(ch, arg))) {

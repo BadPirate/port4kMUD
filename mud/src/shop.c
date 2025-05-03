@@ -505,7 +505,7 @@ void shopping_buy(char *arg, struct char_data * ch,
   if (!IS_GOD(ch))
     GET_GOLD(keeper) += goldamt;
 
-  sprintf(tempstr, times_message(ch->carrying, 0, bought));
+  sprintf(tempstr, "%s", times_message(ch->carrying, 0, bought));
   sprintf(buf, "$n buys %s.", tempstr);
   act(buf, FALSE, ch, obj, 0, TO_ROOM);
 
@@ -632,8 +632,8 @@ void sort_keeper_objs(struct char_data * keeper, int shop_nr)
 void shopping_sell(char *arg, struct char_data * ch,
 		        struct char_data * keeper, int shop_nr)
 {
-  char tempstr[200], buf[MAX_STRING_LENGTH], name[200];
-  struct obj_data *obj, *tag = 0;
+  char buf[MAX_STRING_LENGTH], name[200];
+  struct obj_data *obj;
   int sellnum, sold = 0, goldamt = 0;
 
   if (!(is_ok(keeper, ch, shop_nr)))
@@ -667,7 +667,7 @@ void shopping_sell(char *arg, struct char_data * ch,
     GET_GOLD(keeper) -= sell_price(ch, obj, shop_nr);
 	
     obj_from_char(obj);
-    tag = slide_obj(obj, keeper, shop_nr);
+    slide_obj(obj, keeper, shop_nr);
     obj = get_selling_obj(ch, name, keeper, shop_nr, FALSE);
   }
 
@@ -685,13 +685,13 @@ void shopping_sell(char *arg, struct char_data * ch,
     do_tell(keeper, buf, cmd_tell, 0);
   }
   GET_GOLD(ch) += goldamt;
-  strcpy(tempstr, times_message(0, name, sold));
-  sprintf(buf, "$n sells %s.", tempstr);
+  strcpy(buf, times_message(0, name, sold));
+  sprintf(buf, "$n sells %s.", buf);
   act(buf, FALSE, ch, obj, 0, TO_ROOM);
 
   sprintf(buf, shop_index[shop_nr].message_sell, GET_NAME(ch), goldamt);
   do_tell(keeper, buf, cmd_tell, 0);
-  sprintf(buf, "The shopkeeper now has %s.\n\r", tempstr);
+  sprintf(buf, "The shopkeeper now has %s.\n\r", buf);
   send_to_char(buf, ch);
 
   if (GET_GOLD(keeper) < MIN_OUTSIDE_BANK) {

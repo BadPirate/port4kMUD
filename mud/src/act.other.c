@@ -63,84 +63,80 @@ ACMD(do_remort)
   for(i=0, total=1; i < NUM_CLASSES; i++)
     if(IS_SET(cb, (1 << i)))
       total++;
-  if(*arg)
-  {
-    if(strcmp(arg, "master") == 0)
-    {
-      if (total >= 4)
-      { 
-        class = CLASS_MASTER;
-      }
-      else
-      {
-        send_to_char("You have to be four other classes before you can master\r\n",ch);
-        return;
-      }
-    }
-    else
-    { 
-
-      class = parse_class(arg[0]);
-      if (class == CLASS_UNDEFINED || (class == CLASS_MASTER && total < 4))
-      {
-        send_to_char("Thats not an option\r\n",ch);
-        send_to_char(class_menu,ch);
-        return;
-      }
-    }
-    if (IS_SET(cb, (1 << class)))
-    {
-      send_to_char("You've been that class!\r\n",ch);
-      return;
-    }
-    if (GET_CLASS(ch) == class)
-    {
-      send_to_char("You are that class!\r\n",ch);
-      return;
-    }
-    if (GET_CLASS(ch) == CLASS_MASTER)
-    {
-      send_to_char("You are already a master!\r\n",ch);
-      return;
-    }
-    if (GET_LEVEL(ch) >= LVL_IMMORT)
-    {
-      send_to_char("You really don't want to do that :-)\r\n",ch);
-      return;
-    }
-    if (class != CLASS_MASTER && total >= 4)
-    {
-      send_to_char("You already have your 4 remorts, you can go master now!\r\n",ch);
-      class = CLASS_MASTER;
-    }
-    if (GET_CLASS(ch) == CLASS_NINJA && total == 1)
-    {
-      send_to_char("Your playing old rules, go on to master!\r\n",ch);
-      class = CLASS_MASTER;
-    }
-    SET_BIT(ch->player_specials->saved.classes_been, (1 << GET_CLASS(ch)));
-    GET_CLASS(ch) = class;  
-
-    for (i = 0; i < NUM_WEARS; i++)
-      if (ch->equipment[i])
-        obj_to_char(unequip_char(ch, i), ch);
- 
-    GET_MAX_HIT(ch) = 1;
-    GET_MAX_MOVE(ch) = 60;
-    GET_MAX_MANA(ch) = 100;
-    GET_LEVEL(ch) = 0;
-    do_start(ch);
-    sprintf(buf, "Succesfully Remorted #%d.  You're a newbie again and your old items are in your\r\ninventory! (WARNING: your invisible items are in your inventory too.)\r\n",(total));
-    send_to_char(buf,ch);
-  }
-  else
-  {
+  if (!*arg) {
     send_to_char("Usage:  Remort <class letter>\r\n",ch);
     if(total >= 4)
       send_to_char("        Remort master\r\n",ch);
     send_to_char(class_menu,ch);
     return;
   }
+  if(strcmp(arg, "master") == 0)
+  {
+    if (total >= 4)
+    { 
+      class = CLASS_MASTER;
+    }
+    else
+    {
+      send_to_char("You have to be four other classes before you can master\r\n",ch);
+      return;
+    }
+  }
+  else
+  { 
+
+    class = parse_class(arg[0]);
+    if (class == CLASS_UNDEFINED || (class == CLASS_MASTER && total < 4))
+    {
+      send_to_char("Thats not an option\r\n",ch);
+      send_to_char(class_menu,ch);
+      return;
+    }
+  }
+  if (IS_SET(cb, (1 << class)))
+  {
+    send_to_char("You've been that class!\r\n",ch);
+    return;
+  }
+  if (GET_CLASS(ch) == class)
+  {
+    send_to_char("You are that class!\r\n",ch);
+    return;
+  }
+  if (GET_CLASS(ch) == CLASS_MASTER)
+  {
+    send_to_char("You are already a master!\r\n",ch);
+    return;
+  }
+  if (GET_LEVEL(ch) >= LVL_IMMORT)
+  {
+    send_to_char("You really don't want to do that :-)\r\n",ch);
+    return;
+  }
+  if (class != CLASS_MASTER && total >= 4)
+  {
+    send_to_char("You already have your 4 remorts, you can go master now!\r\n",ch);
+    class = CLASS_MASTER;
+  }
+  if (GET_CLASS(ch) == CLASS_NINJA && total == 1)
+  {
+    send_to_char("Your playing old rules, go on to master!\r\n",ch);
+    class = CLASS_MASTER;
+  }
+  SET_BIT(ch->player_specials->saved.classes_been, (1 << GET_CLASS(ch)));
+  GET_CLASS(ch) = class;  
+
+  for (i = 0; i < NUM_WEARS; i++)
+    if (ch->equipment[i])
+      obj_to_char(unequip_char(ch, i), ch);
+
+  GET_MAX_HIT(ch) = 1;
+  GET_MAX_MOVE(ch) = 60;
+  GET_MAX_MANA(ch) = 100;
+  GET_LEVEL(ch) = 0;
+  do_start(ch);
+  sprintf(buf, "Succesfully Remorted #%d.  You're a newbie again and your old items are in your\r\ninventory! (WARNING: your invisible items are in your inventory too.)\r\n",(total));
+  send_to_char(buf,ch);
 }
 
 ACMD(do_quote)
@@ -395,49 +391,50 @@ ACMD(do_tstart)
   char foo[MAX_INPUT_LENGTH];
   argument = one_argument(argument, foo);
   
-  if (*foo)
+  if (!*foo)
   {
-    for(x=0; townstart[x].minlevel != -1; x++)
+    send_to_char("&rAvailable starting rooms\r\n",ch);
+    send_to_char("------------------------&c\r\n",ch);
+    send_to_char("Num Name          MinLvl\r\n",ch);
+    send_to_char("--- ------------- ------&n\r\n",ch);
+    for(x=0; townstart[x].minlevel != -1 ; x++)
     {
-      if(strcmp(foo, townstart[x].entrychar) == 0)
+      sprintf(buf, "%2s. %13s %6d\r\n", townstart[x].entrychar, 
+              townstart[x].longname, townstart[x].minlevel);
+      send_to_char(buf, ch);
+    }
+    send_to_char("Switching costs 1 million gold,\r\n",ch);      
+    send_to_char("Unless you haven't switched before.\r\n", ch);
+    return;
+  }
+  for(x=0; townstart[x].minlevel != -1; x++)
+  {
+    if(strcmp(foo, townstart[x].entrychar) == 0)
+    {
+      if(GET_LEVEL(ch) < townstart[x].minlevel)
       {
-        if(GET_LEVEL(ch) < townstart[x].minlevel)
-        {
-          sprintf(buf, "You are not high enough level (%d) to live in %s\r\n", townstart[x].minlevel, townstart[x].longname);
-          send_to_char(buf, ch);
-          return;
-        }
-        if(PLR_FLAGGED(ch, PLR_LOADROOM) && GET_LEVEL(ch) <= LVL_IMMORT)
-        {
-          if(GET_GOLD(ch) < 1000000)
-          {
-            send_to_char("You don't have enough gold\r\n",ch);
-            return;
-          }
-          else
-           GET_GOLD(ch) -= 1000000;
-        }
-        SET_BIT(PLR_FLAGS(ch), PLR_LOADROOM);   
-        GET_LOADROOM(ch) = townstart[x].loadroom;
-        sprintf(buf, "You now start in %s, you recall to go there\r\n",
-                townstart[x].longname);
+        sprintf(buf, "You are not high enough level (%d) to live in %s\r\n", townstart[x].minlevel, townstart[x].longname);
         send_to_char(buf, ch);
         return;
       }
+      if(PLR_FLAGGED(ch, PLR_LOADROOM) && GET_LEVEL(ch) <= LVL_IMMORT)
+      {
+        if(GET_GOLD(ch) < 1000000)
+        {
+          send_to_char("You don't have enough gold\r\n",ch);
+          return;
+        }
+        else
+         GET_GOLD(ch) -= 1000000;
+      }
+      SET_BIT(PLR_FLAGS(ch), PLR_LOADROOM);   
+      GET_LOADROOM(ch) = townstart[x].loadroom;
+      sprintf(buf, "You now start in %s, you recall to go there\r\n",
+              townstart[x].longname);
+      send_to_char(buf, ch);
+      return;
     }
   }
-  send_to_char("&rAvailable starting rooms\r\n",ch);
-  send_to_char("------------------------&c\r\n",ch);
-  send_to_char("Num Name          MinLvl\r\n",ch);
-  send_to_char("--- ------------- ------&n\r\n",ch);
-  for(x=0; townstart[x].minlevel != -1 ; x++)
-  {
-    sprintf(buf, "%2s. %13s %6d\r\n", townstart[x].entrychar, 
-            townstart[x].longname, townstart[x].minlevel);
-    send_to_char(buf, ch);
-  }
-  send_to_char("Switching costs 1 million gold,\r\n",ch);      
-  send_to_char("Unless you haven't switched before.\r\n", ch);
 }
 
 ACMD(do_steal)
@@ -567,10 +564,11 @@ ACMD(do_practice)
 
   one_argument(argument, arg);
 
-  if (*arg)
+  if (!*arg) {
     send_to_char("You can only practice skills in your guild.\r\n", ch);
-  else
+  } else {
     list_skills(ch);
+  }
 }
 
 
@@ -878,7 +876,7 @@ ACMD(do_split)
 ACMD(do_use)
 {
   struct obj_data *mag_item;
-  int equipped = 1, percent;
+  int percent;
 
   half_chop(argument, arg, buf);
   if (!*arg) {
@@ -892,7 +890,6 @@ ACMD(do_use)
     switch (subcmd) {
     case SCMD_RECITE:
     case SCMD_QUAFF:
-      equipped = 0;
       if (!(mag_item = get_obj_in_list_vis(ch, arg, ch->carrying))) {
 	sprintf(buf2, "You don't seem to have %s %s.\r\n", AN(arg), arg);
 	send_to_char(buf2, ch);
@@ -1023,7 +1020,7 @@ ACMD(do_display) {
 
    one_argument(argument, arg);
 
-   if (!arg || !*arg) {
+   if (!*arg) {
      send_to_char("The following pre-set prompts are availible...\r\n", ch);
      for (i = 0; *def_prompts[i][0] != '\n'; i++) {
        sprintf(buf, "  %d. %-25s \r\n", i, def_prompts[i][0]);
@@ -1303,5 +1300,12 @@ ACMD(do_gen_tog)
   else
     send_to_char(tog_messages[subcmd][TOG_OFF], ch);
 
+  return;
+}
+
+ACMD(do_drag)
+{
+  /* Function not implemented yet - adding stub to prevent warnings */
+  send_to_char("This command is not implemented yet.\r\n", ch);
   return;
 }

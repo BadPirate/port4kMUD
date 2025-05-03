@@ -127,8 +127,10 @@ ACMD(do_brew)
 	/* sanity check */
 	if (temp1) {
 	    temp2 = get_spell_name(temp1);
-	    if (temp2)
+	    if (temp2 && *temp2)  /* Check that temp2 is not NULL and not empty */
 		strcpy(spell_name, temp2);
+	    else
+		spell_name[0] = '\0';
 	} else {
 	    bottle_name[0] = '\0';
 	    spell_name[0] = '\0';
@@ -168,7 +170,7 @@ ACMD(do_brew)
 		return;
 	}
 
-	if (!spell_name || !*spell_name) {
+	if (!*spell_name) {
 	    send_to_char("Spell names must be enclosed in single quotes!\r\n",
 			 ch);
 	    return;
@@ -306,8 +308,10 @@ ACMD(do_scribe)
 	/* sanity check */
 	if (temp1) {
 	    temp2 = get_spell_name(temp1);
-	    if (temp2)
+	    if (temp2 && *temp2)  /* Check that temp2 is not NULL and not empty */
 		strcpy(spell_name, temp2);
+	    else
+		spell_name[0] = '\0';
 	} else {
 	    paper_name[0] = '\0';
 	    spell_name[0] = '\0';
@@ -345,7 +349,7 @@ ACMD(do_scribe)
 		return;
 	}
 
-	if (!spell_name || !*spell_name) {
+	if (!*spell_name) {
 	    send_to_char("Spell names must be enclosed in single quotes!\r\n",
 			 ch);
 	    return;

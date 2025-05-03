@@ -209,7 +209,7 @@ int move_gain(struct char_data * ch)
 void set_title(struct char_data * ch, char *title) 
 {
   if (title == NULL)
-    title = '\0';
+    title = NULL;
 
   if (strlen(title) > MAX_TITLE_LENGTH)
     title[MAX_TITLE_LENGTH] = '\0';
@@ -241,7 +241,7 @@ void check_autowiz(struct char_data * ch)
 void gain_exp(struct char_data * ch, int gain)
 {
   int is_altered = FALSE;
-  int num_levels = 0, x;
+  int num_levels = 0;
   char buf[128];
 
   if (!IS_NPC(ch) && ((GET_LEVEL(ch) < 1 || GET_LEVEL(ch) >= LVL_IMMORT)) 
@@ -268,7 +268,6 @@ void gain_exp(struct char_data * ch, int gain)
       else if(GET_LEVEL(ch) == 101 && GET_CLASS(ch) == CLASS_MASTER)
       {
         EXTRA_LEVEL(ch) += 1;
-        x = EXTRA_LEVEL(ch) + GET_LEVEL(ch);
         num_levels++;
         advance_level(ch);
         is_altered = TRUE;

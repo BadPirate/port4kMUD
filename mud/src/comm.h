@@ -51,19 +51,19 @@ typedef RETSIGTYPE sigfunc(int);
 #if defined(__COMM_C__) && defined(__GNUC__)
 
 #ifndef accept
-   int accept();
+   int accept(int s, struct sockaddr *addr, socklen_t *addrlen);
 #endif
 
 #ifndef bind
-   int bind();
+   int bind(int s, const struct sockaddr *addr, socklen_t addrlen);
 #endif
 
 #ifndef chdir
-   int chdir();
+   int chdir(const char *path);
 #endif
 
 #ifndef close
-   int close();
+   int close(int fd);
 #endif
 
 // #ifndef fcntl
@@ -71,31 +71,31 @@ typedef RETSIGTYPE sigfunc(int);
 // #endif
 
 #ifndef getpeername
-   int getpeername();
+   int getpeername(int s, struct sockaddr *name, socklen_t *namelen);
 #endif
 
 #ifndef getrlimit
-   int getrlimit();
+   int getrlimit(int resource, struct rlimit *rlp);
 #endif
 
 #ifndef getsockname
-   int getsockname();
+   int getsockname(int s, struct sockaddr *name, socklen_t *namelen);
 #endif
 
 #ifndef htonl
-   u_long htonl();
+   u_long htonl(u_long hostlong);
 #endif
 
 #ifndef htons
-   u_short htons();
+   u_short htons(u_short hostshort);
 #endif
 
 #ifndef listen
-   int listen();
+   int listen(int s, int backlog);
 #endif
 
 #ifndef ntohl
-   u_long ntohl();
+   u_long ntohl(u_long netlong);
 #endif
 
 // #ifndef read
@@ -103,23 +103,23 @@ typedef RETSIGTYPE sigfunc(int);
 // #endif
 
 #ifndef select
-   int select();
+   int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
 #endif
 
 #ifndef setitimer
-   int setitimer();
+   int setitimer(int which, const struct itimerval *value, struct itimerval *ovalue);
 #endif
 
 #ifndef setrlimit
-   int setrlimit();
+   int setrlimit(int resource, const struct rlimit *rlp);
 #endif
 
 #ifndef setsockopt
-   int setsockopt();
+   int setsockopt(int s, int level, int optname, const void *optval, socklen_t optlen);
 #endif
 
 #ifndef socket
-   int socket();
+   int socket(int domain, int type, int protocol);
 #endif
 
 // #ifndef write

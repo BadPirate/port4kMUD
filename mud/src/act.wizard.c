@@ -2383,7 +2383,8 @@ ACMD(do_set)
   struct char_file_u tmp_store;
   char field[MAX_INPUT_LENGTH], name[MAX_INPUT_LENGTH], val_arg[MAX_INPUT_LENGTH];
   int on = 0, off = 0, value = 0;
-  char is_file = 0, is_mob = 0, is_player = 0;
+  char is_file = 0, is_player = 0;
+  /* Removed unused variable is_mob */
   int player_i = 0;
   int parse_class(char arg);
 
@@ -2457,9 +2458,6 @@ ACMD(do_set)
     half_chop(buf, name, buf);
   } else if (!str_cmp(name, "player")) {
     is_player = 1;
-    half_chop(buf, name, buf);
-  } else if (!str_cmp(name, "mob")) {
-    is_mob = 1;
     half_chop(buf, name, buf);
   }
   half_chop(buf, field, buf);

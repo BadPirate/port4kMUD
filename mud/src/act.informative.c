@@ -104,8 +104,6 @@ void list_scanned_chars(struct char_data * list, struct char_data * ch,
 void show_obj_to_char(struct obj_data * object, struct char_data * ch,
 			int mode)
 {
-  bool found;
-
   *buf = '\0';
   if ((mode == 0) && object->description)
     strcpy(buf, object->description);
@@ -127,26 +125,20 @@ void show_obj_to_char(struct obj_data * object, struct char_data * ch,
       strcpy(buf, "It looks like a drink container.");
   }
   if (mode != 3) {
-    found = FALSE;
     if (IS_OBJ_STAT(object, ITEM_INVISIBLE)) {
       strcat(buf, " (invisible)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object, ITEM_BLESS) && IS_AFFECTED(ch, AFF_DETECT_ALIGN)) {
       strcat(buf, " ..It glows blue!");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object, ITEM_MAGIC) && IS_AFFECTED(ch, AFF_DETECT_MAGIC)) {
       strcat(buf, " ..It glows yellow!");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object, ITEM_GLOW)) {
       strcat(buf, " ..It has a soft glowing aura!");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object, ITEM_HUM)) {
       strcat(buf, " ..It emits a faint humming sound!");
-      found = TRUE;
     }
   }
   strcat(buf, "\r\n");
@@ -158,10 +150,8 @@ void list_obj_to_char(struct obj_data * list, struct char_data * ch, int mode,
 {
   struct obj_data *i, *j;
   char buf[10];
-  bool found;
   int num;
 
-  found = FALSE;
   for (i = list; i; i = i->next_content) {
       num = 0;
       for (j = list; j != i; j = j->next_content)
@@ -182,10 +172,9 @@ void list_obj_to_char(struct obj_data * list, struct char_data * ch, int mode,
                 send_to_char(buf,ch);
             }
           show_obj_to_char(i, ch, mode);
-          found = TRUE;
       }
   }
-  if (!found && show)
+  if (!show)
     send_to_char(" Nothing.\r\n", ch);
 }
  
@@ -250,7 +239,7 @@ void diag_char_to_char(struct char_data * i, struct char_data * ch) {
 
 void look_at_char(struct char_data * i, struct char_data * ch)
 {
-  int j, found;
+  int j;
   struct obj_data *tmp_obj;
 
   if (i->player.description)
@@ -276,12 +265,11 @@ void look_at_char(struct char_data * i, struct char_data * ch)
     }
   }
 
-  found = FALSE;
-  for (j = 0; !found && j < NUM_WEARS; j++)
+  for (j = 0; j < NUM_WEARS; j++)
     if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j)))
-      found = TRUE;
+      break;
 
-  if (found) {
+  if (j < NUM_WEARS) {
     act("\r\n$n is using:", FALSE, i, 0, ch, TO_VICT);
     for (j = 0; j < NUM_WEARS; j++)
       if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j))) {
@@ -290,17 +278,12 @@ void look_at_char(struct char_data * i, struct char_data * ch)
       }
   }
   if (ch != i && (GET_CLASS(ch) == CLASS_THIEF || GET_LEVEL(ch) >= LVL_IMMORT)) {
-    found = FALSE;
     act("\r\nYou attempt to peek at $s inventory:", FALSE, i, 0, ch, TO_VICT);
     for (tmp_obj = i->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
       if (CAN_SEE_OBJ(ch, tmp_obj) && (number(0, 20) < GET_LEVEL(ch))) {
 	show_obj_to_char(tmp_obj, ch, 1);
-	found = TRUE;
       }
     }
-
-    if (!found)
-      send_to_char("You can't see anything.\r\n", ch);
   }
 }
 
@@ -530,12 +513,12 @@ ACMD(do_mlist)
   last = atoi(buf2);
 
   if ((first < 0) || (first > 99999) || (last < 0) || (last > 99999)) {
-    send_to_char("Values must be between 0 and 99999.\n\r", ch);
+    send_to_char("Values must be between 0 and 99999.\r\n", ch);
     return;
   }
 
   if (first >= last) {
-    send_to_char("Second value must be greater than first.\n\r", ch);
+    send_to_char("Second value must be greater than first.\r\n", ch);
     return;
   }
 
@@ -549,7 +532,7 @@ ACMD(do_mlist)
   }
 
   if (!found)
-    send_to_char("No mobiles were found in those parameters.\n\r", ch);
+    send_to_char("No mobiles were found in those parameters.\r\n", ch);
 }
 
 
@@ -571,12 +554,12 @@ ACMD(do_olist)
   last = atoi(buf2);
 
   if ((first < 0) || (first > 99999) || (last < 0) || (last > 99999)) {
-    send_to_char("Values must be between 0 and 99999.\n\r", ch);
+    send_to_char("Values must be between 0 and 99999.\r\n", ch);
     return;
   }
 
   if (first >= last) {
-    send_to_char("Second value must be greater than first.\n\r", ch);
+    send_to_char("Second value must be greater than first.\r\n", ch);
     return;
   }
 
@@ -590,7 +573,7 @@ ACMD(do_olist)
   }
 
   if (!found)
-    send_to_char("No objects were found in those parameters.\n\r", ch);
+    send_to_char("No objects were found in those parameters.\r\n", ch);
 }
 
 ACMD(do_exits) {
@@ -694,11 +677,11 @@ void look_in_obj(struct char_data * ch, char *arg)
 {
   struct obj_data *obj = NULL;
   struct char_data *dummy = NULL;
-  int amt, bits;
+  int amt;
 
   if (!*arg)
     send_to_char("Look in what?\r\n", ch);
-  else if (!(bits = generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM |
+  else if (!(generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM |
 				 FIND_OBJ_EQUIP, ch, &dummy, &obj))) {
     sprintf(buf, "There doesn't seem to be %s %s here.\r\n", AN(arg), arg);
     send_to_char(buf, ch);
@@ -712,7 +695,8 @@ void look_in_obj(struct char_data * ch, char *arg)
 	send_to_char("It is closed.\r\n", ch);
       else {
 	send_to_char(fname(obj->name), ch);
-	switch (bits) {
+	int result = generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &dummy, &obj);
+	switch (result) {
 	case FIND_OBJ_INV:
 	  send_to_char(" (carried): \r\n", ch);
 	  break;
@@ -764,7 +748,7 @@ char *find_exdesc(char *word, struct extra_descr_data * list)
  */
 void look_at_target(struct char_data * ch, char *arg)
 {
-  int bits, found = 0, j;
+  int found = 0, j;
   struct char_data *found_char = NULL;
   struct obj_data *obj = NULL, *found_obj = NULL;
   char *desc;
@@ -773,7 +757,7 @@ void look_at_target(struct char_data * ch, char *arg)
     send_to_char("Look at what?\r\n", ch);
     return;
   }
-  bits = generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP |
+  generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP |
 		      FIND_CHAR_ROOM, ch, &found_char, &found_obj);
 
   /* Is the target a character? */
@@ -814,7 +798,7 @@ void look_at_target(struct char_data * ch, char *arg)
 	send_to_char(desc, ch);
 	found = 1;
       }
-  if (bits) {			/* If an object was found back in
+  if (found_obj) {			/* If an object was found back in
 				 * generic_find */
     if (!found)
       show_obj_to_char(found_obj, ch, 5);	/* Show no-description */
@@ -868,7 +852,6 @@ ACMD(do_look)
 
 ACMD(do_examine)
 {
-  int bits;
   struct char_data *tmp_char;
   struct obj_data *tmp_object;
 
@@ -880,7 +863,7 @@ ACMD(do_examine)
   }
   look_at_target(ch, arg);
 
-  bits = generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_CHAR_ROOM |
+  generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_CHAR_ROOM |
 		      FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
   if (tmp_object) {
@@ -917,7 +900,7 @@ ACMD(do_inventory)
 
 ACMD(do_equipment)
 {
-  int i, found = 0;
+  int i;
 
   send_to_char("You are using:\r\n", ch);
   for (i = 0; i < NUM_WEARS; i++) {
@@ -925,16 +908,11 @@ ACMD(do_equipment)
       if (CAN_SEE_OBJ(ch, GET_EQ(ch, i))) {
 	send_to_char(where[i], ch);
 	show_obj_to_char(GET_EQ(ch, i), ch, 1);
-	found = TRUE;
       } else {
 	send_to_char(where[i], ch);
 	send_to_char("Something.\r\n", ch);
-	found = TRUE;
       }
     }
-  }
-  if (!found) {
-    send_to_char(" Nothing.\r\n", ch);
   }
 }
 

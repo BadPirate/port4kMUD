@@ -74,7 +74,6 @@ void affect_modify(struct char_data * ch, byte loc, sbyte mod, long bitv,
 		        bool add, int debug)
 {
   static int error=0, passfree=0;
-  int maxabil;
 
   if (add) {
     SET_BIT(AFF_FLAGS(ch), bitv);
@@ -82,9 +81,6 @@ void affect_modify(struct char_data * ch, byte loc, sbyte mod, long bitv,
     REMOVE_BIT(AFF_FLAGS(ch), bitv);
     mod = -mod;
   }
-
-
-  maxabil = (IS_NPC(ch) ? 25 : 18);
 
   switch (loc) {
   case APPLY_NONE:
@@ -215,7 +211,7 @@ void affect_total(struct char_data * ch)
     {
       if(error==0)
       {
-        sprintf(buf, "Affecting total for a character who's name length is %d",
+        sprintf(buf, "Affecting total for a character who's name length is %lu",
                 strlen(GET_NAME(ch)));
         log(buf);
         error=1;

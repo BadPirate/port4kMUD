@@ -1132,15 +1132,12 @@ SPECIAL(temple_cleric)
 {
   struct char_data *vict;
   struct char_data *hitme = NULL;
-  static int this_hour;
   int temp1 = 100;
   int temp2 = 100;
 
   if (cmd) return FALSE;
 
   if (time_info.hours != 0) {
-
-  this_hour = time_info.hours;
 
   for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
     {

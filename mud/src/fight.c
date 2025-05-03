@@ -490,9 +490,7 @@ void die(struct char_data * ch)
 void perform_group_gain(struct char_data * ch, int base,
 			     struct char_data * victim)
 {
-  int share;
-
-  share = MIN(max_exp_gain, MAX(1, base));
+  /* int share; -- removed unused variable */
 
 /*  if (share > 1) {
     sprintf(buf2, "You receive your share of experience -- %d points.\r\n", share);

@@ -635,14 +635,16 @@ void advance_level(struct char_data * ch)
   case CLASS_NINJA:
     add_hp += number(10,15);
     add_mana = number(GET_LEVEL(ch), (int) (1.5 * GET_LEVEL(ch)));
-    add_mana += add_mana = MIN(add_mana, 10);
+    add_mana = MIN(add_mana, 10);
+    add_mana += add_mana;
     add_move += number(0,3);
     break;
 
   case CLASS_MASTER:
     add_hp += number(15,20);
     add_mana = number(GET_LEVEL(ch), (int) (2 * GET_LEVEL(ch)));
-    add_mana += add_mana = MIN(add_mana, 15);
+    add_mana = MIN(add_mana, 15);
+    add_mana += add_mana;
     add_move += number(0,6);
     break;
   }

@@ -375,7 +375,7 @@ void zedit_save_to_disk(struct descriptor_data *d)
     	zone_table[OLC_ZNUM(d)].lifespan, 
         zone_table[OLC_ZNUM(d)].reset_mode
   );
-  fprintf(zfile, buf);
+  fprintf(zfile, "%s", buf);
 
   for(subcmd = 0; ZCMD.command != 'S'; subcmd++) {
     switch (ZCMD.command) {
@@ -504,6 +504,7 @@ int new_command(struct descriptor_data *d, int pos)
    CREATE(new_com, struct reset_com, 1);
    new_com->command = 'N'; 
    add_cmd_to_list(&OLC_ZONE(d)->cmd, new_com, pos);
+   free(new_com);
    return 1;
 }
 
@@ -549,10 +550,9 @@ int start_change_command(struct descriptor_data *d, int pos)
 
 /* the main menu */
 void zedit_disp_menu(struct descriptor_data * d)
-{ int subcmd = 0, room, counter = 0;
+{ int subcmd = 0, counter = 0;
 
   get_char_cols(d->character);
-  room = real_room(OLC_NUM(d));
 
   /*. Menu header .*/
   sprintf(buf,

@@ -916,6 +916,7 @@ void show_string(struct descriptor_data *d, char *input)
 {
   char buffer[MAX_STRING_LENGTH];
   int diff;
+  char *s;
 
   one_argument(input, buf);
 
@@ -949,8 +950,8 @@ void show_string(struct descriptor_data *d, char *input)
 
   else if (*buf) {
     send_to_char(
-		  "Valid commands while paging are RETURN, Q, R, B, or a numeric value.\r\n",
-		  d->character);
+          "Valid commands while paging are RETURN, Q, R, B, or a numeric value.\r\n",
+          d->character);
     return;
   }
   /* If we're displaying the last page, just send it to the character, and
@@ -967,11 +968,14 @@ void show_string(struct descriptor_data *d, char *input)
   }
   /* Or if we have more to show.... */
   else {
-    strncpy(buffer, d->showstr_vector[d->showstr_page],
-	    diff = ((int) d->showstr_vector[d->showstr_page + 1])
-	    - ((int) d->showstr_vector[d->showstr_page]));
-    buffer[diff] = '\0';
-    send_to_char(buffer, d->character);
-    d->showstr_page++;
+    s = d->showstr_vector[d->showstr_page];
+    if (s && (s = strchr(s, '\n')) != NULL) {
+      s++;
+      diff = s - (d->showstr_vector[d->showstr_page]);
+      strncpy(buffer, d->showstr_vector[d->showstr_page], diff);
+      buffer[diff] = '\0';
+      send_to_char(buffer, d->character);
+      d->showstr_page++;
+    }
   }
 }

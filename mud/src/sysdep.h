@@ -202,35 +202,24 @@ unsigned long random(void);
 
 #ifdef __GNUC__
 
-/*
-#ifdef HAVE_RANDOM
-#ifndef random
-   long int random();
-#endif
-
-#ifndef srandom
-   void srandom();
-#endif
-#endif  HAVE_RANDOM */
-
 #ifndef atoi
-   int atoi();
+   int atoi(const char *str);
 #endif
 
 #ifndef atol
-   long atol();
+   long atol(const char *str);
 #endif
 
 #ifndef bzero
-   void bzero();
+   void bzero(void *s, size_t n);
 #endif
 
 #ifndef crypt
-   char *crypt();
+   char *crypt(const char *key, const char *salt);
 #endif
 
 #ifndef fclose
-   int fclose();
+   int fclose(FILE *stream);
 #endif
 
 // #ifndef fcntl
@@ -238,7 +227,7 @@ unsigned long random(void);
 // #endif
 
 #ifndef fflush
-   int fflush();
+   int fflush(FILE *stream);
 #endif
 
 // #ifndef fprintf
@@ -246,7 +235,7 @@ unsigned long random(void);
 // #endif
 
 #ifndef fread
-   size_t fread();
+   size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 #endif
 
 // #ifndef fscanf
@@ -254,31 +243,31 @@ unsigned long random(void);
 // #endif
 
 #ifndef fseek
-   int fseek();
+   int fseek(FILE *stream, long offset, int whence);
 #endif
 
 #ifndef fwrite
-   size_t fwrite();
+   size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
 #endif
 
 #ifndef getpid
-   pid_t getpid();
+   pid_t getpid(void);
 #endif
 
 #ifndef gettimeofday
-   int gettimeofday();
+   int gettimeofday(struct timeval *tv, void *tz);
 #endif
 
 #ifndef perror
-   void perror();
+   void perror(const char *s);
 #endif
 
 #ifndef qsort
-   void qsort();
+   void qsort(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
 #endif
 
 #ifndef rewind
-   void rewind();
+   void rewind(FILE *stream);
 #endif
 
 // #ifndef sscanf
@@ -286,15 +275,15 @@ unsigned long random(void);
 // #endif
 
 #ifndef system
-   int system();
+   int system(const char *command);
 #endif
 
 #ifndef time
-   time_t time();
+   time_t time(time_t *tloc);
 #endif
 
 #ifndef unlink
-   int unlink();
+   int unlink(const char *pathname);
 #endif
 
 #endif /* __GNUC__ */

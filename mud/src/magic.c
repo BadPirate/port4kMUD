@@ -299,60 +299,35 @@ int mag_materials(struct char_data * ch, int item0, int item1, int item2,
 void mag_damage(int level, struct char_data * ch, struct char_data * victim,
 		     int spellnum, int savetype)
 {
-  int is_mage = 0, is_cleric = 0;
   int dam = 0;
 
   if (victim == NULL || ch == NULL)
     return;
 
-  is_mage = (GET_CLASS(ch) == CLASS_MAGIC_USER);
-  is_cleric = (GET_CLASS(ch) == CLASS_CLERIC);
-
   switch (spellnum) {
     /* Mostly mages */
   case SPELL_MAGIC_MISSILE:
   case SPELL_CHILL_TOUCH:	/* chill touch also has an affect */
-    if (is_mage)
-      dam = dice(1, 8) + 1;
-    else
-      dam = dice(1, 6) + 1;
+    dam = dice(1, 8) + 1;
     break;
   case SPELL_BURNING_HANDS:
-    if (is_mage)
-      dam = dice(3, 8) + 3;
-    else
-      dam = dice(3, 6) + 3;
+    dam = dice(3, 8) + 3;
     break;
   case SPELL_SHOCKING_GRASP:
-    if (is_mage)
-      dam = dice(5, 8) + 5;
-    else
-      dam = dice(5, 6) + 5;
+    dam = dice(5, 8) + 5;
     break;
   case SPELL_LIGHTNING_BOLT:
-    if (is_mage)
-      dam = dice(7, 8) + 7;
-    else
-      dam = dice(7, 6) + 7;
+    dam = dice(7, 8) + 7;
     break;
   case SPELL_COLOR_SPRAY:
-    if (is_mage)
-      dam = dice(9, 8) + 9;
-    else
-      dam = dice(9, 6) + 9;
+    dam = dice(9, 8) + 9;
     break;
   case SPELL_FIREBALL:
-    if (is_mage)
-      dam = dice(11, 8) + 11;
-    else
-      dam = dice(11, 6) + 11;
+    dam = dice(11, 8) + 11;
     break;
 
   case SPELL_METEOR_SWARM:
-    if (is_mage)
-      dam = dice(21, 8) + 21;
-    else
-      dam = dice(21, 6) + 21;
+    dam = dice(21, 8) + 21;
     break;
 
     /* Mostly clerics */
@@ -426,7 +401,6 @@ void mag_affects(int level, struct char_data * ch, struct char_data * victim,
 		      int spellnum, int savetype)
 {
   struct affected_type af[MAX_SPELL_AFFECTS];
-  int is_mage = FALSE, is_cleric = FALSE;
   bool accum_affect = FALSE, accum_duration = FALSE;
   char *to_vict = NULL, *to_room = NULL;
   int i;
@@ -434,9 +408,6 @@ void mag_affects(int level, struct char_data * ch, struct char_data * victim,
 
   if (victim == NULL || ch == NULL)
     return;
-
-  is_mage = (GET_CLASS(ch) == CLASS_MAGIC_USER);
-  is_cleric = (GET_CLASS(ch) == CLASS_CLERIC);
 
   for (i = 0; i < MAX_SPELL_AFFECTS; i++) {
     af[i].type = spellnum;
@@ -882,7 +853,7 @@ void mag_summons(int level, struct char_data * ch, struct obj_data * obj,
   struct char_data *mob = NULL;
   struct obj_data *tobj, *next_obj;
   int pfail = 0;
-  int msg = 0, fmsg = 0;
+  int fmsg = 0;
   int num = 1;
   int a, i;
   int mob_num = 0;
@@ -899,7 +870,6 @@ void mag_summons(int level, struct char_data * ch, struct obj_data * obj,
       return;
     }
     handle_corpse = 1;
-    msg = 12;
     mob_num = MOB_ZOMBIE;
     a = number(0, 5);
     if (a)
