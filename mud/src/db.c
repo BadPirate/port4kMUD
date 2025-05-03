@@ -2405,9 +2405,12 @@ void init_char(struct char_data * ch)
   if (ch->player.sex == SEX_MALE) {
     ch->player.weight = number(120, 180);
     ch->player.height = number(160, 200);
-  } else {
+  } else if (ch->player.sex == SEX_FEMALE) {
     ch->player.weight = number(100, 160);
     ch->player.height = number(150, 180);
+  } else if (ch->player.sex == SEX_NEUTRAL) {
+    ch->player.weight = number(110, 170);
+    ch->player.height = number(155, 190);
   }
 
   ch->points.max_mana = 100;

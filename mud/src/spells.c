@@ -279,7 +279,7 @@ ASPELL(spell_summon)
 	      "%s failed because you have summon protection on.\r\n"
 	      "Type NOSUMMON to allow other players to summon you.\r\n",
 	      GET_NAME(ch), world[ch->in_room].name,
-	      (ch->player.sex == SEX_MALE) ? "He" : "She");
+	      (ch->player.sex == SEX_MALE) ? "He" : (ch->player.sex == SEX_FEMALE ? "She" : "They"));
       send_to_char(buf, victim);
 
       sprintf(buf, "You failed because %s has summon protection on.\r\n",

@@ -354,9 +354,9 @@ void	update_pos(struct char_data *victim);
 /* compound utilities and other macros **********************************/
 
 
-#define HSHR(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "his":"her") :"its")
-#define HSSH(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "he" :"she") : "it")
-#define HMHR(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "him":"her") : "it")
+#define HSHR(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "his":"her") :"their")
+#define HSSH(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "he" :"she") : "they")
+#define HMHR(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "him":"her") : "them")
 
 #define ANA(obj) (strchr("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
 #define SANA(obj) (strchr("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")

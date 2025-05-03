@@ -784,7 +784,7 @@ void do_stat_character(struct char_data * ch, struct char_data * k)
   extern struct attack_hit_type attack_hit_text[];
 
   switch (GET_SEX(k)) {
-  case SEX_NEUTRAL:    strcpy(buf, "NEUTRAL-SEX\n\r");   break;
+  case SEX_NEUTRAL:    strcpy(buf, "NEUTRAL\r\n");       break;
   case SEX_MALE:       strcpy(buf, "MALE\r\n");          break;
   case SEX_FEMALE:     strcpy(buf, "FEMALE\r\n");        break;
   default:             strcpy(buf, "ILLEGAL-SEX!!\r\n"); break;
@@ -1003,7 +1003,7 @@ ACMD(do_stat)
   half_chop(argument, buf1, buf2);
 
   switch (GET_SEX(k)) {
-  case SEX_NEUTRAL:    strcpy(sex, "NEUTRAL-SEX");   break;
+  case SEX_NEUTRAL:    strcpy(sex, "NEUTRAL");   break;
   case SEX_MALE:       strcpy(sex, "MALE");          break;
   case SEX_FEMALE:     strcpy(sex, "FEMALE");        break;
   default:             strcpy(sex, "ILLEGAL-SEX!!"); break;

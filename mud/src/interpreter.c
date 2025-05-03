@@ -1837,7 +1837,7 @@ void nanny(struct descriptor_data *d, char *arg)
     echo_on(d);
 
     if (STATE(d) == CON_CNFPASSWD) {
-      SEND_TO_Q("What is your sex (M/F)? ", d);
+      SEND_TO_Q("What is your gender (M/F/N)? ", d);
       STATE(d) = CON_QSEX;
     } else {
       save_char(d->character, NOWHERE);
@@ -1849,7 +1849,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
     break;
 
-  case CON_QSEX:		/* query sex of new user         */
+  case CON_QSEX:        /* query sex of new user         */
     switch (*arg) {
     case 'm':
     case 'M':
@@ -1859,11 +1859,13 @@ void nanny(struct descriptor_data *d, char *arg)
     case 'F':
       d->character->player.sex = SEX_FEMALE;
       break;
-    default:
-      SEND_TO_Q("That is not a sex..\r\n"
-		"What IS your sex? ", d);
-      return;
+    case 'n':
+    case 'N':
+      d->character->player.sex = SEX_NEUTRAL;
       break;
+    default:
+      SEND_TO_Q("That is not a valid gender.\r\nWhat IS your gender? (M/F/N): ", d);
+      return;
     }
 
     SEND_TO_Q(race_menu, d);

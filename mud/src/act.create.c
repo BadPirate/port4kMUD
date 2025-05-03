@@ -52,9 +52,9 @@ void make_potion(struct char_data *ch, int potion, struct obj_data *container) {
 	int mana, dam;
     
 	if ((number(1, 3) == 3) && (GET_LEVEL(ch) < LVL_IMMORT)) {
-	  send_to_char("As you begin mixing the potion, it violently"
-	 		     " explodes!\r\n",ch);
-	  act("$n begins to mix a potion, but it suddenly explodes!",
+	  send_to_char("As you begin mixing the potion, they violently"
+	 		     " explode!\r\n",ch);
+	  act("$n begins to mix a potion, but they suddenly explode!",
 		    FALSE, ch, 0,0, TO_ROOM);
 	  extract_obj(container);
 	  dam = number(15, mag_manacost(ch, potion) * 2);

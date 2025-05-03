@@ -3099,7 +3099,7 @@ wis            LVL_GRGOD        BOTH    NUMBER       Wisdom
 dex            LVL_GRGOD        BOTH    NUMBER       Dexterity
 con            LVL_GRGOD        BOTH    NUMBER       Constitution
 cha            LVL_GRGOD        BOTH    NUMBER       Charisma
-sex            LVL_GRGOD        BOTH    MISC         Sex
+sex            LVL_GRGOD        BOTH    MISC         Gender
 ac             LVL_GRGOD        BOTH    NUMBER       Armor class
 gold           LVL_GOD          BOTH    NUMBER       Gold (On hand)
 bank           LVL_GOD          PC      NUMBER       Gold in bank

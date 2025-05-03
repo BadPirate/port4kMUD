@@ -66,16 +66,16 @@ Each control character is preceded by a '$'.
   $N - Like $n, except insert the text for vict_obj. NOTE: vict_obj must
        point to an object of type struct char_data.
 
-  $m - "him", "her", or "it", depending on the gender of ch.
+  $m - "him", "her", or "them", depending on the gender of ch.
 
   $M - Like $m, for vict_obj. NOTE: vict_obj must be a pointer of type
        struct char_data.
 
-  $s - "his", "her", or "it", depending on the gender of ch.
+  $s - "his", "her", or "their", depending on the gender of ch.
 
   $S - Like $s, for vict_obj.
 
-  $e - "he", "she", "it", depending on the gender of ch.
+  $e - "he", "she", "they", depending on the gender of ch.
 
   $E - Like $e, for vict_obj.
 

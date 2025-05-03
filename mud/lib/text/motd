@@ -17,3 +17,4 @@
   - AI Fixed all the warnings (and regressed who knows what?)
   - Sacrifice now works on items in inventory, has error messages and does
     not puke if you pass it arguments.
+  - DEI, added neutral gender as character choice
