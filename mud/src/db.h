@@ -83,6 +83,8 @@ int	real_object(int virtual);
 struct obj_data *read_object(int nr, int type);
 int	vnum_object(char *searchname, struct char_data *ch);
 
+void check_and_disable_invalid_mob_funcs(void);
+
 #define REAL 0
 #define VIRTUAL 1
 

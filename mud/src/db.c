@@ -297,6 +297,7 @@ void boot_db(void)
   if (!no_specials) {
     log("   Mobiles.");
     assign_mobiles();
+    check_and_disable_invalid_mob_funcs();
     log("   Shopkeepers.");
     assign_the_shopkeepers();
     log("   Objects.");

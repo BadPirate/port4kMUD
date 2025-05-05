@@ -26,6 +26,7 @@ extern struct room_data *world;
 extern struct char_data *character_list;
 extern struct descriptor_data *descriptor_list;
 extern struct index_data *mob_index;
+extern struct char_data *mob_proto;
 extern struct index_data *obj_index;
 extern struct time_info_data time_info;
 extern struct command_info cmd_info[];
@@ -1808,5 +1809,28 @@ SPECIAL (redbutton)
         look_at_room(ch, 0);
         act("$n slowly materializes from nowhere...", FALSE, ch, 0, 0, TO_ROOM);
         return(TRUE);
+}
+
+/*
+ * Disable MOB_SPEC flag for mobs with NULL or invalid spec proc after load.
+ */
+void check_and_disable_invalid_mob_funcs(void) {
+  extern struct index_data *mob_index;
+  extern struct char_data *mob_proto;
+  extern int top_of_mobt;
+  int i, count = 0;
+  char buf[256];
+  for (i = 0; i <= top_of_mobt; i++) {
+    if (IS_SET(mob_proto[i].char_specials.saved.act, MOB_SPEC) && mob_index[i].func == NULL) {
+      REMOVE_BIT(mob_proto[i].char_specials.saved.act, MOB_SPEC);
+      sprintf(buf, "MOB_SPEC flag cleared for mob #%d (no valid spec proc)", mob_index[i].virtual);
+      log(buf);
+      count++;
+    }
+  }
+  if (count > 0) {
+    sprintf(buf, "%d mobs had MOB_SPEC flag cleared due to missing/invalid spec procs.", count);
+    log(buf);
+  }
 }
 
