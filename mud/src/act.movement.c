@@ -889,10 +889,16 @@ ACMD(do_wake)
 
   one_argument(argument, arg);
   if (!*arg) {
-    if (GET_POS(ch) == POS_SLEEPING)
-      send_to_char("Maybe you should wake yourself up first.\r\n", ch);
-    else
-      send_to_char(NOPERSON, ch);
+    if (GET_POS(ch) == POS_SLEEPING) {
+      if (IS_AFFECTED(ch, AFF_SLEEP))
+        send_to_char("You can't wake up!\r\n", ch);
+      else {
+        send_to_char("You awaken, and sit up.\r\n", ch);
+        act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
+        GET_POS(ch) = POS_SITTING;
+      }
+    } else
+      send_to_char("You are already awake...\r\n", ch);
     return;
   }
   

@@ -1,4 +1,4 @@
-[ 02 JUN 2025 ] Thanks to Vibe Coding, Jaxom (BadPirate) now has time to run
+[ 02 MAY 2025 ] Thanks to Vibe Coding, Jaxom (BadPirate) now has time to run
   this mud properly again. Port4k domain expired, so I'm hosting at
   https://mud.badpirate.net using a next js bridge.
 
@@ -13,8 +13,9 @@
 	    
 	     Visit the github, and the web login at https://mud.badpirate.net
 
-[ 02 JUN 2025 ] BadPirate - Vibe Coding Bug fixes
+[ 02 MAY 2025 ] BadPirate - Vibe Coding Bug fixes
   - AI Fixed all the warnings (and regressed who knows what?)
   - Sacrifice now works on items in inventory, has error messages and does
     not puke if you pass it arguments.
   - DEI, added neutral gender as character choice
+[ 04 MAY 2025 ] Badpirate - Wake will assume self if no argument passed
