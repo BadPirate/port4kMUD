@@ -27,6 +27,13 @@ export async function startDiscordBridge(): Promise<void> {
     ],
   })
 
+  // discord.js's Client is an EventEmitter - an unhandled 'error' (or
+  // 'shardError') event throws and takes down this whole process, which also
+  // serves the game's web interface. A Discord-side problem (bad token,
+  // disallowed intents, a gateway hiccup) must never be able to do that.
+  client.on('error', (err) => console.error('Discord client error:', err))
+  client.on('shardError', (err) => console.error('Discord shard error:', err))
+
   let relayClient: MudRelayClient | null = null
   if (discordConfig.botMudUsername && discordConfig.botMudPassword) {
     relayClient = new MudRelayClient(discordConfig.botMudUsername, discordConfig.botMudPassword)
