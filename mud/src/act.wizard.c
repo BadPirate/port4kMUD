@@ -22,6 +22,7 @@
 #include "house.h"
 #include "screen.h"
 #include "olc.h"
+#include "copyover_update.h"
 
 /*   external vars  */
 extern FILE *player_fl;
@@ -3121,7 +3122,25 @@ ACMD(do_copyover)
 	FILE *fp;
 	struct descriptor_data *d, *d_next;
 	char buf [100], buf2[100];
-	
+	char update_err[LARGE_BUFSIZE];
+
+	skip_spaces(&argument);
+	if (!*argument) {
+		send_to_char("Usage: copyover <branch>\r\n", ch);
+		send_to_char("Pulls the mud/ tree from that branch of the public GitHub repo, rebuilds,\r\n"
+		             "then copyovers into the new binary.\r\n", ch);
+		return;
+	}
+
+	send_to_char("Pulling and building mud/ from that branch, please wait...\r\n", ch);
+	if (copyover_update_source(argument, update_err, sizeof(update_err)) != 0) {
+		send_to_char("Copyover aborted - the running server is untouched.\r\n", ch);
+		send_to_char(update_err, ch);
+		send_to_char("\r\n", ch);
+		return;
+	}
+	send_to_char("Build succeeded, copying over now...\r\n", ch);
+
 	fp = fopen (COPYOVER_FILE, "w");
 	
 	if (!fp)
