@@ -17,6 +17,8 @@
 #include "comm.h"
 #include "db.h"
 #include "handler.h"
+#include "interpreter.h"
+#include "discord.h"
 
 extern int exp_to_level(struct char_data *);
 extern struct char_data *character_list;
@@ -289,6 +291,7 @@ void gain_exp(struct char_data * ch, int gain)
 	send_to_char(buf, ch);
       }
       check_autowiz(ch);
+      discord_emit("levelup", "%s|%d", GET_NAME(ch), GET_LEVEL(ch));
     }
   } else if (gain < 0) {
     gain = MAX(-max_exp_loss, gain);	/* Cap max exp lost per death */
@@ -324,6 +327,7 @@ void gain_exp_regardless(struct char_data * ch, int gain)
 	send_to_char(buf, ch);
       }
       check_autowiz(ch);
+      discord_emit("levelup", "%s|%d", GET_NAME(ch), GET_LEVEL(ch));
     }
   }
 }

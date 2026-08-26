@@ -25,6 +25,7 @@
 #include "screen.h"
 #include "clan.h"
 #include "olc.h"
+#include "discord.h"
 
 extern char *motd;
 extern char *imotd;
@@ -337,6 +338,7 @@ const struct command_info cmd_info[] = {
   { "dc"       , POS_DEAD    , do_dc       , LVL_IMMORT, 0 },
   { "deposit"  , POS_STANDING, do_not_here , 1, 0 },
   { "diagnose" , POS_RESTING , do_diagnose , 0, 0 },
+  { "discordrelay", POS_DEAD , do_discordrelay, 0, 0 },
   { "dismount" , POS_STANDING, do_dismount , 0, 0 },
   { "display"  , POS_DEAD    , do_display  , 0, 0 },
   { "doh"      , POS_STANDING, do_action   , 0, 0 },
@@ -457,6 +459,7 @@ const struct command_info cmd_info[] = {
   { "newbie"   , POS_SLEEPING, do_gen_comm , 0, SCMD_NEWBIE },
   { "nibble"   , POS_RESTING , do_action   , 0, 0 },
   { "nod"      , POS_RESTING , do_action   , 0, 0 },
+  { "nodiscord", POS_DEAD    , do_gen_tog  , 0, SCMD_NODISCORD },
 //  { "noarena"  , POS_DEAD    , do_gen_tog  , 0, SCMD_ARENA },
   { "noauction", POS_DEAD    , do_gen_tog  , 0, SCMD_NOAUCTION },
   { "nogossip" , POS_DEAD    , do_gen_tog  , 0, SCMD_NOGOSSIP },
@@ -1966,6 +1969,7 @@ void nanny(struct descriptor_data *d, char *arg)
       load_result = enter_player_game(d);
       send_to_char(WELC_MESSG, d->character);
       act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
+      discord_emit("login", "%s|%d", GET_NAME(d->character), GET_LEVEL(d->character));
 
       STATE(d) = CON_PLAYING;
       if (!GET_LEVEL(d->character)) {

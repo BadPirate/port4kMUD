@@ -25,7 +25,7 @@ OBJFILES = comm.o act.comm.o act.informative.o act.movement.o act.item.o \
 	house.o interpreter.o limits.o magic.o mail.o mobact.o modify.o \
 	objsave.o olc.o shop.o spec_assign.o spec_procs.o spell_parser.o \
 	auction.o alias.o redit.o oedit.o zedit.o medit.o sedit.o \
-	spells.o utils.o weather.o color.o clan.o races.o arena.o act.create.o
+	spells.o utils.o weather.o color.o clan.o races.o arena.o act.create.o discord.o
 
 default: .accepted
 	$(MAKE) ../bin/circle
@@ -222,6 +222,9 @@ weather.o: weather.c conf.h sysdep.h structs.h utils.h comm.h handler.h \
 clan.o: clan.c conf.h sysdep.h structs.h db.h utils.h spells.h \
  interpreter.h screen.h clan.h
 	$(CC) -c $(CFLAGS) clan.c
+discord.o: discord.c conf.h sysdep.h structs.h utils.h comm.h \
+  interpreter.h handler.h db.h discord.h
+	$(CC) -c $(CFLAGS) discord.c
 
 redit.o: redit.c conf.h sysdep.h structs.h utils.h comm.h boards.h \
   db.c olc.h

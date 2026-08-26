@@ -32,6 +32,16 @@ const optional = {
   // Next.js specific environment variables
   NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME || packageJson.name,
   NEXT_PUBLIC_APP_VERSION: process.env.NEXT_PUBLIC_APP_VERSION || packageJson.version,
+
+  // Discord bridge - all optional, the bridge stays off with DISCORD_BOT_TOKEN unset.
+  // DISCORD_BOT_MUD_USERNAME and DISCORD_BRIDGE_SOCKET_PATH must also be set in the
+  // real process/container environment bin/circle runs under (see mud/src/discord.c) -
+  // this file's dotenv loading only reaches the Node process.
+  DISCORD_BOT_TOKEN: process.env.DISCORD_BOT_TOKEN,
+  DISCORD_CHANNEL_ID: process.env.DISCORD_CHANNEL_ID,
+  DISCORD_BRIDGE_SOCKET_PATH: process.env.DISCORD_BRIDGE_SOCKET_PATH || '/tmp/port4k-discord.sock',
+  DISCORD_BOT_MUD_USERNAME: process.env.DISCORD_BOT_MUD_USERNAME,
+  DISCORD_BOT_MUD_PASSWORD: process.env.DISCORD_BOT_MUD_PASSWORD,
 }
 
 if (required.NODE_ENV === 'development') {

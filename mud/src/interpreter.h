@@ -132,6 +132,7 @@ struct alias {
 #define SCMD_AUTOGOLD  22
 #define SCMD_PKILL     23
 #define SCMD_AUTODISP  24
+#define SCMD_NODISCORD 25
 
 /* do_wizutil */
 #define SCMD_REROLL	0

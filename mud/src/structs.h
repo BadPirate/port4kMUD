@@ -221,6 +221,7 @@
 #define PRF_CLANTALK    (1 << 25) /* Can hear clan talk */
 #define PRF_AUTOGOLD    (1 << 26) /* Takes gold from corpses */
 #define PRF_PKILL	(1 << 27) /* Willing to Pkill 			*/
+#define PRF_NODISCORD   (1 << 28) /* Can't hear the Discord relay channel */
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */

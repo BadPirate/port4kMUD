@@ -1199,6 +1199,9 @@ ACMD(do_gen_tog)
      "AutoGold enabled.\r\n"},
     {"You are no longer a pkiller.\r\n",
      "You can now kill pkillers, (and be killed by them).\r\n"},
+    {"", ""}, /* SCMD_AUTODISP (24) - defined but not wired up, placeholder to keep indices aligned */
+    {"You can now hear the Discord relay channel.\r\n",
+     "You are now deaf to the Discord relay channel.\r\n"},
   };
 
 
@@ -1282,11 +1285,14 @@ ACMD(do_gen_tog)
   case SCMD_NOOUCH:
     result = PRF_TOG_CHK(ch, PRF_NOOUCH);
     break;
+  case SCMD_NODISCORD:
+    result = PRF_TOG_CHK(ch, PRF_NODISCORD);
+    break;
   case SCMD_PKILL:
     result = -1;
     if(PRF_FLAGGED(ch, PRF_PKILL) && GET_LEVEL(ch) < LVL_IMMORT)
       send_to_char("You can't turn it off :-P\r\n", ch);
-    else      
+    else
       result = PRF_TOG_CHK(ch, PRF_PKILL);
     break;
   default:

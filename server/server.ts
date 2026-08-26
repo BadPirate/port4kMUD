@@ -5,28 +5,19 @@ import { Socket as NetSocket } from 'net'
 import next from 'next'
 import { Socket, Server as SocketIOServer } from 'socket.io'
 import { ensureMudServerRunning } from './src/utils/mud-server'
-
-// Telnet protocol constants
-const IAC = 255 // Interpret As Command
-const DONT = 254 // You are not to do this
-const DO = 253 // Please do this
-const WONT = 252 // I won't do this
-const WILL = 251 // I will do this
-const SB = 250 // Subnegotiation Begin
-const SE = 240 // Subnegotiation End
-const TELOPT_ECHO = 1 // Echo option
+import { processTelnetData, TelnetEchoState } from './src/utils/telnet'
+import discordConfig from './src/utils/discord/config'
+import { startDiscordBridge } from './src/utils/discord/bot'
 
 // Types for active connection tracking
-interface MudConnection {
+interface MudConnection extends TelnetEchoState {
   socket: Socket // Socket.IO socket
   mudConnection: NetSocket
-  serverEcho: boolean // Keep track of server echo state
   user?: {
     name: string
     [key: string]: unknown
   }
   buffer?: string
-  telnetBuffer: number[] // Buffer for telnet protocol parsing
 }
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -65,96 +56,16 @@ function processUserInput(data: string): Buffer {
   return Buffer.from(data)
 }
 
-// Process telnet commands in the data stream
-function processTelnetData(connection: MudConnection, data: Buffer): string {
-  const bytes = Array.from(data)
-  let processed = ''
-  let i = 0
-
-  // Append new bytes to existing buffer if any
-  const buffer = [...connection.telnetBuffer, ...bytes]
-  connection.telnetBuffer = []
-
-  while (i < buffer.length) {
-    // Check for IAC
-    if (buffer[i] === IAC) {
-      if (i + 1 >= buffer.length) {
-        // Incomplete command, store in buffer
-        connection.telnetBuffer = buffer.slice(i)
-        break
-      }
-
-      // Process telnet command
-      if (buffer[i + 1] === WILL && i + 2 < buffer.length) {
-        if (buffer[i + 2] === TELOPT_ECHO) {
-          // Server wants to handle echo (which means client should NOT echo)
-          connection.serverEcho = false
-
-          // Inform client to disable local echo
-          connection.socket.emit('echo', false) // Server will echo, client should NOT echo
-        }
-        i += 3 // Skip the 3-byte command
-        continue
-      } else if (buffer[i + 1] === WONT && i + 2 < buffer.length) {
-        if (buffer[i + 2] === TELOPT_ECHO) {
-          // Server does not want to handle echo (which means client SHOULD echo)
-          connection.serverEcho = true
-
-          // Inform client to enable local echo
-          connection.socket.emit('echo', true) // Server won't echo, client should echo
-        }
-        i += 3 // Skip the 3-byte command
-        continue
-      } else if (buffer[i + 1] === DO || buffer[i + 1] === DONT) {
-        // Skip these commands if they're complete
-        if (i + 2 < buffer.length) {
-          i += 3
-          continue
-        } else {
-          // Incomplete command, store in buffer
-          connection.telnetBuffer = buffer.slice(i)
-          break
-        }
-      } else if (buffer[i + 1] === SB) {
-        // Find the end of subnegotiation
-        let j = i + 2
-        while (j < buffer.length - 1 && !(buffer[j] === IAC && buffer[j + 1] === SE)) {
-          j++
-        }
-
-        if (j < buffer.length - 1) {
-          // Complete subnegotiation
-          i = j + 2
-          continue
-        } else {
-          // Incomplete subnegotiation
-          connection.telnetBuffer = buffer.slice(i)
-          break
-        }
-      } else if (buffer[i + 1] === IAC) {
-        // Escaped IAC - add a single IAC byte
-        processed += String.fromCharCode(IAC)
-        i += 2
-        continue
-      } else {
-        // Unknown or incomplete command
-        i++
-        continue
-      }
-    }
-
-    // Regular data byte
-    processed += String.fromCharCode(buffer[i])
-    i++
-  }
-
-  return processed
-}
-
 // Prepare the application before starting the server
 nextApp.prepare().then(async () => {
   // Check if MUD server is running
   await ensureMudServerRunning()
+
+  if (discordConfig.enabled) {
+    startDiscordBridge().catch((err) => {
+      console.error('Failed to start Discord bridge:', err)
+    })
+  }
 
   const server = createServer(async (req, res) => {
     try {
@@ -189,6 +100,7 @@ nextApp.prepare().then(async () => {
       serverEcho: true, // Default to server echo enabled
       buffer: '',
       telnetBuffer: [], // Buffer for telnet protocol parsing
+      onEchoChange: (serverEcho) => socket.emit('echo', serverEcho),
     })
 
     // Connect to the MUD server

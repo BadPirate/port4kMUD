@@ -19,6 +19,7 @@
 #include "handler.h"
 #include "db.h"
 #include "screen.h"
+#include "discord.h"
 
 /* extern variables */
 extern struct room_data *world;
@@ -539,6 +540,8 @@ ACMD(do_gen_comm)
 	send_to_char(KNRM, i->character);
     }
   }
+
+  discord_emit("channel", "%s|%s|%s", com_msgs[subcmd][1], GET_NAME(ch), argument);
 }
 
 
