@@ -105,6 +105,19 @@ export class MudRelayClient extends EventEmitter {
 
   private advanceLogin(): void {
     if (this.loginState === 'awaiting-password-prompt') {
+      // The MUD only sends "Password:" for an EXISTING character - an unknown
+      // name gets a "Did I get that right ... (Y/N)?" new-character prompt
+      // instead (see interpreter.c's CON_GET_NAME), which this bot can't and
+      // shouldn't try to answer (that's full character creation). Fail loudly
+      // instead of silently waiting out the login timeout on every attempt.
+      if (this.textBuffer.includes('Did I get that right')) {
+        console.error(
+          `Discord relay: MUD character '${this.username}' does not exist - ` +
+            'create it in-game first (DISCORD_BOT_MUD_USERNAME/PASSWORD), then restart the bridge',
+        )
+        this.socket?.destroy()
+        return
+      }
       if (this.textBuffer.includes('Password:')) {
         this.textBuffer = ''
         this.socket?.write(`${this.password}\r\n`)
@@ -114,6 +127,19 @@ export class MudRelayClient extends EventEmitter {
     }
 
     if (this.loginState === 'awaiting-post-password') {
+      // Fail loudly and stop instead of retrying forever on every 5s
+      // reconnect - each attempt is a fresh connection, so the MUD's own
+      // 3-strikes lockout never kicks in, and every retry both spams its
+      // mudlog and increments the persisted bad-password count on the
+      // character record.
+      if (this.textBuffer.includes('Wrong password')) {
+        console.error(
+          `Discord relay: wrong password for MUD character '${this.username}' - ` +
+            'check DISCORD_BOT_MUD_PASSWORD, then restart the bridge',
+        )
+        this.socket?.destroy()
+        return
+      }
       // A dropped/stale prior session skips straight to CON_PLAYING - detect
       // that branch first so we don't wait forever for a menu that never comes.
       if (this.textBuffer.includes('Reconnecting') || this.textBuffer.includes('already in use')) {
