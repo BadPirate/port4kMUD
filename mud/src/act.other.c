@@ -565,9 +565,9 @@ ACMD(do_practice)
   one_argument(argument, arg);
 
   if (!*arg) {
-    send_to_char("You can only practice skills in your guild.\r\n", ch);
-  } else {
     list_skills(ch);
+  } else {
+    send_to_char("You can only practice skills in your guild.\r\n", ch);
   }
 }
 
