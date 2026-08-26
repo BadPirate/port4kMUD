@@ -8,7 +8,6 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  globalSetup: '<rootDir>/scripts/setup-test-db.js',
   testEnvironment: 'jest-environment-jsdom',
   testEnvironmentOptions: {
     url: 'http://localhost:3000',

@@ -29,7 +29,6 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 
 - **Modern Web Interface**: Accessible from any device with a web browser
 - **Terminal Emulation**: Full-featured terminal experience using xterm.js
-- **Authentication**: User account management through next-auth
 - **Real-time Communication**: Bidirectional data flow via Socket.IO
 - **Responsive Design**: Works on desktop and mobile devices
 - **Persistent Connections**: Manages connections between web clients and the MUD server
@@ -100,18 +99,6 @@ Start the production server:
 yarn start
 ```
 
-## Docker Support
-
-You can use Docker to run the application:
-
-```bash
-# Development
-docker-compose -f docker-compose.dev.yml up
-
-# Testing
-docker-compose -f docker-compose.test.yml up
-```
-
 ## Testing
 
 Run unit tests:
@@ -131,7 +118,6 @@ yarn test:e2e
 - **`pages/`**: Next.js pages and API routes
 - **`server.ts`**: Custom server implementation with Socket.IO
 - **`utils/mud-server.ts`**: Utility for checking and ensuring MUD server connectivity
-- **`prisma/`**: Database schema and migrations
 - **`components/`**: React components
 - **`styles/`**: CSS and styling
 - **`public/`**: Static assets
@@ -141,8 +127,6 @@ yarn test:e2e
 - **Next.js**: React framework for server-rendered applications
 - **Socket.IO**: Real-time bidirectional event-based communication
 - **xterm.js**: Terminal emulator for the browser
-- **Prisma**: Database toolkit for TypeScript
-- **next-auth**: Authentication solution for Next.js
 - **Bootstrap**: Responsive UI components
 - **TypeScript**: Type-safe JavaScript
 

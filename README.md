@@ -27,7 +27,6 @@ The web interface provides a modern browser-based client for accessing the MUD. 
 - Built with Next.js, React, and TypeScript
 - Uses Socket.IO for real-time communication
 - Provides terminal emulation through xterm.js
-- Includes user authentication and account management
 
 See the [Server README](server/README.md) for detailed information about the web interface, its features, and how to set it up.
 

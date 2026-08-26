@@ -134,17 +134,6 @@ module.exports = {
       },
     },
     {
-      // Special rules for database-related files
-      files: ['**/db.ts', '**/prisma/**/*'],
-      rules: {
-        // Completely turn off camelcase for database files
-        camelcase: 'off',
-        '@typescript-eslint/camelcase': 'off',
-        // Allow direct usage of process.env in database files
-        'no-restricted-syntax': 'off',
-      },
-    },
-    {
       // Allow process.env usage in the centralized config file
       files: ['**/src/utils/config.ts'],
       rules: {
