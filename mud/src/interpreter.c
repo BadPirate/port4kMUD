@@ -1969,7 +1969,8 @@ void nanny(struct descriptor_data *d, char *arg)
       load_result = enter_player_game(d);
       send_to_char(WELC_MESSG, d->character);
       act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
-      discord_emit("login", "%s|%d", GET_NAME(d->character), GET_LEVEL(d->character));
+      if (!discord_is_bot_account(d->character))
+        discord_emit("login", "%s|%d", GET_NAME(d->character), GET_LEVEL(d->character));
 
       STATE(d) = CON_PLAYING;
       if (!GET_LEVEL(d->character)) {

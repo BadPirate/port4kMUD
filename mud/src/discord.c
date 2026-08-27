@@ -100,13 +100,18 @@ void discord_emit(const char *event_type, const char *fmt, ...)
   close(sock);
 }
 
+int discord_is_bot_account(struct char_data *ch)
+{
+  char *bot_name = getenv("DISCORD_BOT_MUD_USERNAME");
+  return bot_name && *bot_name && !str_cmp(GET_NAME(ch), bot_name);
+}
+
 ACMD(do_discordrelay)
 {
   struct descriptor_data *i;
-  char *bot_name = getenv("DISCORD_BOT_MUD_USERNAME");
   char buf[MAX_STRING_LENGTH];
 
-  if (!bot_name || !*bot_name || str_cmp(GET_NAME(ch), bot_name)) {
+  if (!discord_is_bot_account(ch)) {
     send_to_char("Huh?!?\r\n", ch);
     return;
   }

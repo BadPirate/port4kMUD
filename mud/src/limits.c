@@ -478,7 +478,10 @@ void point_update(void)
       damage(i, i, 2, TYPE_SUFFERING);
     if (!IS_NPC(i)) {
       update_char_objects(i);
-      if (GET_LEVEL(i) < LVL_GOD)
+      /* The Discord relay bot has to stay logged in to relay chat - exempt
+       * it from idle disconnection by name rather than by level, so it never
+       * needs elevated privileges just to avoid being kicked once an hour. */
+      if (GET_LEVEL(i) < LVL_GOD && !discord_is_bot_account(i))
 	check_idling(i);
     }
   }
