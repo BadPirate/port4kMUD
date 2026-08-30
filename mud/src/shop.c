@@ -647,7 +647,7 @@ struct obj_data *next_sellable_obj(struct char_data * ch, char *name,
 void shopping_sell(char *arg, struct char_data * ch,
 		        struct char_data * keeper, int shop_nr)
 {
-  char buf[MAX_STRING_LENGTH], name[200];
+  char tempstr[200], buf[MAX_STRING_LENGTH], name[200];
   struct obj_data *obj;
   int sellnum, sold = 0, goldamt = 0, dotmode;
 
@@ -723,15 +723,15 @@ void shopping_sell(char *arg, struct char_data * ch,
   }
   GET_GOLD(ch) += goldamt;
   if (dotmode == FIND_ALL)
-    sprintf(buf, "%d item%s", sold, (sold == 1) ? "" : "s");
+    sprintf(tempstr, "%d item%s", sold, (sold == 1) ? "" : "s");
   else
-    strcpy(buf, times_message(0, name, sold));
-  sprintf(buf, "$n sells %s.", buf);
+    strcpy(tempstr, times_message(0, name, sold));
+  sprintf(buf, "$n sells %s.", tempstr);
   act(buf, FALSE, ch, obj, 0, TO_ROOM);
 
   sprintf(buf, shop_index[shop_nr].message_sell, GET_NAME(ch), goldamt);
   do_tell(keeper, buf, cmd_tell, 0);
-  sprintf(buf, "The shopkeeper now has %s.\n\r", buf);
+  sprintf(buf, "The shopkeeper now has %s.\n\r", tempstr);
   send_to_char(buf, ch);
 
   if (GET_GOLD(keeper) < MIN_OUTSIDE_BANK) {
