@@ -3127,6 +3127,26 @@ static void copyover_send_status(void *ctx, const char *msg)
 		write_to_descriptor(ch->desc->descriptor, (char *) msg);
 }
 
+/* Warns everyone connected that the game is about to block synchronously
+ * for a copyover pull/diff/build, which can take a while (network clone,
+ * then a full make). Sent via write_to_descriptor, same as the "please
+ * remain seated" notice below - the normal output queue won't flush again
+ * until copyover_update_source returns, so SEND_TO_Q here would just sit
+ * unsent for the entire freeze. */
+static void copyover_broadcast_pause(struct char_data *ch)
+{
+	struct descriptor_data *d;
+	char buf[256];
+
+	snprintf(buf, sizeof(buf),
+	         "\r\n*** %s is pulling and rebuilding the MUD from GitHub - "
+	         "the game will pause for a bit. ***\r\n", GET_NAME(ch));
+
+	for (d = descriptor_list; d; d = d->next)
+		if (d->character && d->connected == CON_PLAYING)
+			write_to_descriptor(d->descriptor, buf);
+}
+
 /* (c) 1996-97 Erwin S. Andreasen <erwin@pip.dknet.dk> */
 ACMD(do_copyover)
 {
@@ -3169,6 +3189,7 @@ ACMD(do_copyover)
 	}
 
 	send_to_char("Pulling and building mud/ from that branch, please wait...\r\n", ch);
+	copyover_broadcast_pause(ch);
 	update_result = copyover_update_source(branch, confirmed, copyover_send_status, ch,
 	                                        update_err, sizeof(update_err));
 	if (update_result == COPYOVER_UPDATE_NEEDS_CONFIRM) {
