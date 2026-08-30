@@ -629,12 +629,27 @@ void sort_keeper_objs(struct char_data * keeper, int shop_nr)
 }
 
 
+/* Like find_dotmode_obj(), but additionally skips past anything this shop
+ * won't buy (see trade_with()), so a bulk "sell all"/"sell all.item" only
+ * ever lands on items the shopkeeper will actually purchase. */
+struct obj_data *next_sellable_obj(struct char_data * ch, char *name,
+			         int dotmode, int shop_nr, struct obj_data * list)
+{
+  struct obj_data *obj = find_dotmode_obj(ch, name, dotmode, list);
+
+  while (obj && trade_with(obj, shop_nr) != OBJECT_OK)
+    obj = find_dotmode_obj(ch, name, dotmode, obj->next_content);
+
+  return obj;
+}
+
+
 void shopping_sell(char *arg, struct char_data * ch,
 		        struct char_data * keeper, int shop_nr)
 {
   char buf[MAX_STRING_LENGTH], name[200];
   struct obj_data *obj;
-  int sellnum, sold = 0, goldamt = 0;
+  int sellnum, sold = 0, goldamt = 0, dotmode;
 
   if (!(is_ok(keeper, ch, shop_nr)))
     return;
@@ -651,8 +666,25 @@ void shopping_sell(char *arg, struct char_data * ch,
     return;
   }
   one_argument(arg, name);
-  if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
+  dotmode = find_all_dots(name);
+
+  if (dotmode == FIND_ALLDOT && !*name) {
+    sprintf(buf, "%s What do you want to sell all of?", GET_NAME(ch));
+    do_tell(keeper, buf, cmd_tell, 0);
     return;
+  }
+
+  if (dotmode == FIND_INDIV) {
+    if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
+      return;
+  } else {
+    sellnum = -1;	/* "all"/"all.item": sell every match, no fixed count */
+    if (!(obj = next_sellable_obj(ch, name, dotmode, shop_nr, ch->carrying))) {
+      sprintf(buf, shop_index[shop_nr].no_such_item2, GET_NAME(ch));
+      do_tell(keeper, buf, cmd_tell, 0);
+      return;
+    }
+  }
 
   if (GET_GOLD(keeper) + SHOP_BANK(shop_nr) < sell_price(ch, obj, shop_nr)) {
     sprintf(buf, shop_index[shop_nr].missing_cash1, GET_NAME(ch));
@@ -660,18 +692,23 @@ void shopping_sell(char *arg, struct char_data * ch,
     return;
   }
   while ((obj) && (GET_GOLD(keeper) + SHOP_BANK(shop_nr) >=
-		   sell_price(ch, obj, shop_nr)) && (sold < sellnum)) {
+		   sell_price(ch, obj, shop_nr)) &&
+	 ((sellnum < 0) || (sold < sellnum))) {
     sold++;
 
     goldamt += sell_price(ch, obj, shop_nr);
     GET_GOLD(keeper) -= sell_price(ch, obj, shop_nr);
-	
+
     obj_from_char(obj);
     slide_obj(obj, keeper, shop_nr);
-    obj = get_selling_obj(ch, name, keeper, shop_nr, FALSE);
+
+    if (dotmode == FIND_INDIV)
+      obj = get_selling_obj(ch, name, keeper, shop_nr, FALSE);
+    else
+      obj = next_sellable_obj(ch, name, dotmode, shop_nr, ch->carrying);
   }
 
-  if (sold < sellnum) {
+  if ((sellnum >= 0) && (sold < sellnum)) {
     if (!obj)
       sprintf(buf, "%s You only have %d of those.", GET_NAME(ch), sold);
     else if (GET_GOLD(keeper) + SHOP_BANK(shop_nr) <
@@ -685,7 +722,10 @@ void shopping_sell(char *arg, struct char_data * ch,
     do_tell(keeper, buf, cmd_tell, 0);
   }
   GET_GOLD(ch) += goldamt;
-  strcpy(buf, times_message(0, name, sold));
+  if (dotmode == FIND_ALL)
+    sprintf(buf, "%d item%s", sold, (sold == 1) ? "" : "s");
+  else
+    strcpy(buf, times_message(0, name, sold));
   sprintf(buf, "$n sells %s.", buf);
   act(buf, FALSE, ch, obj, 0, TO_ROOM);
 

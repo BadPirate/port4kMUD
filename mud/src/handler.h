@@ -71,6 +71,8 @@ char *arg, struct obj_data *equipment[], int *j);
 /* find all dots */
 
 int	find_all_dots(char *arg);
+struct obj_data *find_dotmode_obj(struct char_data *ch, char *name,
+			           int dotmode, struct obj_data *list);
 
 #define FIND_INDIV	0
 #define FIND_ALL	1

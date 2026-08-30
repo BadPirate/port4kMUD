@@ -1347,18 +1347,22 @@ See also: AC, EXPERIENCE
 #
 SELL
 
-Usage: sell [#] <item>
-       sell <#>.<item>
+Usage: sell <item>
+       sell <#> <item>
+       sell all
+       sell all.<item>
 
 If you'd like to sell an item to a shopkeeper, trying selling it to them.
 Most shops specialize in what they will buy, so you may have to look around
 to find a buyer for your items.
- 
+
 Examples:
- 
+
   > sell sword       (sell the first sword in your inventory)
   > sell 3 sword     (sell the first three swords in your inventory)
- 
+  > sell all.sword   (sell every sword in your inventory)
+  > sell all         (sell everything you're carrying that this shop buys)
+
 See also: BUY, LIST, SHOPS, VALUE
 #
 SLEEP

@@ -1231,6 +1231,20 @@ int find_all_dots(char *arg)
 }
 
 
+/* Walk a dot-mode object selection (see find_all_dots()): under FIND_ALL
+ * every object in the list is a match, so this just returns the list head
+ * unfiltered; under FIND_ALLDOT/FIND_INDIV it defers to the usual visible,
+ * name-matching lookup. Callers get the first match by passing the head of
+ * the list, then keep walking by passing obj->next_content back in. */
+struct obj_data *find_dotmode_obj(struct char_data *ch, char *name,
+			           int dotmode, struct obj_data *list)
+{
+  if (dotmode == FIND_ALL)
+    return list;
+  return get_obj_in_list_vis(ch, name, list);
+}
+
+
 // dismount_char() / fr: Daniel Koepke (dkoepke@california.com)
 //   If a character is mounted on something, we dismount them.  If
 //   someone is mounting our character, then we dismount that someone.
