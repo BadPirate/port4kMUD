@@ -3116,24 +3116,67 @@ void Crash_rentsave(struct char_data * ch, int cost);
 
 #define EXE_FILE "bin/circle" /* maybe use argv[0] but it's not reliable */
 
+/* Fires copyover_update_source's progress messages straight to the
+ * initiating admin's socket as they happen, since the whole update runs
+ * synchronously and blocks the normal output queue until it's done. */
+static void copyover_send_status(void *ctx, const char *msg)
+{
+	struct char_data *ch = (struct char_data *) ctx;
+
+	if (ch->desc)
+		write_to_descriptor(ch->desc->descriptor, (char *) msg);
+}
+
 /* (c) 1996-97 Erwin S. Andreasen <erwin@pip.dknet.dk> */
 ACMD(do_copyover)
 {
 	FILE *fp;
 	struct descriptor_data *d, *d_next;
 	char buf [100], buf2[100];
+	char branch[MAX_INPUT_LENGTH];
 	char update_err[LARGE_BUFSIZE];
+	char *last_space;
+	int confirmed = FALSE;
+	int update_result;
 
 	skip_spaces(&argument);
 	if (!*argument) {
-		send_to_char("Usage: copyover <branch>\r\n", ch);
+		send_to_char("Usage: copyover <branch> [confirm]\r\n", ch);
 		send_to_char("Pulls the mud/ tree from that branch of the public GitHub repo, rebuilds,\r\n"
-		             "then copyovers into the new binary.\r\n", ch);
+		             "then copyovers into the new binary. If the branch's world files differ\r\n"
+		             "from the live ones, add 'confirm' to actually overwrite them.\r\n", ch);
+		return;
+	}
+
+	/* Trim trailing whitespace, then peel off a trailing "confirm" token.
+	 * Done by hand (not one_argument/half_chop) because those lowercase
+	 * their output, and branch names are case-sensitive. */
+	{
+		char *end = argument + strlen(argument);
+		while (end > argument && isspace((unsigned char) end[-1]))
+			*(--end) = '\0';
+	}
+	last_space = strrchr(argument, ' ');
+	if (last_space && !str_cmp(last_space + 1, "confirm")) {
+		confirmed = TRUE;
+		*last_space = '\0';
+	}
+	strncpy(branch, argument, sizeof(branch) - 1);
+	branch[sizeof(branch) - 1] = '\0';
+	if (!*branch) {
+		send_to_char("Usage: copyover <branch> [confirm]\r\n", ch);
 		return;
 	}
 
 	send_to_char("Pulling and building mud/ from that branch, please wait...\r\n", ch);
-	if (copyover_update_source(argument, update_err, sizeof(update_err)) != 0) {
+	update_result = copyover_update_source(branch, confirmed, copyover_send_status, ch,
+	                                        update_err, sizeof(update_err));
+	if (update_result == COPYOVER_UPDATE_NEEDS_CONFIRM) {
+		send_to_char(update_err, ch);
+		send_to_char("\r\n", ch);
+		return;
+	}
+	if (update_result != COPYOVER_UPDATE_OK) {
 		send_to_char("Copyover aborted - the running server is untouched.\r\n", ch);
 		send_to_char(update_err, ch);
 		send_to_char("\r\n", ch);
