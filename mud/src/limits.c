@@ -30,6 +30,19 @@ extern int max_exp_loss;
 #define NEEDFOOD(ch) ((GET_COND((ch),FULL)<5) && (GET_COND((ch),FULL)>-1))
 #define NEEDWATER(ch) ((GET_COND((ch),THIRST)<5) && (GET_COND((ch),THIRST)>-1))
 
+/* FULL/THIRST count down from 24 to 0 in whole-point steps once per
+ * point_update() call (one call per mud hour == SECS_PER_MUD_HOUR real
+ * seconds). Spacing the point-loss out over several point_update() calls
+ * stretches the total real-world drain time:
+ *   FULL:   24 points / 12 real hours -> 1 point every 24 point_update() calls
+ *   THIRST: 24 points /  8 real hours -> 1 point every 16 point_update() calls
+ * Both cross the "getting hungry/thirsty" warning at the halfway point
+ * (value == 12), which lands at 6 real hours and 4 real hours respectively.
+ */
+#define FULL_TICKS_PER_POINT   24
+#define THIRST_TICKS_PER_POINT 16
+#define COND_WARN_THRESHOLD    12
+
 /* When age < 15 return the value p0 */
 /* When age in 15..29 calculate the line between p1 & p2 */
 /* When age in 30..44 calculate the line between p2 & p3 */
@@ -363,44 +376,58 @@ void gain_condition(struct char_data * ch, int condition, int value)
   GET_COND(ch, condition) = MAX(0, GET_COND(ch, condition));
   GET_COND(ch, condition) = MIN(24, GET_COND(ch, condition));
 
-  if (GET_COND(ch, condition) || PLR_FLAGGED(ch, PLR_WRITING)) {
-    return; }
+  if (PLR_FLAGGED(ch, PLR_WRITING))
+    return;
+
+  /* Only warn/harm on natural decay (value < 0); never while eating/drinking */
+  if (value >= 0)
+    return;
 
   switch (condition) {
   case FULL:
-    send_to_char("You are hungry.\r\n", ch);
-    if (GET_COND(ch, FULL) < 3 && safe == FALSE)
+    if (GET_COND(ch, FULL) == COND_WARN_THRESHOLD)
+      send_to_char("You are getting hungry.\r\n", ch);
+    else if (GET_COND(ch, FULL) == 0)
     {
-      send_to_char("&rYou are so hungry it hurts...\r\n&n",ch);
-      GET_HIT(ch) -= number(1,10);
-      update_pos(ch);
-      if(GET_POS(ch) <= POS_STUNNED)
+      send_to_char("You are hungry.\r\n", ch);
+      if (safe == FALSE)
       {
-        death_cry(ch);
-        sprintf(buf, "%s is killed by hunger!\r\n", GET_NAME(ch));
-        send_to_all(buf);
-        raw_kill(ch);
+        send_to_char("&rYou are so hungry it hurts...\r\n&n",ch);
+        GET_HIT(ch) -= number(1,10);
+        update_pos(ch);
+        if(GET_POS(ch) <= POS_STUNNED)
+        {
+          death_cry(ch);
+          sprintf(buf, "%s is killed by hunger!\r\n", GET_NAME(ch));
+          send_to_all(buf);
+          raw_kill(ch);
+        }
       }
     }
     return;
   case THIRST:
-    send_to_char("You are thirsty.\r\n", ch);
-    if (GET_COND(ch, THIRST) < 3 && safe == FALSE)
+    if (GET_COND(ch, THIRST) == COND_WARN_THRESHOLD)
+      send_to_char("You are getting thirsty, hydrate homie.\r\n", ch);
+    else if (GET_COND(ch, THIRST) == 0)
     {
-      send_to_char("&rYou are so thirsty it hurts...&n\r\n",ch);
-      GET_HIT(ch) -= number(1,10);
-      update_pos(ch);
-      if(GET_POS(ch) <= POS_STUNNED)
+      send_to_char("You are thirsty.\r\n", ch);
+      if (safe == FALSE)
       {
-        death_cry(ch);
-        sprintf(buf, "%s is dying for a drink (dead)!\r\n", GET_NAME(ch));
-        send_to_all(buf);
-        raw_kill(ch);
+        send_to_char("&rYou are so thirsty it hurts...&n\r\n",ch);
+        GET_HIT(ch) -= number(1,10);
+        update_pos(ch);
+        if(GET_POS(ch) <= POS_STUNNED)
+        {
+          death_cry(ch);
+          sprintf(buf, "%s is dying for a drink (dead)!\r\n", GET_NAME(ch));
+          send_to_all(buf);
+          raw_kill(ch);
+        }
       }
     }
     return;
   case DRUNK:
-    if (intoxicated)
+    if (intoxicated && GET_COND(ch, DRUNK) == 0)
       send_to_char("You feel more sober.\r\n", ch);
     return;
   default:
@@ -455,15 +482,27 @@ void point_update(void)
   void extract_obj(struct obj_data * obj);	/* handler.c */
   struct char_data *i, *next_char;
   struct obj_data *j, *next_thing, *jj, *next_thing2;
+  static int full_pulse_count = 0, thirst_pulse_count = 0;
+  bool decrement_full, decrement_thirst;
+
+  decrement_full = (++full_pulse_count >= FULL_TICKS_PER_POINT);
+  if (decrement_full)
+    full_pulse_count = 0;
+
+  decrement_thirst = (++thirst_pulse_count >= THIRST_TICKS_PER_POINT);
+  if (decrement_thirst)
+    thirst_pulse_count = 0;
 
   /* characters */
   for (i = character_list; i; i = next_char) {
     next_char = i->next;
-	
-    gain_condition(i, FULL, -1);
+
+    if (decrement_full)
+      gain_condition(i, FULL, -1);
     gain_condition(i, DRUNK, -1);
-    gain_condition(i, THIRST, -1);
-	
+    if (decrement_thirst)
+      gain_condition(i, THIRST, -1);
+
     if (GET_POS(i) >= POS_STUNNED) {
       GET_HIT(i) = MIN(GET_HIT(i) + hit_gain(i), GET_MAX_HIT(i));
       GET_MANA(i) = MIN(GET_MANA(i) + mana_gain(i), GET_MAX_MANA(i));
