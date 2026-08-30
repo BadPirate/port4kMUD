@@ -16,7 +16,7 @@ type LoginState =
 
 /**
  * Maintains one persistent connection to the MUD, logged in as a dedicated
- * bot character, so Discord messages can be relayed in via the `discordrelay`
+ * bot character, so Discord messages can be relayed in via the `discord`
  * command. Connects exactly like a real telnet client (mirrors server.ts's
  * per-browser bridge), since the MUD has no other way to accept input.
  */
@@ -60,7 +60,7 @@ export class MudRelayClient extends EventEmitter {
       .trim()
       .slice(0, MAX_RELAY_LENGTH)
     if (!singleLine) return
-    this.socket.write(`discordrelay ${singleLine}\r\n`)
+    this.socket.write(`discord ${singleLine}\r\n`)
   }
 
   private connect(): void {

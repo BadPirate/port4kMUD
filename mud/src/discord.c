@@ -2,7 +2,7 @@
 *   File: discord.c				     Addition to CircleMUD *
 *  Usage: Discord bridge - emits game events (logins, channel chat,       *
 *         level-ups) to a local Unix socket for a Node.js bot process to  *
-*         relay to Discord, and do_discordrelay, which lets that bot post *
+*         relay to Discord, and do_discord, which lets that bot post     *
 *         Discord chat back into the game as a one-way, bot-only channel. *
 *                                                                          *
 *  Entirely optional: with no DISCORD_BRIDGE_SOCKET_PATH set, discord_emit *
@@ -106,7 +106,7 @@ int discord_is_bot_account(struct char_data *ch)
   return bot_name && *bot_name && !str_cmp(GET_NAME(ch), bot_name);
 }
 
-ACMD(do_discordrelay)
+ACMD(do_discord)
 {
   struct descriptor_data *i;
   char buf[MAX_STRING_LENGTH];

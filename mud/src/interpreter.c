@@ -338,7 +338,7 @@ const struct command_info cmd_info[] = {
   { "dc"       , POS_DEAD    , do_dc       , LVL_IMMORT, 0 },
   { "deposit"  , POS_STANDING, do_not_here , 1, 0 },
   { "diagnose" , POS_RESTING , do_diagnose , 0, 0 },
-  { "discordrelay", POS_DEAD , do_discordrelay, 0, 0 },
+  { "discord"  , POS_DEAD    , do_discord  , 0, 0 },
   { "dismount" , POS_STANDING, do_dismount , 0, 0 },
   { "display"  , POS_DEAD    , do_display  , 0, 0 },
   { "doh"      , POS_STANDING, do_action   , 0, 0 },
