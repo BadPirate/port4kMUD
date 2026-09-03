@@ -46,8 +46,11 @@ jobs:
         
     # Upload the built server as an artifact
     - name: Upload server build
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
+        # v4 drops dot-prefixed paths unless asked otherwise, which would take
+        # .next and node_modules/.bin with it and leave the e2e job nothing to run.
+        include-hidden-files: true
         name: server-build
         path: |
           ./server/.next
@@ -86,7 +89,7 @@ jobs:
         
     # Upload the built MUD binary and necessary files as an artifact
     - name: Upload MUD build
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mud-build
         path: |
@@ -104,13 +107,13 @@ jobs:
       
     # Download artifacts from previous jobs
     - name: Download server build
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: server-build
         path: ./server
         
     - name: Download MUD build
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: mud-build
         path: ./mud
@@ -138,7 +141,7 @@ jobs:
       
     - name: Upload test results
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: playwright-results
         path: server/test-results/
