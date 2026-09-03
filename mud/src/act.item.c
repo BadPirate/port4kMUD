@@ -1208,7 +1208,132 @@ void wear_message(struct char_data * ch, struct obj_data * obj, int where)
 
 
 
-void perform_wear(struct char_data * ch, struct obj_data * obj, int where)
+/* Swapping one piece of equipment for another compares only the item's
+ * straight, non-magical numbers: average damage for a weapon, armour class
+ * for a piece of armour.  Anything else has nothing worth comparing, and
+ * spell affects on the items are deliberately ignored. */
+#define SWAP_STAT_NONE		0
+#define SWAP_STAT_DAMAGE	1
+#define SWAP_STAT_ARMOR		2
+
+/* Degrees of change, measured as a proportion rather than a flat number of
+ * points, so the same step up reads as big at level 1 as it does at 30. */
+#define SWAP_SAME		0
+#define SWAP_LITTLE		1
+#define SWAP_SOME		2
+#define SWAP_PLENTY		3
+
+
+/*
+ * A few world items carry absurd numbers - object 136 rolls 2147483647d20 -
+ * so both halves of a weapon's dice and an armour's class are capped before
+ * being multiplied out, keeping the percentage arithmetic below well inside
+ * a 32 bit long.
+ */
+#define SWAP_POWER_CAP		1000
+
+
+/* Stores obj's comparable power in tenths - weapon dice averages are not
+ * whole numbers - and returns which stat that was. */
+int swap_stat(struct obj_data * obj, long *power)
+{
+  long dice, sides;
+
+  if (!obj)
+    return SWAP_STAT_NONE;
+
+  switch (GET_OBJ_TYPE(obj)) {
+  case ITEM_WEAPON:
+    /* GET_OBJ_VAL(obj, 1) dice of GET_OBJ_VAL(obj, 2) sides: 1d6 -> 35. */
+    dice = MIN(GET_OBJ_VAL(obj, 1), SWAP_POWER_CAP);
+    sides = MIN(GET_OBJ_VAL(obj, 2), SWAP_POWER_CAP);
+    *power = dice * (sides + 1) * 5;
+    return SWAP_STAT_DAMAGE;
+  case ITEM_ARMOR:
+    *power = (long) MAX(MIN(GET_OBJ_VAL(obj, 0), SWAP_POWER_CAP),
+			-SWAP_POWER_CAP) * 10;
+    return SWAP_STAT_ARMOR;
+  default:
+    return SWAP_STAT_NONE;
+  }
+}
+
+
+int swap_degree(long from, long to)
+{
+  long scale, pct;
+
+  if (from == to)
+    return SWAP_SAME;
+
+  /*
+   * Measure the gap against the weaker of the two pieces, so that trading up
+   * and trading straight back again report the same size of change.  Scaling
+   * off the old piece alone made every downgrade read as small, since losing
+   * everything you had is only ever a 100% drop.
+   */
+  scale = MIN(labs(from), labs(to));
+
+  if (scale == 0 || (from < 0) != (to < 0))
+    return SWAP_PLENTY;		/* one piece is worth nothing, or worse */
+
+  pct = labs(to - from) * 100 / scale;
+
+  if (pct < 10)			/* not worth mentioning */
+    return SWAP_SAME;
+  if (pct <= 40)
+    return SWAP_LITTLE;
+  if (pct < 100)
+    return SWAP_SOME;
+  return SWAP_PLENTY;
+}
+
+
+void swap_message(struct char_data * ch, struct obj_data * obj,
+		       struct obj_data * old, int where)
+{
+  char *degrees[] = {"", "a little ", "", "a lot "};
+  char *verb = "wear";
+  char message[MAX_INPUT_LENGTH];
+  long new_power = 0, old_power = 0;
+  int stat, degree;
+
+  switch (where) {
+  case WEAR_WIELD:
+    verb = "wield";
+    break;
+  case WEAR_LIGHT:
+  case WEAR_HOLD:
+    verb = "hold";
+    break;
+  case WEAR_SHIELD:
+    verb = "use";
+    break;
+  }
+
+  sprintf(message, "$n %ss $p instead of $P.", verb);
+  act(message, TRUE, ch, obj, old, TO_ROOM);
+  sprintf(message, "You %s $p instead of $P.", verb);
+  act(message, FALSE, ch, obj, old, TO_CHAR);
+
+  /* Only say how it feels when both pieces are measured the same way. */
+  stat = swap_stat(obj, &new_power);
+  if (stat == SWAP_STAT_NONE || stat != swap_stat(old, &old_power))
+    return;
+
+  if ((degree = swap_degree(old_power, new_power)) == SWAP_SAME)
+    return;
+
+  sprintf(message, "You feel %s%s %s.\r\n", degrees[degree],
+	  new_power > old_power ? "more" : "less",
+	  stat == SWAP_STAT_DAMAGE ? "deadly" : "protected");
+  send_to_char(message, ch);
+}
+
+
+
+void perform_wear(struct char_data * ch, struct obj_data * obj, int where,
+		       int allow_swap)
 {
   /*
    * ITEM_WEAR_TAKE is used for objects that do not require special bits
@@ -1255,7 +1380,29 @@ void perform_wear(struct char_data * ch, struct obj_data * obj, int where)
       where++;
 
   if (GET_EQ(ch, where)) {
-    send_to_char(already_wearing[where], ch);
+    struct obj_data *old = GET_EQ(ch, where);
+
+    if (!allow_swap) {
+      send_to_char(already_wearing[where], ch);
+      return;
+    }
+    /*
+     * Take the old piece off and put the new one on in its place.  The new
+     * item leaves inventory before the old one lands there, so a full pack
+     * can never block the swap.
+     */
+    obj_from_char(obj);
+    obj_to_char(unequip_char(ch, where), ch);
+    equip_char(ch, obj, where);
+
+    if (GET_EQ(ch, where) != obj) {
+      /* equip_char zapped the new piece back into inventory - put the old
+       * one back on rather than leaving the slot bare. */
+      obj_from_char(old);
+      equip_char(ch, old, where);
+      return;
+    }
+    swap_message(ch, obj, old, where);
     return;
   }
   wear_message(ch, obj, where);
@@ -1340,7 +1487,7 @@ ACMD(do_wear)
       next_obj = obj->next_content;
       if (CAN_SEE_OBJ(ch, obj) && (where = find_eq_pos(ch, obj, 0)) >= 0) {
 	items_worn++;
-	perform_wear(ch, obj, where);
+	perform_wear(ch, obj, where, FALSE);
       }
     }
     if (!items_worn)
@@ -1357,7 +1504,7 @@ ACMD(do_wear)
       while (obj) {
 	next_obj = get_obj_in_list_vis(ch, arg1, obj->next_content);
 	if ((where = find_eq_pos(ch, obj, 0)) >= 0)
-	  perform_wear(ch, obj, where);
+	  perform_wear(ch, obj, where, FALSE);
 	else
 	  act("You can't wear $p.", FALSE, ch, obj, 0, TO_CHAR);
 	obj = next_obj;
@@ -1368,7 +1515,7 @@ ACMD(do_wear)
       send_to_char(buf, ch);
     } else {
       if ((where = find_eq_pos(ch, obj, arg2)) >= 0)
-	perform_wear(ch, obj, where);
+	perform_wear(ch, obj, where, TRUE);
       else if (!*arg2)
 	act("You can't wear $p.", FALSE, ch, obj, 0, TO_CHAR);
     }
@@ -1394,7 +1541,7 @@ ACMD(do_wield)
     else if (GET_OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)
       send_to_char("It's too heavy for you to use.\r\n", ch);
     else
-      perform_wear(ch, obj, WEAR_WIELD);
+      perform_wear(ch, obj, WEAR_WIELD, TRUE);
   }
 }
 
@@ -1413,14 +1560,14 @@ ACMD(do_grab)
     send_to_char(buf, ch);
   } else {
     if (GET_OBJ_TYPE(obj) == ITEM_LIGHT)
-      perform_wear(ch, obj, WEAR_LIGHT);
+      perform_wear(ch, obj, WEAR_LIGHT, TRUE);
     else {
       if (!CAN_WEAR(obj, ITEM_WEAR_HOLD) && GET_OBJ_TYPE(obj) != ITEM_WAND &&
       GET_OBJ_TYPE(obj) != ITEM_STAFF && GET_OBJ_TYPE(obj) != ITEM_SCROLL &&
 	  GET_OBJ_TYPE(obj) != ITEM_POTION)
 	send_to_char("You can't hold that.\r\n", ch);
       else
-	perform_wear(ch, obj, WEAR_HOLD);
+	perform_wear(ch, obj, WEAR_HOLD, TRUE);
     }
   }
 }
