@@ -21,10 +21,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn' # Cache yarn dependencies
@@ -47,9 +47,9 @@ jobs:
     # Keep the build output around for inspection.  Nothing downstream consumes
     # it - the e2e job installs its own dependencies - so node_modules is left out.
     - name: Upload server build
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        include-hidden-files: true  # v4 skips dot-prefixed paths, and .next is one
+        include-hidden-files: true  # the action skips dot-prefixed paths, and .next is one
         name: server-build
         path: |
           ./server/.next
@@ -65,7 +65,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Install build dependencies
       run: sudo apt-get update && sudo apt-get install -y build-essential
@@ -85,7 +85,7 @@ jobs:
         
     # Upload the built MUD binary and necessary files as an artifact
     - name: Upload MUD build
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: mud-build
         path: |
@@ -99,19 +99,19 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       
     # Only the compiled MUD comes from an artifact; the server's dependencies are
     # installed here.  Artifacts do not carry the executable bit, so anything
     # unpacked from one has to have it put back by hand below.
     - name: Download MUD build
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: mud-build
         path: ./mud
     
     - name: Set up Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: 20.x
         cache: 'yarn'
@@ -139,7 +139,7 @@ jobs:
       
     - name: Upload test results
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: playwright-results
         path: server/test-results/
