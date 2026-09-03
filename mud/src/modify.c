@@ -915,7 +915,7 @@ void page_string(struct descriptor_data *d, char *str, int keep_internal)
 void show_string(struct descriptor_data *d, char *input)
 {
   char buffer[MAX_STRING_LENGTH];
-  int diff;
+  long diff;
   char *s;
 
   one_argument(input, buf);
@@ -969,13 +969,11 @@ void show_string(struct descriptor_data *d, char *input)
   /* Or if we have more to show.... */
   else {
     s = d->showstr_vector[d->showstr_page];
-    if (s && (s = strchr(s, '\n')) != NULL) {
-      s++;
-      diff = s - (d->showstr_vector[d->showstr_page]);
-      strncpy(buffer, d->showstr_vector[d->showstr_page], diff);
-      buffer[diff] = '\0';
-      send_to_char(buffer, d->character);
-      d->showstr_page++;
-    }
+    diff = d->showstr_vector[d->showstr_page + 1] - s;
+    diff = MIN(diff, (long) sizeof(buffer) - 1);
+    strncpy(buffer, s, diff);
+    buffer[diff] = '\0';
+    send_to_char(buffer, d->character);
+    d->showstr_page++;
   }
 }
