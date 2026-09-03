@@ -22,7 +22,6 @@ const configPromise: Promise<PlaywrightTestConfig> = (async () => {
       reuseExistingServer: !config.CI,
       env: { PORT: String(PORT) },
     },
-    globalSetup: require.resolve('./scripts/setup-test-db.js'),
     use: {
       baseURL,
       trace: 'retry-with-trace',

@@ -44,20 +44,16 @@ jobs:
       env:
         CI: true # Often useful to indicate running in a CI environment
         
-    # Upload the built server as an artifact
+    # Keep the build output around for inspection.  Nothing downstream consumes
+    # it - the e2e job installs its own dependencies - so node_modules is left out.
     - name: Upload server build
       uses: actions/upload-artifact@v4
       with:
-        # v4 drops dot-prefixed paths unless asked otherwise, which would take
-        # .next and node_modules/.bin with it and leave the e2e job nothing to run.
-        include-hidden-files: true
+        include-hidden-files: true  # v4 skips dot-prefixed paths, and .next is one
         name: server-build
         path: |
           ./server/.next
-          ./server/node_modules
-          ./server/package.json
-          ./server/yarn.lock
-          ./server/e2e
+          ./server/dist
 
   build_mud:
     name: Build MUD
@@ -105,13 +101,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    # Download artifacts from previous jobs
-    - name: Download server build
-      uses: actions/download-artifact@v4
-      with:
-        name: server-build
-        path: ./server
-        
+    # Only the compiled MUD comes from an artifact; the server's dependencies are
+    # installed here.  Artifacts do not carry the executable bit, so anything
+    # unpacked from one has to have it put back by hand below.
     - name: Download MUD build
       uses: actions/download-artifact@v4
       with:
@@ -122,6 +114,12 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
+        cache: 'yarn'
+        cache-dependency-path: './server/yarn.lock'
+    
+    - name: Install dependencies
+      working-directory: ./server
+      run: yarn install --frozen-lockfile
         
     - name: Prepare test scripts
       run: |
