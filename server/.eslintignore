@@ -8,3 +8,5 @@ attached_assets/
 **/.eslintrc.js
 jest.config.js
 jest.setup.js
+dist/
+next-env.d.ts

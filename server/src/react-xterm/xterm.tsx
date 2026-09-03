@@ -95,8 +95,7 @@ export function useXTerm({ options, addons, listeners }: UseXTermProps = {}) {
 }
 
 export interface XTermProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'onResize' | 'onScroll'>,
-    UseXTermProps {}
+  extends Omit<ComponentPropsWithoutRef<'div'>, 'onResize' | 'onScroll'>, UseXTermProps {}
 
 export const XTerm = ({ className = '', options, addons, listeners, ...props }: XTermProps) => {
   const { ref, terminalRef } = useXTerm({
