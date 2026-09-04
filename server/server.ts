@@ -18,6 +18,11 @@ interface MudConnection extends TelnetEchoState {
     [key: string]: unknown
   }
   buffer?: string
+  // The PROXY header has to be the first line the MUD sees, so keystrokes that
+  // somehow arrive before the MUD connection opens wait here rather than
+  // racing ahead of it.
+  mudReady: boolean
+  pendingInput: Buffer[]
 }
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -54,6 +59,30 @@ function processUserInput(data: string): Buffer {
 
   // Pass through all other characters as-is
   return Buffer.from(data)
+}
+
+/**
+ * Builds the PROXY protocol v1 header naming the browser this bridge is
+ * relaying for. Without it the MUD only ever sees our loopback address, which
+ * puts every web player on one host for site bans, multiplay counting, the
+ * mort/immort check and the who list. The MUD honours this only from a
+ * loopback peer and only as the first line of a connection - see
+ * proxy_set_host in mud/src/comm.c.
+ */
+function proxyHeader(socket: Socket): string {
+  const forwarded = socket.handshake.headers['x-forwarded-for']
+  const firstHop = (Array.isArray(forwarded) ? forwarded[0] : forwarded)?.split(',')[0]?.trim()
+  // Node reports IPv4 peers on a dual-stack listener as ::ffff:1.2.3.4
+  const client = (firstHop || socket.handshake.address || '').replace(/^::ffff:/i, '')
+
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(client)) {
+    return `PROXY TCP4 ${client} ${MUD_HOST} 0 ${MUD_PORT}\r\n`
+  }
+  if (client.includes(':')) {
+    return `PROXY TCP6 ${client} ::1 0 ${MUD_PORT}\r\n`
+  }
+  // Nothing usable - tell the MUD to keep the address it saw us connect from.
+  return 'PROXY UNKNOWN\r\n'
 }
 
 // Prepare the application before starting the server
@@ -100,12 +129,24 @@ nextApp.prepare().then(async () => {
       serverEcho: true, // Default to server echo enabled
       buffer: '',
       telnetBuffer: [], // Buffer for telnet protocol parsing
+      mudReady: false,
+      pendingInput: [],
       onEchoChange: (serverEcho) => socket.emit('echo', serverEcho),
     })
 
     // Connect to the MUD server
     mudConnection.connect(MUD_PORT, MUD_HOST, () => {
-      console.log(`Connected to MUD server for client: ${socket.id}`)
+      const header = proxyHeader(socket)
+      mudConnection.write(header)
+      console.log(`Connected to MUD server for client: ${socket.id} as ${header.trim()}`)
+
+      const connection = activeConnections.get(socket.id)
+      if (connection) {
+        connection.mudReady = true
+        connection.pendingInput.forEach((chunk) => mudConnection.write(chunk))
+        connection.pendingInput = []
+      }
+
       socket.emit('status', { connected: true })
     })
 
@@ -150,8 +191,12 @@ nextApp.prepare().then(async () => {
         // Process user input
         const processedData = processUserInput(data)
 
-        // Send to MUD server
-        connection.mudConnection.write(processedData)
+        // Send to MUD server, behind the PROXY header if it hasn't gone yet
+        if (connection.mudReady) {
+          connection.mudConnection.write(processedData)
+        } else {
+          connection.pendingInput.push(processedData)
+        }
 
         // Handle echo here on the server side if appropriate
         if (!connection.serverEcho) {

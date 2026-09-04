@@ -1407,6 +1407,12 @@ int new_descriptor(int s) {
     *(newd->host + HOST_LENGTH) = '\0';
   }
 
+  /*
+   * Only a peer that really is on this machine may claim, with a PROXY
+   * header, to be relaying for somebody else - see proxy_set_host.
+   */
+  newd->proxy_ok = ((ntohl(peer.sin_addr.s_addr) >> 24) == 127);
+
   /* determine if the site is banned */
   if (isbanned(newd->host) == BAN_ALL) {
     CLOSE_SOCKET(desc);
@@ -1520,12 +1526,69 @@ int write_to_descriptor(socket_t desc, char *txt)
 
 
 /*
+ * Handles a PROXY protocol v1 header from a trusted local bridge.  The web
+ * front end opens the MUD connection on the browser's behalf, so without this
+ * every web player shares the one loopback host.  Rewriting d->host here, well
+ * before login, is all it takes: site bans, the multiplay and mort/immort host
+ * checks, the who list and the connect log all read it afterwards.
+ *
+ * Returns 1 if the line was a header and must not reach the game.  Only ever
+ * called for the first line of a connection that really did come from this
+ * machine, so nobody can rewrite their own host (see new_descriptor).
+ */
+static int proxy_set_host(struct descriptor_data *d, char *arg)
+{
+  char proto[16], src[64], buf[HOST_LENGTH + 64];
+  int a, b, c, e;
+
+  *proto = *src = '\0';
+  sscanf(arg, "%15s %63s", proto, src);
+
+  /* The bridge could not tell who it is relaying for - keep the peer host. */
+  if (!str_cmp(proto, "UNKNOWN"))
+    return 1;
+
+  if (!*src || (str_cmp(proto, "TCP4") && str_cmp(proto, "TCP6")))
+    return 0;			/* not a header we understand - it's input */
+
+  if (!str_cmp(proto, "TCP4")) {
+    if (sscanf(src, "%d.%d.%d.%d", &a, &b, &c, &e) != 4 ||
+	a < 0 || a > 255 || b < 0 || b > 255 ||
+	c < 0 || c > 255 || e < 0 || e > 255)
+      return 0;
+    /*
+     * Same zero-padded form new_descriptor writes for a direct connection, so
+     * ban entries and the host comparisons treat both kinds of player alike.
+     */
+    sprintf(d->host, "%03d.%03d.%03d.%03d", a, b, c, e);
+  } else {
+    /*
+     * host is only HOST_LENGTH wide (it also lives in char_file_u), so a long
+     * IPv6 address gets truncated - still far more specific than loopback.
+     */
+    strncpy(d->host, src, HOST_LENGTH);
+    *(d->host + HOST_LENGTH) = '\0';
+  }
+
+  /* The peer passed the ban check on the bridge's address, not this one. */
+  if (isbanned(d->host) == BAN_ALL) {
+    write_to_descriptor(d->descriptor, "Sorry, this site is banned.\r\n");
+    sprintf(buf, "Connection attempt denied from [%s]", d->host);
+    mudlog(buf, CMP, LVL_GOD, TRUE);
+    STATE(d) = CON_CLOSE;
+  }
+
+  return 1;
+}
+
+
+/*
  * ASSUMPTION: There will be no newlines in the raw input buffer when this
  * function is called.  We must maintain that before returning.
  */
 int process_input(struct descriptor_data *t)
 {
-  int buf_length, bytes_read, space_left, failed_subst;
+  int buf_length, bytes_read, space_left, failed_subst, consumed;
   char *ptr, *read_point, *write_point, *nl_pos = NULL;
   char tmp[MAX_INPUT_LENGTH + 8];
 
@@ -1629,23 +1692,38 @@ int process_input(struct descriptor_data *t)
       if (write_to_descriptor(t->descriptor, buffer) < 0)
 	return -1;
     }
-    if (t->snoop_by) {
-      SEND_TO_Q("% ", t->snoop_by);
-      SEND_TO_Q(tmp, t->snoop_by);
-      SEND_TO_Q("\r\n", t->snoop_by);
+    /*
+     * A local bridge may open its session with a PROXY protocol v1 line
+     * naming the browser it is relaying for.  Swallow it here so it never
+     * reaches nanny, and only ever as the first line of the connection, so a
+     * player cannot rewrite their own host part way through a session.
+     */
+    consumed = 0;
+    if (t->proxy_ok) {
+      t->proxy_ok = 0;
+      if (!strncmp(tmp, "PROXY ", 6))
+	consumed = proxy_set_host(t, tmp + 6);
     }
-    failed_subst = 0;
 
-    if (*tmp == '!')
-      strcpy(tmp, t->last_input);
-    else if (*tmp == '^') {
-      if (!(failed_subst = perform_subst(t, t->last_input, tmp)))
+    if (!consumed) {
+      if (t->snoop_by) {
+	SEND_TO_Q("% ", t->snoop_by);
+	SEND_TO_Q(tmp, t->snoop_by);
+	SEND_TO_Q("\r\n", t->snoop_by);
+      }
+      failed_subst = 0;
+
+      if (*tmp == '!')
+	strcpy(tmp, t->last_input);
+      else if (*tmp == '^') {
+	if (!(failed_subst = perform_subst(t, t->last_input, tmp)))
+	  strcpy(t->last_input, tmp);
+      } else
 	strcpy(t->last_input, tmp);
-    } else
-      strcpy(t->last_input, tmp);
 
-    if (!failed_subst)
-      write_to_q(tmp, &t->input, 0);
+      if (!failed_subst)
+	write_to_q(tmp, &t->input, 0);
+    }
 
     /* find the end of this line */
     while (ISNEWL(*nl_pos))
