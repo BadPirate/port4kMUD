@@ -18,7 +18,7 @@ D4
 0 0 292
 S
 #3601
-A White Square~
+A8 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the Black Queen's Rook.
 ~
@@ -35,7 +35,7 @@ A black square lies to the south.
 0 -1 3609
 S
 #3602
-A Black Square~
+B8 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the Black Queen's Knight.
 ~
@@ -57,7 +57,7 @@ A white square lies to the west.
 0 -1 3601
 S
 #3603
-A White Square~
+C8 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the Black Queen's Bishop.
 ~
@@ -79,7 +79,7 @@ A black square lies to the west.
 0 -1 3602
 S
 #3604
-A Black Square~
+D8 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the Black Queen.
 ~
@@ -105,7 +105,7 @@ marble square~
 2 3614 3665
 S
 #3605
-A White Square~
+E8 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the Black King.
 ~
@@ -127,7 +127,7 @@ A black square lies to the west.
 0 -1 3604
 S
 #3606
-A Black Square~
+F8 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the Black King's Bishop.
 ~
@@ -149,7 +149,7 @@ A white square lies to the west.
 0 -1 3605
 S
 #3607
-A White Square~
+G8 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the Black King's Knight.
 ~
@@ -171,7 +171,7 @@ A black square lies to the west.
 0 -1 3606
 S
 #3608
-A Black Square~
+H8 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the Black King's Rook.
 ~
@@ -188,7 +188,7 @@ A white square lies to the west.
 0 -1 3607
 S
 #3609
-A Black Square~
+A7 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the Black Queen's Pawns.
 ~
@@ -210,7 +210,7 @@ A white square lies to the south.
 0 -1 3617
 S
 #3610
-A White Square~
+B7 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the Black Queen's Pawns.
 ~
@@ -237,7 +237,7 @@ A black square lies to the west.
 0 -1 3609
 S
 #3611
-A Black Square~
+C7 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the Black Queen's Pawns.
 ~
@@ -264,7 +264,7 @@ A white square lies to the west.
 0 -1 3610
 S
 #3612
-A White Square~
+D7 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the Black Queen's Pawns.
 ~
@@ -291,7 +291,7 @@ A black square lies to the west.
 0 -1 3611
 S
 #3613
-A Black Square~
+E7 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the Black King's Pawns.
 ~
@@ -318,7 +318,7 @@ A white square lies to the west.
 0 -1 3612
 S
 #3614
-A White Square~
+F7 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the Black King's Pawns.
 ~
@@ -345,7 +345,7 @@ A black square lies to the west.
 0 -1 3613
 S
 #3615
-A Black Square~
+G7 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the Black King's Pawns.
 ~
@@ -372,7 +372,7 @@ A white square lies to the west.
 0 -1 3614
 S
 #3616
-A White Square~
+H7 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the Black King's Pawns.
 ~
@@ -394,7 +394,7 @@ A black square lies to the west.
 0 -1 3615
 S
 #3617
-A White Square~
+A6 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -415,7 +415,7 @@ A black square lies to the south.
 0 -1 3625
 S
 #3618
-A Black Square~
+B6 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -441,7 +441,7 @@ A white square lies to the west.
 0 -1 3617
 S
 #3619
-A White Square~
+C6 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -467,7 +467,7 @@ A black square lies to the west.
 0 -1 3618
 S
 #3620
-A Black Square~
+D6 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -493,7 +493,7 @@ A white square lies to the west.
 0 -1 3619
 S
 #3621
-A White Square~
+E6 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -519,7 +519,7 @@ A black square lies to the west.
 0 -1 3620
 S
 #3622
-A Black Square~
+F6 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -545,7 +545,7 @@ A white square lies to the west.
 0 -1 3621
 S
 #3623
-A White Square~
+G6 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -571,7 +571,7 @@ A black square lies to the west.
 0 -1 3622
 S
 #3624
-A Black Square~
+H6 - A Black Square~
    You are standing on a black marble square.  You can see a rusty gate
 to the south.
 ~
@@ -593,7 +593,7 @@ A white square lies to the west.
 0 -1 3623
 S
 #3625
-A Black Square~
+A5 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -614,7 +614,7 @@ A white square lies to the south.
 0 -1 3633
 S
 #3626
-A White Square~
+B5 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -640,7 +640,7 @@ A black square lies to the west.
 0 -1 3625
 S
 #3627
-A Black Square~
+C5 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -666,7 +666,7 @@ A white square lies to the west.
 0 -1 3626
 S
 #3628
-A White Square~
+D5 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -696,7 +696,7 @@ D4
 0 0 292
 S
 #3629
-A Black Square~
+E5 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -722,7 +722,7 @@ A white square lies to the west.
 0 -1 3628
 S
 #3630
-A White Square~
+F5 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -748,7 +748,7 @@ A black square lies to the west.
 0 -1 3629
 S
 #3631
-A Black Square~
+G5 - A Black Square~
    You are standing on a black marble square.  There is a rusty gate
 a short distance to the east.
 ~
@@ -775,7 +775,7 @@ A white square lies to the west.
 0 -1 3630
 S
 #3632
-A White Square~
+H5 - A White Square~
    You are standing on a white marble square.  There is a large rusty
 gate to the east.
 ~
@@ -802,7 +802,7 @@ A black square lies to the west.
 0 -1 3631
 S
 #3633
-A White Square~
+A4 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -823,7 +823,7 @@ A black square lies to the south.
 0 -1 3641
 S
 #3634
-A Black Square~
+B4 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -849,7 +849,7 @@ A white square lies to the west.
 0 -1 3633
 S
 #3635
-A White Square~
+C4 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -875,7 +875,7 @@ A black square lies to the west.
 0 -1 3634
 S
 #3636
-A Black Square~
+D4 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -901,7 +901,7 @@ A white square lies to the west.
 0 -1 3635
 S
 #3637
-A White Square~
+E4 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -927,7 +927,7 @@ A black square lies to the west.
 0 -1 3636
 S
 #3638
-A Black Square~
+F4 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -953,7 +953,7 @@ A white square lies to the west.
 0 -1 3637
 S
 #3639
-A White Square~
+G4 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -979,7 +979,7 @@ A black square lies to the west.
 0 -1 3638
 S
 #3640
-A Black Square~
+H4 - A Black Square~
    You are standing on a black marble square.  There is a rusty gate
 to the north.
 ~
@@ -1001,7 +1001,7 @@ A white square lies to the west.
 0 -1 3639
 S
 #3641
-A Black Square~
+A3 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -1022,7 +1022,7 @@ A white square lies to the south.
 0 -1 3649
 S
 #3642
-A White Square~
+B3 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -1048,7 +1048,7 @@ A black square lies to the west.
 0 -1 3641
 S
 #3643
-A Black Square~
+C3 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -1074,7 +1074,7 @@ A white square lies to the west.
 0 -1 3642
 S
 #3644
-A White Square~
+D3 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -1100,7 +1100,7 @@ A black square lies to the west.
 0 -1 3643
 S
 #3645
-A Black Square~
+E3 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -1126,7 +1126,7 @@ A white square lies to the west.
 0 -1 3644
 S
 #3646
-A White Square~
+F3 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -1152,7 +1152,7 @@ A black square lies to the west.
 0 -1 3645
 S
 #3647
-A Black Square~
+G3 - A Black Square~
    You are standing on a black marble square.
 ~
 36 32768 1
@@ -1178,7 +1178,7 @@ A white square lies to the west.
 0 -1 3646
 S
 #3648
-A White Square~
+H3 - A White Square~
    You are standing on a white marble square.
 ~
 36 32768 1
@@ -1199,7 +1199,7 @@ A black square lies to the west.
 0 -1 3647
 S
 #3649
-A White Square~
+A2 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the White Queen's Pawns.
 ~
@@ -1221,7 +1221,7 @@ A black square lies to the south.
 0 -1 3657
 S
 #3650
-A Black Square~
+B2 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the White Queen's Pawns.
 ~
@@ -1248,7 +1248,7 @@ A white square lies to the west.
 0 -1 3649
 S
 #3651
-A White Square~
+C2 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the White Queen's Pawns.
 ~
@@ -1275,7 +1275,7 @@ A black square lies to the west.
 0 -1 3650
 S
 #3652
-A Black Square~
+D2 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the White Queen's Pawns.
 ~
@@ -1302,7 +1302,7 @@ A white square lies to the west.
 0 -1 3651
 S
 #3653
-A White Square~
+E2 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the White King's Pawns.
 ~
@@ -1329,7 +1329,7 @@ A black square lies to the west.
 0 -1 3652
 S
 #3654
-A Black Square~
+F2 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the White King's Pawns.
 ~
@@ -1356,7 +1356,7 @@ A white square lies to the west.
 0 -1 3653
 S
 #3655
-A White Square~
+G2 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of one of the White King's Pawns.
 ~
@@ -1383,7 +1383,7 @@ A black square lies to the west.
 0 -1 3654
 S
 #3656
-A Black Square~
+H2 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of one of the White King's Pawns.
 ~
@@ -1405,7 +1405,7 @@ A white square lies to the west.
 0 -1 3655
 S
 #3657
-A Black Square~
+A1 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the White Queen's Rook.
 ~
@@ -1422,7 +1422,7 @@ A white square lies to the east.
 0 -1 3658
 S
 #3658
-A White Square~
+B1 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the White Queen's Knight.
 ~
@@ -1444,7 +1444,7 @@ A black square lies to the west.
 0 -1 3657
 S
 #3659
-A Black Square~
+C1 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the White Queen's Bishop.
 ~
@@ -1466,7 +1466,7 @@ A white square lies to the west.
 0 -1 3658
 S
 #3660
-A White Square~
+D1 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the White Queen.
 ~
@@ -1492,7 +1492,7 @@ marble square~
 2 3615 3666
 S
 #3661
-A Black Square~
+E1 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the White King.
 ~
@@ -1514,7 +1514,7 @@ A white square lies to the west.
 0 -1 3660
 S
 #3662
-A White Square~
+F1 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the White King's Bishop.
 ~
@@ -1536,7 +1536,7 @@ A black square lies to the west.
 0 -1 3661
 S
 #3663
-A Black Square~
+G1 - A Black Square~
    You are standing on a black marble square.  This is usually the home
 of the White King's Knight.
 ~
@@ -1558,7 +1558,7 @@ A white square lies to the west.
 0 -1 3662
 S
 #3664
-A White Square~
+H1 - A White Square~
    You are standing on a white marble square.  This is usually the home
 of the White King's Rook.
 ~
