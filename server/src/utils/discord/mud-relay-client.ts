@@ -33,6 +33,8 @@ export class MudRelayClient extends EventEmitter {
 
   private stopped = false
 
+  private lastSendAt = 0
+
   constructor(
     private readonly username: string,
     private readonly password: string,
@@ -52,7 +54,12 @@ export class MudRelayClient extends EventEmitter {
   }
 
   send(text: string): void {
-    if (this.loginState !== 'playing' || !this.socket) return
+    if (this.loginState !== 'playing' || !this.socket) {
+      console.warn(
+        `Discord relay: dropping message, not in the game (login state: ${this.loginState})`,
+      )
+      return
+    }
     // A pasted multi-line Discord message must not become multiple injected
     // MUD commands, and must stay under the MUD's per-line input cap.
     const singleLine = text
@@ -61,6 +68,8 @@ export class MudRelayClient extends EventEmitter {
       .slice(0, MAX_RELAY_LENGTH)
     if (!singleLine) return
     this.socket.write(`discord ${singleLine}\r\n`)
+    this.lastSendAt = Date.now()
+    console.log(`Discord relay -> MUD: ${singleLine}`)
   }
 
   private connect(): void {
@@ -83,6 +92,12 @@ export class MudRelayClient extends EventEmitter {
 
     socket.on('data', (data: Buffer) => {
       const text = processTelnetData(this.telnetState, data)
+      if (this.loginState === 'playing') {
+        // Once in the game the bot hears every global channel, so nothing may
+        // accumulate in textBuffer - it only exists to match login prompts.
+        this.checkRelayRejected(text)
+        return
+      }
       this.textBuffer += text
       this.advanceLogin()
     })
@@ -161,6 +176,24 @@ export class MudRelayClient extends EventEmitter {
         this.finishLogin()
       }
     }
+  }
+
+  /**
+   * `discord` is always a valid command, so a "Huh?!?" arriving right after we
+   * relayed one means do_discord refused us: DISCORD_BOT_MUD_USERNAME in the
+   * MUD's own environment doesn't match this character's name. That check is a
+   * getenv inside the MUD process (see discord_is_bot_account in
+   * mud/src/discord.c), so it can disagree with ours and otherwise fails in
+   * complete silence - every relayed message simply vanishes.
+   */
+  private checkRelayRejected(text: string): void {
+    if (Date.now() - this.lastSendAt > 2000 || !text.includes('Huh?!?')) return
+    this.lastSendAt = 0
+    console.error(
+      `Discord relay: the MUD refused the 'discord' command. Set ` +
+        `DISCORD_BOT_MUD_USERNAME to '${this.username}' in the environment ` +
+        `bin/circle runs under, matching the character name exactly.`,
+    )
   }
 
   private finishLogin(): void {

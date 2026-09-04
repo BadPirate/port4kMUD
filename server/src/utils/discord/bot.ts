@@ -55,6 +55,22 @@ export async function startDiscordBridge(): Promise<void> {
     console.log(`Discord bridge: logged in as ${client.user?.tag}`)
   })
 
+  // Posting to Discord is pure REST, but reading from it needs a live gateway
+  // session, so the outbound half keeps working perfectly while the inbound
+  // half is dead. A rejected identify (usually the Message Content intent not
+  // being enabled for the application) arrives after login() has resolved and
+  // only reaches the error handlers above, so say so plainly instead.
+  const readyCheck = setTimeout(() => {
+    if (!client.isReady()) {
+      console.error(
+        'Discord bridge: no gateway session after 30s - Discord-to-MUD relay will ' +
+          'not receive anything. Check that the Message Content Intent is enabled ' +
+          "for this application in the Discord Developer Portal (posting to Discord doesn't need it).",
+      )
+    }
+  }, 30000)
+  readyCheck.unref()
+
   bridgeListener.on('event', async (event: BridgeEvent) => {
     if (!discordConfig.channelId) return
     try {
@@ -72,7 +88,14 @@ export async function startDiscordBridge(): Promise<void> {
     if (message.channelId !== discordConfig.channelId) return
     if (message.author.bot) return
     const author = message.member?.displayName || message.author.username
-    relayClient?.send(`${author}: ${message.content}`)
+    if (!relayClient) {
+      console.warn(
+        `Discord bridge: dropping message from ${author} - no MUD relay ` +
+          '(DISCORD_BOT_MUD_USERNAME/DISCORD_BOT_MUD_PASSWORD are not set)',
+      )
+      return
+    }
+    relayClient.send(`${author}: ${message.content}`)
   })
 
   await client.login(discordConfig.botToken)
