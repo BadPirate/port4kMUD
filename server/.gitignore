@@ -39,6 +39,7 @@ tsconfig.tsbuildinfo
 
 # Prisma generated client artifacts
 /prisma/node_modules/
+/src/generated/
 
 # test results
 test-results/

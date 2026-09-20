@@ -1,0 +1,112 @@
+// The portal's account store: who signed in with which email address, and
+// which MUD characters they have told us about.
+//
+// The datasource URL is set in prisma.config.ts, which resolves
+// AUTH_DATABASE_PATH (default mud/lib/etc/portal.sqlite) to an absolute path.
+//
+// The User, Session, Account and Verification models are Better Auth's core
+// schema; regenerate them with `npx @better-auth/cli generate` after changing
+// the auth configuration.
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  // The custom server is compiled to CommonJS by tsconfig.server.json.
+  moduleFormat = "cjs"
+  runtime      = "nodejs"
+  // Extensionless imports are the only form that both tsc's output and
+  // ts-node can resolve: the default "ts" breaks the compiled server, and
+  // "js" breaks `yarn dev`.
+  importFileExtension = ""
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id            String         @id
+  name          String
+  email         String         @unique
+  emailVerified Boolean        @default(false)
+  image         String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+  characters    MudCharacter[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}
+
+/// A MUD character an account can log in as from the web portal.
+model MudCharacter {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// As the MUD capitalises it, which is the spelling the player file keeps.
+  name String
+
+  /// The lowercased name. MUD logins are case-insensitive (find_name uses
+  /// str_cmp), so this is what uniqueness is enforced on.
+  nameKey String
+
+  /// The MUD password, encrypted with BETTER_AUTH_SECRET. It has to be
+  /// recoverable because the bridge replays it at the MUD's own prompt, which
+  /// accepts nothing but the plaintext.
+  secret String
+
+  createdAt   DateTime  @default(now())
+  lastLoginAt DateTime?
+
+  @@unique([userId, nameKey])
+  @@map("mud_character")
+}

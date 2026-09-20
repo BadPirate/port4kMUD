@@ -3,7 +3,11 @@ import { createServer } from 'http'
 import { parse } from 'url'
 import { Socket as NetSocket } from 'net'
 import next from 'next'
+import { toNodeHandler } from 'better-auth/node'
 import { Socket, Server as SocketIOServer } from 'socket.io'
+import { handlePortalApi, PORTAL_API_PREFIX } from './src/server/portal-api'
+import { auth } from './src/utils/auth'
+import { checkMailerConfiguration } from './src/utils/mailer'
 import { ensureMudServerRunning } from './src/utils/mud-server'
 import { processTelnetData, TelnetEchoState } from './src/utils/telnet'
 import discordConfig from './src/utils/discord/config'
@@ -37,6 +41,9 @@ const nextHandler = nextApp.getRequestHandler()
 // MUD server configuration
 const MUD_HOST = '127.0.0.1' // Only connect locally
 const MUD_PORT = 4000 // Default port for Port4kMUD
+
+// Everything below here is Better Auth's: sign-in, sessions and magic links.
+const AUTH_API_PREFIX = '/api/auth/'
 
 // Track active connections
 const activeConnections = new Map<string, MudConnection>()
@@ -81,6 +88,7 @@ function proxyHeader(socket: Socket): string {
 nextApp.prepare().then(async () => {
   // Check if MUD server is running
   await ensureMudServerRunning()
+  checkMailerConfiguration()
 
   if (discordConfig.enabled) {
     startDiscordBridge().catch((err) => {
@@ -88,10 +96,29 @@ nextApp.prepare().then(async () => {
     })
   }
 
+  // Better Auth brings its own request parsing, so it is mounted directly on
+  // the Node server rather than as a Next.js route. That keeps one auth
+  // instance and one database connection in the process - the same ones the
+  // Socket.IO bridge below uses to identify a browser on its handshake - and
+  // keeps the generated Prisma client and better-sqlite3's native module out
+  // of the Next.js bundle entirely.
+  const authHandler = toNodeHandler(auth)
+
   const server = createServer(async (req, res) => {
     try {
       // Be sure to parse the URL only once per request
       const parsedUrl = parse(req.url || '', true)
+      const pathname = parsedUrl.pathname || ''
+
+      if (pathname.startsWith(AUTH_API_PREFIX)) {
+        await authHandler(req, res)
+        return
+      }
+
+      if (pathname.startsWith(PORTAL_API_PREFIX) && (await handlePortalApi(req, res, pathname))) {
+        return
+      }
+
       await nextHandler(req, res, parsedUrl)
     } catch (err) {
       console.error('Error occurred handling request:', err)

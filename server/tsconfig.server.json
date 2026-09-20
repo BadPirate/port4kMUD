@@ -8,5 +8,5 @@
     "noEmit": false,
     "moduleResolution": "node"
   },
-  "include": ["server.ts", "src/utils/**/*.ts"]
+  "include": ["server.ts", "src/server/**/*.ts", "src/utils/**/*.ts"]
 }

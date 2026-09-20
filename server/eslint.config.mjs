@@ -24,6 +24,7 @@ const config = [
       'styles/bootstrap.min.css',
       'jest.config.js',
       'jest.setup.js',
+      'jest.env.js',
     ],
   },
 

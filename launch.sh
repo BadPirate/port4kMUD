@@ -9,6 +9,9 @@ echo "===== Setting up MUD directories ====="
 mkdir -p mud/log
 mkdir -p mud/lib/text
 mkdir -p mud/lib/world/zon
+# The web portal's accounts database lives here too, on the same persistent
+# volume, so accounts survive a redeploy (see DOKKU.md).
+mkdir -p mud/lib/etc
 
 # Copy initial data files if they don't exist
 if [ ! -f mud/lib/text/motd ]; then
@@ -34,5 +37,7 @@ sleep 5
 echo "===== Starting Web Interface ====="
 # Start the web app, which will be the primary process
 cd server
+echo "===== Applying portal database migrations ====="
+yarn prisma:migrate
 echo "Starting web interface on port $PORT"
 exec yarn start
