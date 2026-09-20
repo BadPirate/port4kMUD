@@ -1,12 +1,9 @@
 import config from './config'
+import type { PortalCharacter } from './portal-types'
 import prisma from './prisma'
 import { decryptSecret, encryptSecret } from './secret-box'
 
-export interface PortalCharacter {
-  id: string
-  name: string
-  lastLoginAt: string | null
-}
+export type { PortalCharacter }
 
 export interface SaveResult {
   character: PortalCharacter
@@ -143,11 +140,4 @@ export async function removeCharacterByName(userId: string, name: string): Promi
     where: { userId, nameKey: toNameKey(name) },
   })
   return count > 0
-}
-
-export async function markCharacterUsed(characterId: string): Promise<void> {
-  await prisma.mudCharacter.updateMany({
-    where: { id: characterId },
-    data: { lastLoginAt: new Date() },
-  })
 }

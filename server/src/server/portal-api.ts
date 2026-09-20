@@ -1,4 +1,4 @@
-import type { IncomingMessage, ServerResponse } from 'http'
+import type { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'http'
 import { fromNodeHeaders } from 'better-auth/node'
 import { auth } from '../utils/auth'
 import { listCharacters, removeCharacter } from '../utils/characters'
@@ -26,15 +26,26 @@ function sendJson(res: ServerResponse, status: number, body: unknown): void {
   res.end(payload)
 }
 
-/** Resolves the signed-in user from the request's session cookie. */
-export async function getSessionUser(req: IncomingMessage) {
+/** Resolves the signed-in user from a request's or handshake's cookies. */
+export async function resolveSessionUser(headers: IncomingHttpHeaders) {
   try {
-    const session = await auth.api.getSession({ headers: fromNodeHeaders(req.headers) })
+    const session = await auth.api.getSession({ headers: fromNodeHeaders(headers) })
     return session?.user ?? null
   } catch (err) {
     console.error('Portal API: failed to read session:', err)
     return null
   }
+}
+
+/**
+ * The account id behind a set of request headers, or null. The Socket.IO
+ * bridge uses this both on the handshake and again whenever it is about to
+ * write to the account: signing out deletes the session, and a socket opened
+ * before that must not outlive it.
+ */
+export async function resolveSessionUserId(headers: IncomingHttpHeaders): Promise<string | null> {
+  const user = await resolveSessionUser(headers)
+  return user?.id ?? null
 }
 
 /**
@@ -55,7 +66,7 @@ export async function handlePortalApi(
   }
 
   if (route === 'characters' && req.method === 'GET') {
-    const user = await getSessionUser(req)
+    const user = await resolveSessionUser(req.headers)
     if (!user) {
       sendJson(res, 401, { error: 'Not signed in' })
       return true
@@ -71,7 +82,7 @@ export async function handlePortalApi(
 
   const character = /^characters\/([^/]+)$/.exec(route)
   if (character && req.method === 'DELETE') {
-    const user = await getSessionUser(req)
+    const user = await resolveSessionUser(req.headers)
     if (!user) {
       sendJson(res, 401, { error: 'Not signed in' })
       return true
