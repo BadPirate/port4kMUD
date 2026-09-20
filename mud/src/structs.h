@@ -980,6 +980,7 @@ struct descriptor_data {
    socket_t	descriptor;		/* file descriptor for socket		*/
    char	host[HOST_LENGTH+1];	/* hostname				*/
    int	proxy_ok;		/* peer is local: may send a PROXY line	*/
+   int	is_web;			/* arrived through the web bridge	*/
    byte	bad_pws;		/* number of bad pw attemps this login	*/
    byte idle_tics;		/* tics idle at password prompt		*/
    int	connected;		/* mode of 'connectedness'		*/

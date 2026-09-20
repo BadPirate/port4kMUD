@@ -1703,6 +1703,13 @@ int process_input(struct descriptor_data *t)
       t->proxy_ok = 0;
       if (!strncmp(tmp, "PROXY ", 6))
 	consumed = proxy_set_host(t, tmp + 6);
+      /*
+       * Nothing else on this machine opens a session with a PROXY line, so
+       * having sent one is what marks a player as coming from the web page
+       * rather than a telnet client - see check_idle_passwords.
+       */
+      if (consumed)
+	t->is_web = 1;
     }
 
     if (!consumed) {
@@ -1871,15 +1878,30 @@ void close_socket(struct descriptor_data *d)
 
 
 
+/*
+ * How long a connection may sit at the name or password prompt, counted in
+ * sweeps of check_idle_passwords - heartbeat runs it every 15 seconds, and a
+ * descriptor dies on the sweep after its last allowed one.
+ *
+ * A player who arrives through the web page meets its sign-in toast before
+ * the game's own prompt, and the connection is already open behind it, so the
+ * telnet-length window runs out while they are still reading.  Two minutes is
+ * long enough to type an email address and come back.
+ */
+#define IDLE_LOGIN_TICS		1	/* 15-30 seconds   */
+#define IDLE_LOGIN_TICS_WEB	8	/* 120-135 seconds */
+
 void check_idle_passwords(void)
 {
   struct descriptor_data *d, *next_d;
+  int limit;
 
   for (d = descriptor_list; d; d = next_d) {
     next_d = d->next;
     if (STATE(d) != CON_PASSWORD && STATE(d) != CON_GET_NAME)
       continue;
-    if (!d->idle_tics) {
+    limit = d->is_web ? IDLE_LOGIN_TICS_WEB : IDLE_LOGIN_TICS;
+    if (d->idle_tics < limit) {
       d->idle_tics++;
       continue;
     } else {
