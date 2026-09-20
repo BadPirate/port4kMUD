@@ -6,7 +6,8 @@
   "scripts": {
     "build": "prisma generate && next build && tsc --project tsconfig.server.json",
     "dev": "prisma generate && prisma migrate deploy && ts-node --project tsconfig.server.json server.ts",
-    "lint": "echo '\\n=== RUNNING PRETTIER ===\\n' && prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss,html}\" && echo '\\n=== RUNNING ESLINT ===\\n' && eslint . --fix --max-warnings=0 && echo '\\n=== RUNNING TYPESCRIPT TYPE CHECK ===\\n' && tsc --noEmit || (echo '\\n⚠️  Linting or type-checking failed. Please fix errors before committing.\\n' && exit 1)",
+    "lint": "echo '\\n=== RUNNING PRETTIER ===\\n' && prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss,html}\" && echo '\\n=== RUNNING ESLINT ===\\n' && eslint . --fix --max-warnings=0 && echo '\\n=== RUNNING TYPESCRIPT TYPE CHECK ===\\n' && tsc --noEmit || (echo '\\n\u26a0\ufe0f  Linting or type-checking failed. Please fix errors before committing.\\n' && exit 1)",
+    "postinstall": "prisma generate",
     "prepare": "husky",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
