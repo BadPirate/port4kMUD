@@ -1,5 +1,13 @@
 import { Socket } from 'net'
 import { EventEmitter } from 'events'
+import {
+  NAME_CONFIRM_TEXT,
+  PRESS_RETURN,
+  PROMPT_MENU_CHOICE,
+  PROMPT_PASSWORD,
+  RECONNECT_MESSAGES,
+  WRONG_PASSWORD,
+} from '../mud-prompts'
 import { MUD_CONFIG } from '../mud-server'
 import { processTelnetData, TelnetEchoState } from '../telnet'
 
@@ -125,7 +133,7 @@ export class MudRelayClient extends EventEmitter {
       // instead (see interpreter.c's CON_GET_NAME), which this bot can't and
       // shouldn't try to answer (that's full character creation). Fail loudly
       // instead of silently waiting out the login timeout on every attempt.
-      if (this.textBuffer.includes('Did I get that right')) {
+      if (this.textBuffer.includes(NAME_CONFIRM_TEXT)) {
         console.error(
           `Discord relay: MUD character '${this.username}' does not exist - ` +
             'create it in-game first (DISCORD_BOT_MUD_USERNAME/PASSWORD), then restart the bridge',
@@ -133,7 +141,7 @@ export class MudRelayClient extends EventEmitter {
         this.socket?.destroy()
         return
       }
-      if (this.textBuffer.includes('Password:')) {
+      if (this.textBuffer.includes(PROMPT_PASSWORD)) {
         this.textBuffer = ''
         this.socket?.write(`${this.password}\r\n`)
         this.loginState = 'awaiting-post-password'
@@ -147,7 +155,7 @@ export class MudRelayClient extends EventEmitter {
       // 3-strikes lockout never kicks in, and every retry both spams its
       // mudlog and increments the persisted bad-password count on the
       // character record.
-      if (this.textBuffer.includes('Wrong password')) {
+      if (this.textBuffer.includes(WRONG_PASSWORD)) {
         console.error(
           `Discord relay: wrong password for MUD character '${this.username}' - ` +
             'check DISCORD_BOT_MUD_PASSWORD, then restart the bridge',
@@ -157,11 +165,11 @@ export class MudRelayClient extends EventEmitter {
       }
       // A dropped/stale prior session skips straight to CON_PLAYING - detect
       // that branch first so we don't wait forever for a menu that never comes.
-      if (this.textBuffer.includes('Reconnecting') || this.textBuffer.includes('already in use')) {
+      if (RECONNECT_MESSAGES.some((message) => this.textBuffer.includes(message))) {
         this.finishLogin()
         return
       }
-      if (this.textBuffer.includes('*** PRESS RETURN')) {
+      if (this.textBuffer.includes(PRESS_RETURN)) {
         this.textBuffer = ''
         this.socket?.write('\r\n')
         this.loginState = 'awaiting-menu-prompt'
@@ -170,7 +178,7 @@ export class MudRelayClient extends EventEmitter {
     }
 
     if (this.loginState === 'awaiting-menu-prompt') {
-      if (this.textBuffer.includes('Your Choice?')) {
+      if (this.textBuffer.includes(PROMPT_MENU_CHOICE)) {
         this.textBuffer = ''
         this.socket?.write('1\r\n')
         this.finishLogin()
