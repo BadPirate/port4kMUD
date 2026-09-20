@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import {
   type ITerminalAddon,
   type ITerminalInitOnlyOptions,
@@ -98,14 +97,15 @@ export interface XTermProps
   extends Omit<ComponentPropsWithoutRef<'div'>, 'onResize' | 'onScroll'>, UseXTermProps {}
 
 export const XTerm = ({ className = '', options, addons, listeners, ...props }: XTermProps) => {
-  const { ref, terminalRef } = useXTerm({
+  const { ref, instance } = useXTerm({
     options,
     addons,
     listeners,
   })
 
-  // Use the stable reference instead of the potentially changing instance
-  const hasInstance = !!terminalRef.current
+  // Read from state, not from the ref: a ref's current value is not a valid
+  // thing to render from, and it would not re-render when the terminal opens.
+  const hasInstance = !!instance
 
   return <div className={className} ref={ref} {...props} data-terminal-instance={hasInstance} />
 }

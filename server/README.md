@@ -35,7 +35,7 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 
 ## Prerequisites
 
-- Node.js (v18+)
+- Node.js (v22.18+)
 - Yarn package manager
 - Port4kMUD server running on port 4000
 

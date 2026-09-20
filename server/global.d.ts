@@ -1,4 +1,3 @@
-/* eslint-disable no-var, vars-on-top, no-unused-vars, eol-last */
 // Global type declarations
 export {}
 

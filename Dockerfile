@@ -1,8 +1,9 @@
-FROM node:20-bullseye-slim
+FROM node:22-bookworm-slim
 
 # Install necessary dependencies for building the MUD server
 # (git is needed at runtime too - see mud/src/copyover_update.c, which pulls
-# mud/src from a branch and rebuilds in place as part of `copyover <branch>`)
+# mud/src from a branch and rebuilds in place as part of `copyover <branch>`;
+# python3 is node-gyp's fallback when better-sqlite3 has no prebuilt binary)
 RUN apt-get update && apt-get install -y \
     build-essential \
     libc6-dev \
@@ -12,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     libcrypt-dev \
     autoconf \
     git \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory

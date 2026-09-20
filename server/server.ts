@@ -30,16 +30,8 @@ const hostname = process.env.HOSTNAME || 'localhost'
 const port = parseInt(process.env.PORT || '3000', 10)
 
 // Initialize Next.js with proper settings
-const nextApp = next({
-  dev,
-  hostname,
-  port,
-  // This disables the file watching in production
-  conf: {
-    unstable_skipTrailingSlashRedirect: true,
-    unstable_strictNextHead: true,
-  },
-})
+// Options beyond these live in next.config.mjs, which `next build` reads too.
+const nextApp = next({ dev, hostname, port })
 const nextHandler = nextApp.getRequestHandler()
 
 // MUD server configuration
@@ -108,7 +100,12 @@ nextApp.prepare().then(async () => {
     }
   })
 
-  // Initialize Socket.IO
+  // Initialize Socket.IO.
+  //
+  // Nothing may be routable by Next.js at this path. Next's dev server adds its
+  // own 'upgrade' listener for HMR, and any upgrade whose URL resolves to a
+  // page or API route is closed with socket.end() - which would tear down this
+  // namespace's connections the instant they are established.
   const io = new SocketIOServer(server, {
     path: '/api/socket',
   })

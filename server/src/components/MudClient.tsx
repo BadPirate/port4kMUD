@@ -35,7 +35,8 @@ const MudClient = () => {
   // Initialize socket connection
   const initializeSocket = useCallback(() => {
     console.log('Initializing socket connection')
-    setError('')
+    // No setState here: this runs synchronously from the mount effect, and the
+    // 'connect' handler below already clears the error once we are up.
 
     // Cleanup any existing socket
     if (socketRef.current) {
@@ -103,6 +104,7 @@ const MudClient = () => {
 
   // Handler for reconnect button
   const handleReconnect = () => {
+    setError('')
     initializeSocket()
   }
 

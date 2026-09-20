@@ -81,7 +81,6 @@ export function startBridgeListener(socketPath: string): EventEmitter & { server
     socket.on('data', (chunk) => {
       buffer += chunk.toString('utf8')
       let newlineIdx: number
-      // eslint-disable-next-line no-cond-assign
       while ((newlineIdx = buffer.indexOf('\n')) !== -1) {
         const line = buffer.slice(0, newlineIdx)
         buffer = buffer.slice(newlineIdx + 1)

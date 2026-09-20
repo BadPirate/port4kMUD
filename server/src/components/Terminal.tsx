@@ -3,7 +3,10 @@ import { RefObject, useEffect, useState, useCallback, useRef } from 'react'
 import { Socket } from 'socket.io-client'
 import { useXTerm } from '../react-xterm'
 
-export type TerminalSocket = typeof Socket
+// The socket.io-client instance type. This used to read `typeof Socket` (the
+// constructor), which only type-checked against the stale @types/socket.io-client
+// v1 stubs that shadowed the library's own types.
+export type TerminalSocket = Socket
 
 interface TerminalProps {
   socketRef: RefObject<TerminalSocket | null>

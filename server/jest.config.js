@@ -12,10 +12,12 @@ const customJestConfig = {
   testEnvironmentOptions: {
     url: 'http://localhost:3000',
   },
-  preset: 'ts-jest',
   // Specify __tests__ as the directory for unit tests
   testMatch: ['<rootDir>/__tests__/**/*.[jt]s?(x)'],
   // Exclude e2e Playwright tests and empty tests directory from Jest
+  // dist/ holds tsc's output of the custom server, including a copy of
+  // package.json (config.ts imports it), which collides in Jest's haste map.
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/.next/',
