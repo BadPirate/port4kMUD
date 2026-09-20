@@ -27,12 +27,19 @@ const Terminal = dynamic(() => import('./Terminal'), {
 
 interface MudClientProps {
   title: string
+  /**
+   * Whether the server saw a session on the request that rendered this page.
+   * Better Auth cannot answer that until a round trip after the first paint,
+   * and reports it as pending again on every re-check while nobody is signed
+   * in, so this is what the page believes in the meantime.
+   */
+  signedInAtLoad: boolean
 }
 
 /** Which toast, if any, is covering the terminal. */
 type Overlay = 'none' | 'email' | 'characters'
 
-const MudClient = ({ title }: MudClientProps) => {
+const MudClient = ({ title, signedInAtLoad }: MudClientProps) => {
   const [connected, setConnected] = useState(false)
   const [error, setError] = useState('')
   /**
@@ -53,11 +60,20 @@ const MudClient = ({ title }: MudClientProps) => {
   const signedIn = Boolean(userId)
   const { account, loading, refresh, forget } = useCharacters(userId)
 
+  /**
+   * What to believe while a session request is in flight. Better Auth derives
+   * isPending from `data === null`, which is always true for a visitor who is
+   * not signed in - so every re-check, including the one the browser makes on
+   * its own each time the tab regains focus, reports pending again. Deciding
+   * the overlay from that alone makes the sign-in toast blink, and takes the
+   * address the player typed and the "check your inbox" line away with it.
+   */
+  const signedInOrPending = sessionPending ? signedInAtLoad : signedIn
+
   const overlayKey = userId ?? 'signed-out'
   const overlay: Overlay = resolveOverlay({
     dismissed: dismissedFor === overlayKey,
-    sessionPending,
-    signedIn,
+    signedIn: signedInOrPending,
     hasCharacters: Boolean(account && account.characters.length > 0),
   })
   const dismissOverlay = useCallback(() => setDismissedFor(overlayKey), [overlayKey])
@@ -255,13 +271,31 @@ const MudClient = ({ title }: MudClientProps) => {
     }
   }, [connected, forget, notify, refresh])
 
-  // A magic link usually opens in another tab, so this one watches for the
-  // session appearing rather than asking the player to reload.
+  // A magic link usually opens in another tab, or on a phone, so this one
+  // watches for the session appearing rather than asking the player to reload.
+  //
+  // It asks with getSession rather than refetch so that a poll which finds
+  // nothing leaves the session alone: refetching reports pending, and the
+  // toast the player is reading is decided from that.
   useEffect(() => {
     if (signedIn || overlay !== 'email') return undefined
-    const poll = setInterval(() => void refetch(), 3000)
+
+    const poll = setInterval(() => {
+      void (async () => {
+        const { data } = await authClient.getSession()
+        if (!data) return
+        await refetch()
+        // The bridge learns who is connected from the cookie on the WebSocket
+        // handshake, so a socket opened while signed out stays anonymous for
+        // as long as it lives - and would save none of the characters this
+        // player is about to log in. Signing in replaces it, as signing out
+        // already does.
+        initializeSocket()
+      })()
+    }, 3000)
+
     return () => clearInterval(poll)
-  }, [overlay, refetch, signedIn])
+  }, [initializeSocket, overlay, refetch, signedIn])
 
   const signOutAndReset = useCallback(async () => {
     await authClient.signOut()
@@ -301,17 +335,29 @@ const MudClient = ({ title }: MudClientProps) => {
       />
 
       <div className="portal-stage">
-        {!connected || error ? (
+        {/*
+          Three states, not two: the first paint of every visit has no
+          connection yet and nothing has gone wrong, and saying "disconnected"
+          in red until the socket opens is its own kind of flicker. Every path
+          that really does lose the MUD sets an error.
+        */}
+        {error ? (
           <div className="portal-disconnected">
             <Alert variant="danger" className="mb-3">
-              {error || 'Disconnected from MUD server'}
+              {error}
             </Alert>
             <Button variant="primary" onClick={handleReconnect}>
               Reconnect
             </Button>
           </div>
-        ) : (
+        ) : connected ? (
           <Terminal socketRef={socketRef} handleRef={terminalRef} />
+        ) : (
+          <div className="portal-terminal-loading">
+            <Spinner animation="border" variant="light" role="status">
+              <span className="visually-hidden">Connecting to the game...</span>
+            </Spinner>
+          </div>
         )}
 
         <ToastContainer position="bottom-end" className="portal-toasts p-3">
@@ -341,16 +387,14 @@ const MudClient = ({ title }: MudClientProps) => {
  */
 function resolveOverlay({
   dismissed,
-  sessionPending,
   signedIn,
   hasCharacters,
 }: {
   dismissed: boolean
-  sessionPending: boolean
   signedIn: boolean
   hasCharacters: boolean
 }): Overlay {
-  if (dismissed || sessionPending) return 'none'
+  if (dismissed) return 'none'
   if (!signedIn) return 'email'
   return hasCharacters ? 'characters' : 'none'
 }

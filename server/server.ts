@@ -6,6 +6,7 @@ import { toNodeHandler } from 'better-auth/node'
 import { Server as SocketIOServer } from 'socket.io'
 import { MudBridge } from './src/server/mud-bridge'
 import { handlePortalApi, PORTAL_API_PREFIX, resolveSessionUserId } from './src/server/portal-api'
+import { attachPortalSession } from './src/utils/portal-request'
 import { auth } from './src/utils/auth'
 import { assertRuntimeSecrets } from './src/utils/config'
 import { checkMailerConfiguration } from './src/utils/mailer'
@@ -66,6 +67,11 @@ nextApp.prepare().then(async () => {
       if (pathname.startsWith(PORTAL_API_PREFIX) && (await handlePortalApi(req, res, pathname))) {
         return
       }
+
+      // The page decides what to put over the terminal from whether anybody is
+      // signed in, and asking the browser costs a round trip it would rather
+      // not guess through. Resolved lazily - see src/utils/portal-request.ts.
+      attachPortalSession(req, () => resolveSessionUserId(req.headers))
 
       await nextHandler(req, res, parsedUrl)
     } catch (err) {

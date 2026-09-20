@@ -39,6 +39,12 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 Signing in is optional: the game is connected and playable before anyone is
 asked for anything, and a visitor can dismiss the prompt and play as a guest.
 
+That connection is open behind the toast, and the MUD hangs up on anyone left
+sitting at `Character Login:`. A telnet client gets 15 to 30 seconds of it; a
+player who arrived through this page gets two minutes, because they have a
+sign-in toast to read first. The game tells the two apart by the PROXY header
+the bridge opens with - see `check_idle_passwords` in `mud/src/comm.c`.
+
 An account is an email address, proved by clicking a link sent to it. There is
 no password for the portal itself. Signing in adds a menu under the avatar in
 the navbar listing the MUD characters on that account; picking one logs in as

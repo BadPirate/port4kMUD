@@ -116,6 +116,31 @@ test.describe('portal accounts', () => {
     expect(account.characters).toHaveLength(0)
   })
 
+  test('keeps the sign-in toast up while the session is re-checked', async ({ page }) => {
+    const email = `e2e-flicker-${Date.now()}@example.com`
+
+    await page.goto('/')
+    await expect(page.getByTestId('email-toast')).toBeVisible({ timeout: 30000 })
+
+    await page.getByTestId('email-toast-input').fill(email)
+    await page.getByTestId('email-toast-submit').click()
+    await expect(page.getByTestId('email-toast-sent')).toContainText(email)
+
+    // Two things re-check the session behind this toast: the page's own poll,
+    // watching for a link clicked on another device, and the browser itself
+    // every time the tab comes back - which is precisely what a player does on
+    // the way to their inbox and back. Better Auth calls a session it has not
+    // got yet "pending" on every one of those, so deciding what to show from
+    // that alone took this message, and the address they had typed, away with
+    // it several times a minute.
+    await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')))
+    await page.waitForTimeout(8000)
+    await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')))
+
+    await expect(page.getByTestId('email-toast-sent')).toContainText(email)
+    await expect(page.getByTestId('email-toast')).toBeVisible()
+  })
+
   test('a guest can dismiss the toast and still use the game', async ({ page }) => {
     await page.goto('/')
     await expect(page.getByTestId('email-toast')).toBeVisible({ timeout: 30000 })
