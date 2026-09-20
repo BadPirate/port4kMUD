@@ -68,6 +68,11 @@ test.describe('MUD terminal tests', () => {
     console.log('No connection errors found, test passed')
     await page.screenshot({ path: 'test-results/terminal-connected.png' })
 
+    // A visitor with no account is offered one, over a game that is already
+    // connected and playable.
+    await page.getByTestId('email-toast').waitFor({ timeout: 15000 })
+    console.log('Sign-in toast offered to the signed-out visitor')
+
     // Success! The terminal has connected to the MUD server
     console.log('Terminal test passed successfully')
   })

@@ -75,11 +75,41 @@ Set necessary environment variables for your application:
 ```bash
 # Set Node environment to production
 dokku config:set port4kmud NODE_ENV=production
-
-# If using authentication or other services, add those variables here
-# dokku config:set port4kmud AUTH_SECRET=your_auth_secret
-# dokku config:set port4kmud DATABASE_URL=your_database_url
 ```
+
+### Web Portal Accounts
+
+Players can sign in to the web interface with their email address and keep
+their MUD characters on an account. Sign-in is by emailed link, so no
+passwords are stored for the portal itself.
+
+`BETTER_AUTH_SECRET` is required in production - the app refuses to start
+without it. It signs session cookies **and** encrypts the MUD passwords the
+portal replays at the game's own prompt, so changing it signs everyone out and
+makes every saved character password unreadable, and each character then has to
+be entered again.
+
+```bash
+# Required. Generate with: openssl rand -base64 32
+dokku config:set port4kmud BETTER_AUTH_SECRET=your_generated_secret
+
+# Required for sign-in to work at all: without SMTP_HOST no mail is sent.
+dokku config:set port4kmud SMTP_HOST=smtp.example.com SMTP_PORT=587 \
+  SMTP_USER=port4k@example.com SMTP_PASS=your_smtp_password \
+  SMTP_FROM="Port4k <port4k@example.com>"
+
+# Optional.
+dokku config:set port4kmud SITE_TITLE="Port 4000"       # navbar title; defaults to "telnet <host> 4000"
+dokku config:set port4kmud MAX_CHARACTER_LIMIT=5        # characters per account
+dokku config:set port4kmud MAGIC_LINK_TTL_SECONDS=900   # how long a link stays usable
+dokku config:set port4kmud BETTER_AUTH_URL=https://your-mud-domain.com  # only if the public URL differs from the request host
+dokku config:set port4kmud AUTH_DATABASE_PATH=/app/mud/lib/etc/portal.sqlite  # only to move the database
+```
+
+Accounts live in a SQLite file at `mud/lib/etc/portal.sqlite`, inside the
+`/app/mud/lib` mount created above, so they survive redeploys with no extra
+storage setup. Migrations are applied by `launch.sh` on every boot. Back it up
+along with the rest of `/var/lib/dokku/data/storage/port4kmud`.
 
 ## 5. Configure Domain (Optional)
 
@@ -121,6 +151,7 @@ git push dokku main
 ```
 
 The deployment will use:
+
 1. The `Dockerfile` to build the environment with both C and Node.js support
 2. The `launch.sh` script to:
    - Build and start the MUD server in the background

@@ -32,6 +32,31 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 - **Real-time Communication**: Bidirectional data flow via Socket.IO
 - **Responsive Design**: Works on desktop and mobile devices
 - **Persistent Connections**: Manages connections between web clients and the MUD server
+- **Accounts**: Sign in with an emailed link and keep your characters in one menu
+
+## Accounts and characters
+
+Signing in is optional: the game is connected and playable before anyone is
+asked for anything, and a visitor can dismiss the prompt and play as a guest.
+
+An account is an email address, proved by clicking a link sent to it. There is
+no password for the portal itself. Signing in adds a menu under the avatar in
+the navbar listing the MUD characters on that account; picking one logs in as
+it, and the small cross next to a name forgets it here without touching the
+character in the game.
+
+The MUD has no notion of accounts and no out-of-band way to say who is playing:
+a character is only ever identified by what is typed at its own prompts. So the
+portal watches that conversation. When a login succeeds, the character is saved
+to the account; when a password is changed through the game's menu, the saved
+one is updated to match; when a character is deleted in the game, it is dropped
+from the account. Logging in as a saved character types its name and password
+at those same prompts, and stops there - the MOTD and the menu are yours.
+
+Because the bridge has to type the password at the game's prompt, it cannot
+hash it. Passwords are encrypted with a key derived from `BETTER_AUTH_SECRET`,
+so anyone holding both the database and that secret can read them, and rotating
+the secret means every character has to be entered again.
 
 ## Prerequisites
 
@@ -57,10 +82,14 @@ This project creates a web-based interface for the Port4kMUD game, allowing play
 3. Set up environment variables:
 
    ```bash
-   cp .env.example .env.local
+   cp .env.local.EXAMPLE .env.local
    ```
 
-   Edit `.env.local` to configure your environment.
+   Every setting is optional in development. With `SMTP_HOST` unset, sign-in
+   links are printed to the server's console instead of being emailed, so a
+   local checkout needs no mail server. `BETTER_AUTH_SECRET` is required in
+   production and falls back to a development value otherwise. See
+   `.env.local.EXAMPLE` for the full list.
 
 4. Make sure the MUD server is running:
    ```bash
@@ -113,12 +142,24 @@ Run end-to-end tests:
 yarn test:e2e
 ```
 
+These build and start a real `bin/circle` and drive a real browser through
+sign-in and character creation, so they write test characters into
+`mud/lib/etc/players` (gitignored) and use a throwaway accounts database under
+`test-results/`.
+
 ## Project Structure
 
-- **`pages/`**: Next.js pages and API routes
-- **`server.ts`**: Custom server implementation with Socket.IO
-- **`utils/mud-server.ts`**: Utility for checking and ensuring MUD server connectivity
-- **`components/`**: React components
+- **`pages/`**: Next.js pages
+- **`server.ts`**: Custom server: Next.js, Socket.IO, and the portal's own HTTP
+  routes. It serves `/api/auth/*` and `/api/portal/*` itself, ahead of Next, so
+  there is one auth instance and one database connection in the process
+- **`src/server/`**: The per-browser MUD bridge and the portal's HTTP routes
+- **`src/utils/mud-login-watcher.ts`**: Reads the MUD's login conversation
+- **`src/utils/mud-prompts.ts`**: The game's prompts, verbatim, transcribed from
+  its C source. Change these if `mud/src/interpreter.c` changes
+- **`src/utils/mud-server.ts`**: Utility for checking MUD server connectivity
+- **`src/components/`**: React components
+- **`prisma/`**: Account database schema and migrations
 - **`styles/`**: CSS and styling
 - **`public/`**: Static assets
 

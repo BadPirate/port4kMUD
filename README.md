@@ -35,6 +35,7 @@ See the [Server README](server/README.md) for detailed information about the web
 To get the full Port4kMUD experience running locally:
 
 1. **Start the MUD server:**
+
    ```bash
    cd mud
    ./configure
@@ -44,6 +45,7 @@ To get the full Port4kMUD experience running locally:
    ```
 
 2. **Start the web interface:**
+
    ```bash
    cd server
    yarn install
@@ -53,10 +55,16 @@ To get the full Port4kMUD experience running locally:
 3. **Access the MUD:**
    Open your browser and navigate to http://localhost:3000
 
+   The game is playable straight away. Signing in with an email address is
+   optional, and keeps your characters in a menu so you can pick one instead of
+   typing a name and password. With no mail server configured, the sign-in link
+   is printed to the web interface's console.
+
 ## Features
 
 - **Browser-based MUD Client**: Play directly in your web browser without telnet
 - **Classic MUD Experience**: Enjoy the rich text-based game world of Port4kMUD
+- **Email Sign-in**: Keep your characters on an account, with no password to remember
 - **Responsive Design**: Access from desktop or mobile devices
 - **Single Host Setup**: Run both components on a single machine
 - **Persistent Connections**: Reliable connection management between web clients and MUD server

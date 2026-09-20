@@ -136,6 +136,12 @@ jobs:
       run: |
         cd server
         yarn test:e2e
+      env:
+        # The portal's accounts database and session secret. The database is a
+        # throwaway file under test-results/; without a secret the server
+        # refuses to start in production mode.
+        AUTH_DATABASE_PATH: ./test-results/portal-e2e.sqlite
+        BETTER_AUTH_SECRET: port4k-ci-secret-not-for-production-0123456789
       
     - name: Upload test results
       if: always()

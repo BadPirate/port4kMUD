@@ -11,16 +11,25 @@ const configPromise: Promise<PlaywrightTestConfig> = (async () => {
   const baseURL = `http://localhost:${PORT}`
 
   return defineConfig({
-    timeout: 30 * 1000,
+    timeout: 90 * 1000,
     testDir: path.join(__dirname, 'e2e'),
     retries: 2,
     outputDir: 'test-results/',
     webServer: {
       command: 'yarn dev',
       url: baseURL,
-      timeout: 120 * 1000,
+      timeout: 180 * 1000,
       reuseExistingServer: !config.CI,
-      env: { PORT: String(PORT) },
+      env: {
+        PORT: String(PORT),
+        // A throwaway accounts database, so a test run never touches the real
+        // one under mud/lib.
+        AUTH_DATABASE_PATH: path.join(__dirname, 'test-results', 'portal-e2e.sqlite'),
+        // Any stable value will do: it only has to outlive the run.
+        BETTER_AUTH_SECRET: 'port4k-e2e-secret-not-for-production-0123456789',
+        // BETTER_AUTH_URL is deliberately unset, so magic links are built from
+        // the request and inherit whichever port this run picked.
+      },
     },
     use: {
       baseURL,
