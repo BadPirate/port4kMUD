@@ -14,6 +14,12 @@ const configPromise: Promise<PlaywrightTestConfig> = (async () => {
     timeout: 90 * 1000,
     testDir: path.join(__dirname, 'e2e'),
     retries: 2,
+    // One worker, because every spec here shares a single MUD on a fixed port
+    // and each file starts and stops it. Run two files at once and the second
+    // server cannot bind, the pid file ends up naming whichever process lost
+    // the race, and one file's cleanup kills a server the other is still
+    // using - a flake that depends only on scheduling.
+    workers: 1,
     outputDir: 'test-results/',
     webServer: {
       command: 'yarn dev',
