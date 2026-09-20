@@ -74,8 +74,8 @@ export class MudBridge {
 
   private holdingInput = false
 
-  /** Set while replacing the MUD connection, so its close is not a surprise. */
-  private replacing = false
+  /** Set once the player has typed on this MUD connection. */
+  private playerTyped = false
 
   /**
    * Account writes still in flight. The MUD hangs up immediately after a
@@ -104,6 +104,7 @@ export class MudBridge {
     this.autoLogin = autoLogin ?? null
     this.holdingInput = Boolean(autoLogin)
     this.heldInput = []
+    this.playerTyped = false
 
     // Without a session there is nobody to remember a character for, so the
     // login conversation is not watched at all.
@@ -138,9 +139,12 @@ export class MudBridge {
     })
 
     mud.on('close', () => {
-      this.watcher?.onClose()
-      if (this.replacing) return
+      // net.Socket.destroy() emits this on a later tick, by which time a
+      // replacement connection may already be in place. Only the connection
+      // still in use may tell the browser it has gone.
+      if (this.mud !== mud || this.destroyed) return
 
+      this.watcher?.onClose()
       console.log(`MUD connection closed for ${this.socket.id}`)
       void this.pendingWork.then(() => {
         if (this.destroyed) return
@@ -153,6 +157,8 @@ export class MudBridge {
   /** Forwards a keystroke from the browser, echoing it back where needed. */
   handleInput(data: string): void {
     if (this.destroyed) return
+
+    this.playerTyped = true
 
     if (this.holdingInput) {
       this.heldInput.push(data)
@@ -184,15 +190,16 @@ export class MudBridge {
       sentPassword: false,
     }
 
-    // A connection still sitting at an untouched name prompt can be used as
-    // it is. Anything further along - mid-login, or already in the game - has
-    // no way back to the name prompt, so it is replaced.
-    if (this.watcher?.isAtFreshNamePrompt) {
+    // A connection nobody has typed on yet can be used as it is, even if the
+    // greeting is still on its way: the name is typed when the prompt arrives.
+    // Anything further along - mid-login, or already in the game - has no way
+    // back to the name prompt, so it is replaced.
+    if (this.canDriveLoginHere) {
       this.autoLogin = autoLogin
       this.mode = 'auto-login'
       this.holdingInput = true
       this.emitPortal({ type: 'mode', mode: this.mode, characterId })
-      this.typeName()
+      if (this.watcher?.isAtFreshNamePrompt) this.typeName()
       return
     }
 
@@ -201,26 +208,38 @@ export class MudBridge {
 
   /** Starts a fresh MUD connection so another character can be created. */
   newCharacter(): void {
-    if (this.watcher?.isAtFreshNamePrompt) return
+    if (this.canDriveLoginHere) return
     this.reconnect()
+  }
+
+  /**
+   * Whether this MUD connection is still at the very start of its login, so
+   * the bridge can drive it rather than opening another.
+   *
+   * Nothing but input advances nanny(), so with nothing typed the connection
+   * is either waiting for the name or about to be.
+   */
+  private get canDriveLoginHere(): boolean {
+    if (!this.watcher || this.playerTyped || this.autoLogin) return false
+    const prompt = this.watcher.awaitingPrompt
+    return prompt === null || prompt === 'name'
   }
 
   destroy(): void {
     this.destroyed = true
-    this.replacing = true
     this.watcher?.onClose()
-    this.mud?.destroy()
+    const mud = this.mud
     this.mud = null
+    mud?.destroy()
   }
 
   /** Replaces the MUD connection, keeping the browser's socket as it is. */
   private reconnect(autoLogin?: AutoLogin): void {
     this.emitPortal({ type: 'reconnecting', characterId: autoLogin?.characterId })
-    this.replacing = true
     this.watcher?.onClose()
-    this.mud?.destroy()
+    const mud = this.mud
     this.mud = null
-    this.replacing = false
+    mud?.destroy()
     this.connect(autoLogin)
   }
 

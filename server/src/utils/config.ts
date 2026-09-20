@@ -76,15 +76,6 @@ for (const key in required) {
 }
 const validatedRequired = required as { [key in keyof typeof required]: string }
 
-if (required.NODE_ENV === 'production' && !optional.BETTER_AUTH_SECRET) {
-  throw new Error(
-    'Missing required environment variable: BETTER_AUTH_SECRET. Generate one with ' +
-      '`openssl rand -base64 32`. It signs portal sessions and encrypts stored MUD ' +
-      'passwords, so keep it stable - changing it signs everyone out and makes every ' +
-      'saved character password unreadable.',
-  )
-}
-
 const config = {
   ...validatedRequired,
   ...optional,
@@ -104,3 +95,19 @@ const config = {
 }
 
 export default config
+
+/**
+ * Checked when the server starts rather than when this module is imported: a
+ * production build runs with NODE_ENV=production but has no business needing
+ * runtime secrets, and `next build` imports this to render pages.
+ */
+export function assertRuntimeSecrets(): void {
+  if (config.NODE_ENV !== 'production' || optional.BETTER_AUTH_SECRET) return
+
+  throw new Error(
+    'Missing required environment variable: BETTER_AUTH_SECRET. Generate one with ' +
+      '`openssl rand -base64 32`. It signs portal sessions and encrypts stored MUD ' +
+      'passwords, so keep it stable - changing it signs everyone out and makes every ' +
+      'saved character password unreadable.',
+  )
+}

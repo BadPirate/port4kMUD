@@ -8,11 +8,18 @@ import { useXTerm } from '../react-xterm'
 // v1 stubs that shadowed the library's own types.
 export type TerminalSocket = Socket
 
-interface TerminalProps {
-  socketRef: RefObject<TerminalSocket | null>
+/** What the page can do to the terminal from outside it. */
+export interface TerminalHandle {
+  clear: () => void
 }
 
-const Terminal = ({ socketRef }: TerminalProps) => {
+interface TerminalProps {
+  socketRef: RefObject<TerminalSocket | null>
+  /** Receives a handle for the few things the page drives directly. */
+  handleRef?: RefObject<TerminalHandle | null>
+}
+
+const Terminal = ({ socketRef, handleRef }: TerminalProps) => {
   const [fontSize, setFontSize] = useState(14)
   const [fitAddon] = useState(() => new FitAddon())
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -111,6 +118,21 @@ const Terminal = ({ socketRef }: TerminalProps) => {
       }, 0)
     }
   }, [fontSize, terminalRef, fitAddon])
+
+  // Expose the handle the page uses to wipe the screen when the MUD
+  // connection behind it is replaced.
+  useEffect(() => {
+    if (!handleRef) return undefined
+
+    handleRef.current = {
+      clear: () => {
+        terminalRef.current?.clear()
+      },
+    }
+    return () => {
+      handleRef.current = null
+    }
+  }, [handleRef, terminalRef])
 
   // Connect socket to terminal
   useEffect(() => {

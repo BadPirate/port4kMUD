@@ -72,3 +72,99 @@
 .terminal-wrapper .xterm-rows {
   left: 0 !important;
 }
+
+/* Portal shell: a navbar above, the terminal filling everything below it. */
+.portal-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+}
+
+.portal-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0.5rem;
+}
+
+.portal-title {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 1rem;
+}
+
+.portal-terminal-loading,
+.portal-disconnected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+  background: #000;
+}
+
+/* The avatar is a plain button so the dropdown has no chrome of its own. */
+.portal-avatar-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.portal-avatar-button::after {
+  display: none;
+}
+
+.portal-avatar-button:focus-visible {
+  outline: 2px solid #6ea8fe;
+  outline-offset: 2px;
+}
+
+/* Each character row is its own button plus a small forget control. */
+.portal-character-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.portal-character-row .dropdown-item {
+  flex: 1 1 auto;
+}
+
+.portal-forget-button {
+  background: none;
+  border: 0;
+  color: #6c757d;
+  padding: 0 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.portal-forget-button:hover {
+  color: #dc3545;
+}
+
+.portal-account-menu,
+.portal-toast {
+  min-width: 18rem;
+}
+
+.portal-menu-hint {
+  font-size: 0.85rem;
+  max-width: 18rem;
+}
+
+.portal-character-list .list-group-item {
+  text-align: left;
+}
+
+/* Toasts sit over the terminal; the game underneath stays connected. */
+.portal-toasts {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}

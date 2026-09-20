@@ -7,6 +7,7 @@ import { Server as SocketIOServer } from 'socket.io'
 import { MudBridge } from './src/server/mud-bridge'
 import { handlePortalApi, PORTAL_API_PREFIX, resolveSessionUserId } from './src/server/portal-api'
 import { auth } from './src/utils/auth'
+import { assertRuntimeSecrets } from './src/utils/config'
 import { checkMailerConfiguration } from './src/utils/mailer'
 import { ensureMudServerRunning } from './src/utils/mud-server'
 import discordConfig from './src/utils/discord/config'
@@ -26,6 +27,10 @@ const AUTH_API_PREFIX = '/api/auth/'
 
 // One bridge per browser socket.
 const activeBridges = new Map<string, MudBridge>()
+
+// Fails fast on a production deployment that has not been given a secret,
+// before anything can sign a session with a default one.
+assertRuntimeSecrets()
 
 // Prepare the application before starting the server
 nextApp.prepare().then(async () => {
