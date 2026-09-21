@@ -195,6 +195,16 @@ jobs:
           diff --version | head -1
         '
 
+    # The script below is single-quoted for docker, so keep prose out of it -
+    # an apostrophe inside closes the string, even in a comment.
+    #
+    # The packages asserted absent are devDependencies with no path into the
+    # production graph, so their absence is what proves the runtime stage took
+    # the pruned node_modules rather than the builder one. Not every
+    # devDependency works as a check: yarn v1 keeps one under --production when
+    # a production package declares it as a peerDependency, so typescript (peer
+    # of @prisma/client, prisma and ts-node) and @playwright/test (peer of
+    # next) do ship, about 41MB between them.
     - name: Verify the web build shipped and dev dependencies did not
       run: |
         docker run --rm --entrypoint bash port4kmud:ci -c '
@@ -203,15 +213,6 @@ jobs:
           test -d /app/server/.next
           test -x /app/server/node_modules/.bin/prisma
           test -d /app/mud/lib-dist
-          # devDependencies with no path into the production graph.  Their
-          # absence is what proves the runtime stage took server-deps'
-          # node_modules rather than the builder's.
-          #
-          # Not every devDependency can be checked this way: yarn v1 installs
-          # one under --production if a production package declares it as a
-          # peerDependency, so typescript (peer of @prisma/client, prisma and
-          # ts-node) and @playwright/test (peer of next) do ship, about 41MB
-          # between them.
           test ! -d /app/server/node_modules/jest
           test ! -d /app/server/node_modules/eslint
           test ! -d /app/server/node_modules/prettier
