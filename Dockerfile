@@ -65,7 +65,10 @@ WORKDIR /app/server
 COPY server/package.json server/yarn.lock server/prisma.config.ts ./
 COPY server/prisma ./prisma
 COPY server/src/utils/auth-db-path.ts ./src/utils/auth-db-path.ts
-RUN yarn install --frozen-lockfile
+# The cache is cleaned here too. It never ships - only the runtime stage is
+# exported - but at ~2.5GB for this dependency set it is a lot of builder disk
+# on a CI runner, and it would be carried by a registry build cache.
+RUN yarn install --frozen-lockfile && yarn cache clean
 
 COPY server/ ./
 RUN yarn build

@@ -160,10 +160,10 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Set up Buildx
-      uses: docker/setup-buildx-action@v3
+      uses: docker/setup-buildx-action@v4
 
     - name: Build image
-      uses: docker/build-push-action@v6
+      uses: docker/build-push-action@v7
       with:
         context: .
         load: true
@@ -210,6 +210,39 @@ jobs:
           test ! -d /app/server/node_modules/@playwright
           test ! -d /app/server/.next/cache
         '
+
+    # Asserting files exist does not prove the image boots.  The two things
+    # most likely to break are both startup-time: `prisma migrate deploy`
+    # running out of the pruned production node_modules, and dist/server.js
+    # resolving the generated Prisma client.  launch.sh backgrounds the MUD
+    # without supervising it, so the container staying up proves nothing about
+    # the game - port 4000 is probed directly.
+    - name: Verify the container boots
+      run: |
+        set -eux
+        docker run -d --name port4k-smoke \
+          -p 3000:3000 -p 4000:4000 \
+          -e PORT=3000 \
+          -e BETTER_AUTH_SECRET=port4k-ci-secret-not-for-production-0123456789 \
+          port4kmud:ci
+
+        for i in $(seq 1 60); do
+          if curl -fsS -o /dev/null http://127.0.0.1:3000/; then break; fi
+          if [ "$(docker inspect -f '{{.State.Running}}' port4k-smoke)" != "true" ]; then
+            echo "container exited before answering"; break
+          fi
+          sleep 2
+        done
+
+        docker logs port4k-smoke
+
+        curl -fsS -o /dev/null http://127.0.0.1:3000/
+        docker exec port4k-smoke bash -c 'cat < /dev/null > /dev/tcp/127.0.0.1/4000'
+        docker logs port4k-smoke 2>&1 | grep -q "Starting web interface on port"
+
+    - name: Stop the smoke-test container
+      if: always()
+      run: docker rm -f port4k-smoke || true
 
     - name: Report image size
       run: docker image ls port4kmud:ci --format '{{.Repository}}:{{.Tag}} {{.Size}}'
