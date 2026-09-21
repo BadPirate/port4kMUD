@@ -1,0 +1,46 @@
+# Docker does not honour .gitignore, so every one of these has to be listed
+# here as well or `COPY` drags a developer's local build output into the image.
+
+# Git metadata. `copyover <branch>` clones the repo fresh from GitHub into
+# /tmp (mud/src/copyover_update.c) - it never reads /app/.git - so there is no
+# reason to ship the history.
+/.git
+/.github
+
+# Node build output and dependencies. All of these are produced inside the
+# build stages; a stale copy from the host would shadow them.
+**/node_modules
+server/.next
+server/dist
+server/src/generated
+server/test-results
+server/coverage
+
+# MUD build output. The mud-build stage runs autoconf/configure/make itself,
+# and object files from another libc would break the link.
+mud/bin
+mud/src/*.o
+mud/src/make.log
+mud/autom4te.cache
+mud/configure~
+mud/config.cache
+mud/config.log
+mud/config.status
+mud/log
+mud/lib-dist
+
+# Local secrets and editor state.
+**/.env.local
+**/.env
+.vscode
+.idea
+.DS_Store
+
+# NOTE - do not add any of these, the build or `copyover` needs them:
+#   mud/lib            seeds mud/lib-dist, which launch.sh restores onto an
+#                      empty persistent volume
+#   mud/src/**         copyover recompiles from source at runtime
+#   mud/src/licheck    invoked by the Makefile's .accepted target
+#   mud/src/.accepted  its absence makes the build prompt and hang
+#   mud/configure mud/configure.in mud/Makefile.in mud/src/Makefile.in
+#   launch.sh Procfile

@@ -45,7 +45,7 @@ that you learn about the product or the preferred development flow / process bel
 
 ### 3. Combined Launch
 - Use `launch.sh` in the project root to start both the MUD server and the web interface together.
-- For deployment, see `DOKKU.md` for Dokku-specific instructions and persistent storage setup.
+- For deployment, see `COOLIFY.md` - the primary supported target - which covers the persistent volumes the game data needs. `DOKKU.md` documents an alternative Dokku setup.
 
 ---
 

@@ -69,6 +69,16 @@ To get the full Port4kMUD experience running locally:
 - **Single Host Setup**: Run both components on a single machine
 - **Persistent Connections**: Reliable connection management between web clients and MUD server
 
+## Deployment
+
+Both components ship as a single container built from the repository's
+`Dockerfile`. [Coolify](https://coolify.io) is the primary supported target -
+see **[COOLIFY.md](COOLIFY.md)** for the full walkthrough, including the two
+persistent volumes the game data needs and the raw TCP port mapping telnet
+requires.
+
+[DOKKU.md](DOKKU.md) documents an alternative Dokku setup.
+
 ## Development
 
 This project is organized to allow development of either component independently:

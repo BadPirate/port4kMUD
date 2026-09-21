@@ -5,7 +5,7 @@ import path from 'path'
  * Where the portal's SQLite database lives.
  *
  * The default sits inside mud/lib, which is already the volume a deployment
- * mounts for persistence (see DOKKU.md) and is already covered by the
+ * mounts for persistence (see COOLIFY.md) and is already covered by the
  * repository's .gitignore, so accounts survive a redeploy with no extra setup.
  * AUTH_DATABASE_PATH overrides it, which the tests use to work on a throwaway
  * file.

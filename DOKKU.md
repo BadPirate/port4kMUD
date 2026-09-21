@@ -1,5 +1,9 @@
 # Deploying Port4kMUD to Dokku
 
+> **Coolify is the primary supported deployment target** - see
+> [COOLIFY.md](COOLIFY.md). This Dokku guide is kept as an alternative for
+> existing installations.
+
 This guide provides step-by-step instructions for deploying Port4kMUD to a Dokku server, including setting up persistent storage for MUD data and configuring the application properly.
 
 ## Prerequisites
@@ -157,20 +161,13 @@ The deployment will use:
    - Build and start the MUD server in the background
    - Build and start the Next.js web interface
 
-## 8. Prepare Initial MUD Data (First Deployment Only)
+## 8. First Deployment
 
-After the first deployment, you need to initialize the MUD data files. This step is critical because the persistent directory might be empty on first launch:
-
-```bash
-# SSH into the Dokku app to set up initial MUD files
-dokku enter port4kmud
-
-# Once inside the container, copy initial files to the persistent storage
-cd /app/mud
-cp -rn lib/* /app/mud/lib/  # Copy recursively without overwriting existing files
-```
-
-Make sure the initial lib directory is properly set up before players connect to your MUD.
+No manual data setup is needed. The image ships the initial game data as
+`/app/mud/lib-dist`, and `launch.sh` copies it into `/app/mud/lib` the first
+time it finds the persistent directory empty, leaving it alone on later boots.
+Watch `dokku logs port4kmud -t` for `Initializing MUD data files...` on the
+first deploy.
 
 ## 9. Monitoring and Maintenance
 

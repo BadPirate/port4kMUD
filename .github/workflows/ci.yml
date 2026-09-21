@@ -150,3 +150,66 @@ jobs:
         name: playwright-results
         path: server/test-results/
         retention-days: 7
+
+  docker_image:
+    name: Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+
+    - name: Set up Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build image
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        load: true
+        tags: port4kmud:ci
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    # The deployed image has to keep a working C toolchain, because the in-game
+    # `copyover <branch>` command rebuilds the MUD from source at runtime
+    # (mud/src/copyover_update.c) before exec'ing the new binary onto the live
+    # player sockets.  This replays that exact command chain inside the final
+    # image, so a Dockerfile change that trims too much fails here rather than
+    # in production.
+    - name: Verify copyover can still rebuild the MUD
+      run: |
+        docker run --rm --entrypoint bash port4kmud:ci -c '
+          set -eux
+          cd /app/mud
+          rm -f bin/circle src/*.o
+          autoconf
+          ./configure
+          make -C src
+          # A successful link is already proof that libcrypt-dev is present:
+          # conf.h.in hardcodes HAVE_CRYPT, so the sources call crypt()
+          # unconditionally and the link fails without it.
+          test -x bin/circle
+          ldd bin/circle
+          git --version
+          diff --version | head -1
+        '
+
+    - name: Verify the web build shipped and dev dependencies did not
+      run: |
+        docker run --rm --entrypoint bash port4kmud:ci -c '
+          set -eux
+          test -f /app/server/dist/server.js
+          test -d /app/server/.next
+          test -x /app/server/node_modules/.bin/prisma
+          test -d /app/mud/lib-dist
+          # These are devDependencies; their presence means the runtime stage is
+          # picking up the wrong node_modules.
+          test ! -d /app/server/node_modules/jest
+          test ! -d /app/server/node_modules/eslint
+          test ! -d /app/server/node_modules/@playwright
+          test ! -d /app/server/.next/cache
+        '
+
+    - name: Report image size
+      run: docker image ls port4kmud:ci --format '{{.Repository}}:{{.Tag}} {{.Size}}'
