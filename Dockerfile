@@ -82,9 +82,16 @@ RUN rm -rf node_modules .next/cache
 ##############################################################################
 # Stage 3 - resolve the production dependency tree.
 ##############################################################################
-# Separate from stage 2 so the dev dependencies (typescript, eslint, jest,
-# playwright, ...) and yarn's download cache never reach the runtime stage.
-# BuildKit runs this concurrently with stage 2.
+# Separate from stage 2 so the dev dependencies (eslint, jest, prettier, the
+# testing-library packages, ...) and yarn's download cache never reach the
+# runtime stage. BuildKit runs this concurrently with stage 2.
+#
+# It is not a perfect filter: yarn v1 keeps a devDependency that satisfies a
+# production package's peerDependency, so typescript (peer of @prisma/client,
+# prisma and ts-node) and @playwright/test (peer of next) still ship, about
+# 41MB between them. Neither is loaded at runtime - `prisma migrate deploy`
+# was checked against a tree with typescript removed - but deleting packages
+# that are there to satisfy a peer is not worth 3% of the image.
 FROM ${BASE_IMAGE} AS server-deps
 
 RUN apt-get update && apt-get install -y --no-install-recommends \

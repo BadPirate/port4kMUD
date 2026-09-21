@@ -203,11 +203,19 @@ jobs:
           test -d /app/server/.next
           test -x /app/server/node_modules/.bin/prisma
           test -d /app/mud/lib-dist
-          # These are devDependencies; their presence means the runtime stage is
-          # picking up the wrong node_modules.
+          # devDependencies with no path into the production graph.  Their
+          # absence is what proves the runtime stage took server-deps'
+          # node_modules rather than the builder's.
+          #
+          # Not every devDependency can be checked this way: yarn v1 installs
+          # one under --production if a production package declares it as a
+          # peerDependency, so typescript (peer of @prisma/client, prisma and
+          # ts-node) and @playwright/test (peer of next) do ship, about 41MB
+          # between them.
           test ! -d /app/server/node_modules/jest
           test ! -d /app/server/node_modules/eslint
-          test ! -d /app/server/node_modules/@playwright
+          test ! -d /app/server/node_modules/prettier
+          test ! -d /app/server/node_modules/@testing-library
           test ! -d /app/server/.next/cache
         '
 
