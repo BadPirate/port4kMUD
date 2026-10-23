@@ -5,7 +5,13 @@
 # Every stage shares one base image so that the native modules built in
 # `server-deps` (better-sqlite3, and the Prisma client's generated output) stay
 # ABI-compatible with the Node that runs them.
-ARG BASE_IMAGE=node:22-bookworm-slim
+#
+# Pinned to an exact Node release rather than the floating 22 tag: a builder
+# that already holds an older node:22 layer keeps building on it, which is how
+# production stayed on 22.23.2 after the fix was out. 22.23.4 is the first 22.x
+# patched against CVE-2026-111497 (out-of-bounds write in Node's bundled Brotli
+# decoder), so bump this tag deliberately rather than letting it float.
+ARG BASE_IMAGE=node:22.23.4-bookworm-slim
 
 
 ##############################################################################
