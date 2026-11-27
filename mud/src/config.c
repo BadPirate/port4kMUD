@@ -124,11 +124,14 @@ int auto_save = YES;
  */
 int autosave_time = 5;
 
-/* Lifetime of crashfiles and forced-rent (idlesave) files in days */
-int crash_file_timeout = 10;
+/* Lifetime of crashfiles and forced-rent (idlesave) files in days.
+ * Effectively never: the stock 10-day value silently deleted idle players'
+ * saved items at boot (see the 'Deleting timed-out crash and rent files'
+ * boot log). Kept below INT_MAX/86400 (~24855) to avoid overflow. */
+int crash_file_timeout = 20000;
 
-/* Lifetime of normal rent files in days */
-int rent_file_timeout = 30;
+/* Lifetime of normal rent files in days. Effectively never (stock: 30). */
+int rent_file_timeout = 20000;
 
 
 /****************************************************************************/
