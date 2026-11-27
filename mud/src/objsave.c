@@ -168,8 +168,12 @@ int Crash_clean_file(char *name)
 {
   char fname[MAX_STRING_LENGTH], filetype[20];
   struct rent_info rent;
-  extern int rent_file_timeout, crash_file_timeout;
+  extern int rent_file_timeout, crash_file_timeout, purge_old_rent_files;
   FILE *fl;
+
+  /* Never delete item files by age unless explicitly enabled in config.c. */
+  if (!purge_old_rent_files)
+    return 0;
 
   if (!get_filename(name, fname, CRASH_FILE))
     return 0;
