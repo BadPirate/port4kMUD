@@ -124,14 +124,20 @@ int auto_save = YES;
  */
 int autosave_time = 5;
 
-/* Lifetime of crashfiles and forced-rent (idlesave) files in days.
- * Effectively never: the stock 10-day value silently deleted idle players'
- * saved items at boot (see the 'Deleting timed-out crash and rent files'
- * boot log). Kept below INT_MAX/86400 (~24855) to avoid overflow. */
-int crash_file_timeout = 20000;
+/*
+ * Master switch for the boot-time sweep (update_obj_file -> Crash_clean_file)
+ * that deletes rent, crash, forced-rent and idlesave object files by age.
+ * NO = never delete player item files because of their age. (The stock sweep
+ * wiped idle players' items at boot, e.g. BadPirate's on 2026-10-23.)
+ */
+int purge_old_rent_files = NO;
 
-/* Lifetime of normal rent files in days. Effectively never (stock: 30). */
-int rent_file_timeout = 20000;
+/* Lifetime of crashfiles and forced-rent (idlesave) files in days.
+ * Only used when purge_old_rent_files is YES. */
+int crash_file_timeout = 10;
+
+/* Lifetime of normal rent files in days. Only used when purge_old_rent_files is YES. */
+int rent_file_timeout = 30;
 
 
 /****************************************************************************/
